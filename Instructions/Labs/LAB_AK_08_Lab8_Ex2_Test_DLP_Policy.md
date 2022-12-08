@@ -1,4 +1,4 @@
-# Learning Path 5 - Lab 5 - Exercise 2 - Test the DLP Policy
+# Learning Path 8 - Lab 8 - Exercise 2 - Test the DLP Policy
 
 Holly Dickson is now at the point in her pilot project where she wants to test the DLP policy related to emails that contain sensitive information that you created in the previous lab exercise. 
 
@@ -98,4 +98,4 @@ In this task, you will send an email from Holly Dickson to Lynne Robbins that te
 15. Switch back to **LON-CL1**.
 
 
-# End of Lab 5
+# End of Lab 8
