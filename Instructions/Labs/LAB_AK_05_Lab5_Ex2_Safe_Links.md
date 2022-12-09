@@ -1,4 +1,4 @@
-# Learning Path 2 - Lab 2 - Exercise 2 - Implement a Safe Links Policy
+# Learning Path 5 - Lab 5 - Exercise 2 - Implement a Safe Links Policy
 
 Now that you have created a Safe Attachments policy for Adatum, you want to create a Safe Links policy and then validate the policy to ensure that it works properly.
 
@@ -107,5 +107,5 @@ In this task, you will test the Safe Links Policy that you just created that blo
 23. In LON-CL2, leave the Edge browser and all its tabs open for the next lab. 
 
 
-# End of Lab 2
+# End of Lab 5
 
