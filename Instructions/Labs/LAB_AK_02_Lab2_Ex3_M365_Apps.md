@@ -1,4 +1,4 @@
-# Learning Path 3 - Lab 2 - Exercise 3 - Manage a Microsoft 365 Apps for enterprise installation
+# Learning Path 2 - Lab 2 - Exercise 3 - Manage a Microsoft 365 Apps for enterprise installation
 
 You have taken on the persona of Holly Dickson, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Microsoft 365 Apps for enterprise installation. Performing a user-driven Microsoft 365 Apps for enterprise installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the Office 365 deployment tool, and 2) performing the installation. 
 
