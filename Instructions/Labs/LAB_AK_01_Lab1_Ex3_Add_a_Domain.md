@@ -1,4 +1,4 @@
-# Learning Path 2 - Lab 1 - Exercise 3 - Add a Custom Domain
+# Learning Path 1 - Lab 1 - Exercise 3 - Add a Custom Domain
 
 Not every company has just one domain; in fact, many companies have more than one domain. Adatum has just purchased a new domain (xxxUPNxxx.xxxCustomDomainxxx.xxx; the exact name of which is provided by your lab hosting provider) that resides in Microsoft Azure but not in Adatum's on-premises environment. To support Adatum’s new custom domain, your lab hosting provider took on the role of Adatum’s third-party domain registrar. 
 
