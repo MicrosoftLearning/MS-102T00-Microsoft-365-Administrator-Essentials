@@ -1,4 +1,4 @@
-# Learning Path 1 - Lab 1 - Exercise 4 - PIM Teammate Approval Request
+# Learning Path 4 - Lab 4 - Exercise 3 - PIM Teammate Approval Request
 
 Up to this point, you have conducted two forms of PIM approval:
 
@@ -220,4 +220,4 @@ When you earlier configured the Intune Administrator role, you set up the notifi
 6. In your Edge browser session, close all the tabs except for the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab. Leave these two tabs open for the next lab.
 
 
-# End of Lab 1
+# End of Lab 4
