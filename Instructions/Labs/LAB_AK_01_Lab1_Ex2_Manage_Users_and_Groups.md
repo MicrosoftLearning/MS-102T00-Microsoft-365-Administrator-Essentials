@@ -174,7 +174,9 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	- Owner: **Joni Sherman**
 
-	- Members: **Note:** You can add members to a group at the time you create the group (as you did with the Inside Sales group), as well as after you create a group. For the purpose of this Sales Group, you will add members after you've created the group. This way you can see the two methods of adding group members. So for now, select **Next** to skip through this step and not add members at this time.
+	- Members: You will not add members at this time, so select **Next**. <br/>
+
+	**Note:** You can add members to a group at the time you create the group (as you did with the Inside Sales group), as well as after you create a group. For the purpose of this Sales Group, you will add members after you've created the group. This way you can see the two methods of adding group members. So for now, select **Next** to skip through this step and not add members at this time.
 
 16. After creating the Sales Group, you will be returned to the **Active teams & groups** window. It may take a few minutes for the Sales Group to appear, so you may need to select the **Refresh** option on the menu bar once or twice. Note that there are four tabs on this page, one for each group type (Microsoft 365, Distribution list, Mail-enabled security, and Security). The **Microsoft 365** tab is displayed by default, which is the group type assigned to the Sales Group. So the Sales Group should be displayed in this tab.
 
