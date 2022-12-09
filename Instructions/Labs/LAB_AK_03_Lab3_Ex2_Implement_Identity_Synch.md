@@ -1,4 +1,4 @@
-# Learning Path 5 - Lab 4 - Exercise 2 - Implement Identity Synchronization 
+# Learning Path 3 - Lab 3 - Exercise 2 - Implement Identity Synchronization 
 
 In this exercise, you will enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Azure AD Connect will then continue to synchronize any delta changes every 30 minutes. You will then make some user and group updates and then manually force an immediate synchronization rather than waiting for Azure AD Connect to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
 
@@ -242,5 +242,5 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 17. Once you have completed the validation steps, close your PowerShell window. Congratulations! You have just completed the final lab in this course.
  
-# End of Lab 4
+# End of Lab 3
  
