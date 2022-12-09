@@ -1,4 +1,4 @@
-# Learning Path 2 - Lab 1 - Exercise 2 - Manage Users and Groups 
+# Learning Path 1 - Lab 1 - Exercise 2 - Manage Users and Groups 
 
 In the following lab exercise, you will continue in your role as Holly Dickson, Adatum Corporation’s Enterprise Administrator. In this exercise, you will perform several user and group management functions within Microsoft 365. You will begin by creating a Microsoft 365 user account for Holly, who will be assigned the Global Administrator role. You will create two Microsoft 365 groups and assign existing Microsoft 365 users as members of those groups. You will then delete one of the groups and then use Windows PowerShell to recover the deleted group.
 
