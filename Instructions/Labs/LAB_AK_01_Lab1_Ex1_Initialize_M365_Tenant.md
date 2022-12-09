@@ -1,4 +1,4 @@
-# Learning Path 2 - Lab 1 - Exercise 1 - Initialize your Microsoft 365 Tenant 
+# Learning Path 1 - Lab 1 - Exercise 1 - Initialize your Microsoft 365 Tenant 
 
 Adatum Corporation is a subsidiary of Contoso Electronics. Adatum runs its legacy applications (such as Microsoft Exchange Server 2019) in an on-premises deployment. However, it recently subscribed to Microsoft 365, thereby creating a hybrid deployment in which it must synchronize its on-premises and cloud deployments. 
 
