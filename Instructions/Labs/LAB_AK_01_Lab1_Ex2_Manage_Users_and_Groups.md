@@ -192,7 +192,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 22. Once the three new members have been saved in the group, select the **X** in the upper right-hand corner of the **Sales group** pane to close it. 
 
-23 Repeat steps 3-14 to add a new group with the following information: <br/>
+23. Repeat steps 3-14 to add a new group with the following information: <br/>
 
 	- Group type: **Security**
 
