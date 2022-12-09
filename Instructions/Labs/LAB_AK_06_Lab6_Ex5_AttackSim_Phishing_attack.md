@@ -1,4 +1,4 @@
-# Learning Path 3 - Lab 3 - Exercise 5 - Conduct a Spear Phishing attack using Attack Simulation training
+# Learning Path 6 - Lab 6 - Exercise 5 - Conduct a Spear Phishing attack using Attack Simulation training
 
 Holly Dickson is concerned that some users at Adatum may require education about phishing attacks. As part of her pilot project, Holly has decided to use the Microsoft 365 Attack simulation training feature to determine her users' susceptibility to phishing attacks.
 
@@ -146,4 +146,4 @@ In this task, you will verify whether Adatum has received the email that you con
 13. Leave your browser open in LON-CL1 and do not close any of the tabs.
     
 
-# Proceed to Lab 3 - Exercise 6
+# Proceed to Lab 6 - Exercise 6
