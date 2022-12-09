@@ -1,4 +1,4 @@
-# Learning Path 3 - Lab 3 - Exercise 4 - Test the Default eDiscovery Alert
+# Learning Path 6 - Lab 6 - Exercise 4 - Test the Default eDiscovery Alert
 
 In this exercise you will test a default Microsoft 365 alert policy that notifies all tenant admins, such as Holly Dickson, whenever an eDiscovery search has been created or exported.
 
@@ -93,4 +93,4 @@ To test this default alert, Holly Dickson will create an eDiscovery search. This
 You have now successfully tested the Microsoft 365 eDiscovery system alert that monitors the creation of an eDiscovery search or the export of data from a completed search.
 
 
-# Proceed to Lab 3 - Exercise 5
+# Proceed to Lab 6 - Exercise 5
