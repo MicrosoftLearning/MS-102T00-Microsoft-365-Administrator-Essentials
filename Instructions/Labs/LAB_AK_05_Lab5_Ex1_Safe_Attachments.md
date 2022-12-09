@@ -1,4 +1,4 @@
-# Learning Path 2 - Lab 2 - Exercise 1 - Implement a Safe Attachments policy 
+# Learning Path 5- Lab 5 - Exercise 1 - Implement a Safe Attachments policy 
 
 You now have a Global admin account set up for Holly Dickson, and you're signed into Microsoft 365 as Holly. In this phase of your pilot project for Adatum, you want to create a Safe Attachments policy and turn on Microsoft Defender for Office 365, which provides advanced threat protection for SharePoint, OneDrive, and Microsoft Teams.
 
@@ -51,5 +51,5 @@ In this task, you will turn on Microsoft Defender for Office 365, which provides
 That being said, after you have defined Safe Attachment policies in your real-world environment, one good way to see how the service is working is by viewing the security-related reports in Microsoft Defender for Office 365. For more information on using these reports to validate your Safe Links and Safe Attachment policies, see [View Defender for Office 365 reports in the Microsoft 365 Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/view-reports-for-mdo).
 
 
-# Proceed to Lab 2 - Exercise 2
+# Proceed to Lab 5 - Exercise 2
 
