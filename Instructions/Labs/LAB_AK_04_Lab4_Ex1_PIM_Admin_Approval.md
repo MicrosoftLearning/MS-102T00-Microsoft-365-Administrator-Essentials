@@ -1,4 +1,4 @@
-# Learning Path 1 - Lab 1 - Exercise 2 - PIM Administrator approval
+# Learning Path 4 - Lab 4 - Exercise 1 - PIM Administrator approval
 
 As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's Enterprise Administrator, wants to implement Privileged Identity Management within Azure Active Directory. One of Adatum's pain points in their existing system is they have far too many users who have been assigned administrator roles. This has caused concern among management, who sees this as a threat to Adatum's data security. They feel that too many people were originally assigned admin roles that shouldn't have been, and as such, they have access to secure information and resources that could potentially compromise the organization. 
 
@@ -218,4 +218,4 @@ Back in Task 1, Holly set herself up as the approver for the Global Administrato
 8. In your Edge browser session, close all the tabs except for the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab. Leave these two tabs open for the next lab.
 
 
-# Proceed to Lab 1 - Exercise 3
+# Proceed to Lab 4 - Exercise 2
