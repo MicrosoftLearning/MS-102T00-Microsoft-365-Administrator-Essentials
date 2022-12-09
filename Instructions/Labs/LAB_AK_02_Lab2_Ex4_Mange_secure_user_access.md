@@ -1,4 +1,4 @@
-# Learning Path 3 - Lab 2 - Exercise 4 - Manage secure user access 
+# Learning Path 2 - Lab 2 - Exercise 4 - Manage secure user access 
 
 As Holly Dickson, Adatum’s Enterprise Administrator, you have been asked by Adatum’s CTO to deploy Pass-through Authentication (PTA) and Azure AD Smart Lockout as a means of strengthening password management throughout the organization. 
 
