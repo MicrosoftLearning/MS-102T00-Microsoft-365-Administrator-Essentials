@@ -151,46 +151,52 @@ Azure Active Directory is required to perform several configuration tasks when i
 
 7. Remain logged into LON-DC1 and keep your Edge browser open.
 
+### ‎Task 4 - Enable IRM for SharePoint Online 
 
-### Task 4 – Prepare for External Access using Microsoft Teams 
+In this task, you will turn on Information Rights Management (IRM) for SharePoint Online. 
 
-When you get to Module 4, you will perform a lab in which you will create a new service request ticketing system. One of the tasks within that lab requires you to collaborate with one of your fellow student's Microsoft 365 tenant through Microsoft Teams. To enable this communication between your Microsoft 365 tenant and your fellow student's tenant, you must turn on the **External Access** functionality within Microsoft Teams so that you can communicate with your fellow student's domain. By default, the system is set to allow access to all external domains. However, for security reasons, Adatum's CTO wants to limit exposure to just the domain of your fellow student, who will take on the role of an external IT consultant who is working with Adatum in the Module 4 lab exercises. 
+**Important:** While you will validate IRM for Exchange and SharePoint in Lab 4, you must enable IRM for SharePoint Online now because it can take up to 60 minutes or more for IRM to show up in SharePoint Online. By the time you get to the validation exercise in Lab 4, IRM should have finished its internal configuration and you won’t have to wait for it to be present in SharePoint Online. Keep this time issue in mind if you plan to enable IRM in your real-world deployment.
 
-**Important:** When you modify the External Access feature to limit access to a specific domain, it can take a couple of hours for your system to propagate the change through your tenant. Therefore, you will configure this External Access feature in this task so that the internal changes made by the system have time to propagate through your tenant by the time you eventually get to the Module 4 lab.
+1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-**Instructor/Student Note:** To facilitate this lab, your instructor should collect each student's tenant ID (ZZZZZZ) from each of their domains (this would be each student's xxxxxZZZZZZ.onmicrosoft.com domain, where xxxxxZZZZZZ is the tenant prefix assigned to your fellow student by your lab hosting provider; ZZZZZZ is the tenant ID portion of the tenant prefix that is unique to each student). The instructor will then assign to each student the tenant ID (ZZZZZZ) from another student (you can NOT be assigned your own tenant ID). In this task, you will limit external access to the domain associated with the assigned tenant ID from your fellow student (in other words, you will enter the **xxxxxZZZZZZ.onmicrosoft.com** domain, where ZZZZZZ is your fellow student's tenant ID).
+2. In the **Microsoft 365 admin center**, select **Show all** (if necessary) in the left-hand navigation pane to see all the navigation options. Under **Admin centers,** select **SharePoint**. This will open the SharePoint admin center in a new tab.
 
-By the time you get to the Module 4 labs, External Access should be ready so that you can collaborate with the student whose domain you set up in this task. 
+3. In the **Welcome to your new home page** window, select **Take the tour**.
 
-1. On LON-DC1, in your Microsoft Edge browser, you should still be logged into the Microsoft 365 admin center as the MOD Administrator from the earlier task in which you updated Adatum's organizational profile. <br/>
+4. In the **SharePoint admin center**, in the left-hand navigation pane, select **Settings**. 
 
-	If you closed the Microsoft 365 admin center, then perform the same steps as before to open it and sign in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider) with the tenant admin password provided by your lab hosting provider.
-	
-2. If necessary, in the **Microsoft 365 admin center** navigation pane, select **...Show All** to display the full navigation menu.
+5. At the bottom of the **Settings** page is a sentence that says **Can’t find the setting you’re looking for? Go to the classic settings page.** In this sentence, select the hyperlinked text: **classic settings page**.
 
-3. In the **Microsoft 365 admin center**, under the **Admin Centers** group in the navigation pane, select **Teams**.
+6. On the classic **Settings** page, scroll down to the **Information Rights Management (IRM)** section. In the options to the right of this section, select the **Use the IRM service specified in your configuration** option, and then select the **Refresh IRM Settings** button.
 
-4. A new tab will open in your Edge browser that displays the **Microsoft Teams admin center**. If a **Welcome to the Teams admin center** window appears, select **Skip tour**.
+7. This will return you to the top of the **Settings** page. Scroll down to the **Information Rights Management (IRM)** section and verify the **Use the IRM service specified in your configuration** option is selected and a **We successfully refreshed your settings** message appears below the **Refresh IRM Settings** button. Continue scrolling to the bottom of the page and select the **OK** button. 
 
-5. In the **Microsoft Teams admin center** navigation pane, select **Users** and then select **External access**.
+8. This will return you to the top of the **Settings** page. In your browser, close the current tab that you're on (the **https://xxxxxZZZZZZ-admin.sharepoint.com** tab). This will return you to the **Settings** page in the **SharePoint admin center**.
 
-6. On the **External access** page, under the **Teams and Skype for Business users in external organizations** section, select the **Choose which external domains your users have access to** field. In the drop-down menu that appears, select **Allow only specific external domains**. 
+9. Do **NOT** close the **SharePoint admin center** tab in your Edge browser. Leave this tab and your browser open for the next task.
 
-7. Select the **Allow domains** button that appears to add the external domain you want to allow. 
 
-8. In the **Add external domain** pane that appears on the right side of the screen, enter in the **Domain** field the **xxxxxZZZZZZ.onmicrosoft.com** domain for your fellow student's tenant ID (where ZZZZZZ is your fellow student's tenant ID that was assigned to you by your instructor). This will enable you to communicate with your fellow student once you get to the exercises in the Module 4 labs. Do NOT enter your domain. When you've finished entering your fellow student's domain, select **Done**. 
+### Task 5 – Turn on Audit Logging to enable Alert Policies
 
-9. On the **External access** page, under the **Teams accounts not managed by an organization** section, verify the toggle switch is set to **On**. If it's set to **Off**, then set it to **On** now. <br/>
+In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal. However, before you can implement alerts, an admin must first turn on Audit Logging for the organization. Since it can take a couple of hours for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 6.
 
-	Below the toggle switch, verify the check box is selected for the option titled: **External users with Teanms accounts not managed by an organization can contact users in my organization**.
+**Important:** If you see an error message that says "Fail to opt in, please refresh", Audit Logging is being enabled in the background and the message can safely be ignored.
 
-10. Under the **Skype users** section, verify the toggle switch uis set to **On**. If it's set to **Off**, then set it to **On** now. 
+1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-11. Select the **Save** button at the bottom of the page.<BR/>
+2. Select the **Microsoft 365 admin center** tab in your Edge browser. 
 
-13. If a prompt warning that **Changes will take time to take effect** is displayed, select **Confirm**
+3. In the **Microsoft 365 admin center**, under the **Admin centers** section, select **Security**. This will open the **Microsoft 365 Defender** portal.
 
-14. In your Microsoft Edge browser, close the **External access - Microsoft Teams** tab. This should return you to the **Microsoft 365 admin center** tab, which you should leave open as you proceed to the next exercise.
+4. In the **Microsoft 365 Defender** portal, scroll down towards the bottom of the left-hand navigation pane and select **Audit**.
+
+5. In the **Audit** window, wait a minute or so to see if a banner appears towards the top of the page that says: **Start recording user and admin activity**. If this banner appears, then auditing is not turned on for your organization. This banner is your prompt to turn on audit logging. <br/>
+
+	Select this banner now to turn on audit logging. 
+
+6. In the **Audit** window, the banner will disappear once audit logging is turned on. In a later lab, you will return to this page to view audited activities that you completed during your lab work.  
+ 
+7. Leave the Client 1 VM and all the tabs in your Edge browser open and proceed to the next lab. 
 
 
 # Proceed to Lab 1 - Exercise 2 
