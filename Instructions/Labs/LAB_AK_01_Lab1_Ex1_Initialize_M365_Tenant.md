@@ -28,7 +28,7 @@ You should write down the following information (provided by your instructor) fo
 
 - **Network IP address.** Write down the **IP Address** value (this is the IP Address of your parent domain; for example, 64.64.206.13).
 
-### Task 2- Set up the Organization Profile
+### Task 2- Set up Adatum's Organization Profile
 
 Throughout the labs in this course, you will role-play by taking on the persona of Holly Dickson, Adatum’s Enterprise Administrator. In your role as Holly, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account for herself (you will do this in the next lab exercise), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account is the MOD Administrator account, whose alias is "admin". The username for this account is admin@xxxxxZZZZZZ.onmicrosoft.com (where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider); the display name for this account will be MOD Administrator.
 
@@ -123,7 +123,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 29. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
-### Task 3 – Prepare for Microsoft Azure Active Directory 
+### Task 3 – Install Microsoft Graph PowerShell 
 
 Azure Active Directory is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Microsoft Graph PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
 
@@ -159,9 +159,9 @@ Azure Active Directory is required to perform several configuration tasks when i
 
 In this task, you will turn on Information Rights Management (IRM) for SharePoint Online. 
 
-**Important:** While you will validate IRM for Exchange and SharePoint in Lab 4, you must enable IRM for SharePoint Online now because it can take up to 60 minutes or more for IRM to show up in SharePoint Online. By the time you get to the validation exercise in Lab 4, IRM should have finished its internal configuration and you won’t have to wait for it to be present in SharePoint Online. Keep this time issue in mind if you plan to enable IRM in your real-world deployment.
+**Important:** It can take up to 60 minutes or more for IRM to have completed its internal configuration. Keep this time issue in mind if you plan to enable IRM in your real-world deployment.
 
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as the Mod Administrator. 
 
 2. In the **Microsoft 365 admin center**, select **Show all** (if necessary) in the left-hand navigation pane to see all the navigation options. Under **Admin centers,** select **SharePoint**. This will open the SharePoint admin center in a new tab.
 
@@ -177,8 +177,7 @@ In this task, you will turn on Information Rights Management (IRM) for SharePoin
 
 8. This will return you to the top of the **Settings** page. In your browser, close the current tab that you're on (the **https://xxxxxZZZZZZ-admin.sharepoint.com** tab). This will return you to the **Settings** page in the **SharePoint admin center**.
 
-9. Do **NOT** close the **SharePoint admin center** tab in your Edge browser. Leave this tab and your browser open for the next task.
-
+9. Close the **SharePoint admin center** tab in your Edge browser. This should return you to the Microsoft 365 admin center tab.
 
 ### Task 5 – Turn on Audit Logging to enable Alert Policies
 
@@ -186,9 +185,9 @@ In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal
 
 **Important:** If you see an error message that says "Fail to opt in, please refresh", Audit Logging is being enabled in the background and the message can safely be ignored.
 
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as the MOD Administrator. 
 
-2. Select the **Microsoft 365 admin center** tab in your Edge browser. 
+2. If necessary, select the **Microsoft 365 admin center** tab in your Edge browser. 
 
 3. In the **Microsoft 365 admin center**, under the **Admin centers** section, select **Security**. This will open the **Microsoft 365 Defender** portal.
 
