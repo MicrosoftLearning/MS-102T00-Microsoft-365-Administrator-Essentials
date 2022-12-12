@@ -125,7 +125,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 ### Task 3 – Install Microsoft Graph PowerShell 
 
-Azure Active Directory is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Microsoft Graph PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
+Microsoft Graph PowerShell is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Microsoft Graph PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
 
 1. On LON-CL1, you must open an elevated instance of **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **power** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do not select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu. 
 
@@ -135,25 +135,11 @@ Azure Active Directory is required to perform several configuration tasks when i
 
 3. You will be prompted to confirm whether you want to install the module from an untrusted repository (PSGallery). Enter **A** to select **[A] Yes to All.**  <br/>
 
-    **Note:** Your response will initiate the installation of all the Microsoft Graph packages. Once all the installation messages have finished displaying, it will still take approximately 5 to 10 minutes to complete the Microsoft Graph PowerShell installation. During this time, the cursor will continue to blink below the untrusted repository message. Once the installation is complete, a command prompt is displayed. This may be a good time to take a short break.
+    **Note:** Your response will initiate the installation of all the Microsoft Graph sub-modules. Once all the installation messages (for each sub-module) have finished displaying, it will still take approximately 5 to 10 minutes to complete the Microsoft Graph PowerShell installation. During this time, the cursor will continue to blink below the untrusted repository message. This may be a good time to take a short break.
 
-4. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You have now installed the Microsoft Graph PowerShell module. <br/>
+4. A command prompt will appear once the Microsoft Graph PowerShell module has been installed. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. 
 
-	You now must now import the Microsoft.Graph.Identity.DirectoryManagement sub-module that will be used in the upcoming tenant management labs. Type the following command and then press Enter: <br/>
-
-		Import-Module Microsoft.Graph.Identity.DirectoryManagement
-
-5. You now must connect to Microsoft Graph sub-module that you just installed and request read/write permissions. Type the following command and then press Enter: <br/>
-
-		Connect-MgGraph -Scopes 'Directory.ReadWrite.All'
-
-6. In the **Sign in** window that appears, enter the Microsoft 365 tenant admin username and password provided by your lab hosting provider (this is the MOD Administrator account you used to sign into Microsoft 365).
-
-7. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box, and then select **Accept**.
-
-8. You have installed the Microsoft Graph PowerShell module and connected to it for your current lab session, so do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. 
-
-9. Remain logged into LON-CL1 and keep your Edge browser open.
+5. Remain logged into LON-CL1 and keep your Edge browser open.
 
 
 # Proceed to Lab 1 - Exercise 2 
