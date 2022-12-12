@@ -1,19 +1,19 @@
 # Learning Path 1 - Lab 1 - Exercise 2 - Manage Users and Groups 
 
-In the following lab exercise, you will continue in your role as Holly Dickson, Adatum Corporation’s Enterprise Administrator. In this exercise, you will perform several user and group management functions within Microsoft 365. You will begin by creating a Microsoft 365 user account for Holly, who will be assigned the Global Administrator role. You will create two Microsoft 365 groups and assign existing Microsoft 365 users as members of those groups. You will then delete one of the groups and then use Windows PowerShell to recover the deleted group.
+In the following lab exercise, you will continue in your role as Holly Dickson, Adatum Corporation’s Microsoft 365 Administrator. In this exercise, you will perform several user and group management functions within Microsoft 365. You will begin by creating a Microsoft 365 user account for Holly, who will be assigned the Microsoft 365 Global Administrator role. You will create several Microsoft 365 groups and assign existing Microsoft 365 users as members of those groups. You will then delete one of the groups and then use Windows PowerShell to recover the deleted group.
 
-**Note:** The VM environment provided by your lab hosting provider comes with 11 existing Microsoft 365 user accounts, as well as a large number of existing on-premises user accounts. Several of the existing Microsoft 365 user accounts will be used throughout the labs in this course. Even though the MOD Administrator account has been created for you by your lab hosting provider, you will still create Holly Dickson's user account, since having more than one Global admin is a best practice. It will also provide you with the experience of creating a Microsoft 365 user account in case you're not familiar with the process.
+**Note:** The VM environment provided by your lab hosting provider comes with 11 existing Microsoft 365 user accounts, as well as a large number of existing on-premises user accounts. Several of the existing Microsoft 365 user accounts will be used throughout the labs in this course. Even though the MOD Administrator account has been created for you by your lab hosting provider, you will still create Holly Dickson's user account, since having more than one user who's assigned the Microsoft 365 Global Administrator role is a best practice. It will also provide you with the experience of creating a Microsoft 365 user account in case you're not familiar with the process.
 
 
-### Task 1 - Create a User Account for Adatum's Enterprise Administrator
+### Task 1 - Create a User Account for Adatum's Microsoft 365 Administrator
 
-Holly Dickson is Adatum’s Enterprise Administrator. Since a Microsoft 365 user account has not been set up for her, she initially signed into Microsoft 365 as the MOD Administrator account (the default Global admin) in the previous lab. In this task, you will continue to be logged in as the MOD Administrator, during which you will create a Microsoft 365 user account for Holly. You will also assign the Microsoft 365 Global Administrator role to Holly's account. This role will give Holly permissions to perform all administrative functions within Microsoft 365. Following this task, you will log in using Holly's new account and you will perform all remaining labs using Holly's persona. 
+Holly Dickson is Adatum’s Microsoft 365 Administrator. Since a Microsoft 365 user account has not been set up for her, she initially signed into Microsoft 365 as the MOD Administrator account (the default Global administrator) in the previous lab. In this task, you will continue to be logged in as the MOD Administrator, during which you will create a Microsoft 365 user account for Holly. You will also assign the Microsoft 365 Global Administrator role to Holly's account. This role will give Holly permissions to perform all administrative functions within Microsoft 365. Following this task, you will log in using Holly's new account and you will perform all remaining labs using Holly's persona. 
 
-**Important:** As a best practice in your real-world deployment, you should always write down the first Global admin account’s credentials (in this lab, it's the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). You should store away this account for security reasons. **This account should be a non-personalized identity** that owns the highest privileges possible in a tenant. It should **not** be MFA activated because it is not personalized. Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few personal Global admins as possible. For those personal Global admins that you do create in your real-world deployment, they should each be mapped to a single identity (such as Holly Dickson), and they should each have Azure Active Directory Multi-Factor Authentication (MFA) enforced. 
+**Important:** As a best practice in your real-world deployment, you should always write down the credentials of the first Global administrator account (in this lab, it's the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). You should store away this account information for security reasons. **This account should be a non-personalized identity** that owns the highest privileges possible in a tenant. It should **not** be MFA activated because it is not personalized. Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few personal Global admins as possible. For those personal Global admins that you do create in your real-world deployment, they should each be mapped to a single user (such as Holly Dickson), and they should each have Azure Active Directory Multi-Factor Authentication (MFA) enforced. 
 
 That being said, you will not turn on MFA for Holly's account because time is limited in this training course and we don't want to take up lab time by forcing you to log in using a second authentication method every time Holly logs in.
 
-1. On the LON-DC1 VM, the **Microsoft 365 admin center** should still be open in Internet Explorer from the prior lab, and you should be signed into Microsoft 365 as the **MOD Administrator**. 
+1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in Internet Explorer from the prior lab, and you should be signed into Microsoft 365 as the **MOD Administrator**. 
 
 2. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. 
 
@@ -75,15 +75,15 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 16. If a window appears asking whether you want to respond to a survey on your experience, select **Cancel**.
 
-17. Remain logged into the domain controller (LON-DC1) VM with the Microsoft 365 admin center open in your browser for the next task.
+17. Remain logged into the Client 1 VM (LON-CL1) with the Microsoft 365 admin center open in your browser for the next task.
 
 ### Task 2 – Set up Microsoft 365 User Accounts
 
-After completing the previous task, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this task, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s new Enterprise Administrator. Therefore, you will begin this task by logging out of Microsoft 365 as the MOD Administrator and you will log back in as Holly. When you log in as Holly for the first time, you will be required to change her password, since you configured this option in the earlier task when you created Holly's user account. 
+After completing the previous task, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this task, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s new Microsoft 365 Administrator. Therefore, you will begin this task by logging out of Microsoft 365 as the MOD Administrator and you will log back in as Holly. When you log in as Holly for the first time, you will be required to change her password, since you configured this option in the earlier task when you created Holly's user account. 
 
-In the prior task, you noticed that your Microsoft 365 trial tenant came equipped with a list of active users. As Holly Dickson, Adatum's Enterprise Admin, you have selected the following users to help with your pilot project: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez. 
+In the prior task, you noticed that your Microsoft 365 trial tenant came equipped with a list of active users. As Holly Dickson, Adatum's Microsoft 365 Administrator, you have selected the following users to help with your pilot project: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez. 
 
-Each user is a key member of your pilot project team. While their user accounts are already present in Microsoft 365, you need to configure their passwords so that they can more easily sign into Microsoft 365 when needed in the upcoming lab exercises. You will assign **User.pw1** as their user password, just as you did when you created Holly's account. You also need to add a Microsoft 365 group that will be used in a later lab exercise. 
+Each user is a key member of your pilot project team. While their user accounts are already present in Microsoft 365, you need to configure their passwords so they can more easily sign into Microsoft 365 when needed in the upcoming lab exercises. You will assign **User.pw1** as their user password, just as you did when you created Holly's account. You also need to add a Microsoft 365 group that will be used in a later lab exercise. 
 
 **Note:** Using the same password for multiple users should obviously never be done in the real-world. However, we're doing it here in our training environment to simply make things easier for students as they progress through the labs.
 
@@ -180,7 +180,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 16. After creating the Sales Group, you will be returned to the **Active teams & groups** window. It may take a few minutes for the Sales Group to appear, so you may need to select the **Refresh** option on the menu bar once or twice. Note that there are four tabs on this page, one for each group type (Microsoft 365, Distribution list, Mail-enabled security, and Security). The **Microsoft 365** tab is displayed by default, which is the group type assigned to the Sales Group. So the Sales Group should be displayed in this tab.
 
-17. Once the **Sales Group** appears in the list of **Microsoft 365** groups, select the **Sales Group** name. You will now add members to this group.
+17. Once the **Sales Group** appears in the list of groups under the **Microsoft 365** tab, select the **Sales Group** name. You will now add members to this group.
 
 18. In the **Sales Group** pane that appears, the **General** tab is displayed by default. Select the **Members** tab.
 
@@ -234,26 +234,34 @@ In this task, you will create three new groups that will be used in later labs. 
 
 36. In the **Active users** list verify that the Inside Sales group's two owners (**Allan Deyoung** and **Patti Fernandez**) and the two members (**Diego Siciliani** and **Lynne Robbins**) still appear in the list of users. This verifies that deleting a group does not delete the user accounts that were owners or members of the group.
 
-37. Remain logged into LON-DC1 with the **Microsoft 365 admin center** open in your browser for the next task.
+37. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
 ### Task 4 – Recover Groups using PowerShell 
 
-In this task, you will use Windows PowerShell to recover the Inside Sales group that you previously deleted. To use Windows PowerShell to perform this Azure AD-related task, the Windows Azure Active Directory PowerShell Module must be installed. 
+In this task, you will use Windows PowerShell to recover the Inside Sales group that you previously deleted. To use Windows PowerShell to perform this task, the Microsoft Graph PowerShell module must be installed. Microsoft Graph PowerShell uses the Restore-MgDirectoryDeletedItem cmdlet to restore a recently deleted application, group, servicePrincipal, administrative unit, or user object from the deleted items "container". Deleted items will remain available to restore for up to 30 days. After 30 days, the items are permanently deleted. 
 
-**NOTE:** You should have installed the Windows Azure Active Directory PowerShell Module in the prior lab exercise.   
+In this task, you will recover the Inside Sales group, which was a Microsoft 365 group. You can recover a deleted group for all group types except for security groups, which are deleted permanently.
+
+**NOTE:** In the prior lab exercise, you should have installed the Microsoft Graph PowerShell module. In this lab, you will import the Microsoft.Graph.Identity.DirectoryManagement sub-module, and connect to Microsoft Graph with directory Read/Write permissions. The Microsoft.Graph.Identity.DirectoryManagement sub-module is required to recover deleted tenant objects and in the upcoming tenant management labs.
 
 1. If you’re not logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
 2. If Windows PowerShell is still open from the previous exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
-3. In **Windows PowerShell**, at the command prompt type the following command and then press Enter to connect to the Azure Active Directory PowerShell for Graph module (AzureAD) with an authenticated account: <br/> 
+3. In **Windows PowerShell**, you must now import the Microsoft.Graph.Identity.DirectoryManagement sub-module. This module is used to recovered deleted groups, and in the upcoming tenant management labs. Type the following command and then press Enter: <br/>
 
-		Connect-AzureAD   
+		Import-Module Microsoft.Graph.Identity.DirectoryManagement
 
-4. A new window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **User.pw1** as the Password.  
+4. You now must connect to Microsoft Graph sub-module that you just installed and request read/write permissions. Microsoft Graph PowerShell permissions are NOT pre-authorized and you must perform one-time request for permissions depending on your needs.Type the following command and then press Enter: <br/>
 
-5. At the command prompt, type the following command and then press Enter to display the repository of deleted groups (this should display the **Inside Sales** group that you earlier deleted):<br/>  
+		Connect-MgGraph -Scopes 'Directory.ReadWrite.All'
+
+5. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **User.pw1** as the Password.  
+
+6. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box, and then select **Accept**.
+
+7. At the command prompt, type the following command and then press Enter to display the repository of deleted groups (this should display the **Inside Sales** group that you earlier deleted):<br/>  
 	
 		Get-AzureADMSDeletedGroup   
 
