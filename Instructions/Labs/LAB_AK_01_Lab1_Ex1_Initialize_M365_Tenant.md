@@ -9,7 +9,7 @@ In your lab environment, your lab hosting provider has already obtained a Micros
 - A local administrator account for Adatum's on-premises environment (Adatum\Administrator).
 - A default tenant admin account in Microsoft 365 (the display name for this user account is MOD Administrator). 
 
-You will log into the first client PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (MOD Administrator). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Azure Active Directory and for a future lab using Microsoft Teams.
+You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (MOD Administrator). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Azure Active Directory and for a future lab using Microsoft Teams.
 
 
 ### Task 1 - Obtain Your Microsoft 365 Credentials
@@ -44,7 +44,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 6. In the **Sign in** dialog box, copy and paste in the **Microsoft 365 Tenant Username** provided by your lab hosting provider (this is the MOD Administrator account). The username should be in the form of **admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider. Select **Next**.
 
-78. In the **Enter password** dialog box, copy and paste in the unique **Microsoft 365 Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+7. In the **Enter password** dialog box, copy and paste in the unique **Microsoft 365 Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
 8. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** diaglog box that appears, select **Never**.
 
@@ -80,21 +80,21 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
     - Preferred language: **English**
 
-17. Select **Save**.
+167. Select **Save**.
 
-18. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the upper right-hand corner to close the pane.
+17. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the upper right-hand corner to close the pane.
 
-19. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.
+18. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.
 
-20. In the **Release preferences** pane that appears, select the **Targeted release for select users** option and then select **Save**.<br/>
+19. In the **Release preferences** pane that appears, select the **Targeted release for select users** option and then select **Save**.<br/>
 
     **Note:** One of the benefits of Microsoft 365 is its ability to have the latest features and updates automatically applied to your environment. This process can reduce maintenance costs and overhead for an organization and allow early-adopter users to test new features. By setting up your **Release preferences**, you can control how and when your Microsoft 365 tenant receives these updates. <br/>
 
     **Note:** The **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to a select group of users is the more typical preference as it enables an organization to control when it wants to make updates available to everyone once they've been reviewed by the control group.
 
-21. In the **Release preferences** pane, below the list of release options, select the **Select users** option.
+20. In the **Release preferences** pane, below the list of release options, select the **Select users** option.
 
-22. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users (these are the Microsoft 365 user accounts created for your tenant by your lab hosting provider). In this list, select each of the following users. <br/>
+21. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users (these are the Microsoft 365 user accounts created for your tenant by your lab hosting provider). In this list, select each of the following users. <br/>
 
     **Note:** You must select each user, one at a time. After selecting a user, you must select inside the field again to re-display the list so that you can select the next user. 
 
@@ -105,49 +105,55 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
     **Note:** Alex, Joni, and Lynne are part of Holly's Microsoft 365 pilot team. Their accounts will be used throughout the labs for this course.
     
-23. Select **Save**.
+22. Select **Save**.
 
-24. At the top of the **Release preferences** pane, note the message indicating the 4 users were added to the targeted release. Select the **X** in the upper right-hand corner to close the pane. 
+23. At the top of the **Release preferences** pane, note the message indicating the 4 users were added to the targeted release. Select the **X** in the upper right-hand corner to close the pane. 
 
-25. In the list of organization profile data, select **Custom themes**.
+24. In the list of organization profile data, select **Custom themes**.
 
-26. In the **Customize Microsoft 365 for your organization** pane, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+Add theme** option.
+25. In the **Customize Microsoft 365 for your organization** pane, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+Add theme** option.
 
-27. In the **Default theme** pane, the **General** tab is displayed by default. Select the **Show the user's display name** check box. 
+26. In the **Default theme** pane, the **General** tab is displayed by default. Select the **Show the user's display name** check box. 
  
-28. Select the **Logos** and **Colors** tabs and take some time to review their options. Note the various theme and branding options that are available for you to update. For the purpose of this lab, you can change any of the options or leave the default values as is. For example, in your real-world environment, you can add the logo of your company and set the background image as the default for all your users. For the purpose of this lab, you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore the different options for your tenant and make any changes that you wish. <br/>
+27. Select the **Logos** and **Colors** tabs and take some time to review their options. Note the various theme and branding options that are available for you to update. For the purpose of this lab, you can change any of the options or leave the default values as is. For example, in your real-world environment, you can add the logo of your company and set the background image as the default for all your users. For the purpose of this lab, you can change the colors for your navigation pane, text color, icon color, and accent color. Go ahead and explore the different options for your tenant and make any changes that you wish. <br/>
 
 	**Tip:** Some color patterns aesthetically distract users. If you do change any of the colors, it's recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
-29. Select **Save** when you are done and then close the **Custom themes** pane once your changes are saved.
+28. Select **Save** when you are done and then close the **Custom themes** pane once your changes are saved.
 
-
+29. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 ### Task 3 – Prepare for Microsoft Azure Active Directory 
 
-Azure Active Directory is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Azure Active Directory PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
+Azure Active Directory is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Microsoft Graph PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
 
-1. On LON-DC1, you must open an elevated instance of **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **powershell** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do not select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu. 
+1. On LON-CL1, you must open an elevated instance of **Windows PowerShell**. Select the magnifying glass (Search) icon on the taskbar at the bottom of the screen and type **power** in the Search box that appears. In the list of search results, right-click on **Windows PowerShell** (do not select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu. 
 
-2. Maximize your PowerShell window. In **Windows PowerShell**, at the command prompt type the following command to install the Azure AD PowerShell module from the PowerShell Gallery and then press Enter: <br/>
+2. Maximize your PowerShell window. In **Windows PowerShell**, type the following command at the command prompt to install the Microsoft Graph PowerShell module from the PowerShell Gallery and then press Enter: <br/>
 
-		Install-Module AzureAD
+		Install-Module Microsoft.Graph -Scope CurrentUser
 
-3. It may take a minute or two, but you will eventually be prompted to confirm whether you want to install the module from an untrusted repository (PSGallery). Enter **A** to select **[A] Yes to All.**  <br/>
+3. You will be prompted to confirm whether you want to install the module from an untrusted repository (PSGallery). Enter **A** to select **[A] Yes to All.**  <br/>
 
-    **Note:** If you receive a warning message indicating version 2.0.2.130 of the AzureAD module is already installed in your VM environment and that you can install the next version using the -force parameter, ignore this message.
+    **Note:** Your response will initiate the installation of all the Microsoft Graph packages. Once all the installation messages have finished displaying, it will still take approximately 5 to 10 minutes to complete the Microsoft Graph PowerShell installation. During this time, the cursor will continue to blink below the untrusted repository message. Once the installation is complete, a command prompt is displayed. This may be a good time to take a short break.
 
-4. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You have now installed the Windows Azure Active Directory PowerShell Module. <br/>
+4. Once the installation is complete, the screen will return to the Windows PowerShell command prompt. You have now installed the Microsoft Graph PowerShell module. <br/>
 
-	You now must connect to the AzureAD module that you just installed. Type the following command and then press Enter: <br/>
+	You now must now import the Microsoft.Graph.Identity.DirectoryManagement sub-module that will be used in the upcoming tenant management labs. Type the following command and then press Enter: <br/>
 
-		Connect-AzureAD
+		Import-Module Microsoft.Graph.Identity.DirectoryManagement
 
-5. If a **Sign in** window appears, enter the Microsoft 365 tenant admin username and password provided by your lab hosting provider (this is the MOD Administrator account you used to sign into Microsoft 365).
+5. You now must connect to Microsoft Graph sub-module that you just installed and request read/write permissions. Type the following command and then press Enter: <br/>
 
-6. You have installed the AzureAD module and connected to it for your current lab session, so do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. 
+		Connect-MgGraph -Scopes 'Directory.ReadWrite.All'
 
-7. Remain logged into LON-DC1 and keep your Edge browser open.
+6. In the **Sign in** window that appears, enter the Microsoft 365 tenant admin username and password provided by your lab hosting provider (this is the MOD Administrator account you used to sign into Microsoft 365).
+
+7. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box, and then select **Accept**.
+
+8. You have installed the Microsoft Graph PowerShell module and connected to it for your current lab session, so do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. 
+
+9. Remain logged into LON-CL1 and keep your Edge browser open.
 
 ### ‎Task 4 - Enable IRM for SharePoint Online 
 
