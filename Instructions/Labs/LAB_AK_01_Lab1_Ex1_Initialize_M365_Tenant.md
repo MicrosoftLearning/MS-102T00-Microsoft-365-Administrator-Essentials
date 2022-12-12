@@ -155,51 +155,5 @@ Azure Active Directory is required to perform several configuration tasks when i
 
 9. Remain logged into LON-CL1 and keep your Edge browser open.
 
-### ‎Task 4 - Enable IRM for SharePoint Online 
-
-In this task, you will turn on Information Rights Management (IRM) for SharePoint Online. 
-
-**Important:** It can take up to 60 minutes or more for IRM to have completed its internal configuration. Keep this time issue in mind if you plan to enable IRM in your real-world deployment.
-
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as the Mod Administrator. 
-
-2. In the **Microsoft 365 admin center**, select **Show all** (if necessary) in the left-hand navigation pane to see all the navigation options. Under **Admin centers,** select **SharePoint**. This will open the SharePoint admin center in a new tab.
-
-3. In the **Welcome to your new home page** window, select **Take the tour**.
-
-4. In the **SharePoint admin center**, in the left-hand navigation pane, select **Settings**. 
-
-5. At the bottom of the **Settings** page is a sentence that says **Can’t find the setting you’re looking for? Go to the classic settings page.** In this sentence, select the hyperlinked text: **classic settings page**.
-
-6. On the classic **Settings** page, scroll down to the **Information Rights Management (IRM)** section. In the options to the right of this section, select the **Use the IRM service specified in your configuration** option, and then select the **Refresh IRM Settings** button.
-
-7. This will return you to the top of the **Settings** page. Scroll down to the **Information Rights Management (IRM)** section and verify the **Use the IRM service specified in your configuration** option is selected and a **We successfully refreshed your settings** message appears below the **Refresh IRM Settings** button. Continue scrolling to the bottom of the page and select the **OK** button. 
-
-8. This will return you to the top of the **Settings** page. In your browser, close the current tab that you're on (the **https://xxxxxZZZZZZ-admin.sharepoint.com** tab). This will return you to the **Settings** page in the **SharePoint admin center**.
-
-9. Close the **SharePoint admin center** tab in your Edge browser. This should return you to the Microsoft 365 admin center tab.
-
-### Task 5 – Turn on Audit Logging to enable Alert Policies
-
-In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal. However, before you can implement alerts, an admin must first turn on Audit Logging for the organization. Since it can take a couple of hours for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 6.
-
-**Important:** If you see an error message that says "Fail to opt in, please refresh", Audit Logging is being enabled in the background and the message can safely be ignored.
-
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as the MOD Administrator. 
-
-2. If necessary, select the **Microsoft 365 admin center** tab in your Edge browser. 
-
-3. In the **Microsoft 365 admin center**, under the **Admin centers** section, select **Security**. This will open the **Microsoft 365 Defender** portal.
-
-4. In the **Microsoft 365 Defender** portal, scroll down towards the bottom of the left-hand navigation pane and select **Audit**.
-
-5. In the **Audit** window, wait a minute or so to see if a banner appears towards the top of the page that says: **Start recording user and admin activity**. If this banner appears, then auditing is not turned on for your organization. This banner is your prompt to turn on audit logging. <br/>
-
-	Select this banner now to turn on audit logging. 
-
-6. In the **Audit** window, the banner will disappear once audit logging is turned on. In a later lab, you will return to this page to view audited activities that you completed during your lab work.  
- 
-7. Leave the Client 1 VM and all the tabs in your Edge browser open and proceed to the next lab. 
-
 
 # Proceed to Lab 1 - Exercise 2 
