@@ -249,11 +249,11 @@ In this task, you will recover the Inside Sales group, which was a Microsoft 365
 
 2. If Windows PowerShell is still open from the previous exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
-3. In **Windows PowerShell**, you must now import the Microsoft.Graph.Identity.DirectoryManagement sub-module. This module is used to recovered deleted groups, and in the upcoming tenant management labs. Type the following command and then press Enter: <br/>
+3. In **Windows PowerShell**, you must now import the Microsoft.Graph.Identity.DirectoryManagement sub-module that was installed in the prior lab exercise. This module is used to recovered deleted tenant objects, such as users and groups, and in the upcoming tenant management labs. Type the following command and then press Enter: <br/>
 
 		Import-Module Microsoft.Graph.Identity.DirectoryManagement
 
-4. You now must connect to Microsoft Graph sub-module that you just installed and request read/write permissions. Microsoft Graph PowerShell permissions are NOT pre-authorized and you must perform one-time request for permissions depending on your needs.Type the following command and then press Enter: <br/>
+4. You now must now connect to Microsoft Graph and perform a request for permissions. Microsoft Graph PowerShell permissions are NOT pre-authorized and you must perform one-time request for permissions depending on your needs. The 'Directory.ReadWrite.All' scope allows Microsoft Graph to read and write data in Adatum's directory, such as users and groups. Type the following command and then press Enter: <br/>
 
 		Connect-MgGraph -Scopes 'Directory.ReadWrite.All'
 
