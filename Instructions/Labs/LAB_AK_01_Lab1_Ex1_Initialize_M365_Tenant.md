@@ -46,7 +46,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 7. In the **Enter password** dialog box, copy and paste in the unique **Microsoft 365 Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-8. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** diaglog box that appears, select **Never**.
+8. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** dialog box that appears, select **Never**.
 
 9. If a **Welcome to your new Office, MOD** window appears, there's no option to close it. Instead, to the right of the window, select the right arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
@@ -137,9 +137,13 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
     **Note:** Your response will initiate the installation of all the Microsoft Graph sub-modules. Once all the installation messages (for each sub-module) have finished displaying, it will still take approximately 5 to 10 minutes to complete the Microsoft Graph PowerShell installation. During this time, the cursor will continue to blink below the untrusted repository message. This may be a good time to take a short break.
 
-4. A command prompt will appear once the Microsoft Graph PowerShell module has been installed. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. 
+4. A command prompt will appear once Microsoft Graph PowerShell has been installed. Run the following command to see the complete list of sub-modules that were installed under the Microsoft.Graph primary module:  <br/>
 
-5. Remain logged into LON-CL1 and keep your Edge browser open.
+		Get-InstalledModule Microsft.Graph.*  <br/>
+
+	**Note:** The labs that use Microsoft Graph PowerShell in this course will use the following sub-modules: Microsoft.Graph.Identity.DirectoryManagement, Microsoft.Graph.Users, and Microsoft.Graph.Groups. To access the cmdlets for a sub-module, you must first import the sub-module. You can either import all 30+ sub-modules at one time using the "Import-Module Microsoft.Graph" command, or you can import each module that's needed to perform whatever function you're doing (for example, "Import-Module Microsoft.Graph.Users"). For the purpose of this training, since only three sub-modules will be used in later lab exercises, you will only import these three sub-modules as they're needed in later labs.
+
+5. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
 
 # Proceed to Lab 1 - Exercise 2 
