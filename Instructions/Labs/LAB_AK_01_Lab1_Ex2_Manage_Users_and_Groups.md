@@ -243,9 +243,7 @@ In this task, you will recover the Inside Sales group, which was a Microsoft 365
 
 Microsoft Graph PowerShell uses the Restore-MgDirectoryDeletedItem cmdlet to restore a recently deleted application, group, servicePrincipal, administrative unit, or user object from the deleted items "container". Deleted items will remain available to restore for up to 30 days. After 30 days, the items are permanently deleted. 
 
-**NOTE:** Microsoft Graph PowerShell acts as an API wrapper for the Microsoft Graph APIs, exposing the entire API set for use in PowerShell. It contains a set of cmdlets that helps you manage identities at scale from automating tasks to managing users in bulk using Azure Active Directory (Azure AD). The primary Microsoft Graph PowerShell module is “Microsoft.Graph,” which contains all the core connection commands needed for using Microsoft Graph. Additional sub-modules target specific tasks such as managing users, mail, sites, compliance, teams, and groups. You can either import the primary module (Microsoft.Graph), or you can import individual sub-modules, each of which contains the same name as the primary, but with the category appended to the end (for example, Microsoft.Graph.Users). All sub-modules automatically import when you import the primary module. However, given the overhead involved in importing the primary module in your VM environment, you will instead import only the sub-modules that are needed in this training. 
-
-For the purpose of this lab exercise, you will import the Microsoft.Graph.Identity.DirectoryManagement sub-module. You will then connect to it with Directory Read/Write permission, which is needed to recover a deleted group. 
+For the purpose of this lab exercise, you will begin by importing the Microsoft.Graph.Identity.DirectoryManagement sub-module, which contains the cmdlets needed to restore a deleted group. You will then connect to this sub-module with Directory Read/Write permission, which is needed to recover a deleted group. 
 
 1. If you’re not logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
