@@ -164,7 +164,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 36. Once the domain setup process is complete and the three DNS records validated successfully for the **Exchange and Exchange Online Protection** service, the **Domains** page will be displayed. Verify the **Domain status** is **Healthy** for the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain, which should now appear in the list of domains. This new domain should also be flagged as the Default domain for Adatum (note the Default indicator at the end of the domain's display name in the list). For the purpose of this lab, leave this new domain as the default domain. 
 
-37. Remain logged into the LON-DC1 VM with both **Microsoft Edge** and **Windows PowerShell** left open for the next task. 
+37. Remain logged into the LON-DC1 VM with both **Microsoft Edge** and **Windows PowerShell** left open. You will return to LON-DC1 in a later lab that performs identity synchronization. 
 
 
 
