@@ -239,21 +239,23 @@ In this task, you will create three new groups that will be used in later labs. 
 
 ### Task 4 – Recover Groups using PowerShell 
 
-In this task, you will use Windows PowerShell to recover the Inside Sales group that you previously deleted. To use Windows PowerShell to perform this task, the Microsoft Graph PowerShell module must be installed. Microsoft Graph PowerShell uses the Restore-MgDirectoryDeletedItem cmdlet to restore a recently deleted application, group, servicePrincipal, administrative unit, or user object from the deleted items "container". Deleted items will remain available to restore for up to 30 days. After 30 days, the items are permanently deleted. 
+In this task, you will recover the Inside Sales group, which was a Microsoft 365 group. You can recover a deleted group for all group types except for security groups, which are deleted permanently. In this task, you will use Windows PowerShell to recover the Inside Sales group that you previously deleted. To use Windows PowerShell to perform this task, you will use Microsoft Graph PowerShell, which you should have installed in the first lab in this course.
 
-In this task, you will recover the Inside Sales group, which was a Microsoft 365 group. You can recover a deleted group for all group types except for security groups, which are deleted permanently.
+Microsoft Graph PowerShell uses the Restore-MgDirectoryDeletedItem cmdlet to restore a recently deleted application, group, servicePrincipal, administrative unit, or user object from the deleted items "container". Deleted items will remain available to restore for up to 30 days. After 30 days, the items are permanently deleted. 
 
-**NOTE:** In the prior lab exercise, you should have installed the Microsoft Graph PowerShell module. In this lab, you will import the Microsoft.Graph.Identity.DirectoryManagement sub-module, and connect to Microsoft Graph with directory Read/Write permissions. The Microsoft.Graph.Identity.DirectoryManagement sub-module is required to recover deleted tenant objects and in the upcoming tenant management labs.
+**NOTE:** Microsoft Graph PowerShell acts as an API wrapper for the Microsoft Graph APIs, exposing the entire API set for use in PowerShell. It contains a set of cmdlets that helps you manage identities at scale from automating tasks to managing users in bulk using Azure Active Directory (Azure AD). The primary Microsoft Graph PowerShell module is “Microsoft.Graph,” which contains all the core connection commands needed for using Microsoft Graph. Additional sub-modules target specific tasks such as managing users, mail, sites, compliance, teams, and groups. You can either import the primary module (Microsoft.Graph), or you can import individual sub-modules, each of which contains the same name as the primary, but with the category appended to the end (for example, Microsoft.Graph.Users). All sub-modules automatically import when you import the primary module. However, given the overhead involved in importing the primary module in your VM environment, you will instead import only the sub-modules that are needed in this training. 
+
+For the purpose of this lab exercise, you will import the Microsoft.Graph.Identity.DirectoryManagement sub-module. You will then connect to it with Directory Read/Write permission, which is needed to recover a deleted group. 
 
 1. If you’re not logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
 2. If Windows PowerShell is still open from the previous exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
-3. In **Windows PowerShell**, you must now import the Microsoft.Graph.Identity.DirectoryManagement sub-module that was installed in the prior lab exercise. This module is used to recovered deleted tenant objects, such as users and groups, and in the upcoming tenant management labs. Type the following command and then press Enter: <br/>
+3. In ther prior lab exercise, you installed Microsoft Graph PowerShell. You must now import the **Microsoft.Graph.Identity.DirectoryManagement** sub-module so that you can recover the deleted group. To do so, type the following command and then press Enter:  <br/>
 
 		Import-Module Microsoft.Graph.Identity.DirectoryManagement
 
-4. You now must now connect to Microsoft Graph and perform a request for permissions. Microsoft Graph PowerShell permissions are NOT pre-authorized and you must perform one-time request for permissions depending on your needs. The 'Directory.ReadWrite.All' scope allows Microsoft Graph to read and write data in Adatum's directory, such as users and groups. Type the following command and then press Enter: <br/>
+4. At the command prompt, you now must connect to Microsoft Graph and perform a request for permissions. Microsoft Graph PowerShell permissions are NOT pre-authorized. As such, you must perform a one-time, per-module request for permissions depending on your needs. The 'Directory.ReadWrite.All' scope allows Microsoft Graph to read and write data in Adatum's directory, such as users and groups. Type the following command and then press Enter: <br/>
 
 		Connect-MgGraph -Scopes 'Directory.ReadWrite.All'
 
