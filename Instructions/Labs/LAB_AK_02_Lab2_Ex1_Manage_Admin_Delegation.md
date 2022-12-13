@@ -34,12 +34,12 @@ Holly Dickson is Adatum’s Microsoft 365 Administrator. Holly has been assigned
  
 12. In the list of common admin roles, select the **User Administrator** role and then select **Save changes**.
 
-13. Remain logged into LON-DC1 and the Microsoft 365 admin center as Holly Dickson.
+13. Remain logged into LON-CL1 and the Microsoft 365 admin center as Holly Dickson.
 
 
 ### Task 2 - Assign Delegated Administrators with Windows PowerShell  
 
-This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Microsoft 365 Admin Center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell. 
+This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Microsoft 365 admin center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell. 
 
 To add a user to an admin role using the Microsoft Graph PowerShell module, you must first obtain the Object ID of the user and the Object ID of the role. If the role has not yet been enabled (meaning that it hasn't been assigned to a user or it hasn't been physically enabled), then you must enable the role first before you can assign it to a user using PowerShell. In this task, you will enable the Service Support Administrator role first before assigning it to Patti Fernandez.
 
@@ -47,7 +47,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 1. On LON-CL1, select the Windows PowerShell icon on the taskbar that you left open from a prior lab. If you closed the PowerShell window, then open an elevated instance of it using the same instruction as before. 
 
-2. Your PowerShell session should still be connected to the Microsoft Graph PowerShell module from the prior lab. However, if you previously closed PowerShell and just repopened it, then connect to the Microsoft Graph PowerShell module using the steps from the prior lab exercise. 
+2. Your PowerShell session should still be connected to the Microsoft Graph PowerShell module from the prior lab. However, if you previously closed PowerShell and just reopened it, then connect to the Microsoft.Graph.Identity.DirectoryManagement sub-module using the steps from the prior lab exercise. 
 
 3. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
