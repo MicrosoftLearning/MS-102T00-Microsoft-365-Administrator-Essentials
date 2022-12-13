@@ -6,9 +6,9 @@ In this exercise, you will continue in your role as Holly Dickson, Adatum's Micr
 
 Holly Dickson is Adatum’s Microsoft 365 Administrator. Holly has been assigned the Microsoft 365 Global Administrator role. As you continue in your role as Holly, you will use the Microsoft 365 admin center to assign administrator rights to several Adatum users. 
 
-1. In the prior lab exercise, you created a new domain for Adatum on LON-DC1. You should now switch back to **LON-CL1** to perform the Microsoft 365 administrative tasks in this lab exercise. <br/>
+1. In the prior lab exercise, you created a new domain for Adatum on LON-DC1. You should now switch back to **LON-CL1** to perform the Microsoft 365 administrative tasks in this lab exercise. As a best practice, normal Microsoft 365 administrative tasks should be performed on a client PC rather then the company's domain controller.  <br/>
 
-	If you’re not logged into LON-CL1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
+	Switch to **LON-CL1**. If you’re not logged into LON-CL1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
 2. In the **Microsoft 365 admin center** in your Edge browser, you should still be logged in as Holly Dickson from a prior lab exercise. In the navigation pane, select **Users** and then select **Active Users**. 
 
@@ -47,7 +47,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 1. On LON-CL1, select the Windows PowerShell icon on the taskbar that you left open from a prior lab. If you closed the PowerShell window, then open an elevated instance of it using the same instruction as before. 
 
-2. Your PowerShell session should still be connected to the Microsoft Graph PowerShell module from the prior lab. However, if you previously closed PowerShell and just reopened it, then connect to the Microsoft.Graph.Identity.DirectoryManagement sub-module using the steps from the prior lab exercise. 
+2. Your PowerShell session should still be connected to Microsoft Graph PowerShell from the prior lab. However, if you previously closed PowerShell and just reopened it, then import the Microsoft.Graph.Identity.DirectoryManagement sub-module using the steps from the prior lab exercise. 
 
 3. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
