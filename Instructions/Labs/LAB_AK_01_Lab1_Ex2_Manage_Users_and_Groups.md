@@ -265,7 +265,7 @@ For the purpose of this lab exercise, you will begin by importing the Microsoft.
 	
 		Get-AzureADMSDeletedGroup   
 
-6. At the command prompt, either type or copy and paste in the following command; however, do not press Enter yet as you must first replace {objectId} with the actual Object ID of the deleted Inside Sales group.  <br/>
+8. At the command prompt, either type or copy and paste in the following command; however, do not press Enter yet as you must first replace {objectId} with the actual Object ID of the deleted Inside Sales group.  <br/>
 
 		Restore-AzureADMSDeletedDirectoryObject -Id {objectId}
 
@@ -275,19 +275,19 @@ For the purpose of this lab exercise, you will begin by importing the Microsoft.
 
 	**NOTE:** If nothing happens when you hit Enter, then extraneous hidden characters may have been pasted in following the object ID. If this occurs, retype the command and then after pasting in the object ID, hit the Delete key a couple of times to delete any extraneous characters that may have been pasted in following the object ID, and then press Enter again.  
 		
-7. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
+9. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
 
-8. You should now verify the **Inside Sales** group has been recovered. To do this, go to the **Microsoft 365 Admin Center** in your Edge browser, and then under **Groups** in the navigation pane, select **Active teams & groups**. 
+10. You should now verify the **Inside Sales** group has been recovered. To do this, go to the **Microsoft 365 Admin Center** in your Edge browser, and then under **Groups** in the navigation pane, select **Active teams & groups**. 
 
-9. Verify the **Inside Sales** group has been restored and is present in the list of active groups. If the Inside Sales group does not appear, wait a minute or two and then select **Refresh** on the menu bar above the list of groups.
+11. Verify the **Inside Sales** group has been restored and is present in the list of active groups. If the Inside Sales group does not appear, wait a minute or two and then select **Refresh** on the menu bar above the list of groups.
 
-10. You now want to verify that the recovery process correctly updated the group's membership. From the **Active groups** windows, select the **Microsoft 365** tab if necessary, and then in the list of Microsoft 365 groups, select the **Inside Sales** group (select the name and not the check box).
+12. You now want to verify that the recovery process correctly updated the group's membership. From the **Active groups** windows, select the **Microsoft 365** tab if necessary, and then in the list of Microsoft 365 groups, select the **Inside Sales** group (select the name and not the check box).
 
-11. In the **Inside Sales** pane that appears, select the **Members** tab. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group, and **Diego Siciliani** and **Lynne Robbins** should appear as members of the group. You have just verified that the deleted group is now fully restored.
+13. In the **Inside Sales** pane that appears, select the **Members** tab. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group, and **Diego Siciliani** and **Lynne Robbins** should appear as members of the group. You have just verified that the deleted group is now fully restored.
 
-12. Close the **Inside Sales** window.
+14. Close the **Inside Sales** window.
 
-13. Remain logged into LON-DC1 and leave your browser tabs open so that they’re ready for the next task. 
+15. Remain logged into LON-DC1 and leave your browser tabs open so that they’re ready for the next task. 
 
 
 # Proceed to Lab 1 - Exercise 3
