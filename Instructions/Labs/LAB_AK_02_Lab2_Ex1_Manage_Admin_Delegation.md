@@ -1,14 +1,16 @@
 # Learning Path 2 - Lab 2 - Exercise 1 - Manage Administration Delegation
 
-In this exercise, you will continue in your role as Holly Dickson, Adatum's Enterprise Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. You will assign these roles using both the Microsoft 365 admin center and Windows PowerShell; this will give you the added experience of using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. 
+In this exercise, you will continue in your role as Holly Dickson, Adatum's Microsoft 365 Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. You will assign these roles using both the Microsoft 365 admin center and Windows PowerShell; this will give you the added experience of using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. 
 
 ### ‎Task 1 - Assign Delegated Administrators in the Microsoft 365 Admin Center
 
-As Holly Dickson, Adatum’s Enterprise Administrator and Microsoft 365 Global Admin, you will use the Microsoft 365 admin center to assign administrator rights to several users. 
+Holly Dickson is Adatum’s Microsoft 365 Administrator. Holly has been assigned the Microsoft 365 Global Administrator role. As you continue in your role as Holly, you will use the Microsoft 365 admin center to assign administrator rights to several Adatum users. 
 
-1. If you’re not logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
+1. In the prior lab exercise, you created a new domain for Adatum on LON-DC1. You should now switch back to **LON-CL1** to perform the Microsoft 365 administrative tasks in this lab exercise. <br/>
 
-2. In the **Microsoft 365 admin center** in your Edge browser, you should still be logged in as Holly Dickson. In the navigation pane, select **Users** and then select **Active Users**. 
+	If you’re not logged into LON-CL1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
+
+2. In the **Microsoft 365 admin center** in your Edge browser, you should still be logged in as Holly Dickson from a prior lab exercise. In the navigation pane, select **Users** and then select **Active Users**. 
 
 3. In the **Active users** list, select **Diego Siciliani**.  <br/>
 
@@ -39,13 +41,13 @@ As Holly Dickson, Adatum’s Enterprise Administrator and Microsoft 365 Global A
 
 This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Microsoft 365 Admin Center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell. 
 
-To add a user to an admin role using the Azure Active Directory PowerShell for Graph module (AzureAD), you must first obtain the Object ID of the user and the Object ID of the role. If the role has not yet been enabled (meaning that it hasn't been assigned to a user or it hasn't been physically enabled), then you must enable the role first before you can assign it to a user using PowerShell. In this task, you will enable the Service Support Administrator role first before assigning it to Patti Fernandez.
+To add a user to an admin role using the Microsoft Graph PowerShell module, you must first obtain the Object ID of the user and the Object ID of the role. If the role has not yet been enabled (meaning that it hasn't been assigned to a user or it hasn't been physically enabled), then you must enable the role first before you can assign it to a user using PowerShell. In this task, you will enable the Service Support Administrator role first before assigning it to Patti Fernandez.
 
 PowerShell also enables you to display all the users assigned to a specific role, which can be very important when auditing your Microsoft 365 deployment. In this task, you will learn how to use PowerShell to display all the users assigned to a specific role. 
 
-1. On LON-DC1, select the Windows PowerShell icon on the taskbar that you left open from the previous lab. If you closed the PowerShell window, then open an elevated instance of it using the same instruction as before. 
+1. On LON-CL1, select the Windows PowerShell icon on the taskbar that you left open from a prior lab. If you closed the PowerShell window, then open an elevated instance of it using the same instruction as before. 
 
-2. Your PowerShell session should still be connected to the Azure Active Directory PowerShell for Graph module (AzureAD) from the prior lab. However, if you previously closed PowerShell and just repopened it, then connect to the AzureAD modle using the steps from the prior lab exercise. 
+2. Your PowerShell session should still be connected to the Microsoft Graph PowerShell module from the prior lab. However, if you previously closed PowerShell and just repopened it, then connect to the Microsoft Graph PowerShell module using the steps from the prior lab exercise. 
 
 3. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
@@ -121,11 +123,11 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 14. Repeat steps 11-12 to verify which Adatum users have been assigned to the **Global Administrator** role.  <br/>
 
-15. Verify that there are multiple user accounts that have been assigned the Global Administrator role. In a real world scenario, you would use these two PowerShell commands to monitor how many global admins exist in your Microsoft 365 deployment. You would then remove the Global Administrator role from any users who truly shouldn't have it (remember, the best practice guideline is to have between 2 to 4 global admins in a Microsoft 365 deployment - depending on the size of the organization).  <br/>
+15. Verify that there are multiple user accounts that have been assigned the Global Administrator role. In a real-world scenario, you would use these two PowerShell commands to monitor how many global admins exist in your Microsoft 365 deployment. You would then remove the Global Administrator role from any users who truly shouldn't have it (remember, the best practice guideline is to have between 2 to 4 global admins in a Microsoft 365 deployment - depending on the size of the organization).  <br/>
 
 	In the case of this lab, while your lab hosting provider assigned the Global Administrator role to users other than the MOD Administrator (and you assigned it to Holly Dickson), you'll leave these users as is. In this fictitious Adatum deployment, there's no point in wasting your time removing this role from their accounts. Plus, some of the future lab tasks are based on these users being assigned the Global Administrator role. <br/>
 
-	**Important:** Just remember that in your real world deployments, the Enterprise Administrator should monitor the Global Administrator role on a periodic basis to keep the number of assigned users between 2 and 4.
+	**Important:** Just remember that in your real world deployments, the Microsoft 365 Administrator should monitor the Global Administrator role on a periodic basis to keep the number of assigned users between 2 and 4.
 	
 16. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
 
