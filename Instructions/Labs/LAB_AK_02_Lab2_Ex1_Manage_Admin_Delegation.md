@@ -49,31 +49,25 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 2. Your PowerShell session should still be connected to Microsoft Graph PowerShell from the prior lab. However, if you previously closed PowerShell and just reopened it, then import the Microsoft.Graph.Identity.DirectoryManagement sub-module using the steps from the prior lab exercise. 
 
-3. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
-
-		Set-ExecutionPolicy unrestricted
-
-	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
-
-4. To perform Microsoft 365 user maintenance tasks in Microsoft Graph PowerShell, you must first import the Microsoft.Graph.Users sub-module and request Read/Write permissions. To import this sub-module, type the following command at the command prompt and then press Enter:   <br/>
+3. To perform Microsoft 365 user maintenance tasks in Microsoft Graph PowerShell, you must first import the Microsoft.Graph.Users sub-module and request Read/Write permissions. To import this sub-module, type the following command at the command prompt and then press Enter:   <br/>
 
 		Import-Module Microsoft.Graph.Users
 
-5. In the earlier lab exercise, you connected to Microsoft Graph and requested "Directory.ReadWrite.All" permissions to run the cmdlets that restored the deleted group. To update User and role objects in this task, Holly must now request Read/Write permissions for these objects. To request these permissions, type the following command at the command prompt and then press Enter:  <br/>
+4. In the earlier lab exercise, you connected to Microsoft Graph and requested "Directory.ReadWrite.All" permissions to run the cmdlets that restored the deleted group. To update User and role objects in this task, Holly must now request Read/Write permissions for these objects. To request these permissions, type the following command at the command prompt and then press Enter:  <br/>
 
 		Connect-MgGraph -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
 
-6. In the **Pick and account** window that appears, select Holly Dickson's account. 
+5. In the **Pick and account** window that appears, select Holly Dickson's account. 
 
-7. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box, and then select **Accept**.
+6. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box, and then select **Accept**.
 
-8. Holly wants to assign **Patti Fernandez** to the **Service Support Administrator** role. To assign a role using Microsoft Graph PowerShell module, you must first obtain the Object ID of the user and the Object ID of the role. <br/>
+7. Holly wants to assign **Patti Fernandez** to the **Service Support Administrator** role. To assign a role using Microsoft Graph PowerShell module, you must first obtain the Object ID of the user and the Object ID of the role. <br/>
 
 	To obtain Patti's Object ID, type the following command to display the object ID and display name for all users and then press Enter: <br/>
 
 		Get-MgUser -All | Format-List Id, DisplayName
 
-9. You must now obtain the ObjectID of the Service Support Administrator role so that you can assign it to Patti using the role's ObjectID. However, in Microsoft Graph PowerShell, you can only assign roles that have been "enabled". Enabled roles are roles that were either enabled from a role template, or they're roles that have already been assigned to users through PowerShell or the Microsoft 365 admin center. <br/>
+8. You must now obtain the ObjectID of the Service Support Administrator role so that you can assign it to Patti using the role's ObjectID. However, in Microsoft Graph PowerShell, you can only assign roles that have been "enabled". Enabled roles are roles that were either enabled from a role template, or they're roles that have already been assigned to users through PowerShell or the Microsoft 365 admin center. <br/>
 
 	To view all the enabled roles in Microsoft 365, enter the following command at the command prompt and then press Enter: <br/>
 	
@@ -83,17 +77,17 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	However, since the Service Support Administrator is not included in this list of enabled roles, you must perform steps 10-13 to enable the role before you can assign it to Patti in step 14.
 
-10. To enable a role in the AzureAD PowerShell module, you must first locate the role template to verify its Display Name. You need to know the exact spelling of the role template in order to assign it to the role. To view the list of role templates, type in the following command and then press Enter: <br/>
+9. To enable a role in the AzureAD PowerShell module, you must first locate the role template to verify its Display Name. You need to know the exact spelling of the role template in order to assign it to the role. To view the list of role templates, type in the following command and then press Enter: <br/>
 
 		Get-MgDirectoryRoleTemplate | Format-List Id, DisplayName   <br/>
 	
 	The prior step displayed the templates for all the possible Microsoft 365 roles. In the list of role templates, locate the template record for the **Service Support Administrator** role (as of this writing, it's the seventh role in the list).  
 
-11. You're now ready to activate the Service Support Administrator role. To read a directory role or update its members, it must first be activated in the tenant. The Company Administrators and the implicit user directory roles (User, Guest User, and Restricted Guest User roles) are activated by default. To access and assign members to other directory roles, such as the Service Support Administrator role, you must first activate it with its corresponding directory role template ID.	<br/>
+10. You're now ready to activate the Service Support Administrator role. To read a directory role or update its members, it must first be activated in the tenant. The Company Administrators and the implicit user directory roles (User, Guest User, and Restricted Guest User roles) are activated by default. To access and assign members to other directory roles, such as the Service Support Administrator role, you must first activate it with its corresponding directory role template ID.	<br/>
 
 	To do so, you should begin by locating the Service Support Administrator template in the list of role templates that was displayed after running the prior command. Highlight the ID for the Service Support Administrator template and press **Ctrl+C** to copy it to the clipboard.
 
-12. You should then create a variable that captures the Service Support Administrator template object. When you type in the following command, paste (**Ctrl+V**) in the Service Support Administrator template ID that you copied in the prior step. <br/>
+11. You should then create a variable that captures the Service Support Administrator template object. When you type in the following command, paste (**Ctrl+V**) in the Service Support Administrator template ID that you copied in the prior step. <br/>
 
 	At the command prompt, type the following command, press Ctrl+V to paste in the template ID at the appropriate spot in the command, and press Enter: <br/>
 
@@ -101,11 +95,11 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	For example: $ServiceSupportRoleTemplate = @{ RoleTemplateID = "fe930be7-5e62-47db-91af-98c3a49a38b1" }
 
-13. You are now ready to activate the Service Support Administrator role based on its template. Type in the following command and press Enter:  <br/>
+12. You are now ready to activate the Service Support Administrator role based on its template. Type in the following command and press Enter:  <br/>
 
 		New-MgDirectoryRole -BodyParameter $ServiceSupportRoleTemplate
 
-14. To verify the Service Support Administrator role has been enabled, type in the following command and press enter:  <br/>
+13. To verify the Service Support Administrator role has been enabled, type in the following command and press enter:  <br/>
 			
 		Get-MgDirectoryRole	
 
