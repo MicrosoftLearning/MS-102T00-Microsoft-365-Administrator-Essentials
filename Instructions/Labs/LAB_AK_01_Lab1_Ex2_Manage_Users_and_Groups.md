@@ -241,13 +241,13 @@ In this task, you will create three new groups that will be used in later labs. 
 
 In this task, you will recover the Inside Sales group, which was a Microsoft 365 group. You can recover a deleted group for all group types except for security groups, which are deleted permanently. In this task, you will use Windows PowerShell to recover the Inside Sales group that you previously deleted. To use Windows PowerShell to perform this task, you will use Microsoft Graph PowerShell, which you should have installed in the first lab in this course.
 
-Microsoft Graph PowerShell uses the Restore-MgDirectoryDeletedItem cmdlet to restore a recently deleted application, group, servicePrincipal, administrative unit, or user object from the deleted items "container". Deleted items will remain available to restore for up to 30 days. After 30 days, the items are permanently deleted. 
+**IMPORTANT - Microsoft Graph PowerShell work around:** In a normal situation, you would use the Restore-MgDirectoryDeletedItem cmdlet to restore a recently deleted application, group, servicePrincipal, administrative unit, or user object from the deleted items "container" (deleted items will remain available to restore for up to 30 days; after 30 days, the items are permanently deleted). This cmdlet requires that you know the object ID of the item being restored. While you would normally use the Get-MgDirectoryDeletedItem cmdlet to display the list of deleted objects (along with their object IDs), at present this cmdlet is not returning any data. As a workaround, this task will invoke a direct REST API call by using the Invoke-MgGraphRequest cmdlet.
 
 For the purpose of this lab exercise, you will begin by importing the Microsoft.Graph.Identity.DirectoryManagement sub-module, which contains the cmdlets needed to restore a deleted group. You will then connect to this sub-module with Directory Read/Write permission, which is needed to recover a deleted group. 
 
-1. If you’re not logged into LON-DC1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
+1. If you’re not logged into LON-CL1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
 
-2. If Windows PowerShell is still open from the previous exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
+2. If Windows PowerShell is still open from the previous lab exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
 3. In ther prior lab exercise, you installed Microsoft Graph PowerShell. You must now import the **Microsoft.Graph.Identity.DirectoryManagement** sub-module so that you can recover the deleted group. To do so, type the following command and then press Enter:  <br/>
 
@@ -261,20 +261,18 @@ For the purpose of this lab exercise, you will begin by importing the Microsoft.
 
 6. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box, and then select **Accept**.
 
-7. At the command prompt, type the following command and then press Enter to display the repository of deleted groups (this should display the **Inside Sales** group that you earlier deleted):<br/>  
+7. As the note at the start of this task indicated, you would normally run the **Get-MgDirectoryDeletedItem** command at this point to display the list of deleted objects, which would include the object ID of the **Inside Sales** group that you deleted in the prior task. However, given the current issues with this cmdlet, you should instead run the following series of commands to retrieve this object ID. Type in each command and press Enter:  <br/>  
 	
-		Get-AzureADMSDeletedGroup   
+		$url = "https://graph.microsoft.com/beta/directory/deleteditems/microsoft.graph.group"
 
-8. At the command prompt, either type or copy and paste in the following command; however, do not press Enter yet as you must first replace {objectId} with the actual Object ID of the deleted Inside Sales group.  <br/>
+		Invoke-MgGraphRequest -Method GET -Uri $url -ContentType "application/json" -outVariable deletedGroups
 
-		Restore-AzureADMSDeletedDirectoryObject -Id {objectId}
+		$DeletedItemId = $deletedGroups.value | where displayName -eq 'Inside Sales' | Select-Object -ExpandProperty id
 
-	After entering or copy and pasting in the command, you must replace {objectId} with the Object ID of the Inside Sales group that appears in the table of deleted groups that was displayed after you ran the command in the prior step. To do so, you must select the entire ID of the Inside Sales group and then copy it to the clipboard by pressing Ctrl-C. To paste in the object ID, place your cursor in the correct position in the command line where {objectId} should appear and then press Ctrl-V. <br/>
-	
-	After pasting in the Object ID, press Enter to run the command. This will retrieve and restore the deleted group whose Object ID matches the value you entered. <br/>
+8. Now that you have the object ID of the Inside Sales group (which is stored in the $id variable), type in the following command and press Enter:  <br/>
 
-	**NOTE:** If nothing happens when you hit Enter, then extraneous hidden characters may have been pasted in following the object ID. If this occurs, retype the command and then after pasting in the object ID, hit the Delete key a couple of times to delete any extraneous characters that may have been pasted in following the object ID, and then press Enter again.  
-		
+		Restore-MgDeletedItem -Id $DeletedItemId
+
 9. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
 
 10. You should now verify the **Inside Sales** group has been recovered. To do this, go to the **Microsoft 365 Admin Center** in your Edge browser, and then under **Groups** in the navigation pane, select **Active teams & groups**. 
