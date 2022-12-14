@@ -255,9 +255,14 @@ For the purpose of this lab exercise, you will begin by importing the Microsoft.
 
 		Import-Module Microsoft.Graph.Identity.DirectoryManagement
 
-4. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the cmdlets that were just imported. Microsoft Graph PowerShell permissions are NOT pre-authorized. As such, you must perform a one-time, per-module request for permissions depending on your needs. The 'Group.Read.All' scope is required to display the current list of active groups. The 'Directory.ReadWrite.All' scope provides permission to read and write data in Adatum's directory, such as users and groups. This permission is required to restore the deleted group. Type the following command and then press Enter: <br/>
+4. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the cmdlets that were just imported. Microsoft Graph PowerShell permissions are NOT pre-authorized. As such, you must perform a one-time, per-module request for permissions depending on your needs. <br/>
+
+	- The 'Group.ReadWrite.All' scope is required to display the current list of active groups and restore the deleted group. <br/>
+	- The 'Directory.ReadWrite.All' scope provides permission to read and write data in Adatum's directory, such as users and groups. This permission is required to restore the deleted group. <br/>
+
+	Type the following command and then press Enter: <br/>
 		
-		Connect-MgGraph -Scopes 'Group.Read.All', 'Directory.ReadWrite.All'
+		Connect-MgGraph -Scopes 'Group.ReadWrite.All', 'Directory.ReadWrite.All'
 
 5. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and **User.pw1** as the Password.  
 
