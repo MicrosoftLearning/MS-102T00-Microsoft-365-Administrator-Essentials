@@ -143,7 +143,13 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 	**Note:** The labs that use Microsoft Graph PowerShell in this course will use the following sub-modules: Microsoft.Graph.Identity.DirectoryManagement, Microsoft.Graph.Users, and Microsoft.Graph.Groups. To access the cmdlets for a sub-module, you must first import the sub-module. You can either import all 30+ sub-modules at one time using the "Import-Module Microsoft.Graph" command, or you can import each module that's needed to perform whatever function you're doing (for example, "Import-Module Microsoft.Graph.Users" to perform user maintenance). For the purpose of this training, since only three sub-modules will be used in later lab exercises, you will only import these three sub-modules as they're needed in later labs, rather than importing all 30+ sub-modules at one time.
 
-5. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
+5. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
+
+		Set-ExecutionPolicy unrestricted
+
+	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
+
+6. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
 
 # Proceed to Lab 1 - Exercise 2 
