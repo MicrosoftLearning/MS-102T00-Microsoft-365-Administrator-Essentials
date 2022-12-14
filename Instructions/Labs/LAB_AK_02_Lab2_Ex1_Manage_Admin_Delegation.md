@@ -103,11 +103,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 			
 		Get-MgDirectoryRole	
 
-14. The prior two commands displayed the Service Support Administrator role and its corresponding object ID. You're now ready to assign Patti Fernandez to this role. You should begin by creating a variable that captures the Service Support Administrator template object. When you type in the following command, paste (**Ctrl+V**) in the Service Support Administrator template ID that you copied in the prior step. <br/>
-
-	At the command prompt, type the following command, press Ctrl+V to paste in the template ID at the appropriate spot in the command, and press Enter: <br/>
-
-		$ServiceSupportRoleTemplate = @{ RoleTemplateID = "paste in template ID" }  <br/>
+14. You're now ready to assign Patti Fernandez to the newly activated Service Support Administrator role. 
 
 15. You now want to verify that Patti has been assigned to the Service Support Administrator role. Displaying the users assigned to a role is a two-step process in PowerShell. You will begin by creating a macro command ($role) that states that anytime $role is used in a cmdlet, it should retrieve all users assigned to whichever role name you are validating.  <br/>
 
