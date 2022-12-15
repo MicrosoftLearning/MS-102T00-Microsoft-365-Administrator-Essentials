@@ -249,7 +249,7 @@ For the purpose of this lab exercise, you will begin by importing the Microsoft.
 
 2. If Windows PowerShell is still open from the previous lab exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
-3. In ther prior lab exercise, you installed Microsoft Graph PowerShell. You must now import both the **Microsoft.Graph.Groups** sub-module (which contains the cmdlets to view and maintain Microsoft groups) and the **Microsoft.Graph.Identity.DirectoryManagement** sub-module (which contains the cmdlets necessary to recover the deleted group). To do so, type the following commands and then press Enter:  <br/>
+3. In the prior lab exercise, you installed Microsoft Graph PowerShell. You must now import both the **Microsoft.Graph.Groups** sub-module (which contains the cmdlets to view and maintain Microsoft groups) and the **Microsoft.Graph.Identity.DirectoryManagement** sub-module (which contains the cmdlets necessary to recover the deleted group). To do so, type the following commands and then press Enter:  <br/>
 
 		Import-Module Microsoft.Graph.Groups
 
@@ -272,17 +272,19 @@ For the purpose of this lab exercise, you will begin by importing the Microsoft.
 
 		Get-MgGroup
 
-8. As the note at the start of this task indicated, at this point you would normally run the **Get-MgDirectoryDeletedItem** command to display the list of deleted objects, which would include the object ID of the **Inside Sales** group that you deleted in the prior task. However, given the current issues with this cmdlet, you should instead run the following series of commands to retrieve this object ID. Type in each command and press Enter:  <br/>  
+8. As the note at the start of this task indicated, at this point you would normally run the **Get-MgDirectoryDeletedItem** cmdlet to display the list of deleted objects, which would include the object ID of the **Inside Sales** group that you deleted in the prior task. However, given the current issues with this cmdlet, you should instead run the following series of commands to retrieve this object ID. Type in each command and press Enter:  <br/>  
 	
 		$url = "https://graph.microsoft.com/v1.0/directory/deleteditems/microsoft.graph.group"
 
 		Invoke-MgGraphRequest -Method GET -Uri $url -ContentType "application/json" -outVariable deletedGroups
 
-		$id = $deletedGroups.value | where displayName -eq 'Inside Sales' | Select-Object -ExpandProperty id
+		$DeletedGroup = $deletedGroups.value | where displayName -eq 'Inside Sales'
 
-9. Now that you have the object ID of the Inside Sales group (which is stored in the $DeletedItemId variable), type in the following command and press Enter:  <br/>
+	**Note:** After running these commands, the attributes of the deleted Inside Sales group will be stored in the $DeletedGroup variable.
 
-		Restore-MgDirectoryDeletedItem -DirectoryObjectId $id
+9. Now that you have captured the attributes of the Inside Sales group, you can run the **Restore-MgDirectoryDeletedItem** cmdlet to restore the group. When doing so, you must declare the group's object ID as the parameter next to "-DirectoryObjectId". While you would normally copy and paste in the object ID (for example: -DirectoryObjectId 'e76bbcdb-24c5-41a6-805d-b352976fd2a8'), the current issue with the **Get-MgDirectoryDeletedItem** cmdlet doesn't allow us to identify the actual Id value. As such, you had to run the prior commands to capture the group's attributes in the $DeletedGroup variable. You will now run the **Restore-MgDirectoryDeletedItem** cmdlet, where you will direct it to use the **id** field from among the attributes stored in the $DeletedGroup variable. Type in the following command and press Enter:  <br/>
+
+		Restore-MgDirectoryDeletedItem -DirectoryObjectId $DeletedGroup.id
 
 10. You should now verify the **Inside Sales** group has been recovered. While you can obviously do this in the **Microsoft 365 admin center**, since this task is working with PowerShell, let's verify the recovery using Microsoft Graph PowerShell. To do so, type the following command to get a list of the active groups, which should now include the Inside Sales Group:  <br/>
 
@@ -290,7 +292,7 @@ For the purpose of this lab exercise, you will begin by importing the Microsoft.
 
 11. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
 
-12. You now want to verify that the recovery process correctly updated the group's membership. In your Edge brower, in the **Microsoft 365 admin center**, navigate to the **Active groups** windows, select the **Microsoft 365** tab if necessary, and then in the list of Microsoft 365 groups, select the **Inside Sales** group (select the name and not the check box). <br/>
+12. You now want to verify that the recovery process correctly updated the group's membership. In your Edge browser, in the **Microsoft 365 admin center**, navigate to the **Active groups** windows, select the **Microsoft 365** tab if necessary, and then in the list of Microsoft 365 groups, select the **Inside Sales** group (select the name and not the check box). <br/>
 
 	**Note:** If the Inside Sales group does not appear, wait a minute or two and then select **Refresh** on the menu bar above the list of groups.
 
