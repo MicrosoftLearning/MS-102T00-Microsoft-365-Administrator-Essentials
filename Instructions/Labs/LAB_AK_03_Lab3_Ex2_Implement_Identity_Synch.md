@@ -242,5 +242,5 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 17. Once you have completed the validation steps, close your PowerShell window. Congratulations! You have just completed the final lab in this course.
  
-# End of Lab 3
+# Proceed to Lab 3 - Exercise 3
  
