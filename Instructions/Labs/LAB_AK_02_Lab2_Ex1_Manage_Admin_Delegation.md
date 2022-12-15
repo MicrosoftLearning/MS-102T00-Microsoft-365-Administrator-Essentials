@@ -41,7 +41,7 @@ Holly Dickson is Adatum’s Microsoft 365 Administrator. Holly has been assigned
 
 This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Microsoft 365 admin center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.  
 
-In this task, Holly wants to assign Patti Fernandez to the Service Support Administrator role. To add a user to an admin role using the Microsoft Graph PowerShell module, you must first obtain the Object ID of the user and the Object ID of the role. If the role has not yet been enabled (meaning that it hasn't been assigned to a user or it hasn't been physically enabled), then you must enable the role first before you can assign it to a user using PowerShell. In this task, you will enable the Service Support Administrator role first before assigning it to Patti Fernandez.
+In this task, Holly wants to assign Patti Fernandez to the Service Support Administrator role. To add a user to an admin role using the Microsoft Graph PowerShell module, you must first obtain the object ID of the user and the object ID of the role. If the role has not yet been enabled (meaning that it hasn't been assigned to a user or it hasn't been physically enabled), then you must enable the role first before you can assign it to a user using PowerShell. In this task, you will enable the Service Support Administrator role first before assigning it to Patti Fernandez.
 
 PowerShell also enables you to display all the users assigned to a specific role, which can be very important when auditing your Microsoft 365 deployment. In this task, you will learn how to use PowerShell to display all the users assigned to a specific role. 
 
@@ -61,7 +61,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 6. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box, and then select **Accept**.
 
-7. Holly wants to assign **Patti Fernandez** to the **Service Support Administrator** role. To assign this role using Microsoft Graph PowerShell, you must first obtain the Object ID of the Service Support Administrator role so that you can assign it to Patti. However, in Microsoft Graph PowerShell, you can only assign roles that have been "enabled". Enabled roles are roles that were either enabled from a role template, or they're roles that have already been assigned to users through PowerShell or the Microsoft 365 admin center. <br/>
+7. Holly wants to assign **Patti Fernandez** to the **Service Support Administrator** role. To assign this role using Microsoft Graph PowerShell, you must first obtain the object ID of the Service Support Administrator role so that you can assign it to Patti. However, in Microsoft Graph PowerShell, you can only assign roles that have been "enabled". Enabled roles are roles that were either enabled from a role template, or they're roles that have already been assigned to users through PowerShell or the Microsoft 365 admin center. <br/>
 
 	To view all the enabled roles in Microsoft 365, enter the following command at the command prompt and then press Enter: <br/>
 	
@@ -93,13 +93,13 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	**Note:** This command displays the object ID of the Service Support Administrator role, which you will later copy and paste in step 15 when assigning Patti to this role.
 
-13. To assign Patti Fernandez to the newly enabled Service Support Administrator role, you must first obtain the Object ID for Patti's user account. To do so, type the following command and press Enter: <br/>
+13. To assign Patti Fernandez to the newly enabled Service Support Administrator role, you must first obtain the object ID for Patti's user account. To do so, type the following command and press Enter: <br/>
 
 		Get-MgUser | Format-List ID, DisplayName
 
-14. Now that you know the ObjectID of the recently enabled Service Support Administrator role and the ObjectID of Patti's user account, you can assign the role to Patti. Perform the following steps to complete this process: <br/>
+14. Now that you know the object ID of the recently enabled Service Support Administrator role and the object ID of Patti's user account, you can assign the role to Patti. Perform the following steps to complete this process: <br/>
 
-	a. In the previous command, you displayed the list of active users. Highlight the ID for Patti's account and copy it (**Ctrl+C**) to the clipboard. <br/>
+	a. In the previous command, you displayed the list of active users. Highlight the **Id** for Patti's account and copy it (**Ctrl+C**) to the clipboard. <br/>
 
 	b. Run the following command that creates a variable containing the directory object for Patti's user account. When typing in this command, paste in (**Ctrl+V**) the ID that you just copied for Patti's user account. <br/>
 
@@ -115,11 +115,11 @@ PowerShell also enables you to display all the users assigned to a specific role
 	
 		Get-MgDirectoryRoleMember -DirectoryRoleId 'paste in the ID of the role here' 
 				
-16. Verify that **Patti Fernandez** is in the list of users who have been assigned the **Service Support Administrator** role. As you can see, Patti is the only user assigned to the role. Let's now repeat this process to see all the users assigned to the Global admin role.
+16. The prior command only displays the IDs of the users assigned to the selected role. However, you can match the ID that's displayed with Patti's ID to verify that her account has been assigned the **Service Support Administrator** role. As you can see, Patti is the only user assigned to the role. Let's now repeat this process to see all the users assigned to the Global Administrator role.
 
-17. Repeat step 15 to verify which Adatum users have been assigned to the **Global Administrator** role. To complete this command, you must first copy (**Ctrl+c**) the ID of the Global Administrator role to the clipboard. You can find this ID in the list of enabled roles when you ran step 12. <br/>
+17. Repeat step 15 to verify how many Adatum users have been assigned to the **Global Administrator** role. To complete this command, you must first copy (**Ctrl+c**) the ID of the Global Administrator role to the clipboard. You can find this ID in the list of enabled roles when you ran step 12. <br/>
 
-18. Verify that there are multiple user accounts that have been assigned the Global Administrator role. In a real-world scenario, you would use these two PowerShell commands to monitor how many global admins exist in your Microsoft 365 deployment. You would then remove the Global Administrator role from any users who truly shouldn't have it (remember, the best practice guideline is to have between 2 to 4 global admins in a Microsoft 365 deployment - depending on the size of the organization).  <br/>
+18. Verify there are multiple Adatum users who've been assigned the Global Administrator role. In a real-world scenario, the Microsoft 365 Administrator would use this PowerShell command to monitor how many global admins exist in their Microsoft 365 deployment. They would then remove the Global Administrator role from any users who truly shouldn't have it (remember, the best practice guideline is to have between 2 to 4 global admins in a Microsoft 365 deployment - depending on the size of the organization).  <br/>
 
 	In the case of this lab, while your lab hosting provider assigned the Global Administrator role to users other than the MOD Administrator (and you assigned it to Holly Dickson), you'll leave these users as is. In this fictitious Adatum deployment, there's no point in wasting your time removing this role from their accounts. Plus, some of the future lab tasks are based on these users being assigned the Global Administrator role. <br/>
 
@@ -134,7 +134,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 **Password Note:** When logging into Microsoft 365 as any of the existing user accounts that were created for you in the Microsoft 365 trial tenant by your lab hosting provider (for example, Joni Sherman, Lynne Robbins, and so on), you must use the same Tenant Password that you used in Lab 1 when you signed in using the MOD Administrator account to set up your organization profile. All of the existing Microsoft 365 user accounts in your tenant have been assigned this same Tenant Password, which your instructor will provide for you. Only Holly Dickson has a different password, since you entered **User.pw1** as Holly's password when you created her user account.
 
-1. In LON-DC1, you should still be logged into the Microsoft 365 admin center as Holly Dickson. If not, then do so now.
+1. In LON-CL1, you should still be logged into the Microsoft 365 admin center as Holly Dickson. If not, then do so now.
 
 2. In the **Microsoft 365 admin center**, if you are not displaying the **Active Users**, then navigate to there now.  
 
@@ -146,7 +146,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 6. In **Lynne Robbins's** properties window, it should indicate that Lynne has been assigned the **User Administrator** role. Close Lynne's properties window.
 
-7. In your VM lab environment, switch to the Client 1 VM (**LON-CL1**).
+7. In your VM lab environment, switch to the Client 2 VM (**LON-CL2**).
 
 8. On the log-in screen, you will log in as the **Administrator** account with a password of **Pa55w.rd**.
 
@@ -234,15 +234,17 @@ In this task, you will begin by examining the administrative properties of two u
 
 	If you are able to sign in as Alex, sign back out and wait a few minutes. Then attempt to sign back in as Alex. By this time, you should hopefully receive the error message that indicates Alex's account has been blocked from signing in. 
 	
-42. Switch back to LON-DC1, where you should still be logged into **Microsoft 365** as Holly Dickson. The **Active users** list should be displayed in the **Microsoft 365 admin center** from earlier in this task. 
+42. Switch back to **LON-CL1**. <br/>
+
+	In your Edge browser, you should still be logged into **Microsoft 365** as Holly Dickson. The **Active users** list should be displayed in the **Microsoft 365 admin center** from earlier in this task. 
 
 43. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's sign in. Repeat steps 30 through 33 to unblock his account. Note how the **Block sign-in** window from step 32 now displays the **Unblock sign-in** window instead.  <br/>
 
 	In the **Unblock sign-in** window, the **Block this user from signing in** check box is currently selected. Select this check box to clear it, and then select **Save changes**. <br/>
 	
-	**Note:** A warning message is displayed indicating it can take up to 15 minutes before Alex can sign in again. As such, you will **NOT** try to log back in as Alex on LON-CL1. Instead, remain on LON-DC1 and simply close the **Unblock sign-in** window.
+	**Note:** A warning message is displayed indicating it can take up to 15 minutes before Alex can sign in again. As such, you will **NOT** try to log back in as Alex on LON-CL2. Instead, remain on LON-CL1 and simply close the **Unblock sign-in** window.
 	
-44. On LON-DC1, leave your browser and all tabs open and proceed to the next exercise. 
+44. On LON-CL1, leave your browser and all tabs open and proceed to the next exercise. 
 
 
 # Proceed to Lab 2 - Exercise 2
