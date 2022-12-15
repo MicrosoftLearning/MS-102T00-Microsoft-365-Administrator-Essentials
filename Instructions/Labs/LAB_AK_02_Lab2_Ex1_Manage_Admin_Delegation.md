@@ -162,7 +162,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 15. In the **Find more apps** window that appears, select the **X** in the upper right-hand corner of the window to close it.
 
-16. On the **Microsoft Office Home** page, select the **App launcher** icon (the square made up of 3 rows of dots) that appears above the **Home** icon in the top left corner of the screen. In the **Apps** pane that appears, note how the **Admin** option is not available in the list of apps. This is due to the fact that Joni was never assigned an administrator role. 
+16. On the **Microsoft Office Home** page, a navigation pane appears on the left side of the screen that indicates the applications the user has permission to access. In this **Apps** pane, note how the **Admin** option is not displayed. This is due to the fact that Joni was never assigned an administrator role. 
 
 17. You will now sign out of Microsoft 365 as Joni. In **Microsoft Edge**, at the top right of the **Office 365 home** page, select the user icon for **Joni Sherman** (the circle in the upper right-hand corner with Joni's picture in it), and in the **Joni Sherman** window that appears, select **Sign out.** In the **Pick and account** window, you want to specify which account you want to sign out of. Select **Joni Sherman**.  
 
@@ -172,7 +172,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 20. In the **Find more apps** window that appears, select the **X** in the upper right-hand corner of the window to close it.
 
-21. On the **Microsoft Office Home** page, select the **App launcher** icon (the square made up of 3 rows of dots) that appears above the **Home** icon in the top left corner of the screen. In the **Apps** pane that appears, note how the **Admin** icon appears; this is because Lynne was assigned to a Microsoft 365 administrator role. Select the **Admin** icon to open the Microsoft 365 admin center.
+21. On the **Microsoft Office Home** page, note how the **Admin** app is displayed. This is because Lynne was assigned to a Microsoft 365 administrator role. Select the **Admin** icon to open the Microsoft 365 admin center.
 
 22. In the **Microsoft 365 admin center**, select **Users** on the navigation pane and then select **Active users**. 
 
@@ -202,7 +202,7 @@ In this task, you will begin by examining the administrative properties of two u
 	
 31. Select the **Reset password** button.
 
-32. On the **Password has been reset** window, you should receive a message indicating that you successfully reset the password for Joni. Select **Close**.
+32. On the **Password has been reset** window, you should receive a message indicating that you successfully reset the password for Megan. Select **Close**.
 
 33. Management has recently discovered that Alex Wilber's username may have been compromised. As a result, Lynne has been asked to block Alex's account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the check box to the left of **Alex Wilber's** name (do NOT select Alex’s name itself).  <br/>
 
@@ -224,7 +224,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 40. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
 
-41. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the Tenant Password provided by your instructor.  <br/>
+41. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter **User.pw1**.  <br/>
 
 	The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex (or someone who has obtained Alex's username and password) cannot log in. <br/>
 
@@ -236,11 +236,11 @@ In this task, you will begin by examining the administrative properties of two u
 
 	In your Edge browser, you should still be logged into **Microsoft 365** as Holly Dickson. The **Active users** list should be displayed in the **Microsoft 365 admin center** from earlier in this task. 
 
-43. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's sign in. Repeat steps 33 through 36 to unblock his account. Note how the **Block sign-in** window from step 35 now displays the **Unblock sign-in** window instead.  <br/>
+43. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's user account. Repeat steps 33 through 36 to unblock his account. Note how the **Block sign-in** window from step 35 now displays the **Unblock sign-in** window instead.  <br/>
 
 	In the **Unblock sign-in** window, the **Block this user from signing in** check box is currently selected. Select this check box to clear it, and then select **Save changes**. <br/>
 	
-	**Note:** A warning message is displayed indicating it can take up to 15 minutes before Alex can sign in again. As such, you will **NOT** try to log back in as Alex on LON-CL2. Instead, remain on LON-CL1 and simply close the **Unblock sign-in** window.
+	**IMPORTANT:** A warning message is displayed indicating it can take up to 15 minutes before Alex can sign in again. Given the time constraints with the training, you will **NOT** try to verify whether Alex can log back in. You can either take our word that Alex will eventually be able to log back in once this unblock request has propagated through the system, or you can try logging in as Alex at a later time if you're on a break or have spare time and you want to test this out. For now, remain on LON-CL1 and simply close the **Unblock sign-in** window.
 	
 44. On LON-CL1, leave your browser and all tabs open and proceed to the next exercise. 
 
