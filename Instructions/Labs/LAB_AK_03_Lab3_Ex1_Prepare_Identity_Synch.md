@@ -1,6 +1,6 @@
 # Learning Path 3 - Lab 3 - Exercise 1 - Prepare for Identity Synchronization  
 
-As in the previous lab exercises you will take on the role of Holly Dickson, Adatum Corporation’s Microsoft Administrator. Adatum has recently subscribed to Microsoft 365, and you have been tasked with deploying the application in Adatum’s virtualized lab environment. In this lab, you will perform the tasks necessary to manage your Microsoft 365 identity environment using both the Microsoft 365 admin center and Windows PowerShell. 
+As in the previous lab exercises you will take on the role of Holly Dickson, Adatum Corporation’s new Microsoft 365 Administrator. Adatum has recently subscribed to Microsoft 365, and you have been tasked with deploying the application in Adatum’s virtualized lab environment. In this lab, you will perform the tasks necessary to manage your Microsoft 365 identity environment using both the Microsoft 365 admin center and Windows PowerShell. 
 
 During this exercise you will set up and manage Azure AD Connect. You will create on-premises users and validate the sync process so that their identity is moved to the cloud. Some of the steps may feel familiar from previous exercises; however, in this case they are needed to validate the synchronization process.
 
@@ -16,41 +16,43 @@ A company may change its domain name for a variety of reasons. For example, a co
 
 For this lab, Adatum has purchased the new xxxUPNxxx.xxxCustomDomainxxx.xxx domain (provided by your lab hosting provider); therefore, it wants to change the domain name of all its users’ email addresses from @adatum.com to @xxxUPNxxx.xxxCustomDomainxxx.xxx.
 
-**Important - PowerShell notice:** There are two versions of PowerShell that are used in the labs for this course. The older V1 PowerShell module is known as MSOnline. The newer V2 PowerShell module is known as Azure Active Directory PowerShell for Graph, or AzureAD. Where applicable, Microsoft customers are encouraged to use the newer AzureAD module. However, at present, not all MSOnline functionality has been incorporated into AzureAD. While all previous PowerShell-related labs in this training course have used the AzureAD module, this lab exercise must use MSOnline since the commands necessary to update Adatum's Active Directory forest have not yet been incorporated into the AzureAD module. As such, you will begin this task by installing the MSOnline module and then connecting to the Microsoft Online Service. You'll then run the appropriate MSOnline cmdlets to update the adatum.com domain.
+**IMPORTANT - PowerShell notice:** Up to this point, the labs in this course that involve Windows PowerShell have used the latest PowerShell module known as Microsoft Graph PowerShell. This PowerShell module replaces two older modules, MSOnline and Azure Active Directory (Azure AD) PowerShell. Where applicable, Microsoft customers are encouraged to use the newer Microsoft Graph PowerShell module, since the older modules are scheduled for deprecation. However, at present, not all MSOnline and Azure AD PowerShell functionality has been incorporated into Microsoft Graph PowerShell. Such is the case with this lab exercise, which must use MSOnline since the commands necessary to update Adatum's Active Directory forest have not yet been incorporated into Microsoft Graph PowerShell. As such, you will begin this task by installing the MSOnline module and then connecting to the Microsoft Online Service. You'll then run the appropriate MSOnline cmdlet to update the adatum.com domain.
 
-1. On your Domain Controller VM (LON-DC1), make sure you’re logged in as **ADATUM\Administrator** and password **Pa55w.rd**. 
+1. Switch to **LON-DC1**, Adatum's domain controller.
 
-2. If **Windows PowerShell** is still open, then select the **PowerShell** icon on your taskbar; otherwise, you must open **Windows PowerShell** by selecting the magnifying glass (**Search**) icon on the taskbar, typing **powershell** in the Search box that appears,  right-clicking on **Windows PowerShell**, and selecting **Run as administrator** in the drop-down menu. 
+2. On **LON-DC1**, make sure you’re logged in as **ADATUM\Administrator** and password **Pa55w.rd**. 
 
-3. You must being by installing the MSOnline PowerShell module. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:
+3. If **Windows PowerShell** is still open, then select the **PowerShell** icon on your taskbar; otherwise, you must open **Windows PowerShell** by selecting the magnifying glass (**Search**) icon on the taskbar, typing **power** in the Search box that appears,  right-clicking on **Windows PowerShell** (do not select Windows PowerShell ISE), and selecting **Run as administrator** in the drop-down menu. 
+
+4. You must being by installing the MSOnline PowerShell module. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:
 
 		Install-Module MSOnline
 	
-4. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
+5. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
 
-5. You must now connect your PowerShell session to the Microsoft Online Service. At the command prompt, type the following command, and then press Enter:  <br/>
+6. You must now connect your PowerShell session to the Microsoft Online Service. At the command prompt, type the following command, and then press Enter:  <br/>
 
 		Connect-MsolService
 	
-6. In the **Sign in** dialog box that appears, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with the password **User.pw1**. 
+7. In the **Sign in** dialog box that appears, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with the password **User.pw1**. 
 
-7. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
+8. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
 		Set-ExecutionPolicy unrestricted
 
 	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
-8. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain (where you will replace xxxUPNxxx with the unique UPN name assigned to your tenant, and you will replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@xxxUPNxxx.xxxCustomDomainxxx.xxx**. <br/> 
+9. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain (where you will replace xxxUPNxxx with the unique UPN name assigned to your tenant, and you will replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@xxxUPNxxx.xxxCustomDomainxxx.xxx**. <br/> 
 
 	‎In the following PowerShell command, the **Set-ADForest** cmdlet modifies the properties of an Active Directory forest, and the **-identity** parameter specifies the Active Directory forest to modify. To perform this task, run the following command to set the **UPNSuffixes** property for the **adatum.com** forest (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name):<br/>
 	
 		Set-ADForest -identity adatum.com -UPNSuffixes @{replace="xxxUPNxxx.xxxCustomDomainxxx.xxx"}
 
-9. You must then run the following command that changes all existing adatum.com accounts to the new UPN @xxxUPNxxx.xxxCustomDomainxxx.xxx domain (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name): <br/>
+10. You must then run the following command that changes all existing adatum.com accounts to the new UPN @xxxUPNxxx.xxxCustomDomainxxx.xxx domain (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name): <br/>
 
 		Get-ADUser -Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $_  -UserPrincipalName ($_.SamAccountName + "@xxxUPNxxx.xxxCustomDomainxxx.xxx" )}
 
-10. You will continue using PowerShell on your Domain Controller VM in the next task.
+11. You will continue using PowerShell on your Domain Controller VM in the next task.
 
 
 ### Task 2: Prepare problem user accounts   
