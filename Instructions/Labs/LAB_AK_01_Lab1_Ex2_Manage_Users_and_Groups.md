@@ -258,7 +258,7 @@ For the purpose of this lab exercise, you will begin by importing the Microsoft.
 4. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the cmdlets that were just imported. Microsoft Graph PowerShell permissions are NOT pre-authorized. As such, you must perform a one-time, per-module request for permissions depending on your needs. <br/>
 
 	- The 'Group.ReadWrite.All' scope is required to display the current list of active groups and restore the deleted group. <br/>
-	- The 'Directory.ReadWrite.All' scope provides permission to read and write data in Adatum's directory, such as users and groups. This permission is required to restore the deleted group. <br/>
+	- The 'Directory.ReadWrite.All' scope provides permission to read and write data in Adatum's directory, such as users and groups, and restore the deleted group. <br/>
 
 	Type the following command and then press Enter: <br/>
 		
