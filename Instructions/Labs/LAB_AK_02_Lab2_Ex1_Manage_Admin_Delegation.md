@@ -57,11 +57,11 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 		Connect-MgGraph -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
 
-5. In the **Pick and account** window that appears, select Holly Dickson's account. 
+5. In the **Pick an account** window that appears, select Holly Dickson's account. 
 
 6. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box, and then select **Accept**.
 
-7. Holly wants to assign **Patti Fernandez** to the **Service Support Administrator** role. To assign this role using Microsoft Graph PowerShell, you must first obtain the ObjectID of the Service Support Administrator role so that you can assign it to Patti using the role's ObjectID. However, in Microsoft Graph PowerShell, you can only assign roles that have been "enabled". Enabled roles are roles that were either enabled from a role template, or they're roles that have already been assigned to users through PowerShell or the Microsoft 365 admin center. <br/>
+7. Holly wants to assign **Patti Fernandez** to the **Service Support Administrator** role. To assign this role using Microsoft Graph PowerShell, you must first obtain the Object ID of the Service Support Administrator role so that you can assign it to Patti. However, in Microsoft Graph PowerShell, you can only assign roles that have been "enabled". Enabled roles are roles that were either enabled from a role template, or they're roles that have already been assigned to users through PowerShell or the Microsoft 365 admin center. <br/>
 
 	To view all the enabled roles in Microsoft 365, enter the following command at the command prompt and then press Enter: <br/>
 	
@@ -69,7 +69,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	**Note:** This command displays the three roles that have been enabled thus far in Microsoft 365 - the Global admin, the User admin, and the Billing admin. These roles were enabled when you manually assigned them to users in the Microsoft 365 admin center in prior labs. If the Service Support Administrator role appeared in this list, you could proceed directly to step 13 to assign the role to Patti. However, since the Service Support Administrator is not included in this list of enabled roles, you must perform steps 8-12 to enable the role from its corresponding role template before you can assign Patti to the role in step 13. 
 
-8. To enable a role in Microsoft Graph PowerShell, you must first locate its template to verify the role's Display Name and to access the template's object ID. You need to know the exact spelling of the role's display name that's stored in its template in order to eventually assign the role to Patti. And you need to know the template's object ID to enable the role from the template. To view the list of role templates along with their object ID and display name, type in the following command and then press Enter: <br/>
+8. To enable a role in Microsoft Graph PowerShell, you must first locate its template to obtain the template's object ID. You need to know the template's object ID to enable the role from the template. To view the list of role templates along with their object ID and display name, type in the following command and then press Enter: <br/>
 
 		Get-MgDirectoryRoleTemplate | Format-List Id, DisplayName   <br/>
 	
@@ -116,9 +116,19 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 		New-MgDirectoryRoleMemberByRef -DirectoryRoleId 'paste in the ID of the role here' -BodyParameter $UserObject
 				
+15. You now want to verify that Patti has been assigned to the Service Support Administrator role. Displaying the users assigned to a role is a two-step process in PowerShell. You will begin by creating a macro command ($role) that states that anytime $role is used in a cmdlet, it should retrieve all users assigned to whichever role name you are validating.  <br/>
+
+	You will create this $role variable for the Service Support Administrator role. To do so, type the following command and then press Enter:  <br/>
+
+		$role = Get-AzureADDirectoryRole | Where-Object {$_.DisplayName -eq "Service Support Administrator"}
+		
+16. After creating the macro in the prior step, you will then run the following command that directs PowerShell to display all object IDs for the users who have been assigned to the name of the role that you invoked in the previous $role macro.  <br/>
+	
+		Get-AzureADDirectoryRoleMember -ObjectId $role.ObjectId  
+				
 17. Verify that **Patti Fernandez** is in the list of users who have been assigned the **Service Support Administrator** role. As you can see, Patti is the only user assigned to the role. Let's now repeat this process to see all the users assigned to the Global admin role.
 
-18. Repeat steps 11-12 to verify which Adatum users have been assigned to the **Global Administrator** role.  <br/>
+18. Repeat steps 15-16 to verify which Adatum users have been assigned to the **Global Administrator** role.  <br/>
 
 19. Verify that there are multiple user accounts that have been assigned the Global Administrator role. In a real-world scenario, you would use these two PowerShell commands to monitor how many global admins exist in your Microsoft 365 deployment. You would then remove the Global Administrator role from any users who truly shouldn't have it (remember, the best practice guideline is to have between 2 to 4 global admins in a Microsoft 365 deployment - depending on the size of the organization).  <br/>
 
