@@ -1,6 +1,6 @@
 # Learning Path 2 - Lab 2 - Exercise 3 - Manage a Microsoft 365 Apps for enterprise installation
 
-You have taken on the persona of Holly Dickson, Adatum's Enterprise Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Microsoft 365 Apps for enterprise installation. Performing a user-driven Microsoft 365 Apps for enterprise installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the Office 365 deployment tool, and 2) performing the installation. 
+You have taken on the persona of Holly Dickson, Adatum's new Microsoft 365 Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Microsoft 365 Apps for enterprise installation. Performing a user-driven Microsoft 365 Apps for enterprise installation is a two-step process: 1) configuring the user account so the user is eligible to download and install the Office 365 deployment tool, and 2) performing the installation. 
 
 In the first two tasks in this exercise, you will verify the following conditions that affect whether a user can be blocked from downloading the Microsoft 365 Apps for enterprise suite: <br/>
 
@@ -84,7 +84,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 Microsoft 365 includes a global Office download setting that controls the downloading of mobile and desktop apps for all users. Holly is now going to test whether users can be prohibited from downloading Microsoft 365 Apps for enterprise if an admin turns off this setting. In this test, Holly will once again use Laura Atkins as her test case. However, since you just proved in the prior task that Laura can't install Microsoft 365 Apps for enterprise without a proper license, you must first assign her a license. 
 	
-1. Switch back to **LON-CL1**. You should still be logged into Microsoft 365 as Holly Dickson, Adatum’s Enterprise Administrator.
+1. Switch back to **LON-CL1**. You should still be logged into Microsoft 365 as Holly Dickson, Adatum’s Microsoft 365 Administrator.
 
 2. To turn off the global Office download setting, select the **Microsoft 365 admin center** tab in your browser, and then if necessary, select **...Show all** in the navigation pane. Select **Settings**, and then within the group, select **Org Settings**. 
 
