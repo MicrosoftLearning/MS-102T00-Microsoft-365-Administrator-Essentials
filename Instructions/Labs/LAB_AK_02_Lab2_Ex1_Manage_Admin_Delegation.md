@@ -146,7 +146,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 6. In **Lynne Robbins's** properties window, it should indicate that Lynne has been assigned the **User Administrator** role. Close Lynne's properties window.
 
-7. In your VM lab environment, switch to the Client 2 VM (**LON-CL2**).
+7. Switch to the Client 2 VM (**LON-CL2**).
 
 8. On the log-in screen, you will log in as the **Administrator** account with a password of **Pa55w.rd**.
 
@@ -216,7 +216,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 36. The **Block sign-in** window should display a message indicating that Alex is now blocked from signing in (and no one can sign in with Alex's username in the event that his username was actually compromised). In addition, Alex will automatically be signed out of Microsoft services within 60 minutes. Select the **X** in the upper right-hand corner of the pane to close it. 
 
-37. Lynne has just been informed that **Nestor Wilke's** username has also been potentially compromised. Repeat steps 30 through 33 to block Nestor from signing in (and to block anyone else from using his username to sign in). 
+37. Lynne has just been informed that **Nestor Wilke's** username has also been potentially compromised. Repeat steps 33 through 36 to block Nestor from signing in (and to block anyone else from using his username to sign in). <br/>
 
 38. When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Administrator, and Lynne is not. Only a Global Administrator can block another Global Admin from being able to sign in. Lynne will need to ask Holly Dickson to make this change. <br/>
 
@@ -230,15 +230,15 @@ In this task, you will begin by examining the administrative properties of two u
 
 	The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex (or someone who has obtained Alex's username and password) cannot log in. <br/>
 
-	**Note:** It can take a few minutes for the account block to fully implement. Until that time Alex may be able to log on, but none of the Microsoft 365 services are available to the user, and will not appear in the portal. Once the account is unblocked, the services will become available again. <br/>
+	**Note:** It can take a few minutes for the account block to fully implement. Until the block has been implemented in the system, Alex may still be able to log on, but none of the Microsoft 365 services will be available to him, and they will not appear in the Office 365 portal. Once an account is unblocked, the services will become available again. <br/>
 
-	If you are able to sign in as Alex, sign back out and wait a few minutes. Then attempt to sign back in as Alex. By this time, you should hopefully receive the error message that indicates Alex's account has been blocked from signing in. 
+	If you are able to sign in as Alex, sign back out and wait a few minutes. This may be a good time to take a short break. Then attempt to sign back in as Alex. By this time, you should hopefully receive the error message that indicates Alex's account has been blocked from signing in. 
 	
 42. Switch back to **LON-CL1**. <br/>
 
 	In your Edge browser, you should still be logged into **Microsoft 365** as Holly Dickson. The **Active users** list should be displayed in the **Microsoft 365 admin center** from earlier in this task. 
 
-43. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's sign in. Repeat steps 30 through 33 to unblock his account. Note how the **Block sign-in** window from step 32 now displays the **Unblock sign-in** window instead.  <br/>
+43. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's sign in. Repeat steps 33 through 36 to unblock his account. Note how the **Block sign-in** window from step 35 now displays the **Unblock sign-in** window instead.  <br/>
 
 	In the **Unblock sign-in** window, the **Block this user from signing in** check box is currently selected. Select this check box to clear it, and then select **Save changes**. <br/>
 	
