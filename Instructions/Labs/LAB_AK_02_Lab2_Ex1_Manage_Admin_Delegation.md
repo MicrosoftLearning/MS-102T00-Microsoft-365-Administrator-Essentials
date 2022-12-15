@@ -97,7 +97,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 		Get-MgUser | Format-List ID, DisplayName
 
-14. Now that you know the ObjectID of the recently enabled Service Support Administrator role and the ObjectID of Patti's user account, you can assign the role to Patti. Perform each of the following steps to complete this process: <br/>
+14. Now that you know the ObjectID of the recently enabled Service Support Administrator role and the ObjectID of Patti's user account, you can assign the role to Patti. Perform the following steps to complete this process: <br/>
 
 	a. In the previous command, you displayed the list of active users. Highlight the ID for Patti's account and copy it (**Ctrl+C**) to the clipboard. <br/>
 
@@ -111,27 +111,21 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 		New-MgDirectoryRoleMemberByRef -DirectoryRoleId 'paste in the ID of the role here' -BodyParameter $UserObject
 				
-15. You now want to verify that Patti has been assigned to the Service Support Administrator role. Perform each of the following steps to complete this process: <br/>
-
-	a. You will begin by creating a macro command ($role) that states that anytime $role is used in a cmdlet, it should retrieve all users assigned to whichever role name you are validating. You will create this $role variable for the Service Support Administrator role. To do so, type the following command and then press Enter:  <br/>
-
-		$role = Get-AzureADDirectoryRole | Where-Object {$_.DisplayName -eq "Service Support Administrator"}
-		
-	b. After creating the macro in the prior step, you will then run the following command that directs PowerShell to display all object IDs for the users who have been assigned to the name of the role that you invoked in the previous $role macro.  <br/>
+15. You now want to verify that Patti has been assigned to the Service Support Administrator role. You previously copied the Object ID of this role to the clipboard, and you pasted it in the prior command. You should paste it into this command as well. Type the following command and press Enter:
 	
-		Get-AzureADDirectoryRoleMember -ObjectId $role.ObjectId  
+		Get-MgDirectoryRoleMember -DirectoryRoleId 'paste in the ID of the role here' 
 				
-17. Verify that **Patti Fernandez** is in the list of users who have been assigned the **Service Support Administrator** role. As you can see, Patti is the only user assigned to the role. Let's now repeat this process to see all the users assigned to the Global admin role.
+16. Verify that **Patti Fernandez** is in the list of users who have been assigned the **Service Support Administrator** role. As you can see, Patti is the only user assigned to the role. Let's now repeat this process to see all the users assigned to the Global admin role.
 
-18. Repeat step 15 to verify which Adatum users have been assigned to the **Global Administrator** role. In the command that creates the $fole variable, replace Service Support Adnministrator with Global Administrator. <br/>
+17. Repeat step 15 to verify which Adatum users have been assigned to the **Global Administrator** role. To complete this command, you must first copy (**Ctrl+c**) the ID of the Global Administrator role to the clipboard. You can find this ID in the list of enabled roles when you ran step 12. <br/>
 
-19. Verify that there are multiple user accounts that have been assigned the Global Administrator role. In a real-world scenario, you would use these two PowerShell commands to monitor how many global admins exist in your Microsoft 365 deployment. You would then remove the Global Administrator role from any users who truly shouldn't have it (remember, the best practice guideline is to have between 2 to 4 global admins in a Microsoft 365 deployment - depending on the size of the organization).  <br/>
+18. Verify that there are multiple user accounts that have been assigned the Global Administrator role. In a real-world scenario, you would use these two PowerShell commands to monitor how many global admins exist in your Microsoft 365 deployment. You would then remove the Global Administrator role from any users who truly shouldn't have it (remember, the best practice guideline is to have between 2 to 4 global admins in a Microsoft 365 deployment - depending on the size of the organization).  <br/>
 
 	In the case of this lab, while your lab hosting provider assigned the Global Administrator role to users other than the MOD Administrator (and you assigned it to Holly Dickson), you'll leave these users as is. In this fictitious Adatum deployment, there's no point in wasting your time removing this role from their accounts. Plus, some of the future lab tasks are based on these users being assigned the Global Administrator role. <br/>
 
 	**Important:** Just remember that in your real world deployments, the Microsoft 365 Administrator should monitor the Global Administrator role on a periodic basis to keep the number of assigned users between 2 and 4.
 	
-20. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
+19. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
 
 
 ### Task 3 - Verify Delegated Administration  
