@@ -97,12 +97,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 		Get-MgUser | Format-List ID, DisplayName
 
-14. Now that you know the ObjectID of the recently enabled Service Support Administrator role and the ObjectID of Patti's user account, you can assign the role to Patti. This will be a multi-step process. <br/>
-
-	- You will copy the ID for Patti's user account.
-	- You will run a command that creates a variable containing the directory object for Patti's user account. When typing in this command, you will paste in the ID that you just copied for Patti's user account. <br/>
-	- You will copy the ID for the Service Support Administrator role that was displayed in step 12.
-	- You will run a command that assigns that variable containing Patti's user object to the Service Support Administrator role. When typing in this command, you will paste in the ID that you just copied for for the Service Support Administrator role. <br/>
+14. Now that you know the ObjectID of the recently enabled Service Support Administrator role and the ObjectID of Patti's user account, you can assign the role to Patti. Perform each of the following steps to complete this process: <br/>
 
 	a. In the previous command, you displayed the list of active users. Highlight the ID for Patti's account and copy it (**Ctrl+C**) to the clipboard. <br/>
 
@@ -112,23 +107,23 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	c. In step 12, you displayed the list of enabled roles. Highlight the ID for the Service Support Administrator role and copy it (**Ctrl+C**) to the clipboard. <br/>
 
-	d. Run the following command that assigns the variable containing Patti's user account to the directory role. When typing in this command, paste in (**Ctrl+V**) the ID that you just copied for for the Service Support Administrator role. <br/> 
+	d. Run the following command that assigns the variable containing Patti's user account ($UserObject) to the directory role. When typing in this command, paste in (**Ctrl+V**) the ID that you just copied for for the Service Support Administrator role. <br/> 
 
 		New-MgDirectoryRoleMemberByRef -DirectoryRoleId 'paste in the ID of the role here' -BodyParameter $UserObject
 				
-15. You now want to verify that Patti has been assigned to the Service Support Administrator role. Displaying the users assigned to a role is a two-step process in PowerShell. You will begin by creating a macro command ($role) that states that anytime $role is used in a cmdlet, it should retrieve all users assigned to whichever role name you are validating.  <br/>
+15. You now want to verify that Patti has been assigned to the Service Support Administrator role. Perform each of the following steps to complete this process: <br/>
 
-	You will create this $role variable for the Service Support Administrator role. To do so, type the following command and then press Enter:  <br/>
+	a. You will begin by creating a macro command ($role) that states that anytime $role is used in a cmdlet, it should retrieve all users assigned to whichever role name you are validating. You will create this $role variable for the Service Support Administrator role. To do so, type the following command and then press Enter:  <br/>
 
 		$role = Get-AzureADDirectoryRole | Where-Object {$_.DisplayName -eq "Service Support Administrator"}
 		
-16. After creating the macro in the prior step, you will then run the following command that directs PowerShell to display all object IDs for the users who have been assigned to the name of the role that you invoked in the previous $role macro.  <br/>
+	b. After creating the macro in the prior step, you will then run the following command that directs PowerShell to display all object IDs for the users who have been assigned to the name of the role that you invoked in the previous $role macro.  <br/>
 	
 		Get-AzureADDirectoryRoleMember -ObjectId $role.ObjectId  
 				
 17. Verify that **Patti Fernandez** is in the list of users who have been assigned the **Service Support Administrator** role. As you can see, Patti is the only user assigned to the role. Let's now repeat this process to see all the users assigned to the Global admin role.
 
-18. Repeat steps 15-16 to verify which Adatum users have been assigned to the **Global Administrator** role.  <br/>
+18. Repeat step 15 to verify which Adatum users have been assigned to the **Global Administrator** role. In the command that creates the $fole variable, replace Service Support Adnministrator with Global Administrator. <br/>
 
 19. Verify that there are multiple user accounts that have been assigned the Global Administrator role. In a real-world scenario, you would use these two PowerShell commands to monitor how many global admins exist in your Microsoft 365 deployment. You would then remove the Global Administrator role from any users who truly shouldn't have it (remember, the best practice guideline is to have between 2 to 4 global admins in a Microsoft 365 deployment - depending on the size of the organization).  <br/>
 
