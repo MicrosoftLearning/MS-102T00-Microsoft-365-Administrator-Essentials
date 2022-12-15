@@ -103,7 +103,9 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	b. Run the following command that creates a variable containing the directory object for Patti's user account. When typing in this command, paste in (**Ctrl+V**) the ID that you just copied for Patti's user account. <br/>
 
-		$UserObject = @{ "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/**paste in Patti's user account ID here**" }	<br/>
+		$UserObject = @{ "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/paste in Patti's user account ID here" }	<br/>
+
+	For example: $UserObject = @{ "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/22fddbf7-42d2-4698-be65-ebc972a023e3" }
 
 	c. In step 12, you displayed the list of enabled roles. Highlight the ID for the Service Support Administrator role and copy it (**Ctrl+C**) to the clipboard. <br/>
 
