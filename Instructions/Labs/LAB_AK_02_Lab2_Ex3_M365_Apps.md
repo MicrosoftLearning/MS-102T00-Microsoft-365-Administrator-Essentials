@@ -207,4 +207,4 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 	The desktop should now display the logged on user as **adatum\administrator**. LON-CL2 is now ready for the next lab.
 
-# Proceed to Lab 2 - Exercise 4
+# End of Lab 2
