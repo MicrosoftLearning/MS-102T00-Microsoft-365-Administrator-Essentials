@@ -5,7 +5,7 @@ In this exercise you will configure and test an alert that will notify Lynne Rob
 
 ### Task 1 – Create a Mailbox Permission Alert
 
-1. You should still be logged into your Client 1 VM (LON-CL1) as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson. 
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson. 
 
 2. **Microsoft 365 Defender** should still be open in your Edge browser from the prior task. In the left-hand navigation pane, under the **Email & collaboration** section, select **Policies & rules**. 
 
@@ -60,7 +60,7 @@ You have now created an activity alert in Microsoft 365 Defender that is trigger
 
 In the prior task, you configured an alert that will notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum. To test this alert, Holly Dickson will change the FullAccess permission on Alex Wilber’s mailbox by granting Joni Sherman FullAccess to his mailbox. This activity should trigger the alert policy that you just created, which should send an alert notification email to Lynne Robbins’ mailbox. You will then log into the Client 2 VM as Lynne Robbins and see if she received this email. 
 
-1. You should still be logged into the Client 1 VM (LON-CL1) as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
 2. In your Edge browser, select the **Microsoft 365 admin center** tab, and then in the left-hand navigation pane, under the **Admin centers** group, select **Exchange**. This opens the Exchange admin center for Exchange Online.
 
@@ -85,7 +85,7 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 	‎Switch to **LON-CL2**. 
 
-9. On **LON-CL2**, you should be signed in as the local **administrator** account. Select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
+9. On **LON-CL2**, you should be signed in to the machine as the local **adatum\administrator** account. Select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
 
 10. In the **Pick an account** window, select **Use another account**. 
 
