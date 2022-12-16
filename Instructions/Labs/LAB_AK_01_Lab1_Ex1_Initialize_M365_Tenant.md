@@ -28,6 +28,7 @@ You should write down the following information (provided by your instructor) fo
 
 - **Network IP address.** Write down the **IP Address** value (this is the IP Address of your parent domain; for example, 64.64.206.13).
 
+
 ### Task 2- Set up Adatum's Organization Profile
 
 Throughout the labs in this course, you will role-play by taking on the persona of Holly Dickson, Adatum’s Microsoft 365 Administrator. In your role as Holly, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account for herself (you will do this in the next lab exercise), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account is the MOD Administrator account, whose alias is "admin". The username for this account is admin@xxxxxZZZZZZ.onmicrosoft.com (where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider); the display name for this account will be MOD Administrator.
@@ -123,7 +124,56 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 29. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
-### Task 3 – Install Microsoft Graph PowerShell 
+
+### ‎Task 3 - Enable Information Rights Management for SharePoint Online 
+
+In this task, you will turn on Information Rights Management (IRM) for SharePoint Online. 
+
+**Important:** While you will validate IRM for Exchange and SharePoint in Lab 7, you must enable IRM for SharePoint Online now because it can take up to 60 minutes or more for IRM to show up in SharePoint Online. By the time you get to the validation exercise in Lab 7, IRM should have finished its internal configuration and you won’t have to wait for it to be present in SharePoint Online. Keep this time issue in mind if you plan to enable IRM in your real-world deployment.
+
+1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
+
+2. In the **Microsoft 365 admin center**, select **Show all** (if necessary) in the left-hand navigation pane to see all the navigation options. Under **Admin centers,** select **SharePoint**. This will open the SharePoint admin center in a new tab.
+
+3. In the **Welcome to your new home page** window, select **Take the tour**.
+
+4. In the **SharePoint admin center**, in the left-hand navigation pane, select **Settings**. 
+
+5. At the bottom of the **Settings** page is a sentence that says **Can’t find the setting you’re looking for? Go to the classic settings page.** In this sentence, select the hyperlinked text: **classic settings page**.
+
+6. On the classic **Settings** page, scroll down to the **Information Rights Management (IRM)** section. In the options to the right of this section, select the **Use the IRM service specified in your configuration** option, and then select the **Refresh IRM Settings** button.
+
+7. This will return you to the top of the **Settings** page. Scroll down to the **Information Rights Management (IRM)** section and verify the **Use the IRM service specified in your configuration** option is selected and a **We successfully refreshed your settings** message appears below the **Refresh IRM Settings** button. Continue scrolling to the bottom of the page and select the **OK** button. 
+
+8. This will return you to the top of the **Settings** page. In your browser, close the current tab that you're on (the **https://xxxxxZZZZZZ-admin.sharepoint.com** tab). This will return you to the **Settings** page in the **SharePoint admin center**.
+
+9. Do **NOT** close the **SharePoint admin center** tab in your Edge browser. Leave this tab and your browser open for the next task.
+
+
+### Task 4 – Turn on Audit Logging to enable Alert Policies
+
+In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal. However, before you can implement alerts, an admin must first turn on Audit Logging for the organization. Since it can take a couple of hours for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 6.
+
+**Important:** If you see an error message that says "Fail to opt in, please refresh", Audit Logging is being enabled in the background and the message can safely be ignored.
+
+1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrtator**. 
+
+2. Select the **Microsoft 365 admin center** tab in your Edge browser. 
+
+3. In the **Microsoft 365 admin center**, under the **Admin centers** section, select **Security**. This will open the **Microsoft 365 Defender** portal.
+
+4. In the **Microsoft 365 Defender** portal, scroll down towards the bottom of the left-hand navigation pane and select **Audit**.
+
+5. In the **Audit** window, wait a minute or so to see if a banner appears towards the top of the page that says: **Start recording user and admin activity**. If this banner appears, then auditing is not turned on for your organization. This banner is your prompt to turn on audit logging. <br/>
+
+	Select this banner now to turn on audit logging. 
+
+6. In the **Audit** window, the banner will disappear once audit logging is turned on. In a later lab, you will return to this page to view audited activities that you completed during your lab work.  
+ 
+7. Leave the Client 1 VM and all the tabs in your Edge browser open and proceed to the next lab. 
+
+
+### Task 5 – Install Microsoft Graph PowerShell 
 
 Microsoft Graph PowerShell is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Microsoft Graph PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
 
