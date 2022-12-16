@@ -71,7 +71,7 @@ In this task, you will run a script that breaks an on-premises user account. As 
 
 		.\CreateProblemUsers.ps1
 	
-	**Note:** Wait until the script has completed before proceeding to the next task. This Windows PowerShell script will make the following change in AD DS:
+	**Important:** Wait until the script has completed before proceeding to the next task. This Windows PowerShell script will make the following change in AD DS:
 
 	- **Klemen Sic**. Update the UserPrincipalName for Klemen to include an extra "@" character. 
 
