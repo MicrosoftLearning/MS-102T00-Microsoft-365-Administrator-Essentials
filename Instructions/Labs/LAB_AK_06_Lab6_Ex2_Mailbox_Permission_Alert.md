@@ -85,19 +85,26 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 	‎Switch to **LON-CL2**. 
 
-9. On LON-CL2, in your Edge browser, select the **Mail - Lynne Robbins - Outlook** tab that has Outlook on the web open for Lynne Robbins' mailbox. In Lynne Robbins’ **Inbox**, an email should be received from the Alerts notification system (**Office365Alerts@microsoft.com**) to let her know that Holly Dickson has made a Mailbox permission change. <br/>
+9. On **LON-CL2**, you should be signed in as the local **administrator** account. Select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
 
-	**WARNING:** Lab testing has shown that in some cases, it can take up to 15 minutes or so for the email to be received in Lynne's Inbox. 
+10. In the **Pick an account** window, select **Use another account**. 
 
-10. Once the notification email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft 365 Defender** portal, displays the **Alerts** window, and automatically opens the **Mailbox permission change** pane for this alert activity that triggered the email notification to Lynne. <br/>
+11. In the **Sign in** window, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+
+12. In the **Enter password** window, enter **User.pw1** and select **Sign in**.
+
+13. Lynne Robbins’ **Inbox** should include an email from the Alerts notification system (**Office365Alerts@microsoft.com**) to let her know that Holly Dickson has made a Mailbox permission change. <br/>
+
+	**WARNING:** Lab testing has shown that in some cases, it can take up to 15 minutes or so for the email to be received in Lynne's Inbox. You may need to refresh Outlook one or more times until you receive the email.
+
+14. Once the notification email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft 365 Defender** portal, displays the **Alerts** window, and automatically opens the **Mailbox permission change** pane for this alert activity that triggered the email notification to Lynne. <br/>
 
 	Scroll down through the **Mailbox permission change** pane and review all the information for this activity. When you are done, select **Close** to close the pane.
 
-11. Switch back to the **LON-CL1**.
+15. Switch back to the **LON-CL1**.
 
-12. On LON-CL1, in your browser, close the Exchange admin center tab, but leave the other browser tabs open.
+16. On LON-CL1, in your Microsoft Edge browser, close the Exchange admin center tab, but leave the other browser tabs open.
 
-13. Leave your LON-CL1 and LON-CL2 VMs open for the remaining tasks in this lab.
 
 You have just successfully tested a mailbox permission alert that sent an alarm message on granting FullAccess to a user mailbox.
 
