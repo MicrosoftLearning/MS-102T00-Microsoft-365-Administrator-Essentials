@@ -35,7 +35,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 1. When you open your lab hosting provider's Virtual Machine environment, you need to begin with the Client 1 VM (LON-CL1). If your VM environment opens with one of the other machines, then switch to LON-CL1 now.
 
-2. Log into LON-CL1 as the local Adatum administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**. 
+2. Log into LON-CL1 as the local **adatum\administrator** account that was created by your lab hosting provider with the password **Pa55w.rd**. 
 
 3. You may receive two warning messages at this point. If you receive a **Windows License** warning message asking you to activate Windows in Settings, select **Close**. If you receive a **Networks** warning message asking if you want this PC to be discoverable by other PCs and devices on this network, select **Yes**.
 
@@ -131,7 +131,7 @@ In this task, you will turn on Information Rights Management (IRM) for SharePoin
 
 **Important:** While you will validate IRM for Exchange and SharePoint in Lab 7, you must enable IRM for SharePoint Online now because it can take up to 60 minutes or more for IRM to show up in SharePoint Online. By the time you get to the validation exercise in Lab 7, IRM should have finished its internal configuration and you won’t have to wait for it to be present in SharePoint Online. Keep this time issue in mind if you plan to enable IRM in your real-world deployment.
 
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
+1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
 
 2. In the **Microsoft 365 admin center**, select **Show all** (if necessary) in the left-hand navigation pane to see all the navigation options. Under **Admin centers,** select **SharePoint**. This will open the SharePoint admin center in a new tab.
 
@@ -156,7 +156,7 @@ In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal
 
 **Important:** If you see an error message that says "Fail to opt in, please refresh", Audit Logging is being enabled in the background and the message can safely be ignored.
 
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrtator**. 
+1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrtator**. 
 
 2. Select the **Microsoft 365 admin center** tab in your Edge browser. 
 
