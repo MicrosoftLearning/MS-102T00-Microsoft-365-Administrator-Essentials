@@ -30,7 +30,7 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 1. The prior lab exercise used Adatum's domain controller (LON-DC1). This lab will use LON-CL1.  <br/>
 
-    Switch back to **LON-CL1**. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
+    Switch back to **LON-CL1**. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
 2. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane under the **Admin centers** section, select **Azure Active Directory**
 
@@ -79,7 +79,7 @@ Assigning roles to groups can simplify the management of role assignments in Azu
 
 In this task, Holly will create a new, role assignable security group for users who are eligible for the Global admin role, and then she will assign Patti to the group. Next, Holly will enable the group to be eligible for the Global admin role.
 
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
 2. You will begin by creating a new, role assignable security group called **PIM-Global-Administrators** in Azure AD, and you will assign Patti as a member of the group. <br/>
 
