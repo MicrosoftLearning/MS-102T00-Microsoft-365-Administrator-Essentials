@@ -1,6 +1,6 @@
 # Learning Path 4 - Lab 4 - Exercise 1 - PIM Administrator approval
 
-As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's Enterprise Administrator, wants to implement Privileged Identity Management within Azure Active Directory. One of Adatum's pain points in their existing system is they have far too many users who have been assigned administrator roles. This has caused concern among management, who sees this as a threat to Adatum's data security. They feel that too many people were originally assigned admin roles that shouldn't have been, and as such, they have access to secure information and resources that could potentially compromise the organization. 
+As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to implement Privileged Identity Management within Azure Active Directory. One of Adatum's pain points in their existing system is they have far too many users who have been assigned administrator roles. This has caused concern among management, who sees this as a threat to Adatum's data security. They feel that too many people were originally assigned admin roles that shouldn't have been, and as such, they have access to secure information and resources that could potentially compromise the organization. 
 
 Because there's a need to reduce the number of users with permanent administrator roles and yet still provide admin privileges to selected users when business justification warrants it, Holly has been tasked with implementing Azure Active Directory's Privileged Identity Management service. By implementing PIM, Adatum can reduce the number of users with admin roles and yet still be able to assign users with admin rights on an as-needed basis whenever necessary.
 
@@ -24,11 +24,13 @@ Since the Microsoft 365 Global Administrator role provides a user with basically
 
 For the purpose of this lab, the lab hosting provider assigned the Global admin role to the MOD Administrator and three of the other predefined user accounts. After you added Holly as a Global admin, five of 12 user accounts in your tenant are now global admins, which is not something you would see in a real-world deployment. That being said, keep this guideline in mind for your real-world Microsoft 365 deployments. The best practice guideline that you should follow is to have from two to four Global admins.
 
-Holly Dickson, Adatum's Enterprise Administrator, wants to limit access to Global admin role using Privileged Identity Management. To do so, she must first configure the role to require approval before it can be assigned as an eligible role for a user, and then she wants to assign herself as the approver whenever an eligible user requests activating the role.
+Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to use Privileged Identity Management to limit access to the Global admin role. To do so, she must first configure the role to require approval before it can be assigned as an eligible role for a user, and then she wants to assign herself as the approver whenever an eligible user requests activating the role.
 
 Holly also wants to update the notification settings for the Global admin role. Privileged Identity Management (PIM) lets you know when important events occur in your Azure Active Directory (Azure AD) organization, such as when a role is assigned or activated. PIM keeps you informed by sending you and other participants email notifications. These emails might also include links to relevant tasks, such activating or renewing a role. In this task, Holly wants to update the notifications to ensure that approvals are tracked in real-time in a proactive manner.
 
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson from the previous lab exercise.
+1. The prior lab exercise used Adatum's domain controller (LON-DC1). This lab will use LON-CL1.  <br/>
+
+    Switch back to **LON-CL1**. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson after having previously used LON-CL1.
 
 2. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane under the **Admin centers** section, select **Azure Active Directory**
 
