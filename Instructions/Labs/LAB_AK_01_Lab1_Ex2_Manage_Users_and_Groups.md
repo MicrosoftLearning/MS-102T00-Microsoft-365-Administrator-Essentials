@@ -13,7 +13,7 @@ Holly Dickson is Adatum’s Microsoft 365 Administrator. Since a Microsoft 365 u
 
 That being said, you will not turn on MFA for Holly's account because time is limited in this training course, and we don't want to take up lab time by forcing you to log in using a second authentication method every time Holly logs in.
 
-1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior lab, and you should be signed into Microsoft 365 as the **MOD Administrator**. 
+1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior lab exercise, and you should be signed into Microsoft 365 as the **MOD Administrator**. 
 
 2. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. 
 
