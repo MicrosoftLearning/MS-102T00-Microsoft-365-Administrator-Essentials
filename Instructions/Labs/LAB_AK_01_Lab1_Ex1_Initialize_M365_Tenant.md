@@ -147,7 +147,7 @@ In this task, you will turn on Information Rights Management (IRM) for SharePoin
 
 8. This will return you to the top of the **Settings** page. In your browser, close the current tab that you're on (the **https://xxxxxZZZZZZ-admin.sharepoint.com** tab). This will return you to the **Settings** page in the **SharePoint admin center**.
 
-9. Do **NOT** close the **SharePoint admin center** tab in your Edge browser. Leave this tab and your browser open for the next task.
+9. Close the **SharePoint admin center** tab in your Edge browser. Leave your browser open for the next task.
 
 
 ### Task 4 – Turn on Audit Logging to enable Alert Policies
@@ -170,7 +170,7 @@ In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal
 
 6. In the **Audit** window, the banner will disappear once audit logging is turned on. In a later lab, you will return to this page to view audited activities that you completed during your lab work.  
  
-7. Leave the Client 1 VM and all the tabs in your Edge browser open and proceed to the next lab. 
+7. Close the **Microsoft 365 Defender** tab in your Edge browser. Leave your browser open and proceed to the next task. 
 
 
 ### Task 5 – Install Microsoft Graph PowerShell 
