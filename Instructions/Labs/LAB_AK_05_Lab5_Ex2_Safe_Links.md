@@ -106,7 +106,9 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 22. A new tab should open in your **Edge** browser that takes you to the URL you just saw in the prior step. This site should display the following warning message: **This website is classified as malicious.** This not only indicates that opening this website may not be safe, but it also verifies that the Safe Links policy you just created is working properly.
 
-23. In LON-CL2, leave the Edge browser and all its tabs open for the next lab. 
+23. You should now prepare LON-CL2 for the next lab that will use it. In your Edge browser, in the Outlook tab, select the circle with the **MA** initials in the upper right-hand corner. In the **MOD Administrator** profile window that appears, select **Sign out**.
+
+24. Once you are signed out of Outlook, close the Edge Browser. LON-CL2 is now ready for use in Lab 6.
 
 
 # End of Lab 5
