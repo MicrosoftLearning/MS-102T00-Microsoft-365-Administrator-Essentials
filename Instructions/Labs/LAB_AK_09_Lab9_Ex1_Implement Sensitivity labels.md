@@ -327,7 +327,7 @@ In the prior task, you created a Word document and protected it with a Sensitivi
 
 	‎Since only Joni was assigned permission to read the document, you just verified that Azure Information Protection protected the document based on the PII policy parameters that you configured.
 
-31. Remain signed into LON-CL2 and signed into Outlook on the Web as Joni. Do not close your browser.
+31. Congratulations! You have just completed the final lab in this course.
 
 
 # End of Lab 9
