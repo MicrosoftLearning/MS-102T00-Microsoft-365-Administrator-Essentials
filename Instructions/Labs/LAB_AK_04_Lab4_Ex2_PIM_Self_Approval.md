@@ -15,7 +15,7 @@ In the prior lab exercise, Holly Dickson limited access to the Global admin role
 
 For this next test of PIM in Adatum's pilot project, Holly has selected Alex Wilber and Joni Sherman to be eligible for the Helpdesk admin role. However, to simplify future role assignments, Holly wants to create a security group, assign Alex and Joni to the group, and then assign the group to the Helpdesk admin role. Holly will then enable the group to be eligible for the Helpdesk admin role.
 
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
+1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
 2. In your Edge browser, select the tab containing the **Azure Active Directory admin center**, which should still be open from the prior lab exercise. 
 
@@ -80,7 +80,7 @@ Next, Holly wants to configure the Helpdesk admin role settings and notification
 
 In the prior PIM exercise involving the Global admin role, Holly updated the role so that she had to approve any activation requests for the role. However, for the Helpdesk admin role, Holly is less concerned about eligible users abusing the role permissions given the more limited scope of the role as compared to the Global Admin role. Holly is trusting that Alex and Joni won't activate the role unless they're required to do so to respond to support requests. Therefore, Holly will only require that Alex and Joni provide a justification whenever they must activate the role. Holly wants the role to be active for Alex and Joni for 15 days. This way, they won't be waiting for Holly to approve their activation requests, and they can simply provide justification and get started whenever they must take on this role.
 
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson from the previous lab exercise.
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson from the previous lab exercise.
 
 2. In your browser, you should still have the **Azure Active Directory admin center** open from the prior task. In the left-hand navigation pane, select **All services**.
 
@@ -174,19 +174,17 @@ As Alex Wilber, you have now self-approved the Helpdesk Administrator role. This
 
 When you earlier configured the Helpdesk Administrator role, you set up the notification feature so that Holly would be notified any time an eligible user activated the role. Since Alex Wilber just self-activated the role, Holly should receive a notification of this activity. This task will verify that Holly received this notification. 
 
-1.  You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson. Select the **Microsoft Office Home** tab.
 
-2. In your Edge browser, select the **Microsoft Office Home** tab.
+2. On the **Microsoft Office Home** page, in the column of application icons on the left-side of the screen, select **Outlook**. This will open Outlook for Holly Dickson's mailbox.
 
-3. On the **Microsoft Office Home** page, in the column of application icons on the left-side of the screen, select **Outlook**. This will open Outlook for Holly Dickson's mailbox.
+3. In Holly's **Inbox**, verify that Holly received a PIM generated email indicating that **Alex Wilber activated the Helpdesk Administrator role assignment**. 
 
-4. In Holly's **Inbox**, verify that Holly received a PIM generated email indicating that **Alex Wilber activated the Helpdesk Administrator role assignment**. 
+4. Select the email to open it. Review the information in the email. Select the **View History** button.
 
-5. Select the email to open it. Review the information in the email. Select the **View History** button.
+5. In the **Adatum Corporation | Resource audit** window, review the audited list of activities related to Alex's self-approval of the Helpdesk Administrator role. 
 
-6. In the **Adatum Corporation | Resource audit** window, review the audited list of activities related to Alex's self-approval of the Helpdesk Administrator role. 
-
-7. Leave your browser and all tabs open for the next task.
+6. Leave your browser and all tabs open for the next task.
 
 
 # Proceed to Lab 4 - Exercise 3
