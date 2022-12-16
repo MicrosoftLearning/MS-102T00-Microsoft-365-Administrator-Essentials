@@ -2,7 +2,7 @@
 
 Now that you have created a Safe Attachments policy for Adatum, you want to create a Safe Links policy and then validate the policy to ensure that it works properly.
 
-**IMPORTANT:** This lab exercise consists of two tasks. The first task creates a Safe Links policy, and then the second task validates the policy. The problem with this lab is that when you create a safe links policy, it takes at least 30 minutes for the policy to propagate through the system. **This means that you can perform the Task 1, but then you must wait at least 30 minutes before you can perform Task 2.** After completing Task 1, do **NOT** immediately perform Task 2. Instead, you should continue with the training class, and your instructor will provide guidance on when you can perform Task 2 depending on the next break that occurs in the class schedule.
+**IMPORTANT:** This lab exercise consists of two tasks. The first task creates a Safe Links policy, and then the second task validates the policy. The problem with this lab is that when you create a safe links policy, it takes at least 30 minutes for the new policy to propagate through the system. **This means that after performing Task 1, you must wait at least 30 minutes before performing Task 2.** If you perform Task 2 immediately after performing Task 1, then Task 2 will fail. Therefore, after completing Task 1, you should continue with the training class. Your instructor will provide guidance on when you can perform Task 2 depending on the next break that occurs in the class schedule.
 
 ### Task 1 – Create a Safe Links Policy
 
@@ -46,11 +46,11 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 **STOP!!** As mentioned at the start of this lab exercise, now that you have created a Safe Links policy, you must wait at least 30 minutes for the policy to propagate through the system before you can perform the next task in this exercise. 
 
-**Do NOT proceed to the next task!** You can continue with the training course and perform the next task when your instructor feels it's appropriate given the class training schedule. 
+**Do NOT proceed to the next task!** You can continue with the training course and perform the next task when your instructor feels it's appropriate given the class' training schedule. 
 
-### Task 2 – Validate the Safe Links Policy
+### Task 2 – Validate the Safe Links policy
 
-In this task, you will test the Safe Links Policy that you just created that blocks links to the http://tailspintoys.com URL.
+After having waited at least 30 minutes since completing Task 1, you will now test the Safe Links policy that you created that blocks links to the http://tailspintoys.com URL.
 
 1. You should still be logged into your Client 1 VM (LON-CL1) as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
