@@ -2,7 +2,7 @@
 
 In this exercise, you will enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Azure AD Connect will then continue to synchronize any delta changes every 30 minutes. You will then make some user and group updates and then manually force an immediate synchronization rather than waiting for Azure AD Connect to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
 
-‎**Important:** When you start this exercise, you should perform the first four tasks without any delay between them so that Azure AD Connect does not automatically synchronize the changes that you make to the identity objects.
+‎**IMPORTANT:** When you start this exercise, you should perform the first four tasks without any delay between them so that Azure AD Connect does not automatically synchronize the changes that you make to the identity objects.
 
 ### Task 1: Install Azure AD Connect and Initiate Synchronization
 
@@ -73,7 +73,7 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Azure AD Connect. You will create a new security group, and you will update the group members in an existing, built-in security group, all within Adatum’s on-premises environment. 
 
-Each group will be assigned several members. After the forced synchronization, you will validate that you can see the new security group in Microsoft 365 and that its members were synced up from the on-premises group to the cloud group. You will also validate that you can NOT see the built-in security group in Microsoft 365, even though you added members to it in Adatum's on-premises environment. Built-in groups are predefined security groups that are located under the Builtin container in Active Directory Users and Computers. They are created automatically when you create an Active Directory domain, and you can use these groups to control access to shared resources and delegate specific domain-wide administrative roles. **However, they are NOT synchronized to Microsoft 365, even after adding members to them within their on-premises AD group.** You will validate this functionality in this task.
+Each group will be assigned several members. After the forced synchronization, you will validate that you can see the new security group in Microsoft 365 and that its members were synced up from the on-premises group to the cloud group. You will also validate that you can NOT see the built-in security group in Microsoft 365, even though you added members to it in Adatum's on-premises environment. Built-in groups are predefined security groups that are located under the **Builtin** container in **Active Directory Users and Computers**. They are created automatically when you create an Active Directory domain, and you can use these groups to control access to shared resources and delegate specific domain-wide administrative roles. **However, they are NOT synchronized to Microsoft 365, even after adding members to them within their on-premises AD group.** You will validate this functionality in this task.
 
 1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task. 
 
@@ -109,7 +109,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 	- Group type: **Security**
 
-12. Select **OK**.  
+12. Select **OK**.
 
 13. In the console tree under **Adatum.com**, select the **Research** folder, and then in the detail pane on the right, double-click on the **Manufacturing** security group.  
 
@@ -123,7 +123,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 	- **Dawn Williamson**  
 
-16. Leave the **Active Directory Users and Computers** window open for the next task.  
+16. Leave the **Active Directory Users and Computers** window open for the next task.
 
  
 ### Task 3 - Change Group Membership to Test Synchronization  
@@ -132,7 +132,7 @@ This task sets up another scenario for testing whether the sync process is worki
 
 1. This task continues from where the previous task left off in LON-DC1. In the **Active Directory Users and Computers** window, in the console tree under **Adatum.com**, the **Research** organizational unit is still selected. <br/>
 
-	In the detail pane on the right, double-click the **Research** security group.  
+	In the detail pane on the right, double-click the **Research** security group.
 
 2. In the **Research Properties** window, select the **Members** tab to view the members of this group.  
 
@@ -169,7 +169,7 @@ In this task, you will force a sync between Adatum’s on-premises AD and Azure 
 	
 	‎**Note:** If for any reason the Domain Controller VM was restarted after the original full synchronization run, the Microsoft Azure AD Sync service may not have restarted. If this occurred, you’ll receive an error when you try to perform the forced sync above. If this occurs, you’ll need to start the Microsoft Azure AD Sync service first and then perform the forced synchronization.
 
-	**Note:** If the Start-ADSyncSyncCycle command is not found, the domain controller will need to be restarted for the PowerShell module to complete it's installation.
+	**Note:** If the Start-ADSyncSyncCycle command is not found, the domain controller will need to be restarted for the PowerShell module to complete its installation.
 	
 4. Once the synchronization process has successfully completed, minimize your PowerShell window (do not close it) and proceed to the next task. You will use PowerShell in the next task to validate some of the results of the directory synchronization.
 
@@ -240,7 +240,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Dawn Williamson
 
-17. Once you have completed the validation steps, close your PowerShell window. Congratulations! You have just completed the final lab in this course.
+17. Once you have completed the validation steps, close your PowerShell window. 
  
 # Proceed to Lab 3 - Exercise 3
  
