@@ -9,7 +9,7 @@ In this next phase of your Adatum pilot project, you will access the Microsoft P
 - Moves items that are two years or older from Holly's primary mailbox to her archive mailbox.
 - Moves items that are 14 days or older from the Recoverable Items folder in Holly's primary mailbox to the Recoverable Items folder in her archive mailbox.
 
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
 2. In Microsoft Edge, in the **Microsoft 365 admin center**, under the **Admin centers** group, select **Compliance** to open the Microsoft Purview portal.
 
@@ -32,7 +32,7 @@ In this next phase of your Adatum pilot project, you will access the Microsoft P
 
 As part of your pilot project for Adatum, you will configure email retention through the Microsoft Purview portal by creating a new retention policy. You will then assign this retention policy to Joni Sherman and Lynne Robbins’ mailboxes. Joni and Lynne are Holly's two test users for compliance testing. Holly wants to use this policy to test email retention for these two test users before creating a second retention policy in the next task that will be applied organization-wide.
 
-1. On LON-CL1, your Microsoft Edge browser should still have the Microsoft Purview portal open from the prior task.
+1. On LON-CL1, your Microsoft Edge browser should still have the **Microsoft Purview** portal open from the prior task.
 
 2. In the **Microsoft Purview** portal, in the left-hand navigation pane, select **Data lifecycle management**, and then select **Microsoft 365**.
 
@@ -77,7 +77,7 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 Holly has concluded her testing of email retention on Joni and Lynne's mailboxes using the **Test user email retention** policy that you created in the prior task. Holly now wants to create a retention policy that preserves the content of all Exchange Online mailboxes from deletion for 5 years after the last modification. Since Holly has completed her email retention testing, she wants to first disable the **Test user email retention** policy. By doing so, Joni and Lynne's mailboxes will be governed by the retention policy that you create in this task that applies to all Adatum mailboxes. 
 
-1. On LON-CL1, your Microsoft Edge browser should still have the Microsoft Purview portal open from the prior task, and it should be displaying the **Data lifecycle management** window.
+1. On LON-CL1, your Edge browser should still have the **Microsoft Purview** portal open from the prior task, and it should be displaying the **Data lifecycle management** window.
 
 2. In the **Data lifecycle management** window, in the list of tabs that appear across the top of the page, select **Retention policies** (if another tab is selected).
 
@@ -109,7 +109,7 @@ Holly has concluded her testing of email retention on Joni and Lynne's mailboxes
 
 12. On the **You successfully created a retention policy** window, select **Done**.
 
-13. In your Microsoft Edge browser, leave all the tabs open as you proceed to the next exercise.
+13. In your Edge browser, leave all the tabs open as you proceed to the next exercise.
 
 You have now created a new retention policy in the Microsoft Purview portal that retains all Exchange emails from all mailboxes for 5 years after the last modification.
 
