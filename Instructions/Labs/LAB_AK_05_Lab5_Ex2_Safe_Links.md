@@ -90,7 +90,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 14. Select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
 
-15. In the **Sign-in** window, enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+15. In the **Sign-in** window, enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (this is your tenant's MOD Administrator account that was created by your lab hosting provider, where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
 16. In the **Enter password** window, enter the tenant password provided by your lab hosting provider and select **Sign in**.
 
