@@ -1,6 +1,6 @@
 # Learning Path 6 - Lab 6 - Exercise 6 - Conduct a Drive-by URL attack using Attack Simulation training
 
-Holly Dickson is concerned that some users at Adatum may require education about selecting URL links to familiar websites that are either fake or have been hacked. This type of attack is known as a Drive-by URL attack. With this type of attack, a target receives an email containing a URL link, and when the target selects the link, they are taken to a website that runs background code whose sole purpose is to gather information about the target or deploy arbitrary code to their device. As part of her pilot project, Holly has decided to use the Microsoft 365 Attack simulation training feature to determine her users' susceptibility to Drive-by URL attacks.
+Holly Dickson is concerned that some of the users at Adatum may require training about avoiding URL links to familiar websites that are either fake or have been hacked. This type of attack is known as a Drive-by URL attack. With this type of attack, a target receives an email containing a URL link, and when the target selects the link, they are taken to a website that runs background code whose sole purpose is to gather information about the target or deploy arbitrary code to their device. As part of her pilot project, Holly has decided to use the Microsoft 365 Attack simulation training feature to determine her users' susceptibility to Drive-by URL attacks.
 
 **Note:** At the end of this exercise, you will disable MFA for Holly's account. This will save you from having to enter the second form of authentication when signing in as Holly in any of the remaining labs in this course.
 
@@ -11,7 +11,7 @@ In a Drive-by URL attack, the website attempting to lure the target will typical
 
 In the prior lab, you created a simulation that was sent to all Adatum users. You also used an existing payload template for the simulation. In this lab exercise, you will only roll out the simulation to Lynne Robbins, and you will create your own custom payload.  
 
-1. You should still be in LON-CL1 and signed in as the local **Admin** account with a password of **Pa55w.rd**; if not, then sign in now.  
+1. You should still be in LON-CL1 and signed in as the local **adatum\administrator** account with a password of **Pa55w.rd**; if not, then sign in now.  
 
 2. After the previous lab exercise, you should still be in the **Microsoft 365 Defender** portal, and you should still be logged in as Holly Dickson; if not, then do so now.
 
@@ -114,11 +114,9 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 
 You will now review the results of the Drive-by URL simulation attack that you just launched. In this task, you will verify whether your organization has received the email that you configured in the Attack simulation training. You will then review the results associated with the Drive-by URL attack that you simulated.
 
-1. Switch to the **LON-CL2** VM and, if necessary, log in as the local **Admin** account with a password of **Pa55w.rd**.
+1. Switch to **LON-CL2**.
 
-2. In the Edge browser, you should have two tabs open - one with Lynne Robbins' Outlook mailbox, and one with the landing page from the attack simulation that you conducted in the prior lab exercise. Select the tab containing Lynne Robbins' Outlook mailbox.
-
-7. In Lynne's Outlook Inbox, you should see the email that was sent by the Attack Simulator that's from **klemens@tailspintoys.com**. The subject of the email is **Free toy giveaway promotion from Tailspin Toys**. Select the email to open it and review the details in the body of the message. 
+2. On LON-CL2, in the Edge browser, you should have a tab open containing with Lynne Robbins' Outlook mailbox from the prior lab exercise. In Lynne's Outlook Inbox, you should see the email that was sent by the Attack Simulator that's from **klemens@tailspintoys.com**. The subject of the email is **Free toy giveaway promotion from Tailspin Toys**. Select the email to open it and review the details in the body of the message. 
 
 	**NOTE!** It can take up to 15 minutes for the email to arrive.  Wait for the email before proceeding.
 
@@ -132,7 +130,7 @@ You will now review the results of the Drive-by URL simulation attack that you j
 
 13. Switch back to **LON-CL1**.
 
-14. In your browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. If the **Drive by URL - Free offer** simulation does not appear in the **Recent Simulations** list, select the **Refresh** icon to the left of the URL on the address bar. The **Drive by URL - Free offer** simulation should now appear. Select the **Drive by URL - Free offer** simulation to view the diagnostic results that were captured for this simulation.
+14. On LON-CL1, in your browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. If the **Drive by URL - Free offer** simulation does not appear in the **Recent Simulations** list, select the **Refresh** icon to the left of the URL on the address bar. The **Drive by URL - Free offer** simulation should now appear. Select the **Drive by URL - Free offer** simulation to view the diagnostic results that were captured for this simulation.
 
 15. A **Drive by URL - Free offer** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
 
