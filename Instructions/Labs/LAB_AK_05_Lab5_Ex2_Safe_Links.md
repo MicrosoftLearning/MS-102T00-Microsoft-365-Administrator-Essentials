@@ -8,13 +8,13 @@ Now that you have created a Safe Attachments policy for Adatum, you want to crea
 
 In this task, you will create a Safe Links policy that applies to all users in your tenant. You will then add the **http://tailspintoys.com** URL to the company-wide list of blocked URLs that you will define in the Safe Links global settings. The blocked URLs and other options defined in the Safe Links global settings are only applied to users who are included in active Safe Links policies. There is no built-in or default Safe Links policy, so you must create at least one Safe Links policy for these global settings to be active.  
 
-1. You should still be logged into your Client 1 VM (LON-CL1) as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. After finishing the previous task, you should still be in the **Microsoft 365 Defender** portal. If not, in your browser, enter **https://security.microsoft.com.**
+2. After finishing the previous task, you should still be in the **Microsoft 365 Defender** portal. If not, then in your browser, enter **https://security.microsoft.com** in the address bar.
 
 3. In **Microsoft 365 Defender**, you should still be on the **Safe Attachments** page after completing the previous task. In the navigation thread at the top of the page (**Policies & rules > Threat policies > Safe attachments**), select **Threat policies**. <br/>
 
-    Note: If you had closed the **Safe Attachments** tab after the prior task, then navigate to the **Threat policies** page by selecting **Policies & rules** in the left-hand navigation page in **Microsoft 365 Defender**, and then selecting **Threat policies**.
+    **NOTE:** If you had closed the **Safe Attachments** tab after the prior task, then navigate to the **Threat policies** page by selecting **Policies & rules** in the left-hand navigation page in **Microsoft 365 Defender**, and then selecting **Threat policies**.
 
 4. In the **Threat policies** window, under the **Policies** section, select **Safe Links**. 
 
@@ -52,7 +52,7 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 After having waited at least 30 minutes since completing Task 1, you will now test the Safe Links policy that you created that blocks links to the http://tailspintoys.com URL.
 
-1. You should still be logged into your Client 1 VM (LON-CL1) as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
 2. In your **Microsoft Edge** browser, select the **Microsoft Office Home** tab and then in the column of app icons on the left side of the screen, select the **Outlook** icon. This will open Holly Dickson's mailbox.
 
