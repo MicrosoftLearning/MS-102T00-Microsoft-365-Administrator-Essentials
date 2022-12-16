@@ -105,10 +105,6 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 16. Once you're signed out of Outlook, close the Edge browser.
 
-17. Switch back to the **LON-CL1**.
-
-18. On LON-CL1, in your Microsoft Edge browser, close the Exchange admin center tab, but leave the other browser tabs open.
-
 
 You have just successfully tested a mailbox permission alert that sent an alarm message on granting FullAccess to a user mailbox.
 
