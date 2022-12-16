@@ -205,6 +205,6 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 19. On the desktop, the **Administrator** is selected by default. Enter **Pa55w.rd** in the **Password** field and then select the forward arrow.  <br/>
 
-	The desktop should now display the logged on user as **adatum\administrator**. LON-CL2 is now ready for use in a later lab.
+	The desktop should now display the logged on user as **adatum\administrator**. LON-CL2 is now ready for the next lab that uses it.
 
 # End of Lab 2
