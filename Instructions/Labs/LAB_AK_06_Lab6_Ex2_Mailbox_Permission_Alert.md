@@ -101,9 +101,13 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 	Scroll down through the **Mailbox permission change** pane and review all the information for this activity. When you are done, select **Close** to close the pane.
 
-15. Switch back to the **LON-CL1**.
+15. You should now prepare LON-CL2 for the next lab that will use it. In your Edge browser, in the Outlook tab, select the circle with Lynne Robbin's picture in the upper right-hand corner. In the **Lynne Robbins** profile window that appears, select **Sign out**.
 
-16. On LON-CL1, in your Microsoft Edge browser, close the Exchange admin center tab, but leave the other browser tabs open.
+16. Once you're signed out of Outlook, close the Edge browser.
+
+17. Switch back to the **LON-CL1**.
+
+18. On LON-CL1, in your Microsoft Edge browser, close the Exchange admin center tab, but leave the other browser tabs open.
 
 
 You have just successfully tested a mailbox permission alert that sent an alarm message on granting FullAccess to a user mailbox.
