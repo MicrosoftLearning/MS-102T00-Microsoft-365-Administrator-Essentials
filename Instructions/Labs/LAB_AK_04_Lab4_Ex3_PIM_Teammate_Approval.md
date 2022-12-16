@@ -5,7 +5,7 @@ Up to this point, you have conducted two forms of PIM approval:
 - one by an administrator (Holly), who approved the activation and assignment of the Global Administrator role to Patti Fernandez.
 - another by Alex Wilber, who self-approved the assignment of the Helpdesk administrator role to his user account. 
 
-In this exercise, you will conduct a third form a PIM approval, which is having a (non-admin) user approve the assignment of a role to another user. 
+In this exercise, you will conduct a third form of PIM approval, which is having a (non-admin) user approve the assignment of a role to another user. 
 
 In an attempt to decrease overhead but still maintain a secure way of managing administrator roles, Holly decided to allow Alex Wilber and Joni Sherman to approve each other’s request to activate the Intune Administrator role.  This will allow Alex and Joni to perform device management tasks within Intune without having to wait for Holly to approve their requests. 
 
@@ -119,7 +119,7 @@ As in the prior PIM exercise involving the Helpdesk admin role, Holly is trustin
 
 ### Task 3 - Submit a request for the Intune Admin role
 
-At this point in Holly's pilot project, the **PIM-Intune-Administrators** group has been made eligible for the Intune administrator role. Each member of the group (in this case, Alex Wilber and Joni Sherman) can now be assigned the Intune Admimistrator role by requesting approval from a member of this group, which in this case will be the other person. Holly wants to test out the PIM process in her pilot project. In this task, you will take on the role of Joni Sherman, who will submit a request to approve assigning the Intune Administrator role to her account. 
+At this point in Holly's pilot project, the **PIM-Intune-Administrators** group has been made eligible for the Intune administrator role. Each member of the group (in this case, Alex Wilber and Joni Sherman) can now be assigned the Intune Administrator role by requesting approval from a member of this group, which in this case will be the other person. Holly wants to test out the PIM process in her pilot project. In this task, you will take on the role of Joni Sherman, who will submit a request to approve assigning the Intune Administrator role to her account. 
 
 1.  In LON-CL1, right-click on the **Edge** icon on the taskbar and in the menu that appears, select **New InPrivate window**. 
 
@@ -154,7 +154,7 @@ As a member of the PIM-Intune-Administrators group, Joni can approve requests fo
 
 1. You should still be logged into the InPrivate browser session as Joni Sherman. If you closed the session at the end of the prior task, then repeat the steps from the prior task to open the InPrivate browsing session, sign in as Joni, and navigate to the **My roles** window. 
 
-2. You want to begin by verifying that Joni can't self approve her own request for the Intune Admin role. 
+2. You want to begin by verifying that Joni can't self-approve her own request for the Intune Admin role. 
 
 3. You're currently in the **My roles | Azure AD roles** window, where you left off from the prior task. In the navigation thread at the top of the window (**All services > Privileged Identity Management | My roles**), select **All services**.
 
