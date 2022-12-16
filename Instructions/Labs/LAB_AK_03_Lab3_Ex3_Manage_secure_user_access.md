@@ -1,6 +1,6 @@
 # Learning Path 3 - Lab 3 - Exercise 3 - Manage secure user access 
 
-As Holly Dickson, Adatum’s Enterprise Administrator, you have been asked by Adatum’s CTO to deploy Pass-through Authentication (PTA) and Azure AD Smart Lockout as a means of strengthening password management throughout the organization. 
+As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by Adatum’s CTO to deploy Pass-through Authentication (PTA) and Azure AD Smart Lockout as a means of strengthening password management throughout the organization. 
 
 ### Task 1: Deploy Azure AD Pass-Through Authentication 
 
@@ -8,9 +8,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 ‎Adatum's CTO wants to provide the company's users with a better logon experience (since PTA requires one less password to remember), as well as reduce Adatum’s IT helpdesk costs because with PTA their users are less likely to forget how to sign in. While this can also be achieved by employing Password Hash Synchronization as well as Active Directory Federation Services, Adatum has chosen to test PTA in its pilot project.
 
-1.  At the end of the previous lab exercise, you were on LON-CL1, where you took on the role of Laura Atkins and installed Microsoft 365 Apps for enterprise. For this lab exercise, you must switch back to LON-DC1. <br/>
-
-    Switch to **LON-DC1**, where you should still be logged into the machine as the **Administrator** with a password of **Pa55w.rd**; if not, then do so now.
+1.  You should still be logged into **LON-DC1** as the **Administrator** from the prior task.
 
 2. On LON-DC1, select the **Start** button on the taskbar, and then in the **Start** menu, select the **All Apps** icon to display the list of all installed applications. Select the **Azure AD Connect** program group and then select **Azure AD Connect**. This will initiate the **Microsoft Azure Active Directory Connect** wizard.
 
@@ -133,7 +131,9 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 	**Note:** You will be prohibited from logging in as Laura until after the **90 second lockout duration** that you set earlier. 
 
-22. Once you've been locked out, wait 90 seconds and then verify that you can sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider) and the password **User.pw1**. If your log in is successful, you should return to the Azure Active Directory admin center.
+22. Once you've been locked out, wait 90 seconds and then verify that you can sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider) and the password **User.pw1**. 
+
+23. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
  
 
 # End of Lab 3
