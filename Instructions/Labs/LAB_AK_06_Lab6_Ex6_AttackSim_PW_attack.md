@@ -116,9 +116,9 @@ You will now review the results of the Drive-by URL simulation attack that you j
 
 1. Switch to **LON-CL2**.
 
-2. On LON-CL2, in the Edge browser, you should have a tab open containing with Lynne Robbins' Outlook mailbox from the prior lab exercise. In Lynne's Outlook Inbox, you should see the email that was sent by the Attack Simulator that's from **klemens@tailspintoys.com**. The subject of the email is **Free toy giveaway promotion from Tailspin Toys**. Select the email to open it and review the details in the body of the message. 
+2. On LON-CL2, in the Edge browser, you should have a tab open containing Lynne Robbins' Outlook mailbox from the prior lab exercise. In Lynne's Outlook Inbox, you should see the email that was sent by the Attack Simulator that's from **klemens@tailspintoys.com**. The subject of the email is **Free toy giveaway promotion from Tailspin Toys**. Select the email to open it and review the details in the body of the message. 
 
-	**NOTE!** It can take up to 15 minutes for the email to arrive.  Wait for the email before proceeding.
+	**NOTE:** It can take up to 15 minutes for the email to arrive.  Wait for the email before proceeding.
 
 8. Select the link that is included in the email. Even though you know this is a Drive-by URL attack, this will enable you to see the effect of doing so in the Attack Simulator report that tracks the results of the spear phishing campaign. <br/>
 
@@ -141,7 +141,7 @@ You will now review the results of the Drive-by URL simulation attack that you j
 
 To use Microsoft's Attack simulation training to simulate phishing attacks, Holly enabled Multi-Factor Authentication (MFA) for her user account. Now that she has completed the Attack simulation training tests, she wants to disable MFA for her account so that she doesn't have to deal with MFA for the remainder of the pilot project.
 
-1. You should still be logged into **LON-CL1** as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
+1. You should still be logged into **LON-CL1** as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
 2. To disable MFA for Holly Dickson's user account, you must first access the **Active users** list in the Microsoft 365 admin center. If you have the **Microsoft 365 admin center** open in a browser tab, then select that now; otherwise, open a new browser tab, enter **https://portal.office.com** in the address bar, and then on the **Office 365 home** page, select the **Admin** icon that appears in the column of app icons on the left-side of the screen. This opens the **Microsoft 365 admin center** in a new browser tab. 
 
@@ -158,7 +158,7 @@ To use Microsoft's Attack simulation training to simulate phishing attacks, Holl
 8. You must now sign out of Microsoft 365 as Holly and then sign back in as Holly (without MFA). To do so, perform the following steps: <br/>
 
 	- Select Holly's account icon (HD in a circle) at the top-right of the screen and in Holly's profile window, select **Sign out**.
-	- Close your browser session and all browser tabs (to clear your cache).
+	- Once you're signed out, close ayour browser (to clear your cache).
 	- Open a new Edge browser session.
 	- Enter the **https://portal.office.com** URL.
 	- In the **Pick an account** window, select Holly's account and enter **User.pw1** as the **Password**.
