@@ -18,7 +18,7 @@ For this lab, Adatum has purchased the new xxxUPNxxx.xxxCustomDomainxxx.xxx doma
 
 **IMPORTANT - PowerShell notice:** Up to this point, the labs in this course that involve Windows PowerShell have used the latest PowerShell module known as Microsoft Graph PowerShell. This PowerShell module replaces two older modules, MSOnline and Azure Active Directory (Azure AD) PowerShell. Where applicable, Microsoft customers are encouraged to use the newer Microsoft Graph PowerShell module, since the older modules are scheduled for deprecation. However, at present, not all MSOnline and Azure AD PowerShell functionality has been incorporated into Microsoft Graph PowerShell. Such is the case with this lab exercise, which must use MSOnline since the commands necessary to update Adatum's Active Directory forest have not yet been incorporated into Microsoft Graph PowerShell. As such, you will begin this task by installing the MSOnline module and then connecting to the Microsoft Online Service. You'll then run the appropriate MSOnline cmdlet to update the adatum.com domain.
 
-1. Switch to **LON-DC1**, Adatum's domain controller.
+1. Switch to **LON-DC1**, which is Adatum's domain controller.
 
 2. On **LON-DC1**, make sure you’re logged in as **ADATUM\Administrator** and password **Pa55w.rd**. 
 
@@ -139,7 +139,7 @@ The Azure Active Directory Connect synchronization service is a main component o
 
 Before you can run Azure AD Connect, you must first configure several settings that control the synchronization process, which you will do in this task. Once you have completed the preparation process, you will then run the Azure AD Connect tool in the next exercise. 
 
-1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task. 
+1. You should still be logged into **LON-DC1**. 
 
 2. You want to begin by adding several trusted sites for Microsoft Edge. If you're familiar doing this with Internet Explorer (IE), the process is basically the same for Edge; however, the location of the **Security** settings is different. With IE, you added trusted sites through IE's Internet Options; for Edge, you will add trusted sites through the Windows Control Panel. <br/>
 
