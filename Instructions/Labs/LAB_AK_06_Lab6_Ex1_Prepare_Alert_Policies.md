@@ -25,7 +25,11 @@ The three alerts that you will create in this lab are assigned to two Alert cate
 
 Perform the following steps to assign Lynne Robbins the Compliance Data Administrator role group, which includes the Compliance Administrator role.
 
-1. You should still be logged into your Client 1 VM (LON-CL1) as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+1. At the end of Lab 1, you were logged into LON-CL2. This lab will use LON-CL1.  <br/>
+
+  Switch to **LON-CL1**. 
+
+2. On LON-CL1, you should still be logged in as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
 2. After finishing the previous lab, you should still be in the **Microsoft 365 admin center** in your browser. In the left-hand navigation pane, select **Show all**, and then under the **Admin centers** group, select **Security**.
 
