@@ -8,7 +8,7 @@ In this exercise, you will enable synchronization between Adatum’s on-premises
 
 In this task, you will run the Azure AD Connect setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Once the configuration is complete, the synchronization process will automatically start. 
 
-1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task. 
+1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task. 
 
 2. After finishing the previous lab exercise, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson.  
 
