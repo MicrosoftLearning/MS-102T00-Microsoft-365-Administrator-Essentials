@@ -77,7 +77,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 	
 	‎**Important:** You have just verified that a user can't download Microsoft 365 Apps for enterprise if they haven't been assigned an appropriate Microsoft 365 license. 
 	
-20. Leave LON-CL2 open and remain signed into Microsoft 365 as Laura Atkins for the next task. Close the **My account** tab, but leave the **Microsoft Office Home** tab open for the next task.
+20. Leave LON-CL2 open and remain signed into Microsoft 365 as Laura Atkins for the next task. In your Edge browser, close the **My account** tab, but leave the **Microsoft Office Home** tab open for the next task.
 
 
 ### Task 2 – Verify how the global Office download setting affects installing Microsoft 365 Apps for enterprise
