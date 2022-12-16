@@ -81,11 +81,11 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 7. Once you have assigned Joni to each of the three permissions on the **Delegation** tab, select the **X** in the upper right-hand corner to close the **Alex Wilber** pane. 
 
-8. Since **Holly Dickson** has changed the mailbox permissions for Alex Wilbur by giving Joni Sherman full access permissions to his mailbox, an alert email should automatically be sent to Lynne Robbins’ Inbox that notifies her of this event.
+8. Since **Holly Dickson** has changed the mailbox permissions for Alex Wilbur by giving Joni Sherman full access permissions to his mailbox, an alert email should automatically be sent to Lynne Robbins’ Inbox that notifies her of this event. You will verify this email was sent by checking Lynne's Inbox on LON-CL2. <br/>
 
-	‎Switch to LON-CL2. 
+	‎Switch to **LON-CL2**. 
 
-9. In your Edge browser, select the **Mail - Lynne Robbins - Outlook** tab that has Outlook on the web open for Lynne Robbins' mailbox. In Lynne Robbins’ **Inbox**, an email should be received from the Alerts notification system (**Office365Alerts@microsoft.com**) to let her know that Holly Dickson has made a Mailbox permission change. <br/>
+9. On LON-CL2, in your Edge browser, select the **Mail - Lynne Robbins - Outlook** tab that has Outlook on the web open for Lynne Robbins' mailbox. In Lynne Robbins’ **Inbox**, an email should be received from the Alerts notification system (**Office365Alerts@microsoft.com**) to let her know that Holly Dickson has made a Mailbox permission change. <br/>
 
 	**WARNING:** Lab testing has shown that in some cases, it can take up to 15 minutes or so for the email to be received in Lynne's Inbox. 
 
@@ -93,9 +93,9 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 	Scroll down through the **Mailbox permission change** pane and review all the information for this activity. When you are done, select **Close** to close the pane.
 
-11. Switch back to the LON-CL1.
+11. Switch back to the **LON-CL1**.
 
-12. In your browser, close the Exchange admin center tab, but leave the other browser tabs open.
+12. On LON-CL1, in your browser, close the Exchange admin center tab, but leave the other browser tabs open.
 
 13. Leave your LON-CL1 and LON-CL2 VMs open for the remaining tasks in this lab.
 
