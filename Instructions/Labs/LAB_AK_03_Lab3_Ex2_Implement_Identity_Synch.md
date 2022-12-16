@@ -157,9 +157,11 @@ This task sets up another scenario for testing whether the sync process is worki
 
 In this task, you will force a sync between Adatum’s on-premises AD and Azure AD instead of waiting 30 minutes for Azure AD Connect to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
 
+**IMPORTANT - PowerShell notice:** The prior lab exercise provided a disclaimer indicating how the exercises in this lab are using the MSOnline module rather than Microsoft Graph PowerShell. While Microsoft is in the process of replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, with Microsoft Graph PowerShell, there are some functionality in the older modules that has not yet been incorporated into Microsoft Graph PowerShell. The commands in the prior exercise in this lab and the commands used in this exercise fall into that category. The prior exercise connected to the MSOnline module, which is also used in this task per the Start-ADSyncSyncCycle command. The PowerShell commands in the next task will use the Azuer AD PowerShell module. 
+
 1. On LON-DC1, if the **Windows PowerShell** application is still open from the prior exercise, then **you MUST close it now**.  <br/>
 
-	‎**Important:** The reason for this step is that if Windows PowerShell was opened BEFORE the Azure AD Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open and then restart it.  
+	‎**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Azure AD Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open and then restart it.  
 
 2. At this point, Windows PowerShell should NOT be open. To open it, select the **magnifying glass (Search)** icon in the taskbar, type **PowerShell** in the Search box, and then in the menu, right-click on **Windows PowerShell** (not Windows PowerShell ISE) and select **Run as administrator**.  
 
@@ -179,6 +181,8 @@ In this task, you will force a sync between Adatum’s on-premises AD and Azure 
 ### Task 5 - Validate the Results of Directory Synchronization   
 
 In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises AD to Azure AD. You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
+
+**IMPORTANT - PowerShell notice:** Up to this point, the PowerShell tasks in this lab exercise used the MSOnline PowerShell module. However, the PowerShell commands in this task require the Azure AD PowerShell module. 
 
 1. You should still be logged into LON-DC1 as the **Administrator** with a password of **Pa55w.rd.**
 
