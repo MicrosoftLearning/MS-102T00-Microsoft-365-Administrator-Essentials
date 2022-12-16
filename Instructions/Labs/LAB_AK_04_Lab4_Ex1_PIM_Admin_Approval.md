@@ -28,7 +28,7 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to use Privileged
 
 Holly also wants to update the notification settings for the Global admin role. Privileged Identity Management (PIM) lets you know when important events occur in your Azure Active Directory (Azure AD) organization, such as when a role is assigned or activated. PIM keeps you informed by sending you and other participants email notifications. These emails might also include links to relevant tasks, such activating or renewing a role. In this task, Holly wants to update the notifications to ensure that approvals are tracked in real-time in a proactive manner.
 
-1. The prior lab exercise used Adatum's domain controller (LON-DC1). For this lab, you must switch back to LON-CL1.  <br/>
+1. The prior lab exercise used Adatum's domain controller (LON-DC1). This lab will use LON-CL1.  <br/>
 
     Switch back to **LON-CL1**. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
