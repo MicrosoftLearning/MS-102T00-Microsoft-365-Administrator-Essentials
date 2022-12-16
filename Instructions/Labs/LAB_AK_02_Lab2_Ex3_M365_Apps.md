@@ -197,7 +197,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 18. Once Laura is signed out, close your Microsoft Edge browser. 
 
-19. You now want to log out of LON-CL2 as Laura Atkins and log back in as the Adatum administrator. This will prepare LON-CL2 for the next lab. <br/>
+19. You now want to log out of LON-CL2 as Laura Atkins and log back in as the Adatum administrator. This will prepare LON-CL2 for the next lab that uses this PC. <br/>
 
 	On LON-CL2, select the **Ctrl+Alt+Delete** function in your VM lab environment. 
 	
@@ -205,6 +205,6 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 19. On the desktop, the **Administrator** is selected by default. Enter **Pa55w.rd** in the **Password** field and then select the forward arrow.  <br/>
 
-	The desktop should now display the logged on user as **adatum\administrator**. LON-CL2 is now ready for the next lab.
+	The desktop should now display the logged on user as **adatum\administrator**. LON-CL2 is now ready for use in a later lab.
 
 # End of Lab 2
