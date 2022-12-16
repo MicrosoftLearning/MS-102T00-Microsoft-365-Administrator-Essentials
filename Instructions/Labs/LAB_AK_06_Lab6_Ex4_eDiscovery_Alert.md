@@ -34,7 +34,7 @@ In this task, you will verify whether a default Microsoft 365 alert is triggered
 
 8. On the **eDiscovery search started or exported** pane, select the **X** in the upper-right corner to close it. <br/>
 
-	**Note:** You can also edit a policy's setting by selecting the vertical ellipsis icon under the **Actions** column at the far right end of the policy's row on the **Alert Policy** window. 
+	**Note:** You can also edit a policy's setting by selecting the vertical ellipsis icon under the **Actions** column at the far-right end of the policy's row on the **Alert Policy** window. 
 
 9. Leave all the Edge browser tabs open for the next task.
 
