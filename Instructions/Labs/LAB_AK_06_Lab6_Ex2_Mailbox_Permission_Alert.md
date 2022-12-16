@@ -81,7 +81,7 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 7. Once you have assigned Joni to each of the three permissions on the **Delegation** tab, select the **X** in the upper right-hand corner to close the **Alex Wilber** pane. 
 
-8. Since **Holly Dickson** has changed the mailbox permissions for Alex Wilbur by giving Joni Sherman full access permissions to his mailbox, an alert email should automatically be sent to Lynne Robbins’ Inbox that notifies her of this event. You will verify this email was sent by checking Lynne's Inbox on LON-CL2. <br/>
+8. Since **Holly Dickson** has changed the mailbox permissions for Alex Wilber by giving Joni Sherman full access permissions to his mailbox, an alert email should automatically be sent to Lynne Robbins’ Inbox that notifies her of this event. You will verify this email was sent by checking Lynne's Inbox on LON-CL2. <br/>
 
 	‎Switch to **LON-CL2**. 
 
