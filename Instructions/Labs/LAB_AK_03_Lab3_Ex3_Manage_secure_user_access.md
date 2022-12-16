@@ -8,7 +8,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 ‎Adatum's CTO wants to provide the company's users with a better logon experience (since PTA requires one less password to remember), as well as reduce Adatum’s IT helpdesk costs because with PTA their users are less likely to forget how to sign in. While this can also be achieved by employing Password Hash Synchronization as well as Active Directory Federation Services, Adatum has chosen to test PTA in its pilot project.
 
-1.  You should still be logged into **LON-DC1** as the **Administrator** from the prior task.
+1.  You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task.
 
 2. On LON-DC1, select the **Start** button on the taskbar, and then in the **Start** menu, select the **All Apps** icon to display the list of all installed applications. Select the **Azure AD Connect** program group and then select **Azure AD Connect**. This will initiate the **Microsoft Azure Active Directory Connect** wizard.
 
