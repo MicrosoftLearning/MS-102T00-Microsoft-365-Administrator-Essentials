@@ -8,9 +8,9 @@ Holly Dickson is Adatum’s Microsoft 365 Administrator. Holly has been assigned
 
 1. In the prior lab exercise, you created a new domain for Adatum on LON-DC1. You should now switch back to **LON-CL1** to perform the Microsoft 365 administrative tasks in this lab exercise. As a best practice, normal Microsoft 365 administrative tasks should be performed on a client PC rather then the company's domain controller.  <br/>
 
-	Switch to **LON-CL1**. If you’re not logged into LON-CL1 as **ADATUM\Administrator** and password **Pa55w.rd**, then please do so now.
+	Switch to **LON-CL1**. 
 
-2. In the **Microsoft 365 admin center** in your Edge browser, you should still be logged in as Holly Dickson from a prior lab exercise. In the navigation pane, select **Users** and then select **Active Users**. 
+2. On LON-CL1, in the **Microsoft 365 admin center** in your Edge browser, you should still be logged in as Holly Dickson from a prior lab exercise. In the navigation pane, select **Users** and then select **Active Users**. 
 
 3. In the **Active users** list, select **Diego Siciliani**.  <br/>
 
@@ -134,7 +134,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 In this task, you will begin by examining the administrative properties of two users, Joni Sherman and Lynne Robbins. You will then log into the Microsoft 365 home page on the Client 2 VM (LON-CL2) as each user to confirm several of the changes that you made when managing their administrative delegation in the prior tasks. Finally, as Lynne Robbins, you will perform two important user account maintenance tasks - resetting passwords and blocking user accounts.
 
-1. In LON-CL1, you should still be logged into the Microsoft 365 admin center as Holly Dickson. If not, then do so now.
+1. On LON-CL1, you should still be logged into the Microsoft 365 admin center as Holly Dickson. If not, then do so now.
 
 2. In the **Microsoft 365 admin center**, if you are not displaying the **Active Users**, then navigate to there now.  
 
