@@ -119,7 +119,7 @@ In this task, you will verify whether Adatum has received the email that you con
 
 1. Switch to the **LON-CL2** VM and, if necessary, log in as the local **Admin** account with a password of **Pa55w.rd**.
 
-2. Open your Edge browser and enter the following URL in the address bar: **https://outlook.office365.com**.
+2. On LON-CL2, open your Edge browser and enter the following URL in the address bar: **https://outlook.office365.com**.
  
 3. In the **Pick an account** window, select **Use another account**. 
 
