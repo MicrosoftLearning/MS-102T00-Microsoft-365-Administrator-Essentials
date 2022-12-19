@@ -14,19 +14,41 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 3. In your **Edge** browser, select the **Microsoft 365 admin center** tab, and then in the navigation pane, select **Users**, and then select **Active Users**. <br/>
 
-4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu, select **Directory synchronization**. 
+4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu, select **Directory synchronization**. This initiates the **Add or sync users to Microsoft 365** wizard.
 
-5. In the **Azure Active Directory preparation** window, select **Go to the Download center to get the Azure AD Connect tool**. This opens a new tab in your browser and takes you to the Microsoft Download Center.
+5. In the **Add or sync users to Microsoft 365** wizard, on the **Select a migration option** page, select the **Continuous sync** option and then select **Next**.
 
-6. In the **Microsoft Download Center**, scroll down to the **Microsoft Azure Active Directory Connect** section and select **Download**. 
+6. On the **Prepare by running IdFix** page, select **Next**.
 
-7. In the **Downloads** window that appears at the top of the screen, once the **AzureADConnect.msi** file has finished downloading, select **Open file**.
+7. On the **Review synchronization tools** page, Holly had originally planned to select the **Azure AD Connect** option given Adatum's Exchange hybrid deployment. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Azure AD Connect is the correct choice for Adatum. <br/>
 
-8. This initiates the installation of the Microsoft Azure Active Directory Connect Tool. 
+	Select **Help me decide**. This option enables you to select from amongst a variety of requirements that your organization may have.  
 
-	If a **Do you want to run this file?** dialog box appears, select **Run**.
+8. In the list of requirements that appears, select the following Adatum requirements to see which sync tool the system recommends: <br/>
 
-	If the **Welcome to Azure AD Connect** window does not appear on the desktop, find the icon for it on the taskbar (it will be the final icon on the right) and select it. 
+	- **I have a single or multiple connected forests that I need to sync users and groups from.**  <br/>
+
+	**Note** After selecting this check box, note the recommendation that appears at the bottom of the page. By just selecting this one requirement, the system recommends using **Azure AD cloud sync**. <br/>
+
+	- **I require the ability for users to access both on-premises and clound-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>>
+
+	**Note** After selecting this second requirement, the recommendation is still **Azure AD cloud sync**. <br/>
+	
+	- **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  <br/>
+
+	**Note** After selecting this third check box, the recommendation has changed to **Azure AD Connect**. This confirms that Holly's initial thought of selecting Azure AD Connect was in line with what the system would have recommended given Adatum's synchronization requirements.
+
+9. Select **Next**. The system will initiate synchronization using the recommended solution, **Azure AD Connect**. 
+
+10. On the **Sync your users** page, select the **Download Azure AD Connect** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
+
+11. In the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Azure Active Directory Connect** should appear. <br/>
+
+	If a **Downloads** window appears at the top of the screen, select **Open file** that appears below the **AzureADConnect.msi** file once it's finished downloading. <br/>
+
+	If a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears the right of the User profile icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AzureADConnect.msi** file, then select **Open file** that appears below it. However, if **AzureADConnect.msi**  does not appear in the **Downloads** window, then on the **Microsoft Download Center** page, select the **click here to download manually** hyperlink and then repeat this step to open the **AzureADConnect.msi** file.
+
+8. Opening the **AzureADConnect.msi** file initiates the installation of the Microsoft Azure Active Directory Connect Tool. The **Microsoft Azure Active Directory Connect** wizard will start. The first page of the wizard may appear and then suddently disappear, or it may not appear at all. If this is the case, then select the wizard icon on the taskbar. 
 
 9. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
 
@@ -38,7 +60,9 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 13. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
 
-14. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.
+14. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
+
+	**Note:** While Holly eventually plans install an Exchange hybrid deployment, she will not do so now. For the purpose of this lab, do **NOT** select the **Exchange hybrid deployment** option. 
 
 15. Wait for the configuration to complete (which may take several minutes) and then select **Exit**. 
 
