@@ -26,17 +26,17 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 8. In the list of requirements that appears, select the following Adatum requirements to see which sync tool the system recommends: <br/>
 
-	- **I have a single or multiple connected forests that I need to sync users and groups from.**  <br/>
+	- **I have a single or multiple connected forests that I need to sync users and groups from.** <br/>
 
-	**Note** After selecting this check box, note the recommendation that appears at the bottom of the page. By just selecting this one requirement, the system recommends using **Azure AD cloud sync**. <br/>
+		**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. By just selecting this one requirement, the system recommends using **Azure AD cloud sync**. <br/>
 
-	- **I require the ability for users to access both on-premises and clound-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>>
+	- **I require the ability for users to access both on-premises and clound-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>
 
-	**Note** After selecting this second requirement, the recommendation is still **Azure AD cloud sync**. <br/>
+		**Note:** After selecting this second requirement, the recommendation is still **Azure AD cloud sync**. <br/>
 	
 	- **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  <br/>
 
-	**Note** After selecting this third check box, the recommendation has changed to **Azure AD Connect**. This confirms that Holly's initial thought of selecting Azure AD Connect was in line with what the system would have recommended given Adatum's synchronization requirements.
+		**Note:** After selecting this third check box, the recommendation has changed to **Azure AD Connect**. This confirms that Holly's initial thought of selecting Azure AD Connect was the same as what the system would have recommended given Adatum's synchronization requirements.
 
 9. Select **Next**. The system will initiate synchronization using the recommended solution, **Azure AD Connect**. 
 
@@ -48,25 +48,25 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 	If a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears the right of the User profile icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AzureADConnect.msi** file, then select **Open file** that appears below it. However, if **AzureADConnect.msi**  does not appear in the **Downloads** window, then on the **Microsoft Download Center** page, select the **click here to download manually** hyperlink and then repeat this step to open the **AzureADConnect.msi** file.
 
-8. Opening the **AzureADConnect.msi** file initiates the installation of the Microsoft Azure Active Directory Connect Tool. The **Microsoft Azure Active Directory Connect** wizard will start. The first page of the wizard may appear and then suddently disappear, or it may not appear at all. If this is the case, then select the wizard icon on the taskbar. 
+12. Opening the **AzureADConnect.msi** file initiates the installation of the Microsoft Azure Active Directory Connect Tool. The **Microsoft Azure Active Directory Connect** wizard will start. The first page of the wizard may appear and then suddently disappear, or it may not appear at all. If this is the case, then select the wizard icon on the taskbar. 
 
-9. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
+13. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
 
-10. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
+14. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
 
-11. On the **Connect to Azure AD** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field, enter **User.pw1** in the **PASSWORD** field, and then select **Next** (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
+15. On the **Connect to Azure AD** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field, enter **User.pw1** in the **PASSWORD** field, and then select **Next** (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
 
-12. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**  (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
+16. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**  (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
 
-13. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
+17. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
 
-14. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
+18. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
 
 	**Note:** While Holly eventually plans install an Exchange hybrid deployment, she will not do so now. For the purpose of this lab, do **NOT** select the **Exchange hybrid deployment** option. 
 
-15. Wait for the configuration to complete (which may take several minutes) and then select **Exit**. 
+19. Wait for the configuration to complete (which may take several minutes). On the **Configuration complete** page, select **Exit**. 
 
-16. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Azure AD Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. <br/>
+20. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Azure AD Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. <br/>
 
 	**Note:** If you selected **Azure AD Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step. However, if **Azure AD Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. The remaining instruction in this step is what to do if you needed to restart LON-DC1. <br>
 
@@ -75,22 +75,26 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 	Then select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Azure AD Connect** to expand the group (this time it should expand), and then select **Synchronization Service**.  
 
-17. Maximize the **Synchronization Service Manager on LON-DC1** window. The **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process, which automatically started when you selected this program. 
+21. Maximize the **Synchronization Service Manager on LON-DC1** window. The **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process, which automatically started when you selected this program. 
 
-18. Wait for the **Export** profile to complete for **xxxxxZZZZZZ.onmicrosoft.com**. When it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select this row.  
+22. Wait for the **Export** profile to complete for **xxxxxZZZZZZ.onmicrosoft.com**. When it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select this row.  
 
-19. In the bottom portion of the screen, a detail pane appears showing the detailed information for this operation. 
+23. In the bottom portion of the screen, a detail pane appears showing the detailed information for this operation. 
 
 	- In the **Export Statistics** pane on the left, note the number of users that were added and the number that were updated. 
-	- In the **Export Errors** pane on the right, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). Select the links (CN={xxxxxx...) under the **Export Errors** column that apply to the two **Data Validation** errors; this will display these two users that were not synchronized by the Azure AD Connect tool due to these errors. Review the errors to see why these two accounts are broke.   <br/>
+	- In the **Export Errors** pane on the right, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). 
 
-	‎**Note:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column in the top pane). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization**.
+		Select the first link (CN={xxxxxx...) under the **Export Errors** column that applies to the first **Data Validation** error. This will display the first of these two users that were not synchronized by the Azure AD Connect tool. Review the error to see why this account is broke. <br/>
 
-20. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
+		Select the second Data Validation error link and verify this error is for the second user that you purposely did not fix. Review the error for this user.   <br/>
 
-21. In your browser, close all tabs except for the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab. 
+	‎**IMPORTANT:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column in the top pane). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization** rather than a **Full Synchronization**.
 
-22. Leave LON-DC1 open as it will be used in the next exercise.
+24. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
+
+25. In your browser, close all tabs except for the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab. 
+
+26. Leave LON-DC1 open as it will be used in the next exercise.
 
 
 ### Task 2 - Create Group Accounts to Test Synchronization  
@@ -187,7 +191,7 @@ In this task, you will force a sync between Adatum’s on-premises AD and Azure 
 
 	‎**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Azure AD Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open and then restart it.  
 
-2. At this point, Windows PowerShell should NOT be open. To open it, select the **magnifying glass (Search)** icon in the taskbar, type **PowerShell** in the Search box, and then in the menu, right-click on **Windows PowerShell** (not Windows PowerShell ISE) and select **Run as administrator**.  
+2. At this point, Windows PowerShell should NOT be open. You now want to reopen it. To open it, select the **magnifying glass (Search)** icon in the taskbar, type **power** in the Search box, and then in the menu, right-click on **Windows PowerShell** (not Windows PowerShell ISE) and select **Run as administrator**.  
 
 3. In **Windows PowerShell**, run the following command to manually run a sync cycle between Adatum’s on-premises AD and Azure AD. The **Delta** switch is used here so that only the updates are synchronized.   <br/>
 
