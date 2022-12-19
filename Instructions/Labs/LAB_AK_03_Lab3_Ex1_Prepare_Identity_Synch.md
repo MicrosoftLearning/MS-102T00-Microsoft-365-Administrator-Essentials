@@ -80,57 +80,57 @@ In this task, you will run a script that breaks an on-premises user account. As 
 
 ### Task 3: Run the IdFix tool and fix identified issues 
 
-In this task you will download and use the IdFix Directory Synchronization Error Remediation Tool to fix Klemen Sic's on-premises user account that was broken in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
+In this task you will download and use the IdFix Directory Synchronization Error Remediation Tool to fix Klemen Sic's on-premises user account that your purposely broke in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
 
 1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task. 
 
-2. In **Microsoft Edge**, open a new tab and enter the following URL in the address bar to access the Microsoft -IdFix Overview page: <br/>
+2. Select the **Microsoft Edge** icon on the taskbar. In your **Microsoft Edge** browser, open a new tab and enter the following URL in the address bar to access the Microsoft -IdFix Overview page: <br/>
 
 	**https://microsoft.github.io/idfix**
 	
-3. On the **Microsoft - IdFix** page, select **Step 2: Install IdFix** in the navigation pane on the left. 
+3. On the **Microsoft - IdFix** page, in the navigation pane on the left-side of the screen, select **Step 2: Install IdFix**. 
 
-4. On the **Step 2: Install IdFix**, the instructions direct you to select **setup.exe** to install the IdFix application on your machine. Select **setup.exe** to download the file to LON-DC1. 
+4. On the **Step 2: Install IdFix** page, the first line in the instruction says: **Select *setup.exe* to download and install the IDFix tool on your Windows machine.**  <br/>
 
-5. Once the **setup.exe** file is downloaded, it will appear in the notification bar at the top of the screen. Select **Open file**. 
+	In this instruction, select **setup.exe** to download the IdFix application to your machine. 
 
-6. In the **Downloads** notification window that appears at the top of the page, once the setup.exe download is complete, select the **Open file** link that appears below setup.exe.
+5. Once the **setup.exe** file is downloaded, a **Downloads** window will appear at the top-right of the page. In this window, under **setup.exe**, select **Open file** to install the file on LON-DC1. This will initiate the **Application Install** wizard.
 
-7. In the **Do you want to install this application?** dialog box that appears, select **Install**.
+6. In the **Do you want to install this application?** page in the **Application Install** wizard, select **Install**.
 
-8. In the **IdFix Privacy Statement** message box, select **OK**. 
+7. In the **IdFix Privacy Statement** message box, select **OK**. Once the IDFix tool is installed, the **Applicatioin Install** wizard will close and the **IDFix** tool will automatically open. 
 
-9. In the **IdFix** window that appears, on the menu bar at the very top of the screen, select **Query** to query the directory. After a short wait, you should see several errors. <br/>
+8. In the **IdFix** tool that appears, maximize the window. On the menu bar at the very top of the screen, select **Query** to query the directory. After a short wait, you should see several errors. <br/>
 
 	**Note:** If a **Schema Warning** dialog box appears, select **Yes** to continue.
 
-10. Select the **ERROR** column heading to sort the records by error in alphabetical error. <br/>
+9. Select the **ERROR** column heading to sort the records in alphabetical error sequence. <br/>
 
 	‎**Note:** If any **topleveldomain** errors appear, then ignore them as they cannot be fixed by the IdFix tool.  
 
-11. In the **Klemen Sic** row, select the drop-down arrow in the **ACTION** field and select **EDIT**. <br/>
+10. In the **Klemen Sic** row, note the text in the **VALUE** column. It currently includes two **@@** signs, which occurred when you ran the script in the prior task that purposely broke Klemen's UserPrincipalName. Now note the text in the **UPDATE** column, which is the value the IDFix tool will change the UPN name to should you direct it to do so. <br/>
+
+	You want the IDFix tool to fix Klemen's UPN value, so select the drop-down arrow in Klemen's **ACTION** field and select **EDIT**. <br/>
 
 	**Note:** Do NOT update either of the remaining two user accounts. Ignore those for now.
 
-12. On the menu bar at the top of the window, select **Apply**. 
+11. On the menu bar at the top of the window, select **Apply**. 
 
-13. In the **Apply Pending** dialog box that appears, select **Yes**. <br/>
+12. In the **Apply Pending** dialog box that appears, select **Yes**. <br/>
 
-	‎**Note:** Notice the value in the **Action** column changed from **EDIT** to **COMPLETE** for this user; this indicates that IdFix updated the user object and corrected the error. 
+	‎**Note:** Notice the value in the **Action** column changed from **EDIT** to **COMPLETE** for this user. This indicates the IdFix tool corrected the error by updating Klemen Sic's user object. 
 
-14. On the menu bar, select **Query**. In the query results, note how the Klemen Sic row no longer appears in the results, since you just fixed this object. <br/>
+13. On the menu bar at the top of the page, select **Query**. If a **Schema Warning** dialog box appears, select **Yes** to continue. If a dialog box appears indicating an unhandled exception has occurred, select **Continue**.<br/>
 
-	If a **Schema Warning** dialog box appears, select **Yes** to continue. <br/>
-
-	If a dialog box appears indicating an unhandled exception has occurred, select **Continue**. <br/>
+	In the query results, note how the Klemen Sic row no longer appears in the results, since you just fixed this user record. <br/>	
 
 	As you can see, there are still two users whose errors you have not fixed (**An Dung Dao** and **Ngoc Bich Tran**). We are purposely leaving these errors alone so that you can see what happens during the synchronization process using the Azure AD Connect tool in the next exercise when it processes users with these conditions. <br/>
 
 	**Important:** When there are format and duplicate errors for distinguished names, the **UPDATE** column either contains the same string as the **VALUE** column, or the **UPDATE** column entry is blank. In either case, this means that IdFix cannot suggest a remediation for the error. You can either fix these errors outside IdFix, or manually remediate them within IdFix. You can also export the results and use Windows PowerShell to remediate many errors.  
 
-15. Close the IdFix window. 
+14. Close the IdFix window. 
 
-16. Leave your Edge browser open. However, you can close the **Step 2: Install Id-Fix - Microsoft - IdFix** tab since you are done using IdFix.
+15. Leave your Edge browser open. However, you can close the **Step 2: Install Id-Fix - Microsoft - IdFix** tab since you are done using IdFix.
 
 
 ### Task 4: Prepare for Directory Synchronization    
