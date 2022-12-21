@@ -212,9 +212,9 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 **IMPORTANT - PowerShell notice:** This task employs basic PowerShell queries for Groups and Users, which are supported in Microsoft Graph PowerShell. Since Microsoft Graph PowerShell is replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, you will use Microsoft Graph PowerShell in this task.
 
-1. You should still be logged into LON-DC1 as the **Administrator** with a password of **Pa55w.rd.**
+1. You should still be logged into LON-DC1 as the local **adatum\administrator** with a password of **Pa55w.rd.**
 
-2. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In your **Edge** browser, if tabs exists for the **Microsoft Office Home** page and the **Microsoft 365 admin center**, then proceed to the next step. <br/>
+2. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In your **Edge** browser, if tabs are still open for the **Microsoft Office Home** page and the **Microsoft 365 admin center**, then proceed to the next step. <br/>
 
 	Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft Office Home** page, log in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with a password of **User.pw1**, and then on the **Microsoft Office Home** page, navigate to the **Microsoft 365 admin center**. 
 
@@ -266,38 +266,21 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 14. If a **Permissions requested** dialog box appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
-15. You will now display the list of groups. Type the following command and then press Enter:
+15. You will now use PowerShell to display the list of groups. Type the following command and then press Enter:
 
 		Get-MgGroup | Format-List Id, DisplayName, Description, GroupTypes
 
-15. In this list of groups, highlight the object ID for the **Research** group and then press **Ctrl+C** to copy it to the clipboard. 
+16. You now want to display the members of the **Research** group. In the list of groups, highlight the object ID for the **Research** group and then press **Ctrl+C** to copy the ID to the clipboard. Then type the following command, paste in the Research group's object ID (**Ctrl+V**) in the appropriate spot, and then press Enter:  <br/>
 
-		Get-MgGroupMember -GroupId 'paste in the group Id here' -All | ForEach {Get-MgUser -UserId $_.Id}
+		Get-MgGroupMember -GroupId 'paste in the group's object ID here'
 
+17. In the list of group members that were displayed in the prior step, note how the results simply show the object ID of each member. It does not display each user's name, which basically renders the results useless. <br/>
 
+	To display each member's name, you're going to repeat the prior command, but this time you will add an additional component that retrieves the User record for each member of the group and displays the User's attributes. To do so, at the command prompt hit the UP arrow on your keyboard. This will automatically type the prior command. Then type the remaining portion of the command below and press Enter:
 
+		Get-MgGroupMember -GroupId 'paste in the group's object ID here' -All | ForEach {Get-MgUser -UserId $_.Id}
 
-
-
-10. You should begin by running the following command that connects your PowerShell session to the Azure Active Directory PowerShell for Graph module (AzureAD):  <br/>
-
-		Connect-AzureAD
-
-11. In the **Sign in** dialog box, log in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with a password of **User.pw1**.   
-
-12. Run the following command that displays a list of all the Microsoft 365 groups:   <br/>
-
-		Get-AzureADGroup
-
-13. In the list of groups that’s displayed, you should verify that you can see the **Research** and **Manufacturing** groups, and that you do not see the  **Print Operators** group (this is the built-in security group that did not synchronize from on-premises to Microsoft 365).
-
-14. To verify that the group membership changes that you made in your on-premises Active Directory were synced to the **Research** group in Microsoft 365, you should copy the **ObjectID** for the **Research** group to your clipboard by dragging your mouse over the ObjectId string and then pressing **Ctrl-C**.   <br/>
-
-	‎Then run the following command to display the members of this group. In the command, replace **<ObjectId>** with the value that you copied in the prior step by pressing **Ctrl-V** to paste in the value. <br/>
-	
-		Get-AzureADGroupMember -ObjectId <ObjectID>
-
-15. Verify the membership of the Research group does **NOT** contain the following users that you earlier removed from the group in AD DS:  
+18. In the list of members of the Research group, verify the membership does **NOT** contain the following users that you earlier removed from the group in AD DS:  
 
 	- Cai Chu 
 
@@ -305,7 +288,15 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Tai Zecirevic  
 
-16. Repeat steps 14-15 for the **Manufacturing** security group. In the **Manufacturing** group, you added the following members in AD DS, each of which you should see in the list of group members:  
+19. To verify the membership of the **Manufacturing** group, scroll back up to the list of groups, highlight the object ID for the **Manufacturing** group and then press **Ctrl+C** to copy the ID to the clipboard. <br/>
+
+	Then hit the UP arrow on your keyboard to automatically type the prior command, which contains the object ID of the Research group that you pasted in during the prior step:  <br/>
+
+		Get-MgGroupMember -GroupId 'the object ID of the Research group' -All | ForEach {Get-MgUser -UserId $_.Id}    <br/>
+
+	You then need to replace the object ID of the Research group with the ID of the Manufacturing group. To do so, use the left arrow on your keyboard to move your cursor to the start of the object ID, then highlight the object ID of the Research group and hit **Ctrl+V**. This will replace the ID of the Research group by pasting in the object ID of the **Manufacturing** group. Then press Enter to run the command. Doing so will display the members of the **Manufacturing** group. <br/>
+
+	In the **Manufacturing** group, you added the following members in AD DS, each of which you should see in the list of group members:  
 
 	- Bernardo Rutter
 
@@ -313,7 +304,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Dawn Williamson
 
-17. Once you have completed the validation steps, close your PowerShell window. 
+20. Once you have completed the validation steps, close your PowerShell window. 
  
 # Proceed to Lab 3 - Exercise 3
  
