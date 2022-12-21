@@ -238,13 +238,13 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 9. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **PowerShell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. Maximize your PowerShell window.
 
-10. You should begin by installing Microsoft Graph PowerShell. Earlier in this training, you installed Microsoft Graph PowerShell on LON-CL1. At that time, you installed all 30+ sub-modules by running the following command: Install-Module Microsoft.Graph (where Graph is the parent module that contains the 30+ sub-modules). While you could install all 30+ sub-modules on LON-DC1, you're only going to use the Groups and Users sub-modules in this task, which is the last task in this training that uses PowerShell on LON-DC1. Therefore, to reduce installation time, you'll run the following two commands that will install just those modules. This also provides you with experience in installing specific sub-modules rather than the entire complement of Graph sub-modules.   <br/>
+10. You should begin by installing Microsoft Graph PowerShell. Earlier in this training, you installed Microsoft Graph PowerShell on LON-CL1. At that time, you installed all 30+ sub-modules by running the following command: Install-Module Microsoft.Graph (where Graph is the parent module that contains the 30+ sub-modules). While you could install all 30+ sub-modules on LON-DC1, you're only going to use the Groups and Users sub-modules in this task, which is the last task in this training that uses PowerShell on LON-DC1. Therefore, to reduce installation time, you'll run the following two commands that will install just those two sub-modules and none of the other 30+ sub-modules. This also provides you with experience in installing specific sub-modules rather than the entire complement of Graph sub-modules.   <br/>
 
 	a. Type the following command and press Enter:  <br/>
 
 		Install-Module Microsoft.Graph.Groups -Scope CurrentUser  <br/>
 
-	b. Type the following command and press Enter:  <br/>
+	b. Then type the following command and press Enter:  <br/>
 
 		Import-Module Microsoft.Graph.Users -Scope CurrentUser  <br/>
 
@@ -254,13 +254,13 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 		Import-Module Microsoft.Graph.Groups
 
-	a. Type the following command and press Enter:  <br/>
+	a. Then type the following command and press Enter:  <br/>
 
 		Import-Module Microsoft.Graph.Users
 
-12. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the Groups and Users cmdlets that were just imported. Type the following command and then press Enter: <br/>
+12. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the Groups and Users cmdlets that were just imported. To complete this task, you only need 'Read only' permissions for these two sub-modules. Type the following command and then press Enter: <br/>
 		
-		Connect-MgGraph -Scopes 'Group.Read.All', 'Users.Read.All'
+		Connect-MgGraph -Scopes 'Group.Read.All', 'User.Read.All'
 
 13. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter **User.pw1** and then select Sign in. 
 
