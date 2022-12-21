@@ -262,7 +262,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 		
 		Connect-MgGraph -Scopes 'Group.Read.All', 'User.Read.All'
 
-13. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter **User.pw1** and then select Sign in. 
+13. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter **User.pw1** and then select **Sign in**. 
 
 14. If a **Permissions requested** dialog box appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
@@ -276,11 +276,11 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 17. In the list of group members that were displayed in the prior step, note how the results simply show the object ID of each member. It does not display each user's name, which basically renders the results useless. <br/>
 
-	To display each member's name, you're going to repeat the prior command, but this time you will add an additional component that retrieves the User record for each member of the group and displays the User's attributes. To do so, at the command prompt hit the UP arrow on your keyboard. This will automatically type the prior command. Then type the remaining portion of the command below and press Enter:
+	To display each member's name, you're going to repeat the prior command, but this time you will add an additional component that retrieves the User record for each member of the group and displays the User's attributes. To do so, at the command prompt hit the UP arrow on your keyboard. This will automatically type the prior command that was run (which includes the Research group's object ID, so you don't have to re-paste it). Then following the object ID, type the remaining portion of the command (starting with -All) and press Enter:
 
 		Get-MgGroupMember -GroupId 'paste in the group's object ID here' -All | ForEach {Get-MgUser -UserId $_.Id}
 
-18. In the list of members of the Research group, verify the membership does **NOT** contain the following users that you earlier removed from the group in AD DS:  
+18. In the list of members of the Research group, verify the following users are **NOT** included. Remember, you earlier removed these three users from the Research group in the on-premises Active Directory, prior to synchronizing the group to Microsoft 365:  
 
 	- Cai Chu 
 
@@ -294,9 +294,9 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 		Get-MgGroupMember -GroupId 'the object ID of the Research group' -All | ForEach {Get-MgUser -UserId $_.Id}    <br/>
 
-	You then need to replace the object ID of the Research group with the ID of the Manufacturing group. To do so, use the left arrow on your keyboard to move your cursor to the start of the object ID, then highlight the object ID of the Research group and hit **Ctrl+V**. This will replace the ID of the Research group by pasting in the object ID of the **Manufacturing** group. Then press Enter to run the command. Doing so will display the members of the **Manufacturing** group. <br/>
+	**Important:** You must then need replace the object ID of the Research group with the object ID of the Manufacturing group. To do so, use the left arrow on your keyboard to move your cursor to the start of the object ID, then highlight the object ID of the Research group and hit **Ctrl+V**. This will replace the ID of the Research group by pasting in the object ID of the **Manufacturing** group. Then press Enter to run the command. Doing so will display the members of the **Manufacturing** group. <br/>
 
-	In the **Manufacturing** group, you added the following members in AD DS, each of which you should see in the list of group members:  
+	In the **Manufacturing** group, you earlier added the following members to the group in the on-premises Active Directory. You should now see each of these group members in this Microsoft 365 group following synchronization:  
 
 	- Bernardo Rutter
 
