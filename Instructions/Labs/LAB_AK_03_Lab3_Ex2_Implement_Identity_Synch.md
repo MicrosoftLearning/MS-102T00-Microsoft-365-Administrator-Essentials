@@ -30,7 +30,7 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 		**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. By just selecting this one requirement, the system recommends using **Azure AD cloud sync**. <br/>
 
-	- **I require the ability for users to access both on-premises and clound-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>
+	- **I require the ability for users to access both on-premises and cloud-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>
 
 		**Note:** After selecting this second requirement, the recommendation is still **Azure AD cloud sync**. <br/>
 	
@@ -48,7 +48,7 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 	However, if a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears to the right of the **Profile 1** icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AzureADConnect.msi** file, then select the **Open file** link that appears below it. However, if **AzureADConnect.msi**  does not appear in the **Downloads** window, then on the **Microsoft Download Center** page, select the **click here to download manually** hyperlink and then repeat this step to open the **AzureADConnect.msi** file.
 
-12. Opening the **AzureADConnect.msi** file initiates the installation of the Microsoft Azure Active Directory Connect Tool by starting the **Microsoft Azure Active Directory Connect** wizard. The first page of the wizard may appear and then suddently disappear, or it may not appear at all. If either situation occurs, then select the wizard icon on the taskbar. 
+12. Opening the **AzureADConnect.msi** file initiates the installation of the Microsoft Azure Active Directory Connect Tool by starting the **Microsoft Azure Active Directory Connect** wizard. The first page of the wizard may appear and then suddenly disappear, or it may not appear at all. If either situation occurs, then select the wizard icon on the taskbar. 
 
 13. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
 
@@ -70,7 +70,7 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 	**Note:** If you selected **Azure AD Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step. However, if **Azure AD Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. The remaining instruction in this step is what to do if you needed to restart LON-DC1. <br>
 
-	After LON-DC1 restarts, follow the instructions from your lab hosting provider to select **Ctrl+Alt+Delete**. This will display the log on screen for LON-DC1.<br/>
+	After LON-DC1 restarts, follow the instructions from your lab hosting provider to select **Ctrl+Alt+Delete**. This will display the log on screen for LON-DC1. <br/>
 	Log in as **Adatum\Administrator** with a password of **Pa55w.rd**. Minimize **Server Manager** after it opens, and then open **Edge** and navigate to **htps://portal.office.com**. Log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** with a Password of **User.pw1**. On the **Microsoft Office Home** page, select **Admin** to open the **Microsoft 365 admin center**. <br/>
 
 	Then select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Azure AD Connect** to expand the group (this time it should expand), and then select **Synchronization Service**.  
@@ -185,7 +185,7 @@ This task sets up another scenario for testing whether the sync process is worki
 
 In this task, you will force a sync between Adatum’s on-premises AD and Azure AD instead of waiting 30 minutes for Azure AD Connect to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
 
-**IMPORTANT - PowerShell notice:** The prior lab exercise provided a disclaimer indicating why the tasks in that exercise used the MSOnline module rather than Microsoft Graph PowerShell. While Microsoft is in the process of replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, with Microsoft Graph PowerShell, there is some functionality in the older modules that has not yet been incorporated into Microsoft Graph PowerShell. The commands in the prior exercise and the commands used in this exercise fall into that category. The prior exercise connected to the MSOnline module, which is also used in this task per the Start-ADSyncSyncCycle command. The PowerShell commands in the next task will use the Azure AD PowerShell module. 
+**IMPORTANT - PowerShell notice:** The prior lab exercise provided a disclaimer indicating why the tasks in that exercise used the MSOnline module rather than Microsoft Graph PowerShell. While Microsoft is in the process of replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, with Microsoft Graph PowerShell, there is some functionality in the older modules that has not yet been incorporated into Microsoft Graph PowerShell. The commands in the prior exercise and the command used in this task fall into that category. The prior exercise connected to the MSOnline module, which is also used in this task per the Start-ADSyncSyncCycle command. 
 
 1. On LON-DC1, if the **Windows PowerShell** application is still open from the prior exercise, then **you MUST close it now**.  <br/>
 
@@ -210,7 +210,7 @@ In this task, you will force a sync between Adatum’s on-premises AD and Azure 
 
 In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises AD to Azure AD. You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
 
-**IMPORTANT - PowerShell notice:** Up to this point, the PowerShell tasks in this lab exercise used the MSOnline PowerShell module. However, the PowerShell commands in this task require the Azure AD PowerShell module. 
+**IMPORTANT - PowerShell notice:** This task employs basic PowerShell queries for Groups and Users, which are supported in Microsoft Graph PowerShell. Since Microsoft Graph PowerShell is replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, you will use Microsoft Graph PowerShell in this task.
 
 1. You should still be logged into LON-DC1 as the **Administrator** with a password of **Pa55w.rd.**
 
@@ -236,32 +236,41 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	The window currently displays the **General** tab. Select the **Members** tab. Note that the group has no owner (the system did not automatically assign Holly Dickson as the group owner). Verify the three users that you added as members of the on-premises group (Bernardo, Dawn, and Charlie) have been synced up and are members of this cloud-based group as well. Close the **Manufacturing** pane.
 
-9. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **PowerShell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. 
+9. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **PowerShell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. Maximize your PowerShell window.
 
-10. You should begin by running the following command that connects your PowerShell session to the Azure Active Directory PowerShell for Graph module (AzureAD):  <br/>
+10. You should begin by installing Microsoft Graph PowerShell. Earlier in this training, you installed Microsoft Graph PowerShell on LON-CL1. At that time, you installed all 30+ sub-modules by running the following command: Install-Module Microsoft.Graph (where Graph is the parent module that contains the 30+ sub-modules). While you could install all 30+ sub-modules on LON-DC1, you're only going to use the Groups and Users sub-modules in this task, which is the last task in this training that uses PowerShell on LON-DC1. Therefore, to reduce installation time, you'll run the following two commands that will install just those modules. This also provides you with experience in installing specific sub-modules rather than the entire complement of Graph sub-modules.   <br/>
 
-		Install-Module Microsoft.Graph -Scope CurrentUser
-		
-11. 
+	a. Type the following command and press Enter:  <br/>
+
+		Install-Module Microsoft.Graph.Groups -Scope CurrentUser  <br/>
+
+	b. Type the following command and press Enter:  <br/>
+
+		Import-Module Microsoft.Graph.Users -Scope CurrentUser  <br/>
+
+11. Now that you have installed the Groups and Users sub-modules, you must import each of them in order to import their respective cmdlets into your PowerShell session. To do so, you must run the following two commands: <br/>
+
+	a. Type the following command and press Enter:  <br/>
 
 		Import-Module Microsoft.Graph.Groups
-		
-12.
+
+	a. Type the following command and press Enter:  <br/>
 
 		Import-Module Microsoft.Graph.Users
 
-12.
+12. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the Groups and Users cmdlets that were just imported. Type the following command and then press Enter: <br/>
+		
+		Connect-MgGraph -Scopes 'Group.Read.All', 'Users.Read.All'
 
-		Connect-MgGraph -Scopes 'Group.Read.All'. 'User.Read.All'
+13. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter **User.pw1** and then select Sign in. 
 
-13. Select Holly Dickson account in the Pick an account window. In the Enter password window, enter Holly's password of User.pw1 and select Sign in., 
+14. If a **Permissions requested** dialog box appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
-14. 
+15. You will now display the list of groups. Type the following command and then press Enter:
 
 		Get-MgGroup | Format-List Id, DisplayName, Description, GroupTypes
 
-
-15.
+15. In this list of groups, highlight the object ID for the **Research** group and then press **Ctrl+C** to copy it to the clipboard. 
 
 		Get-MgGroupMember -GroupId 'paste in the group Id here' -All | ForEach {Get-MgUser -UserId $_.Id}
 
