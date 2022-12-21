@@ -168,31 +168,31 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	- Group type: **Microsoft 365 (recommended)**
 
-	- Name: **Sales Group**
+	- Name: **Accounting**
 
-	- Description: **Complete list of all sales personnel, both internal and remote**<br/>
+	- Description: **Complete list of all Accounting staff**<br/>
 
 	- Owner: **Joni Sherman**
 
 	- Members: You will not add members at this time, so select **Next**. <br/>
 
-	**Note:** You can add members to a group at the time you create the group (as you did with the Inside Sales group), as well as after you create a group. For the purpose of this Sales Group, you will add members after you've created the group. This way you can see the two methods of adding group members. So for now, select **Next** to skip through this step and not add members at this time.
+	**Note:** You can add members to a group at the time you create the group (as you did with the Inside Sales group), as well as after you create a group. For the purpose of this Accounting group, you will add members after you've created the group. This way you can see the two methods of adding group members. So for now, select **Next** to skip through this step and not add members at this time.
 
-16. After creating the Sales Group, you will be returned to the **Active teams & groups** window. It may take a few minutes for the Sales Group to appear, so you may need to select the **Refresh** option on the menu bar once or twice. Note that there are four tabs on this page, one for each group type (Microsoft 365, Distribution list, Mail-enabled security, and Security). The **Microsoft 365** tab is displayed by default, which is the group type assigned to the Sales Group. So the Sales Group should be displayed in this tab.
+16. After creating the Accounting group, you will be returned to the **Active teams & groups** window. It may take a few minutes for the Accounting group to appear, so you may need to select the **Refresh** option on the menu bar once or twice. Note that there are four tabs on this page, one for each group type (Microsoft 365, Distribution list, Mail-enabled security, and Security). The **Microsoft 365** tab is displayed by default, which is the group type assigned to the Accounting group. So the Accounting group should be displayed in this tab.
 
-17. Once the **Sales Group** appears in the list of groups under the **Microsoft 365** tab, select the **Sales Group** name. You will now add members to this group.
+17. Once the **Accounting** group appears under the **Microsoft 365** tab, select the **Accounting** name. You will now add members to this group.
 
-18. In the **Sales Group** pane that appears, the **General** tab is displayed by default. Select the **Members** tab.
+18. In the **Accounting** pane that appears, the **General** tab is displayed by default. Select the **Members** tab.
 
 19. In the **Members** tab, three sub-tabs (Owners, Members, and Site visitors) are displayed in the left-hand column. The **Owners** sub-tab is displayed by default. In the **Owners** sub-tab, Joni Sherman should appear as the only group owner. Select the **Members** sub-tab.
 
 20. In the **Members** sub-tab, select the **Add members** button. 
 
-21. In the **Add members to Sales group** pane, select in the **Search by name or email address** field. This displays the list of active users. <br/>
+21. In the **Add members to Accounting** pane, select in the **Search by name or email address** field. This displays the list of active users. <br/>
 
 	In the list of users, select **Alex Wilber**. Note that you have to select back into the field to display the list of users. Select **Joni Sherman**, select back in the field, and then select **Lynne Robbins**. Once all three users are selected, select the **ADD(3)** button at the bottom of the pane.
 
-22. Once the three new members have been saved in the group, select the **X** in the upper right-hand corner of the **Sales group** pane to close it. 
+22. Once the three new members have been saved in the group, select the **X** in the upper right-hand corner of the **Accounting** pane to close it. 
 
 23. Repeat steps 3-14 to add a new group with the following information: <br/>
 
