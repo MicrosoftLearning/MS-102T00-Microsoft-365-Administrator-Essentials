@@ -240,6 +240,38 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 10. You should begin by running the following command that connects your PowerShell session to the Azure Active Directory PowerShell for Graph module (AzureAD):  <br/>
 
+		Install-Module Microsoft.Graph -Scope CurrentUser
+		
+11. 
+
+		Import-Module Microsoft.Graph.Groups
+		
+12.
+
+		Import-Module Microsoft.Graph.Users
+
+12.
+
+		Connect-MgGraph -Scopes 'Group.Read.All'. 'User.Read.All'
+
+13. Select Holly Dickson account in the Pick an account window. In the Enter password window, enter Holly's password of User.pw1 and select Sign in., 
+
+14. 
+
+		Get-MgGroup | Format-List Id, DisplayName, Description, GroupTypes
+
+
+15.
+
+		Get-MgGroupMember -GroupId 'paste in the group Id here' -All | ForEach {Get-MgUser -UserId $_.Id}
+
+
+
+
+
+
+10. You should begin by running the following command that connects your PowerShell session to the Azure Active Directory PowerShell for Graph module (AzureAD):  <br/>
+
 		Connect-AzureAD
 
 11. In the **Sign in** dialog box, log in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with a password of **User.pw1**.   
