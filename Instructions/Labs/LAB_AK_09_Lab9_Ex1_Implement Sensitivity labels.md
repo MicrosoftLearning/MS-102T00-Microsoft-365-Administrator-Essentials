@@ -186,7 +186,7 @@ In this exercise you will use the Sensitivity label that you created in the prev
 
 **You will know when the propagation is complete and that you can continue with this task when you get to step 14 and you see the Sensitivity label group in the Word ribbon.** If this group does not appear, then the label provisioning process has not finished. If this occurs, then wait until your next break time in class and check this again.
 
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
 2. To validate the sensitivity label that you created in the prior task, you must first sign out of Microsoft 365 as Holly and sign back in as Alex Wilber. <br/>
 
@@ -253,7 +253,7 @@ You have just successfully created an AIP protected Word document that is read-o
 
 In the prior task, you created a Word document and protected it with a Sensitivity label. The PII label policy should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
 
-1. You should still be logged into LON-CL1 as the local **Admin** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber**. 
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task.
 
 2. In your Edge browser, select the **Word** tab and then select the **Back** arrow. This should display the **Microsoft Office Home** tab.  
 
@@ -277,11 +277,11 @@ In the prior task, you created a Word document and protected it with a Sensitivi
 
 8. Select **Send**.
 
-9. Switch to LON-CL2. 
+9. Switch to **LON-CL2**. 
 
-10. In LON-CL2, you should be logged into **Outlook on the Web** as **Lynne Robbins** from a previous lab exercise. Sign out as Lynne.
+10. On **LON-CL2**, you should be logged into **Outlook on the Web** as **Lynne Robbins** from a previous lab exercise. Sign out as Lynne.
 
-11. In your Edge browser, in the **Sign out** tab, enter the following URL in the address bar: **https://outlook.office365.com** 
+11. In your Edge browser, close all tabs except for the **Sign out** tab. In this tab, enter the following URL in the address bar: **https://outlook.office365.com** 
 
 12. In the **Pick an account** window, select **Use another account**.
 
