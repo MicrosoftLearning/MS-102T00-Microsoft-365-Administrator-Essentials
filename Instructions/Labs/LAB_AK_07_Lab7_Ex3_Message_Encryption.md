@@ -48,63 +48,43 @@ In this task, you will create an encryption rule for messages inside your Exchan
 
 ### Task 2 – Create a Mail Flow Encryption Rule using Windows PowerShell
 
-In a prior task, you configured a mail flow encryption rule using the Exchange admin center. In this task, you will create a mail flow encryption rule using Windows PowerShell. You must begin by creating a PSSession that establishes a remote connection to Exchange Online through PowerShell and then imports the Exchange Online session into the PowerShell GUI. This is required because the **New-TransportRule** cmdlet used in this task is an Exchange Online cmdlet; therefore, it does not exist in MsolService. As such, you must connect to the Exchange Online session through PowerShell to access this cmdlet.
+In the prior task, you configured a mail flow encryption rule using the Exchange admin center. In this task, you will create a mail flow encryption rule using Windows PowerShell, or more specifically, Microsoft Graph PowerShell. You must begin by creating a PowerShell session that establishes a remote connection to Exchange Online through PowerShell and then imports the Exchange Online session into the PowerShell GUI. This is required because the **New-TransportRule** cmdlet used in this task is an Exchange Online cmdlet. As such, you must connect to the Exchange Online session through PowerShell to access this cmdlet.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
 2. If Windows PowerShell is still open on your desktop, then select the PowerShell icon on the taskbar to maximize the PowerShell window. However, if you closed PowerShell after using it the last time, then enter **power** in the **Search** box on the taskbar, and in the menu that appears, right-click on **Windows PowerShell** and select **Run as administrator** in the drop-down menu. 
 
-3. In **Windows PowerShell**, you must begin by installing the **Microsoft Azure Active Directory Module for Windows PowerShell** by running the following command at the command prompt:<br/>
+3. You must then run the following command to prompt for the username and password of the user who will be running any subsequent commands; this set of credentials will be stored in the $Cred macro: <br/>
 
-	‎**Install-Module MSOnline** 
+		$Cred = Get-Credential<br/>
 	
-4. If you are prompted to install the **NuGet provider**, enter **Y** to select **[Y] Yes**. 
-
-5. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
-
-6. Once the installation is complete, the screen will return to the command prompt. You must then run the following command to initiate a connection to Azure Active Directory: <br/>
+4. A **Windows PowerShell credential request** window will appear. Sign in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and a password of **User.pw1**.  
 	
-	**Connect-MsolService**  ‎
+5. You must then run the following command to create a PSSession (titled $Session) that establishes a remote connection to Exchange Online through PowerShell. When you create a PSSession, Windows PowerShell establishes a persistent connection to the remote computer. Without the -Credential parameter that invokes the $Cred macro from the prior step, this command would prompt you for the credentials of the user authorizing this command. In this case, by invoking the $Cred macro, it applies Holly’s username and password.<br/>
 
-7. A new window will appear requesting your credentials. Sign in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with a password of **User.pw1**.   
-	
-8. Running unsigned PowerShell scripts from remote computers requires changing the execution policy for PowerShell. You should run the following command that changes the Execution Policy for this PC to **unrestricted**, which sets access to the external authorization for this PC so that it can connect to Microsoft online and load all configuration files and run all scripts:   <br/>
-
-	**Set-ExecutionPolicy unrestricted**  <br/>
-	
-9. If you are prompted whether you want to change the execution policy, enter **A** to select **[A] Yes to All**.
-	‎
-10. You must then run the following command to prompt for the username and password of the user who will be running any subsequent commands; this set of credentials will be stored in the $Cred macro: <br/>
-
-	**&dollar;Cred = Get-Credential** <br/>
-	
-11. A **Windows PowerShell credential request** window will appear. Sign in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and a password of **User.pw1**.  
-	
-12. You must then run the following command to create a PSSession (titled $Session) that establishes a remote connection to Exchange Online through PowerShell. When you create a PSSession, Windows PowerShell establishes a persistent connection to the remote computer. Without the -Credential parameter that invokes the $Cred macro from the prior step, this command would prompt you for the credentials of the user authorizing this command. In this case, by invoking the $Cred macro, it applies Holly’s username and password.<br/>
-
-	**&dollar;Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $Cred -Authentication Basic -AllowRedirection**<br/>
+		$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $Cred -Authentication Basic -AllowRedirection    <br/>
 	
 	**Note:** It’s important to note that you must connect to Exchange Online PowerShell with an admin account that cannot be enabled for multi-factor authentication (MFA). In a real-world environment, if your admin account is enabled for MFA, you must install the Exchange Online Remote PowerShell Module and use the **Connect-EXOPSSession** cmdlet to connect. For more information, see the following article on how to [Connect to Exchange Online PowerShell using multi-factor authentication](https://docs.microsoft.com/en-US/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell?view=exchange-ps).  
 	
-13. You should then run the following cmdlet to import commands, such as cmdlets, functions, and aliases, from the PSSession ($Session) created in the prior step. In this case, it imports the Exchange Online session into the PowerShell GUI. <br/>
+6. You should then run the following cmdlet to import commands, such as cmdlets, functions, and aliases, from the PSSession ($Session) created in the prior step. In this case, it imports the Exchange Online session into the PowerShell GUI. <br/>
 
-	**Import-PSSession $Session**   <br/>
+		Import-PSSession $Session  <br/>
 	
 	‎**Note:** You can ignore the warning message that is displayed regarding unapproved verbs.  
 
-14. You will now create a mail flow rule by using the **New-TransportRule** cmdlet, and you will set the **ApplyOME** encryption parameter to $true. This rule will encrypt all outgoing mail from Adatum that is being sent to Gservices@adatum.com.  <br/>
+7. You will now create a mail flow rule by using the **New-TransportRule** cmdlet, and you will set the **ApplyOME** encryption parameter to $true. This rule will encrypt all outgoing mail from Adatum that is being sent to Gservices@adatum.com.  <br/>
 
 	To create this rule, run the following command:<br/>
 
-	**New-TransportRule -Name "Encrypt rule for Guest Services" -SentTo "Gservices@adatum.com" -SentToScope "NotinOrganization" -ApplyOME $true**  <br/>
+		New-TransportRule -Name "Encrypt rule for Guest Services" -SentTo "Gservices@adatum.com" -SentToScope "NotinOrganization" -ApplyOME $true  <br/>
 	
 	**Note:** This command will take several seconds to complete.
 
-15. To verify the rule exists, minimize your PowerShell window. In your Microsoft Edge browser, you should still be in the **mail flow** window of the **Exchange admin center**, and the **rules** tab should be displayed. The list of rules should only display the **Encrypt mail for guest@adatum.com** rule that you created in the prior task.<br/>
+8. To verify the rule exists, minimize your PowerShell window. In your Microsoft Edge browser, you should still be in the **mail flow** window of the **Exchange admin center**, and the **rules** tab should be displayed. The list of rules should only display the **Encrypt mail for guest@adatum.com** rule that you created in the prior task.<br/>
 
 	‎On the menu bar that appears above the list of rules, select the **Refresh** icon. In the refreshed list, the rule that you just created using PowerShell should appear as well.
 	
-16. Leave your browser session open for the next exercise.
+9. Leave your browser session open for the next exercise.
 
 
 # End of Lab 7
