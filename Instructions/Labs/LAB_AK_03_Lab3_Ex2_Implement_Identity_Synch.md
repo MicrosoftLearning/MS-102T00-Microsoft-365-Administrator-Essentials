@@ -274,13 +274,11 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 		Get-MgGroupMember -GroupId 'paste in the group's object ID here'
 
-17. In the list of group members that were displayed in the prior step, note how the results simply show the object ID of each member. It does not display each user's name, which basically renders the results of this command useless. <br/>
+17. In the list of group members that were displayed in the prior step, note how the results simply show the object ID of each member. Without displaying the user names, this command doesn't help you verify whether the group members were synchronized. To work around this issue, you're going to repeat the prior command, but this time you'll add an additional component that retrieves the User record for each member of the group and displays the User's attributes, which includes the user name. <br/>
 
-	To display each member's name, you're going to repeat the prior command, but this time you will add an additional component that retrieves the User record for each member of the group and displays the User's attributes. <br/>
+	At the command prompt hit the UP arrow on your keyboard. This will automatically type the prior command that was run (which includes the Research group's object ID, so you don't have to re-paste it). Then following the object ID, type the remaining portion of the command (starting with **-All**) and press Enter:
 
-	To do so, at the command prompt hit the UP arrow on your keyboard. This will automatically type the prior command that was run (which includes the Research group's object ID, so you don't have to re-paste it). Then following the object ID, type the remaining portion of the command (starting with -All) and press Enter:
-
-		Get-MgGroupMember -GroupId 'paste in the group's object ID here' -All | ForEach {Get-MgUser -UserId $_.Id}
+		Get-MgGroupMember -GroupId 'the object ID of the Research group' -All | ForEach {Get-MgUser -UserId $_.Id}
 
 18. In the list of members of the Research group, verify the following users are **NOT** included. Remember, you earlier removed these three users from the Research group in the on-premises Active Directory, prior to synchronizing the group to Microsoft 365:  
 
