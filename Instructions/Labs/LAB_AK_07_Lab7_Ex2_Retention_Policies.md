@@ -30,7 +30,7 @@ In this next phase of your Adatum pilot project, you will access the Microsoft P
 
 ### Task 2 – Create an email retention policy for test users
 
-As part of your pilot project for Adatum, you will configure email retention through the Microsoft Purview portal by creating a new retention policy. You will then assign this retention policy to Joni Sherman and Lynne Robbins’ mailboxes. Joni and Lynne are Holly's two test users for compliance testing. Holly wants to use this policy to test email retention for these two test users before creating a second retention policy in the next task that will be applied organization-wide.
+As part of your pilot project for Adatum, you will configure email retention through the Microsoft Purview portal by creating a new retention policy. You will then assign this retention policy to Joni Sherman and Lynne Robbins’ mailboxes. Joni and Lynne are Holly's two test users for compliance testing. Holly wants to use this policy to test email retention for these two test users before creating a second retention policy in the next task that will be applied organization wide.
 
 1. On LON-CL1, your Microsoft Edge browser should still have the **Microsoft Purview** portal open from the prior task.
 
