@@ -25,7 +25,7 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 5. On the **Active users** page, in the list of users, select **Christie Cline**.
 
-6. In the **Christie Cline** pane that appears, select the **Licenses and apps** tab. Under **Licenses (2)**, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes to clear them. Then select **Save Changes**. Close the **Christie Cline** pane.
+6. In the **Christie Cline** pane that appears, select the **Licenses and apps** tab. Under **Licenses (2)**, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes to clear them, and then select **Save Changes**. Close the **Christie Cline** pane.
 
 7. In this task, you are still logged in as the MOD Administrator, and as such, you must create a user account for Holly Dickson, who is Adatum's new Microsoft 365 Administrator. In doing so, you will assign Holly the Microsoft 365 role of Global Administrator, which gives Holly global access to most management features and data across Microsoft online services. <br/>
 
