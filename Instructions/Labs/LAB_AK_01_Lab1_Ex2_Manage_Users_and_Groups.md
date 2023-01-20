@@ -59,7 +59,7 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 	- Select location: **United States**
 
-	- Licenses: Under the **Assign user a product license** option, select **Enterprise Mobility + Security E5** and **Microsoft 365 E5** 
+	- Licenses: Under the **Assign user a product license** option, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes
 
 11. Select **Next.**
 
