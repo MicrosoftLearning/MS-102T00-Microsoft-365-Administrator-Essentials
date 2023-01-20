@@ -2,12 +2,14 @@
 
 In the following lab exercise, you will continue in your role as Holly Dickson, Adatum Corporation’s Microsoft 365 Administrator. In this exercise, you will perform several user and group management functions within Microsoft 365. You will begin by creating a Microsoft 365 user account for Holly, who will be assigned the Microsoft 365 Global Administrator role. You will create several Microsoft 365 groups and assign existing Microsoft 365 users as members of those groups. You will then delete one of the groups and then use Windows PowerShell to recover the deleted group.
 
-**Note:** The VM environment provided by your lab hosting provider comes with 11 existing Microsoft 365 user accounts, as well as a large number of existing on-premises user accounts. Several of the existing Microsoft 365 user accounts will be used throughout the labs in this course. Even though the MOD Administrator account has been created for you by your lab hosting provider, you will still create Holly Dickson's user account, since having more than one user who's assigned the Microsoft 365 Global Administrator role is a best practice. It will also provide you with the experience of creating a Microsoft 365 user account in case you're not familiar with the process.
+**Note:** The VM environment provided by your lab hosting provider comes with over 20 existing Microsoft 365 user accounts, as well as a large number of existing on-premises user accounts. Several of the existing Microsoft 365 user accounts will be used throughout the labs in this course. Even though the MOD Administrator account has been created for you by your lab hosting provider, you will still create Holly Dickson's user account, since having more than one user who's assigned the Microsoft 365 Global Administrator role is a best practice. It will also provide you with the experience of creating a Microsoft 365 user account in case you're not familiar with the process.
 
 
 ### Task 1 - Create a User Account for Adatum's Microsoft 365 Administrator
 
 Holly Dickson is Adatum’s Microsoft 365 Administrator. Since a Microsoft 365 user account has not been set up for her, she initially signed into Microsoft 365 as the MOD Administrator account (the default Global administrator) in the previous lab. In this task, you will continue to be logged in as the MOD Administrator, during which you will create a Microsoft 365 user account for Holly. You will also assign the Microsoft 365 Global Administrator role to Holly's account. This role will give Holly permissions to perform all administrative functions within Microsoft 365. Following this task, you will log in using Holly's new account and you will perform all remaining labs using Holly's persona. 
+
+**License Note:** Before creating Holly's account, you will first verify the number of available licenses. In doing so, you will note that while your lab tenant provides 20 Microsoft 365 E5 licenses and 20 Enterprise Mobility + Security E5 licenses, all of those licenses have already been assigned to the existing user accounts created by your lab hosting provider. As such, you must first unassign one of each licenses from an existing user so that you can assign the licenses to Holly.
 
 **Important:** As a best practice in your real-world deployment, you should always write down the credentials of the first Global administrator account (in this lab, it's the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). You should store away this account information for security reasons. **This account should be a non-personalized identity** that owns the highest privileges possible in a tenant. It should **not** be MFA activated because it is not personalized. Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few personal Global admins as possible. For those personal Global admins that you do create in your real-world deployment, they should each be mapped to a single user (such as Holly Dickson), and they should each have Azure Active Directory Multi-Factor Authentication (MFA) enforced. 
 
@@ -15,13 +17,21 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior lab exercise. You should be signed into Microsoft 365 as the **MOD Administrator**. 
 
-2. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. 
+2. Since you are adding a new user, you should begin by checking license availability before adding the user account. In the **Microsoft 365 admin center** navigation pane, select **Billing** and then select **Licenses**. 
 
-3. In the **Active users** list, you will see the list of existing user accounts that were created for you by your lab hosting provider. In this task, you are still logged in as the MOD Administrator, and as such, you must create a user account for Holly Dickson, who is Adatum's new Microsoft 365 Administrator. In doing so, you will assign Holly the Microsoft 365 role of Global Administrator, which gives Holly global access to most management features and data across Microsoft online services. <br/>
+3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** subscriptions don't have any available licenses. Your lab tenant provides 20 licenses for each subscription, but all 40 licenses have been assigned. Since you must assign Holly both an **Enterprise Mobility + Security E5** license and a **Microsoft 365 E5** license, you must first unassign the licenses from an existing user account to make them available for Holly. 
+
+4. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created for you by your lab hosting provider. You plan to unassign the **Enterprise Mobility + Security E5** license and **Microsoft 365 E5** license from Christie Cline's account so that you can reassign them to Holly Dickson's new account.
+
+5. On the **Active users** page, in the list of users, select **Christie Cline**.
+
+6. In the **Christie Cline** pane that appears, select the **Licenses and apps** tab. Under **Licenses (2)**, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes to clear them. Then select **Save Changes**. Close the **Christie Cline** pane.
+
+7. In this task, you are still logged in as the MOD Administrator, and as such, you must create a user account for Holly Dickson, who is Adatum's new Microsoft 365 Administrator. In doing so, you will assign Holly the Microsoft 365 role of Global Administrator, which gives Holly global access to most management features and data across Microsoft online services. <br/>
 
 	In the **Active Users** window, select the **Add a user** option that appears on the menu bar above the list of active users. 
 
-4. In the **Set up the basics** window, enter the following information:
+8. In the **Set up the basics** window, enter the following information:
 
 	- First name: **Holly**
 
@@ -43,39 +53,39 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 
-5. Select **Next**. If a **Save password** dialog box appears, select **Never**.
+9. Select **Next**. If a **Save password** dialog box appears towards the top of the screen, select **Never**.
 
-6. In the **Assign product licenses** window, enter the following information: <br/>
+10. In the **Assign product licenses** window, enter the following information: <br/>
 
 	- Select location: **United States**
 
-	- Licenses: Under **Assign user a product license**, select **Enterprise Mobility + Security E5** and **Office 365 E5** 
+	- Licenses: Under the **Assign user a product license** option, select **Enterprise Mobility + Security E5** and **Microsoft 365 E5** 
 
-7. Select **Next.**
+11. Select **Next.**
 
-8. In the **Optional settings** window, select the drop-down arrow to the right of **Roles.** 
+12. In the **Optional settings** window, select the drop-down arrow to the right of **Roles.** 
 
-9. In the **Roles** section, select the **Admin center access** option. By selecting this option, the most commonly used Microsoft 365 administrator roles are enabled below it.  <br/>
+13. In the **Roles** section, select the **Admin center access** option. By selecting this option, the most commonly used Microsoft 365 administrator roles are enabled below it.  <br/>
 
-	**Note:** All the admin roles will be displayed if you select **Show all by category**, which appears after the last common role. For Holly, you don't need to view all the admin roles by category, since Holly will be assigned the Global admin role that appears in the list of most commonly used roles.
+	**Note:** All the admin roles will be displayed if you select **Show all by category**, which appears after the last common role. For Holly, you don't need to view all the admin roles by category, since Holly will be assigned the Global Administrator role that appears in the list of most commonly used roles.
 
-10. Select the **Global Administrator** check box.
+14. Select the **Global Administrator** check box. <br/>
 
-    **Note:** A warning message will be displayed indicating that you now have 5 global admins. In a normal environment, this would be excessive and not recommended. For the purposes of this lab, the lab hosting provider assigned the Global admin role to the MOD Administrator and three of the other user accounts. Therefore, four of the 11 user accounts in your tenant are global admins, which is not something you would see in a real-world deployment. However, for the purpose of this lab in your fictitious Adatum lab environment, ignore this message. That being said, keep this guideline in mind for your real-world Microsoft 365 deployments. The best practice guideline that you should follow is to have from two to four Global admins.
+    **Note:** A warning message will be displayed indicating that you now have 7 Global admins. In a normal environment, this would be excessive and not recommended. For the purposes of this lab, the lab hosting provider assigned the Global admin role to the MOD Administrator and five other user accounts. With Holly, you now have 7 global admins, which is not something you would see in a real-world deployment. However, for the purpose of this lab in your fictitious Adatum lab environment, ignore this message. That being said, keep this guideline in mind for your real-world Microsoft 365 deployments. The best practice guideline that you should follow is to have from two to four Global Administrators.
 
-11. Select **Next**.
+15. Select **Next**.
 
-12. On the **Review and finish** window, review your selections. If anything must be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything is correct, select **Finish adding**. 
+16. On the **Review and finish** window, review your selections. If anything must be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything is correct, select **Finish adding**. 
 
-13. On the **Holly Dickson added to active users** page, under the **User details** section, select the **Show** option to verify Holly's password is **User.pw1**.  <br/>
+17. On the **Holly Dickson added to active users** page, under the **User details** section, select the **Show** option to verify Holly's password is **User.pw1**.  <br/>
 
 	**Note:** If you accidentally entered a different password, then once you return to the **Active Users** page, you will need to select the **Reset a password** icon (the key icon that appears when you hover over Holly's account) to change her password to the correct value.
 
-14. Select **Close.**
+18. Select **Close.**
 
-15. If a window appears asking whether you want to respond to a survey on your experience, select **Cancel**.
+19. If a window appears asking whether you want to respond to a survey on your experience, select **Cancel**.
 
-16. Remain logged into the Client 1 VM (LON-CL1) with the Microsoft 365 admin center open in your browser for the next task.
+20. Remain logged into the Client 1 VM (LON-CL1) with the Microsoft 365 admin center open in your browser for the next task.
 
 ### Task 2 – Set up Microsoft 365 User Accounts
 
