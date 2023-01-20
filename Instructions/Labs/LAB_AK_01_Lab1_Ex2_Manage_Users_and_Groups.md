@@ -21,7 +21,7 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** subscriptions don't have any available licenses. Your lab tenant provides 20 licenses for each subscription, but all 40 licenses have been assigned. Since you must assign Holly both an **Enterprise Mobility + Security E5** license and a **Microsoft 365 E5** license, you must first unassign the licenses from an existing user account to make them available for Holly. 
 
-4. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created for you by your lab hosting provider. You plan to unassign the **Enterprise Mobility + Security E5** license and **Microsoft 365 E5** license from Christie Cline's account so that you can reassign them to Holly Dickson's new account.
+4. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created for you by your lab hosting provider. You plan to unassign the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** licenses from Christie Cline's account so that you can reassign them to Holly Dickson's new account.
 
 5. On the **Active users** page, in the list of users, select **Christie Cline**.
 
