@@ -9,7 +9,7 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 Holly Dickson is Adatum’s Microsoft 365 Administrator. Since a Microsoft 365 user account has not been set up for her, she initially signed into Microsoft 365 as the MOD Administrator account (the default Global administrator) in the previous lab. In this task, you will continue to be logged in as the MOD Administrator, during which you will create a Microsoft 365 user account for Holly. You will also assign the Microsoft 365 Global Administrator role to Holly's account. This role will give Holly permissions to perform all administrative functions within Microsoft 365. Following this task, you will log in using Holly's new account and you will perform all remaining labs using Holly's persona. 
 
-**License Note:** Before creating Holly's account, you will first verify the number of available licenses. In doing so, you will note that while your lab tenant provides 20 Microsoft 365 E5 licenses and 20 Enterprise Mobility + Security E5 licenses, all of those licenses have already been assigned to the existing user accounts created by your lab hosting provider. As such, you must first unassign one of each license from an existing user so that you can assign the licenses to Holly.
+**License Note:** Before creating Holly's account, you will first verify the number of available licenses. In doing so, you will note that while your lab tenant provides 20 Microsoft 365 E5 licenses and 20 Enterprise Mobility + Security E5 licenses, all those licenses have already been assigned to the existing user accounts created by your lab hosting provider. As such, you must first unassign one of each license from an existing user so that you can assign them to Holly.
 
 **Important:** As a best practice in your real-world deployment, you should always write down the credentials of the first Global administrator account (in this lab, it's the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). You should store away this account information for security reasons. **This account should be a non-personalized identity** that owns the highest privileges possible in a tenant. It should **not** be MFA activated because it is not personalized. Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few personal Global admins as possible. For those personal Global admins that you do create in your real-world deployment, they should each be mapped to a single user (such as Holly Dickson), and they should each have Azure Active Directory Multi-Factor Authentication (MFA) enforced. 
 
@@ -111,15 +111,15 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 5. In the **Enter password** window, enter **User.pw1** and then select **Sign in**.
 
-6. If a **Welcome to your new Office, Holly** window appears, there's no option to close it. Instead, to the right of the window, select the right arrow icon (**>**) two times to advance through the slides in this messaging window, and then select the check mark icon on the final slide. 
+6. If a **Welcome to Microsoft 365** window appears, there's no option to close it. Instead, to the right of the window, select the right arrow icon (**>**) two times to advance through the slides in this messaging window, and then select the check mark icon on the final slide. 
 
 7. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it.
 
-8. On the **Microsoft Office Home** page, in the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the Microsoft 365 admin center in a new browser tab. 
+8. On the **Microsoft 365 Home** page, in the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the Microsoft 365 admin center in a new browser tab. 
 
 9. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users**, and then under it, select **Active users**.
 
-10. In the **Active Users** window, when you hover your mouse over a user's **Display name**, a **key icon** appears to the right of the user's name. By selecting the key icon, you can reset a user's password. You need to reset Alex, Joni, Lynne, and Patti's passwords to **User.pw1**.<br/>
+10. In the **Active Users** window, when you hover your mouse over a user's **Display name**, a **key icon** appears to the right of the user's name. By selecting the key icon, you can reset a user's password. You need to reset the passwords for Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez to **User.pw1**.<br/>
 
     Hover your mouse over **Alex Wilber** and select the key icon that appears.
 
@@ -127,7 +127,7 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 	Then clear (unselect) the **Require this user to change their password when they first sign in** check box.
 
-12. Select **Reset Password** and then select **Close** on the **Password has been reset** pane.
+12. Select **Reset Password**. If a **Save password** dialog box appears at the top of the screen, select **Never**. Then select **Close** on the **Password has been reset** pane.
 
 13. Repeat steps 10-12 for **Joni Sherman**, **Lynne Robbins**, and **Patti Fernandez**. For these three accounts, reset each of their passwords to **User.pw1**. In step 11, don't forget to show the value you entered to verify you spelled it correctly.
 
@@ -152,13 +152,13 @@ In this task, you will create three new groups that will be used in later labs. 
 
 6. You will now assign Allan Deyoung and Patti Fernandez as owners of the Inside Sales group. In the **Assign owners** window, select **+Assign owners**.
 	
-7. In the **Assign owners** pane that appears, select **Allan Deyoung** and **Patti Fernandez** from the list of active users, and then select the **Add (2)** button at the bottom of the pane.
+7. In the **Assign owners** pane that appears, select the check boxes next to **Allan Deyoung** and **Patti Fernandez**, and then select the **Add (2)** button at the bottom of the pane.
 
 8. On the **Assign owners** page, Allan and Patti should appear as owners of the group. Select **Next**.
 
 9. You will now assign Diego Siciliani and Lynne Robbins as members of the Inside Sales group. In the **Add members** page, select **+Add members**.
 
-10. In the **Add members** pane that appears, select **Diego Siciliani** and **Lynne Robbins** from the list of active users, and then select the **Add (2)** button at the bottom of the pane.
+10. In the **Add members** pane that appears, select the check boxes next to **Diego Siciliani** and **Lynne Robbins**, and then select the **Add (2)** button at the bottom of the pane.
 
 11. On the **Add members** page, Diego and Lynne should appear as members of the group. Select **Next**.
 
@@ -184,27 +184,27 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	- Owner: **Joni Sherman**
 
-	- Members: You will not add members at this time, so select **Next**. <br/>
+	- Members: You will not add members at this time.  **Note:** You can add members to a group at the time you create the group (as you did with the Inside Sales group), as well as after you create a group. For the purpose of this Accounting group, you will add members after you've created the group. This way you can see the two methods of adding group members. So for now, select **Next** to skip through this step and not add members at this time. <br/>
 
-	**Note:** You can add members to a group at the time you create the group (as you did with the Inside Sales group), as well as after you create a group. For the purpose of this Accounting group, you will add members after you've created the group. This way you can see the two methods of adding group members. So for now, select **Next** to skip through this step and not add members at this time.
+	- Group email address: **accounting**
 
-16. After creating the Accounting group, you will be returned to the **Active teams & groups** window. It may take a few minutes for the Accounting group to appear, so you may need to select the **Refresh** option on the menu bar once or twice. Note that there are four tabs on this page, one for each group type (Microsoft 365, Distribution list, Mail-enabled security, and Security). The **Microsoft 365** tab is displayed by default, which is the group type assigned to the Accounting group. So the Accounting group should be displayed in this tab.
+16. After creating the Accounting group, you will be returned to the **Active teams and groups** window. It may take a few minutes for the Accounting group to appear, so you may need to select the **Refresh** option on the menu bar once or twice. Note that there are four tabs on this page, one for each group type (Microsoft 365, Distribution list, Mail-enabled security, and Security). The **Microsoft 365** tab is displayed by default, which is the group type assigned to the Accounting group. So the Accounting group should be displayed in this tab.
 
 17. Once the **Accounting** group appears under the **Microsoft 365** tab, select the **Accounting** name. You will now add members to this group.
 
-18. In the **Accounting** pane that appears, the **General** tab is displayed by default. Select the **Members** tab.
+18. In the **Accounting** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
 
-19. In the **Members** tab, three sub-tabs (Owners, Members, and Site visitors) are displayed in the left-hand column. The **Owners** sub-tab is displayed by default. In the **Owners** sub-tab, Joni Sherman should appear as the only group owner. Select the **Members** sub-tab.
+19. In the **Membership** tab, four sub-tabs (Owners, Members, Site visitors, and About membership and permissions) are displayed in the left-hand column. The **Owners** sub-tab is displayed by default. In the **Owners** sub-tab, Joni Sherman should appear as the only group owner. 
 
-20. In the **Members** sub-tab, select the **Add members** button. 
+20. Select the **Members** sub-tab. In the **Members** sub-tab, select the **Add members** button. 
 
-21. In the **Add members to Accounting** pane, select in the **Search by name or email address** field. This displays the list of active users. <br/>
+21. In the **Add group members to Accounting** pane, select in the **Search by name or email address** field. This displays the list of active users. <br/>
 
-	In the list of users, select **Alex Wilber**. Note that you have to select back into the field to display the list of users. Select **Joni Sherman**, select back in the field, and then select **Lynne Robbins**. Once all three users are selected, select the **ADD(3)** button at the bottom of the pane.
+	In the list of users, select **Alex Wilber**. Note that you have to select back into the field to display the list of users. Select **Joni Sherman**, select back in the field, and then select **Lynne Robbins**. Once all three users are selected, select the **Add (3)** button at the bottom of the pane.
 
-22. Once the three new members have been saved in the group, select the **X** in the upper right-hand corner of the **Accounting** pane to close it. 
+22. Once the three new members have been added to the group, select the **X** in the upper right-hand corner of the **Accounting** pane to close it. 
 
-23. Repeat steps 3-14 to add a new group with the following information: <br/>
+23. After adding members to the Accounting group, you will be returned to the **Active teams and groups** window. Select the **Security** tab to display the list of Security groups. Repeat steps 3-14 to add a new group with the following information: <br/>
 
 	- Group type: **Security**
 
@@ -212,15 +212,15 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	- Description: **IT administrative personnel**<br/>
 
-	**Note:** There is no owner, email address, or privacy setting for Security groups. Members must be added to a Security group after creating the group, which you will do in the next few steps. 
+	**Note:** There is no owner, email address, or privacy setting for Security groups. Members must be added to a Security group after creating the group, which you will do in the next few steps. On the **Edit settings** page, you're NOT going to assign Azure AD roles to the group, so simply select **Next**.
 
-24. This returns you to the **Active teams and groups** page, which should still be displaying the **Microsoft 365** group tab. Since the IT Admins group was a Security group, select the **Security** tab.  <br/>
+24.This returns you to the **Active teams and groups** page, which should still be displaying the **Security** group tab.   <br/>
 
-	**Tip:** If any of the new groups do not appear in their respective tabs on the **Active teams and groups** page, wait a minute or so and then select the **Refresh** option on the menu bar (to the right of **Add a group**). You may need to wait an additional minute or two for each group to appear. <br/>
+	**Tip:** If any of the new groups do not immediately appear in their respective tabs on the **Active teams and groups** page, wait a minute or so and then select the **Refresh** option on the menu bar (to the right of **Add a group**). You may need to wait an additional minute or two for a group to appear. <br/>
 
-	**Note:** The IT admins group does not have a group email address because it's a Security group. Two additional group types are Mail-enabled Security groups and Distribution groups. Neither of these group types were used in this lab because it can take up to an hour for these two types of groups to appear in the Groups list; whereas Microsoft 365 groups and Security groups usually take just a matter of minutes to appear. 
+	**Note:** Two additional group types are **Mail-enabled Security** groups and **Distribution** groups. Neither of these group types were used in this lab because it can take up to an hour for these two types of groups to appear in the Groups list; whereas Microsoft 365 groups and Security groups usually take just a minute to two to appear. 
 
-25. You’re now ready to add members to the IT Admin security group. In the list of **Active teams and groups**, select the **Security** tab, and then select the **IT Admins** group (select the name and not the check box that appears to the left of the name). 
+25. You’re now ready to add members to the **IT Admins** security group. In the **Security** tab, select the **IT Admins** group (select the name and not the check box that appears to the left of the name). 
 
 26. In the **IT Admins** pane that appears, the **General** tab is displayed by default. Select the **Members** tab.
 
@@ -232,7 +232,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 30. In the **Members** pane, verify the three users that you selected appear. Select the **X** in the upper right-hand corner to close the **Members** pane. 
 
-31. You now want to test the effect of deleting a group. In the list of **Active teams and groups,** select the **Microsoft 365** tab, then select the vertical ellipsis icon (**More actions**) that appears to the right of the **Inside Sales** group. In the drop-down menu that appears, select **Delete team**. 
+31. You now want to test the effect of deleting a group. In the list of **Active teams and groups**, select the **Microsoft 365** tab. In the list of Microsoft 365 groups, locate the **Inside Sales** group and then select the vertical ellipsis icon (**More actions**) that appears to the right of the **Inside Sales** group. In the drop-down menu that appears, select **Delete team**. 
 
 32. In the **Delete Inside Sales?** pane that appears, select the **Delete team** button.
 
@@ -240,7 +240,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 34. This will return you to the list of **Active teams and groups**. The **Inside Sales** group should no longer appear under the **Microsoft 365** tab. If the Inside Sales group still displays, wait a couple of minutes and then select the **Refresh** option on the menu bar. The updated **Active teams and groups** list should no longer include the Inside Sales group.
 
-356. To verify whether deleting this group affected any of its owners or members, select **Users** and then **Active Users** in the navigation pane. 
+35. To verify whether deleting this group affected any of its owners or members, select **Active Users** in the navigation pane. 
 
 36. In the **Active users** list verify that the Inside Sales group's two owners (**Allan Deyoung** and **Patti Fernandez**) and the two members (**Diego Siciliani** and **Lynne Robbins**) still appear in the list of users. This verifies that deleting a group does not delete the user accounts that were owners or members of the group.
 
@@ -251,9 +251,9 @@ In this task, you will create three new groups that will be used in later labs. 
 
 In this task, you will recover the Inside Sales group, which was a Microsoft 365 group. You can recover a deleted group for all group types except for security groups, which are deleted permanently. In this task, you will use Windows PowerShell to recover the Inside Sales group that you previously deleted. To use Windows PowerShell to perform this task, you will use Microsoft Graph PowerShell, which you should have installed in the first lab in this course.
 
-**IMPORTANT - Microsoft Graph PowerShell work around:** In a normal situation, you would use the Restore-MgDirectoryDeletedItem cmdlet to restore a recently deleted application, group, servicePrincipal, administrative unit, or user object from the deleted items "container" (deleted items will remain available to restore for up to 30 days; after 30 days, the items are permanently deleted). This cmdlet requires that you provide the object ID of the item being restored. While you would normally use the Get-MgDirectoryDeletedItem cmdlet to display the list of deleted objects (along with their object IDs), this cmdlet is currently not returning any data. As a workaround, this task will invoke a direct REST API call by using the Invoke-MgGraphRequest cmdlet.
+**IMPORTANT - Microsoft Graph PowerShell work around:** In a normal situation, you would use the Restore-MgDirectoryDeletedItem cmdlet to restore a recently deleted application, group, servicePrincipal, administrative unit, or user object from the deleted items "container" (deleted items will remain available to restore for up to 30 days; after 30 days, the items are permanently deleted). This Microsoft Graph PowerShell cmdlet requires that you provide the object ID of the item being restored. While you would normally use the Get-MgDirectoryDeletedItem cmdlet to display the list of deleted objects (along with their object IDs), this cmdlet is currently not returning any data. As a workaround, this task will invoke a direct REST API call by using the Invoke-MgGraphRequest cmdlet.
 
-For the purpose of this lab exercise, you will begin by importing the Microsoft.Graph.Identity.DirectoryManagement sub-module, which contains the cmdlets needed to restore a deleted group. You will then connect to this sub-module with Directory Read/Write permission, which is needed to recover a deleted group. 
+**NOTE - Microsoft Graph PowerShell:** If you'll recall, in the first lab exercise for this course, you installed Microsoft Graph PowerShell. However, you did not import any of its 30+ sub-modules. You were told at the time that only 3 modules will be used in the labs for this training course, so you would install each sub-module individually as they were needed. For this lab exercise, you will import the **Microsoft.Graph.Identity.DirectoryManagement** sub-module and the **Microsoft.Graph.Groups** sub-module. You will then connect to these sub-modules with the appropriate Read/Write permissions that are needed to view and recover a deleted group. 
 
 1. On LON-CL1, if Windows PowerShell is still open from the previous lab exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
@@ -276,7 +276,7 @@ For the purpose of this lab exercise, you will begin by importing the Microsoft.
 
 5. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
-6. Let's begin by using Microsoft Graph PowerShell to display the list of active groups. The Inside Sales group should not appear in this list. Type the following command and press Enter:
+6. You will now use Microsoft Graph PowerShell to display the list of active groups. The Inside Sales group should not appear in this list. Type the following command and press Enter (Note: it may take a minute or so for the list of groups to appear):
 
 		Get-MgGroup
 
@@ -300,15 +300,17 @@ For the purpose of this lab exercise, you will begin by importing the Microsoft.
 
 10. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
 
-11. You now want to verify that the recovery process correctly updated the group's membership. In your Edge browser, in the **Microsoft 365 admin center**, navigate to the **Active groups** windows, select the **Microsoft 365** tab if necessary, and then in the list of Microsoft 365 groups, select the **Inside Sales** group (select the name and not the check box). <br/>
+11. You now want to verify that the recovery process correctly updated the group's membership. In your Edge browser, in the **Microsoft 365 admin center**, navigate to the **Active teams & groups** windows, select the **Microsoft 365** tab if necessary, and then in the list of Microsoft 365 groups, select the **Inside Sales** group (select the name and not the check box). <br/>
 
 	**Note:** If the Inside Sales group does not appear, wait a minute or two and then select **Refresh** on the menu bar above the list of groups.
 
-12. In the **Inside Sales** pane that appears, select the **Members** tab. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group, and **Diego Siciliani** and **Lynne Robbins** should appear as members of the group. You have just verified that the deleted group is now fully restored.
+12. In the **Inside Sales** pane that appears, select the **Membership** tab. In the **Membership** tab, four sub-tabs (Owners, Members, Site visitors, and About membership and permissions) are displayed in the left-hand column. The **Owners** sub-tab is displayed by default. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group.
 
-13. Close the **Inside Sales** window.
+13. Select the **Members** sub-tab. **Diego Siciliani** and **Lynne Robbins** should appear as members of the group. You have just verified that the deleted group is now fully restored.
 
-14. Remain logged into LON-CL1 and leave your browser tabs open so that they’re ready for the next task. 
+14. Close the **Inside Sales** window.
+
+15. Remain logged into LON-CL1 and leave your browser tabs open so that they’re ready for the next task. 
 
 
 # Proceed to Lab 1 - Exercise 3
