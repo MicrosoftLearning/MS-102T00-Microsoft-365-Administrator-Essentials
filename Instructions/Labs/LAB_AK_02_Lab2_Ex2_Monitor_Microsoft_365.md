@@ -148,7 +148,7 @@ If an organization runs into a situation in Microsoft 365 where it needs assista
 
 2. In the navigation bar, under the **Support** group, select **New service request**.
 
-3. In the **How can we help?** pane that appears, select the **Message** field (which currently displays **Example: Can't install Office**) and type the following message: **Can't install office**. Then select the right arrow that appears next to the field.
+3. In the **How can we help?** pane that appears, select the **Message** field (which currently displays **Example: Can't install Office**) and type the following message: **Can't install office**. Then select the forward arrow that appears next to the field.
 
 4. This provides self-help solutions with insights and recommended articles to assist with your request. Select one of the recommended articles. After reviewing the article, close the Edge browser tab containing the article. This returns you to the **Support article** pane. 
 
