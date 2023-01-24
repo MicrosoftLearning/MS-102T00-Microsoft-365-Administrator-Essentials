@@ -103,11 +103,11 @@ Adatum's CTO is concerned with the service health issues that have recently come
 
 1. On the LON-CL1 VM, select the **User Details Panel - Microsoft 365 admin center** tab within your Edge browser. 
 
-2. In the **Microsoft 365 admin center** navigation pane, you previously selected the **Show all** option in the prior task. Select **Health**, and then select **Service health**. 
+2. In the **Microsoft 365 admin center** navigation pane, select **Health** and then select **Service health**. 
 
-3. On the **Service health** page, the **Overview** tab is displayed by default across the top of the page. Select the **Issue history** tab.  
+3. On the **Service health** page, the **Overview** tab is displayed by default. Select the **Issue history** tab.  
 
-4. In the **Issue history** tab on the **Service health** window, the default option is to display a list of items from the past 7 days (this option displays to the right of the **Search** field). Select the **Title** for any entry in the list to see further details about the incident. Close the incident window when you’re done reviewing it. 
+4. In the **Issue history** tab on the **Service health** window, the default option is to display a list of items from the past 7 days (this option displays to the right of the **Search** field). In the list of service health incidents, select the **Title** for any entry in the list to see further details about the incident. Close the incident window when you’re done reviewing it. 
 
 5. In the **Microsoft 365 admin center**, in the navigation pane, select **Reports**, and then select **Usage.** 
 
@@ -117,7 +117,7 @@ Adatum's CTO is concerned with the service health issues that have recently come
 
 	‎**Note:** There may be little or no data shown due to the limited mailbox usage in the lab environment. 
 
-8. Under the **Email activity** chart, select the **View more** button. This displays the **Exchange** report dashboard. At the top of the dashboard, the **Email activity** tab is displayed. Select the **Mailbox usage** tab that appears to the right of it.
+8. Under the **Email activity** chart, select the **View more** button. This displays the **Exchange** report dashboard. At the top of the dashboard, the **Email activity** tab is displayed by default. Select the **Mailbox usage** tab that appears to the right of it.
 
 9. The default mailbox usage that is initially displayed is **Past 30 days** (this usage factor appears on the far right side of the row containing the **Mailbox usage** tab). Select the down-arrow that appears next to **Past 30 days** and select one of the other options that appear in the drop-down menu (**7 days**, **90 days**, and **180 days**) to see how the display changes. 
 
@@ -127,7 +127,7 @@ Adatum's CTO is concerned with the service health issues that have recently come
 
 12. Review the various reports on this page. While there may be limited or no data for each report, you at least get a feel for the types of reporting that's available. 
 
-13. You now want to review the reports that are available in the **Exchange admin center**. In your browser, you should have the **Exchange admin center** tab open from the prior task; if so, select it now. However, if you previously closed this tab, then in the **Microsoft 365 admin center**, under the **Admin centers** group in the navigation pane, select **Exchange**.
+13. You now want to review the reports that are available in the **Exchange admin center**. In your browser, you should have the **Message trace - Exchange admin center** tab open from the prior task; if so, select it now. However, if you previously closed this tab, then in the **Microsoft 365 admin center**, under the **Admin centers** group in the navigation pane, select **Exchange**.
 
 14. In the **Exchange admin center**, select **Reports** in the navigation pane, and then select **Mail flow**. 
 
@@ -148,15 +148,15 @@ If an organization runs into a situation in Microsoft 365 where it needs assista
 
 2. In the navigation bar, under the **Support** group, select **New service request**.
 
-3. In the **How can we help?** pane that appears, select the **Message** field (which currently displays **Example: Can't install Office**) and type the following message: **Can't install office**. Then select the arrow that appears next to the field.
+3. In the **How can we help?** pane that appears, select the **Message** field (which currently displays **Example: Can't install Office**) and type the following message: **Can't install office**. Then select the right arrow that appears next to the field.
 
-4. This provides self-help solutions with insights and recommended articles to assist with your request. Select one of the recommended articles. 
+4. This provides self-help solutions with insights and recommended articles to assist with your request. Select one of the recommended articles. After reviewing the article, close the Edge browser tab containing the article. This returns you to the **Support article** pane. 
 
-5. If you need further assistance and would like to speak to a Microsoft support agent, select the **headset** icon (the middle icon) at the top of the window to get help from a Microsoft support agent. Select the **headset** icon now.
+5. If you need further assistance and would like to speak to a Microsoft support agent, select the **headset** icon (the middle icon) at the top of the **Support article** pane to get help from a Microsoft support agent. Select the **headset** icon now.
 
 6. In the **Contact support** pane that appears, do NOT enter any information; instead, just review the information that you would enter to complete this request in a real-world situation. You could also attach any necessary documents before selecting **Contact me** at the bottom of the page.   <br/>
 
-	‎**IMPORTANT:** Do NOT complete this form in your lab environment. If you enter this request with the **Phone** option selected, you will receive a call from a Microsoft 365 support representative.  
+	‎**IMPORTANT: Do NOT complete this form in your lab environment.** If you enter this request with the **Phone** option selected, you will receive a call from a Microsoft 365 support representative. We do not want to bother Microsoft Support specialists with calls from students in a training class. 
 	
 7. Select the **X** in the upper right-hand corner of the page to close the **Contact support** window.
 	
