@@ -4,7 +4,7 @@ You have taken on the persona of Holly Dickson, Adatum's new Microsoft 365 Admin
 
 In the first two tasks in this exercise, you will verify the following conditions that affect whether a user can be blocked from downloading the Microsoft 365 Apps for enterprise suite: <br/>
 
-- The user does not have an appropriate Office 365 license (which you will verify in Task 1). 
+- The user does not have an appropriate Microsoft 365 license (which you will verify in Task 1). 
 	
 - An admin turns off the global Office download setting that controls the downloading of mobile and desktop apps for all users (which you will verify in Task 2).
 
@@ -15,7 +15,7 @@ In the final task in this exercise, you will install the Microsoft 365 Apps for 
 
 In this task, Holly will test whether a user who has not been assigned an appropriate Microsoft 365 license can download Microsoft 365 Apps for enterprise. For this test, you can't use any of the existing users that appear in the **Active Users** list in the Microsoft 365 admin center. These users only have Microsoft 365 accounts (xxxxxZZZZZZ.onmicrosoft.com accounts); they do not have corresponding on-premises accounts in the adatum domain. Without an on-premises account, you can't log into the Client 2 (LON-CL2) VM as any of these users to install Microsoft 365 Apps for enterprise on the client machine. 
 
-Therefore, you must use one of Adatum's on-premises user accounts that has been loaded in its on-premises domain (adatum.com) by your lab hosting provider. For this test, you will use **Laura Atkins**. You will create a Microsoft 365 account for Laura, but you will initially not assign her a Microsoft 365 license. This will enable you to see how not having a license affects a user's ability to install Microsoft 365 Apps for enterprise. 
+Therefore, you must use one of Adatum's on-premises user accounts that has been loaded in its on-premises domain (adatum.com) by your lab hosting provider. For this test, you will use **Laura Atkins**. You will create a Microsoft 365 account for Laura, but initially you will not assign her a Microsoft 365 license. This will enable you to see how not having a license affects a user's ability to install Microsoft 365 Apps for enterprise. 
 
 1. On LON-CL1, you should be logged into Microsoft 365 as Holly Dickson in your Edge browser. 
 
@@ -23,7 +23,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 3. You will begin by testing whether a user **without** an appropriate Microsoft 365 license can install Microsoft 365 Apps for enterprise. For this test, you will use **Laura Atkins**. Your lab hosting provider has already created an on-premises user account for Laura, but she does not have a Microsoft 365 user account. You will create a Microsoft 365 account for Laura, but you will NOT assign her a Microsoft 365 license.  <br/>
 
-	At the top of the **Active users** window, select **Add a user** on the menu bar.
+	At the top of the **Active users** window, select **Add a user** on the menu bar. Doing so initiates the **Add a user** wizard.
 
 4. In the **Set up the basics** window, enter the following information:
 	- First name: **Laura**
@@ -51,9 +51,9 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 10. Switch to the Client 2 VM (**LON-CL2**). 
 
-11. You want to log in as **Laura Atkins**. If the Edge browser is still open from the previous lab exercise, then close it now. You should be on the LON-CL2's desktop, where it should indicate that you are logged on as **adatum\administrator**. Since you want to log on to the LON-CL2 machine using Laura Atkins' local account (adatum\laura), select the **Ctrl+Alt+Delete** function for your VM environment. On the menu screen that appears, select **Switch user**. <br/>
+11. On **LON-CL2**, you want to log into the machine as **Laura Atkins**. If the Edge browser is still open from the previous lab exercise, then close it now. You should be on the LON-CL2's desktop, where it should indicate that you are logged on as **lon-cl2\admin**. Since you want to log on to the LON-CL2 machine using Laura Atkins' local account (adatum\laura), select the **Ctrl+Alt+Delete** function for your VM environment. On the menu screen that appears, select **Switch user**. <br/>
 
-	The lower-left portion of the desktop displays the **Administrator** and **Other user** options. Select **Other user**.
+	The lower-left portion of the desktop displays the **Admin** and **Other user** options. Select **Other user**.
 
 12. In the **Other user** log in, enter **adatum\laura** in the **Username** field, enter **Pa55w.rd** as the **Password**, and then select the forward arrow to log in. After logging in, the desktop should indicate the logged on user is **adatum\laura**. 
 
