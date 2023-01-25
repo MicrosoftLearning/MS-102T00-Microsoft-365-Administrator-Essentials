@@ -128,68 +128,67 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 4. In the **Add a group** wizard, on the **Choose a group type** page, the **Microsoft 365 (recommended)** option should be selected by default. If it isn't, then select this option now. Select **Next**. 
 
-5. In the **Set up the basics** page, enter **Inside Sales** in the **Name** field, and then enter **Collaboration group for the Inside Sales team** in the **Description** field (Note: even if you don't enter a description, you must still select into this field to enable the **Next** button). Select **Next**.
+5. In the **Set up the basics** page, enter **M365 pilot project** in the **Name** field, and then enter **Members of the Microsoft 365 pilot project team** in the **Description** field (Note: even if you don't enter a description, you must still select into this field to enable the **Next** button). Select **Next**.
 
-6. You will now assign Allan Deyoung and Patti Fernandez as owners of the Inside Sales group. In the **Assign owners** window, select **+Assign owners**.
+6. You will now assign the MOD Administrator as owner of the M365 pilot project group. In the **Assign owners** window, select **+Assign owners**.
 	
-7. In the **Assign owners** pane that appears, select the check boxes next to **Allan Deyoung** and **Patti Fernandez**, and then select the **Add (2)** button at the bottom of the pane.
+7. In the **Assign owners** pane that appears, select the check box next to **MOD Administrator**, and then select the **Add (1)** button at the bottom of the pane.
 
-8. On the **Assign owners** page, Allan and Patti should appear as owners of the group. Select **Next**.
+8. On the **Assign owners** page, MOD Administrator should appear as owner of the group. Select **Next**.
 
-9. You will now assign Diego Siciliani and Lynne Robbins as members of the Inside Sales group. In the **Add members** page, select **+Add members**.
+9. You will now assign members to the M365 pilot project group. In the **Add members** page, select **+Add members**.
 
-10. In the **Add members** pane that appears, select the check boxes next to **Diego Siciliani** and **Lynne Robbins**, and then select the **Add (2)** button at the bottom of the pane.
+10. In the **Add members** pane that appears, select the check boxes next to the following users: **Alex Wilber**, **Allan Deyoung**, **Diego Siciliani**, **Isaiah Langer**, **Joni Sherman**, **Lynne Robbins**, **Megan Bowen**, **MOD Administrator**, **Nestor Wilke**, and **Patti Fernandez**. Then select the **Add (10)** button at the bottom of the pane.
 
-11. On the **Add members** page, Diego and Lynne should appear as members of the group. Select **Next**.
+11. On the **Add members** page, verify these 10 users are listed as members of the group. If you missed a user, select **+Add members** and then add any users that you missed. When all 10 users appear on this page, select **Next**.
 
 12. In the **Edit settings** page, enter the following information: <br/>
 
-	- Enter **insidesales** in the **Group email address** field.
-	- Even though Public is displayed in the **Privacy** field, select the field to display the two options that are available. Select **Public**.
+	- Enter **m365pilotproject** in the **Group email address** field.
+	- In the **Privacy** field, select **Private**.
 	- Under the **Add Microsoft Teams to your group** section, verify the **Create a team for this group** check box is selected (select it if it's blank), and then select **Next**.
 
 13. In the **Review and finish adding group** page, review the content that you entered. If anything needs to be fixed, select **Edit** under the specific area that needs adjustment, make any necessary corrections, and then select **Next** to continue back to this page. Once everything is correct, select **Create group**.
 
 14. It may take a minute or so for the **New group created** window to appear. Note the comment at the top of the page that it may take 5 minutes for the new group to appear in the list of Active groups. </br>
 
-	Select **Close**. This returns you to the **Active teams and groups** page, which should display the **Microsoft 365** group tab. Since the Inside Sales group was a Microsoft 365 group, it should eventually display on this tab.
+	Select **Close**. This returns you to the **Active teams and groups** page, which should display the **Microsoft 365** group tab. Since the M365 pilot project group was a Microsoft 365 group, it should eventually display on this tab.
 
+15. In the **Microsoft 365 admin center**, under the **Settings** group in the navigation pane, select **Org settings**. 
 
+16. On the **Org settings** page, select the **Organization profile** tab.
 
+17. In the list of organization profile data, select **Custom themes**.
 
+18. In the **Customize Microsoft 365 for your organization** pane, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+Add theme** option.
 
+19. In the **Default theme** pane, the **General** tab is displayed by default. Enter **M365 Pilot project theme** in the **Name** field.
 
+20. Select inside the **Groups** field. In the list of groups that appears, select **M365 project team** if it appears in the list of groups. If it doesn not appear, then enter **M365** in the **Groups** field. A search results box should appear that displays the **M365 pilot project** group. Select **M365 pilot project**. 
 
-
-
-
-
-
-
-
-
-
-24. In the list of organization profile data, select **Custom themes**.
-
-25. In the **Customize Microsoft 365 for your organization** pane, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+Add theme** option.
-
-26. In the **Default theme** pane, the **General** tab is displayed by default. Enter **Pilot project theme** in the **Name** field.
-
-27. Select inside the **Groups** field. In the list of groups that appears, select **M365 project team**. <br/>
-
-	**Important:** The **All Employees** group was created by your lab hosting provider. It includes all of the pre-existing user accounts that were created by the lab provider. By selecting this group, this custom theme will apply to all user accounts.
-
-28. Select the **Show the user's display name** check box. 
+21. Select the **Show the user's display name** check box. 
  
-29. Select the **Logos** tab and take some time to review its options. Do the same for the **Colors** tab. Note the various theme and branding options that are available for you to update. For the purpose of this lab, you can change any of the options or leave the default values as is. For example, in your real-world environment, you can add the logo of your company and set the background image as the default for all your users. For this lab, feel free to change the colors for your navigation pane, text color, icon color, and accent color. **Go ahead and explore the different options for your tenant and make any changes that you wish.** <br/>
+22. Select the **Logos** tab and take some time to review its options. Do the same for the **Colors** tab. Note the various theme and branding options that are available for you to update. For the purpose of this lab, you can change any of the options or leave the default values as is. For example, in your real-world environment, you can add the logo of your company and set the background image as the default for all your users. For this lab, feel free to change the colors for your navigation pane, text color, icon color, and accent color. <br/>
+
+	**Go ahead and explore the different options for your tenant and make any changes that you wish.** <br/>
 
 	**Tip:** Some color patterns aesthetically distract users. If you do change any of the colors, it's recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
-30. Select **Save** when you're done and then close the **Pilot project theme** pane once your changes are saved.
+23. Select **Save** when you're done and then close the **M365 Pilot project theme** pane once your changes are saved. 
 
-31. Select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **MOD Administrator** name appears to the left of the circle with the **MA** initials. The signed-in user's name now appears to the left of their profile picture or initials due to the custom theme that you just created.
+24. Select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **MOD Administrator** name appears to the left of the circle with the **MA** initials. The signed-in user's name now appears to the left of their profile picture or initials due to the custom theme that you just created.
 
-32. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
+25. In the list of organization profile data, select **Custom themes**.
+
+26. In the **Customize Microsoft 365 for your organization** pane that appears, notice how it displays the **Default theme** and the **M365 pilot project theme**. Select the **Default theme**. 
+
+27. On the **Default theme** pane, notice how the **Show the user's display name** option is not selected. Select the back arrow at the top of the pane to return to  the **Customize Microsoft 365 for your organization** pane. <br/>
+
+	If Holly later decides to make the **Show the user's display name** option a permanent feature, she will select this option in the **Default theme** pane so that it applies to all Adatum users, and she will delete the **M365 Pilot project theme**. <br/>
+
+	Close the **Customize Microsoft 365 for your organization** pane.
+
+28. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 
 ### ‎Task 4 - Enable Information Rights Management for SharePoint Online 
