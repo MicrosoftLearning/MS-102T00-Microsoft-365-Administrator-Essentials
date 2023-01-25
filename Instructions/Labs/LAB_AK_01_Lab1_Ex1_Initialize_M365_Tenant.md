@@ -51,7 +51,9 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 10. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it. 
 
-11. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is your Microsoft 365 home page. Notice the initials **MA** that appear in a circle in the top-right corner of the screen. These are the initials of the **MOD Administrator** account, which is the tenant admin account created by your lab hosting provider that you just signed in as. The other existing Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with each of their accounts; therefore, when you sign in as any of those users in later labs, the user's picture will be displayed rather than the user's initials. However, when a user such as the MOD Administrator has no picture assigned to it, the user's initials are displayed in place of the picture. <br/>
+11. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is your Microsoft 365 home page. <br/>
+
+	Notice the initials **MA** that appear in a circle in the top-right corner of the screen. These are the initials of the **MOD Administrator** account, which is the tenant admin account created by your lab hosting provider that you just signed in as. The other existing Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with each of their accounts; therefore, when you sign in as any of those users in later labs, the user's picture will be displayed rather than the user's initials. However, when a user such as the MOD Administrator has no picture assigned to it, the user's initials are displayed in place of the picture. <br/>
 
 	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
@@ -108,15 +110,74 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 23. At the top of the **Release preferences** pane, note the message indicating the 4 users were added to the targeted release. Select the **X** in the upper right-hand corner to close the pane. 
 
+24. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
+
+### Task 3- Create a custom theme for Adatum's pilot project team
+
+In the prior task, you learned that when someone is signed in to Microsoft 365, the system will either display their photograph (if one is supplied), or their initials if no photograph is provided. Holly Dickson, Adatum's Microsoft 365 Administrator, is not satisfied with just seeing a picture or initials. She wants to create a custom theme for the members of her pilot project team so that it also displays the signed-in user's name. If the users prefer this design, she will later create a group for all company employees and assign it to the custom theme and make this a permanent feature for the company's Microsoft 365 deployment. 
+
+Custom themes must be associated with one or more Microsoft 365 groups. Therefore, to implement this change, Holly must first create a Microsoft 365 group for the members of the pilot project team. She can then create a custom theme associated with this group that configures a setting to display the signed-in user's name. In this task, you will create a Microsoft 365 group for the members of her pilot project team, and then you will create a custom theme that displays the signed-in user's name. You will also review other options that can be configured with custom themes, and you can make any color changes that you wish.
+
+1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
+
+2. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
+
+3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Microsoft 365** tab is displayed by default; this tab displays the existing Microsoft 365 groups.  <br/>
+
+    Select the **Add a group** option that appears on the menu bar above the list of groups. This initiates the **Add a group** wizard. 
+
+4. In the **Add a group** wizard, on the **Choose a group type** page, the **Microsoft 365 (recommended)** option should be selected by default. If it isn't, then select this option now. Select **Next**. 
+
+5. In the **Set up the basics** page, enter **Inside Sales** in the **Name** field, and then enter **Collaboration group for the Inside Sales team** in the **Description** field (Note: even if you don't enter a description, you must still select into this field to enable the **Next** button). Select **Next**.
+
+6. You will now assign Allan Deyoung and Patti Fernandez as owners of the Inside Sales group. In the **Assign owners** window, select **+Assign owners**.
+	
+7. In the **Assign owners** pane that appears, select the check boxes next to **Allan Deyoung** and **Patti Fernandez**, and then select the **Add (2)** button at the bottom of the pane.
+
+8. On the **Assign owners** page, Allan and Patti should appear as owners of the group. Select **Next**.
+
+9. You will now assign Diego Siciliani and Lynne Robbins as members of the Inside Sales group. In the **Add members** page, select **+Add members**.
+
+10. In the **Add members** pane that appears, select the check boxes next to **Diego Siciliani** and **Lynne Robbins**, and then select the **Add (2)** button at the bottom of the pane.
+
+11. On the **Add members** page, Diego and Lynne should appear as members of the group. Select **Next**.
+
+12. In the **Edit settings** page, enter the following information: <br/>
+
+	- Enter **insidesales** in the **Group email address** field.
+	- Even though Public is displayed in the **Privacy** field, select the field to display the two options that are available. Select **Public**.
+	- Under the **Add Microsoft Teams to your group** section, verify the **Create a team for this group** check box is selected (select it if it's blank), and then select **Next**.
+
+13. In the **Review and finish adding group** page, review the content that you entered. If anything needs to be fixed, select **Edit** under the specific area that needs adjustment, make any necessary corrections, and then select **Next** to continue back to this page. Once everything is correct, select **Create group**.
+
+14. It may take a minute or so for the **New group created** window to appear. Note the comment at the top of the page that it may take 5 minutes for the new group to appear in the list of Active groups. </br>
+
+	Select **Close**. This returns you to the **Active teams and groups** page, which should display the **Microsoft 365** group tab. Since the Inside Sales group was a Microsoft 365 group, it should eventually display on this tab.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 24. In the list of organization profile data, select **Custom themes**.
 
 25. In the **Customize Microsoft 365 for your organization** pane, you can customize the default theme that users see when signed into Microsoft 365, and you can add additional custom themes. Select the **+Add theme** option.
 
 26. In the **Default theme** pane, the **General** tab is displayed by default. Enter **Pilot project theme** in the **Name** field.
 
-27. Select inside the **Groups** field. In the list of groups that appears, select **Contoso**. <br/>
+27. Select inside the **Groups** field. In the list of groups that appears, select **M365 project team**. <br/>
 
-	**Note:** The Contoso group was created by your lab hosting provider. It includes all of the pre-existing user accounts that were created by the lab provider. By selecting this group, this custom theme will apply to all user accounts.
+	**Important:** The **All Employees** group was created by your lab hosting provider. It includes all of the pre-existing user accounts that were created by the lab provider. By selecting this group, this custom theme will apply to all user accounts.
 
 28. Select the **Show the user's display name** check box. 
  
@@ -131,7 +192,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 32. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 
-### ‎Task 3 - Enable Information Rights Management for SharePoint Online 
+### ‎Task 4 - Enable Information Rights Management for SharePoint Online 
 
 In this task, you will turn on Information Rights Management (IRM) for SharePoint Online. 
 
@@ -156,7 +217,7 @@ In this task, you will turn on Information Rights Management (IRM) for SharePoin
 9. Close the **SharePoint admin center** tab in your Edge browser. Leave your browser open for the next task.
 
 
-### Task 4 – Turn on Audit Logging to enable Alert Policies
+### Task 5 – Turn on Audit Logging to enable Alert Policies
 
 In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal. However, before you can implement alerts, an admin must first turn on Audit Logging for the organization. Since it can take a couple of hours for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 6.
 
@@ -179,7 +240,7 @@ In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal
 7. Close the **Microsoft 365 Defender** tab in your Edge browser. Leave your browser open and proceed to the next task. 
 
 
-### Task 5 – Install Microsoft Graph PowerShell 
+### Task 6 – Install Microsoft Graph PowerShell 
 
 Microsoft Graph PowerShell is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Microsoft Graph PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
 
