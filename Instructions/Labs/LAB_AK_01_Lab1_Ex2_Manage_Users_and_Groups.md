@@ -21,17 +21,17 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** subscriptions don't have any available licenses. Your lab tenant provides 20 licenses for each subscription, but all 40 licenses have been assigned. Since you must assign Holly both an **Enterprise Mobility + Security E5** license and a **Microsoft 365 E5** license, you must first unassign the licenses from an existing user account to make them available for Holly. 
 
-4. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created for you by your lab hosting provider. You plan to unassign the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** licenses from Christie Cline's account so that you can reassign them to Holly Dickson's new account.
+4. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created by your lab hosting provider. Since Christie Cline will be moving to a new role in the company and will no longer be part of the Microsoft 365 pilot project, you will unassign the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** licenses from her account so that you can reassign them to Holly Dickson's new account.
 
 5. On the **Active users** page, in the list of users, select **Christie Cline**.
 
-6. In the **Christie Cline** pane that appears, select the **Licenses and apps** tab. Under **Licenses (2)**, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes to clear them, and then select **Save Changes**. Close the **Christie Cline** pane. The licenses that were previously assigned to Christie are now available for another user.  
+6. In the **Christie Cline** pane that appears, select the **Licenses and apps** tab. Under **Licenses (2)**, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes to clear them, and then select **Save Changes**. Once the changes are saved, close the **Christie Cline** pane. 
 
-7. In this task, you are still logged in as the MOD Administrator, and as such, you must create a user account for Holly Dickson, who is Adatum's new Microsoft 365 Administrator. In doing so, you will assign Holly the Microsoft 365 role of Global Administrator, which gives Holly global access to most management features and data across Microsoft online services. You will also assign Holly the two licenses that you just unassigned from Christie Cline. <br/>
+7. You're now ready to create a user account for Holly Dickson, who is Adatum's new Microsoft 365 Administrator. In doing so, you will assign Holly the Microsoft 365 Global Administrator role, which gives Holly global access to most management features and data across Microsoft online services. You will also assign Holly the two licenses that you just unassigned from Christie Cline. <br/>
 
-	In the **Active Users** window, select the **Add a user** option that appears on the menu bar above the list of active users. 
+	In the **Active Users** window, select the **Add a user** option that appears on the menu bar above the list of active users. This starts the **Add a user** wizard.
 
-8. In the **Set up the basics** window, enter the following information:
+8. In the **Set up the basics** page of the **Add a user** wizard, enter the following information:
 
 	- First name: **Holly**
 
@@ -55,23 +55,23 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 9. Select **Next**. If a **Save password** dialog box appears towards the top of the screen, select **Never**.
 
-10. In the **Assign product licenses** window, enter the following information: <br/>
+10. In the **Assign product licenses** page, enter the following information: <br/>
 
 	- Select location: **United States**
 
 	- Licenses: Under the **Assign user a product license** option, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes
 
-11. Select **Next.**
+11. Select **Next**.
 
-12. In the **Optional settings** window, select the drop-down arrow to the right of **Roles.** 
+12. In the **Optional settings** page, select the drop-down arrow to the right of **Roles**. 
 
 13. In the **Roles** section, select the **Admin center access** option. By selecting this option, the most commonly used Microsoft 365 administrator roles are enabled below it.  <br/>
 
-	**Note:** All the admin roles will be displayed if you select **Show all by category**, which appears after the last common role. For Holly, you don't need to view all the admin roles by category, since Holly will be assigned the Global Administrator role that appears in the list of most commonly used roles.
+	**Note:** All the admin roles will be displayed if you select **Show all by category**, which appears after the last common role. For Holly, you don't need to view all the admin roles by category, since Holly will be assigned the Global Administrator role that appears in the list of commonly used roles.
 
 14. Select the **Global Administrator** check box. <br/>
 
-    **Note:** A warning message will be displayed indicating that you now have 7 Global admins. In a normal environment, this would be excessive and not recommended. For the purposes of this lab, the lab hosting provider assigned the Global admin role to the MOD Administrator and five other user accounts. With Holly, you now have 7 global admins, which is not something you would see in a real-world deployment. However, for the purpose of this lab in your fictitious Adatum lab environment, ignore this message. That being said, keep this guideline in mind for your real-world Microsoft 365 deployments. The best practice guideline that you should follow is to have from two to four Global Administrators.
+	**Note:** A warning message will be displayed indicating that Adatum already has 7 Global admins. In a normal environment, this would be excessive and not recommended. For the purposes of this lab, the lab hosting provider assigned the Global admin role to the MOD Administrator and six other user accounts, which is not something you would normally see in a real-world deployment. However, for the purpose of this lab in your fictitious Adatum lab environment, ignore this message. **That being said, the best practice guideline that you should follow is to have from two to four Global Administrators your real-world Microsoft 365 deployments.** 
 
 15. Select **Next**.
 
@@ -89,7 +89,7 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 ### Task 2 – Set up Microsoft 365 User Accounts
 
-After completing the previous task, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this task, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s new Microsoft 365 Administrator. Therefore, you will begin this task by logging out of Microsoft 365 as the MOD Administrator and you will log back in as Holly. When you log in as Holly for the first time, you will be required to change her password, since you configured this option in the earlier task when you created Holly's user account. 
+After completing the previous task, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this task, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s new Microsoft 365 Administrator. Therefore, you will begin this task by logging out of Microsoft 365 as the MOD Administrator and you will log back in as Holly. 
 
 In the prior task, you noticed that your Microsoft 365 trial tenant came equipped with a list of active users. As Holly Dickson, Adatum's Microsoft 365 Administrator, you have selected the following users to help with your pilot project: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez. 
 
@@ -99,7 +99,9 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as the **MOD Administrator**. <br/>
 
-	On the **Microsoft 365 admin center** tab, select the user icon for the **MOD Administrator** (the **MA** circle) in the upper right corner of your browser. In the **MOD Administrator** window that appears, select **Sign out.** <br/>
+	On the **Microsoft 365 admin center** tab, in the upper-right corner of the screen, note that it displays the MOD Administrator's name and initials. The name is displayed because of the custom theme that you created in the prior lab exercise that was associated with a group of Microsoft 365 pilot project users that included the MOD Administrator. Keep this in mind once you log back in as Holly Dickson. <br/>
+
+	Select the user icon for the **MOD Administrator** (the **MA** circle) in the upper right corner of your browser. In the **MOD Administrator** window that appears, select **Sign out.** <br/>
 	
 	**Important:** When signing out of one user account and signing in as another, you should close all your browser tabs except for the **Sign out** tab. This is a best practice that helps to avoid any confusion by closing the windows associated with the prior user. Once you're signed out of the MOD Administrator account, take a moment and close all other browser tabs except for the **Sign out** tab. 
 	
@@ -111,11 +113,43 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 5. In the **Enter password** window, enter **User.pw1** and then select **Sign in**.
 
-6. If a **Welcome to Microsoft 365** window appears, there's no option to close it. Instead, to the right of the window, select the right arrow icon (**>**) two times to advance through the slides in this messaging window, and then select the check mark icon on the final slide. 
+6. If a **Welcome to Microsoft 365** window appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the right arrow icon (**>**) two times to advance through the slides in this messaging window, and then select the check mark icon on the final slide. 
 
 7. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it.
 
-8. On the **Microsoft 365 Home** page, in the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the Microsoft 365 admin center in a new browser tab. 
+8. The **Welcome to Microsoft 365** page is the Microsoft 365 Home page (note the name of the tab: **Home | Microsoft 365**). Note that Holly's initials appear in the upper-right corner of the screen; however, Holly's name is not displayed. This is because Holly's account did not exist at the time you added the Microsoft 365 pilot project users to the group that was associated with the custom theme. Since Holly wants to see her name at the top of each Microsoft 365 window when she's logged into the system, she wants to add her account to the group of Microsoft 365 pilot project users. <br>
+
+	In the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the **Microsoft 365 admin center** in a new browser tab. 
+
+9. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
+
+10. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Microsoft 365** tab is displayed by default; this tab displays the existing Microsoft 365 groups. In the list of Microsoft 365 groups, select **M365 pilot project**.
+
+11. In the **M365 pilot project** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
+
+12. In the **Membership** tab, the **Owners** sub-tab is displayed by default in the navigation pane. Select the **Members** sub-tab that appears below it.
+
+13. In the **Member** sub-tab, select **+Add 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 9. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users**, and then under it, select **Active users**.
 
