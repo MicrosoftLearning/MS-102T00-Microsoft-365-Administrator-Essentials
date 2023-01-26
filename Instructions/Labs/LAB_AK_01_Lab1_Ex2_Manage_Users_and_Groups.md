@@ -238,7 +238,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	**Tip:** If the group does not immediately appear in the list of Security groups, wait a minute or so and then select the **Refresh** option on the menu bar (to the right of **Add a group**). You may need to wait an additional minute or two for the group to appear. <br/>
 
-	**Note:** Two additional group types are **Mail-enabled Security** groups and **Distribution** groups. Neither of these group types were used in this lab because it can take up to an hour for these two types of groups to appear in the Groups list; whereas Microsoft 365 groups and Security groups usually take just a minute to two to appear. 
+	**Note:** As you can see from the tabs on this page, there are two additional group types besides the Microsoft 365 and Security groups. These two group types are **Mail-enabled Security** groups and **Distribution** groups. Neither of these group types were used in this lab because it can take up to an hour for these two types of groups to appear in the Groups list; whereas Microsoft 365 groups and Security groups usually take just a minute to two to appear. 
 
 25. You’re now ready to add members to the **IT Admins** security group. In the **Security** tab, select the **IT Admins** group (select the name and not the check box that appears to the left of the name). 
 
