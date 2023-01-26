@@ -117,7 +117,7 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 7. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it.
 
-8. The **Welcome to Microsoft 365** page is the Microsoft 365 Home page (note the name of the tab: **Home | Microsoft 365**). Note that Holly's initials appear in the upper-right corner of the screen; however, Holly's name is not displayed. This is because Holly's account did not exist at the time you added the Microsoft 365 pilot project users to the group that was associated with the custom theme. Since Holly wants to see her name at the top of each Microsoft 365 window when she's logged into the system, she wants to add her account to the group of Microsoft 365 pilot project users. <br>
+8. The **Welcome to Microsoft 365** page is the Microsoft 365 Home page (note the name of the tab: **Home | Microsoft 365**). Note that Holly's initials appear in the upper-right corner of the screen; however, Holly's name is not displayed. This is because Holly's account did not exist at the time you added the Microsoft 365 pilot project users to the group that was associated with the custom theme. Since Holly wants to see her name at the top of each Microsoft 365 window when she's logged into the system, she first wants to add her account to the group of Microsoft 365 pilot project users. <br>
 
 	In the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the **Microsoft 365 admin center** in a new browser tab. 
 
@@ -129,43 +129,27 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 12. In the **Membership** tab, the **Owners** sub-tab is displayed by default in the navigation pane. Select the **Members** sub-tab that appears below it.
 
-13. In the **Member** sub-tab, select **+Add 
+13. In the **Member** sub-tab, select **+Add members**.
 
+14. In the **Add team members to M365 pilot project** pane that appears, select inside the **Search by name or email address** field. In the list of users that appears, scroll down and select **Holly Dickson**. Select the **Add (1)** button, and then close the **Add team members to M365 pilot project** pane.
 
+15. Select the **Refresh** icon that appears at the top of the screen, to the left of the address bar. Note how Holly Dickson's name appears next to her initials in the upper-right corner of the screen.
 
+16. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users**, and then under it, select **Active users**.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users**, and then under it, select **Active users**.
-
-10. In the **Active Users** window, when you hover your mouse over a user's **Display name**, a **key icon** appears to the right of the user's name. By selecting the key icon, you can reset a user's password. You need to reset the passwords for Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez to **User.pw1**.<br/>
+17. In the **Active Users** window, when you hover your mouse over a user's **Display name**, a **key icon** appears to the right of the user's name. By selecting the key icon, you can reset a user's password. You need to reset the passwords for Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez to **User.pw1**.<br/>
 
     Hover your mouse over **Alex Wilber** and select the key icon that appears.
 
-11. In the **Reset password** pane for Alex, clear (uncheck) the **Automatically create password** check box, and then enter **User.pw1** in the **Password** field that appears. Select the eye (**Show Password**) icon at the end of the **Password** field to display the value you entered. Verify you correctly spelled the password (**User.pw1**). <br/>
+18. In the **Reset password** pane for Alex, clear (uncheck) the **Automatically create password** check box, and then enter **User.pw1** in the **Password** field that appears. Select the eye (**Show Password**) icon at the end of the **Password** field to display the value you entered. Verify you correctly spelled the password (**User.pw1**). <br/>
 
 	Then clear (unselect) the **Require this user to change their password when they first sign in** check box.
 
-12. Select **Reset Password**. If a **Save password** dialog box appears at the top of the screen, select **Never**. Then select **Close** on the **Password has been reset** pane.
+19. Select **Reset Password**. If a **Save password** dialog box appears at the top of the screen, select **Never**. Then select **Close** on the **Password has been reset** pane.
 
-13. Repeat steps 10-12 for **Joni Sherman**, **Lynne Robbins**, and **Patti Fernandez**. For these three accounts, reset each of their passwords to **User.pw1**. In step 11, don't forget to show the value you entered to verify you spelled it correctly.
+20. Repeat steps 17-19 for **Joni Sherman**, **Lynne Robbins**, and **Patti Fernandez**. For these three accounts, reset each of their passwords to **User.pw1**. In step 18, don't forget to show the value you entered to verify you spelled it correctly.
 
-14. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
+21. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
 ### Task 3 – Set up Microsoft 365 Groups 
@@ -199,7 +183,7 @@ In this task, you will create three new groups that will be used in later labs. 
 12. In the **Edit settings** page, enter the following information: <br/>
 
 	- Enter **insidesales** in the **Group email address** field.
-	- Even though Public is displayed in the **Privacy** field, select the field to display the two options that are available. Select **Public**.
+	- In the **Privacy** field, **Public** should be selected by default. Do not change this value.
 	- Under the **Add Microsoft Teams to your group** section, verify the **Create a team for this group** check box is selected (select it if it's blank), and then select **Next**.
 
 13. In the **Review and finish adding group** page, review the content that you entered. If anything needs to be fixed, select **Edit** under the specific area that needs adjustment, make any necessary corrections, and then select **Next** to continue back to this page. Once everything is correct, select **Create group**.
@@ -222,6 +206,8 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	- Group email address: **accounting**
 
+	- Privacy: **Public**
+
 16. After creating the Accounting group, you will be returned to the **Active teams and groups** window. It may take a few minutes for the Accounting group to appear, so you may need to select the **Refresh** option on the menu bar once or twice. Note that there are four tabs on this page, one for each group type (Microsoft 365, Distribution list, Mail-enabled security, and Security). The **Microsoft 365** tab is displayed by default, which is the group type assigned to the Accounting group. So the Accounting group should be displayed in this tab.
 
 17. Once the **Accounting** group appears under the **Microsoft 365** tab, select the **Accounting** name. You will now add members to this group.
@@ -232,7 +218,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 20. Select the **Members** sub-tab. In the **Members** sub-tab, select the **Add members** button. 
 
-21. In the **Add group members to Accounting** pane, select in the **Search by name or email address** field. This displays the list of active users. <br/>
+21. In the **Add team members to Accounting** pane, select in the **Search by name or email address** field. This displays the list of active users. <br/>
 
 	In the list of users, select **Alex Wilber**. Note that you have to select back into the field to display the list of users. Select **Joni Sherman**, select back in the field, and then select **Lynne Robbins**. Once all three users are selected, select the **Add (3)** button at the bottom of the pane.
 
@@ -248,9 +234,9 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	**Note:** There is no owner, email address, or privacy setting for Security groups. Members must be added to a Security group after creating the group, which you will do in the next few steps. On the **Edit settings** page, you're NOT going to assign Azure AD roles to the group, so simply select **Next**.
 
-24.This returns you to the **Active teams and groups** page, which should still be displaying the **Security** group tab.   <br/>
+24.After you finish adding the group, the **Active teams and groups** page should be displayed. Check whether the **IT Admins** group appears under the **Security** tab.   <br/>
 
-	**Tip:** If any of the new groups do not immediately appear in their respective tabs on the **Active teams and groups** page, wait a minute or so and then select the **Refresh** option on the menu bar (to the right of **Add a group**). You may need to wait an additional minute or two for a group to appear. <br/>
+	**Tip:** If the group does not immediately appear in the list of Security groups, wait a minute or so and then select the **Refresh** option on the menu bar (to the right of **Add a group**). You may need to wait an additional minute or two for the group to appear. <br/>
 
 	**Note:** Two additional group types are **Mail-enabled Security** groups and **Distribution** groups. Neither of these group types were used in this lab because it can take up to an hour for these two types of groups to appear in the Groups list; whereas Microsoft 365 groups and Security groups usually take just a minute to two to appear. 
 
@@ -258,7 +244,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 26. In the **IT Admins** pane that appears, the **General** tab is displayed by default. Select the **Members** tab.
 
-27. The **Members** tab displays sections for the Owners and the Members. Under the **Members** section, you can see that there are zero (0) members. Under this section, select **View all and manage members** to add members to the group. 
+27. The **Members** tab displays sections for the Owners and the Members. Under the **Members** section, you can see that there are no members. Under this section, select **View all and manage members** to add members to the group. 
 
 28. In the **Members** pane that appears, select **+Add members**. This displays the list of active Microsoft 365 users.
 
