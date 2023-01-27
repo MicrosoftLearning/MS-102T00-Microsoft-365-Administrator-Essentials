@@ -4,9 +4,9 @@ Not every company has just one domain; in fact, many companies have more than on
 
 In this exercise, you will gain experience adding this domain to Adatum' Microsoft 365 deployment. When you add a domain to Microsoft 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). Adding a new domain is a three step process:
 
-	- You must first add a new zone for the domain in your on-premises DNS.
-	- You must add the domain in Microsoft 365. 
-	- When adding the new domain in Microsoft 365, you must also add the corresponding DNS records to the domain in DNS. These DNS records are necessary to support the services required by the company for the new domain. 
+ - You must first add a new zone for the domain in your on-premises DNS.
+ - You must add the domain in Microsoft 365. 
+ - When adding the new domain in Microsoft 365, you must also add the corresponding DNS records to the domain in DNS. These DNS records are necessary to support the services required by the company for the new domain. 
 
 Most companies do not personally manage their domains' DNS records themselves; instead, they have a third-party resource that manages these records for them. To assist in this effort, Microsoft 365 provides certain third-party domain registrars with an automation tool that automatically adds and replaces a company’s DNS records. The automation tool also federates the sign in credentials for the third-party registrars and Microsoft 365. Using a tool to automatically maintain DNS records is a much-welcomed improvement from the days when companies had to manually maintain these records, which oftentimes introduced human error into a rather complicated process. Because these tools eliminate the need to manually add the DNS records, they eliminate human error from the process.
 
