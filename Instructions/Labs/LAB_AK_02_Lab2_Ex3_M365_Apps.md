@@ -72,9 +72,9 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 17. In the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. In the **Save password** window, select **Never**.
 
-18. In the **Welcome to Microsoft 365** dialog box, select the forward arrow twice and then the check mark. 
+18. In the **Welcome to Microsoft 365** dialog box that appears in the middle of the screen, select the forward arrow twice and then the check mark. 
 
-18. In the **Home | Microsoft 365** page for Laura, notice that no column of Microsoft 365 app icons appears in the navigation pane on the left-side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
+18. In the **Welcome to Microsoft 365** page (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the left-side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
 
 	Select the **Install apps** button, and then in the drop-down menu that appears, select **Other install options**. This opens the **My account** window for Laura.
 
