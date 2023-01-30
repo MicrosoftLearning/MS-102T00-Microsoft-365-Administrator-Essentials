@@ -28,7 +28,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 4. In the **Set up the basics** window, enter the following information:
 	- First name: **Laura**
 	- Last name: **Atkins** 
-	- Display name: When you tab into this field, Laura Atkins will appear.
+	- Display name: When you tab into this field, **Laura Atkins** will appear
 	- Username: **Laura**
 
 	**IMPORTANT:** To the right of the Username field is the domain field. You want this value to be Adatum's **xxxxxZZZZZZ.onmicrosoft.com** domain (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). However, if the custom domain that you added in a prior lab is set as the default domain, then this field will be prefilled with the custom **xxxUPNxxx.xxxCustomDomainxxx.xxx** on-premises domain (where xxxUPNxxx is your UPN number and xxxCustomDomainxxx.xxx is the custom domain). If the custom domain is displayed in this field, you must select the drop-down arrow and select the **xxxxxZZZZZZ.onmicrosoft.com** cloud domain instead.  <br/>
@@ -74,7 +74,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 18. In the **Welcome to Microsoft 365** dialog box that appears in the middle of the screen, select the forward arrow twice and then the check mark. 
 
-18. In the **Welcome to Microsoft 365** page (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the left-side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
+18. In the **Welcome to Microsoft 365** window (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the left-side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
 
 	Select the **Install apps** button, and then in the drop-down menu that appears, select **Other install options**. This opens the **My account** window for Laura.
 
@@ -89,7 +89,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 Microsoft 365 includes a global Office download setting that controls the downloading of mobile and desktop apps for all users. Holly is now going to test whether users can be prohibited from downloading Microsoft 365 Apps for enterprise if an admin turns off this setting. In this test, Holly will once again use Laura Atkins as her test case. However, since you just proved in the prior task that Laura can't install Microsoft 365 Apps for enterprise without a proper license, you must first assign her a license. 
 
-**License Note:** If you'll recall from the earlier lab exercise where you created Holly Dickson's account, there were no available Microsoft 365 E5 or Enterprise Mobility + Security E5 licenses available. As such, you had to first unassign one of each license from an existing user so that you could assign them to Holly. The same situation exists here with Laura. You must first unassign one of each license from an existing user so that you can assign them to Holly.
+**License Note:** If you'll recall from the earlier lab exercise where you created Holly Dickson's account, there were no available Microsoft 365 E5 or Enterprise Mobility + Security E5 licenses available. As such, you had to first unassign one of each license from an existing user so that you could assign them to Holly. The same situation exists here with Laura. You must first unassign one of each license from an existing user so that you can assign them to Laura.
 	
 1. Switch back to **LON-CL1**. In your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson, Adatum’s Microsoft 365 Administrator.
 
@@ -103,7 +103,7 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 6. At the top of the **Office installation options** pane, select the **X** in the upper-right corner of this window to close it. 
 
-7. You should now test whether turning off this global download setting affects a **licensed** user from installing Microsoft 365 Apps for enterprise. In this case, you’re once again going to use **Laura Atkins**, so you must first assign Laura a Microsoft 365 license. However, since there are no available licenses, you must first unassign a license from an existing user account. Holly will unassign Pradeep Gupta's licenses, since he has taken on a new role and no longer will be involved in Adatum's Microsoft 365 pilot project.  <br/>
+7. You should now test whether turning off this global download setting affects a **licensed** user from installing Microsoft 365 Apps for enterprise. In this case, you’re once again going to use **Laura Atkins**, so you must assign Laura a Microsoft 365 license. However, since there are no available licenses, you must first unassign a license from an existing Microsoft 365 user account. In this case, Holly will unassign Pradeep Gupta's licenses, since he has taken on a new role and no longer will be involved in Adatum's Microsoft 365 pilot project.  <br/>
 
 	In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. On the **Active users** page, select **Pradeep Gupta**.
 
@@ -113,17 +113,19 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 10. In **Laura Atkins** account pane, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. In the **Licenses** section, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes and then select **Save changes**. Once the changes are saved, close Laura’s account pane. <br/>
 
-	In the **Active users** list, note how the value in the **Licenses** column for Laura now displays **Microsoft 365 E5** and **Enterprise Mobility + Security E5**.
+	In the **Active users** list, note how the value in the **Licenses** column for Laura now displays **Enterprise Mobility + Security E5** and **Microsoft 365 E5**. 
 
 11. You should now check whether Laura can download Microsoft 365 Apps for enterprise on to her client PC when the global Office download setting has been turned Off. <br/>
 
 	To do this, you must first switch back to **LON-CL2**.
 
-12. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. In your browser, verify you're on the **Home | Microsoft 365** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the navigation pane on the left because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
+12. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins (verify Laura's **LA** initials appear in the upper-right corner of the screen; note that Laura's name doesn't appear because she's not a member of the M365 pilot project group that was assigned to the custom theme). In your browser, verify you're on the **Home | Microsoft 365** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the navigation pane on the left because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
 
 	Select the **Refresh** icon that appears to the left of the address bar at the top of your browser. <br/>
 
-	After refreshing the page, notice that the column of Microsoft 365 app icons now appears on the left-side of the screen because Laura has been assigned a Microsoft 365 license. 
+	After refreshing the page, notice the column of Microsoft 365 app icons now appears on the left-side of the screen because Laura has been assigned a Microsoft 365 license. <br/>
+
+	If a **Find more apps** window appears, select the **X** to close it.
 
 13. Select the **Install apps** button, and then in the drop-down menu, select **Other install options**.
 	
