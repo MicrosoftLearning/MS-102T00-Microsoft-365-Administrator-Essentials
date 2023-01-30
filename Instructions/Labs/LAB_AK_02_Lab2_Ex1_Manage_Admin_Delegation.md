@@ -162,11 +162,11 @@ In this task, you will begin by examining the administrative properties of two u
 
 13. On the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. If a **Save password** window appears, select **Never**.
 
-14. If a **Welcome to Microsoft 365** dialog box appears, select the right-arrow (>) three times to close it.
+14. If a **Welcome to Microsoft 365** dialog box appears in the middle of the page, select the right-arrow (>) twice and then the check mark to close it.
 
 15. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it.
 
-16. On the **Microsoft 365 Home** page, a navigation pane appears on the left side of the screen that indicates the applications the user has permission to access. In this **Apps** pane, note how the **Admin** option is not displayed. This is due to the fact that Joni was never assigned an administrator role. 
+16. On the **Welcome to Microsoft 365** window (which is Joni's Microsoft 365 home page), a navigation pane appears on the left side of the screen that indicates the applications the user has permission to access. In this **Apps** pane, note how the **Admin** option is not displayed. This is due to the fact that Joni was never assigned an administrator role. 
 
 17. You will now sign out of Microsoft 365 as Joni. In **Microsoft Edge**, at the top right of the **Welcome to Microsoft 365** page, select the user icon for **Joni Sherman** (the circle in the upper right-hand corner with Joni's picture in it), and in the **Joni Sherman** window that appears, select **Sign out.** 
 
@@ -176,7 +176,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 20. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it.
 
-21. On the **Microsoft 365 Home** page, note how the **Admin** app is displayed in the navigation pane on the left side of the screen. This is because Lynne was assigned to a Microsoft 365 administrator role. Select the **Admin** icon to open the Microsoft 365 admin center.
+21. On the **Welcome to Microsoft 365** window (which is Lynne's Microsoft 365 home page), note how the **Admin** app is displayed in the navigation pane on the left side of the screen. This is because Lynne was assigned to a Microsoft 365 administrator role. Select the **Admin** icon to open the Microsoft 365 admin center.
 
 22. In the **Microsoft 365 admin center**, select **Users** on the navigation pane and then select **Active users**. 
 
