@@ -204,11 +204,17 @@ When you earlier configured the Intune Administrator role, you set up the notifi
 
 3. In Holly's **Inbox**, verify that Holly received a PIM generated email indicating that **Joni Sherman activated the Intune Administrator role assignment**. 
 
-4. Select the email to open it. Review the information in the email. Select the **View History** button.
+4. Select the email to open it. Review the information in the email. 
 
-5. In the **Adatum Corporation | Resource audit** window, review the audited list of activities. Note the most recent PIM activity for Joni Sherman.
+5. To review the audited list of activities related to Joni's approval of the Intune Administrator role, select the **Microsoft Entra admin center** tab in your Edge browser. 
 
-6. In your Edge browser session, close all the tabs except for the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab. Leave these two tabs open for the next lab.
+6. In the **Microsoft Entra admin center**, the **Adatum Corporation - Settings** page should be displayed. This is where you left off in an earlier task. In the middle pane, under the **Activity** section towards the bottom of the page, select **Resource audit**.
+
+7. In the **Adatum Corporation | Resource audit** page, review the list of PIM activities. Note the two most recent activities. Select the second activity, where the requestor is Alex Wilber. In the **Audit details** pane that appears, note the **Subject** is Joni Sherman, and the **Action** indicates Alex approved Joni's role request for the Intune Administrator role. Select **Close**.
+
+8. In the **Adatum Corporation | Resource audit** page, in the list of PIM activities, select the first activity. In the **Audit details** pane that appears, note the **Subject** is Joni Sherman, and the **Action** indicates Joni was added to the Intune Administrator role. Also note the **Reason** that you entered for the role request. Select **Close**.
+
+9. In your Edge browser session, close all the tabs except for the **Apps | Microsoft 365** tab and the **Microsoft 365 admin center** tab. Leave these two tabs open for the next lab.
 
 
 # End of Lab 4
