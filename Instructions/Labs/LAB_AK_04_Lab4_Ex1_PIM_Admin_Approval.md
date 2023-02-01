@@ -217,7 +217,7 @@ Back in Task 1, Holly set herself up as the approver for the Global Administrato
 
 7. Close the InPrivate browser session.
 
-8. In your Edge browser session, close the **Microsoft Entra admin center** tab. Leave the remaining tabs open for the next lab.
+8. In your Edge browser, leave all the tabs open for the next lab.
 
 
 # Proceed to Lab 4 - Exercise 2
