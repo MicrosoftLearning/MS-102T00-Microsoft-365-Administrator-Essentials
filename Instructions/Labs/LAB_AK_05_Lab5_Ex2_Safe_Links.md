@@ -1,8 +1,8 @@
 # Learning Path 5 - Lab 5 - Exercise 2 - Implement a Safe Links Policy
 
-Now that you have created a Safe Attachments policy for Adatum, you want to create a Safe Links policy and then validate the policy to ensure that it works properly.
+Having created a Safe Attachments policy, Holly Dickson now wants to create a Safe Links policy and then validate the policy to ensure that it works properly.
 
-**IMPORTANT:** This lab exercise consists of two tasks. The first task creates a Safe Links policy, and then the second task validates the policy. The problem with this lab is that when you create a safe links policy, it takes at least 30 minutes for the new policy to propagate through the system. **This means that after performing Task 1, you must wait at least 30 minutes before performing Task 2.** If you perform Task 2 immediately after performing Task 1, then Task 2 will fail. After completing Task 1, you should continue with the training class. Your instructor will provide guidance on when you can perform Task 2 depending on the next break that occurs in the class schedule.
+**IMPORTANT:** This lab exercise consists of two tasks. The first task creates a Safe Links policy, and then the second task validates the policy. The problem with this lab is that when you create a safe links policy, it takes at least 30 minutes for the new policy to propagate through the system. **This means that after performing Task 1, you must wait at least 30 minutes before performing Task 2. If you perform Task 2 immediately after performing Task 1, then Task 2 will fail.** After completing Task 1, you should continue with the training class. Your instructor will provide guidance on when you can perform Task 2 depending on the next break that occurs in the class schedule.
 
 ### Task 1 – Create a Safe Links Policy
 
@@ -12,9 +12,9 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 2. After finishing the previous task, you should still be in the **Microsoft 365 Defender** portal. If not, then in your browser, enter **https://security.microsoft.com** in the address bar.
 
-3. In **Microsoft 365 Defender**, you should still be on the **Safe Attachments** page after completing the previous task. In the navigation thread at the top of the page (**Policies & rules > Threat policies > Safe attachments**), select **Threat policies**. <br/>
+3. In the **Microsoft 365 Defender** portal, you should still be on the **Safe attachments** page after completing the previous task. In the navigation thread at the top of the page (**Policies & rules > Threat policies > Safe attachments**), select **Threat policies**. <br/>
 
-    **NOTE:** If you had closed the **Safe Attachments** tab after the prior task, then navigate to the **Threat policies** page by selecting **Policies & rules** in the left-hand navigation page in **Microsoft 365 Defender**, and then selecting **Threat policies**.
+    **NOTE:** If you had closed the **Safe Attachments** tab after the prior task, then navigate to the **Threat policies** page by selecting **Policies & rules** in the left-hand navigation pane, and then selecting **Threat policies**.
 
 4. In the **Threat policies** window, under the **Policies** section, select **Safe Links**. 
 
