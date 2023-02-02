@@ -6,7 +6,7 @@ In this exercise, you will continue in your role as Holly Dickson, Adatum's new 
 
 Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As you continue in your role as Holly, you will use the Microsoft 365 admin center to assign administrator rights to several Adatum users. 
 
-1. In the prior lab exercise, you created a new domain for Adatum on LON-DC1. You should now switch back to **LON-CL1** to perform the Microsoft 365 administrative tasks in this lab exercise. As a best practice, typical Microsoft 365 administrative tasks should be performed on a client PC rather then the company's domain controller.  <br/>
+1. In the prior lab exercise, you created a new domain for Adatum on LON-DC1. You should now switch back to **LON-CL1** to perform the Microsoft 365 administrative tasks in this lab exercise. As a best practice, typical Microsoft 365 administrative tasks should be performed on a client PC rather than the company's domain controller.  <br/>
 
 	Switch to **LON-CL1**. 
 
@@ -49,13 +49,13 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 1. On LON-CL1, select the Windows PowerShell icon on the taskbar that you left open from a prior lab. If you closed the PowerShell window, then open an elevated instance of it using the same instruction as before. 
 
-2. Your PowerShell session should still be connected to Microsoft Graph PowerShell from the prior lab. However, if you previously closed PowerShell and just reopened it, then import the Microsoft.Graph.Identity.DirectoryManagement sub-module using the steps from the prior lab exercise. 
+2. Your PowerShell session should still be connected to Microsoft Graph PowerShell from the prior lab in which you recovered a deleted group using PowerShell. However, if you previously closed PowerShell and just reopened it, then import the Microsoft.Graph.Identity.DirectoryManagement sub-module using the steps from the prior lab exercise. 
 
 3. To perform Microsoft 365 user maintenance tasks in Microsoft Graph PowerShell, you must first import the Microsoft.Graph.Users sub-module and request Read/Write permissions. To import this sub-module, type the following command at the command prompt and then press Enter:   <br/>
 
 		Import-Module Microsoft.Graph.Users
 
-4. In the earlier lab exercise, you connected to Microsoft Graph and requested "Directory.ReadWrite.All" permissions to run the cmdlets that restored the deleted group. To update User and role objects in this task, Holly must now request Read/Write permissions for these objects. To request these permissions, type the following command at the command prompt and then press Enter:  <br/>
+4. In the earlier lab exercise, you connected to Microsoft Graph and requested "Directory.ReadWrite.All" permissions to run the cmdlets that restored the deleted group. To update User and role objects in this task, Holly must now request Read/Write permissions for each object. To request these permissions, type the following command at the command prompt and then press Enter:  <br/>
 
 		Connect-MgGraph -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
 
@@ -63,7 +63,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 6. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box, and then select **Accept**.
 
-7. Holly wants to assign **Patti Fernandez** to the **Service Support Administrator** role. To assign this role using Microsoft Graph PowerShell, you must first obtain the object ID of the Service Support Administrator role so that you can assign it to Patti. However, in Microsoft Graph PowerShell, you can only assign roles that have been "enabled". Enabled roles are roles that were either enabled from a role template, or they're roles that have already been assigned to users through PowerShell or the Microsoft 365 admin center. <br/>
+7. Holly wants to assign **Patti Fernandez** to the **Service Support Administrator** role. To assign this role using Microsoft Graph PowerShell, you must first obtain the object ID of the Service Support Administrator role so that you can assign it to Patti. However, in Microsoft Graph PowerShell, you can only assign roles that have been "enabled". Enabled roles are roles that were either enabled from a role template, or they have already been assigned to users through PowerShell or the Microsoft 365 admin center. <br/>
 
 	To view all the enabled roles in Microsoft 365, enter the following command at the command prompt and then press Enter: <br/>
 	
@@ -75,7 +75,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 		Get-MgDirectoryRoleTemplate | Format-List Id, DisplayName   <br/>
 	
-9. In the list of role templates, locate the template record for the **Service Support Administrator** role (as of this writing, it's the seventh role in the list). Highlight the **ID** for the **Service Support Administrator** template (for example, fe930be7-5e62-47db-91af-98c3a49a38b1) and press **Ctrl+C** to copy it to the clipboard.
+9. In the list of role templates, locate the template record for the **Service Support Administrator** role (as of this writing, it's the seventh role in the list). Highlight the **ID** for the **Service Support Administrator** template (for example, fe930be7-5e62-47db-91af-98c3a49a38b1) and press **Ctrl+C** to copy it to the clipboard (when you copy it, the highlight disappears).
 
 10. You will now create a variable that captures the attributes for the Service Support Administrator template. When you type in the following command, press **Ctrl+V** to paste in the Service Support Administrator template ID that you copied to the clipboard in the prior step. <br/>
 
@@ -101,7 +101,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 14. Now that you know the object ID of the recently enabled Service Support Administrator role and the object ID of Patti's user account, you can assign the role to Patti. Perform the following steps to complete this process: <br/>
 
-	a. In the previous command, you displayed the list of active users. Highlight the **Id** for Patti's account and copy it (**Ctrl+C**) to the clipboard. <br/>
+	a. In the previous command, you displayed the list of active users. Highlight the **Id** for Patti's account and copy it (**Ctrl+C**) to the clipboard. The highlight disappears once it's copied to the clipboard.  <br/>
 
 	b. Run the following command that creates a variable containing the directory object for Patti's user account. When typing in this command, paste in (**Ctrl+V**) the ID that you just copied for Patti's user account. <br/>
 
@@ -121,17 +121,17 @@ PowerShell also enables you to display all the users assigned to a specific role
 				
 16. The prior command only displays the IDs of the users assigned to the selected role. However, you can match the ID that's displayed with Patti's ID to verify that her account has been assigned the **Service Support Administrator** role. As you can see, Patti is the only user assigned to the role. 
 
-17. Let's now repeat this process to see all the users assigned to the Global Administrator role. Repeat step 15 to verify how many Adatum users have been assigned to the **Global Administrator** role. To complete this command, you must first copy (**Ctrl+c**) the ID of the Global Administrator role to the clipboard. You can find this ID in the list of enabled roles when you ran step 12. <br/>
+17. Let's now repeat this process to see all the users assigned to the Global Administrator role. Repeat step 15 to verify how many Adatum users have been assigned to the **Global Administrator** role. To complete this command, you must first copy (**Ctrl+C**) the ID of the Global Administrator role to the clipboard. You can find this ID in the list of enabled roles when you ran step 12. <br/>
 
-	**Warning:** Copy the ID of the Global Administrtor role and not the ID of the Global Administrator role template.
+	**Warning:** Copy the ID of the Global Administrator role and NOT the ID of the Global Administrator role template.
 
-18. Verify there are multiple Adatum users who've been assigned the Global Administrator role. In a real-world scenario, the Microsoft 365 Administrator would use this PowerShell command to monitor how many global admins exist in their Microsoft 365 deployment. They would then remove the Global Administrator role from any users who truly shouldn't have it (remember, the best practice guideline is to have between 2 to 4 global admins in a Microsoft 365 deployment - depending on the size of the organization).  <br/>
+18. Verify there are multiple Adatum users who've been assigned the Global Administrator role. In a real-world scenario, the Microsoft 365 Administrator would use this PowerShell command to monitor how many global admins exist in their Microsoft 365 deployment. They would then remove the Global Administrator role from any users who truly shouldn't have it (remember, the best practice guideline is to have between 2 to 4 global admins in a Microsoft 365 deployment, depending on the size of the organization).  <br/>
 
 	In the case of this lab, while your lab hosting provider assigned the Global Administrator role to users other than the MOD Administrator (and you assigned it to Holly Dickson), you'll leave these users as is. In this fictitious Adatum deployment, there's no point in wasting your time removing this role from their accounts. Plus, some of the future lab tasks are based on these users being assigned the Global Administrator role. <br/>
 
-	**Important:** Just remember that in your real world deployments, the Microsoft 365 Administrator should monitor the Global Administrator role on a periodic basis to keep the number of assigned users between 2 and 4.
+	**IMPORTANT:** Just remember that in your real-world deployment, the Microsoft 365 Administrator should monitor the Global Administrator role on a periodic basis to keep the number of assigned users between 2 and 4.
 	
-19. Leave your Windows PowerShell session open for future lab exercises; simply minimize it before going on to the next task.
+19. Leave your Windows PowerShell session open for future lab exercises, but minimize it before going on to the next task.
 
 
 ### Task 3 - Verify Delegated Administration  
@@ -164,21 +164,21 @@ In this task, you will begin by examining the administrative properties of two u
 
 13. On the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. If a **Save password** window appears, select **Never**.
 
-14. If a **Welcome to Microsoft 365** dialog box appears in the middle of the page, select the right-arrow (>) twice and then the check mark to close it.
+14. If a **Welcome to Microsoft 365** dialog box appears in the middle of the page, select the forward-arrow (>) twice and then the check mark to close it.
 
 15. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it.
 
-16. On the **Welcome to Microsoft 365** window (which is Joni's Microsoft 365 home page), a navigation pane appears on the left side of the screen that indicates the applications the user has permission to access. In this **Apps** pane, note how the **Admin** option is not displayed. This is due to the fact that Joni was never assigned an administrator role. 
+16. On the **Welcome to Microsoft 365** window, which is Joni's Microsoft 365 home page, a navigation pane appears on the left side of the screen that indicates the applications the user has permission to access. In this **Apps** pane, note how the **Admin** option is not displayed. This is because Joni was never assigned a Microsoft 365 administrator role. 
 
 17. You will now sign out of Microsoft 365 as Joni. In **Microsoft Edge**, at the top right of the **Welcome to Microsoft 365** page, select the user icon for **Joni Sherman** (the circle in the upper right-hand corner with Joni's picture in it), and in the **Joni Sherman** window that appears, select **Sign out.** 
 
 18. You will now sign back into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Joni, you're signed out now**. In this window, it gives you the option of signing back in as Joni, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter **User.pw1**.
 
-19. If a **Welcome to Microsoft 365** dialog box appears, select the right-arrow (>) two times and then select the check mark to close the window.
+19. If a **Welcome to Microsoft 365** dialog box appears, select the forward arrow (>) two times and then select the check mark to close the window.
 
 20. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it.
 
-21. On the **Welcome to Microsoft 365** window (which is Lynne's Microsoft 365 home page), note how the **Admin** app is displayed in the navigation pane on the left side of the screen. This is because Lynne was assigned to a Microsoft 365 administrator role. Select the **Admin** icon to open the Microsoft 365 admin center.
+21. On the **Welcome to Microsoft 365** window, which is Lynne's Microsoft 365 home page, note how the **Admin** icon is displayed in the navigation pane on the left side of the screen. This icon appears because Lynne was assigned to a Microsoft 365 administrator role. Select the **Admin** icon to open the Microsoft 365 admin center.
 
 22. In the **Microsoft 365 admin center**, select **Users** on the navigation pane and then select **Active users**. 
 
@@ -188,7 +188,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 24. In the **Reset password** window for Diego, if the **Automatically create a password** check box displays a check mark, then select this box to clear it. This will enable Lynne to manually assign Diego a temporary password. Enter **diego** in the **Password** field. Note to the right of the password, the system displays a message indicating this is a **Weak** password. Also note the message that appears below the field indicating the requirements for a strong password. Finally, note how the **Reset password** button at the bottom of the pane is not enabled. **This button will only be enabled once you enter a strong password**.  <br/>
 
-	To correct this situation, enter **User.pw1** in the **Password** field. Note how **Strong** now appears next to this password, and the **Reset password** button at the bottom of the pane is now enabled. <br/>
+	To correct this situation, enter **User.temp1** in the **Password** field. Note how **Strong** now appears next to this password, and the **Reset password** button at the bottom of the pane is enabled. <br/>
 	
 	**Note:** This is just a temporary password because Lynne wants to force Diego to change it the next time he logs in. Therefore, verify the **Require this user to change their password when they first sign in** check box displays a check mark; if the box is clear, then select it so that it displays a check mark.
 
@@ -214,7 +214,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 	**Important:** Since you are going to run a global command rather than a command associated with Alex's account, you only want Alex's account selected in the list of active users. If any other user account is selected, you must unselect that user account before proceeding. Scroll through the list of active users and verify that no other user account is selected. If an account other than Alex is selected, select the account's check box to clear it. **Only Alex Wilber's account should be selected.**
 
-34. In the menu bar at the top of the page, select the **ellipsis icon (...)** to display a drop-down menu of additional options. In the menu that appears, select **Edit sign-in status**.
+34. In the menu bar at the top of the page, select the **ellipsis icon (...)** to display a drop-down menu of additional actions. In the menu that appears, select **Edit sign-in status**.
 
 35. In the **Block sign-in** pane that appears, verify Alex's email address appears below the **Block sign-in** heading. Select the **Block this user from signing in** check box, and then select **Save changes.** 
 
@@ -222,33 +222,33 @@ In this task, you will begin by examining the administrative properties of two u
 
 37. Lynne has just been informed that **Nestor Wilke's** username has also been potentially compromised. Repeat steps 33 through 36 to block Nestor from signing in (and to block anyone else from using his username to sign in). <br/>
 
-38. When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Administrator, and Lynne is not. Only a Global Administrator can block another Global Admin from being able to sign in. Lynne will need to ask Holly Dickson to make this change. <br/>
+	When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Administrator, and Lynne is not. Only a Global Administrator can block another Global Admin from being able to sign in. Lynne will need to ask Holly Dickson to make this change. <br/>
 
 	Close the **Block sign-in** pane.
 
-39. You previously blocked Alex Wilber from being able to sign in. To verify whether he is blocked, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in the **Lynne Robbins** window that appears, select **Sign out.** 
+38. You previously blocked Alex Wilber from being able to sign in. To verify whether he is blocked, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in the **Lynne Robbins** window that appears, select **Sign out.** 
 
-40. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
+39. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
 
-41. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter **User.pw1**.  <br/>
+40. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter **User.pw1**.  <br/>
 
 	The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex (or someone who has obtained Alex's username and password) cannot log in. <br/>
 
 	**Note:** It can take a few minutes for the account block to fully implement. Until the block has been implemented in the system, Alex may still be able to log on, but none of the Microsoft 365 services will be available to him, and they will not appear in the Microsoft 365 portal. Once an account is unblocked, the services will become available again. <br/>
 
-	If you are able to sign in as Alex, sign back out and wait a few minutes. This may be a good time to take a short break. Then attempt to sign back in as Alex. By this time, you should hopefully receive the error message that indicates Alex's account has been blocked from signing in. 
+	If you can sign in as Alex, sign back out and wait a few minutes. This may be a good time to take a short break. Then attempt to sign back in as Alex. By this time, you should hopefully receive the error message that indicates Alex's account has been blocked from signing in. 
 	
-42. Switch back to **LON-CL1**. 
+41. Switch back to **LON-CL1**. 
 
-43. In **LON-CL1**, you should still be logged into **Microsoft 365** as Holly Dickson in your Edge browser. The **Active users** list should be displayed in the **Microsoft 365 admin center** from earlier in this task. 
+42. In **LON-CL1**, you should still be logged into **Microsoft 365** as Holly Dickson in your Edge browser. The **Active users** list should be displayed in the **Microsoft 365 admin center** from earlier in this task. 
 
-44. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's user account. Repeat steps 33 through 36 to unblock his account. Note how the **Block sign-in** window from step 35 now displays the **Unblock sign-in** window instead.  <br/>
+43. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's user account. Repeat steps 33 through 36 to unblock his account. Note how the **Block sign-in** window from step 35 now displays the **Unblock sign-in** window instead.  <br/>
 
 	In the **Unblock sign-in** window, the **Block this user from signing in** check box is currently selected. Select this check box to clear it, and then select **Save changes**. <br/>
 	
-	**IMPORTANT:** A warning message is displayed indicating it can take up to 15 minutes before Alex can sign in again. Given the time constraints with the training, you will **NOT** try to verify whether Alex can log back in. You can either take our word that Alex will eventually be able to log back in once this unblock request has propagated through the system, or you can try logging in as Alex at a later time if you're on a break or have spare time and you want to test this out. For now, remain on LON-CL1 and simply close the **Unblock sign-in** window.
+	**IMPORTANT:** A warning message is displayed indicating it can take up to 15 minutes before Alex can sign in again. Given the time constraints with the training, you will **NOT** try to verify whether Alex can log back in. If you want, you can try logging in as Alex at a later time if you're on a break or have spare time and you want to test this out. For now, remain on LON-CL1 and simply close the **Unblock sign-in** window.
 	
-45. On LON-CL1, leave your browser and all tabs open and proceed to the next exercise. 
+44. On LON-CL1, leave your browser and all tabs open and proceed to the next exercise. 
 
 
 # Proceed to Lab 2 - Exercise 2
