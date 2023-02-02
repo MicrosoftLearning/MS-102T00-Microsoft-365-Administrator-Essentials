@@ -2,7 +2,7 @@
 
 Not every company has just one domain; in fact, many companies have more than one domain. Adatum has just purchased a new domain (xxxUPNxxx.xxxCustomDomainxxx.xxx; the exact name of which is provided by your lab hosting provider) that resides in Microsoft Azure but not in Adatum's on-premises environment. To support Adatum’s new custom domain, your lab hosting provider took on the role of Adatum’s third-party domain registrar. 
 
-In this exercise, you will gain experience adding this domain to Adatum' Microsoft 365 deployment. When you add a domain to Microsoft 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). Adding a new domain is a three step process:
+In this exercise, you will gain experience adding this domain to Adatum' Microsoft 365 deployment. When you add a domain to Microsoft 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). Adding a new domain is a three-step process:
 
  - You must first add a new zone for the domain in your on-premises DNS.
  - You must add the domain in Microsoft 365. 
@@ -64,13 +64,13 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 21. In **Server Manager Dashboard,** select **Tools** in the top right corner of the window. In the drop-down menu that appears, select **DNS**, which will open **DNS Manager**. Maximize the DNS Manager window.
 
-22. In the **DNS Manager** window, in the **File Explorer** section in the left-hand pane, select **LON-DC1** to expand it (if necessary). Under LON-DC!, expand the **Forward Lookup Zones** folder. In the list of Forward Lookup Zones in the left-hand pane, select the **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell. Make sure you select this zone in the left-hand pane and not in the right-hand detail pane.
+22. In the **DNS Manager** window, in the **File Explorer** section in the left-hand pane, select **LON-DC1** to expand it (if necessary). Under LON-DC1, expand the **Forward Lookup Zones** folder. In the list of Forward Lookup Zones in the left-hand pane, select the **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell. Make sure you select this zone in the left-hand pane and not in the right-hand detail pane.
 
 23. Right-click on this **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously selected in the left-hand pane. In the menu that appears, select **Other New Records...** (Note: If you right-click on the zone in the right-hand detail pane, the **Other New Records...** option will be disabled).
 
 24. In the **Resource Record Type** window that appears, in the **Select a resource record type** field, scroll down and select **Text (TXT),** and then select the **Create Record...** button at the bottom of the window.
 
-25. In the **New Resource Record** window that appears, in the **Text (TXT)** tab, leave the **Record name** field blank. However, right-click in the **Text** field and select **Paste** from the menu that appears. This will paste in the TXT valued of **MS=msXXXXXXXX** that you copied to the clipboard when you were in the Microsoft 365 admin center.
+25. In the **New Resource Record** window that appears, in the **Text (TXT)** tab, leave the **Record name** field blank. However, right-click in the **Text** field and select **Paste** from the menu that appears. This will paste in the TXT value of **MS=msXXXXXXXX** that you copied to the clipboard when you were in the Microsoft 365 admin center.
 
 26. Select **OK** to create the record. 
 
