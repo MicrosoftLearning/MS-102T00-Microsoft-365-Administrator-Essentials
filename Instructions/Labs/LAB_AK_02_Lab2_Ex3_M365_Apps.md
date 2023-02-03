@@ -27,7 +27,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 	At the top of the **Active users** window, select **Add a user** on the menu bar. Doing so initiates the **Add a user** wizard.
 
-4. In the **Set up the basics** window, enter the following information:
+4. In the **Add a user** wizard, in the **Set up the basics** window, enter the following information:
 	- First name: **Laura**
 	- Last name: **Atkins** 
 	- Display name: When you tab into this field, **Laura Atkins** will appear
