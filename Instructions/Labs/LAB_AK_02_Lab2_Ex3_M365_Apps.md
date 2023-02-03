@@ -91,7 +91,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 Microsoft 365 includes a global Office download setting that controls the downloading of mobile and desktop apps for all users. Holly is now going to test whether users can be prohibited from downloading Microsoft 365 Apps for enterprise if an admin turns off this setting. In this test, Holly will once again use Laura Atkins as her test case. However, since you just proved in the prior task that Laura can't install Microsoft 365 Apps for enterprise without a proper license, you must first assign her a license. 
 
-**License Note:** If you'll recall from the earlier lab exercise when you created Holly Dickson's Microsoft 365 account, there were no available Microsoft 365 E5 or Enterprise Mobility + Security E5 licenses available. As such, you had to first unassign one of each license from an existing user so that you could assign them to Holly. The same situation exists here with Laura. You must first unassign one of each license from an existing user so that you can assign them to Laura.
+**License Note:** If you recall from the earlier lab exercise when you created Holly Dickson's Microsoft 365 account, there were no available Microsoft 365 E5 or Enterprise Mobility + Security E5 licenses available. As such, you had to first unassign one of each license from an existing user so that you could assign them to Holly. The same situation exists here with Laura. You must first unassign one of each license from an existing user so that you can assign them to Laura.
 	
 1. Switch back to **LON-CL1**. In your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson, Adatum’s Microsoft 365 Administrator.
 
@@ -105,7 +105,7 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 6. At the top of the **Office installation options** pane, select the **X** in the upper-right corner of this window to close it. 
 
-7. You should now test whether turning off this global download setting affects a **licensed** user from installing Microsoft 365 Apps for enterprise. In this case, you’re once again going to use **Laura Atkins**, so you must assign Laura a Microsoft 365 license. However, since there are no available licenses, you must first unassign a license from an existing Microsoft 365 user account. In this case, Holly will unassign Pradeep Gupta's licenses, since he has taken on a new role and no longer will be involved in Adatum's Microsoft 365 pilot project.  <br/>
+7. You should now test whether turning off this global download setting affects a **licensed** user from installing Microsoft 365 Apps for enterprise. In this case, you’re once again going to use **Laura Atkins**, so you must assign Laura a Microsoft 365 license. However, since there are no available licenses, you must first unassign a license from an existing Microsoft 365 user account. In this case, Holly will unassign Pradeep Gupta's licenses, since he has taken on a new role and will no longer be involved in Adatum's Microsoft 365 pilot project.  <br/>
 
 	In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. On the **Active users** page, select **Pradeep Gupta**.
 
@@ -172,7 +172,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 2. You should still be in Laura’s **My account** window since this is where you left off at the end of the prior task. Under the **Office apps & devices** section, the **Install Office** button now appears since Laura is assigned a Microsoft 365 E5 license and the global Office download setting is turned On.<br/>
 
-	‎**Important:** Selecting this **Install Office** button will install the 64 bit, English version of Microsoft 365 Apps for enterprise. However, if you want to install a different language or version, then select **View apps & devices**, which opens the **Apps & devices** page; this enables you to select a different language and version of Microsoft 365 Apps for enterprise to install.  <br/>
+	‎**Important:** Selecting this **Install Office** button will install the 64-bit, English version of Microsoft 365 Apps for enterprise. However, if you want to install a different language or version, then select **View apps & devices**, which opens the **Apps & devices** page; this enables you to select a different language and version of Microsoft 365 Apps for enterprise to install.  <br/>
 
 	Since Laura wants to install the 64-bit English version of Microsoft 365 Apps for enterprise, select the **Install Office** button now.
 		
@@ -222,6 +222,6 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 19. On the desktop, the **Admin** is selected by default. Enter **Pa55w.rd** in the **Password** field and then select the forward arrow.  <br/>
 
-	The desktop should now display the logged on user as **lon-cl2\admin**. LON-CL2 is now ready for the next lab that uses it.
+	The desktop should now display the logged-on user as **lon-cl2\admin**. LON-CL2 is now ready for the next lab that uses it.
 
 # End of Lab 2
