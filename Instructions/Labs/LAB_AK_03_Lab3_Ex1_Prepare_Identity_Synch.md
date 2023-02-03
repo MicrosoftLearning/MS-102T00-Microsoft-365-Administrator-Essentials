@@ -2,7 +2,7 @@
 
 As in the previous lab exercises you will take on the role of Holly Dickson, Adatum Corporation’s new Microsoft 365 Administrator. Adatum has recently subscribed to Microsoft 365, and you have been tasked with deploying the application in Adatum’s virtualized lab environment. In this lab, you will perform the tasks necessary to manage your Microsoft 365 identity environment using both the Microsoft 365 admin center and Windows PowerShell. 
 
-During this exercise you will set up and manage Azure AD Connect. You will create on-premises users and validate the sync process so that their identity is moved to the cloud. Some of the steps may feel familiar from previous exercises; however, in this case they are needed to validate the synchronization process.
+During this exercise you will set up and manage Azure AD Connect. You will create on-premises users and validate the sync process so that their identity is moved to the cloud. Some of the user and group maintenance steps may feel familiar from previous exercises; however, in this case they are needed to validate the synchronization process.
 
 ### Task 1: Configure your UPN suffix
 
@@ -18,41 +18,39 @@ For this lab, Adatum has purchased the new xxxUPNxxx.xxxCustomDomainxxx.xxx doma
 
 **IMPORTANT - PowerShell notice:** Up to this point, the labs in this course that involve Windows PowerShell have used the latest PowerShell module known as Microsoft Graph PowerShell. This PowerShell module replaces two older modules, MSOnline and Azure Active Directory (Azure AD) PowerShell. Where applicable, Microsoft customers are encouraged to use the newer Microsoft Graph PowerShell module, since the older modules are scheduled for retirement. However, at present, not all MSOnline and Azure AD PowerShell functionality has been incorporated into Microsoft Graph PowerShell. Such is the case with this lab exercise, which must use MSOnline since the commands necessary to update Adatum's Active Directory forest have not yet been incorporated into Microsoft Graph PowerShell. As such, you will begin this task by installing the MSOnline module and then connecting to the Microsoft Online Service. You'll then run the appropriate MSOnline cmdlets to update the adatum.com domain.
 
-1. Switch to **LON-DC1**, which is Adatum's domain controller.
+1. Switch to **LON-DC1**, which is Adatum's domain controller, where you should still be logged in as **ADATUM\Administrator** and password **Pa55w.rd**. 
 
-2. On **LON-DC1**, make sure you’re logged in as **ADATUM\Administrator** and password **Pa55w.rd**. 
+2. If **Windows PowerShell** is still open, then select the **PowerShell** icon on your taskbar; otherwise, you must open **Windows PowerShell** by selecting the magnifying glass (**Search**) icon on the taskbar, typing **power** in the Search box that appears,  right-clicking on **Windows PowerShell** (do not select Windows PowerShell ISE), and selecting **Run as administrator** in the drop-down menu. When Windows PowerShell opens, maximize the window.
 
-3. If **Windows PowerShell** is still open, then select the **PowerShell** icon on your taskbar; otherwise, you must open **Windows PowerShell** by selecting the magnifying glass (**Search**) icon on the taskbar, typing **power** in the Search box that appears,  right-clicking on **Windows PowerShell** (do not select Windows PowerShell ISE), and selecting **Run as administrator** in the drop-down menu. When Windows PowerShell opens, maximize the window.
-
-4. You must begin by installing the MSOnline PowerShell module. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:
+3. You must begin by installing the MSOnline PowerShell module. In **Windows PowerShell**, at the command prompt type the following command and then press Enter:
 
 		Install-Module MSOnline
 	
-5. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
+4. If you are prompted to confirm whether you want to install the module from an untrusted repository (PSGallery), enter **A** to select **[A] Yes to All.** 
 
-6. You must now connect your PowerShell session to the Microsoft Online Service. At the command prompt, type the following command, and then press Enter:  <br/>
+5. You must now connect your PowerShell session to the Microsoft Online Service. At the command prompt, type the following command, and then press Enter:  <br/>
 
 		Connect-MsolService
 	
-7. In the **Sign in** dialog box that appears, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with the password **User.pw1**. 
+6. In the **Sign in** dialog box that appears, log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with the password **User.pw1**. 
 
-8. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
+7. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
 		Set-ExecutionPolicy unrestricted
 
 	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
-9. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain (where you will replace xxxUPNxxx with the unique UPN name assigned to your tenant, and you will replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@xxxUPNxxx.xxxCustomDomainxxx.xxx**. <br/> 
+8. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain (where you will replace xxxUPNxxx with the unique UPN name assigned to your tenant, and you will replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@xxxUPNxxx.xxxCustomDomainxxx.xxx**. <br/> 
 
 	‎In the following PowerShell command, the **Set-ADForest** cmdlet modifies the properties of an Active Directory forest, and the **-identity** parameter specifies the Active Directory forest to modify. To perform this task, run the following command to set the **UPNSuffixes** property for the **adatum.com** forest (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name):<br/>
 	
 		Set-ADForest -identity adatum.com -UPNSuffixes @{replace="xxxUPNxxx.xxxCustomDomainxxx.xxx"}
 
-10. You must then run the following command that changes all existing adatum.com accounts to the new UPN @xxxUPNxxx.xxxCustomDomainxxx.xxx domain (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name): <br/>
+9. You must then run the following command that changes all existing adatum.com accounts to the new UPN @xxxUPNxxx.xxxCustomDomainxxx.xxx domain (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name): <br/>
 
 		Get-ADUser -Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $_  -UserPrincipalName ($_.SamAccountName + "@xxxUPNxxx.xxxCustomDomainxxx.xxx" )}
 
-11. You will continue using PowerShell on your Domain Controller VM in the next task.
+10. You will continue using PowerShell on LON-DC1 in the next task.
 
 
 ### Task 2: Prepare problem user accounts   
@@ -80,11 +78,11 @@ In this task, you will run a script that breaks an on-premises user account. As 
 
 ### Task 3: Run the IdFix tool and fix identified issues 
 
-In this task you will download and use the IdFix Directory Synchronization Error Remediation Tool to fix Klemen Sic's on-premises user account that your purposely broke in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
+In this task you will download and use the IdFix Directory Synchronization Error Remediation Tool to fix Klemen Sic's on-premises user account that you purposely broke in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Azure AD.
 
 1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task. 
 
-2. Select the **Microsoft Edge** icon on the taskbar. In your **Microsoft Edge** browser, open a new tab and enter the following URL in the address bar to access the Microsoft -IdFix Overview page: <br/>
+2. On **LON-DC1**, select the **Microsoft Edge** icon on the taskbar. In your **Microsoft Edge** browser, open a new tab and enter the following URL in the address bar to access the Microsoft -IdFix Overview page: <br/>
 
 	**https://microsoft.github.io/idfix**
 	
@@ -118,15 +116,15 @@ In this task you will download and use the IdFix Directory Synchronization Error
 
 12. In the **Apply Pending** dialog box that appears, select **Yes**. <br/>
 
-	‎**Note:** Notice the value in the **Action** column changed from **EDIT** to **COMPLETE** for this user. This indicates the IdFix tool corrected the error by updating Klemen Sic's user object. 
+	‎**Note:** Notice the value in the **Action** column changed from **EDIT** to **COMPLETE** for Klemen Sic. This indicates the IdFix tool corrected the error by updating Klemen Sic's user object. 
 
 13. On the menu bar at the top of the page, select **Query**. If a **Schema Warning** dialog box appears, select **Yes** to continue. If a dialog box appears indicating an unhandled exception has occurred, select **Continue**.<br/>
 
-	In the query results, note how the Klemen Sic row no longer appears in the results, since you just fixed this user record. <br/>	
+	In the query results, note how the Klemen Sic row no longer appears in the results, since the IdFix tool just fixed this user record. <br/>	
 
-	As you can see, there are still two users whose errors you have not fixed (**An Dung Dao** and **Ngoc Bich Tran**). We are purposely leaving these errors alone so that you can see what happens during the synchronization process using the Azure AD Connect tool in the next exercise when it processes users with these conditions. <br/>
+	As you can see, there are still two users whose errors have not been fixed (**An Dung Dao** and **Ngoc Bich Tran**). We are purposely leaving these errors alone so that you can see what happens during the synchronization process using the Azure AD Connect tool in the next exercise when it processes users with these conditions. <br/>
 
-	**Important:** When there are format and duplicate errors for distinguished names, the **UPDATE** column either contains the same string as the **VALUE** column, or the **UPDATE** column entry is blank. In either case, this means that IdFix cannot suggest a remediation for the error. You can either fix these errors outside IdFix, or manually remediate them within IdFix. You can also export the results and use Windows PowerShell to remediate many errors.  
+	**Important:** When there are format and duplicate errors for distinguished names, the **UPDATE** column either contains the same string as the **VALUE** column, or the **UPDATE** column entry is blank. In either case, this means that IdFix cannot suggest a remediation for the error. You can either fix these errors outside IdFix, or manually remediate them within IdFix. You can also export the results and use Windows PowerShell to remediate many different errors. 
 
 14. Close the IdFix window. 
 
@@ -135,7 +133,7 @@ In this task you will download and use the IdFix Directory Synchronization Error
 
 ### Task 4: Prepare for Directory Synchronization    
 
-The Azure Active Directory Connect synchronization service is a main component of Azure AD Connect. It's responsible for processing all operations related to synchronizing identity data between your on-premises environment and Azure AD. The sync service consists of an on-premises component (Azure AD Connect sync) and a cloud service component (Azure AD Connect Cloud Sync service). Deployments such as Adatum's that implement Microsoft Exchange Online must use the Azure AD Connect sync service.
+The Azure Active Directory Connect synchronization service is a main component of Azure AD Connect. It's responsible for processing all operations related to synchronizing identity data between your on-premises environment and Azure AD. The sync service consists of an on-premises component (Azure AD Connect sync) and a cloud service component (Azure AD Connect Cloud Sync service). Deployments such as Adatum that implement Microsoft Exchange Online must use the Azure AD Connect sync service.
 
 Before you can run Azure AD Connect, you must first configure several settings that control the synchronization process, which you will do in this task. Once you have completed the preparation process, you will then run the Azure AD Connect tool in the next exercise. 
 
@@ -153,7 +151,7 @@ Before you can run Azure AD Connect, you must first configure several settings t
 
 6. This opens the **Internet Properties** window. Select the **Security** tab. 
 
-7. The **Internet** zone should be selected by default. Towards the bottom of the window, select the **Custom Level** button. 
+7. The **Internet** zone should be selected by default. Towards the bottom of the window, select the **Custom level...** button. 
 
 8. In the **Security Settings – Internet Zone** window, scroll down to the **Downloads** section. The first option in this section is **File download**. Verify the **File download** option is set to **Enable** and then select **OK**. 
 
