@@ -1,10 +1,10 @@
 # Learning Path 2 - Lab 2 - Exercise 2 - Monitor and Troubleshoot Microsoft 365  
 
-In this exercise you will be introduced to some troubleshooting tools in Microsoft 365 that enable you to troubleshoot mail flow issues. You will then analyze Adatum’s Microsoft 365 service health by reviewing several of the key service health queries and reports that are available in Microsoft 365. You will conclude this exercise by reviewing how to submit a service request with the Microsoft Support team should you ever need assistance with a problem.
+In this exercise you will be introduced to some troubleshooting tools in Microsoft 365 that enable you to troubleshoot mail flow issues. You will then analyze Adatum’s Microsoft 365 service health by reviewing several of the key service health queries and reports that are available. You will conclude this exercise by reviewing how to submit a service request with the Microsoft Support team should you ever need assistance with a problem.
 
 ### Task 1 - Troubleshoot Mail Flow in Microsoft 365  
 
-Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare herself for any potential mail flow problems that may occur within Adatum’s Exchange environment. As part of her pilot project, she has decided to create two test scenarios to analyze some of the troubleshooting options available to her. One email will be sent to an email address with an invalid domain (@alt.none), and another will be sent to an address with an invalid mailbox in a valid domain (@outlook.com). This task guides Holly though a variety of tools that she can use to troubleshoot different mail conflict scenarios. 
+Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare herself for any potential mail flow problems that may occur within Adatum’s Exchange environment. As part of her pilot project, she has decided to create two test scenarios to analyze some of the troubleshooting options available to her. One email will be sent to an email address with an invalid domain (@alt.none). Another will be sent to an address with an invalid mailbox in a valid domain (@outlook.com). This task guides Holly though a variety of tools that she can use to troubleshoot different mail conflict scenarios. 
 
 1. You should still be logged into LON-CL1 after having completed the prior exercise, and you should still be logged into Microsoft 365 as Holly Dickson.
 
@@ -12,7 +12,7 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 3. In the **Welcome to Microsoft 365** page, select the **Outlook** icon in the column of app icons on the left. 
 
-4. If a **Pick an account** window appears, select Holly's account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZis the tenant prefix provided by your lab hosting provider). Or, you may be automatically signed into Outlook using Holly's account. In either case, enter **User.pw1** in the **Enter password** window and select **Sign in**. If a **Stay signed in?** window appears, select the **Don't show this again** check box and select **Yes**.
+4. If you're automatically signed into Outlook using Holly's account, then proceed to the next step. However, if a **Pick an account** window appears, select Holly's account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZis the tenant prefix provided by your lab hosting provider). If an **Enter password** window appears, enter **User.pw1** as Holly's password and select **Sign in**. If a **Stay signed in?** window appears, select the **Don't show this again** check box and select **Yes**.
 
 5. Holly's **Inbox** will be displayed in Outlook. If a **Welcome** window appears, select the **X** in the upper-right corner of the window to close it. <br/>
 
@@ -20,7 +20,7 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 6. In this email, you will send the mail to an email address in which the domain (alt.none) is an invalid domain. In the email pane that appears, enter **user@alt.none** in the **To** field. In the drop-down menu that appears, select **Use this address: user@alt.none**. 
 
-7. Enter a subject and some body text and then send the email.  
+7. Enter **Testing invalid domain** in the **Subject** field and then send the email.  
 
 8. Wait for the non-delivery report (NDR) message to appear in Holly’s Inbox, then double-click the message to open it in a new window. This will make it easier to copy the text of the message in the next step. 
 
@@ -30,9 +30,12 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 11. This opens the **Microsoft Remote Connectivity Analyzer** portal. In the navigation bar on the left, select **Message Analyzer**. This opens the **Message Header Analyzer** tool.
 
-12. Take a moment to review the **Message Header Analyzer** tool. It consists of two sections: 1) In the top section, you will paste in the diagnostic data that you copied from the NDR email message, and 2) In the bottom section, the tool will display its analysis of this data. 
+12. Take a moment to review the **Message Header Analyzer** tool. It consists of two sections: <br/>
 
-13. In the **Message Analyzer Header** window, paste the NDR diagnostic data (right-click and select **Paste**, or press **Ctrl+V**) in the field that appears below the **-Insert the message header you would like to analyze** row. Then select the **Analyze headers** button. 
+	- In the top section, you will paste in the diagnostic data that you copied from the NDR email message.
+	- In the bottom section, the tool will display its analysis of this data. 
+
+13. In the **Message Analyzer Header** window, paste the NDR diagnostic data (right-click and select **Paste**, or press **Ctrl+V**) in the field that appears below the **Insert the message header you would like to analyze** row. Then select the **Analyze headers** button. 
 
 14. SMTP message headers contain a wealth of information that allow you to determine the origins of a message and how it made its way through one or more SMTP servers to its destination. Here’s a quick summary of the information found in this header analysis: <br/>
 
@@ -40,9 +43,9 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 	- **Received headers section**: Displays the more important header properties and delivery time. Enables you to analyze the received headers and displays the longest delays quickly for each discovery of sources of message transfer delays.
 
-	- **Other headers section**: Enables you to quickly detect where the longest message transfer delays occurred. You can sort all headers by occurrence number, name or value.   
+	- **Other headers section**: Enables you to quickly detect where the longest message transfer delays occurred. You can sort all headers by occurrence number, name, or value.   
 
-	The primary problem in this example (see the **Other headers** section, Hop 1) is that the DNS domain of the email address **(@alt.none**) does not exist. While you purposely entered an invalid domain for purpose of this lab exercise, this error is normally caused by a typo in the recipient’s domain name that needs to be corrected to resolve the issue. 
+	The primary problem in this example (see the **Other headers** section, Hop 1) is that the DNS domain of the email address **(@alt.none**) does not exist. While you purposely entered an invalid domain for the purpose of this lab exercise, this error is normally caused by a typo in the recipient’s domain name that needs to be corrected to resolve the issue. 
 
 15. Select the **Clear** option that appears to the right of the **Analyze headers** button; this will reset the Message Header Analyzer window. 
 
@@ -50,27 +53,30 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 17. In this email, you will send the mail to a non-existent mailbox in a valid domain (outlook.com). In the **To** field, enter an email address consisting of a random series of numbers followed by your name (for example, **nnnnnnnnYourName@outlook.com**). In the drop-down menu that appears, select **Use this address: nnnnnnnnYourName@outlook.com**.
 
-18. Enter a subject and some body text and then send the email. 
+18. Enter **Testing invalid mailbox** in the **Subject** field and then send the email.  
 
 19. Wait for the non-delivery report (NDR) message to appear in Holly’s Inbox, then double-click the message to open it in a new window. <br/>
 	
-	**Interesting Note:** When this lab was originally written, it asked the student to enter the bogus mailbox of **difflop8675399@outlook.com** in the **To** field. The lab author never assumed anyone would ever create a mailbox called **difflop8675399** in the outlook.com domain. This worked fine for several months, until someone, somewhere around the world, actually created this mailbox in outlook.com. This broke the lab, since it stopped returning an NDR reply. So the previous instruction was changed to ask you to send this email to an email address consisting of a random series of numbers followed by your name. Hopefully, the combination you choose is not a valid mailbox. **If you do not receive an NDR reply within a minute (or less) after sending the email, then you can assume someone has created that mailbox in the outlook.com domain.** If this occurs, then send another email to a different mailbox address that you feel is completely bogus. 
+	**Note:** If you do not receive an NDR reply within a minute (or less) after sending the email, then someone has created that mailbox in the outlook.com domain. If this occurs, then send another email to a different mailbox address that you feel is completely bogus. If necessary, continue trying different email addresses until you receive an NDR reply.
 
 20. In the window for the NDR reply, scroll down through the message until you reach the body of text that says **Diagnostic information for administrators**. Select the text in the body of the message starting AFTER **Diagnostic information for administrators** through the end of the message. With this text selected, press **Ctrl+C** to copy it to the clipboard, and then close the message window. 
 
 21. Select the **Message Header Analyzer** tab in your browser. 
 
-22. In the **Message Analyzer Header** window, paste the NDR diagnostic data in the field that appears below the **-Insert the message header you would like to analyze** row, and then select **Analyze headers**.  <br/>
+22. In the **Message Analyzer Header** window, paste the NDR diagnostic data in the field that appears below the **Insert the message header you would like to analyze** row, and then select **Analyze headers**.  <br/>
 
 	**Note:** Review the diagnostic information and the time taken for the message to be rejected. In the prior email, the domain of the email address did not exist. In this email, Hop 1 in the **Other headers** section indicates the user's domain (outlook.com) was valid, but the user mailbox was unavailable. 
 
 23. Close both the **Message Header Analyzer** tab and the **Microsoft Remote Connectivity Analyzer** tab in your Edge browser. 
 
-24. Select the **Microsoft 365 admin center** tab. If you had closed this tab, then select the **Microsoft Office Home** tab in your Edge browser, select the **App launcher** icon (the square made up of 3 rows of dots) that appears above the **Home** icon in the top left corner of the screen, and then in the **Apps** pane that appears, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
+24. Select the **Microsoft 365 admin center** tab. If you had closed this tab, then select the **Home | Microsoft 365** tab in your Edge browser, select the **App launcher** icon (the square made up of 3 rows of dots) that appears above the **Home** icon in the top left corner of the screen, and then in the **Apps** pane that appears, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
 25. On the **Microsoft 365 admin center** page, in the navigation pane, select **Show all** (if necessary). 
 
-26. Scroll down through the navigation pane, and under **Admin centers,** select **Exchange**. This will open the Exchange admin center in a new tab. If a **Learn about the new menu** window appears, select the X to close it.
+26. Scroll down through the navigation pane, and under **Admin centers,** select **Exchange**. This will open the Exchange admin center in a new tab. <br/>
+
+	- If a **Toolbar** window appears, select the **Next** button twice and then the **Finish** button to navigate through the three windows. 
+	- If a **Learn about the new menu** window appears, select the X to close it.
 
 27. In the **Exchange admin center**, in the navigation pane, select **Mail flow**, and then select **Message trace**. 
 
@@ -101,13 +107,13 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 Adatum's CTO is concerned with the service health issues that have recently come to light throughout the organization. He has asked Holly to review several of the key service health queries and reports so that she becomes aware of the information that's available to help Adatum monitor its service health.
 
-1. On the LON-CL1 VM, select the **User Details Panel - Microsoft 365 admin center** tab within your Edge browser. 
+1. On the LON-CL1 VM, select the **User Details Panel - Microsoft 365 admin center** tab within your Edge browser. This tab contains the Microsoft 365 admin center. 
 
 2. In the **Microsoft 365 admin center** navigation pane, select **Health** and then select **Service health**. 
 
 3. On the **Service health** page, the **Overview** tab is displayed by default. Select the **Issue history** tab.  
 
-4. In the **Issue history** tab on the **Service health** window, the default option is to display a list of items from the past 7 days (this option displays to the right of the **Search** field). In the list of service health incidents, select the **Title** for any entry in the list to see further details about the incident. Close the incident window when you’re done reviewing it. 
+4. In the **Issue history** tab on the **Service health** window, the default option is to display a list of items from the past 7 days (this filter option appears to the right of the **Search** field). In the list of service health incidents, select the **Title** for any entry in the list to see further details about the incident. Close the incident window when you’re done reviewing it. 
 
 5. In the **Microsoft 365 admin center**, in the navigation pane, select **Reports**, and then select **Usage.** 
 
@@ -119,13 +125,13 @@ Adatum's CTO is concerned with the service health issues that have recently come
 
 8. Under the **Email activity** chart, select the **View more** button. This displays the **Exchange** report dashboard. At the top of the dashboard, the **Email activity** tab is displayed by default. Select the **Mailbox usage** tab that appears to the right of it.
 
-9. The default mailbox usage that is initially displayed is **Past 30 days** (this usage factor appears on the far right side of the row containing the **Mailbox usage** tab). Select the down-arrow that appears next to **Past 30 days** and select one of the other options that appear in the drop-down menu (**7 days**, **90 days**, and **180 days**) to see how the display changes. 
+9. The default mailbox usage that is initially displayed is **Past 30 days** (this usage factor appears on the far-right side of the row containing the **Mailbox usage** tab). Select the down-arrow that appears next to **Past 30 days** and select one of the other options that appear in the drop-down menu (**7 days**, **90 days**, and **180 days**) to see how the display changes. 
 
 10. Scroll down below the charts to see mailbox details for each of the active users.
 
-11. Scroll back to the top of the page. On the navigation thread at the top of the page (**Home > Usage > Exchange**), select **Usage** to return to the Usage page. 
+11. Scroll back to the top of the page. On the navigation thread at the top of the page (**Home > Usage > Exchange**), select **Usage** to return to the Usage Overview page. 
 
-12. Review the various reports on this page. While there may be limited or no data for each report, you at least get a feel for the types of reporting that's available. 
+12. Review the various reports on this page. While there may be limited or no data for each report, you can at least get a feel for the type of reporting that's available. 
 
 13. You now want to review the reports that are available in the **Exchange admin center**. In your browser, you should have the **Message trace - Exchange admin center** tab open from the prior task; if so, select it now. However, if you previously closed this tab, then in the **Microsoft 365 admin center**, under the **Admin centers** group in the navigation pane, select **Exchange**.
 
@@ -135,22 +141,26 @@ Adatum's CTO is concerned with the service health issues that have recently come
 
 16. On the navigation thread at the top of the page (**Reports > Mail flow > Inbound messages report**), select **Mail flow** to return to this reporting page. 
 
-17. In the **Reports > Mail flow** window, review the various reports that are available. 
+17. In the **Mail flow reports** window, review the various reports that are available. 
 
 18. Once you have finished reviewing several of the reports, close the **Exchange admin center** tab in your Edge browser but leave the other tabs open for the next task.
  
 
 ### Task 3 – Submit a Help Request to Microsoft Support
 
-If an organization runs into a situation in Microsoft 365 where it needs assistance with a problem, it must submit a service request with the Microsoft Support team. As part of Adatum's pilot project, Holly Dickson and Patti Fernandez (Adatum's Service Support Administrator) have decided to submit a test request that does not require a call back. They are performing this task to become familiar with the service request process.
+If an organization runs into a situation in Microsoft 365 where it needs assistance with a problem, it must submit a service request to the Microsoft Support team. As part of Adatum's pilot project, Holly Dickson and Patti Fernandez (Adatum's Service Support Administrator) have decided to submit a test request that does not require a call back. They are performing this task to become familiar with the service request process.
 
-1. On LON-CL1, in the **Microsoft 365 admin center** tab of your Edge browser, select **Support** in the navigation pane, and then select **View service requests**. This page will display any outstanding service request tickets. You should verify that no service request tickets appear on the **Service request history** page.
+1. On LON-CL1, in the **Microsoft 365 admin center** tab of your Edge browser, select **Support** in the navigation pane, and then select **View service requests**. 
 
-2. In the navigation bar, under the **Support** group, select **New service request**.
+	**Note:** If the left-hand navigation pane has been minimized and only displays icons without any text, select the Navigation menu icon (the three horizontal lines) at the top of the navigation pane to expand it and display the accompanying text. <br/>
 
-3. In the **How can we help?** pane that appears, select the **Message** field (which currently displays **Example: Can't install Office**) and type the following message: **Can't install office**. Then select the forward arrow that appears next to the field.
+	The **Service request history** window displays any outstanding service request tickets. You should verify that no service request tickets appear on this page. <br/>
 
-4. This provides self-help solutions with insights and recommended articles to assist with your request. Select one of the recommended articles. After reviewing the article, close the Edge browser tab containing the article. This returns you to the **Support article** pane. 
+2. In the navigation pane, under the **Support** group, select **New service request**.
+
+3. In the **How can we help?** pane that appears, select the **Message** field (which currently displays **Example: Can't install Office**) and type the following message: **Can't install Office**. Then select the forward arrow that appears next to the field. This displays self-help solutions with insights and recommended articles to assist with your request. 
+
+4. Select one of the recommended articles. After reviewing the article, close the Edge browser tab containing the article. This returns you to the **Support article** pane. 
 
 5. If you need further assistance and would like to speak to a Microsoft support agent, select the **headset** icon (the middle icon) at the top of the **Support article** pane to get help from a Microsoft support agent. Select the **headset** icon now.
 
