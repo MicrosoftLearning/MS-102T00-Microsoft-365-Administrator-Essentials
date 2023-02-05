@@ -8,7 +8,7 @@ During this exercise you will set up and manage Azure AD Connect. You will creat
 
 In Active Directory, the default User Principal Name (UPN) suffix (i.e. the tenant prefix) is the DNS name of the domain where the user account was created. The Azure AD Connect wizard uses the UserPrincipalName attribute, or it lets you specify the on-premises attribute (in a custom installation) to be used as the user principal name in Azure AD. This is the value that is used for signing into Azure AD. 
 
-If you recall, your VM environment was created by your lab hosting provider with an on-premises domain titled **adatum.com**. This domain included a number of on-premises user accounts, such as Holly Dickson, Laura Atkins, and so on. Then in an earlier lab in this course, you created a custom, accepted domain for Adatum titled **xxxUPNxxx.xxxCustomDomainxxx.xxx** (where xxxUPNxxx was the unique UPN name assigned to your tenant, and xxxCustomDomainxxx.xxx was the name assigned to the domain by your lab hosting provider).
+If you recall, your VM environment was created by your lab hosting provider with an on-premises domain titled **adatum.com**. This domain included several on-premises user accounts, such as Holly Dickson, Laura Atkins, and so on. Then in an earlier lab in this course, you created a custom, accepted domain for Adatum titled **xxxUPNxxx.xxxCustomDomainxxx.xxx** (where xxxUPNxxx was the unique UPN name assigned to your tenant, and xxxCustomDomainxxx.xxx was the name assigned to the domain by your lab hosting provider).
 
 In this task, you will use PowerShell to change the user principal name of the domain for the entire Adatum Corporation by replacing the originally established **adatum.com** domain with the custom **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain. In doing so, you will update the UPN suffix for the primary domain and the UPN on every on-premises user account in AD DS with **@xxxUPNxxx.xxxCustomDomainxxx.xxx**. 
 
@@ -69,7 +69,7 @@ In this task, you will run a script that breaks an on-premises user account. As 
 
 		.\CreateProblemUsers.ps1
 	
-	**Important:** Wait until the script has completed before proceeding to the next task. This Windows PowerShell script will make the following change in AD DS:
+	**Important:** Wait until the script has finished before proceeding to the next task. This Windows PowerShell script will make the following change in AD DS:
 
 	- **Klemen Sic**. Update the UserPrincipalName for Klemen to include an extra "@" character. 
 
@@ -96,7 +96,7 @@ In this task you will download and use the IdFix Directory Synchronization Error
 
 6. In the **Do you want to install this application?** page in the **Application Install** wizard, select **Install**.
 
-7. In the **IdFix Privacy Statement** message box, select **OK**. Once the IDFix tool is installed, the **Applicatioin Install** wizard will close and the **IDFix** tool will automatically open. 
+7. In the **IdFix Privacy Statement** message box, select **OK**. Once the IDFix tool is installed, the **Application Install** wizard will close and the **IDFix** tool will automatically open. 
 
 8. In the **IdFix** tool that appears, maximize the window. On the menu bar at the very top of the screen, select **Query** to query the directory. After a short wait, you should see several errors. <br/>
 
@@ -106,7 +106,7 @@ In this task you will download and use the IdFix Directory Synchronization Error
 
 	‎**Note:** If any **topleveldomain** errors appear, then ignore them as they cannot be fixed by the IdFix tool.  
 
-10. In the **Klemen Sic** row, note the text in the **VALUE** column. It currently includes two **@@** signs, which occurred when you ran the script in the prior task that purposely broke Klemen's UserPrincipalName. Now note the text in the **UPDATE** column, which is the value the IDFix tool will change the UPN name to should you direct it to do so. <br/>
+10. In the **Klemen Sic** row, note the text in the **VALUE** column. It currently includes two **@@** signs, which occurred when you ran the script in the prior task that purposely broke Klemen's UserPrincipalName. Now note the text in the **UPDATE** column, which is the value the IDFix tool will change the UPN name to, should you direct it to do so. <br/>
 
 	You want the IDFix tool to fix Klemen's UPN value, so select the drop-down arrow in Klemen's **ACTION** field and select **EDIT**. <br/>
 
