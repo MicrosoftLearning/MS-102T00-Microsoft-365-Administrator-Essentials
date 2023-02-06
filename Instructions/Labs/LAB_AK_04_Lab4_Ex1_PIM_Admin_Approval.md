@@ -2,7 +2,7 @@
 
 As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to implement Privileged Identity Management (PIM) within Azure Active Directory. PIM is an Azure AD service that enables you to manage, control, and monitor access to important resources in your organization. These resources include not only Azure, but other Microsoft Online Services, such as Microsoft 365 and Microsoft Intune.
 
-One of Adatum's pain points in their existing system is they have far too many users who have been assigned administrator roles. This has caused concern among management, who consider this a threat to Adatum's data security. They feel that too many people were originally assigned admin roles that shouldn't have been, and as such, they have access to secure information and resources that could potentially compromise the organization. 
+One of Adatum's pain points in its existing system is that it has far too many users who have been assigned administrator roles. This has caused concern among management, who recognize this situation as an existential threat to Adatum's data security. They feel that too many people were originally assigned admin roles that shouldn't have been, and as such, these users have access to secure information and resources that could potentially compromise the organization. 
 
 Because there's a need to reduce the number of users with permanent administrator roles and yet still provide admin privileges to selected users when business justification warrants it, Holly has been tasked with implementing Azure Active Directory's Privileged Identity Management service. By implementing PIM, Adatum can reduce the number of users with admin roles and yet still be able to assign users with admin rights on an as-needed basis whenever necessary.
 
@@ -17,18 +17,18 @@ In this exercise, you will perform these tasks for the Global administrator role
 
 **IMPORTANT:** In Task 3, Patti Fernandez will submit a request to be assigned the Global administrator role. The activation request process is set up to require Multi-Factor Authentication (MFA). If you do not have a phone to complete this process, notify your instructor. You can still complete Tasks 1 and 2, and you may be able to partner up with another student to watch them complete the remaining tasks.
 
-**BEST PRACTICE REMINDER:** As a best practice in your real-world deployment, you should always write down the first Global admin account’s credentials (in this lab, it's the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). You should store away this account for security reasons. This account should be a non-personalized identity that owns the highest privileges possible in a tenant. It should **NOT** be MFA activated because it is not personalized. Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few personal Global admins as possible. For those personal Global admins that you do create in your real-world deployment, they should each be mapped to a single identity (such as Holly Dickson, Pattid Fernandez, etc.), and they should each have Azure Active Directory Multi-Factor Authentication (MFA) enforced. That being said, you will not turn on MFA for Holly's account because time is limited in this training course and we don't want to take up lab time by forcing you to log in using a second authentication method every time Holly logs in.
+**BEST PRACTICE REMINDER:** As a best practice in your real-world deployment, you should always write down the first Global admin account’s credentials (in this lab, it's the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). You should store away this account for security reasons. This first Global admin account should be a non-personalized identity that owns the highest privileges possible in a tenant. It should **NOT** be MFA activated because it is not personalized. Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few non-personalized Global admins as possible. For those personal Global admins that you do create in your real-world deployment, they should each be mapped to a single identity (such as Holly Dickson, Pattid Fernandez, etc.), and they should each have Azure Active Directory Multi-Factor Authentication (MFA) enforced. That being said, you will not turn on MFA for Holly's account because time is limited in this training course and we don't want to take up lab time by forcing you to log in using a second authentication method every time Holly logs in.
 
 
 ### Task 1 - Configure the Global Administrator role to require approval
 
 Since the Microsoft 365 Global Administrator role provides a user with basically unlimited access to all Microsoft 365 resources, the number of users assigned to this role should obviously be kept to a minimum for security purposes. 
 
-For the purpose of this lab, the lab hosting provider assigned the Global admin role to seven of the predefined user accounts. After you added Holly as a Global admin, eight of the 20 licensed user accounts in your tenant are now global admins, which is not something you would see in a real-world deployment. The best practice guideline that you should follow is to have from two to four Global admins in your real-world Microsoft 365 deployments. 
+In the Microsoft 365 tenant used by this training course, the lab hosting provider assigned the Global admin role to seven of the predefined user accounts. After you added Holly as a Global admin, eight of the 20 licensed user accounts in your tenant are now global admins, which is not something you would see in a real-world deployment. The best practice guideline that you should follow is to have from two to four Global admins in your real-world Microsoft 365 deployments. The reason this tenant exceeds that number is that it's used by multiple training courses, each of which have their own VM requirements. Some of these other courses require specific users to be Global admins, which explains why there are so many in the tenant.
 
 Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to use Privileged Identity Management to limit access to the Global admin role. To do so, she must first configure the role to require approval before it can be assigned as an eligible role for a user, and then she wants to assign herself as the approver whenever an eligible user requests activating the role.
 
-Holly also wants to update the notification settings for the Global admin role. Privileged Identity Management (PIM) lets you know when important events occur in your Azure Active Directory (Azure AD) organization, such as when a role is assigned or activated. PIM keeps you informed by sending you and other participants email notifications. These emails can also include links to relevant tasks, such activating or renewing a role. In this task, Holly wants to update the notifications to ensure that approvals are tracked in real-time in a proactive manner.
+Holly also wants to update the notification settings for the Global admin role. Privileged Identity Management (PIM) lets you know when important events occur in your Azure Active Directory (Azure AD) organization, such as when a role is assigned or activated. PIM keeps you informed by sending you and other participants email notifications. These emails can also include links to relevant tasks, such as activating or renewing a role. In this task, Holly wants to update the notifications to ensure that approvals are tracked in real-time in a proactive manner.
 
 1. The prior lab exercise used Adatum's domain controller (LON-DC1). This lab will use LON-CL1.  <br/>
 
@@ -36,29 +36,31 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 2. On **LON-CL1**, you should still be logged into the machine as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane under the **Admin centers** section, select **Azure Active Directory**
+3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane under the **Admin centers** section, select **Azure Active Directory**.
 
-4. In the **Microsoft Entra admin center**, the **Home** page is displayed by default. Scroll down towards the bottom of the Home page and in the **Feature highlights** section, select **Privileged Identity Management**.
+4. If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick and account** window, select Holly's account, and in the **Enter password** window, enter **User.pw1**. On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
 
-5. In the **Privileged Identity Management | Quick start** window, note how the window is divided into three parts - the navigation pane on the left, the middle pane (which provides navigation options for this page), and the larger detail pane on the right. This design format is used on many of the Azure AD screens. <br/>
+5. In the **Microsoft Entra admin center**, the **Home** page is displayed by default. Scroll down towards the bottom of the Home page and in the **Feature highlights** section, select **Privileged Identity Management**.
 
-    In the middle pane under the **Manage** section, select **Azure AD roles**.
+6. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Azure AD roles**.
 
-6. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Settings**. 
+7. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Settings**. 
 
-7. In the **Adatum Corporation | Settings** window, select the **Global Administrator** role.
+8. In the **Adatum Corporation | Settings** window, select the **Global Administrator** role. <br/>
 
-8. In the **Role setting details -  Global Administrator** window, select **Edit** on the menu bar at the top of the page.
+    **Tip:** If the roles are not displayed in alphabetical order, select the **Role** heading to sort them in ascending alphabetical order. This will make it easier to locate the Global administrator role.
 
-9. In the **Edit role setting - Global Administrator** window, the **Activation** tab is displayed by default. In this tab, below the activation slider, verify the **Azure MFA** option is selected by default for the **On activation, require** setting (if it's not selected, then select it now). This will require that the person requesting activation of the role will have to sign in using multi-factor authentication to provide additional verification that they are who they say they are.
+9. In the **Role setting details -  Global Administrator** window, scroll through the page and review the information for role activation, assignment, and notification. Then select **Edit** on the menu bar at the top of the page.
 
-10. The screen then displays a group of three settings, each with a check box. Select the **Require Approval to activate** check box. By doing so, the **Select approver(s)** section becomes enabled. Do not change the default settings of the other two check boxes.
+10. In the **Edit role setting - Global Administrator** window, the **Activation** tab is displayed by default. In this tab, below the activation slider, verify the **Azure MFA** option is selected by default for the **On activation, require** setting (if it's not selected, then select it now). This will require that the person requesting activation of the role will have to sign in using multi-factor authentication to provide additional verification that they are who they say they are.
 
-11. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select this section. In the **Select a member** pane that opens on the right, scroll through the list of users and select **Holly Dickson**, and then select the **Select** button.
+11. The window then displays a group of three settings, each of which has a corresponding check box. Select the **Require Approval to activate** check box. By doing so, the **Select approver(s)** section becomes enabled. Do not change the default settings of the other two check boxes.
 
-12. In the **Edit role setting - Global Administrator** window, select the **Notification** tab at the top of the page.
+12. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select this section. In the **Select a member** pane that opens on the right, scroll through the list of users and select **Holly Dickson**, and then select the **Select** button.
 
-13. On the **Notification** tab, note the three activities that can trigger the sending of notifications: **Send notifications when...**    <br/>
+13. In the **Edit role setting - Global Administrator** window, select the **Notification** tab at the top of the page.
+
+14. On the **Notification** tab, note the three activities that can trigger the sending of notifications: **Send notifications when...**    <br/>
 
     - members are assigned as eligible to this role
     - members are assigned as active to this role
@@ -68,9 +70,9 @@ Holly also wants to update the notification settings for the Global admin role. 
 
     In the **Additional recipients** field for each of the three instances of the **Role assignment alert**, enter the MOD administrator's email ID of **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).
 
-14. At the bottom of the **Edit role setting - Global Administrator** window, select **Update**.
+15. At the bottom of the **Edit role setting - Global Administrator** window, select **Update**.
 
-15. Leave all browser tabs open for the next task.
+16. Leave all browser tabs open for the next task.
 
 
 ### Task 2 - Assign an eligible group to the Global Admin role
