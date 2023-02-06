@@ -38,7 +38,9 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 15. On the **All services** page, three groups are displayed - General, Identity, and Security. Under the **Identity** group, select **Azure Active Directory**. 
 
-16. On the **Adatum Corporation | Overview** page, in the middle navigation pane under the **Manage** section, select **Azure AD Connect**.
+16. On the **Adatum Corporation | Overview** page, note how the window is divided into three parts - the navigation pane on the left, the middle navigation pane (which provides navigation options for this page), and the larger detail pane on the right. This design format is used on many of the Azure AD screens. <br/>
+
+	In the middle navigation pane under the **Manage** section, select **Azure AD Connect**.
 
 17. On the **AAD Connect | Get started** page, in the middle navigation pane, select **Connect Sync**.
 
