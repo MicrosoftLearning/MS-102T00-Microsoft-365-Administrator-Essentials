@@ -16,7 +16,7 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu that appears, select **Directory synchronization**. This initiates the **Add or sync users to Azure AD** wizard.
 
-5. In the **Add or sync users to Azure AD** wizard, on the **About user synchronization** page, read through the content. In the **Uswer status** section, note the number of existing Adatum cloud users and hybrid users. Select **Next**.
+5. In the **Add or sync users to Azure AD** wizard, on the **About user synchronization** page, read through the content. In the **User status** section, note the number of existing Adatum cloud users and hybrid users. Select **Next**.
 
 6. On the **Select a migration option** page, read the explanation of each option so that you understand the migration options that are available. Select the **Continuous sync** option and then select **Next**.
 
@@ -86,7 +86,7 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 	- In the **Export Statistics** pane on the left, note the number of on-premises users that were added to Azure Active Directory and the number that were updated. 
 	- In the **Export Errors** pane on the right, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). 
 
-		Select the first link (CN={xxxxxx...) under the **Export Errors** column that applies to the first **DataValidationFailed** error. This will display the first of these two users that were not synchronized by the Azure AD Connect tool. Review the error to see why this account is broke. **Tip:** In the **Connector Space Object Properties** window, select the **Export Error** tab. In the **Error Information** section, select the **Detail** button. Review the detailed error information, and then select **Close**. Select **Close** again. <br/>
+		Select the first link (CN={xxxxxx...) under the **Export Errors** column that applies to the first **DataValidationFailed** error. This will display the first of these two users that were not synchronized by the Azure AD Connect tool. Review the error to see why this account is broken. **Tip:** In the **Connector Space Object Properties** window, select the **Export Error** tab. In the **Error Information** section, select the **Detail** button. Review the detailed error information, and then select **Close**. Select **Close** again. <br/>
 
 		Select the second Data Validation error link and verify this error is for the second user that you purposely did not fix. Follow the same steps as before to review the error for this user.   <br/>
 
@@ -145,7 +145,9 @@ Each group will be assigned several members. After the forced synchronization, y
 
 13. In the console tree under **Adatum.com**, select the **Research** folder, and then in the detail pane on the right, double-click on the **Manufacturing** security group.  
 
-14. In the **Manufacturing Properties** window, enter **Manufacturing@adatum.com** in the **E-mail** field.  
+14. In the **Manufacturing Properties** window, enter **manufacturing@adatum.com** in the **E-mail** field. <br/>
+
+	**Note:** There are two types of security groups in Micorosft 365: a security group and a mail-enabled security group. By entering a value in the **E-mail** field for this on-premises security group, the synchronization process will create a mail-enabled security group in Microsoft 365.   
 
 15. Select the **Members** tab, and then repeat steps 6-9 to add the following members to this group:  
 
