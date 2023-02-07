@@ -62,7 +62,7 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 13. In the **Edit role setting - Global Administrator** window, select the **Notification** tab at the top of the page.
 
-14. On the **Notification** tab, note the three activities that can trigger the sending of notifications: **Send notifications when...**    <br/>
+14. On the **Notification** tab, note the three activities that can trigger a notification being sent: **Send notifications when...**    <br/>
 
     - members are assigned as eligible to this role
     - members are assigned as active to this role
