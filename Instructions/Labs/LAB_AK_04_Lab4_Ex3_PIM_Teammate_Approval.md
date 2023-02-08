@@ -220,7 +220,7 @@ When you earlier configured the Intune Administrator role, you set up the notifi
 
 8. In the **Adatum Corporation | Resource audit** page, in the list of PIM activities, select the first activity. In the **Audit details** pane that appears, note the **Subject** is Joni Sherman, and the **Action** indicates Joni was added to the Intune Administrator role. Also note the **Reason** that you entered for the role request. Select **Close**.
 
-9. In your Edge browser session, close all the tabs except for the **Apps | Microsoft 365** tab and the tab containing the **Microsoft 365 admin center**. Leave these two tabs open for the next lab.
+9. In your Edge browser session, close all the tabs except for the **Home | Microsoft 365** tab and the tab containing the **Microsoft 365 admin center**. Leave these two tabs open for the next lab.
 
 
 # End of Lab 4
