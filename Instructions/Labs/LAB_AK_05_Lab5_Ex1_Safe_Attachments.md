@@ -36,7 +36,7 @@ In this task, you will turn on Microsoft Defender for Office 365, which provides
 
     Enter **on** in the **Domains** field. In the menu that appears showing the suggested domains that include this value, select Adatum's **xxxxxZZZZZZonmicrosoft.com** domain (where xxxxxZZZZZZ equals the tenant prefix provided by your lab hosting provider). Adatum's domain will now appear below the **Domains** field. Select **Next**.
 
-11. On the **Settings** page, select the **Dynamic Delivery (Preview messages)** option. This option will deliver all email messages; however, for an email with attachments, it will hold the file(s), test them, and then reattach the files to the messages once the file(s) are scanned and marked acceptable. 
+11. On the **Settings** page, select the **Dynamic Delivery (Preview messages)** option. This option will deliver all email messages; however, for an email with attachments, it will hold the files, test them, and then reattach the files to the messages once the files are scanned and marked acceptable. 
 
 12. Under the **Redirect messages with detected attachments** section, select the **Enable redirect** check box. 
 
