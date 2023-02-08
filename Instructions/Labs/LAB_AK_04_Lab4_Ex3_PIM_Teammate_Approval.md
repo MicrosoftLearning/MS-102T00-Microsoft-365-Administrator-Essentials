@@ -16,7 +16,7 @@ For this final test of PIM in Adatum's pilot project, Holly has selected Alex Wi
 
 1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-2. In your Edge browser, select the tab containing the **Microsot Entra admin center**, which should still be open from the prior lab exercise. 
+2. In your Edge browser, select the tab containing the **Microsoft Entra admin center**, which should still be open from the prior lab exercise. 
 
 3. In the **Microsoft Entra admin center**, in the left-hand navigation pane, select **Groups**, and then select **All groups**.
 
@@ -34,9 +34,9 @@ For this final test of PIM in Adatum's pilot project, Holly has selected Alex Wi
 
     - Membership type - **Assigned**
 
-    - Owners - Select **No owners selected**. In the **Add owners** pane, select **Holly Dickson**.
+    - Owners - Select **No owners selected**. In the **Add owners** pane, enter **Holly** in the **Search** field and select the **Holly@xxxxxZZZZZZ.onmicrosoft.com** user account
 
-    - Members - Select **No members selected**. In the **Add members** pane, select **Alex Wilber** and **Joni Sherman**
+    - Members - Select **No members selected**. In the **Add members** pane, select **Alex Wilber**. Enter **Joni** in the Search field, and then select **Joni Sherman**.
 
 6. In the **New group** window, select **Create**.
 
@@ -60,7 +60,7 @@ For this final test of PIM in Adatum's pilot project, Holly has selected Alex Wi
 
 16. In the **Add assignments** window, select **Next** (this does the same thing as selecting the **Setting** tab). 
 
-17. In the **Add assignments** window, under the **Settings** tab, verify the **Assignment type** option is set to **Eligible**. Also verify the **Permanently eligible** check box is selected (if not, then do so now), and then select **Assign**. 
+17. In the **Add assignments** window, under the **Setting** tab, verify the **Assignment type** option is set to **Eligible**. Also verify the **Permanently eligible** check box is selected (if not, then do so now), and then select **Assign**. 
 
 18. In the **Intune Administrator | Assignments** window, note that the **PIM-Intune-Administrators** group is an eligible assignment to the Intune Administrator role. Because **PIM-Intune-Administrators** is a group, it means that all members of this group (which consists of Alex Wilber and Joni Sherman) are now eligible to be assigned the Intune Administrator role.
 
@@ -82,32 +82,38 @@ As in the prior PIM exercise involving the Helpdesk admin role, Holly is trustin
 
 4. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Settings**. 
 
-5. In the **Adatum Corporation | Settings** window, select the **Intune Administrator** role.
+5. In the **Adatum Corporation | Settings** window, select the **Intune Administrator** role.    <br/>
 
-6. In the **Role setting details -  Intune Administrator** window, select **Edit** on the menu bar at the top of the page.
+    **Tip:** If the roles are not displayed in alphabetical order, select the **Role** heading to sort them in ascending alphabetical order. This will make it easier to locate the Intune administrator role.
 
-7. In the **Edit role setting - Intune Administrator** window, the **Activation** tab is displayed by default. For the pilot project, Holly does not want the **Require justification on activation** check box selected. If this check box is selected, then un-select (clear) it now. Holly knows that Alex and Joni will only activate the role when needed, so she doesn't require a justification from them to activate the role assignment (however, in the next step, Holly will require justification when they request assignment of the role). 
+6. In the **Role setting details -  Intune Administrator** window, scroll through the page and review the information for role activation, assignment, and notification. Then select **Edit** on the menu bar at the top of the page.
 
-8. Select the **Require approval to activate** check box. By doing so, the **Select approver(s)** section becomes enabled.
+7. Below the activation slider, set the **On activation, require** setting to **None**. <br/>
 
-9. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign the members of the PIM-Intune-Administrators group as the approver for this role, so select this section. 
+    **Note:** In a previous lab exercise, Holly required that Patti Fernandez sign in using Azure MFA when she requested activation of the Global admin role. In doing so, Holly verified the Azure MFA sign-in worked. However, for the purpose of the pilot project, Holly will not require verification using multi-factor authentication when activating the Intune administrator role (and since you already tested this MFA feature in the prior lab exercise, there's no reason to take time in class to do it again). 
 
-10. In the **Select a member** pane that appears, enter **PIM** in the Search box. In the list of users and groups whose name starts with **PIM**, select **PIM-Intune-Administrators** and then select the **Select** button. By selecting this group, the members of the group will receive notification to approve the request made by any eligible user for this role.
+8. In the **Edit role setting - Intune Administrator** window, the **Activation** tab is displayed by default. For the pilot project, Holly does not want the **Require justification on activation** check box selected. If this check box is selected, then un-select (clear) it now. Holly knows that Alex and Joni will only activate the role when needed, so she doesn't require a justification from them to activate the role assignment (however, in the next step, Holly will require justification when they request assignment of the role). 
 
-11. In the **Edit role setting - Intune Administrator** window, you're currently in the **Activation** tab. Select the **Assignment** tab that appears next to it. Verify the **Require justification on active assignment** check box is selected (if not, select it now).
+9. Select the **Require approval to activate** check box. By doing so, the **Select approver(s)** section becomes enabled.
 
-12. In the **Edit role setting - Intune Administrator** window, select the **Notification** tab.
+10. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign the members of the PIM-Intune-Administrators group as the approver for this role, so select this section. 
 
-13. On the **Notification** tab, under the **Send notifications when eligible members activate this role** section, Holly wants to be notified when Alex or Joni approve this role. Therefore:
+11. In the **Select a member** pane that appears, enter **PIM** in the Search box. In the list of users and groups whose name starts with **PIM**, select **PIM-Intune-Administrators** and then select the **Select** button. By selecting this group, the members of the group will receive notification to approve the request made by any eligible user for this role.
+
+12. In the **Edit role setting - Intune Administrator** window, you're currently in the **Activation** tab. Select the **Assignment** tab that appears next to it. Verify the **Require justification on active assignment** check box is selected (if not, select it now).
+
+13. In the **Edit role setting - Intune Administrator** window, select the **Notification** tab.
+
+14. On the **Notification** tab, under the **Send notifications when eligible members activate this role** section, Holly wants to be notified when Alex or Joni approve this role. Therefore:
 
     - Verify the **Role activation alert** check box is selected.
     - The default recipient for the **Role activation alert** is **Admin**. This refers to the Global Administrators (Holly) and any Privileged Role Administrators. 
     - Un-check (clear) the **Notification to activated user (requestor)**. Since Alex and Joni will be approving each other's requests, they don't need to receive a notification when they do so.
-    -  Verify the **Request to approve an activation** check box is selected. When Alex or Joni request the other to approve a role assignment, they want the approver to receive a notification asking them to approve the request. You'll verify this in a later task.
+    -  Verify the **Request to approve an activation** check box is selected. 
 
-14. At the bottom of the **Edit role setting - Intune Administrator** window, select **Update**.
+15. At the bottom of the **Edit role setting - Intune Administrator** window, select **Update**.
 
-15. Leave all browser tabs open for the next task.
+16. Leave all browser tabs open for the next task.
 
 
 ### Task 3 - Submit a request for the Intune Admin role
@@ -147,7 +153,7 @@ As a member of the PIM-Intune-Administrators group, Joni can approve requests fo
 
 1. You should still be logged into the InPrivate browser session as Joni Sherman. If you closed the session at the end of the prior task, then repeat the steps from the prior task to open the InPrivate browsing session, sign in as Joni, and navigate to the **My roles** window. 
 
-2. You want to begin by verifying that Joni can't self-approve her own request for the Intune Admin role. You're currently in the **My roles | Azure AD roles** window, where you left off from the prior task. In the navigation thread at the top of the window (**All services > Privileged Identity Management**), select **Privileged Identity Management**.
+2. You want to begin by verifying that Joni can't self-approve her own request for the Intune Admin role. You're currently in the **My roles | Azure AD roles** window, where you left off from the prior task. In the navigation thread at the top of the window (**All services > Privileged Identity Management | My roles**), select **Privileged Identity Management | My roles**.
 
 3. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the left-hand navigation pane, select **Approve requests**.
 
@@ -165,7 +171,7 @@ As a member of the PIM-Intune-Administrators group, Joni can approve requests fo
 
 9. If a **Welcome to Microsoft Azure** dialog box appears, select **Maybe later** to skip the tour.
 
-10. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. This section displays a row of Azure services and their associated icons. At the end of the row, select **More services** (with the forward arrow icon). This opens the **All services** window.
+10. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. Select **More services** (with the forward arrow icon). This opens the **All services** window.
 
 11. In the **All services** window, enter **priv** in the **Search** box at the top of the page. In the list of search results, select **Azure AD Privileged Identity Management**.
 
@@ -181,7 +187,7 @@ As a member of the PIM-Intune-Administrators group, Joni can approve requests fo
 
 17. You're now going to log into Azure as Joni Sherman. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter **User.pw1** and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
-18. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. This section displays a row of Azure services and their associated icons. At the end of the row, select **More services** (with the forward arrow icon). This opens the **All services** window.
+18. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. Select **More services** (with the forward arrow icon). This opens the **All services** window.
 
 19. In the **All services** window, enter **priv** in the **Filter services** search box at the top of the page. In the list of search results, select **Azure AD Privileged Identity Management**.
 
@@ -202,7 +208,7 @@ When you earlier configured the Intune Administrator role, you set up the notifi
 
 2. In your Edge browser, you should still have the Outlook tab open from the prior lab exercise in which you verified that Holly received an email notification that Alex Wilber had self-approved the Helpdesk Administrator role. Select the **Outlook** tab in your Edge browser session to return to Holly's Inbox. 
 
-3. In Holly's **Inbox**, verify that Holly received a PIM generated email indicating that **Joni Sherman activated the Intune Administrator role assignment**. 
+3. In Holly's **Inbox**, she should have received an email indicating **PIM: Joni Sherman activated the Intune Administrator role assignment**.
 
 4. Select the email to open it. Review the information in the email. 
 
