@@ -22,7 +22,7 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 6. On the **Name your policy** page, enter **LinkPolicy1** in the **Name** field and then select **Next**.
 
-7. On the **Users and domains** page, enter **onmicrosoft.com** in the **Domains** field. In the menu of suggested domains that appears, select Adatum's **xxxxxZZZZZZonmicrosoft.com** domain. Adatum's domain will now appear below the **Domains** field. Select **Next**.
+7. On the **Users and domains** page, enter **on** in the **Domains** field. In the menu of suggested domains that appears, select Adatum's **xxxxxZZZZZZonmicrosoft.com** domain. Adatum's domain will now appear below the **Domains** field. Select **Next**.
 
 8. On the **URL & click protection settings** page, update the following settings and then select **Next**: 
 
@@ -36,13 +36,13 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 11. On the **New Safe Links policy created** page, select **Done**. Once the **LinkPolicy1** policy is created, it will appear in the Safe links list. 
 
-12. In the navigation thread at the top of the page (**Policies & rules > Threat policies > Safe attachments**), select **Threat policies**.
+12. In the navigation thread at the top of the page (**Policies & rules > Threat policies > Safe links**), select **Threat policies**.
 
 13. In the **Threat policies** page, under the **Rules** section, select **Tenant Allow/Block Lists**.
 
 14. On the **Tenant Allow/Block Lists** page, the **Domains & addresses** tab is displayed by default. Select the **URLs** tab.
 
-15. On the **URLs** tab, select **+ Block** on the menu bar. In the **Block URLs** pane that appears, enter **http://tailspintoys.com** in the field and then select **Add**.
+15. On the **URLs** tab, select **+Block** on the menu bar. In the **Block URLs** pane that appears, enter **http://tailspintoys.com** in the field and then select **Add**.
 
 **STOP!!** As mentioned at the start of this lab exercise, now that you have created a Safe Links policy, you must wait at least 30 minutes for the policy to propagate through the system before you can perform the next task in this exercise. 
 
