@@ -54,7 +54,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. In your **Microsoft Edge** browser, select the **Microsoft Office Home** tab and then in the column of app icons on the left side of the screen, select the **Outlook** icon. This will open Holly Dickson's mailbox.
+2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab and then in the column of app icons on the left side of the screen, select the **Outlook** icon. This will open Holly Dickson's mailbox.
 
 3. **Outlook** will open in a new tab in your browser, and Holly's **Inbox** will be displayed.
 
@@ -70,45 +70,37 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 6. Select the entire text string that you just added in the body of the message.
 
-7. Below the body of the message is a long row of formatting icons. Select the **Insert link** icon, which depicts two overlapping circles. In the menu that appears, select **Insert link (Ctrl+K)**.
+7. To the right of the subject is a row of formatting icons. Select the **Link** icon, which depicts two half-ovals with a line in between. 
 
 8. In the **Insert link** window that appears, the text that you highlighted in the body of the message should be displayed in the **Display as** field. In the **Web address (URL)** field, enter the following URL: **http://tailspintoys.com/aboutus/freetoys**.
 
-9. Select **OK**. 
+9. Select **OK**. In the body of the email, the message should now be hyperlinked. 
 
-10. In the body of the email, the message should still be highlighted. Select anywhere in the body of the message to remove the highlighting. The color of the text should now be blue, and it should be underlined, indicating that this message is hyperlinked to a URL.
+10. Select the **Send** button. Select Holly's **Sent Items** folder to verify the message was sent.
 
-11. Select the **Send** button. Select Holly's **Sent Items** folder to verify the message was sent.
+11. You now want to go the MOD Administrator's Inbox in Outlook and validate whether the Safe Links policy you created in the prior task worked on the email that you just sent from Holly to the MOD Administrator.<br/>
 
-12. You now want to go the MOD Administrator's Inbox in Outlook and validate whether the Safe Links policy you created in the prior task worked on the email that you just sent from Holly to the MOD Administrator.<br/>
+    To do this, you must first switch to the Client 2 VM (**LON-CL2**). 
 
-    To do this, you must first switch the Client 2 VM (**LON-CL2**). 
-
-13. At the end of Lab 2, you should have logged into LON-CL2 as the local **Administrator** account. <br/>
+12. At the end of Lab 2, you should have logged into LON-CL2 as the local **Administrator** account (lon-cl2\admin). <br/>
 
     If you didn't do this, and you're still logged in as Laura Atkins from the end of Lab 2, then select **Ctrl+Alt+Delete**, select **Switch user**, and then log in as the local **Administrator** with a password of **Pa55w.rd**.
 
-14. Select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
+13. On **LON-CL2**, select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
 
-15. In the **Sign-in** window, enter **admin@xxxxxZZZZZZ.onmicrosoft.com** (this is your tenant's MOD Administrator account that was created by your lab hosting provider, where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+14. In the **Pick an account** window, select **Use another account**, and then in the **Sign in** window, enter the username and password for the MOD Administrator account (**admin@xxxxxZZZZZZonmicrosoft.com**).
 
-16. In the **Enter password** window, enter the tenant password provided by your lab hosting provider and select **Sign in**.
+15. In the **Enter password** window, enter the tenant password provided by your lab hosting provider and select **Sign in**.
 
-17. Close the **Let Microsoft Edge save and fill your password for this site next time?** banner by selecting **Never**.
+16. In the MOD Administrator's **Inbox**, select the email that was sent by Holly regarding free stuff for Adatum users.
 
-18. On the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes.**
+17. Select the hyperlink in the body of the message to navigate to the site. 
 
-19. In the **Welcome** windows, select the X in the upper right corner to close the window.
+18. A new tab should open in your **Edge** browser that takes you to the URL you just saw in the prior step. This site should display the following warning message: **This website is classified as malicious.** This not only indicates that opening this website may not be safe, but it also verifies that the Safe Links policy you just created is working properly.
 
-20. In the MOD Administrator's **Inbox**, select the email that was sent by Holly regarding free stuff for Adatum users.
+19. You should now prepare LON-CL2 for the next lab that will use it. In your Edge browser, in the Outlook tab, select the circle with the **MA** initials in the upper right-hand corner. In the **MOD Administrator** profile window that appears, select **Sign out**.
 
-21. Select the hyperlink in the body of the message to navigate to the site. 
-
-22. A new tab should open in your **Edge** browser that takes you to the URL you just saw in the prior step. This site should display the following warning message: **This website is classified as malicious.** This not only indicates that opening this website may not be safe, but it also verifies that the Safe Links policy you just created is working properly.
-
-23. You should now prepare LON-CL2 for the next lab that will use it. In your Edge browser, in the Outlook tab, select the circle with the **MA** initials in the upper right-hand corner. In the **MOD Administrator** profile window that appears, select **Sign out**.
-
-24. Once you are signed out of Outlook, close the Edge Browser. LON-CL2 is now ready for use in Lab 6.
+20. Once you are signed out of Outlook, close the Edge Browser. LON-CL2 is now ready for use in Lab 6.
 
 
 # End of Lab 5
