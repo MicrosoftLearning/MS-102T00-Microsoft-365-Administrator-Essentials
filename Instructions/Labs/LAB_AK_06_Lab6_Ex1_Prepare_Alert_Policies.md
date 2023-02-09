@@ -6,7 +6,7 @@ In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you h
 
 There are two requirements to viewing alerts in Microsoft 365 Defender – turning on Audit Logging and assigning the proper Role Based Access Control (RBAC) permissions to the users who will view alerts. 
 
-- **Audit logging.** If you will recall, towards the end of Lab 1 you turned on Audit Logging. You performed this task in Lab 1 because it can take an hour or two to propagate that setting through the system before you can successfully implement alerts. This propagation should have completed by now, and you should be ready to go.
+- **Audit logging.** If you recall, towards the end of Lab 1 you turned on Audit Logging. You performed this task in Lab 1 because it can take an hour or two to propagate that setting through the system before you can successfully implement alerts. This propagation should have completed by now, and you should be ready to go.
 
 - **RBAC permissions.** In this exercise, you will assign the necessary RBAC role group to Lynne Robbins, who is the user that Holly selected for testing alerts in Adatum's Microsoft 365 pilot project. 
 
@@ -29,21 +29,21 @@ Perform the following steps to assign Lynne Robbins the Compliance Data Administ
 
     Switch to **LON-CL1**. 
 
-2. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+2. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-3. After finishing the previous lab, you should still be in the **Microsoft 365 admin center** in your browser. In the left-hand navigation pane, select **Show all**, and then under the **Admin centers** group, select **Security**.
+3. If necessary, select the **Microsoft 365 admin center** tab in your browser. In the left-hand navigation pane, under the **Admin centers** group, select **Security**. This opens the Microsoft 365 Defender portal in a new tab.
 
-4. In **Microsoft 365 Defender**, scroll down towards the bottom of the left-hand navigation pane and select **Permissions**.
+4. In the **Microsoft 365 Defender** portal, scroll down towards the bottom of the left-hand navigation pane and select **Permissions**.
 
-5. On the **Permissions** page, under the **Email & collaboration roles** section, select **Roles**. 
+5. On the **Permissions** page, there are three sections - Azure AD, Email & collaboration roles, and Cloud Apps. Under the **Email & collaboration roles** section, select **Roles**. 
 
-6. In the list of roles that appears, select the **Compliance Data Administrator** role group. 
+6. In the list of roles that appears, select the **Name** column heading to sort the roles in ascending alphabetical name order. Select the **Compliance Data Administrator** role group. 
 
-7. In the **Compliance Data Administrator** pane, note the list of roles that have been assigned to this role group. Scroll to the bottom of the pane, and in the **Members** section, select **Edit**. 
+7. In the **Compliance Data Administrator** pane that appears, note the list of roles that have been assigned to this role group. Scroll to the bottom of the pane, and in the **Members** section, select **Edit**. 
 
 8. In the **Editing Choose members** window, note the message indicating the list of members is currently empty. Below this message, select **Choose members**. 
 
-9. In the **Choose members** window, select **+Add**, and then in the list of users that appears, select **Lynne Robbins,** and then select **Add.**
+9. In the **Choose members** window, select **+Add**. Because a partial, unsorted list of users appears, enter **Lynner** in the **Search** field. In the list of users that appear whose name starts with Lynne, select the check box next to **Lynne Robbins** and then select **Add.**
 
 10. In the **Choose members** window, select **Done.**
 
@@ -51,7 +51,7 @@ Perform the following steps to assign Lynne Robbins the Compliance Data Administ
 
 12. In the **Compliance Data Administrator** pane, select **Close.**
 
-13. Leave all tabs in your Edge browser open for the next task.
+13. Leave all tabs in your Edge browser open for the next lab exercise.
 
 You have now added Lynne Robbins to the Compliance Data Administrator role group.
 
