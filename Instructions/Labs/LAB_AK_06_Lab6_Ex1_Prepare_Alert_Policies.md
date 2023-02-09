@@ -43,7 +43,7 @@ Perform the following steps to assign Lynne Robbins the Compliance Data Administ
 
 8. In the **Editing Choose members** window, note the message indicating the list of members is currently empty. Below this message, select **Choose members**. 
 
-9. In the **Choose members** window, select **+Add**. Because a partial, unsorted list of users appears, enter **Lynner** in the **Search** field. In the list of users that appear whose name starts with Lynne, select the check box next to **Lynne Robbins** and then select **Add.**
+9. In the **Choose members** window, select **+Add**. Because a partial, unsorted list of users appears, enter **Lynne** in the **Search** field. In the list of users that appears whose name includes Lynne, select the check box next to **Lynne Robbins** and then select **Add.**
 
 10. In the **Choose members** window, select **Done.**
 
