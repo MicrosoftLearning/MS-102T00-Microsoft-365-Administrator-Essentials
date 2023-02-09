@@ -81,7 +81,7 @@ In the prior task, you configured an alert that will notify Lynne Robbins when a
 
 	Scroll down through the **Site collection admin permissions** pane and review all the information for this alert activity. When you are done, select **Close** to close the pane.
 
-10. Leave your LON-CL1 and LON-CL2 VMs open for the remaining exercises in this lab.
+10. Leave your LON-CL1 and LON-CL2 VMs open for the remaining exercise in this lab.
 
 You have now successfully tested the SharePoint alert to monitor site collection admin permissions on SharePoint sites. 
 
