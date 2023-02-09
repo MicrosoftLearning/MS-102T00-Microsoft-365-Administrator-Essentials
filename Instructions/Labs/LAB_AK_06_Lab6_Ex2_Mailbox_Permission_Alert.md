@@ -1,13 +1,12 @@
 # Learning Path 6 - Lab 6 - Exercise 2 - Implement Mailbox Permission Alert
 
-
 In this exercise you will configure and test an alert that will notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum.
 
 ### Task 1 – Create a Mailbox Permission Alert
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson. 
 
-2. **Microsoft 365 Defender** should still be open in your Edge browser from the prior task. In the left-hand navigation pane, under the **Email & collaboration** section, select **Policies & rules**. 
+2. **Microsoft 365 Defender** should still be open in your Edge browser from the prior task. Select the **Microsoft 365 Defender** tab now. In the left-hand navigation pane, under the **Email & collaboration** section, select **Policies & rules**. 
 
 3. On the **Policies & rules** window, select **Alert policy**. If a dialog box appears indicating the alert policy portal has been updated, select the **Dismiss** button.
 
@@ -85,7 +84,7 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 	‎Switch to **LON-CL2**. 
 
-9. On **LON-CL2**, you should be signed in to the machine as the local **adatum\administrator** account. Select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
+9. On **LON-CL2**, you should be signed in to the machine as the local **administrator** (lon-cl2\admin) account. Select the **Microsoft Edge** icon in the taskbar, maximize the window (if necessary), and then enter the following URL in the address bar: **https://outlook.office365.com**
 
 10. In the **Pick an account** window, if Lynne Robbins account (**LynneR@xxxxxZZZZZZ.onmicrosoft.com**) appears in the user list, then select it now; otherwise, select **Use another account** and sign in as **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Then enter **User.pw1** as Lynne's password.
 
@@ -93,13 +92,15 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 	**WARNING:** Lab testing has shown that in some cases, it can take up to 15 minutes or so for the email to be received in Lynne's Inbox. You may need to refresh Outlook one or more times until you receive the email.
 
-12. Once the notification email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft 365 Defender** portal in a new tab, displays the **Alerts** window, and automatically opens the **Mailbox permission change** pane for this alert activity that triggered the email notification to Lynne. <br/>
+12. Once the notification email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft 365 Defender** portal in a new tab.
+
+13. The **Microsoft 365 Defender** portal displays the **Alerts** window, and it automatically opens the **Mailbox permission change** pane for this alert activity that triggered the email notification to Lynne. <br/>
 
 	Scroll down through the **Mailbox permission change** pane and review all the information for this activity. When you are done, select **Close** to close the pane.
 
-13. You should now prepare LON-CL2 for the next lab that will use it. In your Edge browser, close the **Alerts - Microsoft 365 security** tab. in the Outlook tab, select the circle with Lynne Robbin's picture in the upper right-hand corner. In the **Lynne Robbins** profile window that appears, select **Sign out**.
+14. You should now prepare LON-CL2 for the next lab that will use it. In your Edge browser, close the **Alerts - Microsoft 365 security** tab. In Lynne's **Outlook** tab, select the circle with Lynne Robbin's picture in the upper right-hand corner. In the **Lynne Robbins** profile window that appears, select **Sign out**.
 
-14. Once you're signed out of Outlook, close the Edge browser to return back to the LON-CL2 desktop.
+15. Once you're signed out of Outlook, close the Edge browser to return back to the LON-CL2 desktop.
 
 
 You have just successfully tested a mailbox permission alert that sent an alarm message on granting FullAccess to a user mailbox.
