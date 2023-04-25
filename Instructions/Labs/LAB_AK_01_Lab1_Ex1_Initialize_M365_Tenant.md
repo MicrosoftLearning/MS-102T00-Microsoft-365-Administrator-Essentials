@@ -265,5 +265,30 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 6. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
+### Task 7 - Configure your lab tenant
+
+In this task, you will run a lab setup script that creates a sensitivity label and sensitivity label policy for future use in this lab series. This initial step is crucial, as sensitivity labels and policies require at least 24 hours to propagate through M365.
+
+1. On **LON-CL1**, select the **File Explorer** icon from the Windows taskbar.
+
+2. In **File Explorer**, navigate to the following folder location: **C:\Users\Administrator.ADATUM\Documents\Lab Setup**.
+
+3. In the **Lab Setup** subfolder a .bat file named **LabSetup.bat** should exist.
+
+    Right-click **LabSetup.bat** and then select **Run as administrator** to start the lab setup process.
+
+    **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab setup** window will appear on the screen.
+
+3. After about 30 seconds (and up to 1 minute), a Microsoft Sign-on prompt will appear. Sign-in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+
+    **Note:** A second Microsoft Sign-on prompt will appear. On the second Sign-on prompt, select **admin@xxxxxZZZZZZ.onmicrosoft.com** from the list of available accounts. If prompted, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+
+    **Important:** The **Lab Setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Click **Ok**, close the Microsoft Sign-on window, and repeat step 4.
+
+4. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
+
+    **IMPORTANT:** It could take the full 5 minute time-frame for the lab setup process to complete.
+
+
 
 # Proceed to Lab 1 - Exercise 2 
