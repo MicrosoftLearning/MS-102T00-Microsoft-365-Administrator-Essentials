@@ -279,13 +279,13 @@ In this task, you will run a lab setup script that creates a sensitivity label a
 
     **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab setup** window will appear on the screen.
 
-3. After about 30 seconds (and up to 1 minute), a Microsoft Sign-on prompt will appear. Sign-in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+4. After about 30 seconds (and up to 1 minute), a Microsoft Sign-on prompt will appear. Sign-in as **admin@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
 
     **Note:** A second Microsoft Sign-on prompt will appear. On the second Sign-on prompt, select **admin@xxxxxZZZZZZ.onmicrosoft.com** from the list of available accounts. If prompted, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
 
     **Important:** The **Lab Setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Click **Ok**, close the Microsoft Sign-on window, and repeat step 4.
 
-4. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
+5. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
 
     **IMPORTANT:** It could take the full 5 minute time-frame for the lab setup process to complete.
 
