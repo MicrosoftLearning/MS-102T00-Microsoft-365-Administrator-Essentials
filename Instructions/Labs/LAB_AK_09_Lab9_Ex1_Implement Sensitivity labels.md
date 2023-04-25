@@ -141,7 +141,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 31. On the **Review your settings and finish** page, select **Create label**.
 
-32. On the **Your sensitivity label was created** page, select **Done**.
+32. On the **Your sensitivity label was created** page, choose **Don't create a policy yet** and then select **Done**.
 
 33. In the **Create auto-labeling policy** pane appears, close it now. 
 
