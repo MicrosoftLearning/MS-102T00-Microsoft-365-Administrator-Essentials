@@ -296,7 +296,7 @@ In this task, you will recover the Inside Sales group, which was a Microsoft 365
 
 5. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
-6. You will now use Microsoft Graph PowerShell to display the list of active groups. The Inside Sales group should not appear in this list. Type the following command and press Enter (Note: it may take a minute or so for the list of groups to appear):
+6. You will now use Microsoft Graph PowerShell to display the list of active groups. The Inside Sales group should not appear on this list. Type the following command and press Enter (Note: it may take a minute or so for the list of groups to appear):
 
 		Get-MgGroup
 
