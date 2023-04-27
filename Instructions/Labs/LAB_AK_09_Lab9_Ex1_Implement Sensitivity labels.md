@@ -177,11 +177,11 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 ### Task 3 – Assign a Sensitivity Label to a document
 
-As the instructions at the start of this lab indicated, you can't test the sensivity label policy that you just created in the prior task. It will take up to 24 hours for that label policy to propagate through Microsoft 365 before it appears in Microsft Word, Outlook, and so on. 
+As the instructions at the start of this lab indicated, you can't test the sensivity label and label policy that you just created in the prior task. It will take up to 24 hours for that label policy to propagate through Microsoft 365 before its label appears in Microsft Word, Outlook, and so on. 
 
 **Important:** The label and label policy that you will test in these next two tasks will be the label and label policy that were created when you ran the PowerShell script in Lab 1 on the first day of class. 
 
-**Note:** The label and label policy that you created in the prior task  have the same exact settings as the label and label policy that were created when you ran the PowerShell script in Lab 1. The only difference between the two labels and the two policies should be their names. The names of these labels and label policies are:
+**Note:** The label and label policy that you created in the prior task  have the same exact settings as the label and label policy that were created when you ran the PowerShell script in Lab 1. The only difference between the two labels and the two label policies should be their names. The names of these labels and label policies are:
 
 - The label that you created in the prior task was titled **PII**. 
 - The label that was created by the script that you ran in Lab 1 was titled **PII - V1**. 
@@ -224,7 +224,7 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 	Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the **PII - V1** label the script created and published. Since the **PII - V1** label is enabled for this document, a check mark is displayed next to **PII - V1**. <br/>
 	
-	In this first validation test, you are going to attempt to remove this sensitivity label from being applied to this document. When you created the **PII Policy - V1** policy and **PII** label in the prior task, the same options you selected were applied to the **PII Policy - V1** policy and **PII - V1** label by the Lab 1 script. One of those options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
+	In this first validation test, you're going to attempt to remove this sensitivity label from being applied to this document. When you created the **PII Policy - V1** policy and **PII** label in the prior task, the same options you selected were applied to the **PII Policy - V1** policy and **PII - V1** label by the Lab 1 script. One of the label policy options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
 	
 	To remove the label from this document, select the **PII - V1** label that appears in this drop-down menu.
 	
@@ -253,7 +253,7 @@ You have just successfully created an AIP protected Word document that is read-o
 
 ### Task 4 – Verify your Sensitivity Label policy
 
-In the prior task, you created a Word document and protected it with a Sensitivity label. The PII - V1 label policy should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
+In the prior task, you created a Word document and protected it with a sensitivity label. The **PII - V1** label should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task.
 
