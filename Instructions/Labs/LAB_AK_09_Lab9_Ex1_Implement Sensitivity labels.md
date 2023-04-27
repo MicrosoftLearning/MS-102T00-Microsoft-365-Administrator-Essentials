@@ -1,8 +1,13 @@
 # Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with Azure Information Protection Unified Labels client
 
-In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Azure Information Protection (AIP) and Windows Information Protection (WIP) at Adatum. 
+In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Azure Information Protection (AIP) at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. You will test a different label.
 
-**IMPORTANT:** This lab exercise consists of four tasks. In the first task you will install the AIP Unified Labeling Client, and in the second task you will create a sensitivity label and assign it to the default sensitivity label policy. The final two tasks validate the sensitivity label and label policy. The problem with this lab is that when you create a sensitivity label and label policy, it takes up to 24 hours for the label and label policy to propagate through the system. **This means that you can perform the first two tasks, but then you must wait until the next day before you can perform the final two tasks.**  
+**IMPORTANT:** If you recall, back on the first day of this class, you ran a lab setup script that created and published a sensitivity label and sensitivity label policy. Running that script was necessary to support this lab due to a timing issue with sensitivity labels. Once you publish a label, it takes 24 hours for the published label to propagate through Microsoft 365. As such, you won't be able to test the label that you create and publish in this lab.
+
+To address this timing issue, you ran that PowerShell script back on day 1 to create and publish a sensitivity label. Now that you've reached this lab, that label will have propagated through the system, and you'll be able to test it.
+
+Because we want you to gain the experience of creating and publishing a label using the Microsoft 365 UI, you will still create a sensitivity label in this lab. However, when you perform the tasks to test the label, you won't test the label that you created and published in the UI, since that label won't be available to test for 24 hours. Instead, you will test the label that you created and published using the script that you ran back on day 1 of this class.
+
 
 ### Task 1 – Install the Azure Information Protection Unified Labeling client
 
