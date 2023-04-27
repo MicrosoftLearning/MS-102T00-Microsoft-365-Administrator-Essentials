@@ -2,11 +2,11 @@
 
 In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Azure Information Protection (AIP) at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. You will test a different label.
 
-**IMPORTANT:** If you recall, back on the first day of this class, you ran a lab setup script that created and published a sensitivity label and sensitivity label policy. Running that script was necessary to support this lab due to a timing issue with sensitivity labels. Once you publish a label, it takes 24 hours for the published label to propagate through Microsoft 365. As such, you won't be able to test the label that you create and publish in this lab.
+**IMPORTANT:** If you recall, back on the first day of this class, you ran a lab setup script that created and published a sensitivity label and sensitivity label policy. Running that script was necessary to support this lab due to a timing issue with sensitivity labels. Once you publish a label policy, it takes 24 hours for the published label policy to propagate through Microsoft 365. As such, you won't be able to test the label and label policy that you create and publish in this lab.
 
-To address this timing issue, you ran that PowerShell script back on day 1 to create and publish a sensitivity label. Now that you've reached this lab, that label will have propagated through the system, and you'll be able to test it.
+To address this timing issue, you ran that PowerShell script back on day 1 to create and publish a sensitivity label and label policy. Now that you've reached this lab, that label policy will have propagated through the system, and you'll be able to test it.
 
-Because we want you to gain the experience of creating and publishing a label using the Microsoft 365 UI, you will still create a sensitivity label in this lab. However, when you perform the tasks to test the label, you won't test the label that you created and published in the UI, since that label won't be available to test for 24 hours. Instead, you will test the label that you created and published using the script that you ran back on day 1 of this class.
+Because we want you to gain the experience of creating and publishing a label and label policy using the Microsoft 365 UI, you will still create a sensitivity label and label policy in this lab. However, when you perform the tasks to test the label and label policy, you won't test the ones that you created and published in the UI, since that label and label policy won't be available to test for 24 hours. Instead, you will test the label and label policy that you created and published using the script that you ran back on day 1 of this class.
 
 
 ### Task 1 – Install the Azure Information Protection Unified Labeling client
@@ -148,52 +148,51 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 32. On the **Your sensitivity label was created** page, choose **Don't create a policy yet** and then select **Done**.
 
-33. In the **Create auto-labeling policy** pane appears, close it now. 
+33. Now it's time to publish the **PII** label. On the **Information protection** window, the **Labels** tab is displayed by default. In the list of labels, if the **PII** label does not appear, select **Refresh** on the menu bar. Once the **PII** label appears, select the check box that appears to the left of it. 
 
-34. Now it's time to publish the **PII** label. On the **Information protection** window, the **Labels** tab is displayed by default. In the list of labels, if the **PII** label does not appear, select **Refresh** on the menu bar. Once the **PII** label appears, select the check box that appears to the left of it. 
+34. Select the **Publish label** option that appears in the menu bar above the list of labels. This initiates a **Create policy** wizard.
 
-35. Select the **Publish label** option that appears in the menu bar above the list of labels. This initiates a **Create policy** wizard.
+35. In the **Create policy** wizard, on the **Choose sensitivity labels to publish** page, the **PII** label is already listed, so select **Next**.
 
-36. In the **Create policy** wizard, on the **Choose sensitivity labels to publish** page, the **PII** label is already listed, so select **Next**.
+36. On the **Publish to users and groups** page, you can either select **All** users and groups, or you can select specific users and groups. Select **Choose user or group**.
 
-37. On the **Publish to users and groups** page, you can either select **All** users and groups, or you can select specific users and groups. Select **Choose user or group**.
+37. A **Users and groups** pane appears that displays all the Adatum users and groups. Hover your mouse to the left of the **Name** column heading and select the check box that appears. This will automatically select all the check boxes. Select **Done**.
 
-38. A **Users and groups** pane appears that displays all the Adatum users and groups. Hover your mouse to the left of the **Name** column heading and select the check box that appears. This will automatically select all the check boxes. Select **Done**.
+38. On the **Publish to users and groups** page, select **Next**.
 
-39. On the **Publish to users and groups** page, select **Next**.
+39. On the **Policy settings** page, select the **Users must provide a justification to remove a label or lower its classification** check box, and then select **Next**. 
 
-40. On the **Policy settings** page, select the **Users must provide a justification to remove a label or lower its classification** check box, and then select **Next**. 
+40. On the **Apply a default label to documents** page, select the **Apply this default label to documents** field. Select **PII** in the drop-down menu that appears, and then select **Next**.
 
-41. On the **Apply a default label to documents** page, select the **Apply this default label to documents** field. Select **PII** in the drop-down menu that appears, and then select **Next**.
+41. On the **Apply a default label to emails** page, select the **Apply this default label to emails** field. Select **PII** in the drop-down menu that appears, and then select **Next**.
 
-42. On the **Apply a default label to emails** page, select the **Apply this default label to emails** field. Select **PII** in the drop-down menu that appears, and then select **Next**.
+42. On the **Apply a default label to Power BI content** page, select the **Apply this default label to Power BI content** field. Select **PII** in the drop-down menu that appears, and then select **Next**.
 
-43. On the **Apply a default label to Power BI content** page, select the **Apply this default label to Power BI content** field. Select **PII** in the drop-down menu that appears, and then select **Next**.
+43. On the **Name your policy** page, enter **PII Policy** in the **Name** field, and then enter (or copy and paste) the following description for this sensitivity label policy: **The purpose of this policy is to detect sensitive information such as ABA bank routing numbers and US social security numbers in emails and documents, and to encrypt this information when it's discovered. The user must provide an explanation for removing the classification label.** Select **Next**.
 
-44. On the **Name your policy** page, enter **PII Policy** in the **Name** field, and then enter (or copy and paste) the following description for this sensitivity label policy: **The purpose of this policy is to detect sensitive information such as ABA bank routing numbers and US social security numbers in emails and documents, and to encrypt this information when it's discovered. The user must provide an explanation for removing the classification label.** Select **Next**.
+44. On the **Review and finish** page, review the information you entered. If anything needs to be corrected, select the corresponding **Edit** option and make the necessary corrections. When all information is correct, select **Submit**.
 
-45. On the **Review and finish** page, review the information you entered. If anything needs to be corrected, select the corresponding **Edit** option and make the necessary corrections. When all information is correct, select **Submit**.
-
-46. On the **New policy created** page, select **Done**.
-
-**STOP!!** As mentioned at the start of this lab exercise, now that you have created a sensitivity label and assigned it to the default policy, you must wait 24 hours for the label and label policy to propagate through the system before you can perform the next two tasks in this exercise. 
-
-**Do NOT proceed to the next task!** You can continue with the training course and perform the next series of lab exercises. However, when you reach a good break time tomorrow, you should return to this lab exercise and complete Tasks 3 and 4. In Task 3, when you get to step 14, if you do NOT see the **Sensitivity** group in the Word ribbon, then you must wait until such time that it appears. 
-
-**IMPORTANT: The appearance of the Sensitivity group in the Word ribbon is the indicator as to whether the sensitivity label has completed its behind-the-scenes provisioning,** at which time you can complete tasks 3 and 4 of this lab exercise. 
+45. On the **New policy created** page, select **Done**.
 
 
-### Task 3 – Assign your Sensitivity Label to a document
+### Task 3 – Assign a Sensitivity Label to a document
 
-In this exercise you will use the Sensitivity label that you created in the previous task to classify a document. For this task, you will sign into Microsoft 365 as Alex Wilber, who is a regular user without any elevated privileges.
+As the instructions at the start of this lab indicated, you can't test the sensivity label policy that you just created in the prior task. It will take up to 24 hours for that label policy to propagate through Microsoft 365 before it appears in Microsft Word, Outlook, and so on. 
 
-**IMPORTANT:** You should not perform this task until you have waited 24 hours since you completed the prior task. After creating the sensitivity label and label policy in task 2, it takes 24 hours for the label and label policy to propagate through the Microsoft 365 system. 
+**Important:** The label and label policy that you will test in these next two tasks will be the label and label policy that were created when you ran the PowerShell script in Lab 1 on the first day of class. 
 
-**You will know when the propagation is complete and that you can continue with this task when you get to step 14 and you see the Sensitivity label group in the Word ribbon.** If this group does not appear, then the label provisioning process has not finished. If this occurs, then wait until your next break time in class and check this again.
+**Note:** The label and label policy that you created in the prior task  have the same exact settings as the label and label policy that were created when you ran the PowerShell script in Lab 1. The only difference between the two labels and the two policies should be their names. The names of these labels and label policies are:
+
+- The label that you created in the prior task was titled **PII**. 
+- The label that was created by the script that you ran in Lab 1 was titled **PII - V1**. 
+- The label policy that you created in the prior task was titled **PII Policy**. 
+- The label policy that was created by the script that you ran in Lab 1 was titled **PII Policy - V1**. 
+
+As you test the **PII - V1** label and the **PII Policy - V1** label policy in these next two tasks, you should see the same results that you configured in the **PII** label and **PII Policy** label policy. 
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. To validate the sensitivity label that you created in the prior task, you must first sign out of Microsoft 365 as Holly and sign back in as Alex Wilber. <br/>
+2. To validate the sensitivity label that you created and published when you ran the PowerShell script in Lab 1 on the first day of class, you must first sign out of Microsoft 365 as Holly and sign back in as Alex Wilber. <br/>
 
 	In your Edge browser, select the **Microsoft 365 admin center** tab, and then select the circle with Holly Dickson's HD initials in the upper right corner of the screen. In the **Holly Dickson** window, select **Sign out**.
 
@@ -221,21 +220,19 @@ In this exercise you will use the Sensitivity label that you created in the prev
 
 13. In the **Word** document, type **Testing personally identifiable information (PII).**
 
-14. Because you enabled Sensitivity labels at the start of this exercise, and assuming it's been 24 hours since you created the sensitivity label in the prior task, Word should display a **Sensitivity** group on the ribbon. <br/>
+14. Because you enabled Sensitivity labels at the start of this exercise, and since the label you created by running the script on day 1 of the course has fully propagated through Microsoft 365, Word should display a **Sensitivity** group on the ribbon at the top of the page. 
 
-	**IMPORTANT:** If you do not see this **Sensitivity** group in the ribbon, then Microsoft 365 has not finished provisioning the sensitivity label that you created in the prior task. If this occurs, then you cannot proceed with this task. As mentioned earlier, it takes 24 hours for a new sensitivity label to be fully provisioned throughout the system. If you do not see the Sensitivity group, or if you see the group (from a prior label you created) and you select the drop-down arrow in the group and do not see your new label, then you must stop at this point and not proceed until you see the Sensitivity group and your label in the group.  <br/>
-
-	Assuming you have waited 24 hours and the **Sensitivity** group appears in the Word ribbon, select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the **PII** label that you created in the prior task. Since the **PII** label is enabled for this document, a check mark is displayed next to **PII**. <br/>
+	Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the **PII - V1** label the script created and published. Since the **PII - V1** label is enabled for this document, a check mark is displayed next to **PII - V1**. <br/>
 	
-	In this first validation test, you are going to attempt to remove this sensitivity label from being applied to this document. If you'll recall, when you created the label policy and assigned the PII label to it, you selected the option whereby users must provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
+	In this first validation test, you are going to attempt to remove this sensitivity label from being applied to this document. When you created the **PII Policy - V1** policy and **PII** label in the prior task, the same options you selected were applied to the **PII Policy - V1** policy and **PII - V1** label by the Lab 1 script. One of those options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
 	
-	To remove the label from this document, select the **PII** label that appears in this drop-down menu.
+	To remove the label from this document, select the **PII - V1** label that appears in this drop-down menu.
 	
 15. In the **Justification Required** window that appears, select the **Other (explain)** option. In the **Explain why you're changing this label** field, enter **Testing what happens when a label is removed** and then select **Change**.
 
-16. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **PII** is displayed, it no longer has a check mark displayed next to it. This indicates the PII sensitivity label is no longer being applied to this document.  
+16. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **PII - V1** is displayed, it no longer has a check mark displayed next to it. This indicates the **PII - V1** sensitivity label is no longer being applied to this document.  
 
-17. To re-apply the sensitivity label to the document, select **PII** in the drop-down menu. Once again select the drop-down arrow in the **Sensitivity** group. The drop-down menu that appears should display the **PII** label, and it should display a check mark next to it that indicates it is being applied to this document.
+17. To re-apply the sensitivity label to the document, select **PII - V1** in the drop-down menu. Once again select the drop-down arrow in the **Sensitivity** group. The drop-down menu that appears should display the **PII - V1** label, and it should display a check mark next to it that indicates it is being applied to this document.
 
 18. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number.
 
@@ -256,7 +253,7 @@ You have just successfully created an AIP protected Word document that is read-o
 
 ### Task 4 – Verify your Sensitivity Label policy
 
-In the prior task, you created a Word document and protected it with a Sensitivity label. The PII label policy should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
+In the prior task, you created a Word document and protected it with a Sensitivity label. The PII - V1 label policy should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task.
 
@@ -296,7 +293,7 @@ In the prior task, you created a Word document and protected it with a Sensitivi
 
 15. If a **Welcome** window appears, select the X to close it.
 
-16. In Joni’s **Inbox** in **Outlook on the web**, open the email that Alex just sent her by selecting the email in the Inbox. Note the **Sensitive - Do Not Share** watermark that appears in the message (these are the header and footer watermarks that you entered in the PII label).
+16. In Joni’s **Inbox** in **Outlook on the web**, open the email that Alex just sent her by selecting the email in the Inbox. Note the **Sensitive - Do Not Share** watermark that appears in the message. There are the header and footer watermarks were entered in the PII - V1 label created by the PowerShell script, which are the same watermarks that you configured for the label that you created in the prior task.
 
 17. Select the attached file to open it.
 
@@ -332,7 +329,7 @@ In the prior task, you created a Word document and protected it with a Sensitivi
 
 	‎Since only Joni was assigned permission to read the document, you just verified that Azure Information Protection protected the document based on the PII policy parameters that you configured.
 
-31. Congratulations! You have just completed the final lab in this course.
+## Congratulations! You have just completed the final lab in this course.
 
 
 # End of Lab 9
