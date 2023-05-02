@@ -6,7 +6,7 @@ As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by
 
 Pass-through Authentication allows users to sign-in to cloud-based services using their on-premises passwords. All user passwords are only stored locally in the on-premises domains and NEVER synchronized to the cloud. When a user signs-in, the PTA agent takes the credentials to the user's on-premises environment to verify whether the password is correct. It then sends the result back to Azure AD.   
 
-‎Adatum's CTO wants to provide the company's users with a better logon experience (since PTA requires one less password to remember), as well as reduce Adatum’s IT helpdesk costs because with PTA their users are less likely to forget how to sign in. While this can also be achieved by employing Password Hash Synchronization as well as Active Directory Federation Services, Adatum has chosen to test PTA in its Microsoft 365 pilot project.
+‎Adatum's CTO wants to provide the company's users with a better sign-in experience (since PTA requires one less password to remember), as well as reduce Adatum’s IT helpdesk costs because with PTA their users are less likely to forget how to sign in. While this can also be achieved by employing Password Hash Synchronization as well as Active Directory Federation Services, Adatum has chosen to test PTA in its Microsoft 365 pilot project.
 
 1.  You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task.
 
@@ -16,7 +16,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 4. On the **Additional tasks** page, select the **Change user Sign-in** task and then select **Next**. 
 
-5. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@xxxUPNxxx.onmicrosoft.com.** Enter **User.pw1** in the **PASSWORD** field, and then select **Next**.
+5. On the **Connect to Azure AD** page, sign into Azure AD. The **USERNAME** field is already filled with **Holly@xxxUPNxxx.onmicrosoft.com**. In the **PASSWORD** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account), and then select **Next**.
 
 6. On the **User sign-in** page, under **Select the Sign On method**, select **Pass-through authentication** and then select **Next**. 
 
@@ -115,7 +115,9 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 15. You should now test the banned password functionality. Select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Change password**.
 
-16. A new tab will open displaying the **Change password** window. Enter **User.pw1** in the **Old password** field, enter **Never4get!!** in the **Create new password** and **Confirm new password** fields, and then select **Submit**. Note the error message that you receive.
+16. A new tab will open displaying the **Change password** window. In the **Old password** field, enter Holly's existing password, which is the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). <br/>
+
+	Enter **Never4get!!** in the **Create new password** and **Confirm new password** fields, and then select **Submit**. Note the error message that you receive.
 
 17. In your browser, close the **Change password** tab. 
 
@@ -127,17 +129,17 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 20. In the **Sign in** window, enter **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
 
-21. On the **Enter password** window, enter any mix of letters and then select **Sign in**. Note the invalid password error message. 
+21. On the **Enter password** window, enter any random mix of letters and then select **Sign in**. Note the invalid password error message that appears. 
 
 	Repeat this step 2 more times. 
 	
-	Since you set the **Lockout threshold** to **3**, you should receive an error message indicating that your account is locked. <br/>
+	Since you set the **Lockout threshold** to **3**, you should receive an error message indicating that your account is locked after your third failed sign-in attempt. <br/>
 
-	**User:** If you do not receive this lockout message after the third attempt, then the system has not yet finished propagating this lockout threshold change throughout the service. It may take several minutes for the change to take effect. Wait a few minutes and then sign-in again with a bogus password. Testing of this lab has seen varying results. The change sometimes propagates almost immediately so that you get locked out after the third sign-in attempt. Other times it has taken anywhere from 5 to 10 minutes before the lockout message is displayed. Continue this process until you receive the lockout message, at which point Laura's account will be temporarily locked to prevent unauthorized access. <br/>
+	**User:** If you do not receive this lockout message after the third attempt, then the system has not yet finished propagating this lockout threshold change throughout the service. It may take several minutes for the change to take effect. Wait a few minutes and then sign-in again with a bogus password. Testing of this lab has seen varying results. The change sometimes propagates almost immediately so that you get locked out after the third sign-in attempt. Other times it has taken anywhere from 5 to 10 minutes before the lockout message is displayed. Continue this process until you receive the lockout message, at which point Laura's account will be temporarily locked to prevent unauthorized access.
 
-	**Note:** You will be prohibited from logging in as Laura until after the **90 second lockout duration** that you set earlier. 
+22. You will be prohibited from logging in again as Laura until after the **90 second lockout duration** that you set earlier. <br/>
 
-22. Once you've been locked out, wait 90 seconds and then verify that you can sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider) and the password **User.pw1**. 
+	Once you've been locked out, wait 90 seconds and then sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Laura's password, which is the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). Verify that you are able to successfully sign-in as Laura.
 
 23. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
  
