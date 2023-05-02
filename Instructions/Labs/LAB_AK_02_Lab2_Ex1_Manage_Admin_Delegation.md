@@ -186,53 +186,55 @@ In this task, you will begin by examining the administrative properties of two u
 
 	‎In the **Active users** list, as you move your mouse from one user account to another, notice the **key (Reset a password)** icon that appears to the right of each user's name. Select the key icon that appears to the right of **Diego Siciliani's** name.
 
-24. In the **Reset password** window for Diego, if the **Automatically create a password** check box displays a check mark, then select this box to clear it. This will enable Lynne to manually assign Diego a temporary password. Enter **diego** in the **Password** field. Note to the right of the password, the system displays a message indicating this is a **Weak** password. Also note the message that appears below the field indicating the requirements for a strong password. Finally, note how the **Reset password** button at the bottom of the pane is not enabled. **This button will only be enabled once you enter a strong password**.  <br/>
+24. In the **Reset password** window for Diego, if the **Automatically create a password** check box displays a check mark, then select this box to clear it. This will enable Lynne to manually assign Diego a temporary password.  
 
-	Enter **Pa55w.rd** in the **Password** field. Note the error message that appears indicating the password contains a word, phrase, or series of numbers that make it easily guessable. In this case, you entered a variation of the word **password**, which will trigger this error. <br/>
+25. Enter **diego** in the **Password** field. Note to the right of the password, the system displays a message indicating this is a **Weak** password. Also note the message that appears below the field indicating the requirements for a strong password. Finally, note how the **Reset password** button at the bottom of the pane is not enabled. **This button will only be enabled once you enter a strong password**.  
 
-	After these two failed password attempts, Lynne has decided to let Microsoft 365 automatically generate a password as Diego's temporary password. Select the **Automatically create a password** check box so that it displays a check mark. <br/>
+26. Enter **Pa55w.rd** in the **Password** field. Note the error message that appears indicating the password contains a word, phrase, or series of numbers that make it easily guessable. In this case, you entered a variation of the word **password**, which will trigger this error. 
+
+27. After these two failed password attempts, Lynne has decided to let Microsoft 365 automatically generate a password as Diego's temporary password. Select the **Automatically create a password** check box so that it displays a check mark. <br/>
 	
-	**Note:** This is just a temporary password because Lynne wants to force Diego to change it the next time he logs in. Therefore, verify the **Require this user to change their password when they first sign in** check box displays a check mark; if the box is clear, then select it so that it displays a check mark.
+28. The password that's automatically generated will just be a temporary password because Lynne wants to force Diego to change it the next time he logs in. Therefore, verify the **Require this user to change their password when they first sign in** check box displays a check mark; if the box is clear, then select it so that it displays a check mark.
 
-25. Select **Reset password**.
+29. Select **Reset password**.
 
-26. If prompted to save the password, select **never** to close the window.
+30. If prompted to save the password, select **never** to close the window.
 
-27. You should receive an error message indicating that you cannot reset Diego’s password because he has been assigned an admin role. In Diego’s case, you assigned him the Billing Administrator role earlier in this lab exercise. Since only Global administrators can change another administrator's password, and because Lynne is not a Global administrator, she will have to ask Holly Dickson to make this change. Select **Close** in the **Reset password** pane. 
+31. You should receive an error message indicating that you cannot reset Diego’s password because he has been assigned an admin role. In Diego’s case, you assigned him the Billing Administrator role earlier in this lab exercise. Since only Global administrators can change another administrator's password, and because Lynne is not a Global administrator, she will have to ask Holly Dickson to make this change. Select **Close** in the **Reset password** pane. 
 
-28. If a survey request window appears, select **Cancel**.
+32. If a survey request window appears, select **Cancel**.
 
-29. In the **Active users** list, select the **key (Reset a password)** icon for **Pradeep Gupta**. 
+33. In the **Active users** list, select the **key (Reset a password)** icon for **Pradeep Gupta**. 
 
-30. In the **Reset password** window for Pradeep, if the **Automatically create a password** check box displays a check mark, then select this box to clear it. Lynne wants to manually assign Pradeep a temporary password, so enter **User.temp1** in the **Password** field.  <br/>
+34. In the **Reset password** window for Pradeep, verify the **Automatically create a password** check box displays a check mark; if it doesn't, then select this box now so that the system automatically generates a password for Pradeep.  <br/>
 
 	This is just a temporary password because Lynne wants to force Pradeep to change it the next time he logs in. Therefore, verify the **Require this user to change their password when they first sign in** check box displays a check mark; if the box is clear, then select it so that it displays a check mark.
 	
-31. Select the **Reset password** button.
+35. Select the **Reset password** button.
 
-32. On the **Password has been reset** window, you should receive a message indicating that you successfully reset the password for Pradeep. Select **Close**.
+36. On the **Password has been reset** window, you should receive a message indicating that you successfully reset the password for Pradeep. Select **Close**.
 
-33. Management has recently discovered that Alex Wilber's username may have been compromised. As a result, Lynne has been asked to block Alex's account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the check box to the left of **Alex Wilber's** name (do NOT select Alex’s name itself).  <br/>
+37. Management has recently discovered that Alex Wilber's username may have been compromised. As a result, Lynne has been asked to block Alex's account so that no one can sign in with his username until management is able to determine the extent of the issue. In the **Active users** list, select the check box to the left of **Alex Wilber's** name (do NOT select Alex’s name itself).  <br/>
 
 	**Important:** Since you are going to run a global command rather than a command associated with Alex's account, you only want Alex's account selected in the list of active users. If any other user account is selected, you must unselect that user account before proceeding. Scroll through the list of active users and verify that no other user account is selected. If an account other than Alex is selected, select the account's check box to clear it. **Only Alex Wilber's account should be selected.**
 
-34. In the menu bar at the top of the page, select the **ellipsis icon (...)** to display a drop-down menu of additional actions. In the menu that appears, select **Edit sign-in status**.
+38. In the menu bar at the top of the page, select the **ellipsis icon (...)** to display a drop-down menu of additional actions. In the menu that appears, select **Edit sign-in status**.
 
-35. In the **Block sign-in** pane that appears, verify Alex's email address appears below the **Block sign-in** heading. Select the **Block this user from signing in** check box, and then select **Save changes.** 
+39. In the **Block sign-in** pane that appears, verify Alex's email address appears below the **Block sign-in** heading. Select the **Block this user from signing in** check box, and then select **Save changes.** 
 
-36. The **Block sign-in** window should display a message indicating that Alex is now blocked from signing in (and no one can sign in with Alex's username in the event that his username was actually compromised). In addition, Alex will automatically be signed out of Microsoft services within 60 minutes. Select the **X** in the upper right-hand corner of the pane to close it. 
+40. The **Block sign-in** window should display a message indicating that Alex is now blocked from signing in (and no one can sign in with Alex's username in the event that his username was actually compromised). In addition, Alex will automatically be signed out of Microsoft services within 60 minutes. Select the **X** in the upper right-hand corner of the pane to close it. 
 
-37. Lynne has just been informed that **Nestor Wilke's** username has also been potentially compromised. Repeat steps 33 through 36 to block Nestor from signing in (and to block anyone else from using his username to sign in). <br/>
+41. Lynne has just been informed that **Nestor Wilke's** username has also been potentially compromised. Repeat steps 33 through 36 to block Nestor from signing in (and to block anyone else from using his username to sign in). <br/>
 
 	When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Administrator, and Lynne is not. Only a Global Administrator can block another Global Admin from being able to sign in. Lynne will need to ask Holly Dickson to make this change. <br/>
 
 	Close the **Block sign-in** pane.
 
-38. You previously blocked Alex Wilber from being able to sign in. To verify whether he is blocked, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in the **Lynne Robbins** window that appears, select **Sign out.** 
+42. You previously blocked Alex Wilber from being able to sign in. To verify whether he is blocked, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in the **Lynne Robbins** window that appears, select **Sign out.** 
 
-39. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
+43. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
 
-40. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter **User.pw1**.  <br/>
+44. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).  <br/>
 
 	The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex (or someone who has obtained Alex's username and password) cannot log in. <br/>
 
@@ -240,17 +242,17 @@ In this task, you will begin by examining the administrative properties of two u
 
 	If you can sign in as Alex, sign back out and wait a few minutes. This may be a good time to take a short break. Then attempt to sign back in as Alex. By this time, you should hopefully receive the error message that indicates Alex's account has been blocked from signing in. 
 	
-41. Switch back to **LON-CL1**. 
+45. Switch back to **LON-CL1**. 
 
-42. In **LON-CL1**, you should still be logged into **Microsoft 365** as Holly Dickson in your Edge browser. The **Active users** list should be displayed in the **Microsoft 365 admin center** from earlier in this task. 
+46. In **LON-CL1**, you should still be logged into **Microsoft 365** as Holly Dickson in your Edge browser. The **Active users** list should be displayed in the **Microsoft 365 admin center** from earlier in this task. 
 
-43. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's user account. Repeat steps 33 through 36 to unblock his account. Note how the **Block sign-in** window from step 35 now displays the **Unblock sign-in** window instead.  <br/>
+47. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's user account. Repeat steps 33 through 36 to unblock his account. Note how the **Block sign-in** window from step 35 now displays the **Unblock sign-in** window instead.  <br/>
 
 	In the **Unblock sign-in** window, the **Block this user from signing in** check box is currently selected. Select this check box to clear it, and then select **Save changes**. <br/>
 	
 	**IMPORTANT:** A warning message is displayed indicating it can take up to 15 minutes before Alex can sign in again. Given the time constraints with the training, you will **NOT** try to verify whether Alex can log back in. If you want, you can try logging in as Alex at a later time if you're on a break or have spare time and you want to test this out. For now, remain on LON-CL1 and simply close the **Unblock sign-in** window.
 	
-44. On LON-CL1, leave your browser and all tabs open and proceed to the next exercise. 
+48. On LON-CL1, leave your browser and all tabs open and proceed to the next exercise. 
 
 
 # Proceed to Lab 2 - Exercise 2
