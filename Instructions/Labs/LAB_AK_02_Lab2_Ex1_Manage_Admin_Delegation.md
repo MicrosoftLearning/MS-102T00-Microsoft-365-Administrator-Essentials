@@ -192,7 +192,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 26. Enter **Pa55w.rd** in the **Password** field. Note the error message that appears indicating the password contains a word, phrase, or series of numbers that make it easily guessable. In this case, you entered a variation of the word **password**, which will trigger this error. 
 
-27. After these two failed password attempts, Lynne has decided to let Microsoft 365 automatically generate a password as Diego's temporary password. Select the **Automatically create a password** check box so that it displays a check mark. <br/>
+27. After these two failed password attempts, Lynne has decided to let Microsoft 365 automatically generate a password. Select the **Automatically create a password** check box so that it displays a check mark. <br/>
 	
 28. The password that's automatically generated will just be a temporary password because Lynne wants to force Diego to change it the next time he logs in. Therefore, verify the **Require this user to change their password when they first sign in** check box displays a check mark; if the box is clear, then select it so that it displays a check mark.
 
