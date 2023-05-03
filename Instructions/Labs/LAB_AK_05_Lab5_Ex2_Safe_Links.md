@@ -28,7 +28,7 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
     - Under the **Email** section, verify that all check boxes are selected (if any are not selected by default, then select them now):
     - Under the **Click protection settings** section:
-        - Track user clicks - Adatum does not want to track user clicks, so clear this check box if it's selected by default
+        - **Track user clicks** - Adatum does not want to track user clicks, so clear this check box if it's selected by default
    
 9. On the **Notification** page, verify the **Use the default notification text** option is selected (if necessary, select it now) and then select **Next**.
 
