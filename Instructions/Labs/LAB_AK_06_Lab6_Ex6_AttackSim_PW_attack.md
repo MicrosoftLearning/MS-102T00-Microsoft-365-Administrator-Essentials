@@ -161,7 +161,7 @@ To use Microsoft's Attack simulation training to simulate phishing attacks, Holl
 	- Once you're signed out, close ayour browser (to clear your cache).
 	- Open a new Edge browser session.
 	- Enter the **https://portal.office.com** URL.
-	- In the **Pick an account** window, select Holly's account and enter **User.pw1** as the **Password**.
+	- In the **Pick an account** window, select Holly's account and enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) as the **Password**.
 	- From the **Microsoft Office Home** page, select the **Admin** icon to navigate to the **Microsoft 365 admin center**.
 	
 	You are now ready to proceed to the next lab exercise.
