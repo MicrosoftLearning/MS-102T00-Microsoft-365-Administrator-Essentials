@@ -42,7 +42,7 @@ In this task, you will send an email from Holly Dickson to Lynne Robbins that te
 
 11. In the Edge browser, enter the following URL: **https://outlook.office365.com**
 
-12. In the **Pick an account** window, select Lynne Robbins' account (**LynneR@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter **User.pw1** and then select **Sign in**. On the **Stay signed in** window, select the **Don't show this again** check box and select **Yes**.
+12. In the **Pick an account** window, select Lynne Robbins' account (**LynneR@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. On the **Stay signed in** window, select the **Don't show this again** check box and select **Yes**.
 
 13. In Lynne's Inbox, verify that she received the email from Holly Dickson that has the subject line: **DLP Policy Test 1**. Select the message to verify the content containing the IP address was not removed. 
 
