@@ -7,7 +7,7 @@ In this exercise, you will implement In-place archiving for Holly Dickson's mail
 In this next phase of your Adatum pilot project, you will access the Microsoft Purview portal to activate Holly Dickson’s archive mailbox. After Holly's archive mailbox is enabled, the default retention policy that's assigned to her mailbox does the following: <br/>
 
 - Moves items that are two years or older from Holly's primary mailbox to her archive mailbox.
-- Moves items that are 14 days or older from the Recoverable Items folder in Holly's primary mailbox to the Recoverable Items folder in her archive mailbox.
+- Moves items that are 14-days or older from the Recoverable Items folder in Holly's primary mailbox to the Recoverable Items folder in her archive mailbox.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
