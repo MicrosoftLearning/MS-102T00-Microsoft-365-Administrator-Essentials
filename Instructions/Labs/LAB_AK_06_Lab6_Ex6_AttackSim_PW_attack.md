@@ -74,7 +74,7 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 
 21. On the **Add Indicators** page, the indicator that you just created should be displayed. Select **Next**.
 
-22. On the **Review Payload** page, review the entered information. If anything needs to be changed, select the appropriate **Edit** option to make the change, or select **Back** to enter any of the information in the Configure section. Once everything is correct, select **Submit**. A few moments will pass and you will receive a confirmation stating **New payload created**. Select **Done**. 
+22. On the **Review Payload** page, review the entered information. If anything needs to be changed, select the appropriate **Edit** option to make the change, or select **Back** to enter any of the information in the Configure section. Once everything is correct, select **Submit**. After a few moments you will receive a confirmation stating **New payload created**. Select **Done**. 
 
 23. On the **Select payload and login page** window, the **Free gift offer** payload that you just created should appear in the list. Review the information for this payload. Note that no **Predicted Compromised rate (%)** has been determined yet, since the payload hasn't been used in a simulation. 
 
@@ -158,7 +158,7 @@ To use Microsoft's Attack simulation training to simulate phishing attacks, Holl
 8. You must now sign out of Microsoft 365 as Holly and then sign back in as Holly (without MFA). To do so, perform the following steps: <br/>
 
 	- Select Holly's account icon (HD in a circle) at the top-right of the screen and in Holly's profile window, select **Sign out**.
-	- Once you're signed out, close ayour browser (to clear your cache).
+	- Once you're signed out, close your Edge browser. Doing so will clear your cache.
 	- Open a new Edge browser session.
 	- Enter the **https://portal.office.com** URL.
 	- In the **Pick an account** window, select Holly's account and enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) as the **Password**.
