@@ -84,9 +84,9 @@ In the prior task, you configured an alert that will notify Lynne Robbins when F
 
 	‎Switch to **LON-CL2**. 
 
-9. On **LON-CL2**, you should be signed in to the machine as the local **administrator** (lon-cl2\admin) account. Select the **Microsoft Edge** icon in the taskbar, maximize the window (if necessary), and then enter the following URL in the address bar: **https://outlook.office365.com**
+9. On **LON-CL2**, you should be signed into the machine as the local **administrator** (lon-cl2\admin) account. Select the **Microsoft Edge** icon in the taskbar, maximize the window (if necessary), and then enter the following URL in the address bar: **https://outlook.office365.com**
 
-10. In the **Pick an account** window, if Lynne Robbins account (**LynneR@xxxxxZZZZZZ.onmicrosoft.com**) appears in the user list, then select it now; otherwise, select **Use another account** and sign in as **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Then enter **User.pw1** as Lynne's password.
+10. In the **Pick an account** window, if Lynne Robbins account (**LynneR@xxxxxZZZZZZ.onmicrosoft.com**) appears in the user list, then select it now; otherwise, select **Use another account** and sign in as **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Then enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) as Lynne's password.
 
 11. Lynne Robbins’ **Inbox** should include an email from the Alerts notification system (**Office365Alerts@microsoft.com**) to let her know that Holly Dickson has made a Mailbox permission change. <br/>
 
