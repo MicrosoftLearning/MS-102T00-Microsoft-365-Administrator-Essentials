@@ -6,7 +6,7 @@ In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you h
 
 To address this timing issue, you ran that PowerShell script back on day 1 to create and publish a sensitivity label and label policy. Now that you've reached this lab, that label policy will have propagated through the system, and you'll be able to test it.
 
-Because we want you to gain the experience of creating and publishing a label and label policy using the Microsoft 365 UI, you will still create a sensitivity label and label policy in this lab. However, when you perform the tasks to test the label and label policy, you won't test the ones that you created and published in the UI, since that label and label policy won't be available to test for 24 hours. Instead, you will test the label and label policy that you created and published using the script that you ran back on day 1 of this class.
+Because we want you to gain experience creating and publishing a label and label policy using the Microsoft 365 UI, you will still create a sensitivity label and label policy in this lab. However, when you perform the tasks to test the label and label policy, you won't test the ones that you created and published in the UI, since that label and label policy won't be available to test for 24 hours. Instead, you will test the label and label policy that you created and published using the script that you ran back on day 1 of this class.
 
 
 ### Task 1 – Install the Azure Information Protection Unified Labeling client
@@ -204,7 +204,7 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 6. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-7. On the **Enter password** window, enter **User.pw1** and then select **Sign in**.
+7. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
 
 8. If a **Get your work done with Office 365** window appears, select the X to close it.
 
@@ -289,7 +289,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 13. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-14. On the **Enter password** window, enter **User.pw1** and then select **Sign in**.
+14. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
 
 15. If a **Welcome** window appears, select the X to close it.
 
@@ -311,7 +311,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 	‎In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** 
 
-24. In the **Enter password** window, enter **User.pw1** and then select **Sign in.**
+24. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.**
 
 25. In the **Use this account everywhere on your device** window that appears, select **This app only** to register this Office 365 ProPlus installation to **Joni Sherman’s** Microsoft 365 account.
 
