@@ -30,7 +30,7 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
       - Description: **This policy detects the presence of IP addresses in emails. End users are notified of the detection and admins receive a notification. Emails with 2 or more IP addresses are blocked from being sent.**
 
-9. On the **Choose locations to apply the policy** page, verify the **Status** toggle is set to **On** for the following locations (if any of these locations is not set to **On** by default, then set it to **On** now): **Exchange email, SharePoint sites, OneDrive accounts, Teams chats and channel messages**. Set all other locations to **Off**, and then select **Next**.
+9. On the **Assign admin units (preview)** page, select **Next**. On the **Choose locations to apply the policy** page, verify the **Status** toggle is set to **On** for the following locations (if any of these locations is not set to **On** by default, then set it to **On** now): **Exchange email, SharePoint sites, OneDrive accounts, Teams chats and channel messages**. Set all other locations to **Off**, and then select **Next**.
 
 10. On the **Define policy settings** page, select the **Create or customize advanced DLP rules** option, (if it isn't already selected by default) and then select **Next**. 
 
