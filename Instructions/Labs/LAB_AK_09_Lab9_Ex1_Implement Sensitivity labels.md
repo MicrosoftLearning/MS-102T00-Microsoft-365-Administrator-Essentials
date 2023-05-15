@@ -261,7 +261,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 3. In the **Microsoft Office Home** tab, select the **Outlook** icon in the column of app icons on the left-side of the screen. This opens Outlook on the web in a new tab. 
 
-4. In **Outlook on the web**, select **New Message** in the upper left part of the screen.
+4. In **Outlook on the web**, select **New Mail** in the upper left part of the screen.
 
 5. In the right-hand pane, enter the following information in the message form:
 
@@ -273,7 +273,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 	- Body of the message: enter **If you can open the protected and restricted document attached to this email, then try to change it.**
 
-6. Select **Attach** from the menu bar at the top of the screen, and in the drop-down menu that appears, under the **Suggested attachments** group, select the **ProtectedDocument1.docx** file that you created in the prior task.
+6. Select **Attach** from the menu bar at the top of the screen, and in the drop-down menu that appears, under the **Suggested files** group, select the **ProtectedDocument1.docx** file that you created in the prior task.
 
 7. Once the file has been attached to the email, select the file to open it. Note the watermarks that appear in the header and footer, and in the body of the document.  After reviewing the document, select the **X** in the upper right corner of the document window to close it. 
 
