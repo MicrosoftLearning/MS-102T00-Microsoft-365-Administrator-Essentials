@@ -88,7 +88,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 13. On **LON-CL2**, select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
 
-14. In the **Pick an account** window, select **Use another account**, and then in the **Sign in** window, enter the username and password for the MOD Administrator account (**admin@xxxxxZZZZZZonmicrosoft.com**).
+14. In the **Pick an account** window, select **Use another account**, and then in the **Sign in** window, enter the username and password for the MOD Administrator account (**admin@xxxxxZZZZZZ.onmicrosoft.com**).
 
 15. In the **Enter password** window, enter the tenant password provided by your lab hosting provider and select **Sign in**.
 
