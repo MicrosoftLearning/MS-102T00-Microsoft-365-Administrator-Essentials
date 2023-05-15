@@ -91,9 +91,7 @@ In this lab exercise, you will use one of the existing payload templates. In the
 
 11. On the **Assign Training** page, under the **Preferences** section, the **Assign training for me (Recommended)** option should be selected by default (if not, select it now). Select the **Due Date** field. In the drop-down menu that appears, select **7 days after Simulation ends** and then select **Next**.
 
-12. On the **Landing page** window, you will accept the default settings for now. These settings use the **Microsoft default landing page** and the **Microsoft Landing Page Template 1**. <br/>
-
-	Select the **Open preview panel** button that appears below the **Payload Indicators** section. 
+12. On the **Select Phish landing page** window, select **Global landing pages** tab and then select **Microsoft Landing Page Template 1** checkbox and then select **Microsoft Landing Page Template 1** name to preview the page. 
 
 13. A preview of the **Microsoft landing page** appears in the pane on the right. This preview panel provides an example of what the landing page will look like when someone experiences a phishing attack and the simulation uses **Microsoft Landing Page Template 1**. Scroll down through this preview panel and review the features. When you're finished, select the **Close** button at the bottom of the preview panel. 
 
