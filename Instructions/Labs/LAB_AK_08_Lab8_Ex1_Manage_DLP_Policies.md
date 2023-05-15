@@ -98,7 +98,7 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
 15. On the **Customize advanced DLP rules** page, both the **Single IP Address rule** and **Multiple IP Address rule** should now appear. Select **Next**.
 
-16. On the **Test or turn on the policy** page, select the **Turn it on right away** option and then select **Next**.
+16. On the **Policy mode** page, select the **Turn it on right away** option and then select **Next**.
 
 17. On the **Review your policy and create it** page, review the policy that you just created. If anything needs to be corrected, select the appropriate **Edit** option and make your corrections. When everything appears OK, select **Submit**.
 
