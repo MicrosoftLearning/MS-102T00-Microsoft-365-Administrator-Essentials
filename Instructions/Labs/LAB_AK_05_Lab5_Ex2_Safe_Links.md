@@ -66,7 +66,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
     - Add a subject: **Free stuff for Adatum users**
 
-    - body of the message: **Please click on me for free toys from Tailspin Toys.**
+    - Body of the message: **Please click on me for free toys from Tailspin Toys.**
 
 6. Select the entire text string that you just added in the body of the message.
 
