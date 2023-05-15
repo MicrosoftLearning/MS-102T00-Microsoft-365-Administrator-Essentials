@@ -14,7 +14,7 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
 3. In the **Microsoft Purview** portal, in the left-hand navigation pane, select **Data loss prevention**.
 
-4. On the **Data loss prevention** page, select the **Policies** tab.
+4. On the **Data loss prevention** drop-down, select the **Policies** tab.
 
 5. In the **Policies** tab, select the **+Create policy** option on the menu bar to start the **Create policy** wizard.
 
