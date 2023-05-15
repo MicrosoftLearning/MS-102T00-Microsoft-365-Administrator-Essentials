@@ -36,7 +36,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 14. On the **Azure Active Directory admin center** page, in the left-hand navigation pane, select **All services**.
 
-15. On the **All services** page, three groups are displayed - General, Identity, and Security. Under the **Identity** group, select **Azure Active Directory**. 
+15. On the **All services** page, four groups are displayed - General, Identity, Security, and Hybrid + multicloud. Under the **Identity** group, select **Azure Active Directory**. 
 
 16. On the **Adatum Corporation | Overview** page, note how the window is divided into three parts - the navigation pane on the left, the middle navigation pane (which provides navigation options for this page), and the larger detail pane on the right. This design format is used on many of the Azure AD screens. <br/>
 
