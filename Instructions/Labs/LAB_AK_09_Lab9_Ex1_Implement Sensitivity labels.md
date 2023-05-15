@@ -236,15 +236,15 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 18. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number.
 
-19. You will now save the document. On the title bar, to the right of Word, select **Document1**.  In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber>Documents**. <br/>
+19. You will now save the document. On the title bar, to the right of Word, select **Document**.  In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber>Documents**. <br/>
 
 	In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file in the title bar.
 
 20. On the right-side of the menu bar, select the **Share** button.
 
-21. In the **Send link** window that appears, select **Anyone with the link can edit**. In the menu that appears, select **Specific people** then select **Apply**.
+21. In the **Send link** window that appears, select **Anyone with the link can edit**. In the menu that appears, select **People you choose** then select **Apply**.
 
-22. In the **Send link** window, enter **Joni** in the **Enter a name or Email address** field. In the list of users that appears, select **Joni Sherman** and then select **Send**.
+22. In the **Send link** window, enter **Joni** in the **To: Name, group or email** field. In the list of users that appears, select **Joni Sherman** and then select **Send**.
 
 23. Close the **Link sent** window. 
 
