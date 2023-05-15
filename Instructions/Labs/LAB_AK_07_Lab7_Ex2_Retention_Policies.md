@@ -11,19 +11,13 @@ In this next phase of your Adatum pilot project, you will access the Microsoft P
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. In Microsoft Edge, in the **Microsoft 365 admin center**, under the **Admin centers** group, select **Compliance** to open the Microsoft Purview portal.
+2. In Microsoft Edge, in the **Microsoft 365 admin center**, under the **Admin centers** group, select **Exchange** to open the Exchange admin center.
 
-3. In the **Microsoft Purview** portal, in the left-hand navigation pane, select **Data lifecycle management** to expand the group, and then select **Microsoft 365**. 
-
-4. On the **Data lifecycle management** page, the **Overview** tab appears by default. In the list of tabs along the top of the page, select **Archive**.
-
-5. On the **Archive** tab, note that the archive mailboxes for all users other than Holly Dickson have a status of **Enabled**. These archive mailboxes were enabled when the VM lab environment was built for this training course and these users were preconfigured in the tenant. However, since you added Holly's user account in one of the first labs at the start of this course, her archive mailbox is **Disabled** by default. <br/>
+5. On the **Manage mailboxes** page, note that the archive mailboxes for all users other than Holly Dickson have a status of **Active**. These archive mailboxes were enabled when the VM lab environment was built for this training course and these users were preconfigured in the tenant. However, since you added Holly's user account in one of the first labs at the start of this course, her archive mailbox is **Disabled** by default. <br/>
 
 	To enable Holly’s archive mailbox, select the check box next to **Holly Dickson** in the user list and then select **Enable Archive** in the menu bar that appears above the list of users.
 
-6. In the **Warning** dialog box that appears, select **Enable** to confirm this action.
-
-7. If necessary, select the **Refresh** icon on the menu bar above the list of users. Holly's archive mailbox should now be **Enabled**.
+7. If necessary, select the **Refresh** icon on the menu bar above the list of users. Holly's archive mailbox should now be **Active**.
 
 8. In your Microsoft Edge browser, leave your Edge browser and all its tabs open for the next task. 
  
@@ -44,7 +38,7 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 6. On the **Choose the type of retention policy to create** field, select **Static** and then select **Next**.
 
-7. On the **Choose locations to apply the policy** page, note the Exchange email location. It's currently set to include **All recipients**. You want to change this to just apply to Joni Sherman and Lynne Robbins' mailboxes. Under **All recipients**, select **Edit**.
+7. On the **Choose where to apply the policy** page, note the Exchange email location. It's currently set to include **All recipients**. You want to change this to just apply to Joni Sherman and Lynne Robbins' mailboxes. Under **All mailboxes**, select **Edit**.
 
 8. In the **Exchange email** pane that appears, hover your mouse over **Joni Sherman** and then select her check box. Do the same for **Lynne Robins**. <br/>
 
@@ -52,7 +46,7 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 	Once both check boxes are selected, select **Done**.
 
-9. On the **Choose locations to apply the policy** page, the **Exchange email** location should now indicate that **2 recipients** are included. <br/>
+9. On the **Choose where to apply the policy** page, the **Exchange email** location should now indicate that **2 mailboxes** are included. <br/>
 
 	Since this policy will only apply to Exchange email for Joni and Lynne, set the **Status** toggle switch to **Off** for all other locations in which it's currently set to On (**SharePoint sites**, **OneDrive accounts**, and **Microsoft 365 Groups**). Select **Next**.
 
@@ -91,9 +85,9 @@ Holly has concluded her testing of email retention on Joni and Lynne's mailboxes
 
 6. On the **Choose the type of retention policy to create** field, select **Static** and then select **Next**.
 
-7. On the **Choose locations to apply the policy** page, this policy will only apply to **Exchange email**. Ensure that it's **Status** is set to **On**. Set the **Status** toggle switch to **Off** for all other locations that are turned **On** by default. **Exchange email** should be the only location whose **Status** is set to **On**. 
+7. On the **Choose where to apply the policy** page, this policy will only apply to **Exchange email**. Ensure that it's **Status** is set to **On**. Set the **Status** toggle switch to **Off** for all other locations that are turned **On** by default. **Exchange email** should be the only location whose **Status** is set to **On**. 
 
-8. For the **Exchange email** location, note that it's currently set to include **All recipients**. Do not change this value, since you want this policy to apply to all user mailboxes. Select **Next**.
+8. For the **Exchange email** location, note that it's currently set to include **All mailboxes**. Do not change this value, since you want this policy to apply to all user mailboxes. Select **Next**.
 
 9. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
 
