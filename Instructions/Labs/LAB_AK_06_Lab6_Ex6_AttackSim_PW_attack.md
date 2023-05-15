@@ -41,7 +41,7 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 	- From name: **Klemen Sic**
 	- From email: **klemens@tailspintoys.com**
 	- Email subject: **Free toy giveaway promotion from Tailspin Toys**
-	- Select a URL you want to be your phishing link: select the drop-down arrow and select **https://www.prizegives.com** from the list of fictitious URLs. 
+	- Select a URL you want to be your phishing link: select the **Select URL** button and select **https://www.prizegives.com** from the list of fictitious URLs. 
 	- Theme: **Personalized Offer**
 	- Industry: **Retail**
 	- Current Event: **Yes**
