@@ -57,7 +57,7 @@ In this task you will activate MDM auto-enrollment for new devices in your Adatu
 
 2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** (if necessary), and then in the **Admin centers** section, select **Azure Active Directory**.
 
-3. In the **Azure Active Directory admin center**, select **Azure Active Directory** in the left-hand navigation pane.
+3. In the **Microsoft Entra admin center**, select **Azure Active Directory** in the left-hand navigation pane.
 
 4. This returns the **Adatum Corporation | Overview** page. Under the **Manage** section in the middle pane, select **Mobility (MDM and MAM)**.
 
@@ -71,17 +71,17 @@ In this task you will activate MDM auto-enrollment for new devices in your Adatu
 
 	**Note:** You just configured the **MDM user scope** to automatically enroll devices that belong to members of the **Compliance Test Users** group into MDM management with Microsoft Intune. Once Holly tests this feature in Adatum's pilot project, and assuming she is satisfied with the results, she will then set the **MDM user scope** to **All**.
 	
-9. This returns the **Configure** window. In the middle pane, select **Restore default MDM URLs** to ensure the correct URLs are set. 
+9. This returns the **Configure** window. In the middle of the pane, select **Restore default MDM URLs** to ensure the correct URLs are set. 
 
 10. Select **Save** on the menu bar at the top of the page. Wait for the settings to be saved before proceeding to the next step.
 
 11. Select the **Microsoft 365 admin center** tab in your Edge browser. In the left-hand navigation pane, under the **Admin centers** section, select **Endpoint Manager**.
 
-12. In the **Microsoft Endpoint Manager admin center** window, select **Tenant administration** in the left-hand navigation pane.
+12. In the **Microsoft Intune admin center** window, select **Tenant administration** in the left-hand navigation pane.
 
 13. In the **Tenant admin | Tenant status** page, verify the **MDM authority** is set to **Microsoft Intune**.
 
-14. In your Microsoft Edge browser, you can close the Endpoint Manager admin center tab and the Azure Active Directory admin center tab. Leave the Microsoft Office Home tab and the Microsoft 365 admin center tab open.
+14. In your Microsoft Edge browser, you can close the Microsoft Intune admin center tab and the Microsoft Entra admin center tab. Leave the Microsoft Office Home tab and the Microsoft 365 admin center tab open.
 
 You have configured automatic enrollment in Intune for devices of users in the Compliance Test Users group, and you have verified the MDM authority for Adatum's tenant is set to Microsoft Intune.
 
