@@ -103,7 +103,7 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 5. Select **Save**. 
 
-6. At the top of the **Office installation options** pane, select the **X** in the upper-right corner of this window to close it. 
+6. At the top of the **Microsoft 365 app installation options** pane, select the **X** in the upper-right corner of this window to close it. 
 
 7. You should now test whether turning off this global download setting affects a **licensed** user from installing Microsoft 365 Apps for enterprise. In this case, you’re once again going to use **Laura Atkins**, so you must assign Laura a Microsoft 365 license. However, since there are no available licenses, you must first unassign a license from an existing Microsoft 365 user account. In this case, Holly will unassign Pradeep Gupta's licenses, since he has taken on a new role and will no longer be involved in Adatum's Microsoft 365 pilot project.  <br/>
 
