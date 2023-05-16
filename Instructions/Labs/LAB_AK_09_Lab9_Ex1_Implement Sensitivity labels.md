@@ -48,7 +48,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 4. On the **Microsoft Purview** portal, in the left-hand navigation pane, select **Information protection**. 
 
-5. On the **Information protection** page, the **Overview** tab is displayed by default. Select the **Labels** tab. A warning message is displayed in the middle of the **Labels** tab indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
+5. On the **Information protection** drop-down, the **Overview** tab is displayed by default. Select the **Labels** tab. A warning message is displayed in the middle of the **Labels** tab indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
 
     Select the **Turn on now** button that appears on the right side of this message. This will enable Adatum to apply the Sensitivity labels inside its Microsoft 365 environment. <br/>
 
@@ -56,7 +56,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 6. On the **Information protection** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen, below the previous message. This initiates the **New sensitivity label** wizard.
 
-7. In the **New sensitivity label** wizard, on the **Name and create a tooltip for your label** page, enter the following information:
+7. In the **New sensitivity label** wizard, on the **Name and tooltip** page, enter the following information:
 
 	- Name: **PII**
 	
@@ -66,13 +66,13 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 	- Description for admins: **Documents, files, and emails with PII**
 
-	- Color for users: select one of the colors that you want to assign to your sensitivity labels
+	- Label color: select one of the colors that you want to assign to your sensitivity labels
 
 8. Select **Next**.
 
 9. On the **Define the scope for this label** page, verify the **Items** check box is selected (select it now if necessary) and then select **Next**.
 
-10. On the **Choose protection settings for labeled items** page, select both check boxes for **Encrypt items** and **Mark items**, and then select **Next**.
+10. On the **Choose protection settings for labeled items** page, select both check boxes for **Apply or remove encryption** and **Apply content marking**, and then select **Next**.
 
 11. On the **Encryption** page, select the **Remove encryption if the file or email is encrypted** option and then select **Next**.
 
@@ -152,7 +152,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 34. Select the **Publish label** option that appears in the menu bar above the list of labels. This initiates a **Create policy** wizard.
 
-35. In the **Create policy** wizard, on the **Choose sensitivity labels to publish** page, the **PII** label is already listed, so select **Next**.
+35. In the **Create policy** wizard, on the **Choose sensitivity labels to publish** page, the **PII** label is already listed, so select **Next** and select **Next** for **Assign admin units (preview)**.
 
 36. On the **Publish to users and groups** page, you can either select **All** users and groups, or you can select specific users and groups. Select **Choose user or group**.
 
@@ -162,9 +162,9 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 39. On the **Policy settings** page, select the **Users must provide a justification to remove a label or lower its classification** check box, and then select **Next**. 
 
-40. On the **Apply a default label to documents** page, select the **Apply this default label to documents** field. Select **PII** in the drop-down menu that appears, and then select **Next**.
+40. On the **Apply a default label to documents** page, select **PII** in the drop-down menu that appears, and then select **Next**.
 
-41. On the **Apply a default label to emails** page, select the **Apply this default label to emails** field. Select **PII** in the drop-down menu that appears, and then select **Next**.
+41. On the **Apply a default label to emails** page, select **PII** in the drop-down menu that appears, and then select **Next**.
 
 42. On the **Apply a default label to Power BI content** page, select **PII** in the drop-down menu that appears, and then select **Next**.
 
