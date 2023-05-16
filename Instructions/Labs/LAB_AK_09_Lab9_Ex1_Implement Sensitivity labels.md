@@ -46,15 +46,15 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 3.  On the **Microsoft 365 admin center**, if necessary, select **... Show all**. Select **Compliance** under the **Admin centers** group.
 
-4. On the **Microsoft Purview** portal, in the left-hand navigation pane, select **Information protection**. 
+4. On the **Microsoft Purview** portal, in the left-hand navigation pane, select **Information protection** and then select **Labels**. 
 
-5. On the **Information protection** drop-down, the **Overview** tab is displayed by default. Select the **Labels** tab. A warning message is displayed in the middle of the **Labels** tab indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
+5. On the **Labels** page, a warning message is displayed in the middle of the page indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
 
     Select the **Turn on now** button that appears on the right side of this message. This will enable Adatum to apply the Sensitivity labels inside its Microsoft 365 environment. <br/>
 
     Note how the message has now changed to indicate: **You can now create sensitivity labels with privacy and access control settings for Teams, SharePoint sites, and Microsoft 365 Groups.**	
 
-6. On the **Information protection** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen, below the previous message. This initiates the **New sensitivity label** wizard.
+6. On the **Labels** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen, below the previous message. This initiates the **New sensitivity label** wizard.
 
 7. In the **New sensitivity label** wizard, on the **Name and tooltip** page, enter the following information:
 
