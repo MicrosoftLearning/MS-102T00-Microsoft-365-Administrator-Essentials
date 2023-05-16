@@ -147,7 +147,7 @@ To use Microsoft's Attack simulation training to simulate phishing attacks, Holl
 
 4. In the **Active users** window, on the menu bar at the top of the user list, select **Multi-factor authentication**.
 
-5. In the **multi-factor authentication** window, the **users** tab is displayed by default. Select the check box for **Holly Dickson**, and in Holly's properties pane on the right, select **Disable**.
+5. In the **multi-factor authentication** window (may need to select **Legacy per-user MFA**), the **users** tab is displayed by default. Select the check box for **Holly Dickson**, and in Holly's properties pane on the right, select **Disable**.
 
 6. On the **Disable multi-factor authentication?** dialog box, select **yes**. 
 
