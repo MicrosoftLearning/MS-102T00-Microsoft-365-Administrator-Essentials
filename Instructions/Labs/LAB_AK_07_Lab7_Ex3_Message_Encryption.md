@@ -19,7 +19,7 @@ In this task, you will create an encryption rule for messages inside your Exchan
 
 5. In the **New transport rule** wizard, on the **Set rule conditions** page, enter **Encrypt mail for guest@adatum.com** in the **Name** field.
 
-6. Two fields appear below the **Apply this rule if** condition. Select the first field. In the drop-down menu that appears, select **the recipient is**. <br/>
+6. Two fields appear below the **Apply this rule if** condition. Select the first field. In the drop-down menu that appears, select **the recipient**. <br/>
 
 	Select the second field. In the drop-down menu that appears, select **is this person**. For this condition, you must either select an existing name from the user list or type a new email address in the **Select members** field. In this case, enter **guest@adatum.com** in the **Select members** field. Select the **guest@adatum** field that appears, and then select **Save**.
 
