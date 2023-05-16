@@ -128,9 +128,9 @@ You will now review the results of the Drive-by URL simulation attack that you j
 
 13. Switch back to **LON-CL1**.
 
-14. On LON-CL1, in your browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. If the **Drive by URL - Free offer** simulation does not appear in the **Recent Simulations** list, select the **Refresh** icon to the left of the URL on the address bar. The **Drive by URL - Free offer** simulation should now appear. Select the **Drive by URL - Free offer** simulation to view the diagnostic results that were captured for this simulation.
+14. On LON-CL1, in your browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. If the **Custom payload** simulation does not appear in the **Recent Simulations** list, select the **Refresh** icon to the left of the URL on the address bar. The **Custom payload** simulation should now appear. Select the **Custom payload** simulation to view the diagnostic results that were captured for this simulation.
 
-15. A **Drive by URL - Free offer** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
+15. A **Custom payload** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
 
 16. Leave your browser open in LON-CL1 and do not close any of the tabs.
 
