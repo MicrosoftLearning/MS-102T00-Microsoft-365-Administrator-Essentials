@@ -14,7 +14,9 @@ To use Microsoft's Attack simulation training feature to simulate a phishing att
 
 3. In the **Active users** window, on the menu bar at the top of the user list, select **Multi-factor authentication**. If this option does not appear on the menu bar, select the **ellipsis (More actions)** icon, and in the drop-down menu that appears, select  **Multi-factor authentication**.
 
-4. A **multi-factor authentication** window appears in a new Edge browser tab (may need to select **Legacy per-user MFA**). On this page, the **users** tab is displayed by default. Note the MFA status for all existing user accounts is **Disabled**. Select the check box for **Holly Dickson**, and in Holly's properties pane that appears on the right, select **Enable**.
+4. A **Configure multifactor authentication (MFA)** window appears in a new Edge browser tab. Below the paragraph of text at the top of the page is an Information box that displays the message **Not what you're looking for? To configure MFA on an individual per-users level, select Legacy per-user MFA.** Select the **Legacy per-user MFA** link in this message. <br/>
+
+	On the **multi-factor authentication** page that appears, the **users** tab at the top of the page is displayed by default. Note the MFA status for all existing user accounts is **Disabled**. Select the check box for **Holly Dickson**, and in Holly's properties pane that appears on the right, select **Enable**.
 
 5. On the **About enabling multi-factor auth** dialog box that appears, select the **enable multi-factor auth** button. 
 
