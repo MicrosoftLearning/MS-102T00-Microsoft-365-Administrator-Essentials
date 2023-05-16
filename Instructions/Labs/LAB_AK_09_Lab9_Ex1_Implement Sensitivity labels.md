@@ -46,17 +46,17 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 3.  On the **Microsoft 365 admin center**, if necessary, select **... Show all**. Select **Compliance** under the **Admin centers** group.
 
-4. On the **Microsoft Purview** portal, in the left-hand navigation pane, select **Information protection**. 
+4. On the **Microsoft Purview** portal, in the left-hand navigation pane, select **Information protection** and then select **Labels**. 
 
-5. On the **Information protection** page, the **Overview** tab is displayed by default. Select the **Labels** tab. A warning message is displayed in the middle of the **Labels** tab indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
+5. On the **Labels** page, a warning message is displayed in the middle of the page indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
 
     Select the **Turn on now** button that appears on the right side of this message. This will enable Adatum to apply the Sensitivity labels inside its Microsoft 365 environment. <br/>
 
     Note how the message has now changed to indicate: **You can now create sensitivity labels with privacy and access control settings for Teams, SharePoint sites, and Microsoft 365 Groups.**	
 
-6. On the **Information protection** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen, below the previous message. This initiates the **New sensitivity label** wizard.
+6. On the **Labels** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen, below the previous message. This initiates the **New sensitivity label** wizard.
 
-7. In the **New sensitivity label** wizard, on the **Name and create a tooltip for your label** page, enter the following information:
+7. In the **New sensitivity label** wizard, on the **Name and tooltip** page, enter the following information:
 
 	- Name: **PII**
 	
@@ -66,13 +66,13 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 	- Description for admins: **Documents, files, and emails with PII**
 
-	- Color for users: select one of the colors that you want to assign to your sensitivity labels
+	- Label color: select one of the colors that you want to assign to your sensitivity labels
 
 8. Select **Next**.
 
 9. On the **Define the scope for this label** page, verify the **Items** check box is selected (select it now if necessary) and then select **Next**.
 
-10. On the **Choose protection settings for labeled items** page, select both check boxes for **Encrypt items** and **Mark items**, and then select **Next**.
+10. On the **Choose protection settings for labeled items** page, select both check boxes for **Apply or remove encryption** and **Apply content marking**, and then select **Next**.
 
 11. On the **Encryption** page, select the **Remove encryption if the file or email is encrypted** option and then select **Next**.
 
@@ -152,7 +152,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 34. Select the **Publish label** option that appears in the menu bar above the list of labels. This initiates a **Create policy** wizard.
 
-35. In the **Create policy** wizard, on the **Choose sensitivity labels to publish** page, the **PII** label is already listed, so select **Next**.
+35. In the **Create policy** wizard, on the **Choose sensitivity labels to publish** page, the **PII** label is already listed, so select **Next** and select **Next** for **Assign admin units (preview)**.
 
 36. On the **Publish to users and groups** page, you can either select **All** users and groups, or you can select specific users and groups. Select **Choose user or group**.
 
@@ -162,11 +162,13 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 39. On the **Policy settings** page, select the **Users must provide a justification to remove a label or lower its classification** check box, and then select **Next**. 
 
-40. On the **Apply a default label to documents** page, select the **Apply this default label to documents** field. Select **PII** in the drop-down menu that appears, and then select **Next**.
+40. On the **Apply a default label to documents** page, select **PII** in the drop-down menu that appears, and then select **Next**.
 
-41. On the **Apply a default label to emails** page, select the **Apply this default label to emails** field. Select **PII** in the drop-down menu that appears, and then select **Next**.
+41. On the **Apply a default label to emails** page, select **PII** in the drop-down menu that appears, and then select **Next**.
 
-42. On the **Apply a default label to Power BI content** page, select the **Apply this default label to Power BI content** field. Select **PII** in the drop-down menu that appears, and then select **Next**.
+42. On the **Apply a default label to Power BI content** page, select **PII** in the drop-down menu that appears, and then select **Next**.
+
+43. On the **Apply a default label to meetings and calendar events** page, select **PII** in the drop-down menu that appears, and then select **Next**.
 
 43. On the **Name your policy** page, enter **PII Policy** in the **Name** field, and then enter (or copy and paste) the following description for this sensitivity label policy: **The purpose of this policy is to detect sensitive information such as ABA bank routing numbers and US social security numbers in emails and documents, and to encrypt this information when it's discovered. The user must provide an explanation for removing the classification label.** Select **Next**.
 
@@ -236,15 +238,15 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 18. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number.
 
-19. You will now save the document. On the title bar, to the right of Word, select **Document1**.  In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber>Documents**. <br/>
+19. You will now save the document. On the title bar, to the right of Word, select **Document**.  In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber>Documents**. <br/>
 
 	In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file in the title bar.
 
 20. On the right-side of the menu bar, select the **Share** button.
 
-21. In the **Send link** window that appears, select **Anyone with the link can edit**. In the menu that appears, select **Specific people** then select **Apply**.
+21. In the **Send link** window that appears, select **Anyone with the link can edit**. In the menu that appears, select **People you choose** then select **Apply**.
 
-22. In the **Send link** window, enter **Joni** in the **Enter a name or Email address** field. In the list of users that appears, select **Joni Sherman** and then select **Send**.
+22. In the **Send link** window, enter **Joni** in the **To: Name, group or email** field. In the list of users that appears, select **Joni Sherman** and then select **Send**.
 
 23. Close the **Link sent** window. 
 
@@ -261,7 +263,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 3. In the **Microsoft Office Home** tab, select the **Outlook** icon in the column of app icons on the left-side of the screen. This opens Outlook on the web in a new tab. 
 
-4. In **Outlook on the web**, select **New Message** in the upper left part of the screen.
+4. In **Outlook on the web**, select **New Mail** in the upper left part of the screen.
 
 5. In the right-hand pane, enter the following information in the message form:
 
@@ -273,7 +275,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 	- Body of the message: enter **If you can open the protected and restricted document attached to this email, then try to change it.**
 
-6. Select **Attach** from the menu bar at the top of the screen, and in the drop-down menu that appears, under the **Suggested attachments** group, select the **ProtectedDocument1.docx** file that you created in the prior task.
+6. Select **Attach** from the menu bar at the top of the screen, and in the drop-down menu that appears, under the **Suggested files** group, select the **ProtectedDocument1.docx** file that you created in the prior task.
 
 7. Once the file has been attached to the email, select the file to open it. Note the watermarks that appear in the header and footer, and in the body of the document.  After reviewing the document, select the **X** in the upper right corner of the document window to close it. 
 

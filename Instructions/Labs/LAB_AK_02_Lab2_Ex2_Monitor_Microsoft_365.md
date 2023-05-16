@@ -160,7 +160,7 @@ If an organization runs into a situation in Microsoft 365 where it needs assista
 
 	The **Service request history** window displays any outstanding service request tickets. You should verify that no service request tickets appear on this page. <br/>
 
-2. In the navigation pane, under the **Support** group, select **New service request**.
+2. In the navigation pane, under the **Support** group, select **Help & Support**.
 
 3. In the **How can we help?** pane that appears, select the **Message** field (which currently displays **Example: Can't install Office**) and type the following message: **Can't install Office**. Then select the forward arrow that appears next to the field. This displays self-help solutions with insights and recommended articles to assist with your request. 
 
