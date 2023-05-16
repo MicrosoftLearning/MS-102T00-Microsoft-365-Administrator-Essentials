@@ -89,7 +89,7 @@ In this lab exercise, you will use one of the existing payload templates. In the
 
 9. On the **Select payload and login page** window, select the check box to the left of the **2 Failed Messages** payload. Select **Next**. 
 
-10. On the **Target Users** page, select the **Include all users in my organization** option. This will display all of Adatum's users. Select **Next**.
+10. On the **Target Users** page, select the **Include all users in my organization** option. This will display all of Adatum's users. Select **Next** and then select **Next** again for **Exclude users**.
 
 11. On the **Assign Training** page, under the **Preferences** section, the **Assign training for me (Recommended)** option should be selected by default (if not, select it now). Select the **Due Date** field. In the drop-down menu that appears, select **7 days after Simulation ends** and then select **Next**.
 
