@@ -52,7 +52,7 @@ The policy will contain two rules, or actions, each of which is dependent on the
         
      - Scroll down to the **User notifications** section, set the **Use notifications to inform your users and help educate them on the proper use of sensitive info** toggle switch to **On**.
 
-    - Select the checkbox for Notify users in Office 365 service with a policy tip. In the **Policy tips** section, select the **Customize the policy tip text** check box. Holly wants you to customize the Policy Tip message. <br/>
+    - Select the **Notify users in Office 365 service with a policy tip** checkbox. In the **Policy tips** section, select the **Customize the policy tip text** check box. Holly wants you to customize the Policy Tip message. <br/>
 
     Enter the following text in this field: **ATTENTION! You have entered sensitive information (an IP address) in this message. You will not be prevented from sending this message, but please review whether the recipients are authorized to see this sensitive data.** 
     
@@ -86,7 +86,7 @@ The policy will contain two rules, or actions, each of which is dependent on the
     
      - In the **User notifications** section, set the **Use notifications to inform your users and help educate them on the proper use of sensitive info** toggle switch to **On**. 
 
-    - Select the checkbox for Notify users in Office 365 service with a policy tip. In the **Policy tips** section, select the **Customize the policy tip text** check box. Holly wants you to customize the Policy Tip message. <br/>
+    - Select the **Notify users in Office 365 service with a policy tip** checkbox. In the **Policy tips** section, select the **Customize the policy tip text** check box. Holly wants you to customize the Policy Tip message. <br/>
 
     Enter the following text in this field: **ATTENTION! You have entered sensitive information (multiple IP addresses) in this message. You will be blocked if you attempt to send this message. Overriding this block indicates you have authorized sending this sensitive data to the recipients.** 
     
