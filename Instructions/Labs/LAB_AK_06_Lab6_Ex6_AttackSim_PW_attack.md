@@ -88,9 +88,7 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 
 28. On the **Assign Training** page, under the **Preferences** section, the **Assign training for me (Recommended)** option should be selected by default (if not, select it now). Select the **Due Date** field. In the drop-down menu that appears, select **7 days after Simulation ends** and then select **Next**.
 
-29. On the **Landing page** window, you will accept the default settings for now. These settings use the **Microsoft default landing page** and the **Microsoft Landing Page Template 1**. <br/>
-
-	Select the **Open preview panel** button that appears below the **Payload Indicators** section. 
+29. On the **Select Phish landing page** window, select **Global landing pages** tab and then select **Microsoft Landing Page Template 1** checkbox and then select **Microsoft Landing Page Template 1** name to preview the page. 
 
 30. A preview of the **Microsoft landing page** appears in the pane on the right. This preview panel provides an example of what the landing page will look like when someone experiences a Drive-by URL attack and the simulation uses **Microsoft Landing Page Template 1**. Scroll down through this preview panel and review the features of this template. When you're finished, select the **Close** button at the bottom of the preview panel. 
 
