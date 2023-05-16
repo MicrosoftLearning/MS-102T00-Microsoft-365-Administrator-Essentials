@@ -69,11 +69,11 @@ In this lab exercise, you will use one of the existing payload templates. In the
 
 3. In the **Microsoft 365 Defender** portal, under **Email & collaboration** in the left-hand navigation pane, select **Attack simulation training**. 
 
-4. On the **Attack Simulation training** page, Holly has decided to conduct an simulated account breach in which she will use a URL to try and obtain usernames and passwords. This is referred to in the Attack Simulator as a **Credentials Harvest** attack. <br/>
+4. On the **Attack Simulation training** page, Holly has decided to conduct a simulated account breach in which she will use a URL to try and obtain usernames and passwords. This is referred to in the Attack Simulator as a **Credentials Harvest** attack. <br/>
 
 	You can launch this attack either from **Simulations** tab or selecting the **Launch a simulation** link on the **Overview** page. Since the **Overview** tab has additional information and is the default page when selecting the **Attack simulation training** service, it is recommended that you launch it from there so that you can learn about the specifics of this type of attack. <br/>
 	
-	On the **Overview** tab, at the bottom of the **Recent Simulations** section, select **Launch a simulation**. This initiates the **Create Simulation** wizard.
+	On the **Overview** tab, in the **Recommendations** section, select **Create another simulation with new technique**. This initiates the **Create Simulation** wizard.
 
 5. On the **Select Technique** page, review the specific information related to the **Credentials Harvest** attack type. At the bottom of the **Credential Harvest** section, select the **View details of Credential harvest** link. This opens a **Credential Harvest** pane on the right. Review the **Description** and the **Simulation steps** for this type of attack. When you're done, close the **Credential Harvest** pane.
 
