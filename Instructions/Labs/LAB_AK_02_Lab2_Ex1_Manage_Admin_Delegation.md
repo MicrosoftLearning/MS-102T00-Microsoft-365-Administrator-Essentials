@@ -190,7 +190,9 @@ In this task, you will begin by examining the administrative properties of two u
 
 25. Enter **diego** in the **Password** field. Note to the right of the password, the system displays a message indicating this is a **Weak** password. Also note the message that appears below the field indicating the requirements for a strong password. Finally, note how the **Reset password** button at the bottom of the pane is not enabled. **This button will only be enabled once you enter a strong password**.  
 
-26. Enter **Pa55w.rd** in the **Password** field. Note the error message that appears indicating the password contains a word, phrase, or series of numbers that make it easily guessable. In this case, you entered a variation of the word **password**, which will trigger this error. 
+26. Verify the **Require this user to change their password when they first sign in** checkbox is selected (if not, then select it now to show a checkmark). Enter **Pa55w.rd** in the **Password** field. Note that the **Password** field indicates this is a Strong password. <br/>
+
+	However, now select the **Require this user to change their password when they first sign in** checkbox to clear it. Note the error message that appears indicating the password (Pa55w.rd) contains a word, phrase, or series of numbers that makes it easily guessable. In this case, you entered a variation of the word **password**, which will trigger this error. The system allows you enter this password if you force the user to change it at their first sign-in. But if you don't force the user to enter a different password at their first sign-in, then this password isn't allowed.
 
 27. After these two failed password attempts, Lynne has decided to let Microsoft 365 automatically generate a password. Select the **Automatically create a password** check box so that it displays a check mark. <br/>
 	
