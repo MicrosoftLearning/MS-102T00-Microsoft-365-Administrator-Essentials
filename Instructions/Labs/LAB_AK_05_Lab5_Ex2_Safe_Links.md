@@ -70,7 +70,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 6. Select the entire text string that you just added in the body of the message.
 
-7. To the right of the subject is a row of formatting icons. Select the **Link** icon, which depicts two half-ovals with a line in between. 
+7. A row of formatting icons should appear. Select the **Link** icon, which depicts two half-ovals with a line in between. 
 
 8. In the **Insert link** window that appears, the text that you highlighted in the body of the message should be displayed in the **Display as** field. In the **Web address (URL)** field, enter the following URL: **http://tailspintoys.com/aboutus/freetoys**.
 
