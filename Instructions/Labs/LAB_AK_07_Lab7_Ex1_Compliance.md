@@ -55,15 +55,15 @@ In this task you will activate MDM auto-enrollment for new devices in your Adatu
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** (if necessary), and then in the **Admin centers** section, select **Azure Active Directory**.
+2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** (if necessary), and then in the **Admin centers** section, select **Endpoint Manager**. This returns the **Microsoft Intune admin center**.
 
-3. In the **Microsoft Entra admin center**, select **Azure Active Directory** in the left-hand navigation pane.
+3. In the **Microsoft Intune admin center**, select **Devices** in the left-hand navigation pane.
 
-4. This returns the **Adatum Corporation | Overview** page. Under the **Manage** section in the middle pane, select **Mobility (MDM and MAM)**.
+4. This returns the **Devices | Overview** page. Under the **Device enrollment** section in the middle pane, select **Enroll devices**.
 
-5. In the right-hand pane, select **Microsoft Intune**.
+5. On the **Enroll devices | Windows Enrollment** page, in the **General** section, select **Automatic Enrollment**.
 
-6. This returns the **Configure** window, from which you can configure MDM and MAM settings for Microsoft Intune. For the **MDM User scope** option, select **Some.** This will display a **Groups** option below the **MDM user scope** option. This feature enables you to automatically enroll into Intune the devices that belong to users who are members of groups selected here.
+6. This returns the **Configure** window, from which you can configure MDM and MAM settings for Microsoft Intune. For the **MDM user scope** option, select **Some.** This will display a **Groups** option below the **MDM user scope** option. This feature enables you to automatically enroll into Intune the devices that belong to users who are members of groups selected here.
 
 7. To the right of the **Groups** option, select **No groups selected**. 
 
@@ -75,13 +75,11 @@ In this task you will activate MDM auto-enrollment for new devices in your Adatu
 
 10. Select **Save** on the menu bar at the top of the page. Wait for the settings to be saved before proceeding to the next step.
 
-11. Select the **Microsoft 365 admin center** tab in your Edge browser. In the left-hand navigation pane, under the **Admin centers** section, select **Endpoint Manager**.
+11. In the **Microsoft Intune admin center**, select **Tenant administration** in the left-hand navigation pane.
 
-12. In the **Microsoft Intune admin center** window, select **Tenant administration** in the left-hand navigation pane.
+12. In the **Tenant admin | Tenant status** page, verify the **MDM authority** is set to **Microsoft Intune**.
 
-13. In the **Tenant admin | Tenant status** page, verify the **MDM authority** is set to **Microsoft Intune**.
-
-14. In your Microsoft Edge browser, you can close the Microsoft Intune admin center tab and the Microsoft Entra admin center tab. Leave the Microsoft Office Home tab and the Microsoft 365 admin center tab open.
+13. In your Microsoft Edge browser, you can close all tabs except for the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab. Leave these two tabs open for the next exercise.
 
 You have configured automatic enrollment in Intune for devices of users in the Compliance Test Users group, and you have verified the MDM authority for Adatum's tenant is set to Microsoft Intune.
 
