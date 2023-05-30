@@ -28,17 +28,13 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 9. In the list of requirements that appears, select the following Adatum requirements to see which sync tool the system recommends (Note how the recommendation changes after selecting each additional requirement): <br/>
 
-	- **I have a single or multiple connected forests that I need to sync users and groups from.** <br/>
+	- Select **I require the ability for users to access both on-premises and cloud-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>
 
 		**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. By just selecting this one requirement, the system recommends using **Azure AD cloud sync**. <br/>
-
-	- **I require the ability for users to access both on-premises and cloud-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>
-
-		**Note:** After selecting this second requirement, the recommendation is still **Azure AD cloud sync**. <br/>
 	
-	- **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  <br/>
+	- Select **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  <br/>
 
-		**Note:** After selecting this third check box, the recommendation has changed to **Azure AD Connect**. This confirms that Holly's initial thought of selecting Azure AD Connect was the same as what the system would have recommended given Adatum's synchronization requirements.
+		**Note:** After selecting this second check box, the recommendation has changed to **Azure AD Connect**. This confirms that Holly's initial thought of selecting Azure AD Connect was the same as what the system would have recommended given Adatum's synchronization requirements.
 
 10. Select **Next**. The system will initiate synchronization using the recommended solution, **Azure AD Connect**. 
 
