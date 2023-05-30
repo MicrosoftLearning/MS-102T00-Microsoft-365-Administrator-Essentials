@@ -64,7 +64,7 @@ In the prior task, you configured a mail flow encryption rule using the Exchange
 
 	‎**Connect-ExchangeOnline -UserPrincipalName holly@xxxxxZZZZZZ.onmicrosoft.com**
 	
-6. In the **Enter password** dialog box that appears, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+6. In the **Enter password** dialog box that appears, enter the Microsoft 365 tenant admin password provided by your lab hosting provider and then select **Sign in**.
 
 7. You will now create a mail flow rule by using the **New-TransportRule** cmdlet, and you will set the **ApplyRightsProtectionTemplate** property to **Encrypt**, which is one of the available RMS templates. This rule will encrypt all outgoing mail from Adatum that is being sent to Gservices@adatum.com.  <br/>
 
@@ -72,9 +72,9 @@ In the prior task, you configured a mail flow encryption rule using the Exchange
 
 	**New-TransportRule -Name "Encrypt rule for Guest Services" -SentTo "Gservices@adatum.com" -SentToScope "NotinOrganization" -ApplyRightsProtectionTemplate Encrypt**  <br/>
 	
-	**Note:** This command will take several seconds to complete.
+	**Note:** This command will take several seconds to complete. Do not proceed to the next step until PowerShell displays the properties of the new rule that you created.
 
-8. To verify the rule exists, minimize your PowerShell window. In your Microsoft Edge browser, you should still be in the **mail flow** window of the **Exchange admin center**, and the **rules** tab should be displayed. The list of rules should only display the **Encrypt mail for guest@adatum.com** rule that you created in the prior task.<br/>
+8. To verify the rule exists, begin by minimizing your PowerShell window. In your Microsoft Edge browser, you should still be in the **mail flow** window of the **Exchange admin center**, and the **rules** tab should be displayed. The list of rules should only display the **Encrypt mail for guest@adatum.com** rule that you created in the prior task.<br/>
 
 	‎On the menu bar that appears above the list of rules, select the **Refresh** icon. In the refreshed list, the rule that you just created using PowerShell should appear as well.
 	
