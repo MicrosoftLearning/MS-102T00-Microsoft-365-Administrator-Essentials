@@ -12,31 +12,38 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
 2. In **Microsoft Edge**, the Microsoft Purview portal should still be open; if not, then open a new tab and navigate to **https://compliance.microsoft.com**.
 
-3. In the **Microsoft Purview** portal, in the left-hand navigation pane, select **Data loss prevention**.
+3. In the **Microsoft Purview** portal, in the left-hand navigation pane, select **Data loss prevention**, and then select **Policies**.
 
-4. On the **Data loss prevention** drop-down, select the **Policies** tab.
+5. In the **Policies** page, select the **+Create policy** option on the menu bar to start the **Create policy** wizard.
 
-5. In the **Policies** tab, select the **+Create policy** option on the menu bar to start the **Create policy** wizard.
+6. On the **Start with a template or create a custom policy** page, the **Categories** column displays the policy categories. Each policy category provide templates that can be used to create that type of policy, except for the **Custom** category. This category does not provide any specific template; instead, it enables organizations to create custom policies from scratch. When you select a category, **Templates** column appears that displays the available templates to choose from for the selected category. When you select a template, another column appears that displays the type of information that is protected in that template. <br/> 
 
-6. On the **Start with a template or create a custom policy** page, there are multiple policy categories listed. All the policy categories provide templates that can be used to create a policy, except for the **Custom** category. This category does not provide any specific template; instead, it enables organizations to create custom policies from scratch. The column in the left-hand pane displays the policy categories. When you select a category, the middle pane displays the available templates to choose from for that category. When you select a template in the middle pane, the right-hand pane displays the type of information that is protected in that template. <br/> 
-
-    For example, select **Financial** in the left-hand pane and then scroll through the various templates that you can choose from in the middle pane. Select one or two of the templates to see what type of information it protects. If you want, select each of the remaining categories to see what type of templates are provided. 
+    For example, select **Financial** in the left-hand pane and then scroll through the various templates that you can choose from in the **Templates** column. Select one or two of the templates to see what type of information it protects. If you want, select each of the remaining categories to see what type of templates are provided. 
   
-7. For the purpose of this lab, you will create a custom DLP policy. Select **Custom** in the left-hand **Categories** pane, select the **Custom policy** template in the middle pane, and then select **Next**.
+7. For the purpose of this lab, you will create a custom DLP policy. Select **Custom** in the **Categories** column, select the **Custom policy** template in the **Templates** column, and then select **Next**.
 
 8. In the **Name your DLP policy** page, enter the following information and then select **Next**:
 
-      - Name: **IP Address DLP policy**
+      - Name: Replace the default name with **IP Address DLP policy**
 
-      - Description: **This policy detects the presence of IP addresses in emails. End users are notified of the detection and admins receive a notification. Emails with 2 or more IP addresses are blocked from being sent.**
+      - Description: Replace the default description with **This policy detects the presence of IP addresses in emails. End users are notified of the detection and admins receive a notification. Emails with 2 or more IP addresses are blocked from being sent.**
 
-9. On the **Assign admin units (preview)** page, select **Next**. On the **Choose locations to apply the policy** page, verify the **Status** toggle is set to **On** for the following locations (if any of these locations is not set to **On** by default, then set it to **On** now): **Exchange email, SharePoint sites, OneDrive accounts, Teams chats and channel messages**. Set all other locations to **Off**, and then select **Next**.
+9. On the **Assign admin units (preview)** page, select **Next**. 
 
-10. On the **Define policy settings** page, select the **Create or customize advanced DLP rules** option, (if it isn't already selected by default) and then select **Next**. 
+10. On the **Choose locations to apply the policy** page, verify the **Status** toggle is set to **On** for the following locations (if any of these locations is not set to **On** by default, then set it to **On** now): <br/>
 
-11. On the **Customize advanced DLP rules** page, select the **+Create rule** option on the menu bar.
+    - **Exchange email**
+    - **SharePoint sites**
+    - **OneDrive accounts**
+    - **Teams chats and channel messages**
 
-12. On the **Create rule** page, enter the following information:
+    Set all other locations to **Off**, and then select **Next**.
+
+11. On the **Define policy settings** page, the **Create or customize advanced DLP rules** option should be set by default (if it isn't already selected by default, then select it now) and then select **Next**. 
+
+12. On the **Customize advanced DLP rules** page, select the **+Create rule** option on the menu bar.
+
+13. On the **Create rule** page, enter the following information:
     
       - Name: **Single IP Address rule**
     
@@ -60,9 +67,9 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
     - Select the **Save** button at the page of the page.
 
-13. On the **Customize advanced DLP rules** page, the **Single IP Address rule** that you just created should now appear. Select the **+Create rule** option to create the second DLP rule. 
+14. On the **Customize advanced DLP rules** page, the **Single IP Address rule** that you just created should now appear. Select the **+Create rule** option to create the second DLP rule. 
 
-14. On the **Create rule** page, enter the following information:
+15. On the **Create rule** page, enter the following information:
     
       - Name: **Multiple IP Address rule**
     
@@ -96,13 +103,13 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
     - Select the **Save** button at the page of the page.
 
-15. On the **Customize advanced DLP rules** page, both the **Single IP Address rule** and **Multiple IP Address rule** should now appear. Select **Next**.
+16. On the **Customize advanced DLP rules** page, both the **Single IP Address rule** and **Multiple IP Address rule** should now appear. Select **Next**.
 
-16. On the **Policy mode** page, select the **Turn it on right away** option and then select **Next**.
+17. On the **Policy mode** page, select the **Turn it on right away** option and then select **Next**.
 
-17. On the **Review your policy and create it** page, review the policy that you just created. If anything needs to be corrected, select the appropriate **Edit** option and make your corrections. When everything appears OK, select **Submit**.
+18. On the **Review your policy and create it** page, review the policy that you just created. If anything needs to be corrected, select the appropriate **Edit** option and make your corrections. When everything appears OK, select **Submit**.
 
-18. On the **New policy created** page, select **Done**.
+19. On the **New policy created** page, select **Done**.
 
 
 You have now created a DLP policy that scans for IP addresses in emails and documents that are sent or shared in your organization.
