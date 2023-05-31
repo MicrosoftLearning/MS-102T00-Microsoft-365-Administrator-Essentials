@@ -74,7 +74,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 10. On the **Choose protection settings for labeled items** page, select both check boxes for **Apply or remove encryption** and **Apply content marking**, and then select **Next**.
 
-11. On the **Encryption** page, select the **Remove encryption if the file or email is encrypted** option and then select **Next**.
+11. On the **Encryption** page, you will define who can access items that have this label applied. Select the **Remove encryption if the file or email is encrypted** option and then select **Next**.
 
 12. On the **Content Marking** page, set the **Content Marking** toggle switch to **On**. This displays three options that enable you to customize how you want to mark files and emails. <br/>
 
@@ -242,24 +242,12 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 	In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file in the title bar.
 
-20. On the right-side of the menu bar, select the **Share** button. In the drop-down menu that appears, select **Share**.
-
-21. In the **Send link** window that appears, select **Anyone with the link can edit**. <br/>
-
-	On the **Sharing settings** page that appears, select **People you choose**. Under **More settings**, select **Can edit**. In the menu that appears, select **Can view**, and then select **Apply**. <br/>
-
-	On the **Send link** window, enter **Joni** in the **To: Name, group or email** field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**. <br/>
-
-	Select the pencil icon with the drop down arrow. In the menu that appears, you can select the permissions applied to the link that you're sending. Select **Can view** and then select **Apply**.
-
-22. Close the **Link to 'ProtectedDocument1' copied** window that appears.
-
 You have just successfully created an AIP protected Word document that is read-only protected. The document is accessible only by its creator, Alex Wilber, and by Joni Sherman (with Read-only permission), to whom the document was shared.
 
 
 ### Task 4 – Verify your Sensitivity Label policy
 
-In the prior task, you created a Word document and protected it with a sensitivity label. The **PII - V1** label should have inserted a watermark in the document, and it should have restricted permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman and to your own personal email address. You will then test what functionality is possible for both Joni and Alex Wilber.
+In the prior task, you created a Word document and protected it with a sensitivity label. When users other than Alex try to access the document, the **PII - V1** label should display watermarks in the document, and it should restrict permissions on the document. To verify whether the protection that you assigned to the document works, you will first email the document to Joni Sherman, and then you will test what functionality is possible for Joni.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task.
 
@@ -272,8 +260,6 @@ In the prior task, you created a Word document and protected it with a sensitivi
 5. In the right-hand pane, enter the following information in the message form:
 
 	- To: Enter **Joni** and then select **Joni Sherman** from the user list. 
-
-	- CC: Enter your own personal email address (do NOT enter Holly's email address; instead, enter your own personal email address)
 
 	- Add a subject: **Protected Document Test**
 
@@ -303,7 +289,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 17. Select the attached file to open it.
 
-18. In the **Your privacy option** dialog box that appears, select **Close**. Review the document, and note the watermarks in the header, footer, and body of the document. Close the document window. 
+18. If a **Your privacy option** dialog box appears, select **Close**. Review the document, and note the watermarks in the header, footer, and body of the document. Close the document window. 
 
 19. This will return you to **Outlook on the web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Select the down arrow that appears on the right-side of the tile, and in the menu that appears, select **Download**.
 
@@ -326,12 +312,6 @@ In the prior task, you created a Word document and protected it with a sensitivi
 	‎**Note:** You have just verified that the permissions assigned to the file are working properly. Joni can read the file (since she was assigned Read-only permission), but she is unable to change it (no one was assigned Edit permission).
 
 25. Close Word.
-
-26. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that you (in the role of Holly) just sent to your personal email address, and then attempt to open the attached file. 
-
-27. You should receive a message indicating that you are not signed into Office with an account that has permission to access the document. You can optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account, or Cancel out of the operation. Select **Cancel**.  <br/>
-
-	‎Since only Joni was assigned permission to read the document, you just verified that Azure Information Protection protected the document based on the PII policy parameters that you configured.
 
 ## Congratulations! You have just completed the final lab in this course.
 
