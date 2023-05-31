@@ -62,6 +62,8 @@ The policy will contain two rules, or actions, each of which is dependent on the
     - Select the **Notify users in Office 365 service with a policy tip** checkbox. In the **Policy tips** section, select the **Customize the policy tip text** check box. Holly wants you to customize the Policy Tip message. <br/>
 
     Enter the following text in this field: **ATTENTION! You have entered sensitive information (an IP address) in this message. You will not be prevented from sending this message, but please review whether the recipients are authorized to see this sensitive data.** 
+
+    - Select the **Show the policy tip as a dialog for the end user before send (available for Exchange workload only)** checkbox. 
     
     - In the **Incident reports** section, verify the **Send an alert to admins when a rule match occurs** toggle switch is set to **On** (if necessary, set it to **On**)
 
@@ -96,6 +98,8 @@ The policy will contain two rules, or actions, each of which is dependent on the
     - Select the **Notify users in Office 365 service with a policy tip** checkbox. In the **Policy tips** section, select the **Customize the policy tip text** check box. Holly wants you to customize the Policy Tip message. <br/>
 
     Enter the following text in this field: **ATTENTION! You have entered sensitive information (multiple IP addresses) in this message. You will be blocked if you attempt to send this message. Overriding this block indicates you have authorized sending this sensitive data to the recipients.** 
+
+    - Select the **Show the policy tip as a dialog for the end user before send (available for Exchange workload only)** checkbox. 
     
     - In the **User overrides** section, select the **Allow overrides from M365 services** check box. This enables additional settings that indicate how overrides will be handled. Select each of the check boxes for the following two options: <br/>
 
