@@ -24,7 +24,7 @@ In this task, you will send an email from Holly Dickson to Lynne Robbins that te
 
 	- Add a subject: **DLP Policy Test 1**
 
-	- Message area: **Hey Lynne - I will configure this IP address: 192.168.0.1.**. 
+	- Message area: **Hey Lynne - I will configure this IP address: 192.168.0.1**. 
 
 	**Note:** When drafting this email with sensitive data (in this case, one IP address), it will trigger the IP address policy that you previously created, and specifically, the single IP address rule. As such, a **Policy tip** should be displayed indicating the email message violates an organizational policy. You'll ignore this policy tip and send the email anyway in order to test the remainder of the DLP policy, which will send a Notification email to Holly.
 
@@ -63,7 +63,7 @@ In this task, you will send an email from Holly Dickson to Lynne Robbins that te
 
 	- Add a subject: **DLP Policy Test 2**
 
-	- Message area: **Hey Lynne - I will test IP address 192.168.0.1 and then IP address 172.16.0.1.**
+	- Message area: **Hey Lynne - I will test the following IP addresses: 192.168.0.1 and 172.16.0.1**
 
 	**Note:** When drafting this email with sensitive data (in this case, multiple IP addresses), it will trigger the IP address policy that you previously created, and specifically, the multiple IP address rule. As such, a **Policy tip** should be displayed indicating the email message violates an organizational policy. You'll ignore this policy tip and send the email anyway in order to test the remainder of the DLP policy, which will block the email. Once you test the email block, you'll override the blockage by entering a business justification for sending this sensitive data, and then you'll try and send the email again.
 
