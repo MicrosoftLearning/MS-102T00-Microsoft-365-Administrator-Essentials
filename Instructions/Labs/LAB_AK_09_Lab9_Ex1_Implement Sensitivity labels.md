@@ -214,11 +214,11 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 	**Note:** In the next task, you will return back to the **Microsoft Office Home** tab by selecting the **Back** arrow at the top of this **Word** tab.
 
-10. In the **Word** tab, select **New blank document**.
+10. In the **Word** tab, under the **Create new** section at the top of the page, select **Blank document**.
 
 11. If a **Your privacy option** window appears, select **Close**.
 
-12. If the Word ribbon displays icons for each feature but does not break the icons out by group, then select the down-arrow on the far right-side of the ribbon. This will switch the ribbon to the traditional ribbon style that is broken out by feature group (such as Undo, Clipboard, Font, Paragraph, Styles, and so forth).
+12. If the Word ribbon displays icons for each feature but does not break the icons out by group, then select the down-arrow on the far right-side of the ribbon, and then under **Ribbon layout**, select **Classic ribbon**. This will switch the ribbon to the traditional ribbon style that is broken out by feature group (such as Undo, Clipboard, Font, Paragraph, Styles, and so forth).
 
 13. In the **Word** document, type **Testing personally identifiable information (PII).**
 
@@ -238,17 +238,21 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 18. In the Word document, enter **111-11-1111** below the previous line of text that you entered. This number is the same format as a U.S. Social Security Number.
 
-19. You will now save the document. On the title bar, to the right of Word, select **Document**.  In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber>Documents**. <br/>
+19. You will now save the document. On the title bar, to the right of Word, select **Document1**.  In the drop-down menu that appears, confirm the file **Location** says **Alex Wilber > Documents**. <br/>
 
 	In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file in the title bar.
 
-20. On the right-side of the menu bar, select the **Share** button.
+20. On the right-side of the menu bar, select the **Share** button. In the drop-down menu that appears, select **Share**.
 
-21. In the **Send link** window that appears, select **Anyone with the link can edit**. In the menu that appears, select **People you choose** then select **Apply**.
+21. In the **Send link** window that appears, select **Anyone with the link can edit**. <br/>
 
-22. In the **Send link** window, enter **Joni** in the **To: Name, group or email** field. In the list of users that appears, select **Joni Sherman** and then select **Send**.
+	On the **Sharing settings** page that appears, select **People you choose**. Under **More settings**, select **Can edit**. In the menu that appears, select **Can view**, and then select **Apply**. <br/>
 
-23. Close the **Link sent** window. 
+	On the **Send link** window, enter **Joni** in the **To: Name, group or email** field. A list of users whose name starts with **joni** should appear. Select **Joni Sherman**. <br/>
+
+	Select the pencil icon with the drop down arrow. In the menu that appears, you can select the permissions applied to the link that you're sending. Select **Can view** and then select **Apply**.
+
+22. Close the **Link to 'ProtectedDocument1' copied** window that appears.
 
 You have just successfully created an AIP protected Word document that is read-only protected. The document is accessible only by its creator, Alex Wilber, and by Joni Sherman (with Read-only permission), to whom the document was shared.
 
@@ -275,9 +279,9 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 	- Body of the message: enter **If you can open the protected and restricted document attached to this email, then try to change it.**
 
-6. Select **Attach** from the menu bar at the top of the screen, and in the drop-down menu that appears, under the **Suggested files** group, select the **ProtectedDocument1.docx** file that you created in the prior task.
+6. Select the **Attach** icon from the menu bar at the top of the screen, and in the drop-down menu that appears, under the **Suggested files** group, select the **ProtectedDocument1.docx** file that you created in the prior task.
 
-7. Once the file has been attached to the email, select the file to open it. Note the watermarks that appear in the header and footer, and in the body of the document.  After reviewing the document, select the **X** in the upper right corner of the document window to close it. 
+7. Once the file has been attached to the email, select the link to the file to open it. In the drop-down menu that appears, select **Attach as a copy**. After the file is attached, select the file to open it. Note the watermarks that appear in the header and footer, and in the body of the document.  After reviewing the document, select the **X** in the upper right corner of the document window to close it. 
 
 8. Select **Send**.
 
@@ -295,39 +299,37 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 15. If a **Welcome** window appears, select the X to close it.
 
-16. In Joni’s **Inbox** in **Outlook on the web**, open the email that Alex just sent her by selecting the email in the Inbox. Note the **Sensitive - Do Not Share** watermark that appears in the message. There are the header and footer watermarks were entered in the PII - V1 label created by the PowerShell script, which are the same watermarks that you configured for the label that you created in the prior task.
+16. In Joni’s **Inbox** in **Outlook on the web**, open the email that Alex just sent her by selecting the email in the Inbox. Note the **Sensitive - Do Not Share** watermark that appears in the message. These are the header and footer watermarks were entered in the PII - V1 label created by the PowerShell script, which are the same watermarks that you configured for the label that you created in the prior task.
 
 17. Select the attached file to open it.
 
 18. In the **Your privacy option** dialog box that appears, select **Close**. Review the document, and note the watermarks in the header, footer, and body of the document. Close the document window. 
 
-19. This will return you to **Outlook on the web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Hover your mouse over the document tile and note the two down arrows that appear. Hover your mouse over each arrow. The first displays **Download**, while the second arrow displays **More actions**. Select the **More actions** arrow, and in the drop-down menu that appears, note that it also has a **Download** option. Since you have this menu open, select the **Download** option from here.  
+19. This will return you to **Outlook on the web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Select the down arrow that appears on the right-side of the tile, and in the menu that appears, select **Download**.
 
-20. In the notification bar that appears at the bottom of the screen, select **Save.** 
+20. Once the file has finished downloading, in the notification bar, select **Open file** that appears below the file name.
 
-21. Once the file has finished downloading, in the notification bar, select **Open.**
+21. **Microsoft Word** should open along with a **Sign in** window (it may open behind the Outlook window, in which case select the **Word** icon on the taskbar to bring it forward). 
 
-22. **Microsoft Word** should open along with a **Sign in** window (it may open behind the Outlook window, in which case select the **Word** icon on the taskbar to bring it forward). 
+22. If a **Microsoft Office Activation Wizard** window appears, select **Close** and proceed to the next step. <br/>
 
-23. Because the file is RMS protected and no AIP unified labeling client is installed on LON-CL2, you need to use the native RMS features of Word Microsoft Apps and register this installation to Joni’s account. <br/>
+	However, if a **Sign in** window appears, it's because the file is RMS protected and no AIP unified labeling client is installed on LON-CL2. In this case, you need to use the native RMS features of Word Microsoft Apps and register this installation to Joni’s account. <br/>
 
-	‎In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** 
+	‎In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.** <br/>
 
-24. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.**
+	In the **Use this account everywhere on your device** window that appears, select **This app only** to register this Office 365 ProPlus installation to **Joni Sherman’s** Microsoft 365 account.
 
-25. In the **Use this account everywhere on your device** window that appears, select **This app only** to register this Office 365 ProPlus installation to **Joni Sherman’s** Microsoft 365 account.
+23. The file should open in Word, since you assigned Joni with Read-only permission. Review the three notification bars that appear above the document. 
 
-26. The file should open in Word, since you assigned Joni with Read-only permission. Review the three notification bars that appear above the document. 
-
-27. Try to change the file. Word should not recognize any keystrokes, and it should display the following message above the taskbar: **This modification is not allowed because the document is open for viewing only.** <br/>  
+24. Try to change the file. Word should not recognize any keystrokes, and it should display the following message above the taskbar: **This modification is not allowed because the document is open for viewing only.** <br/>  
 
 	‎**Note:** You have just verified that the permissions assigned to the file are working properly. Joni can read the file (since she was assigned Read-only permission), but she is unable to change it (no one was assigned Edit permission).
 
-28. Close Word.
+25. Close Word.
 
-29. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that you (in the role of Holly) just sent to your personal email address, and then attempt to open the attached file. 
+26. You will now test what happens when you attempt to open the document that was sent to your personal email address. Use your phone or classroom PC to access your personal email address. Open the email that you (in the role of Holly) just sent to your personal email address, and then attempt to open the attached file. 
 
-30. You should receive a message indicating that you are not signed into Office with an account that has permission to access the document. You can optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account, or Cancel out of the operation. Select **Cancel**.  <br/>
+27. You should receive a message indicating that you are not signed into Office with an account that has permission to access the document. You can optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account, or Cancel out of the operation. Select **Cancel**.  <br/>
 
 	‎Since only Joni was assigned permission to read the document, you just verified that Azure Information Protection protected the document based on the PII policy parameters that you configured.
 
