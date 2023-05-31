@@ -267,9 +267,9 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Alex Wilber** from the prior task with the **Word** tab open. 
 
-	**Note**: If the copied link from the prior exercise is no longer in your clipboard, with the **Word** tab selected, On the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Manage Access**. Under **Links giving access** you can copy the link created in the previous task.
+	**Note**: If the copied link from the prior exercise is no longer in your clipboard, you will need to re-copy the link. To do so, select the **Word** tab, and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Manage Access**. Under **Links giving access** you can copy the link created in the previous task.
 
-2.  In your Edge browser, select the **Word** tab and then select the **Back** arrow. This should display the **Microsoft Office Home** tab.  
+2.  In your Edge browser, select the **Word** tab and then select the **Back** arrow. This should display the **Microsoft Office Home** tab. 
 
 3. In the **Microsoft Office Home** tab, select the **Outlook** icon in the column of app icons on the left-side of the screen. This opens Outlook on the web in a new tab. 
 
@@ -285,7 +285,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 	- Body of the message: enter **If you can open the protected and restricted document attached to this email, then try to change it.**
 
-6. In the body of the message, under the text we added in the previous step, paste the link copied to your clipboard from the prior task. A link for the named file **ProtectedDocument1.docx** should now appear.
+6. In the body of the message, under the text you added in the previous step, paste the link copied to your clipboard from the prior task. A link for the file named **ProtectedDocument1.docx** should appear.
 
 8. Select **Send**.
 
@@ -307,8 +307,9 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 17. Select the attached file to open it.
 
-18. In the **Your privacy option** dialog box that appears, select **Close**. Review the document, note the custom header, footer, and watermark specificed in the **PII - V1** policy do not display by default. To view the custom header, footer, and watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default.
-Close the document window. 
+18. In the **Your privacy option** dialog box that appears, select **Close**. Review the document, note the custom header, footer, and watermark specificed in the **PII - V1** policy do not display by default. To view the custom header, footer, and watermark, select the **View** tab and then in the menu select **Reading View**. Alternatively, in the real world, you could use the Word Desktop App which would display these by default. <br/>
+
+	Once you have finished reviewing the document, close the document window. 
 
 19. This will return you to **Outlook on the web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Select the down arrow that appears on the right-side of the tile, and in the menu that appears, select **Download**.
 
