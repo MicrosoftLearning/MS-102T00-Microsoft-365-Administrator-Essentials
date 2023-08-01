@@ -30,17 +30,9 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 11. On the **Configuration complete** page, note the message indicating the current sign on method for Azure AD is PTA. Select **Exit**. Pass-Through Authentication has now been enabled. 
 
-12. To verify that Pass-Through Authentication is successfully enabled, select a new tab in your Edge browser and enter the following URL in the address bar: **https://aad.portal.azure.com**
+12. To verify that Pass-Through Authentication is successfully enabled, select a new tab in your Edge browser and enter the following URL in the address bar: **https://entra.microsoft.com**
 
-13. This opens the **Azure Active Directory admin center**. In the left-hand navigation pane, select **Azure Active Directory**. 
-
-14. On the **Azure Active Directory admin center** page, in the left-hand navigation pane, select **All services**.
-
-15. On the **All services** page, four groups are displayed - General, Identity, Security, and Hybrid + multicloud. Under the **Identity** group, select **Azure Active Directory**. 
-
-16. On the **Adatum Corporation | Overview** page, note how the window is divided into three parts - the navigation pane on the left, the middle navigation pane (which provides navigation options for this page), and the larger detail pane on the right. This design format is used on many of the Azure AD screens. <br/>
-
-	In the middle navigation pane under the **Manage** section, select **Azure AD Connect**.
+13. This opens the **Microsoft Entra admin center**. In the left-hand navigation pane, click on **Show more** in order to select **Azure AD Connect** under**Hybrid Management**. 
 
 17. On the **AAD Connect | Get started** page, in the middle navigation pane, select **Connect Sync**.
 
@@ -48,9 +40,9 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 19. On the **Passthrough Authentication** page, review the list of servers on which your pass-through authentication agents are installed. This should display **LON-DC1.Adatum.com**.
 
-20. Select the **X** in the upper-right corner of the **Passthrough Authentication** page to close it, and then do the same to close the **AAD Connect | Connect Sync** page and the **Adatum Corporation | Overview** page. You should now be back to the **All services** page in the **Azure Active Directory admin center**.
+20. Select the **X** in the upper-right corner of the **Passthrough Authentication** page to close it, and then do the same to close the **AAD Connect | Connect Sync** page and the **Adatum Corporation | Overview** page. You should now be back to the **Microsoft Entra admin center**.
 
-21. Leave the **Azure Active Directory admin center** open as you will use it in the next task.
+21. Leave the **Microsoft Entra admin center** open as you will use it in the next task.
    
 
 ### Task 2: Deploy Azure AD Smart Lockout
@@ -75,15 +67,11 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 7. In the **Account Policies** folder, select **Account Lockout Policy**.
 
-8. As you can see in the right-hand pane, none of the smart lockout parameters have been defined. You are going to use the **Azure AD admin center** to assign these values.   <br/>
+8. As you can see in the right-hand pane, none of the smart lockout parameters have been defined. You are going to use the **Microsoft Entra admin center** to assign corresponding values in the Entra ID context.  
 
-	‎Select the Edge browser icon on the taskbar, which should be displaying the **All services** tab in the **Azure Active Directory admin center**. 
+9. ‎Select the Edge browser icon on the taskbar, which should be displaying the **Microsoft Entra admin center**. 
 
-9. In the **Azure Active Directory admin center**, in the left-hand navigation pane, select **Azure Active Directory**.
-
-10. In the **Adatum Corporation | Overview** page, in the middle navigation pane under the **Manage** section, scroll down and select **Security**.
-
-11. In the **Security | Getting started** window, in the middle pane under the **Manage** section, select **Authentication methods**.
+9. In the **Microsoft Entra admin center**, in the left-hand navigation pane, select **Authentication methods** under the **Protection** submenu.
 
 12. In the **Authentication methods | Policies** page, in the middle pane under the **Manage** section, select **Password protection.**
 
