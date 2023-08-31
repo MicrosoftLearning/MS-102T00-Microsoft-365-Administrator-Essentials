@@ -32,7 +32,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 12. To verify that Pass-Through Authentication is successfully enabled, select a new tab in your Edge browser and enter the following URL in the address bar: **https://entra.microsoft.com**
 
-13. This opens the **Microsoft Entra admin center**. In the left-hand navigation pane, click on **Show more** in order to select **Azure AD Connect** under**Hybrid Management**. 
+13. This opens the **Microsoft Entra admin center**. In the left-hand navigation pane, click on **Show more** in order to select **Azure AD Connect** under **Hybrid Management**. 
 
 17. On the **AAD Connect | Get started** page, in the middle navigation pane, select **Connect Sync**.
 
