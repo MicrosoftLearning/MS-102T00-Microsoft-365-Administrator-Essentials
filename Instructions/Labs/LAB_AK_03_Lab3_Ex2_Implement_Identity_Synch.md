@@ -1,12 +1,12 @@
 # Learning Path 3 - Lab 3 - Exercise 2 - Implement Identity Synchronization 
 
-In this exercise, you will use Azure AD Connect to enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Azure AD Connect will then continue to synchronize any delta changes every 30 minutes. You will then make some user and group updates and then manually force an immediate synchronization rather than waiting for Azure AD Connect to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
+In this exercise, you will use Microsoft Entra Connect to enable synchronization between Adatum’s on-premises Active Directory and Microsoft Entra ID. Microsoft Entra Connect will then continue to synchronize any delta changes every 30 minutes. You will then make some user and group updates and then manually force an immediate synchronization rather than waiting for Microsoft Entra Connect to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
 
-‎**IMPORTANT:** When you start this exercise, you should perform the first four tasks without any delay between them so that Azure AD Connect does not automatically synchronize the changes that you make to the identity objects.
+‎**IMPORTANT:** When you start this exercise, you should perform the first four tasks without any delay between them so that Microsoft Entra Connect does not automatically synchronize the changes that you make to the identity objects.
 
-### Task 1: Install Azure AD Connect and Initiate Synchronization
+### Task 1: Install Microsoft Entra Connect and Initiate Synchronization
 
-In this task, you will run the Azure AD Connect setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Azure Active Directory. Once the configuration is complete, the synchronization process will automatically start. 
+In this task, you will run the Microsoft Entra Connect setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Microsoft Entra ID. Once the configuration is complete, the synchronization process will automatically start. 
 
 1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task. 
 
@@ -14,15 +14,15 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 3. In your **Edge** browser, select the **Microsoft 365 admin center** tab, and then in the navigation pane, select **Users**, and then select **Active Users**. <br/>
 
-4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu that appears, select **Directory synchronization**. This initiates the **Add or sync users to Azure AD** wizard.
+4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu that appears, select **Directory synchronization**. This initiates the **Add or sync users to Microsoft Entra ID** wizard.
 
-5. In the **Add or sync users to Azure AD** wizard, on the **About user synchronization** page, read through the content. In the **User status** section, note the number of existing Adatum cloud users and hybrid users. Select **Next**.
+5. In the **Add or sync users to Microsoft Entra ID** wizard, on the **About user synchronization** page, read through the content. In the **User status** section, note the number of existing Adatum cloud users and hybrid users. Select **Next**.
 
 6. On the **Select a migration option** page, read the explanation of each option so that you understand the migration options that are available. Select the **Continuous sync** option and then select **Next**.
 
 7. On the **Prepare by running IdFix** page, since you already ran IdFix in the prior lab exercise, there's no need to download and run it again. Select **Next**.
 
-8. On the **Review synchronization tools** page, Holly had originally planned to select the **Azure AD Connect** option given Adatum's Exchange hybrid deployment. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Azure AD Connect is the correct choice for Adatum. <br/>
+8. On the **Review synchronization tools** page, Holly had originally planned to select the **Microsoft Entra Connect Sync** option given Adatum's Exchange hybrid deployment. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Microsoft Entra Connect Sync is the correct choice for Adatum. <br/>
 
 	Select **Help me decide**. This option enables you to select from amongst a variety of requirements that your organization may have.  
 
@@ -30,13 +30,13 @@ In this task, you will run the Azure AD Connect setup wizard to enable synchroni
 
 	- Select **I require the ability for users to access both on-premises and cloud-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>
 
-		**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. By just selecting this one requirement, the system recommends using **Azure AD cloud sync**. <br/>
+		**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. By just selecting this one requirement, the system recommends using **Microsoft Entra Cloud Sync**. <br/>
 	
 	- Select **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  <br/>
 
-		**Note:** After selecting this second check box, the recommendation has changed to **Azure AD Connect**. This confirms that Holly's initial thought of selecting Azure AD Connect was the same as what the system would have recommended given Adatum's synchronization requirements.
+		**Note:** After selecting this second check box, the recommendation has changed to **Microsoft Entra Connect**. This confirms that Holly's initial thought of selecting Azure AD Connect was the same as what the system would have recommended given Adatum's synchronization requirements.
 
-10. Select **Next**. The system will initiate synchronization using the recommended solution, **Azure AD Connect**. 
+10. Select **Next**. The system will initiate synchronization using the recommended solution, **Microsoft Entra Connect**. 
 
 11. On the **Sync your users** page, select the **Download Azure AD Connect** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
 
