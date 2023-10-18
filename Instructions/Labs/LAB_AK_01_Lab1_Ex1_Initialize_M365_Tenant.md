@@ -226,26 +226,7 @@ In this task, you will turn on Information Rights Management (IRM) for SharePoin
 9. Close this **SharePoint admin center** tab in your Edge browser. Leave the other tabs open in your browser for the next task.
 
 
-### Task 5 – Turn on Audit Logging to enable Alert Policies
-
-In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal. However, before you can implement alerts, an administrator must first turn on Audit Logging for the organization. Since it can take a couple of hours for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 6.
-
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
-
-2. In the **Microsoft 365 admin center**, under the **Admin centers** section in the left-hand navigation pane, select **Security**. This will open the **Microsoft 365 Defender** portal in a new tab in your browser.
-
-3. In the **Microsoft 365 Defender** portal, scroll down towards the bottom of the left-hand navigation pane and select **Audit**.
-
-4. In the **Audit** window, wait a minute or so to see if a banner appears towards the top of the page that says: **Start recording user and admin activity**. If this banner appears, then auditing is NOT turned on for your organization. This banner is your prompt to turn on audit logging. <br/>
-
-	Select this banner now to turn on audit logging. 
-
-5. In the **Audit** window, the banner will disappear once audit logging is turned on. In a later lab, you will return to this page to view audited activities that you completed during your lab work.  
- 
-6. Close the **Microsoft 365 Defender** tab in your Edge browser. Leave your browser open and proceed to the next task. 
-
-
-### Task 6 – Install Microsoft Graph PowerShell 
+### Task 5 – Install Microsoft Graph PowerShell 
 
 Microsoft Graph PowerShell is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Microsoft Graph PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
 
@@ -265,15 +246,44 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 	**Note:** The labs that use Microsoft Graph PowerShell in this course will use the following sub-modules: Microsoft.Graph.Identity.DirectoryManagement, Microsoft.Graph.Users, and Microsoft.Graph.Groups. To access the cmdlets for a sub-module, you must first import the sub-module. You can either import all 30+ sub-modules at one time using the "Import-Module Microsoft.Graph" command, or you can import each module that's needed to perform whatever function you're doing (for example, "Import-Module Microsoft.Graph.Users" to perform user maintenance) at a particular point in time. For the purpose of this training, since the later lab exercises will only use three sub-modules, you will NOT import all 30+ sub-modules now. Instead, you will wait to import these three sub-modules when they're needed in later labs. Proceed to the next step. 
 
-5. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
+5. We discovered an issue with the prior Install command in that it sometimes fails to install the Microsoft.Graph.Identity.DirectoryManagement sub-module. Therefore, you should run the following PowerShell command to display the full list of installed modules. They're displayed when you ran the Install command in the prior step, but the display truncates several of the module names. By running the following command, the display shows the complete module names, making it easier to identify the installed modules.
+
+		Get-InstalledModule Microsoft.Graph.* | select *name*
+
+6. After running the command in the prior step, verify the list of installed modules includes Microsoft.Graph.Identity.DirectoryManagement, Microsoft.Graph.Users, and Microsoft.Graph.Groups. If any of these three modules do not appear in the list of installed modules, then run the following PowerShell command to install the module manually:
+
+		Install-Module -Name <module name>
+
+For example, if the Microsoft.Graph.Identity.DirectoryManagement module did not install, then you would run the following command:
+
+		Install-Module -Name Microsoft.Graph.Identity.DirectoryManagement
+
+7. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
 		Set-ExecutionPolicy unrestricted
 
 	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
-6. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
+8. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
 
+### Task 6 – Turn on Audit Logging to enable Alert Policies
+
+In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal. However, before you can implement alerts, an administrator must first turn on Audit Logging for the organization. Since it can take a couple of hours for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 6.
+
+1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
+
+2. In the **Microsoft 365 admin center**, under the **Admin centers** section in the left-hand navigation pane, select **Security**. This will open the **Microsoft 365 Defender** portal in a new tab in your browser.
+
+3. In the **Microsoft 365 Defender** portal, scroll down towards the bottom of the left-hand navigation pane and select **Audit**.
+
+4. In the **Audit** window, wait a minute or so to see if a banner appears towards the top of the page that says: **Start recording user and admin activity**. If this banner appears, then auditing is NOT turned on for your organization. This banner is your prompt to turn on audit logging. <br/>
+
+	Select this banner now to turn on audit logging. 
+
+5. In the **Audit** window, the banner will disappear once audit logging is turned on. In a later lab, you will return to this page to view audited activities that you completed during your lab work.  
+ 
+6. Close the **Microsoft 365 Defender** tab in your Edge browser. Leave your browser open and proceed to the next task. 
 ### Task 7 - Run a PowerShell script to create and publish a sensitivity label
 
 In this task, you will run a lab setup script that creates a sensitivity label and sensitivity label policy for future use in this lab series. Running this script is necessary to support the lab that you will perform on the last day of class to create a sensitivity label and label policy. The sensitivity label lab basically consists of two parts: 1) Creating a label and publishing a label policy, and 2) Testing the published label policy. The problem with the sensitivity label lab is that once you publish a label policy, it takes 24 hours for the published label policy to propagate through Microsoft 365. As such, you won't be able to test the label and policy that you create and publish on the last day of class. 
