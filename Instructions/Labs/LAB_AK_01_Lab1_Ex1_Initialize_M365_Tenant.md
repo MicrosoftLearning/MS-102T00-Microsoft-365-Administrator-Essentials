@@ -290,7 +290,7 @@ In Lab 6, you will create Alert Policies using the Microsoft 365 Defender portal
 
     **Note:** A warning message will be displayed indicating the admin audit log condiguration change that you requested could take up to 60 minutes to take effect throughout the system. This is why you're enabling this feature now rather than waiting for the Alert Policy labs later in this course. 
 
-7. You must then run the following command to confirm that audit logging is enabled:
+7. Run the following command to confirm that audit logging is enabled:
 
 		AdminAuditLogConfig 
 
