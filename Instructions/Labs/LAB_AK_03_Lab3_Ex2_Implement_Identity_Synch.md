@@ -1,12 +1,12 @@
 # Learning Path 3 - Lab 3 - Exercise 2 - Implement Identity Synchronization 
 
-In this exercise, you will use Microsoft Entra Connect to enable synchronization between Adatum’s on-premises Active Directory and Microsoft Entra ID. Microsoft Entra Connect will then continue to synchronize any delta changes every 30 minutes. You will then make some user and group updates and then manually force an immediate synchronization rather than waiting for Microsoft Entra Connect to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
+In this exercise, you will use Microsoft Entra Connect Sync to enable synchronization between Adatum’s on-premises Active Directory and Microsoft Entra ID. Microsoft Entra Connect Sync will then continue to synchronize any delta changes every 30 minutes. You will then make some user and group updates and then manually force an immediate synchronization rather than waiting for Microsoft Entra Connect Sync to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
 
-‎**IMPORTANT:** When you start this exercise, you should perform the first four tasks without any delay between them so that Microsoft Entra Connect does not automatically synchronize the changes that you make to the identity objects.
+‎**IMPORTANT:** When you start this exercise, you should perform the first four tasks without any delay between them so that Microsoft Entra Connect Sync does not automatically synchronize the changes that you make to the identity objects.
 
-### Task 1: Install Microsoft Entra Connect and Initiate Synchronization
+### Task 1: Install Microsoft Entra Connect Sync and initiate synchronization
 
-In this task, you will run the Microsoft Entra Connect setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Microsoft Entra ID. Once the configuration is complete, the synchronization process will automatically start. 
+In this task, you will run the Microsoft Entra Connect Sync setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Microsoft Entra ID. Once the configuration is complete, the synchronization process will automatically start. 
 
 1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task. 
 
@@ -22,7 +22,7 @@ In this task, you will run the Microsoft Entra Connect setup wizard to enable sy
 
 7. On the **Prepare by running IdFix** page, since you already ran IdFix in the prior lab exercise, there's no need to download and run it again. Select **Next**.
 
-8. On the **Review synchronization tools** page, Holly had originally planned to select the **Microsoft Entra Connect Sync** option given Adatum's Exchange hybrid deployment. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Microsoft Entra Connect Sync is the correct choice for Adatum. <br/>
+8. On the **Review synchronization tools** page, Holly had originally planned to select the **Microsoft Entra Connect Sync** option because Adatum wants to be responsible for maintaining and supporting the synchronization solution on its own, plus it has devices on-premises that it needs to access Microsoft Entra ID Hybrid Join. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Microsoft Entra Connect Sync is the correct choice for Adatum, or if the system feels it should use Microsoft Entra Cloud Sync. <br/>
 
 	Select **Help me decide**. This option enables you to select from amongst a variety of requirements that your organization may have.  
 
@@ -34,14 +34,20 @@ In this task, you will run the Microsoft Entra Connect setup wizard to enable sy
 	
 	- Select **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  <br/>
 
-		**Note:** After selecting this second check box, the recommendation has changed to **Microsoft Entra Connect**. This confirms that Holly's initial thought of selecting Azure AD Connect was the same as what the system would have recommended given Adatum's synchronization requirements.
+		**Note:** After selecting this second check box, the recommendation is still **Microsoft Entra Cloud Sync**. 
 
-10. Select **Next**. The system will initiate synchronization using the recommended solution, **Microsoft Entra Connect**. 
+	- Select **I have devices on-premises that I need to access Microsoft Entra ID Hybrid Join.**  <br/>
 
-11. On the **Sync your users** page, select the **Download Azure AD Connect** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
+		**Note:** After selecting this third check box, the recommendation has changed to **Microsoft Entra Connect Sync**. This confirms that Holly's initial thought of selecting Microsoft Entra Connect Sync was the same as what the system would have recommended given Adatum's synchronization requirements.
+
+10. Select **Next**. The system will initiate synchronization using the recommended solution, **Microsoft Entra Connect Sync**. 
+
+11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
 
 12. In the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Azure Active Directory Connect** should appear. <br/>
 
+	**IMPORTANT:** Azure Active Directory has recently been rebranded to Microsoft Entra ID. As such, all Azure AD product features are in the process of being rebranded to Microsoft Entra. In this case, the original name of Microsoft Entra Connect Sync was Azure Active Directory Connect. However, as of this writing, Azure Active Directory Connect has not been rebranded to Microsoft Entra Connect Sync. Keep this in mind if you see Azure AD still referenced on Microsoft 365 pages or product names. Eventually, all Azure AD branding will be changed to Microsoft Entra.**
+ 
 	If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it's finished downloading. <br/>
 
 	However, if a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears to the right of the **Profile 1** icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AzureADConnect.msi** file, then select the **Open file** link that appears below it. However, if **AzureADConnect.msi**  does not appear in the **Downloads** window, then on the **Microsoft Download Center** page, select the **click here to download manually** hyperlink and then repeat this step to open the **AzureADConnect.msi** file.
@@ -58,7 +64,7 @@ In this task, you will run the Microsoft Entra Connect setup wizard to enable sy
 
 	**Note:** If the **Next** button is not enabled, then tab off the **PASSWORD** field to enable it. 
 
-17. On the **Connect to AD DS** page, enter **adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**  (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
+17. On the **Connect to AD DS** page, enter **Adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**  (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
 
 18. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
 
@@ -72,9 +78,9 @@ In this task, you will run the Microsoft Entra Connect setup wizard to enable sy
 
 	**Note:** If you selected **Azure AD Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step (step 22). However, if **Azure AD Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. <br/>
 
-	**Note:** The remaining instructions in this step are what you should do if you needed to restart LON-DC1. <br/>
+	**Important:** The remaining instructions in this step are what you should do if you needed to restart LON-DC1. <br/>
 
-	If you restarted LON-DC1, then after it restarts, follow the instructions from your lab hosting provider to select **Ctrl+Alt+Delete**. This will display the log on screen for LON-DC1. <br/>
+	If you had to restart LON-DC1, then after it restarts, follow the instructions from your lab hosting provider to select **Ctrl+Alt+Delete**. This will display the log on screen for LON-DC1. <br/>
 
 	Log in as **Adatum\Administrator** with a password of **Pa55w.rd**. <br/>
 
@@ -171,7 +177,7 @@ Each group will be assigned several members. After the forced synchronization, y
  
 ### Task 3 - Change Group Membership to Test Synchronization  
 
-This task sets up another scenario for testing whether the sync process is working in Azure AD Connect. In this task you will change the members of a group to see if they are reflected in the cloud once the group is synced. 
+This task sets up another scenario for testing whether the sync process is working in Azure AD Connect (Microsoft Entra Connect Sync). In this task you will change the members of a group to see if they are reflected in the cloud once the group is synced. 
 
 1. This task continues from where the previous task left off in LON-DC1. In the **Active Directory Users and Computers** window, in the console tree under **Adatum.com**, the **Research** organizational unit is still selected. <br/>
 
@@ -193,12 +199,12 @@ This task sets up another scenario for testing whether the sync process is worki
   
 5. Leave LON-DC1 open as you will continue using it in the next task. <br/>
 
-	‎**Important:** You should perform the next task immediately after completing this one so that Azure AD Connect doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
+	‎**Important:** You should perform the next task immediately after completing this one so that Azure AD Connect (Microsoft Entra Connect Sync) doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
 
 
 ### Task 4 - Force a manual synchronization   
 
-In this task, you will force a sync between Adatum’s on-premises AD and Azure AD instead of waiting 30 minutes for Azure AD Connect to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
+In this task, you will force a sync between Adatum’s on-premises Active Directory and Microsoft Entra ID (formerly Azure AD) instead of waiting 30 minutes for Azure AD Connect (Microsoft Entra Connect Sync) to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
 
 **IMPORTANT - PowerShell notice:** The prior lab exercise provided a disclaimer indicating why the tasks in that exercise used the MSOnline module rather than Microsoft Graph PowerShell. While Microsoft is in the process of replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, with Microsoft Graph PowerShell, there is some functionality in the older modules that has not yet been incorporated into Microsoft Graph PowerShell. The commands in the prior exercise and the command used in this task fall into that category. The prior exercise connected to the MSOnline module, which is also used in this task per the Start-ADSyncSyncCycle command. 
 
@@ -223,7 +229,7 @@ In this task, you will force a sync between Adatum’s on-premises AD and Azure 
 
 ### Task 5 - Validate the Results of Directory Synchronization   
 
-In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises Active Directory to Azure Active Directory. You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
+In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises Active Directory to Microsoft Entra ID (Azure AD). You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
 
 **IMPORTANT - PowerShell notice:** This task employs basic PowerShell queries for Groups and Users, which are supported in Microsoft Graph PowerShell. Since Microsoft Graph PowerShell is replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, you will use Microsoft Graph PowerShell in this task.
 
