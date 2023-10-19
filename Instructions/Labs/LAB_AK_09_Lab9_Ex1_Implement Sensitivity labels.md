@@ -1,4 +1,4 @@
-# Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with Azure Information Protection Unified Labels client
+# Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with Microsoft Entra ID Protection
 
 In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Microsoft Entra ID Protection at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. You will test a different label.
 
@@ -21,7 +21,7 @@ To implement Sensitivity labels as part of your pilot project at Adatum, you mus
 
 2. In **Microsoft Edge**, open a new tab and enter (or copy and paste) the following URL in the address bar: **https://www.microsoft.com/en-us/download/confirmation.aspx?id=53018** <br/>
 
-	This will start the download for the AIP Unified label client.
+	This will start the download for the Azure Information Protection Unified Label client.
 
 3. In the **Downloads** window that appears at the top right of the page, you will see the **AzInfoProtection_UI.exe** file being downloaded. Once the file has finished downloading, select the **Open file** link that appears below the file name.
 
@@ -35,7 +35,7 @@ To implement Sensitivity labels as part of your pilot project at Adatum, you mus
 
 8. In your Edge browser, close the **Download** tab that you opened in this task to download the Azure Information Protection client.
 
-You have successfully installed the AIP Unified Label client on the Client 1 VM.
+You have successfully installed the Azure Information Protection Unified Label client on the Client 1 VM.
 
 
 ### Task 2 – Create a Sensitivity Label
@@ -260,7 +260,7 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 22. Close the **Link to 'ProtectedDocument1' copied** window that appears.
 
-You have just successfully created an AIP protected Word document that is read-only protected. The document is accessible only by its creator, Alex Wilber, and by Joni Sherman (with Read-only permission), to whom the document was shared.
+You have just successfully created a Word document that is read-only protected using Microsoft Entra ID Protection. The document is accessible only by its creator, Alex Wilber, and by Joni Sherman (with Read-only permission), to whom the document was shared.
 
 
 ### Task 4 – Verify your Sensitivity Label policy
@@ -321,7 +321,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 22. If a **Microsoft Office Activation Wizard** window appears, select **Close** and proceed to the next step. <br/>
 
-	However, if a **Sign in** window appears, it's because the file is RMS protected and no AIP unified labeling client is installed on LON-CL2. In this case, you need to use the native RMS features of Word Microsoft Apps and register this installation to Joni’s account. <br/>
+	However, if a **Sign in** window appears, it's because the file is RMS protected and no Azure Information Protection unified labeling client is installed on LON-CL2. In this case, you need to use the native RMS features of Word Microsoft Apps and register this installation to Joni’s account. <br/>
 
 	‎In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.** <br/>
 
