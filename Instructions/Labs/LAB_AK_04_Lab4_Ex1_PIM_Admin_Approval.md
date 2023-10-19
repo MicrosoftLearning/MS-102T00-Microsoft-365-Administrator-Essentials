@@ -1,10 +1,10 @@
 # Learning Path 4 - Lab 4 - Exercise 1 - PIM Administrator approval
 
-As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to implement Privileged Identity Management (PIM) within Azure Active Directory. PIM is an Azure AD service that enables you to manage, control, and monitor access to important resources in your organization. These resources include not only Azure, but other Microsoft Online Services, such as Microsoft 365 and Microsoft Intune.
+As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to implement Privileged Identity Management (PIM) within Microsoft Entra ID (formerly Azure AD). PIM is a Microsoft Entra ID service that enables you to manage, control, and monitor access to important resources in your organization. These resources include not only Azure, but other Microsoft Online Services, such as Microsoft 365 and Microsoft Intune.
 
 One of Adatum's pain points in its existing system is that it has far too many users who have been assigned administrator roles. This has caused concern among management, who recognize this situation as an existential threat to Adatum's data security. They feel that too many people were originally assigned admin roles that shouldn't have been, and as such, these users have access to secure information and resources that could potentially compromise the organization. 
 
-Because there's a need to reduce the number of users with permanent administrator roles and yet still provide admin privileges to selected users when business justification warrants it, Holly has been tasked with implementing Azure Active Directory's Privileged Identity Management service. By implementing PIM, Adatum can reduce the number of users with admin roles and yet still be able to assign users with admin rights on an as-needed basis whenever necessary.
+Because there's a need to reduce the number of users with permanent administrator roles and yet still provide admin privileges to selected users when business justification warrants it, Holly has been tasked with implementing the Microsoft Entra Privileged Identity Management service. By implementing PIM, Adatum can reduce the number of users with admin roles and yet still be able to assign users with admin rights on an as-needed basis whenever necessary.
 
 In this lab, you will perform the basic steps involved in implementing PIM for a given admin role:
 
@@ -30,7 +30,7 @@ In the Microsoft 365 tenant used by this training course, the lab hosting provid
 
 Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to use Privileged Identity Management to limit access to the Global admin role. To do so, she must first configure the role to require approval before it can be assigned as an eligible role for a user, and then she wants to assign herself as the approver whenever an eligible user requests activating the role.
 
-Holly also wants to update the notification settings for the Global admin role. Privileged Identity Management (PIM) lets you know when important events occur in your Azure Active Directory (Azure AD) organization, such as when a role is assigned or activated. PIM keeps you informed by sending you and other participants email notifications. These emails can also include links to relevant tasks, such as activating or renewing a role. In this task, Holly wants to update the notifications to ensure that approvals are tracked in real-time in a proactive manner.
+Holly also wants to update the notification settings for the Global admin role. Privileged Identity Management (PIM) lets you know when important events occur in your Microsoft Entra ID organization, such as when a role is assigned or activated. PIM keeps you informed by sending you and other participants email notifications. These emails can also include links to relevant tasks, such as activating or renewing a role. In this task, Holly wants to update the notifications to ensure that approvals are tracked in real-time in a proactive manner.
 
 1. The prior lab exercise used Adatum's domain controller (LON-DC1). This lab will use LON-CL1.  <br/>
 
@@ -38,13 +38,13 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 2. On **LON-CL1**, you should still be logged into the machine as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane under the **Admin centers** section, select **Azure Active Directory**.
+3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane under the **Admin centers** section, select **Identity**.
 
 4. If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick and account** window, select Holly's account, and in the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
 
 5. In the **Microsoft Entra admin center**, the **Home** page is displayed by default. Scroll down towards the bottom of the Home page and in the **Feature highlights** section, select **Privileged Identity Management**.
 
-6. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Azure AD roles**.
+6. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
 7. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Settings**. 
 
@@ -58,7 +58,7 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 11. The window then displays a group of three settings, each of which has a corresponding check box. Select the **Require approval to activate** check box. By doing so, the **Select approver(s)** section becomes enabled. Do not change the default settings of the other two check boxes.
 
-12. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select this section. In the **Select a member** pane that opens on the right, you would normally scroll through the list of users and select **Holly Dickson**. However, since over 200 users were synchronized from the on-premises Active Directory to Azure AD in the prior lab exercise, scrolling through the user list will be too time consuming. <br/>
+12. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select this section. In the **Select a member** pane that opens on the right, you would normally scroll through the list of users and select **Holly Dickson**. However, since over 200 users were synchronized from the on-premises Active Directory to Microsoft Entra ID in the earlier Identity Synchronization lab exercise, scrolling through the user list will be too time consuming. <br/>
 
     Therefore, enter **Holly** in the **Search** box. In the list of users whose first name starts with Holly, select Holly Dickson's user account that pertains to the onmicrosoft.com domain (**Holly@xxxxxZZZZZZ.onmicrosoft.com**). Do NOT select Holly's user account that applies to the custom domain. Then select the **Select** button.
 
@@ -83,13 +83,13 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 For Adatum's PIM pilot project, Holly has selected Patti Fernandez as the sole user who will be eligible to be assigned the Global admin role. However, to simplify future role assignments, Holly wants to create a security group, assign Patti to the group, and then assign the group to the Global admin role. 
 
-Assigning roles to groups can simplify the management of role assignments in Azure AD. Instead of requiring a Global admin (such as Holly) or a Privileged Role Administrator to assign a role to multiple people individually, they can create a security group and then enable the group to be eligible for that specific role. When people are assigned as members of the group, they indirectly become eligible to be assigned the role. The company's existing governance workflow can then take care of the approval process and auditing of the group's membership to ensure that only legitimate users are members of the group and are thus assigned the particular role. 
+Assigning roles to groups can simplify the management of role assignments in Microsoft Entra ID. Instead of requiring a Global admin (such as Holly) or a Privileged Role Administrator to assign a role to multiple people individually, they can create a security group and then enable the group to be eligible for that specific role. When people are assigned as members of the group, they indirectly become eligible to be assigned the role. The company's existing governance workflow can then take care of the approval process and auditing of the group's membership to ensure that only legitimate users are members of the group and are thus assigned the particular role. 
 
 In this task, Holly will create a new, role-assignable security group for users who are eligible for the Global admin role. She will then assign Patti to the group, and then enable the group to be eligible for the Global Administrator role.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-2. You will begin by creating a new, role-assignable security group called **PIM-Global-Administrators** in Azure AD, and you will assign Patti as a member of the group. <br/>
+2. You will begin by creating a new, role-assignable security group called **PIM-Global-Administrators** in Microsoft Entra ID, and you will assign Patti as a member of the group. <br/>
 
     In your **Edge** browser, you should still have the **Microsoft Entra admin center** open in a tab that's displaying the **Adatum Corporation | Settings** window from the prior task. In the left-hand navigation pane, select **Groups**, and then select **All groups**.
 
@@ -103,7 +103,7 @@ In this task, Holly will create a new, role-assignable security group for users 
 
     - Group description - **Group of eligible users that can be assigned to the Global Administrator role in PIM**
 
-    - Azure AD roles can be assigned to the group - **Yes**
+    - Microsoft Entra roles can be assigned to the group - **Yes**
 
     - Membership type - **Assigned**
 
@@ -113,11 +113,11 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 5. Select the **Create** button at the bottom of the page.
 
-6. A dialog box appears at the top of the page that says: **Creating a group to which Azure AD roles can be assigned is a setting that cannot be changed later. Are you sure that you want to add this capability?**. Select **Yes**.
+6. A dialog box appears at the top of the page that says: **Creating a group to which Microsoft Entra roles can be assigned is a setting that cannot be changed later. Are you sure that you want to add this capability?**. Select **Yes**.
 
 7. You must now make the **PIM-Global-Administrators** group eligible for role assignment. In the left-hand navigation pane, select **Identity Governance** to expand the section, and then select **Privileged Identity Management**.
 
-8. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Azure AD roles**.
+8. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
 9. In the **Adatum Corporation | Quick start** window, the detail pane on the right displays the **Privileged Identity Management** window. This window displays the following sections - Assign, Activate, Approve, and Audit. Under the **Assign** section, select the **Assign Eligibility** button.
 
@@ -142,7 +142,7 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 ### Task 3 - Submit a request for the Global Admin role
 
-Now that the **PIM-Global-Administrators** group has been made eligible for the Global administrator role, the members of the group (in this case, Patti Fernandez) can be assigned the Global Administrator role using Azure AD Privileged Identity Management. Holly wants to test out the PIM process in her pilot project. In this task, you will take on the role of Patti, who will submit a request to be assigned Global administrator role privileges. In the next task, Holly will review her request and approve it.
+Now that the **PIM-Global-Administrators** group has been made eligible for the Global administrator role, the members of the group (in this case, Patti Fernandez) can be assigned the Global Administrator role using Microsoft Entra Privileged Identity Management. Holly wants to test out the PIM process in her pilot project. In this task, you will take on the role of Patti, who will submit a request to be assigned Global administrator role privileges. In the next task, Holly will review her request and approve it.
 
 **NOTE:** The activation request process is set up to require multifactor authentication (MFA). If you do not have a phone to complete this process, notify your instructor. You may be able to partner with another student to watch them complete the remaining two tasks.
 
@@ -156,11 +156,11 @@ Now that the **PIM-Global-Administrators** group has been made eligible for the 
 
 5. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. This section displays a row of Azure services and their associated icons. At the end of the row, select **More services** (with the forward arrow icon). This opens the **All services** window.
 
-6. In the **All services** window, enter **priv** in the **Search** box at the top of the page. In the list of search results, select **Azure AD Privileged Identity Management**.
+6. In the **All services** window, enter **priv** in the **Filter services** search box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
 
 7. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the left-hand navigation pane, select **My Roles**.
 
-8. In the **My roles | Azure AD roles** window, the **Eligible assignments** tab is displayed by default. Remember, in the prior task Holly assigned Patti as a member of the **PIM-Global-Administrators** group, which Holly later assigned as an eligible group for the Global Administrator role. As such, this role appears in the list of **Eligible assignments**. <br/>
+8. In the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed by default. Remember, in the prior task Holly assigned Patti as a member of the **PIM-Global-Administrators** group, which Holly later assigned as an eligible group for the Global Administrator role. As such, this role appears in the list of **Eligible assignments**. <br/>
 
     Under the **Action** column for the Global Administrator role, select **Activate**.
 
@@ -190,7 +190,7 @@ Now that the **PIM-Global-Administrators** group has been made eligible for the 
 
 19. In the **Activate - Global Administrator** pane that appears on the right-side of the screen, enter **Testing PIM** in the **Reason** field, and then select the **Activate** button at the bottom of the pane.
 
-20. On the **My roles | Azure AD roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  <br/>
+20. On the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  <br/>
 
      **Note:** If you recall, back in Task 1 Holly set up the Global Administrator role so that activation to a user account will require approval. What Patti just did was request that the Global Admin role be activated for her user account. This will send a request to Holly, who can then either approve or deny Patti's request for role activation. Holly will review and then approve this request in the next task.
 
@@ -201,27 +201,27 @@ Now that the **PIM-Global-Administrators** group has been made eligible for the 
 
 Back in Task 1, Holly set herself up as the approver for the Global Administrator role. Since Patti has submitted a request to be assigned this role, Holly must review the request and determine whether to accept or deny it. 
 
-1.  In LON-CL1, hover your mouse over the Edge icon on your taskbar to see the two Edge sessions that you have open - the window on the left is the original Edge browser session in which you are signed into **Microsoft 365** as **Holly Dickson**, and the window on the right is the InPrivate Browser session in which you are signed into **Azure AD** as **Patti Fernandez**. <br/>
+1.  In LON-CL1, hover your mouse over the Edge icon on your taskbar to see the two Edge sessions that you have open - the window on the left is the original Edge browser session in which you are signed into **Microsoft 365** as **Holly Dickson**, and the window on the right is the InPrivate Browser session in which you are signed into **Microsoft Entra** as **Patti Fernandez**. <br/>
 
     Select the window on the left to go back to the original Edge browser session in which you are signed in as **Holly Dickson**. 
 
 2.  In your browser, the **Global Administrator | Assignments** window should be displayed in the **Microsoft Entra admin center**. <br/>
 
-    In the navigation thread at the top of the page (**Home > Privileged Identity Management | Azure AD roles > Adatum Corporation | Roles**), select **Privileged Identity Management | Azure AD roles**.
+    In the navigation thread at the top of the page (**Home > Privileged Identity Management | Microsoft Entra roles > Adatum Corporation | Roles**), select **Privileged Identity Management | Microsoft Entra roles**.
 
 3. In the **Privileged Identity Management | Quick start** window, in the middle pane under **Tasks**, select **Approve requests**.
 
-4. In the **Approve requests | Azure AD roles** window, in the **Requests for role activations** section, select the check box to the left of the Global Administrator request from Patti Fernandez, and then select the **Approve** button.
+4. In the **Approve requests | Microsoft Entra roles** window, in the **Requests for role activations** section, select the check box to the left of the Global Administrator request from Patti Fernandez, and then select the **Approve** button.
 
 5. In the **Approve Request** pane that appears on the right-side of the screen, enter **PIM testing** in the **Justification** field and then select **Confirm**.
 
 6.  Hover your mouse over the **Edge** icon on the taskbar and select the window on the right to go back to the InPrivate Browser session where Patti is signed in. 
 
-7. In the **My roles | Azure AD roles** window, the **Active assignments** tab is currently selected from the prior task, prior to approving Patti's request. <br/>
+7. In the **My roles | Microsoft Entra roles** window, the **Active assignments** tab is currently selected from the prior task, prior to approving Patti's request. <br/>
 
     Select **Refresh** on the menu bar. </br/>
 
-    Note how the Global Administrator role is now activated for Patti. You have just verified that Patti has been assigned the Global Administrator role using Azure AD Privileged Identity Management.
+    Note how the Global Administrator role is now activated for Patti. You have just verified that Patti has been assigned the Global Administrator role using Microsoft Entra Privileged Identity Management.
 
 8. Close the InPrivate browser session.
 
