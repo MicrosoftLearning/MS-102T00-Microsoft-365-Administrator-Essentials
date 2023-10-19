@@ -22,11 +22,15 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 7. On the **Prepare by running IdFix** page, since you already ran IdFix in the prior lab exercise, there's no need to download and run it again. Select **Next**.
 
-8. On the **Review synchronization tools** page, Holly had originally planned to select the **Microsoft Entra Connect Sync** option because Adatum wants to be responsible for maintaining and supporting the synchronization solution on its own, plus it has devices on-premises that it needs to access Microsoft Entra ID Hybrid Join. But just to verify that this is the correct solution, Holly has decided to use the system tool that recommends the synchronization tool to use based on your synchronization requirements. Holly will use this feature to verify whether Microsoft Entra Connect Sync is the correct choice for Adatum, or if the system feels it should use Microsoft Entra Cloud Sync. <br/>
+8. On the **Review synchronization tools** page, Holly's not sure which synchronization tool to use - **Microsoft Entra Connect Sync** or **Microsoft Entra Cloud Sync**. She has identified the following requirements that she thinks will affect this decision:
 
-	Select **Help me decide**. This option enables you to select from amongst a variety of requirements that your organization may have.  
+	- Holly wants Adatum's users to be able to access both on-premises and cloud applications using the same passwords. That way, each user doesn't have to remember multiple passwords.
+	- Because Adatum plans to keep its on-premises Exchange environment, it must implement an Exchange hybrid deployment.
+ 	- Adatum has on-premises devices that require access to Microsoft Entra ID Hybrid Join. Adatum has joined these devices to its on-premises Active Directory and registered them with Microsoft Entra ID. As such, these Microsoft Entra hybrid joined devices require periodic network connectivity to Adatum's on-premises domain controllers. Without this connection, these devices become unusable. 
 
-9. In the list of requirements that appears, select the following Adatum requirements to see which sync tool the system recommends (Note how the recommendation changes after selecting each additional requirement): <br/>
+	On the **Review synchronization tools** page, Holly discovers that it provides a **Help me decide** feature that recommends which synchronization tool to use based on your synchronization requirements. Holly decides to use this feature, so select **Help me decide**.   
+
+9. The **Help me decide** option displays a list of predefined requirements that impact which synchronization tool an organization should use. In the list of requirements that appears, select the following Adatum requirements to see which sync tool the system recommends (Note how the recommendation either remains the same or changes after selecting each additional requirement): <br/>
 
 	- Select **I require the ability for users to access both on-premises and cloud-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>
 
@@ -38,7 +42,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 	- Select **I have devices on-premises that I need to access Microsoft Entra ID Hybrid Join.**  <br/>
 
-		**Note:** After selecting this third check box, the recommendation has changed to **Microsoft Entra Connect Sync**. This confirms that Holly's initial thought of selecting Microsoft Entra Connect Sync was the same as what the system would have recommended given Adatum's synchronization requirements.
+		**Note:** After selecting this third check box, the recommendation changes to **Microsoft Entra Connect Sync**. 
 
 10. Select **Next**. The system will initiate synchronization using the recommended solution, **Microsoft Entra Connect Sync**. 
 
