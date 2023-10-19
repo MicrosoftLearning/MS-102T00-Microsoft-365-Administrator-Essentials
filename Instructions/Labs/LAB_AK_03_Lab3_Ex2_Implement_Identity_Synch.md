@@ -45,13 +45,13 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 	- Select **I have devices on-premises that I need to access Microsoft Entra ID Hybrid Join.**  <br/>
 
 		**Note:** After selecting this third check box, the recommendation changes to **Microsoft Entra Connect Sync**. 
-
-10. Select **Next**. The wizard will deploy the recommended solution, **Microsoft Entra Connect Sync**. 
-
-	**Note:** If you're wondering why the wizard changed its recommendation to Microsoft Entra Connect Sync based on this final requirement, it's because of the following reasons:
+	
+ 	**Note:** If you're wondering why the wizard changed its recommendation to Microsoft Entra Connect Sync based on this final requirement, it's because of the following reasons:
 
 	- First off, understand that this final requirements means that Adatum has desktops, laptops, or servers located in its on-premises Active Directory environment that need to be able to join Microsoft Entra ID (formerly Azure AD) as hybrid Microsoft Entra ID joined devices. Microsoft Entra ID Hybrid Join allows these on-premises devices to register their identity with Microsoft Entra ID. This enables them to access cloud-based services protected by  Microsoft Entra ID, such as Microsoft 365. In summary, you have on-premises devices that need the ability to join Microsoft Entra ID as hybrid devices. 
 	- So how does this affect which synchronization tool to use? Well, keep in mind that Microsoft Entra Connect Sync uses an on-premises sync agent while Microsoft Entra Cloud Sync is a pure cloud-based service. With Microsoft Entra Connect Sync, the sync agent is installed on-premises, and therefore can directly access Adatum's on-premises AD environment. This allows it to sync Adatum's device identities to the cloud without dependency on Microsoft Entra ID Hybrid Join. However, Microsoft Entra Cloud Sync has no on-premises component. It relies on the devices self-registering their identity to Microsoft Entra ID via Microsoft Entra ID Hybrid Join. Any issues with hybrid join or network connectivity therefore breaks the Microsoft Entra Cloud Sync process. As a result, Microsoft Entra Connect Sync is the preferred synchronization option for this requirement.
+
+10. Select **Next**. The wizard will deploy the recommended solution, **Microsoft Entra Connect Sync**. 
 
 11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
 
