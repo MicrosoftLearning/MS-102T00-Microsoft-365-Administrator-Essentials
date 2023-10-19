@@ -8,6 +8,8 @@ In this exercise, you will use Microsoft Entra Connect Sync to enable synchroniz
 
 In this task, you will run the Microsoft Entra Connect Sync setup wizard to enable synchronization between Adatum’s on-premises Active Directory and Microsoft Entra ID. Once the configuration is complete, the synchronization process will automatically start. 
 
+**IMPORTANT:** Azure Active Directory has recently been rebranded to Microsoft Entra ID. As such, all Azure AD product features are in the process of being rebranded to Microsoft Entra. In this case, the original name of Microsoft Entra Connect Sync was Azure Active Directory Connect. However, as of this writing, Azure Active Directory Connect has not been rebranded to Microsoft Entra Connect Sync (you'll see this in step 12 where the installation wizard is still branded as Azure AD Connect). Keep this in mind if you see Azure AD still referenced on Microsoft 365 pages, product names, or in this case, the Azure AD Connect installation wizard. Eventually, all Azure AD branding will be changed to Microsoft Entra. Microsoft World Wide Learning will strive to keep these lab instructions updated as the Microsoft 365 Engineering team continues its rebranding efforts.
+
 1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task. 
 
 2. After finishing the previous lab exercise, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson.  
@@ -26,19 +28,19 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 	- Holly wants Adatum's users to be able to access both on-premises and cloud applications using the same passwords. That way, each user doesn't have to remember multiple passwords.
 	- Because Adatum plans to keep its on-premises Exchange environment, it must implement an Exchange hybrid deployment.
- 	- Adatum has on-premises devices that require access to Microsoft Entra ID Hybrid Join. Adatum has joined these devices to its on-premises Active Directory and registered them with Microsoft Entra ID. As such, these Microsoft Entra hybrid joined devices require periodic network connectivity to Adatum's on-premises domain controllers. Without this connection, these devices become unusable. 
+ 	- Adatum has on-premises devices that need to be able to join Microsoft Entra ID as hybrid Microsoft Entra ID joined devices. As such, these devices require periodic network connectivity to Adatum's on-premises domain controllers. Without this connection, these devices become unusable. 
 
 	On the **Review synchronization tools** page, Holly discovers that it provides a **Help me decide** feature that recommends which synchronization tool to use based on your synchronization requirements. Holly decides to use this feature, so select **Help me decide**.   
 
-9. By selecting the **Help me decide** option, the wizard displays a list of predefined requirements that can impact which synchronization tool an organization should use. In the list of requirements that appears, select the following Adatum requirements to see which sync tool the system recommends (Note how the recommendation either remains the same or changes after selecting each additional requirement): <br/>
+9. By selecting the **Help me decide** option, the wizard displays a list of predefined requirements that can impact which synchronization tool an organization should use. In the list of requirements that appears, select the following three Adatum requirements to see which sync tool the system recommends (Note how the recommendation either remains the same or changes after selecting each additional requirement): <br/>
 
 	- Select **I require the ability for users to access both on-premises and cloud-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>
 
-		**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. By just selecting this one requirement, the system recommends using **Microsoft Entra Cloud Sync**. <br/>
+		**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. For this one requirement, the system recommends using **Microsoft Entra Cloud Sync**. <br/>
 	
 	- Select **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  <br/>
 
-		**Note:** After selecting this second check box, the recommendation is still **Microsoft Entra Cloud Sync** based on these two requirements. 
+		**Note:** After selecting this second check box, the recommendation is still **Microsoft Entra Cloud Sync** based on these first two requirements. 
 
 	- Select **I have devices on-premises that I need to access Microsoft Entra ID Hybrid Join.**  <br/>
 
@@ -46,12 +48,15 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 10. Select **Next**. The wizard will deploy the recommended solution, **Microsoft Entra Connect Sync**. 
 
+	**Note:** If you're wondering why the wizard changed its recommendation to Microsoft Entra Connect Sync based on this final requirement, it's because of the following reasons:
+
+	- First off, understand that this final requirements means that Adatum has desktops, laptops, or servers located in its on-premises Active Directory environment that need to be able to join Microsoft Entra ID (formerly Azure AD) as hybrid Microsoft Entra ID joined devices. Microsoft Entra ID Hybrid Join allows these on-premises devices to register their identity with Microsoft Entra ID. This enables them to access cloud-based services protected by  Microsoft Entra ID, such as Microsoft 365. In summary, you have on-premises devices that need the ability to join Microsoft Entra ID as hybrid devices. 
+	- So how does this affect which synchronization tool to use? Well, keep in mind that Microsoft Entra Connect Sync uses an on-premises sync agent while Microsoft Entra Cloud Sync is a pure cloud-based service. With Microsoft Entra Connect Sync, the sync agent is installed on-premises, and therefore can directly access Adatum's on-premises AD environment. This allows it to sync Adatum's device identities to the cloud without dependency on Microsoft Entra ID Hybrid Join. However, Microsoft Entra Cloud Sync has no on-premises component. It relies on the devices self-registering their identity to Microsoft Entra ID via Microsoft Entra ID Hybrid Join. Any issues with hybrid join or network connectivity therefore breaks the Microsoft Entra Cloud Sync process. As a result, Microsoft Entra Connect Sync is the preferred synchronization option for this requirement.
+
 11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
 
 12. In the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Azure Active Directory Connect** should appear. <br/>
 
-	**IMPORTANT:** Azure Active Directory has recently been rebranded to Microsoft Entra ID. As such, all Azure AD product features are in the process of being rebranded to Microsoft Entra. In this case, the original name of Microsoft Entra Connect Sync was Azure Active Directory Connect. However, as of this writing, Azure Active Directory Connect has not been rebranded to Microsoft Entra Connect Sync. Keep this in mind if you see Azure AD still referenced on Microsoft 365 pages, product names, or as in the following case, the Azure AD Connect installation wizard. Eventually, all Azure AD branding will be changed to Microsoft Entra. Microsoft World Wide Learning will strive to keep these lab instructions updated as the Microsoft 365 Engineering team continues its rebranding efforts.
- 
 	If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it's finished downloading. <br/>
 
 	However, if a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears to the right of the **Profile 1** icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AzureADConnect.msi** file, then select the **Open file** link that appears below it. However, if **AzureADConnect.msi**  does not appear in the **Downloads** window, then on the **Microsoft Download Center** page, select the **click here to download manually** hyperlink and then repeat this step to open the **AzureADConnect.msi** file.
