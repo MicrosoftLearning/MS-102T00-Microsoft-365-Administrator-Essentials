@@ -22,7 +22,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 7. On the **Prepare by running IdFix** page, since you already ran IdFix in the prior lab exercise, there's no need to download and run it again. Select **Next**.
 
-8. On the **Review synchronization tools** page, Holly's not sure which synchronization tool to use - **Microsoft Entra Connect Sync** or **Microsoft Entra Cloud Sync**. She has identified the following requirements that she thinks will affect this decision:
+8. On the **Review synchronization tools** page, Holly's not sure which synchronization tool to select based on Adatum's synchronization requirements - **Microsoft Entra Connect Sync** or **Microsoft Entra Cloud Sync**. Holly has identified the following requirements that she thinks may impact this decision:
 
 	- Holly wants Adatum's users to be able to access both on-premises and cloud applications using the same passwords. That way, each user doesn't have to remember multiple passwords.
 	- Because Adatum plans to keep its on-premises Exchange environment, it must implement an Exchange hybrid deployment.
@@ -30,7 +30,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 	On the **Review synchronization tools** page, Holly discovers that it provides a **Help me decide** feature that recommends which synchronization tool to use based on your synchronization requirements. Holly decides to use this feature, so select **Help me decide**.   
 
-9. The **Help me decide** option displays a list of predefined requirements that impact which synchronization tool an organization should use. In the list of requirements that appears, select the following Adatum requirements to see which sync tool the system recommends (Note how the recommendation either remains the same or changes after selecting each additional requirement): <br/>
+9. By selecting the **Help me decide** option, the wizard displays a list of predefined requirements that can impact which synchronization tool an organization should use. In the list of requirements that appears, select the following Adatum requirements to see which sync tool the system recommends (Note how the recommendation either remains the same or changes after selecting each additional requirement): <br/>
 
 	- Select **I require the ability for users to access both on-premises and cloud-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>
 
@@ -38,13 +38,13 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 	
 	- Select **I have Exchange on-premises objects that I need to sync to the cloud (Exchange hybrid).**  <br/>
 
-		**Note:** After selecting this second check box, the recommendation is still **Microsoft Entra Cloud Sync**. 
+		**Note:** After selecting this second check box, the recommendation is still **Microsoft Entra Cloud Sync** based on these two requirements. 
 
 	- Select **I have devices on-premises that I need to access Microsoft Entra ID Hybrid Join.**  <br/>
 
 		**Note:** After selecting this third check box, the recommendation changes to **Microsoft Entra Connect Sync**. 
 
-10. Select **Next**. The system will initiate synchronization using the recommended solution, **Microsoft Entra Connect Sync**. 
+10. Select **Next**. The wizard will deploy the recommended solution, **Microsoft Entra Connect Sync**. 
 
 11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
 
