@@ -1,6 +1,6 @@
 # Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with Azure Information Protection Unified Labels client
 
-In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Azure Information Protection (AIP) at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. You will test a different label.
+In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Microsoft Entra ID Protection at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. You will test a different label.
 
 **IMPORTANT:** If you recall, back on the first day of this class, you ran a lab setup script that created and published a sensitivity label and sensitivity label policy. Running that script was necessary to support this lab due to a timing issue with sensitivity labels. Once you publish a label policy, it takes 24 hours for the published label policy to propagate through Microsoft 365. As such, you won't be able to test the label and label policy that you create and publish in this lab.
 
@@ -9,9 +9,11 @@ To address this timing issue, you ran that PowerShell script back on day 1 to cr
 Because we want you to gain experience creating and publishing a label and label policy using the Microsoft 365 UI, you will still create a sensitivity label and label policy in this lab. However, when you perform the tasks to test the label and label policy, you won't test the ones that you created and published in the UI, since that label and label policy won't be available to test for 24 hours. Instead, you will test the label and label policy that you created and published using the script that you ran back on day 1 of this class.
 
 
-### Task 1 – Install the Azure Information Protection Unified Labeling client
+### Task 1 – Install the Microsoft Entra ID Protection Unified Labeling client
 
-To implement Sensitivity labels as part of your pilot project at Adatum, you must first install the AIP client from the Microsoft Download Center.
+To implement Sensitivity labels as part of your pilot project at Adatum, you must first install the Microsoft Entra ID Protection client from the Microsoft Download Center.
+
+**Note:** While the Azure AD to Microsoft Entra ID rebranding is still ongoing, the Azure Information Protection client has not been rebranded as of this writing. It will eventually be rebranded to Microsoft Entra ID Protection client.
 
 1. At the end of the prior lab, you were on LON-CL2. Switch to **LON-CL1**.  <br/>
 
@@ -21,7 +23,7 @@ To implement Sensitivity labels as part of your pilot project at Adatum, you mus
 
 	This will start the download for the AIP Unified label client.
 
-3. In the Microsoft download center tab, on the notification bar at the bottom of the page, you will see the **AzInfoProtection_UI.exe** file being downloaded. Once the file has finished downloading, select the **Open file** link that appears below the file name.
+3. In the **Downloads** window that appears at the top right of the page, you will see the **AzInfoProtection_UI.exe** file being downloaded. Once the file has finished downloading, select the **Open file** link that appears below the file name.
 
 4. The **Microsoft Azure Information Protection** wizard will open. If the wizard does not display on the desktop, select the icon for the wizard on the taskbar to display the wizard.
 
@@ -337,7 +339,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 27. You should receive a message indicating that you are not signed into Office with an account that has permission to access the document. You can optionally sign in with an account that has permission to access the file, or request access from the **AlexW@xxxxxZZZZZZ.onmicrosoft.com** account, or Cancel out of the operation. Select **Cancel**.  <br/>
 
-	‎Since only Joni was assigned permission to read the document, you just verified that Azure Information Protection protected the document based on the PII policy parameters that you configured.
+	‎Since only Joni was assigned permission to read the document, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured.
 
 ## Congratulations! You have just completed the final lab in this course.
 
