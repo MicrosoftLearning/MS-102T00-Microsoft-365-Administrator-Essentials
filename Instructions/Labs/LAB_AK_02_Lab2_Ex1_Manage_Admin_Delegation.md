@@ -22,7 +22,9 @@ Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As 
 
 6. Diego has been promoted to Billing Administrator, but since this role does not appear in the list of commonly used roles, scroll down and select **Show all by category**. 
 
-7. In the list of roles that are sorted by category, scroll down to the **Other** category, select the **Billing Administrator** check box, and then select **Save changes**. Note the **Admin roles updated** message that appears at the top of the pane once the changes are saved.
+7. In the list of roles that are sorted by category, scroll down to the **Other** category, select the **Billing Administrator** check box, and then select **Save changes**. <br/>
+
+	**Tip:** Note the message that appears at the top of the pane once the admin role change is saved. This message provides the following best practice that you should keep in mind as you maintain administrative roles in your real-world deployments: **Give users only the access they need by assigning the least-permissive role.**
 
 8. On the **Manage admin roles** window, select the **X** in the upper-right corner of the screen to close it. This returns you to the **Active users** list. 
 
