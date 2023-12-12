@@ -82,7 +82,7 @@ To test this default alert, Holly Dickson will create an eDiscovery search. This
 
 12. On the **Content search** page, scroll to the far-right side of the page. Note the **Status** of the **Confidential search** is **Starting**. The search that you created should only take a couple of minutes to complete.
 
-	**Note:** When you submit a new search, the system saves the search and then immediately runs it. By saving this eDiscovery search, the eDiscovery alert should be triggered, thereby creating an email notification that should be sent to the Inbox of all users with Tenant Admin permissions. It may take an additional 15 minutes for the email notification to be generated to validate this eDiscovery alert. Instead of waiting, proceed to the next exercise. You will validate this alert email in Exercise 7, task 3 of this lab.
+	**Note:** When you submit a new search, the system saves the search and then immediately runs it. By saving this eDiscovery search, the eDiscovery alert should be triggered, thereby creating an email notification that should be sent to the Inbox of all users with Tenant Admin permissions. It may take an additional 15 minutes for the email notification to be generated to validate this eDiscovery alert. Instead of waiting for this email to be generated, proceed to the next exercise. You will validate this alert email in Exercise 7, task 3 of this lab.
 	
 13.  Leave your browser open in LON-CL1 and do not close any of the tabs.
     
