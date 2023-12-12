@@ -2,7 +2,7 @@
 
 Holly Dickson is concerned that some of the users at Adatum may require training about avoiding URL links to familiar websites that are either fake or have been hacked. This type of attack is known as a Drive-by URL attack. With this type of attack, a target receives an email containing a URL link, and when the target selects the link, they are taken to a website that runs background code whose sole purpose is to gather information about the target or deploy arbitrary code to their device. As part of her pilot project, Holly has decided to use the Microsoft 365 Attack simulation training feature to determine her users' susceptibility to Drive-by URL attacks.
 
-**Note:** At the end of this exercise, you will disable MFA for Holly's account. This will save you from having to enter the second form of authentication when signing in as Holly in any of the remaining labs in this course.
+**Note:** In the prior lab exercise, you enabled MFA for Holly Dickson's account. This was needed to complete the prior exercise, as well as this one. At the end of this exercise, you will disable MFA for Holly's account. Doing so will save you from having to enter the second form of authentication when signing in as Holly in any of the remaining labs in this course.
 
 
 ### Task 1: Configure and launch a Drive-by URL attack 
@@ -15,15 +15,15 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 
 2. After the previous lab exercise, you should still be in the **Microsoft Defender** portal. If not, then in the **Microsoft 365 admin center**, under the **Admin centers** group in the left-hand navigation pane, select **Security**.
 
-3. In the **Microsoft Defender** portal, you should still be on the **Attack simulation training** page; if not, then in the left-hand navigation pane, under **Email & collaboration**, select **Attack simulation training**.
+3. In the **Microsoft Defender** portal, you should still be on the **Attack simulation training** page; if not, then in the left-hand navigation pane, under the **Email & collaboration** section, select **Attack simulation training**.
 
-4. On the **Attack Simulation training** page, the **Overview** tab is displayed by default. Select the **Simulations** tab, and then select **+ Launch a simulation** that appears on the menu bar.
+4. On the **Attack Simulation training** page, the **Overview** tab is displayed by default. Select the **Simulations** tab, and then select the **+Launch a simulation** option that appears on the menu bar.
 
 5. On the **Select Technique** page, select the **Drive-by URL** option. Under this option, select the **View details of Drive-by URL** link. This opens a **Drive-by URL** pane on the right. Review the **Description** and the **Simulation steps** for this type of attack. When you're done, close the **Drive-by URL** pane and select **Next**.
 
 6. On the **Name Simulation** page, enter **Custom payload** in the **Simulation name** field and then select **Next**.
 
-7. On the **Select payload and login page**, select **+Create a payload**.
+7. On the **Select payload and login page**, the **Global payloads** tab is displayed by default. Select the **Tenant payloads** tab, and then select **+Create a payload** on the menu bar. This initiates the Payload wizard.
 
 8. On the **Select type** page of the Payload wizard, the **Email** option should be selected by default (if not, select it now). Select **Next**. 
 
