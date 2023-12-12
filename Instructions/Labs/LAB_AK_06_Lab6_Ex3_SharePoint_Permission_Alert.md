@@ -63,7 +63,9 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 
 4. In the ribbon at the top of the page, the **Permissions** tab is displayed by default. Under the **Manage** group, select **Site Collection Administrators**.
 
-5. In the **Site Collection Administrators** dialog box, the Global administrator account that was assigned by default to this role group is displayed in the data entry field. To the right of this account, enter **Alex**, select **Alex Wilber** from the list of users that appears, and then select **OK**. 
+5. In the **Site Collection Administrators** dialog box, the Global administrator account that was assigned by default to this role group is displayed in the data entry field. To the right of this account, enter **Alex**, select **Alex Wilber** from the list of users that appears, and then select **OK**. This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox.
+
+6. Leave your LON-CL1 VM open and proceed to the next exercise.
 
 
 **Note:** Rather than waiting up to 15 minutes for the email notification to be generated to validate this SharePoint permission alert, you will validate this alert in Exercise 7, task 2 of this lab.
