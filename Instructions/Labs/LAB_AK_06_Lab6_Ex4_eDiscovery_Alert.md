@@ -80,13 +80,10 @@ To test this default alert, Holly Dickson will create an eDiscovery search. This
 
 11. On the **New search created** page, select **Done**.
 
-12. On the **Content search** page, scroll to the far-right side of the page. Note the **Status** of the **Confidential search** is **Starting**. <br/>
+12. On the **Content search** page, scroll to the far-right side of the page. Note the **Status** of the **Confidential search** is **Starting**. The search that you created should only take a couple of minutes to complete.
 
-	**Important:** When you submit a new search, the system saves the search and then immediately runs it. By saving this eDiscovery search, the eDiscovery alert should be triggered, thereby creating an email notification that should be sent to the Inbox of all users with Tenant Admin permissions. You do NOT have to wait for the Search to finish before testing whether the alert sent the email notification. The alert notification system will process the email at the time the search is created. 
+	**Note:** When you submit a new search, the system saves the search and then immediately runs it. By saving this eDiscovery search, the eDiscovery alert should be triggered, thereby creating an email notification that should be sent to the Inbox of all users with Tenant Admin permissions. It may take an additional 15 minutes for the email notification to be generated to validate this eDiscovery alert. Instead of waiting, proceed to the next exercise. You will validate this alert email in Exercise 7, task 3 of this lab.
 	
-13. The search that you created should only take a couple of minutes to complete. You can either proceed to the next step while the search is running, or if you wish, you can select the **Refresh** icon on the menu bar every minute or so until the **Status** changes to **Completed**.
-	
-
-**Note:** It may take an additional 15 minutes for the email notification to be generated to validate this eDiscovery alert. Instead of waiting, proceed to the next exercise. You will validate this alert in Exercise 7, task 3 of this lab.
-
+13.  Leave your browser open in LON-CL1 and do not close any of the tabs.
+    
 # Proceed to Lab 6 - Exercise 5
