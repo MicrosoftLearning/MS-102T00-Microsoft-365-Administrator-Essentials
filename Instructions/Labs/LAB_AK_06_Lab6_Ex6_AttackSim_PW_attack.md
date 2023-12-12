@@ -2,9 +2,6 @@
 
 Holly Dickson is concerned that some of the users at Adatum may require training about avoiding URL links to familiar websites that are either fake or have been hacked. This type of attack is known as a Drive-by URL attack. With this type of attack, a target receives an email containing a URL link, and when the target selects the link, they are taken to a website that runs background code whose sole purpose is to gather information about the target or deploy arbitrary code to their device. As part of her pilot project, Holly has decided to use the Microsoft 365 Attack simulation training feature to determine her users' susceptibility to Drive-by URL attacks.
 
-**Note:** In the prior lab exercise, you enabled MFA for Holly Dickson's account. This was needed to complete the prior attack simulation exercise, as well as this one. At the end of this exercise, you will disable MFA for Holly's account. Doing so will save you from having to enter the second form of authentication when signing in as Holly in any of the remaining labs in this course.
-
-
 ### Task 1: Configure and launch a Drive-by URL attack 
 
 In a Drive-by URL attack, the website attempting to lure the target will typically be a well-known website that has been compromised in some fashion, or a clone of a well-known website itself. The hacker hopes that familiarity with the website builds trust in the target, to the point where the target feels that it's safe to select the URL link. Holly wants to create a Drive-by URL attack using a rip-off of the Tailspin Toys website. Tailspin Toys is a nationally known toy store that is constantly offering promotions on TV and throughout social media. Holly wants to use this familiarity with the Tailspin Toys name brand to offer an enticing promotion for free toys as part of her attack simulation training. This will enable her to see how many Adatum employees are susceptible to this type of attack. 
@@ -111,34 +108,6 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 
 **Note:** Rather than waiting up to 15 minutes for the email notification to be generated to validate this attack simulation, you will validate this alert in Exercise 7, task 5 of this lab.
 
-### Task 2: Disable Multi-factor Authentication for the Global Admin
-
-To use Microsoft's Attack simulation training to simulate phishing attacks, Holly enabled Multi-Factor Authentication (MFA) for her user account. Now that she has completed the Attack simulation training tests, she wants to disable MFA for her account so that she doesn't have to deal with MFA for the remainder of the pilot project.
-
-1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
-
-2. To disable MFA for Holly Dickson's user account, you must first access the **Active users** list in the Microsoft 365 admin center. If you have the **Microsoft 365 admin center** open in a browser tab, then select that now; otherwise, open a new browser tab, enter **https://portal.office.com** in the address bar, and then on the **Office 365 home** page, select the **Admin** icon that appears in the column of app icons on the left-side of the screen. This opens the **Microsoft 365 admin center** in a new browser tab. 
-
-3. On the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active users**.
-
-4. In the **Active users** window, on the menu bar at the top of the user list, select **Multi-factor authentication**.
-
-5. In the **multi-factor authentication** window (may need to select **Legacy per-user MFA**), the **users** tab is displayed by default. Select the check box for **Holly Dickson**, and in Holly's properties pane on the right, select **Disable**.
-
-6. On the **Disable multi-factor authentication?** dialog box, select **yes**. 
-
-7. When the **Updates successful** dialog box appears, select **close**. In the **multi-factor authentication** window, verify Holly's MFA Status has changed to **Disabled**. Close the **Multi-factor authentication** tab in your browser.
-
-8. You must now sign out of Microsoft 365 as Holly and then sign back in as Holly (without MFA). To do so, perform the following steps: <br/>
-
-	- Select Holly's account icon (HD in a circle) at the top-right of the screen and in Holly's profile window, select **Sign out**.
-	- Once you're signed out, close your Edge browser. Doing so will clear your cache.
-	- Open a new Edge browser session.
-	- Enter the **https://portal.office.com** URL.
-	- In the **Pick an account** window, select Holly's account and enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) as the **Password**.
-	- From the **Microsoft Office Home** page, select the **Admin** icon to navigate to the **Microsoft 365 admin center**.
-	
-	You are now ready to proceed to the next lab exercise.
 
 # Proceed to Lab 6 - Exercise 7
  
