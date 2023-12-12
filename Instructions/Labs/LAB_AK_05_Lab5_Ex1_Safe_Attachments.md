@@ -10,9 +10,9 @@ In this task, you will turn on Microsoft Defender for Office 365, which provides
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. In your Edge browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane, under **Admin centers**, select **Security**. This will open a new tab in your browser for **Microsoft 365 Defender**. 
+2. In your Edge browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane, under **Admin centers**, select **Security**. This will open a new tab in your browser for **Microsoft Defender**. 
 
-3. In the **Microsoft 365 Defender** portal, scroll down to the bottom of the **Email & collaboration** section in the left-hand navigation pane and select **Policies & rules** .
+3. In the **Microsoft Defender** portal, scroll down to the bottom of the **Email & collaboration** section in the left-hand navigation pane and select **Policies & rules** .
 
 4. In the **Policies & rules** window, select **Threat policies**.
 
@@ -50,7 +50,7 @@ In this task, you will turn on Microsoft Defender for Office 365, which provides
 
 **NOTE:** Unfortunately, we are unable to create a training lab in which you can validate the Safe Attachments policy that you just created. To do so, you must send an email that contains a malicious attachment. There are some common test viruses that are available, such as the EICAR test virus. However, with well-known test viruses such as EICAR, the messages in which they are attached get quarantined by mail servers before they can be processed by Microsoft Defender for Office 365. Since the Safe Attachments functionality is meant to protect against unknown and zero-day viruses and malware, it is very difficult, and not recommended, to create such an attachment.
 
-That being said, after you have defined Safe Attachment policies in your real-world environment, one good way to see how the service is working is by viewing the security-related reports in Microsoft Defender for Office 365. For more information on using these reports to validate your Safe Links and Safe Attachment policies, see [View Defender for Office 365 reports in the Microsoft 365 Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/view-reports-for-mdo).
+That being said, after you have defined Safe Attachment policies in your real-world environment, one good way to see how the service is working is by viewing the security-related reports in Microsoft Defender for Office 365. For more information on using these reports to validate your Safe Links and Safe Attachment policies, see [View Defender for Office 365 reports in the Microsoft Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/view-reports-for-mdo).
 
 
 # Proceed to Lab 5 - Exercise 2
