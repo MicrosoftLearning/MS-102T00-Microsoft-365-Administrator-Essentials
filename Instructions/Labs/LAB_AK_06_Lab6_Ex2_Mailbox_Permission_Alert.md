@@ -79,7 +79,10 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 	- Once the mailbox permission is added to Alex's mailbox, select the back arrow at the top of the pane. 
 	- This returns you to the **Delegation** tab on the **Alex Wilber** pane, which displays the three permissions. Repeat these steps for each of the two remaining permissions. 
 
-7. Once you have assigned Joni to each of the three permissions on the **Delegation** tab, select the **X** in the upper right-hand corner to close the **Alex Wilber** pane. 
+7. Once you have assigned Joni to each of the three permissions on the **Delegation** tab, select the **X** in the upper right-hand corner to close the **Alex Wilber** pane. This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox.
+   
+8. Leave your LON-CL1 VM open and proceed to the next exercise.
+
 
 **Note:** Rather than waiting up to 15 minutes for the email notification to be generated to validate this mailbox permission alert, you will validate this alert in Exercise 7, task 1 of this lab.
 
