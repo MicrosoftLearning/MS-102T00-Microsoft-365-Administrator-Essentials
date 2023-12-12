@@ -112,8 +112,10 @@ In this lab exercise, you will use one of the existing payload templates. In the
 
 18. On the **Launch Details** page, select the **Launch this simulation as soon as I'm done** option and then select **Next**.
 
-19. On the **Review Simulation** page, review the entered information. If anything needs to be changed, select the appropriate **Edit** option to make the change. Once everything is correct, select **Submit**. It may take a few minutes before you receive a confirmation stating **Simulation has been scheduled for launch**. Select **Done**.
+19. On the **Review Simulation** page, review the entered information. If anything needs to be changed, select the appropriate **Edit** option to make the change. Once everything is correct, select **Submit**. It may take a few minutes before you receive a confirmation stating **Simulation has been scheduled for launch**. Select **Done**. <br/>
 
-**Note:** Rather than waiting up to 15 minutes for the email notification to be generated to validate this attack simulation, you will validate this alert in Exercise 7, task 4 of this lab.
+	**Note:** Once the simulated spear phishing attack is launched, a very intriguing, real-world looking email should be sent to all Adatum users. Rather than waiting up to 15 minutes for the email to be generated, you will validate the email in Exercise 7, task 4 of this lab.
 
+20. Leave your Edge browser and all tabs open and proceed to the next exercise.
+    
 # Proceed to Lab 6 - Exercise 6
