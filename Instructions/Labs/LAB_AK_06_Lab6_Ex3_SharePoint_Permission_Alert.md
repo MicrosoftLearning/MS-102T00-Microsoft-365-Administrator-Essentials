@@ -53,6 +53,21 @@ In this exercise you will configure and test an alert that notifies Lynne Robbin
 
 You have now configured an additional alert policy that monitors when a user is added as a site collection administrator for a SharePoint Online site collection.
 
+### Task 2 – Test the SharePoint Permissions Alert
+
+In the prior task, you configured an alert designed to notify Lynne Robbins when a user is added as a site collection administrator for a site collection. In this task, you will test this alert by adding Alex Wilber as a site collection admin to the global SharePoint Communication site. This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox. You will validate whether Lynne received this alert notification email in Exercise 7, task 2.
+
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+
+2. In your **Microsoft Edge** browser, open a new tab and enter the following URL in the address bar: **https://xxxxxZZZZZZ.sharepoint.com/_layouts/15/settings.aspx** (replace xxxxxZZZZZZ with the tenant prefix provided by your lab hosting provider). This opens the **Site Settings** for the global SharePoint Communication site.
+
+3. On the **Site Settings** window, under the **Users and Permissions** section, select **Site permissions**. 
+
+4. In the ribbon at the top of the page, the **Permissions** tab is displayed by default. Under the **Manage** group, select **Site Collection Administrators**.
+
+5. In the **Site Collection Administrators** dialog box, the Global administrator account that was assigned by default to this role group is displayed in the data entry field. To the right of this account, enter **Alex**, select **Alex Wilber** from the list of users that appears, and then select **OK**. 
+
+
 **Note:** Rather than waiting up to 15 minutes for the email notification to be generated to validate this SharePoint permission alert, you will validate this alert in Exercise 7, task 2 of this lab.
 
 # Proceed to Lab 6 - Exercise 4
