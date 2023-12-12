@@ -2,7 +2,7 @@
 
 Holly Dickson is concerned that some of the users at Adatum may require training about avoiding URL links to familiar websites that are either fake or have been hacked. This type of attack is known as a Drive-by URL attack. With this type of attack, a target receives an email containing a URL link, and when the target selects the link, they are taken to a website that runs background code whose sole purpose is to gather information about the target or deploy arbitrary code to their device. As part of her pilot project, Holly has decided to use the Microsoft 365 Attack simulation training feature to determine her users' susceptibility to Drive-by URL attacks.
 
-**Note:** In the prior lab exercise, you enabled MFA for Holly Dickson's account. This was needed to complete the prior exercise, as well as this one. At the end of this exercise, you will disable MFA for Holly's account. Doing so will save you from having to enter the second form of authentication when signing in as Holly in any of the remaining labs in this course.
+**Note:** In the prior lab exercise, you enabled MFA for Holly Dickson's account. This was needed to complete the prior attack simulation exercise, as well as this one. At the end of this exercise, you will disable MFA for Holly's account. Doing so will save you from having to enter the second form of authentication when signing in as Holly in any of the remaining labs in this course.
 
 
 ### Task 1: Configure and launch a Drive-by URL attack 
@@ -109,35 +109,9 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 
 36. On the **Review Simulation** page, review the entered information. If anything needs to be changed, select the appropriate **Edit** option to make the change. Once everything is correct, select **Submit**. It may take a few minutes before you receive a confirmation stating **Simulation has been scheduled for launch**. Select **Done**.
 
+**Note:** Rather than waiting up to 15 minutes for the email notification to be generated to validate this attack simulation, you will validate this alert in Exercise 7, task 5 of this lab.
 
-### Task 2: Review the Drive-by URL attack results
-
-You will now review the results of the Drive-by URL simulation attack that you just launched. In this task, you will verify whether your organization has received the email that you configured in the Attack simulation training. You will then review the results associated with the Drive-by URL attack that you simulated.
-
-1. Switch to **LON-CL2**.
-
-2. On LON-CL2, in the Edge browser, you should have a tab open containing Lynne Robbins' Outlook mailbox from the prior lab exercise. In Lynne's Outlook Inbox, you should see the email that was sent by the Attack Simulator that's from **klemens@tailspintoys.com**. The subject of the email is **Free toy giveaway promotion from Tailspin Toys**. Select the email to open it and review the details in the body of the message. 
-
-	**NOTE:** It can take up to 15 minutes for the email to arrive.  Wait for the email before proceeding.
-
-8. Select the link that is included in the email. Even though you know this is a Drive-by URL attack, this will enable you to see the effect of doing so in the Attack Simulator report that tracks the results of the spear phishing campaign. <br/>
-
-	Selecting this link displays a web page that explains how you have been redirected to it as part of a Phishing awareness test being run by your organization.  Read through the contents of this site, which uses the landing page template that you selected in the prior task when setting up the attack simulation. 
-
-11. In the **Outlook** tab in your Edge browser, select the picture of Lynne Robbins in the upper-right corner of the window. In Lynne's profile window that appears, select **Sign out**.
-
-12. Once Lynne is signed out, close the Edge browser.
-
-13. Switch back to **LON-CL1**.
-
-14. On LON-CL1, in your browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. If the **Custom payload** simulation does not appear in the **Recent Simulations** list, select the **Refresh** icon to the left of the URL on the address bar. The **Custom payload** simulation should now appear. Select the **Custom payload** simulation to view the diagnostic results that were captured for this simulation.
-
-15. A **Custom payload** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
-
-16. Leave your browser open in LON-CL1 and do not close any of the tabs.
-
-
-### Task 3: Disable Multi-factor Authentication for the Global Admin
+### Task 2: Disable Multi-factor Authentication for the Global Admin
 
 To use Microsoft's Attack simulation training to simulate phishing attacks, Holly enabled Multi-Factor Authentication (MFA) for her user account. Now that she has completed the Attack simulation training tests, she wants to disable MFA for her account so that she doesn't have to deal with MFA for the remainder of the pilot project.
 
