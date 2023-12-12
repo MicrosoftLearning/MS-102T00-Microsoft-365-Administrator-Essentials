@@ -56,6 +56,31 @@ In this exercise you will configure and test an alert that will notify Lynne Rob
 
 You have now created an activity alert in Microsoft Defender XDR that is triggered when FullAccess permissions are granted to any mailboxes.
 
+### Task 1 – Test the Mailbox Permission Alert
+
+In the prior task, you configured an alert designed to notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum. In this task, you will test this alert by changing the FullAccess permission on Alex Wilber’s mailbox by granting Joni Sherman FullAccess to his mailbox. This activity should trigger the alert that you created, which should send an alert notification email to Lynne Robbins’ mailbox. You will validate whether the email is generated in Exercise 7.
+
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+
+2. In your Edge browser, select the **Microsoft 365 admin center** tab, and then in the left-hand navigation pane, under the **Admin centers** group, select **Exchange**. This opens the Exchange admin center for Exchange Online.
+
+3. In the **Exchange admin center**, the **Manage Mailboxes** window appears by default (if it doesn't, then in the left-hand navigation pane, under the **Recipients** group, select **Mailboxes**). 
+
+4. In the **Manage Mailboxes** window, select **Alex Wilber** from the list of mailboxes (select Alex's name; do not select the check box to the left of his name).
+
+5. In the **Alex Wilber** pane that appears, the **General** tab is displayed by default. Select the **Delegation** tab.
+
+6. On the **Delegation** tab, there are three mailbox permissions that can be updated: **Send as**, **Send on behalf**, and **Read and manage (Full Access)**. You want to add each of these permissions for Alex's mailbox to **Joni Sherman**. For each permission, perform the following steps to add Joni to that permission: <br/>
+
+	- Select the **Edit** button for the permission. 
+	- On the **Manage mailbox delegation** pane, select **+Add members**.
+	- In the list of users that appears, select the check box for **Joni Sherman** and then select **Save**.
+	- In the **Add delegate permissions?** pane, select **Confirm**.
+	- Once the mailbox permission is added to Alex's mailbox, select the back arrow at the top of the pane. 
+	- This returns you to the **Delegation** tab on the **Alex Wilber** pane, which displays the three permissions. Repeat these steps for each of the two remaining permissions. 
+
+7. Once you have assigned Joni to each of the three permissions on the **Delegation** tab, select the **X** in the upper right-hand corner to close the **Alex Wilber** pane. 
+
 **Note:** Rather than waiting up to 15 minutes for the email notification to be generated to validate this mailbox permission alert, you will validate this alert in Exercise 7, task 1 of this lab.
 
 # Proceed to Lab 6 - Exercise 3
