@@ -9,9 +9,9 @@ In this exercise you will configure and test an alert that notifies Lynne Robbin
 
     Switch to **LON-CL1**. 
 
-2. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. In your Edge browser, select the **Alert policy - Microsoft 365 security** tab, which displays the **Microsoft 365 Defender** portal.
+2. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. In your Edge browser, select the **Alert policy - Microsoft 365 security** tab, which displays the **Microsoft Defender** portal.
 
-3. In the **Microsoft 365 Defender** tab, you should still be in the **Alert policy** window from the prior lab exercise (if not, then in the left-hand navigation pane, select **Policies & rules** and then select **Alert policy**).
+3. In the **Microsoft Defender** tab, you should still be in the **Alert policy** window from the prior lab exercise (if not, then in the left-hand navigation pane, select **Policies & rules** and then select **Alert policy**).
 
 4. In the **Alert policy** window, select **+New Alert Policy** on the menu bar. This initiates the **New Alert Policy** wizard.
 
@@ -75,9 +75,9 @@ In the prior task, you configured an alert that will notify Lynne Robbins when a
 
 	**Note:** Lab testing has shown that in some cases, it can take up to 15 minutes or so for the email to be received in Lynne's Inbox. Do not proceed until the email has arrived.
 
-8. Once the email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft 365 Defender** portal in a new tab.
+8. Once the email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft Defender** portal in a new tab.
 
-9. The **Microsoft 365 Defender** portal displays the **Alerts** window, and it automatically opens the **Site collection admin permissions** pane for this alert activity that triggered the email notification to Lynne. <br/>
+9. The **Microsoft Defender** portal displays the **Alerts** window, and it automatically opens the **Site collection admin permissions** pane for this alert activity that triggered the email notification to Lynne. <br/>
 
 	Scroll down through the **Site collection admin permissions** pane and review all the information for this alert activity. When you are done, select **Close** to close the pane.
 
