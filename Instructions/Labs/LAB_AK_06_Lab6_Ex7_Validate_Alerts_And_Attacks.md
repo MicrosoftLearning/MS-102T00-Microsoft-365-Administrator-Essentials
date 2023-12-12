@@ -5,49 +5,23 @@ This lab included three exercises in which you configured Microsoft 365 to creat
 
 ### Task 1 – Validate the Mailbox Permission Alert
 
-In Lab 6, Exercise 2, you configured an alert designed to notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum. To test this alert, you changed the FullAccess permission on Alex Wilber’s mailbox by granting Joni Sherman FullAccess to his mailbox. This activity should have triggered the alert policy that you created, which should have sent an alert notification email to Lynne Robbins’ mailbox. In this task, you will log into LON-CL2 as Lynne Robbins and see if she received this email. 
+In Lab 6, Exercise 2, you configured an alert designed to notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum. You tested this alert by changing the FullAccess permission on Alex Wilber’s mailbox by granting Joni Sherman FullAccess to his mailbox. This activity should have triggered the alert policy that you created, which should have sent an alert notification email to Lynne Robbins’ mailbox. In this task, you will log into LON-CL2 as Lynne Robbins and see if she received this email. 
 
-1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+1. ‎Switch to **LON-CL2**. On **LON-CL2**, you should be signed into the machine as the local **administrator** (lon-cl2\admin) account. Select the **Microsoft Edge** icon in the taskbar, maximize the window (if necessary), and then enter the following URL in the address bar: **https://outlook.office365.com**
 
-2. In your Edge browser, select the **Microsoft 365 admin center** tab, and then in the left-hand navigation pane, under the **Admin centers** group, select **Exchange**. This opens the Exchange admin center for Exchange Online.
+2. In the **Pick an account** window, if Lynne Robbins account (**LynneR@xxxxxZZZZZZ.onmicrosoft.com**) appears in the user list, then select it now; otherwise, select **Use another account** and sign in as **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Then enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) as Lynne's password.
 
-3. In the **Exchange admin center**, the **Manage Mailboxes** window appears by default (if it doesn't, then in the left-hand navigation pane, under the **Recipients** group, select **Mailboxes**). 
-
-4. In the **Manage Mailboxes** window, select **Alex Wilber** from the list of mailboxes (select Alex's name; do not select the check box to the left of his name).
-
-5. In the **Alex Wilber** pane that appears, the **General** tab is displayed by default. Select the **Delegation** tab.
-
-6. On the **Delegation** tab, there are three mailbox permissions that can be updated: **Send as**, **Send on behalf**, and **Read and manage (Full Access)**. You want to add each of these permissions for Alex's mailbox to **Joni Sherman**. For each permission, perform the following steps to add Joni to that permission: <br/>
-
-	- Select the **Edit** button for the permission. 
-	- On the **Manage mailbox delegation** pane, select **+Add members**.
-	- In the list of users that appears, select the check box for **Joni Sherman** and then select **Save**.
-	- In the **Add delegate permissions?** pane, select **Confirm**.
-	- Once the mailbox permission is added to Alex's mailbox, select the back arrow at the top of the pane. 
-	- This returns you to the **Delegation** tab on the **Alex Wilber** pane, which displays the three permissions. Repeat these steps for each of the two remaining permissions. 
-
-7. Once you have assigned Joni to each of the three permissions on the **Delegation** tab, select the **X** in the upper right-hand corner to close the **Alex Wilber** pane. 
-
-8. Since **Holly Dickson** has changed the mailbox permissions for Alex Wilber by giving Joni Sherman full access permissions to his mailbox, an alert email should automatically be sent to Lynne Robbins’ Inbox that notifies her of this event. You will verify this email was sent by checking Lynne's Inbox on LON-CL2. <br/>
-
-	‎Switch to **LON-CL2**. 
-
-9. On **LON-CL2**, you should be signed into the machine as the local **administrator** (lon-cl2\admin) account. Select the **Microsoft Edge** icon in the taskbar, maximize the window (if necessary), and then enter the following URL in the address bar: **https://outlook.office365.com**
-
-10. In the **Pick an account** window, if Lynne Robbins account (**LynneR@xxxxxZZZZZZ.onmicrosoft.com**) appears in the user list, then select it now; otherwise, select **Use another account** and sign in as **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Then enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) as Lynne's password.
-
-11. Lynne Robbins’ **Inbox** should include an email from the Alerts notification system (**Office365Alerts@microsoft.com**) to let her know that Holly Dickson has made a Mailbox permission change. <br/>
+3. Lynne Robbins’ **Inbox** should include an email from the Alerts notification system (**Office365Alerts@microsoft.com**) to let her know that Holly Dickson has made a Mailbox permission change. <br/>
 
 	**WARNING:** Lab testing has shown that in some cases, it can take up to 15 minutes or so for the email to be received in Lynne's Inbox. You may need to refresh Outlook one or more times until you receive the email.
 
-12. Once the notification email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft Defender** portal in a new tab.
+4. Once the notification email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft Defender** portal in a new tab.
 
-13. The **Microsoft Defender** portal displays the **Alerts** window, and it automatically opens the **Mailbox permission change** pane for this alert activity that triggered the email notification to Lynne. <br/>
+5. The **Microsoft Defender** portal displays the **Alerts** window, and it automatically opens the **Mailbox permission change** pane for this alert activity that triggered the email notification to Lynne. <br/>
 
 	Scroll down through the **Mailbox permission change** pane and review all the information for this activity. When you are done, select **Close** to close the pane.
 
-14. In your Edge browser, close the **View Alerts - Microsoft 365 security** tab. Leave Lynne's **Outlook** tab open, as you will use that in the next lab exercise.
-
+6. In your Edge browser, close the **View Alerts - Microsoft 365 security** tab. Leave Lynne's **Outlook** tab open, as you will use that in the next task.
 
 You have just successfully tested a mailbox permission alert that sent an alarm message on granting FullAccess to a user mailbox.
 
@@ -56,31 +30,15 @@ You have just successfully tested a mailbox permission alert that sent an alarm 
 
 In Lab 6, Exercise 3, you configured an alert designed to notify Lynne Robbins when a user is added as a site collection administrator for a site collection. To test this alert, you added Alex Wilber as a site collection admin to the global SharePoint Communication site. This activity should have triggered the alert policy that you created, which should have sent an alert notification email to Lynne Robbins’ mailbox. In this task, you will validate whether Lynne received this alert notification email.
 
-1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+1. On **LON-CL2**, you should still be logged into **Outlook on the web** as **Lynne Robbins** from the prior task. Monitor Lynne's Inbox to view the email generated by the alert that you just created. 
 
-2. In your **Microsoft Edge** browser, open a new tab and enter the following URL in the address bar: **https://xxxxxZZZZZZ.sharepoint.com/_layouts/15/settings.aspx** (replace xxxxxZZZZZZ with the tenant prefix provided by your lab hosting provider). This opens the **Site Settings** for the global SharePoint Communication site.
+2. Once the email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft Defender** portal in a new tab.
 
-3. On the **Site Settings** window, under the **Users and Permissions** section, select **Site permissions**. 
-
-4. In the ribbon at the top of the page, the **Permissions** tab is displayed by default. Under the **Manage** group, select **Site Collection Administrators**.
-
-5. In the **Site Collection Administrators** dialog box, the Global administrator account that was assigned by default to this role group is displayed in the data entry field. To the right of this account, enter **Alex**, select **Alex Wilber** from the list of users that appears, and then select **OK**. 
-
-6. Since a new site collection admin has been added, an alert should automatically be sent to Lynne Robbins’ Inbox notifying her of this event. Perform the remaining steps to verify that Lynne received this email. You will verify whether this alert was sent to Lynne's mailbox on LON-CL2.
-
-	‎Switch to **LON-CL2**. 
-
-7. On **LON-CL2**, you should still be logged into **Outlook on the web** as **Lynne Robbins** from the prior task. Monitor Lynne's Inbox to view the email generated by the alert that you just created. <br/>
-
-	**Note:** Lab testing has shown that in some cases, it can take up to 15 minutes or so for the email to be received in Lynne's Inbox. Do not proceed until the email has arrived.
-
-8. Once the email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft Defender** portal in a new tab.
-
-9. The **Microsoft Defender** portal displays the **Alerts** window, and it automatically opens the **Site collection admin permissions** pane for this alert activity that triggered the email notification to Lynne. <br/>
+3. The **Microsoft Defender** portal displays the **Alerts** window, and it automatically opens the **Site collection admin permissions** pane for this alert activity that triggered the email notification to Lynne. <br/>
 
 	Scroll down through the **Site collection admin permissions** pane and review all the information for this alert activity. When you are done, select **Close** to close the pane.
 
-10. Leave your LON-CL1 and LON-CL2 VMs open for the remaining exercise in this lab.
+4. Leave your LON-CL1 and LON-CL2 VMs open for the remaining exercise in this lab.
 
 You have now successfully tested the SharePoint alert to monitor site collection admin permissions on SharePoint sites. 
 
