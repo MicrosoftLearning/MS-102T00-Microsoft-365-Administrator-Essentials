@@ -5,13 +5,11 @@ In this exercise you will configure and test an alert that notifies Lynne Robbin
 
 ### Task 1 – Create a SharePoint Permissions Alert
 
-1. At the end of the prior lab, you were logged into LON-CL2. This lab will use LON-CL1.  <br/>
+1. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-    Switch to **LON-CL1**. 
+2. In your Edge browser, select the **Alert policy - Microsoft 365 security** tab, which displays the **Microsoft Defender** portal.
 
-2. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. In your Edge browser, select the **Alert policy - Microsoft 365 security** tab, which displays the **Microsoft Defender** portal.
-
-3. In the **Microsoft Defender** tab, you should still be in the **Alert policy** window from the prior lab exercise (if not, then in the left-hand navigation pane, select **Policies & rules** and then select **Alert policy**).
+3. In the **Microsoft Defender** portal, you should still be in the **Alert policy** window from the prior lab exercise (if not, then in the left-hand navigation pane, select **Policies & rules** and then select **Alert policy**).
 
 4. In the **Alert policy** window, select **+New Alert Policy** on the menu bar. This initiates the **New Alert Policy** wizard.
 
