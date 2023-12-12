@@ -114,38 +114,6 @@ In this lab exercise, you will use one of the existing payload templates. In the
 
 19. On the **Review Simulation** page, review the entered information. If anything needs to be changed, select the appropriate **Edit** option to make the change. Once everything is correct, select **Submit**. It may take a few minutes before you receive a confirmation stating **Simulation has been scheduled for launch**. Select **Done**.
 
-
-### Task 3: Review the attack simulation results
-
-In this task, you will verify whether Adatum has received the email that you configured in the Attack simulation training. You will then review the diagnostic feedback associated with the Spear Phishing attack that you simulated.
-
-1. Switch to **LON-CL2**, where you should be logged into the machine as the local **adatum\administrator** account.
-
-2. On LON-CL2, open your Edge browser and enter the following URL in the address bar: **https://outlook.office365.com**.
- 
-3. In the **Pick an account** window, select **Use another account**. 
-
-4. In the **Sign in** window, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix ID provided by your lab hosting provider), and then in the **Enter password** window, enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and select **Sign in**. 
-
-5. In Lynne's Outlook Inbox, you should see the spear phishing email that was sent by the Attack Simulator. The subject of the message should be **2 Failed messages to you**. Select the email to open it and review the details in the body of the message. 
-
-	**NOTE!** It can take up to 15 minutes for the email to arrive.  Wait for the email before proceeding.
-
-6. Select the **View Returned Messages** button in the email. Even though you know this is a spear phishing attack, this will enable you to see the effect of doing so in the Attack Simulator report that tracks the results of the spear phishing campaign.
-
-7. In the **Sign in** dialog box that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix ID provided by your lab hosting provider), and then enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) in the **Enter password** window. Select **Sign in**. 
-
-8. This displays a web page that explains how you have been redirected to it as part of a Phishing awareness test being run by your organization. Read through the contents of this site, which uses the landing page template that you selected in the prior task when setting up the attack simulation.
-
-9. Leave the Outlook tab open for Lynne's mailbox in your Edge browser. Do **NOT** sign out or close it. You will access Lynne's mailbox on LON-CL2 in the next lab exercise. 
-
-10. Switch back to **LON-CL1**.
-
-11. In LON-CL1, in your Edge browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. If the **PhishingTest1** simulation does not appear in the **Recent Simulations** list, select the **Refresh** icon to the left of the URL on the address bar. The **PhishingTest1** simulation should now appear. Select the **PhishingTest1** simulation to view the diagnostic results that were captured for this simulation.
-
-12. A **PhishingTest1** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
-
-13. Leave your browser open in LON-CL1 and do not close any of the tabs.
-    
+**Note:** Rather than waiting up to 15 minutes for the email notification to be generated to validate this attack simulation, you will validate this alert in Exercise 7, task 4 of this lab.
 
 # Proceed to Lab 6 - Exercise 6
