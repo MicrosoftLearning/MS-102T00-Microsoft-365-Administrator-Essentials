@@ -140,5 +140,5 @@ To use Microsoft's Attack simulation training to simulate phishing attacks, Holl
 	
 	You are now ready to proceed to the next lab exercise.
 
-# End of Lab 6
+# Proceed to Lab 6 - Exercise 7
  
