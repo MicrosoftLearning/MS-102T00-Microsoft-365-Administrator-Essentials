@@ -54,7 +54,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
    - First, you will send two emails from Holly Dickson to the MOD Administrator - one that contains an unblocked URL and another that contains the blocked http://tailspintoys.com URL.
    - You will verify that both emails appear in Holly's Sent Items folder.
-   - You will then log into the MOD Administrator's Outlook mailbox and verify that the email with the unblocked URL arrived in the MOD Administrator's Inbox and the email with the blocked URL never arrived. The fact that the system sent the email with the blocked URL but it never arrived in the MOD Administrators Inbox verifies the Blocked URL functionality worked. Messages that contain unblocked URLs are held until Safe Links scanning is finished. Messages are delivered only after the URLs are confirmed to be safe, which is the case with the email with the unblocked URL.. 
+   - You will then log into the MOD Administrator's Outlook mailbox and verify that the email with the unblocked URL arrived in the MOD Administrator's Inbox and the email with the blocked URL never arrived. The fact that the system sent the email with the blocked URL but it never arrived in the MOD Administrators Inbox verifies the Blocked URL functionality worked. Messages that contain unblocked URLs are held until Safe Links scanning is finished. Messages are delivered only after Safe Links confirms the URLs are safe, which is the case with the email with the unblocked URL. 
    - You will then go back into Holly's Outlook mailbox and open the email in her Sent Items folder that contains the blocked URL. You will select the hyperlinked text and verify the Safe Links policy worked when you try to access this blocked site. Safe Links immediately checks the URL before opening the website. Since the URL is blocked, Safe Links returns a malicious website warning page.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
@@ -119,7 +119,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 23. In the MOD Administrator's **Inbox**, perform the following checks:  <br/>
 
-       - Verify that you received the first email that Holly sent that contained the Subject line "**Test email with an unblocked URL**". This email showed that the email system is working, and that an email with an unblocked URL could successfully be sent. 
+       - Verify that you received the first email that Holly sent that contained the Subject line "**Test email with an unblocked URL**". This email showed that the email system is working, and that an email with an unblocked URL could successfully be sent and not be blocked by Safe Links since it isn't malicious. 
 
       - Next, verify that Holly's email with the Subject line "**Free stuff for Adatum users**" never arrived in the MOD Administrator's Inbox. Since you already verified from Holly's Sent Items folder that the email was sent, the fact that it never arrived verifies that the email was blocked due to the blocked URL.
 
@@ -129,7 +129,9 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 25. On LON-CL1, you should still be in the **Sent Items** folder in Holly's Outlook mailbox. Select the email with the subject line "**Free stuff for Adatum users**" to open the email message, and then select the hyperlinked message in the body of the email. 
 
-26. A new tab should open in your **Edge** browser that attempts to take you to the **http://tailspintoys.com/aboutus/freetoys** site. The web page that appears should display the following warning message: **This website is classified as malicious.** This action not only indicates the URL isn't safe, but it also verifies that the Safe Links policy you just created is working properly.
+26. A new tab should open in your **Edge** browser that attempts to take you to the **http://tailspintoys.com/aboutus/freetoys** site. The web page that appears should display the following warning message: **This website is classified as malicious.** <br/>
+
+    **Note:** In the Safe Links policy that you created, you selected the option to have Safe Links check a list of known, malicious links when users select links in email. So when you selected this link in the email message to the http://tailspintoys.com URL that was on the blocked list, Safe Links returned the malicious website warning page. You just verified that the Safe Links policy that you created is working.
 
 27. You should now prepare LON-CL2 for the next lab that will use it. Switch back to the Client 2 VM (**LON-CL2**). 
 
