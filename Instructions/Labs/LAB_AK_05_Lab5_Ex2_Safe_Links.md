@@ -131,7 +131,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 26. A new tab should open in your **Edge** browser that attempts to take you to the **http://tailspintoys.com/aboutus/freetoys** site. The web page that appears should display the following warning message: **This website is classified as malicious.** <br/>
 
-    **Note:** In the Safe Links policy that you created, you selected the option to have Safe Links check a list of known, malicious links when users select links in email. So when you selected this link in the email message to the http://tailspintoys.com URL that was on the blocked list, Safe Links returned the malicious website warning page. You just verified that the Safe Links policy that you created is working.
+    **Note:** In the Safe Links policy that you created, you selected the option to have Safe Links check a list of known, malicious links whenever a user selects a link in an email. So when you selected this link in the email message to the http://tailspintoys.com URL that was on the blocked list, Safe Links returned the malicious website warning page. You just verified that the Safe Links policy that you created is working.
 
 27. You should now prepare LON-CL2 for the next lab that will use it. Switch back to the Client 2 VM (**LON-CL2**). 
 
