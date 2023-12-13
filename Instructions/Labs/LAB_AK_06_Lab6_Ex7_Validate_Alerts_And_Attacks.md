@@ -90,22 +90,20 @@ In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which
 
 	At the bottom of this page, you have the option to navigate to some training on how to avoid being phished in the future. Select the **Go to training** button. This opens a new tab in your browser that displays training information on Web Phishing. 
 
-5. In your Edge browser, select the tab containing Holly's Outlook mailbox. Note the additional email that arrived in her Inbox from the Security and Compliance Team. This is a legitimate email that was sent to Holly when she logged into the bogus sign-in window and fell victim to the simulated spear phishing attack. When you configured the simulated spear phishing attack, one of the options you selected was to send a weekly Microsoft default training reminder notification to users who fell for the attack.
+5. In your Edge browser, select the tab containing Holly's Outlook mailbox. Note the additional email that arrived in her Inbox from the **Security and Compliance Team**. This is a legitimate email that was sent to Holly when she logged into the bogus sign-in window and fell victim to the simulated spear phishing attack. When you configured the simulated spear phishing attack, one of the options you selected was to send a weekly Microsoft default training reminder notification to users who fell for the attack.
 
-6. Leave the Outlook tab open for Lynne's mailbox in your Edge browser. Do **NOT** sign out or close it. You will access Lynne's mailbox on LON-CL2 in the next task. 
+6. In your Edge browser, if you have the **Attack simulation training** tab open, then select it now. Otherwise, select the tab containing your Microsoft Defender portal, and in the navigation pane, select **Attck simulation training**.
 
-7. In your Edge browser, if you have the **Attack simulation training** tab open, then select it now. Otherwise, select the tab containing your Microsoft Defender portal, and in the navigation pane, select **Attck simulation training**.
+7.  On the **Attack simulation training** page, select the **PhishingTest1** simulation to view the diagnostic results that were captured for this simulation.
 
-8.  On the **Attack simulation training** page, select the **PhishingTest1** simulation to view the diagnostic results that were captured for this simulation.
+8. A **PhishingTest1** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
 
-9. A **PhishingTest1** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
-
-10. Leave your browser open in LON-CL1 and do not close any of the tabs.
+9. Leave your browser open in LON-CL1 and do not close any of the tabs.
     
 
 ### Task 5: Review the Drive-by URL attack results
 
-In Lab 6, Exercise 6, you configured and launched a simulated Drive-by URL attack. In this task, you will review the results of the simulated Drive-by URL attack that you launched. You will verify whether your organization received the email that you configured in the Attack simulation training. You'll then review the results associated with the simulated Drive-by URL attack.
+In Lab 6, Exercise 6, you configured and launched a simulated Drive-by URL attack. In this task, you will review the results of the simulated Drive-by URL attack that you launched. You will verify whether Lynne Robbins received the email that you configured in the Attack simulation training. You'll then review the results associated with the simulated Drive-by URL attack.
 
 1. Switch to **LON-CL2**. On LON-CL2, in the Edge browser, you should have a tab open containing Lynne Robbins' Outlook mailbox from the prior task. 
 
