@@ -140,7 +140,11 @@ To use Microsoft's Attack simulation training to simulate phishing attacks, Holl
 
 4. A **Configure multifactor authentication (MFA)** window appears in a new Edge browser tab. Below the paragraph of text at the top of the page is an Information box that displays the message **Not what you're looking for? To configure MFA on an individual per-users level, select Legacy per-user MFA.** Select the **Legacy per-user MFA** link in this message. 
 
-5. On the **multi-factor authentication** page that appears, the **users** tab at the top of the page is displayed by default. Note the MFA status for all existing user accounts is **Disabled**, except for Holly Dickson, whose status is **Enforced**. Select the check box for **Holly Dickson**, and in Holly's properties pane that appears on the right, select **Disable**.
+5. On the **multi-factor authentication** page that appears, the **users** tab at the top of the page is displayed by default. Note the MFA status for all existing user accounts is **Disabled**, except for Holly Dickson, whose status is **Enforced**.  <br/>
+
+	**Note:** When you enabled MFA for Holly back in Exercise 5, her status was changed from Disabled to Enabled. However, the first time you signed in as Holly after enabling MFA (right after enabling MFA in Exercise 5), the system automatically changed her MFA status from Enabled to Enforced.  <br/>
+
+	Select the check box for **Holly Dickson**, and in Holly's properties pane that appears on the right, select **Disable**. 
 
 6. On the **Disable multi-factor authentication?** dialog box, select **yes**. When the **Updates successful** dialog box appears, select **close**. 
 
