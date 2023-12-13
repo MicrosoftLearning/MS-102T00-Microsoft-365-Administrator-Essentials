@@ -76,7 +76,7 @@ You have now successfully tested the Microsoft 365 eDiscovery system alert that 
 
 ### Task 4: Review the attack simulation results
 
-In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which should have sent a very intriguing, real-world looking email to all Adatum users. In this task, you will validate whether Lynne Robbins received the email, and you'll review the diagnostic feedback associated with this simulated Spear Phishing attack.
+In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which should have sent a very intriguing, real-world looking email to all Adatum users. In this task, you will validate whether Holly received the email, and you'll review the diagnostic feedback associated with this simulated Spear Phishing attack.
 
 1. Switch to **LON-CL2**. On **LON-CL2**, you should still be logged into **Outlook on the web** as **Lynne Robbins** from an earlier task.
 
