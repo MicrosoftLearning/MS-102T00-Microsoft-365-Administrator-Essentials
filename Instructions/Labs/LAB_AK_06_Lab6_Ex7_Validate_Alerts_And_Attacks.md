@@ -74,9 +74,9 @@ In Lab 6, Exercise 4, you created a default Microsoft 365 alert policy that noti
 You have now successfully tested the Microsoft 365 eDiscovery system alert that monitors the creation of an eDiscovery search or the export of data from a completed search.
 
 
-### Task 4: Review the attack simulation results
+### Task 4: Review the simulated Spear Phishing attack results
 
-In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which should have sent a very intriguing, real-world looking email to all Adatum users. In this task, you will validate whether Holly received the email, and you'll review the diagnostic feedback associated with this simulated Spear Phishing attack.
+In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which should have sent a very intriguing, real-world looking email to all Adatum users. In this task, you will verify that Holly received this email, you'll have her respond to the email to see what happens when a user falls for a spear phishing attack, and you'll review the results associated with the simulated attack.
 
 1. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
@@ -90,7 +90,7 @@ In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which
 
 	At the bottom of this page, you have the option to navigate to some training on how to avoid being phished in the future. Select the **Go to training** button. This opens a new tab in your browser that displays training information on Web Phishing. 
 
-5. In your Edge browser, select the tab containing Holly's Outlook mailbox. Note the additional email that arrived in her Inbox from the **Security and Compliance Team**. This is a legitimate email that was sent to Holly when she logged into the bogus sign-in window and fell victim to the simulated spear phishing attack. When you configured the simulated spear phishing attack, one of the options you selected was to send a weekly Microsoft default training reminder notification to users who fell for the attack.
+5. In your Edge browser, select the tab containing Holly's Outlook mailbox. Note the additional email that arrived in her Inbox from the **Security and Compliance Team**. When you configured the simulated spear phishing attack, one of the options you selected was to send a weekly Microsoft default training reminder notification to users.
 
 6. In your Edge browser, if you have the **Attack simulation training** tab open, then select it now. Otherwise, select the tab containing your Microsoft Defender portal, and in the navigation pane, select **Attck simulation training**.
 
@@ -101,50 +101,50 @@ In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which
 9. Leave your browser open in LON-CL1 and do not close any of the tabs.
     
 
-### Task 5: Review the Drive-by URL attack results
+### Task 5: Review the simulated Drive-by URL attack results
 
-In Lab 6, Exercise 6, you configured and launched a simulated Drive-by URL attack. In this task, you will review the results of the simulated Drive-by URL attack that you launched. You will verify whether Lynne Robbins received the email that you configured in the Attack simulation training. You'll then review the results associated with the simulated Drive-by URL attack.
+In Lab 6, Exercise 6, you configured and launched a simulated Drive-by URL attack. In this task, you will review the results of the simulated Drive-by URL attack that you launched. When you configured this attack, you selected Lynne Robbins as the target of the attack; therefore, Lynne should have received the email that you configured in the Attack simulation training. You'll verify that Lynne received this email, you'll have her respond to the email to see what happens when a user falls for a Drive-by URL attack, and you'll review the results associated with the simulated attack.
 
-1. Switch to **LON-CL2**. On LON-CL2, in the Edge browser, you should have a tab open containing Lynne Robbins' Outlook mailbox from the prior task. 
+1. Switch to **LON-CL2**. On LON-CL2, in the Edge browser, you should have a tab open containing Lynne Robbins' Outlook mailbox from the earlier alert notification tasks. 
 
-2. In Lynne's Outlook Inbox, you should see the email that was sent by the Attack Simulator that's from **klemens@tailspintoys.com**. The subject of the email is **Free toy giveaway promotion from Tailspin Toys**. If necessary, select the **Refresh** icon to the left of the URL address. Select the email to open it and review the details in the body of the message. <br/>
+2. In Lynne's Outlook Inbox, you should see the email that was sent by the Attack Simulator that's from **Klemen Sic** (klemens@tailspintoys.com). The subject of the email is **Free toy giveaway promotion from Tailspin Toys**. Do not open the email, since like the previous alert emails, the link inserted in the email doesn't appear to work when you open the email. Instead, simply select the email to view it in the Outlook preview pane. 
 
-4. Select the link that is included in the email. Even though you know this is a Drive-by URL attack, this will enable you to see the effect of doing so in the Attack Simulator report that tracks the results of the spear phishing campaign. <br/>
+3. In the email, you should recognize the message that appears, which you configured when you created this attack simulation in Exercise 6. The purpose of this message is to trick the user into thinking this is a legitimate email, when in fact, it's a Drive-by URL attack. 
 
-	Selecting this link displays a web page that explains how you have been redirected to it as part of a Phishing awareness test being run by your organization.  Read through the contents of this site, which uses the landing page template that you selected in the prior task when setting up the attack simulation. 
+4. To test this simulated attack, select the **Free25thAnniversaryGift@tailspintoys.com** link. Note what happens - the simulated drive-by URL attack displays a web page that indicates you were just phished by your IT team. It instructs you that legitimate sounding sites such as **https://www.prizegives.com**, which was the site linked to the **Free25thAnniversaryGift@tailspintoys.com** link, have been compromised by malicious attackers. So even though you may see the underlying www.prizegives.com site and you think it's legitimate, it's in fact been compromised. This site also shows you a list of information that could have been captured had this been a real attack. 
 
-5. In the **Outlook** tab in your Edge browser, select the picture of Lynne Robbins in the upper-right corner of the window. In Lynne's profile window that appears, select **Sign out**.
+5. In your Edge browser, select the tab containing Lynne's Outlook mailbox. Note the additional email that arrived in her Inbox from the **Security and Compliance Team**. This is a legitimate email that was sent to Lynne. When you configured the simulated spear phishing attack, one of the options you selected was to send a weekly Microsoft default training reminder notification.
 
-6. Once Lynne is signed out, close the Edge browser.
+6. In the **Outlook** tab in your Edge browser, select the picture of Lynne Robbins in the upper-right corner of the window. In Lynne's profile window that appears, select **Sign out**.
 
-7. Switch back to **LON-CL1**.
+7. Once Lynne is signed out, close the Edge browser.
 
-8. On LON-CL1, in your browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. If the **Custom payload** simulation does not appear in the **Recent Simulations** list, select the **Refresh** icon to the left of the URL on the address bar. The **Custom payload** simulation should now appear. Select the **Custom payload** simulation to view the diagnostic results that were captured for this simulation.
+8. Switch back to **LON-CL1**.
 
-9. A **Custom payload** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
+9. On LON-CL1, in your browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. Select the **Custom payload** simulation to view the diagnostic results that were captured for this simulation.
 
-10. Leave your browser open in LON-CL1 and do not close any of the tabs.
+10. A **Custom payload** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
+
+11. Leave your browser open in LON-CL1. Close all tabs EXCEPT for the **Home | Microsoft 365** and **Home | Microsoft 365 admin center** tabs. 
 
 
 ### Task 6: Disable Multi-factor Authentication for the Global Admin
 
 To use Microsoft's Attack simulation training to simulate phishing attacks, Holly enabled Multi-Factor Authentication (MFA) for her user account. Now that she has completed the Attack simulation training tests, she wants to disable MFA for her account so that she doesn't have to deal with MFA for the remainder of the pilot project.
 
-1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. Select the **Home | Microsoft 365 admin center** tab. 
 
-2. To disable MFA for Holly Dickson's user account, you must first access the **Active users** list in the Microsoft 365 admin center. If you have the **Microsoft 365 admin center** open in a browser tab, then select that now; otherwise, open a new browser tab, enter **https://portal.office.com** in the address bar, and then on the **Office 365 home** page, select the **Admin** icon that appears in the column of app icons on the left-side of the screen. This opens the **Microsoft 365 admin center** in a new browser tab. 
+2. On the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active users**.
 
-3. On the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active users**.
+3. In the **Active users** window, on the menu bar at the top of the user list, select **Multi-factor authentication**.
 
-4. In the **Active users** window, on the menu bar at the top of the user list, select **Multi-factor authentication**.
+4. In the **multi-factor authentication** window (may need to select **Legacy per-user MFA**), the **users** tab is displayed by default. Select the check box for **Holly Dickson**, and in Holly's properties pane on the right, select **Disable**.
 
-5. In the **multi-factor authentication** window (may need to select **Legacy per-user MFA**), the **users** tab is displayed by default. Select the check box for **Holly Dickson**, and in Holly's properties pane on the right, select **Disable**.
+5. On the **Disable multi-factor authentication?** dialog box, select **yes**. 
 
-6. On the **Disable multi-factor authentication?** dialog box, select **yes**. 
+6. When the **Updates successful** dialog box appears, select **close**. In the **multi-factor authentication** window, verify Holly's MFA Status has changed to **Disabled**. Close the **Multi-factor authentication** tab in your browser.
 
-7. When the **Updates successful** dialog box appears, select **close**. In the **multi-factor authentication** window, verify Holly's MFA Status has changed to **Disabled**. Close the **Multi-factor authentication** tab in your browser.
-
-8. You must now sign out of Microsoft 365 as Holly and then sign back in as Holly (without MFA). To do so, perform the following steps: <br/>
+7. You must now sign out of Microsoft 365 as Holly and then sign back in as Holly (without MFA). To do so, perform the following steps: <br/>
 
 	- Select Holly's account icon (HD in a circle) at the top-right of the screen and in Holly's profile window, select **Sign out**.
 	- Once you're signed out, close your Edge browser. Doing so will clear your cache.
