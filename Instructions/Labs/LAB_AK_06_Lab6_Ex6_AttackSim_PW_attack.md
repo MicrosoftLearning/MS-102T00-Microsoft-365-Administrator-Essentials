@@ -14,9 +14,9 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 
 3. In the **Microsoft Defender** portal, you should still be on the **Attack simulation training** page; if not, then in the left-hand navigation pane, under the **Email & collaboration** section, select **Attack simulation training**.
 
-4. On the **Attack Simulation training** page, the **Overview** tab is displayed by default. Select the **Simulations** tab, and then select the **+Launch a simulation** option that appears on the menu bar.
+4. On the **Attack Simulation training** page, the **Overview** tab is displayed by default. Select the **Simulations** tab, and then select the **+Launch a simulation** option that appears on the menu bar. This initiates the Create Simulation wizard.
 
-5. On the **Select Technique** page, select the **Drive-by URL** option. Under this option, select the **View details of Drive-by URL** link. This opens a **Drive-by URL** pane on the right. Review the **Description** and the **Simulation steps** for this type of attack. When you're done, close the **Drive-by URL** pane and select **Next**.
+5. In the Create Simulation wizard, on the **Select Technique** page, scroll down and select the **Drive-by URL** option. Under this option, select the **View details of Drive-by URL** link. This opens a **Drive-by URL** pane on the right. Review the **Description** and the **Simulation steps** for this type of attack. When you're done, close the **Drive-by URL** pane and select **Next**.
 
 6. On the **Name Simulation** page, enter **Custom payload** in the **Simulation name** field and then select **Next**.
 
