@@ -50,17 +50,37 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 ### Task 2 – Validate the Safe Links policy
 
-After having waited at least 30 minutes since completing Task 1, you will now test the Safe Links policy that you created that blocks links to the http://tailspintoys.com URL.
+After having waited at least 30 minutes since completing Task 1, you will now test the Safe Links policy that you created that blocks links to the http://tailspintoys.com URL. There are two tests that you will perform. First, you will send an email from Holly Dickson to the MOD Administrator that includes the blocked http://tailspintoys.com URL. You will then log into the MOD Administrators Outlook mailbox and verify that the email never arrived, since the email contained a blocked URL. Next, you will log into Holly's Outlook mailbox and locate the sent email containing the blocked URL. This verifies that the system sent the email, but since the URL was blocked, it never arrived in the MOD Administrators Inbox. Finally, you will select the http://tailspintoys.com URL in the sent email and verify what happens when you try to access this blocked URL.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
 2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab and then in the column of app icons on the left side of the screen, select the **Outlook** icon. This will open Holly Dickson's mailbox.
 
 3. **Outlook** will open in a new tab in your browser, and Holly's **Inbox** will be displayed.
-
+   
 4. Select the **New mail** button in the upper left part of the screen.
 
 5. In the email form that appears in the right-hand pane, enter the following information:
+
+    - To: You will be sending an email to the MOD Administrator, so enter **mod** in the **To** field and then select the **MOD Administrator** email address from the user list.
+
+    - Add a subject: **Test email with an unblocked URL**
+
+    - Body of the message: **Click this link that contains an unblocked URL.**
+  
+6. Select the entire text string that you just added in the body of the message.
+
+7. A row of formatting icons should appear. Select the **Link** icon, which depicts two half-ovals with a line in between. 
+
+8. In the **Insert link** window that appears, the text that you highlighted in the body of the message should be displayed in the **Display as** field. In the **Web address (URL)** field, enter the following URL: **http://adatum.com/aboutus**.
+
+9. Select **OK**. In the body of the email, the message should now be hyperlinked. 
+
+10. Select the **Send** button. Select Holly's **Sent Items** folder to verify the message was sent.
+
+11. Select the **New mail** button in the upper left part of the screen.
+
+12. In the email form that appears in the right-hand pane, enter the following information:
 
     - To: You will be sending an email to the MOD Administrator, so enter **mod** in the **To** field and then select the **MOD Administrator** email address from the user list.
 
@@ -68,39 +88,51 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
     - Body of the message: **Please click on me for free toys from Tailspin Toys.**
 
-6. Select the entire text string that you just added in the body of the message.
+13. Select the entire text string that you just added in the body of the message.
 
-7. A row of formatting icons should appear. Select the **Link** icon, which depicts two half-ovals with a line in between. 
+14. A row of formatting icons should appear. Select the **Link** icon, which depicts two half-ovals with a line in between. 
 
-8. In the **Insert link** window that appears, the text that you highlighted in the body of the message should be displayed in the **Display as** field. In the **Web address (URL)** field, enter the following URL: **http://tailspintoys.com/aboutus/freetoys**.
+15. In the **Insert link** window that appears, the text that you highlighted in the body of the message should be displayed in the **Display as** field. In the **Web address (URL)** field, enter the following URL: **http://tailspintoys.com/aboutus/freetoys**.
 
-9. Select **OK**. In the body of the email, the message should now be hyperlinked. 
+16. Select **OK**. In the body of the email, the message should now be hyperlinked. 
 
-10. Select the **Send** button. Select Holly's **Sent Items** folder to verify the message was sent.
+17. Select the **Send** button. Select Holly's **Sent Items** folder to verify the message was sent.
 
-11. You now want to go the MOD Administrator's Inbox in Outlook and validate whether the Safe Links policy you created in the prior task worked on the email that you just sent from Holly to the MOD Administrator.<br/>
+18. You now want to go the MOD Administrator's Inbox in Outlook and validate whether the Safe Links policy you created in the prior task worked on the two emails that you just sent from Holly to the MOD Administrator.<br/>
 
     To do this, you must first switch to the Client 2 VM (**LON-CL2**). 
 
-12. At the end of Lab 2, you should have logged into LON-CL2 as the local **Administrator** account (lon-cl2\admin). <br/>
+19. At the end of Lab 2, you should have logged into LON-CL2 as the local **Administrator** account (lon-cl2\admin). <br/>
 
     If you didn't do this, and you're still logged in as Laura Atkins from the end of Lab 2, then select **Ctrl+Alt+Delete**, select **Switch user**, and then log in as the local **Administrator** with a password of **Pa55w.rd**.
 
-13. On **LON-CL2**, select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
+20. On **LON-CL2**, select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
 
-14. In the **Pick an account** window, select **Use another account**, and then in the **Sign in** window, enter the username and password for the MOD Administrator account (**admin@xxxxxZZZZZZ.onmicrosoft.com**).
+21. In the **Pick an account** window, select **Use another account**, and then in the **Sign in** window, enter the username and password for the MOD Administrator account (**admin@xxxxxZZZZZZ.onmicrosoft.com**).
 
-15. In the **Enter password** window, enter the tenant password provided by your lab hosting provider and select **Sign in**.
+22. In the **Enter password** window, enter the tenant password provided by your lab hosting provider and select **Sign in**.
 
-16. In the MOD Administrator's **Inbox**, select the email that was sent by Holly regarding free stuff for Adatum users.
+23. In the MOD Administrator's **Inbox**, perform the following checks:  <br/>
 
-17. Select the hyperlink in the body of the message to navigate to the site. 
+       - Verify that you received the first email that Holly sent that contained the Subject line "**Test email with an unblocked URL**". This email showed that the email system is working, and that an email with an unblocked URL could successfully be sent. 
 
-18. A new tab should open in your **Edge** browser that takes you to the URL you just saw in the prior step. This site should display the following warning message: **This website is classified as malicious.** This not only indicates that opening this website may not be safe, but it also verifies that the Safe Links policy you just created is working properly.
+      - Next, verify that Holly's email with the Subject line "**Free stuff for Adatum users**" never arrived in the MOD Administrator's Inbox. Since you already verified from Holly's Sent filder that the email was sent, the fact that it never arrived verifies that the email was blocked due to the blocked URL.
 
-19. You should now prepare LON-CL2 for the next lab that will use it. In your Edge browser, in the Outlook tab, select the circle with the **MA** initials in the upper right-hand corner. In the **MOD Administrator** profile window that appears, select **Sign out**.
+24. You now want to go back to Holly's Outlook mailbox, open the email with the subject line "**Free stuff for Adatum users**" that's in Holly's Sent Items folder, and test what happens when you select the message that was linked to the blocked URL.  <br/>
 
-20. Once you are signed out of Outlook, close the Edge Browser. LON-CL2 is now ready for use in Lab 6.
+    To do this, you must first switch back to the Client 1 VM (**LON-CL1**). 
+
+25. On LON-CL1, you should still be in the **Sent Items** folder in Holly's Outlook mailbox. Select the email with the subject line "**Free stuff for Adatum users**" to open the email message, and then select the hyperlinked message in the body of the email. 
+
+26. A new tab should open in your **Edge** browser that takes you to the URL you just saw in the prior step. This site should display the following warning message: **This website is classified as malicious.** This not only indicates that opening this website may not be safe, but it also verifies that the Safe Links policy you just created is working properly.
+
+27. You should now prepare LON-CL2 for the next lab that will use it. Switch back to the Client 2 VM (**LON-CL2**). 
+
+28. In LON-CL2, in the Outlook tab in your Edge browser, select the circle with the **MA** initials in the upper right-hand corner. In the **MOD Administrator** profile window that appears, select **Sign out**.
+
+29. Once you are signed out of Outlook, close the Edge Browser. LON-CL2 is now ready for use in Lab 6.
+
+30. Switch back to the Client 1 VM (**LON-CL1**). Leave your Edge browser open and do not close any tabs.
 
 
 # End of Lab 5
