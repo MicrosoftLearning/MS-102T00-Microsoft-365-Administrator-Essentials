@@ -90,17 +90,17 @@ In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which
 
 	At the bottom of this page, you have the option to navigate to some training on how to avoid being phished in the future. Select the **Go to training** button. This opens a new tab in your browser that displays training information on Web Phishing. 
 
-5. In your Edge browser, select the tab containing Holly's Outlook mailbox. Note the additional email that arrived in her Inbox - this is a legitimate email that was sent to Holly when she logged into the bogus sign-in window and fell victim to the simulated spear phishing attack. This email was sent because you configured the simulated spear phishing attack 
+5. In your Edge browser, select the tab containing Holly's Outlook mailbox. Note the additional email that arrived in her Inbox from the Security and Compliance Team. This is a legitimate email that was sent to Holly when she logged into the bogus sign-in window and fell victim to the simulated spear phishing attack. When you configured the simulated spear phishing attack, one of the options you selected was to send a weekly Microsoft default training reminder notification to users who fell for the attack.
 
-7. Leave the Outlook tab open for Lynne's mailbox in your Edge browser. Do **NOT** sign out or close it. You will access Lynne's mailbox on LON-CL2 in the next task. 
+6. Leave the Outlook tab open for Lynne's mailbox in your Edge browser. Do **NOT** sign out or close it. You will access Lynne's mailbox on LON-CL2 in the next task. 
 
-8. Switch back to **LON-CL1**.
+7. In your Edge browser, if you have the **Attack simulation training** tab open, then select it now. Otherwise, select the tab containing your Microsoft Defender portal, and in the navigation pane, select **Attck simulation training**.
 
-9. In LON-CL1, in your Edge browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. If the **PhishingTest1** simulation does not appear in the **Recent Simulations** list, select the **Refresh** icon to the left of the URL on the address bar. The **PhishingTest1** simulation should now appear. Select the **PhishingTest1** simulation to view the diagnostic results that were captured for this simulation.
+8.  On the **Attack simulation training** page, select the **PhishingTest1** simulation to view the diagnostic results that were captured for this simulation.
 
-10. A **PhishingTest1** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
+9. A **PhishingTest1** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
 
-11. Leave your browser open in LON-CL1 and do not close any of the tabs.
+10. Leave your browser open in LON-CL1 and do not close any of the tabs.
     
 
 ### Task 5: Review the Drive-by URL attack results
