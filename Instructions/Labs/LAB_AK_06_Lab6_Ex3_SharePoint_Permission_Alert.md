@@ -7,7 +7,7 @@ In this exercise you will configure and test an alert that notifies Lynne Robbin
 
 1. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. In your Edge browser, select the **Alert policy - Microsoft 365 security** tab, which displays the **Microsoft Defender** portal.
+2. In your Edge browser, select the **Alert policy - Microsoft Defender** tab, which displays the **Microsoft Defender** portal.
 
 3. In the **Microsoft Defender** portal, you should still be in the **Alert policy** window from the prior lab exercise (if not, then in the left-hand navigation pane, select **Policies & rules** and then select **Alert policy**).
 
@@ -15,9 +15,9 @@ In this exercise you will configure and test an alert that notifies Lynne Robbin
 
 5. On the **Name your alert, categorize it, and choose a severity** window, enter the following information:
 
-	- Name: **Add user as a site collection administrator**
+	- Name: **Add user as a Site Collection administrator**
 
-	- Description: **This alert notifies Lynne Robbins when a user is added to the site collection administrators on a SharePoint site collection.**
+	- Description: **This alert notifies Lynne Robbins when a user is added to the Site Collection administrators on a SharePoint site collection.**
 
 	- Severity: **Medium**
 
@@ -63,7 +63,7 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 
 4. In the ribbon at the top of the page, the **Permissions** tab is displayed by default. Under the **Manage** group, select **Site Collection Administrators**.
 
-5. In the **Site Collection Administrators** dialog box, the Global administrator account that was assigned by default to this role group is displayed in the data entry field. To the right of this account, enter **Alex**, select **Alex Wilber** from the list of users that appears, and then select **OK**.  <br/>
+5. In the **Site Collection Administrators** dialog box, the **Global administrator** account that was assigned by default to this role group is displayed in the data entry field. To the right of this account, enter **Alex**, select **Alex Wilber** from the list of users that appears, and then select **OK**.  <br/>
 
 	**Note:** This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox. Rather than waiting up to 15 minutes for the email notification to be generated to validate this SharePoint permission alert, you will validate this alert in Exercise 7, task 2 of this lab.
 
