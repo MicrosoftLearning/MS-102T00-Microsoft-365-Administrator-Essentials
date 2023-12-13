@@ -6,7 +6,7 @@ Having created a Safe Attachments policy, Holly Dickson now wants to create a Sa
 
 ### Task 1 – Create a Safe Links Policy
 
-In this task, you will create a Safe Links policy that applies to all users in your tenant. You will then add the **http://tailspintoys.com** URL to the company-wide list of blocked URLs that you will define in the Safe Links global settings. The blocked URLs and other options defined in the Safe Links global settings are only applied to users who are included in active Safe Links policies. There is no built-in or default Safe Links policy, so you must create at least one Safe Links policy for these global settings to be active.  
+In this task, you will create a Safe Links policy that applies to all users in your tenant. You will then add the **http://tailspintoys.com** URL to the company-wide list of blocked URLs (i.e. the Tenant Block List) that you will define in the Microsoft Defender portal. The blocked URLs and other options defined in the Safe Links global settings are only applied to users who are included in active Safe Links policies. There is no built-in or default Safe Links policy, so you must create at least one Safe Links policy for these global settings to be active.  
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
@@ -54,8 +54,8 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
    - First, you will send two emails from Holly Dickson to the MOD Administrator - one that contains an unblocked URL and another that contains the blocked http://tailspintoys.com URL.
    - You will verify that both emails appear in Holly's Sent Items folder.
-   - You will then log into the MOD Administrator's Outlook mailbox and verify that the email with the unblocked URL arrived in the MOD Administrator's Inbox and the email with the blocked URL never arrived. The fact that the system sent the email with the blocked URL but it never arrived in the MOD Administrators Inbox verifies the Blocked URL functionality worked.
-   - You will then go back into Holly's Outlook mailbox and open the email in her Sent Items folder that contains the blocked URL. You will select the hyperlinked text and verify the Safe Links policy worked when you try to access this blocked site. 
+   - You will then log into the MOD Administrator's Outlook mailbox and verify that the email with the unblocked URL arrived in the MOD Administrator's Inbox and the email with the blocked URL never arrived. The fact that the system sent the email with the blocked URL but it never arrived in the MOD Administrators Inbox verifies the Blocked URL functionality worked. Messages that contain unblocked URLs are held until Safe Links scanning is finished. Messages are delivered only after the URLs are confirmed to be safe, which is the case with the email with the unblocked URL.. 
+   - You will then go back into Holly's Outlook mailbox and open the email in her Sent Items folder that contains the blocked URL. You will select the hyperlinked text and verify the Safe Links policy worked when you try to access this blocked site. Safe Links immediately checks the URL before opening the website. Since the URL is blocked, Safe Links returns a malicious website warning page.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
