@@ -78,25 +78,29 @@ You have now successfully tested the Microsoft 365 eDiscovery system alert that 
 
 In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which should have sent a very intriguing, real-world looking email to all Adatum users. In this task, you will validate whether Holly received the email, and you'll review the diagnostic feedback associated with this simulated Spear Phishing attack.
 
-1. Switch to **LON-CL2**. On **LON-CL2**, you should still be logged into **Outlook on the web** as **Lynne Robbins** from an earlier task.
+1. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In Lynne's Outlook Inbox, you should see the spear phishing email that was sent by the Attack Simulator. The subject of the message should be **2 Failed messages to you**. If necessary, select the **Refresh** icon to the left of the URL address. Select the email to open it and review the details in the body of the message. 
+2. In Holly's Outlook Inbox, you should see the spear phishing email that was sent by the Attack Simulator. The subject of the message should be **2 Failed messages to you**. Do not open the email, since like the previous alert emails, the button inserted in the email doesn't appear to work when you open the email. Instead, simply select the email to view it in the Outlook preview pane. 
 
-3. Select the **View Returned Messages** button in the email. Even though you know this is a spear phishing attack, this will enable you to see the effect of doing so in the Attack Simulator report that tracks the results of the spear phishing campaign.
+3. In the email, note the message that appears: **Our server has detected some errors delivering 2 new message to your Inbox due to the synchronization delay. Click on View Returned Messages below to retrieve these messages.** The purpose of this message is to trick the user into thinking this is a legitimate email, when in fact, it's a spear phishing attack. 
 
-4. In the **Sign in** dialog box that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix ID provided by your lab hosting provider), and then enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) in the **Enter password** window. Select **Sign in**. 
+4. To test this simulated attack, select the **View Returned Messages** button. Note what happens - a legitimate looking **Sign in** box appears, requesting you to sign in. This is how an attacker could capture your username and password credentials. Since this is just a simulated attack, go ahead and enter **Holly@xxxxZZZZZZ.onmicrosoft.com**, select **Next**, and then in the **Enter password** box, enter the same Microsoft 365 Tenant Password provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) in the **Enter password** window and select **Sign in**. <br/>
 
-5. This displays a web page that explains how you have been redirected to it as part of a Phishing awareness test being run by your organization. Read through the contents of this site, which uses the landing page template that you selected in the prior task when setting up the attack simulation.
+	Note what happens when you finish signing in. The simulated spear phishing attack displays a web page that indicates you were just phished by your security team. It also provides tips on how to identify the phishing message. Review the contents of this site, which uses the landing page template that you selected when setting up the attack simulation.  <br/>
 
-6. Leave the Outlook tab open for Lynne's mailbox in your Edge browser. Do **NOT** sign out or close it. You will access Lynne's mailbox on LON-CL2 in the next task. 
+	At the bottom of this page, you have the option to navigate to some training on how to avoid being phished in the future. Select the **Go to training** button. This opens a new tab in your browser that displays training information on Web Phishing. 
 
-7. Switch back to **LON-CL1**.
+5. In your Edge browser, select the tab containing Holly's Outlook mailbox. Note the additional email that arrived in her Inbox - this is a legitimate email that was sent to Holly when she logged into the bogus sign-in window and fell victim to the simulated spear phishing attack. This email was sent because you configured the simulated spear phishing attack 
 
-8. In LON-CL1, in your Edge browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. If the **PhishingTest1** simulation does not appear in the **Recent Simulations** list, select the **Refresh** icon to the left of the URL on the address bar. The **PhishingTest1** simulation should now appear. Select the **PhishingTest1** simulation to view the diagnostic results that were captured for this simulation.
+7. Leave the Outlook tab open for Lynne's mailbox in your Edge browser. Do **NOT** sign out or close it. You will access Lynne's mailbox on LON-CL2 in the next task. 
 
-9. A **PhishingTest1** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
+8. Switch back to **LON-CL1**.
 
-10. Leave your browser open in LON-CL1 and do not close any of the tabs.
+9. In LON-CL1, in your Edge browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. If the **PhishingTest1** simulation does not appear in the **Recent Simulations** list, select the **Refresh** icon to the left of the URL on the address bar. The **PhishingTest1** simulation should now appear. Select the **PhishingTest1** simulation to view the diagnostic results that were captured for this simulation.
+
+10. A **PhishingTest1** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
+
+11. Leave your browser open in LON-CL1 and do not close any of the tabs.
     
 
 ### Task 5: Review the Drive-by URL attack results
