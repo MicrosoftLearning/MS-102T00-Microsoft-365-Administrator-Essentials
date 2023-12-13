@@ -59,9 +59,9 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab and then in the column of app icons on the left side of the screen, select the **Outlook** icon. This will open Holly Dickson's mailbox.
+2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab and then in the column of app icons on the left side of the screen, select the **Outlook** icon. 
 
-3. **Outlook** will open in a new tab in your browser, and Holly's **Inbox** will be displayed.
+3. Holly Dickson's **Outlook** mailbox will open in a new tab in your browser, and Holly's **Inbox** will be displayed.
    
 4. Select the **New mail** button in the upper left part of the screen.
 
@@ -103,7 +103,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 17. Select the **Send** button. Select Holly's **Sent Items** folder to verify the message was sent.
 
-18. You now want to go the MOD Administrator's Inbox in Outlook and validate whether the URL you blocked in the prior task worked on the two emails that you just sent from Holly to the MOD Administrator.<br/>
+18. You now want to go the MOD Administrator's Inbox in Outlook and validate whether the blocked URL functionality that you configured worked on the two emails that you just sent from Holly to the MOD Administrator.<br/>
 
     To do this, you must first switch to the Client 2 VM (**LON-CL2**). 
 
@@ -133,11 +133,11 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 27. You should now prepare LON-CL2 for the next lab that will use it. Switch back to the Client 2 VM (**LON-CL2**). 
 
-28. In LON-CL2, in the Outlook tab in your Edge browser, select the circle with the **MA** initials in the upper right-hand corner. In the **MOD Administrator** profile window that appears, select **Sign out**.
+28. In LON-CL2, select the circle with the **MA** initials in the upper right-hand corner of your Edge browser. In the **MOD Administrator** profile window that appears, select **Sign out**.
 
-29. Once you are signed out of Outlook, close the Edge Browser. LON-CL2 is now ready for use in Lab 6.
+29. Once you are signed out of Outlook, the Edge browser should close if no other tabs were open. If other tabs were still open, close those tabs now so that your Edge browser closes. LON-CL2 is now ready for use in Lab 6.
 
-30. Switch back to the Client 1 VM (**LON-CL1**). Leave your Edge browser open and do not close any tabs.
+30. Switch back to the Client 1 VM (**LON-CL1**). In your Edge browser, close the tab displaying **This website is classified as malicious.** Leave your Edge browser open and proceed to the next lab.
 
 
 # End of Lab 5
