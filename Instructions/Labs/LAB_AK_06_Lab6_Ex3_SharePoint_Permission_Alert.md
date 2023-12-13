@@ -67,7 +67,7 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 
 	**Note:** This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox. Rather than waiting up to 15 minutes for the email notification to be generated to validate this SharePoint permission alert, you will validate this alert in Exercise 7, task 2 of this lab.
 
-6. Leave your LON-CL1 VM open and proceed to the next exercise.
+6. In your Edge browser, close the **Permissions: Communication site** tab. Leave the other tabs open and proceed to the next exercise.
 
 
 # Proceed to Lab 6 - Exercise 4
