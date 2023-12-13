@@ -83,7 +83,7 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 
 	**Note:** This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox. Rather than waiting up to 15 minutes for the email notification to be generated to validate this mailbox permission alert, you will validate this alert in Exercise 7, task 1 of this lab.
    
-8. Leave your LON-CL1 VM open and proceed to the next exercise.
+8. In your Edge browswer, close the **Exchange admin center** tab. Leave the other tabs open and proceed to the next exercise.
 
 
 # Proceed to Lab 6 - Exercise 3
