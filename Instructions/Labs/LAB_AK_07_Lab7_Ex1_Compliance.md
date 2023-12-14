@@ -10,13 +10,13 @@ To test archiving and retention in your Adatum pilot project, you will create a 
 
 2. In **Microsoft Edge**, select the **Microsoft 365 admin center** tab; if you closed this tab earlier, then open a new tab and go to **https://admin.microsoft.com.** <br/>
 
-	At this point, you may have quite a few tabs open in your browser. If you wish, you can take this opportunity to close every tab except for the **Office 365 Home** tab and the **Microsoft 365 admin center** tab.
+	At this point, you may have quite a few tabs open in your browser. If you wish, you can take this opportunity to close every tab except for the **Home | Microsoft 365** tab and the **Microsoft 365 admin center** tab.
 
 3. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Teams & groups** and then select **Active teams & groups** below it.
 
-4. On the **Active teams & groups** window, select the **Add a group** option on the menu bar to create a new group for compliance testing. This initiates the **Add a group** wizard.
+4. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default. To the right of this are tabs for Distribution list and Security groups. Select the **Security groups** tab.
 
-5. On the **Choose a group type** page, select the **Mail-enabled security** option and then select **Next**.
+5. On the **Security Groups** tab, select the **+Add a mail-enabled security group** option that appears on the menu bar above the list of groups. This initiates the **Add a mail-enabled security group** wizard. 
 
 6. On the **Set up the basics** page, enter **Compliance Test Users** in the **Name** field. Tab into the **Description** field to enable the **Next** button, and then select it.
 
@@ -44,7 +44,7 @@ To test archiving and retention in your Adatum pilot project, you will create a 
 
 16. This will return you to the **Active teams & groups** page. Remember, the tabs on this page reflect the four types of groups. By default, the **Microsoft 365** tab is displayed, which displays Microsoft 365 groups. Since you created a mail-enabled security group, select the **Mail-enabled security** tab to display this type of group. If the **Compliance Test Users** group does not appear in the list of mail-enabled security groups, select the **Refresh** icon on the menu bar to refresh the list of groups. <br/>
 
-	**Important:** You cannot proceed until the Compliance Test Users group appears in the list; therefore, keep refreshing the list every few minutes until it appears.
+	**Important:** You cannot proceed until the **Compliance Test Users** group appears in the list; therefore, keep refreshing the list every few minutes until it appears.
 
 17. Leave your browser open to the Microsoft 365 admin center and proceed to the next task.
 
