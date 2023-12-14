@@ -27,7 +27,7 @@ To implement Sensitivity labels as part of your pilot project at Adatum, you mus
 
 4. The **Microsoft Azure Information Protection** wizard will open. If the wizard does not display on the desktop, select the icon for the wizard on the taskbar to display the wizard.
 
-5. In the wizard, on the **Install the Azure Information Protection client** page, clear (uncheck) the **Help improve Azure Information Protection by send usage statistics to Microsoft** check box and then select the **I agree** button.
+5. In the wizard, on the **Install the Azure Information Protection client** window that appears, clear (uncheck) the **Help improve Azure Information Protection by send usage statistics to Microsoft** check box and then select the **I agree** button.
 
 6. If a **User Account Control notification** dialog box appears that asks whether the app is allowed to make changes to this device, select **Yes**.
 
@@ -35,7 +35,7 @@ To implement Sensitivity labels as part of your pilot project at Adatum, you mus
 
 8. In your Edge browser, close the **Download** tab that you opened in this task to download the Azure Information Protection client.
 
-You have successfully installed the Azure Information Protection Unified Label client on the Client 1 VM.
+You have successfully installed the Azure Information Protection Unified Label client on the LON-CL1 VM.
 
 
 ### Task 2 – Create a Sensitivity Label
@@ -46,11 +46,11 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 2. In your Edge browser, you should still have a tab open for the **Microsoft 365 admin center**. If not, open a new tab and enter the following URL: **https://admin.microsoft.com**.
 
-3.  On the **Microsoft 365 admin center**, if necessary, select **... Show all**. Select **Compliance** under the **Admin centers** group.
+3. On the **Microsoft 365 admin center**, if necessary, select **... Show all**. Select **Compliance** under the **Admin centers** group.
 
 4. On the **Microsoft Purview** portal, in the left-hand navigation pane, select **Information protection** and then select **Labels**. 
 
-5. On the **Labels** page, a warning message is displayed in the middle of the page indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
+5. On the **Labels** page, a warning message is displayed in a light yellow shaded box in the middle of the page indicating: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
 
     Select the **Turn on now** button that appears on the right side of this message. This will enable Adatum to apply the Sensitivity labels inside its Microsoft 365 environment. <br/>
 
@@ -58,7 +58,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 6. On the **Labels** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen, below the previous message. This initiates the **New sensitivity label** wizard.
 
-7. In the **New sensitivity label** wizard, on the **Name and tooltip** page, enter the following information:
+7. In the **New sensitivity label** wizard, on the **Provide basic details for this label** page, enter the following information:
 
 	- Name: **PII**
 	
@@ -76,14 +76,14 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 10. On the **Choose protection settings for labeled items** page, select both check boxes for **Apply or remove encryption** and **Apply content marking**, and then select **Next**.
 
-11. On the **Encryption** page, you will define who can access items that have this label applied. Select the **Remove encryption if the file or email is encrypted** option and then select **Next**.
+11. On the **Encryption** page, you will define who can access items that have this label applied. Select the **Remove encryption if the file or email or calendar event is encrypted** option and then select **Next**.
 
-12. On the **Content Marking** page, set the **Content Marking** toggle switch to **On**. This displays three options that enable you to customize how you want to mark files and emails. <br/>
+12. On the **Content marking** page, set the **Content marking** toggle switch to **On**. This displays three options that enable you to customize how you want to mark files and emails. <br/>
 
 	Select all three check boxes. Under each setting, select **Customize text**. This opens a pane to customize that particular setting. Enter the following information in the **Customize** pane for each option (select **Save** after entering the settings for each option): <br/>
 
 	- **Add a watermark** 
-		- Watermark text: **Sensitive - Do Not Share** (Hint: after entering this value, copy it so that you can paste it in the other two text settings)
+		- Watermark text: **Sensitive - Do Not Share** (Hint: after entering this value, copy it (Ctrl+C) so that you can paste it (Ctrl+V) in the other two text settings)
 		- Font size: **25**
 		- Font color: **Blue**
 		- Text layout: **Diagonal**
@@ -100,7 +100,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 		- Font color: **Red**
 		- Align text: **Center**
 
-13. On the **Content Marking** page, select **Next**. 
+13. On the **Content marking** page, select **Next**. 
 
 14. On the **Auto-labeling for files and emails** page, set the **Auto-labeling for files and emails** toggle switch to **On**. This enables a series of options that you will update in the next steps.
 
@@ -124,13 +124,13 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 22. On the **Review your settings and finish** page, review the information you entered. If any settings need to be corrected, select the corresponding **Edit** option and make any necessary changes. When all information appears correct, select **Create label**.
 
-23. An **Error** dialog box should appear that states the generated rule blob for the label you are attempting to create is too long. The maximum size of sensitive information type selections you can make at one time per rule is **49152**. By selecting all the sensitive information types like you did in the **Sensitive info types** window a few steps back, you have exceeded this limit. <br/>
+23. A **Client Error** dialog box should appear that states the generated rule blob for the label you are attempting to create is too long. The maximum size of sensitive information type selections you can make at one time per rule is **49152**. By selecting all the sensitive information types like you did in the **Sensitive info types** window a few steps back, you have exceeded this limit. <br/>
 
 	**NOTE: We purposely had you select all the sensitive information types so that you would receive this error.** We wanted you to experience this error so that if it happens in your production environments, you will know why you received the error and how you can correct it.  <br/>
 
-	To correct this issue, select **OK** in the **Error** dialog box, and then on the **Review your settings and finish** page, scroll down to the **Auto-labeling for files and emails** section and select **Edit**.
+	To correct this issue, select **OK** in the **Client Error** dialog box, and then on the **Review your settings and finish** page, scroll down to the **Auto-labeling for files and emails** section and select **Edit**.
 	
-24. This will return you to the **Choose protection settings for labeled items** page in the wizard. Select **Next** on this page, select **Next** on the **Encryption** page, and then select **Next** on the **Content Marking** page. This will take you to the **Auto-labeling for files and emails** page. 
+24. This should return you to the **Choose protection settings for labeled items** page in the wizard. Select **Next** on this page, select **Next** on the **Encryption** page, and then select **Next** on the **Content Marking** page. This will take you to the **Auto-labeling for files and emails** page. 
 
 25. On the **Auto-labeling for files and emails** page, to the right of the **Content contains** condition, select the **trash can icon**. This will remove the existing **Content contains** condition for the **PII** label that you created. <br/>
 
@@ -140,7 +140,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 27. In the **Content contains** window, select the **Add** drop-down arrow and then select **Sensitive info types**.
 
-28. In the **Sensitive info types** window, in the list of sensitive information types, this time only select the **ABA routing number** and the **U.S. Social security Number (SSN)** check boxes, and then select **Add**. Back on the **Auto-labeling for files and emails** page, both of these sensitive information types will appear. Select **Next**.
+28. In the **Sensitive info types** window, in the list of sensitive information types, only select the **ABA routing number** and the **U.S. Social security Number (SSN)** check boxes, and then select **Add**. Back on the **Auto-labeling for files and emails** page, both of these sensitive information types will appear. Select **Next**.
 
 29. On the **Define protection settings for groups and sites** page, leave the two check boxes blank and select **Next**.
 
@@ -148,29 +148,29 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 31. On the **Review your settings and finish** page, select **Create label**.
 
-32. On the **Your sensitivity label was created** page, choose **Don't create a policy yet** and then select **Done**.
+32. On the **Your sensitivity label was created** page, select the **Don't create a policy yet** option and then select **Done**. This returns you to the **Labels** page.
 
-33. Now it's time to publish the **PII** label. On the **Information protection** window, the **Labels** tab is displayed by default. In the list of labels, if the **PII** label does not appear, select **Refresh** on the menu bar. Once the **PII** label appears, select the check box that appears to the left of it. 
+33. Now it's time to publish the **PII** label. On the **Labels** page, if the **PII** label does not appear in the list of labels, select **Refresh** on the menu bar. Once the **PII** label appears, select the check box that appears to the left of it. 
 
 34. Select the **Publish label** option that appears in the menu bar above the list of labels. This initiates a **Create policy** wizard.
 
-35. In the **Create policy** wizard, on the **Choose sensitivity labels to publish** page, the **PII** label is already listed, so select **Next** and select **Next** for **Assign admin units (preview)**.
+35. In the **Create policy** wizard, on the **Choose sensitivity labels to publish** page, the **PII** label is already listed, so select **Next**. 
 
-36. On the **Publish to users and groups** page, you can either select **All** users and groups, or you can select specific users and groups. Select **Choose user or group**.
+36. On the **Assign admin units** page, select **Next** since you'll be assigning this PII policy to Adatum's full directory rather than just a select group of admin units.
 
-37. A **Users and groups** pane appears that displays all the Adatum users and groups. Hover your mouse to the left of the **Name** column heading and select the check box that appears. This will automatically select all the check boxes. Select **Done**.
+37. On the **Publish to users and groups** page, you can choose whether to make your policy available to all users and groups, or you can limit the policy to selected users and groups. For this lab, you want to make the policy available to everyone. The **Users and groups** option is already selected by default (if not, then select it now). This will make your policy available to all users and groups. Select **Next**.  <br/>
 
-38. On the **Publish to users and groups** page, select **Next**.
+	**Note:** When doing this in your real-world deployment, if you want to limit your policy to a select number of users or groups, then you would select **Edit** and make those selections. 
 
-39. On the **Policy settings** page, select the **Users must provide a justification to remove a label or lower its classification** check box, and then select **Next**. 
+38. On the **Policy settings** page, select the **Users must provide a justification to remove a label or lower its classification** check box, and then select **Next**. 
 
-40. On the **Apply a default label to documents** page, select **PII** in the drop-down menu that appears, and then select **Next**.
+39. On the **Apply a default label to documents** page, select **PII** in the drop-down menu that appears, and then select **Next**.
 
-41. On the **Apply a default label to emails** page, select **PII** in the drop-down menu that appears, and then select **Next**.
+40. On the **Apply a default label to emails** page, select **PII** in the drop-down menu that appears, and then select **Next**.
 
-42. On the **Apply a default label to Power BI content** page, select **PII** in the drop-down menu that appears, and then select **Next**.
+41. On the **Apply a default label to meetings and calendar events** page, select **PII** in the drop-down menu that appears, and then select **Next**.
 
-43. On the **Apply a default label to meetings and calendar events** page, select **PII** in the drop-down menu that appears, and then select **Next**.
+42. On the **Apply a default label to Fabric and Power BI content** page, select **PII** in the drop-down menu that appears, and then select **Next**.
 
 43. On the **Name your policy** page, enter **PII Policy** in the **Name** field, and then enter (or copy and paste) the following description for this sensitivity label policy: **The purpose of this policy is to detect sensitive information such as ABA bank routing numbers and US social security numbers in emails and documents, and to encrypt this information when it's discovered. The user must provide an explanation for removing the classification label.** Select **Next**.
 
