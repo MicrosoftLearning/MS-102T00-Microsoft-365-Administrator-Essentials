@@ -128,9 +128,9 @@ In Lab 6, Exercise 6, you configured and launched a simulated Drive-by URL attac
 11. Leave your browser open in LON-CL1. Close all tabs EXCEPT for the **Home | Microsoft 365** and **Home | Microsoft 365 admin center** tabs. 
 
 
-### Task 6: Disable Multi-factor Authentication for the Global Admin
+### Task 6: Disable Multifactor Authentication for the Global Admin
 
-To use Microsoft's Attack simulation training to simulate phishing attacks, Holly enabled Multi-Factor Authentication (MFA) for her user account. Now that she has completed the Attack simulation training tests, she wants to disable MFA for her account so that she doesn't have to deal with MFA for the remainder of the pilot project.
+To use Microsoft's Attack simulation training to simulate phishing attacks, Holly enabled Multifactor Authentication (MFA) for her user account. Now that she has completed the Attack simulation training tests, she wants to disable MFA for her account so that she doesn't have to deal with MFA for the remainder of the pilot project.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. Select the **Home | Microsoft 365 admin center** tab. 
 
