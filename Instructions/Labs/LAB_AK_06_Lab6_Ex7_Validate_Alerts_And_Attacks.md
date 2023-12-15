@@ -74,7 +74,7 @@ In Lab 6, Exercise 4, you created a default Microsoft 365 alert policy that noti
 You have now successfully tested the Microsoft 365 eDiscovery system alert that monitors the creation of an eDiscovery search or the export of data from a completed search.
 
 
-### Task 4: Review the simulated Spear Phishing attack results
+### Task 4: Validate the simulated Spear Phishing attack results
 
 In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which should have sent a very intriguing, real-world looking email to all Adatum users. In this task, you will verify that Holly received this email, you'll have her respond to the email to see what happens when a user falls for a spear phishing attack, and you'll review the results associated with the simulated attack.
 
@@ -101,7 +101,7 @@ In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which
 9. Leave your browser open in LON-CL1 and do not close any of the tabs.
     
 
-### Task 5: Review the simulated Drive-by URL attack results
+### Task 5: Validate the simulated Drive-by URL attack results
 
 In Lab 6, Exercise 6, you configured and launched a simulated Drive-by URL attack. In this task, you will review the results of the simulated Drive-by URL attack that you launched. When you configured this attack, you selected Lynne Robbins as the target of the attack; therefore, Lynne should have received the email that you configured in the Attack simulation training. You'll verify that Lynne received this email, you'll have her respond to the email to see what happens when a user falls for a Drive-by URL attack, and you'll review the results associated with the simulated attack.
 
