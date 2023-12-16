@@ -22,7 +22,9 @@ Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As 
 
 6. Diego has been promoted to Billing Administrator, but since this role does not appear in the list of commonly used roles, scroll down and select **Show all by category**. 
 
-7. In the list of roles that are sorted by category, scroll down to the **Other** category, select the **Billing Administrator** check box, and then select **Save changes**. Note the **Admin roles updated** message that appears at the top of the pane once the changes are saved.
+7. In the list of roles that are sorted by category, scroll down to the **Other** category, select the **Billing Administrator** check box, and then select **Save changes**. <br/>
+
+	**Tip:** Note the message that appears at the top of the pane once the admin role change is saved. This message provides the following best practice that you should keep in mind as you maintain administrative roles in your real-world deployments: **Give users only the access they need by assigning the least-permissive role.**
 
 8. On the **Manage admin roles** window, select the **X** in the upper-right corner of the screen to close it. This returns you to the **Active users** list. 
 
@@ -65,17 +67,27 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 7. Holly wants to assign **Patti Fernandez** to the **Service Support Administrator** role. To assign this role using Microsoft Graph PowerShell, you must first obtain the object ID of the Service Support Administrator role so that you can assign it to Patti. However, in Microsoft Graph PowerShell, you can only assign roles that have been "enabled". Enabled roles are roles that were either enabled from a role template, or they have already been assigned to users through PowerShell or the Microsoft 365 admin center. <br/>
 
+	**Important:** Before you perform this step, verify your PowerShell window is in full screen mode. The role name appears in the final column on the far right-side of the screen. If you're not in full screen mode, you won't see the role name associated with each Object ID. 
+
 	To view all the enabled roles in Microsoft 365, enter the following command at the command prompt and then press Enter: <br/>
 	
 		Get-MgDirectoryRole    <br/>
 
 	**Note:** This command displays the roles that have been enabled thus far in Microsoft 365. If the Service Support Administrator role appeared in this list, you could proceed directly to step 13 to assign the role to Patti. However, since the Service Support Administrator is not included in this list of enabled roles, you must perform steps 8-12 to enable the role from its corresponding role template before you can assign Patti to the role in step 13. 
 
-8. To enable a role in Microsoft Graph PowerShell, you must first locate its template to obtain the template's object ID. You need to know the template's object ID to enable the role from the template. To view the list of role templates along with their object ID and display name, type in the following command and then press Enter: <br/>
+8. To enable a role in Microsoft Graph PowerShell, you must first locate its template to obtain the template's object ID. You need to know the template's object ID to enable the role from the template. There's two ways in which you can view the role templates - you can either display the entire list of role templates, or you can display the template for a specific role. As a learning experience, you will perform both methods so that you can see the difference. <br/>
+
+	Let's start by displaying the complete list of role templates along with their object ID and display name. To do so, type in the following command and then press Enter: <br/>
 
 		Get-MgDirectoryRoleTemplate | Format-List Id, DisplayName   <br/>
+
+	As you can see after having run this command, you must scroll through the list of role templates looking for the Service Support Administrator role. You can easily see how this can be tedious. As an alternative, run the following command to query for a specific role template - in this case, the "Service Support Administrator" role template: <br/>
+
+ 		Get-MgDirectoryRoleTemplate | ? DisplayName -eq "Service Support Administrator"   <br/>
+
+	After having run this command, you can see that it displays only the requested role template. Obviously, there may be times when displaying the entire list of role templates is necessary. But when you need to look up a single role template, running the second PowerShell command will be much more efficient than having to scroll through the entire list of templates.
 	
-9. In the list of role templates, locate the template record for the **Service Support Administrator** role (as of this writing, it's the seventh role in the list). Highlight the **ID** for the **Service Support Administrator** template (for example, fe930be7-5e62-47db-91af-98c3a49a38b1) and press **Ctrl+C** to copy it to the clipboard (when you copy it, the highlight disappears).
+9. Now that you've queried the Service Support Administrator role template in the prior step, highlight its **ID** (for example, fe930be7-5e62-47db-91af-98c3a49a38b1) and press **Ctrl+C** to copy it to the clipboard (when you copy it, the highlight disappears).
 
 10. You will now create a variable that captures the attributes for the Service Support Administrator template. When you type in the following command, press **Ctrl+V** to paste in the Service Support Administrator template ID that you copied to the clipboard in the prior step. <br/>
 
@@ -85,15 +97,15 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	For example: $ServiceSupportRoleTemplate = @{ RoleTemplateID = "fe930be7-5e62-47db-91af-98c3a49a38b1" }
 
-11. You are now ready to enable the Service Support Administrator role based on its template. Type in the following command and press Enter:  <br/>
+11. You are now ready to enable the Service Support Administrator role based on the template's attributes that you captured in the $ServiceSupportRoleTemplate variable. Type in the following command and press Enter:  <br/>
 
 		New-MgDirectoryRole -BodyParameter $ServiceSupportRoleTemplate
 
-12. To verify the Service Support Administrator role has been enabled, type in the following command and press enter. This command will display the list of enabled role:  <br/>
+12. To verify the Service Support Administrator role has been enabled, type in the following command and press enter. This command will display the list of enabled roles:  <br/>
 			
 		Get-MgDirectoryRole	<br/>
 
-	**Note:** This command displays the object ID of the Service Support Administrator role, which you will later copy and paste in step 15 when assigning Patti to this role.
+	**Note:** This command displays the object ID of all the enabled roles, including the Service Support Administrator role that you just enabled from its template. You will later copy and paste in the object ID of the Service Support Administrator role in step 15 when assigning Patti to this role.
 
 13. To assign Patti Fernandez to the newly enabled Service Support Administrator role, you must first obtain the object ID for Patti's user account. To do so, type the following command and press Enter: <br/>
 

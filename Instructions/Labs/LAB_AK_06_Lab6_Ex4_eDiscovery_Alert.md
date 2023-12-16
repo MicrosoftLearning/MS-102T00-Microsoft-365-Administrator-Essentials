@@ -8,17 +8,15 @@ In this exercise you will test a default Microsoft 365 alert policy that notifie
 
 In this task, you will verify whether a default Microsoft 365 alert is triggered when somebody in your tenant creates an eDiscovery search or exports data from an existing search. Since Holly Dickson is assigned the Global Administrator role, she is automatically a member of the Tenant Admins and will be one of the recipients of this alert. 
 
-1. You should still be in **LON-CL2** after completing the prior lab exercise. You should now switch back to **LON-CL1**.
+1. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+2. In your Edge browser, select the **Alert policy - Microsoft Defender** tab. This tab should still be displaying the **Alert policy** window from the prior lab exercise (if not, then in the left-hand navigation pane, select **Policies & rules** and then select **Alert policy**).
 
-3. In your Edge browser, select the **Alert policy - Microsoft 365 security** tab. This tab should still be displaying the **Alert policy** window from the prior lab exercise (if not, then in the left-hand navigation pane, select **Policies & rules** and then select **Alert policy**).
+3. On the **Alert policy** page, you want to search through the default alert policies for a policy named **eDiscovery search started or exported**. Since there are so many pre-existing alert policies, the easiest way to locate the policy is to search for it. In the **Search** field at the top of the screen, enter **eDiscovery** and then hit Enter. 
 
-4. On the **Alert policy** page, you want to search through the default System policies for a policy named **eDiscovery search started or exported**. Since there are so many pre-existing system policies, the easiest way to locate the policy is to search for it. In the **Search** field at the top of the screen, enter **eDiscovery** and then hit Enter. 
+4. In the policy list, select the **eDiscovery search started or exported** policy that appears. 
 
-5. In the policy list, select the **eDiscovery search started or exported** policy that appears. 
-
-6. An **eDiscovery search started or exported** pane should appear. Scroll down through the pane and verify the default settings for this predefined policy are configured as follows:
+5. An **eDiscovery search started or exported** pane should appear. Scroll down through the pane and verify the default settings for this predefined policy are configured as follows:
 
 	- Status: **On**
 	
@@ -36,29 +34,29 @@ In this task, you will verify whether a default Microsoft 365 alert is triggered
 
 		- Daily notification limit: **No limit**
 
-7. At the top of the pane, select the **Edit policy** button.
+6. At the top of the pane, select the **Edit policy** button.
 
-8. On the **eDiscovery search started or exported** window that appears, the only setting that can be edited for this default policy is the **Email recipients** setting. This window enables you to edit the email recipients who are notified when this policy is triggered. You will not change the value here; instead, the purpose of this step is to show you how to change the recipient list in your real-world implementations for any of the default system policies.  <br/>
+7. On the **eDiscovery search started or exported** window that appears, the only setting that can be edited for this default policy is the **Email recipients** setting. This window enables you to edit the email recipients who are notified when this policy is triggered. You will not change the value here - you will leave it as **TenantAdmins**. Instead, the purpose of this step is to show you how to change the recipient list in your real-world implementations for any of the default system policies.  <br/>
 
 	 Select the **Cancel** button at the bottom of the window.
 
-9. On the **eDiscovery search started or exported** pane, select the **X** in the upper-right corner to close it. <br/>
+8. On the **eDiscovery search started or exported** pane, select the **X** in the upper-right corner to close it. <br/>
 
 	**Note:** You can also edit a policy's setting by selecting the vertical ellipsis icon under the **Actions** column at the far-right end of the policy's row on the **Alert Policy** window. 
 
-10. Leave all the Edge browser tabs open for the next task.
+9. Leave all the Edge browser tabs open for the next task.
 
 You have now reviewed the default Microsoft 365 eDiscovery alert that notifies tenant admins when an eDiscovery search is created or exported.
 
-### Task 2 – Validate the default eDiscovery Alert
+### Task 2 – Test the default eDiscovery Alert
 
-To test this default alert, Holly Dickson will create an eDiscovery search. This activity should trigger the alert policy, which should send an alert notification email to all Tenant Admins. Holly is a Global admin, who by default are members of the Tenant Admin group; therefore, she should receive the email notification generated by this alert. 
+To test this default alert, Holly Dickson will create an eDiscovery search. This activity should trigger the alert policy, which should send an alert notification email to all Tenant Admins. Holly is a Global admin. By default, Global admins are members of the Tenant Admin group; therefore, she should receive the email notification generated by this alert. You will validate whether Holly received the email in Exercise 7 of this lab.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In your **Microsoft Edge** browser, select the **Microsoft 365 admin center** tab. 
+2. In your **Microsoft Edge** browser, select the **Home - Microsoft 365 admin center** tab. 
 
-3. In the **Microsoft 365 admin center**, in the left-hand navigation pane under the **Admin centers** group, select **Compliance**.
+3. In the **Microsoft 365 admin center**, in the left-hand navigation pane under the **Admin centers** group, select **Compliance**. This opens the Microsoft Purview portal in a new tab.
 
 4. In the **Microsoft Purview** portal, in the left-hand navigation pane, under the **Solutions** group, select **Content search**.
 
@@ -80,29 +78,10 @@ To test this default alert, Holly Dickson will create an eDiscovery search. This
 
 11. On the **New search created** page, select **Done**.
 
-12. On the **Content search** page, scroll to the far-right side of the page. Note the **Status** of the **Confidential search** is **Starting**. <br/>
+12. On the **Content search** page, scroll to the far-right side of the page. Note the **Status** of the **Confidential search** is **Starting**. The search that you created should only take a couple of minutes to complete. After a minute or two, select **Refresh** on the menu bar to verify the status changed to **Completed**.
 
-	**Important:** When you submit a new search, the system saves the search and then immediately runs it. By saving this eDiscovery search, the eDiscovery alert should be triggered, thereby creating an email notification that should be sent to the Inbox of all users with Tenant Admin permissions. You do NOT have to wait for the Search to finish before testing whether the alert sent the email notification. The alert notification system will process the email at the time the search is created. 
+	**Note:** When you submit a new search, the system saves the search and then immediately runs it. By saving this eDiscovery search, the eDiscovery alert should be triggered, thereby creating an email notification that should be sent to the Inbox of all users with Tenant Admin permissions. It may take an additional 15 minutes for the email notification to be generated to validate this eDiscovery alert. Instead of waiting for this email to be generated, proceed to the next exercise. You will validate this alert email in Exercise 7, task 3 of this lab.
 	
-13. The search that you created should only take a couple of minutes to complete. You can either proceed to the next step while the search is running, or if you wish, you can select the **Refresh** icon on the menu bar every minute or so until the **Status** changes to **Completed**.
-	
-14. To test this alert, select the **Outlook** tab in your Edge browser. This should still be displaying Holly's mailbox. If you previously closed Outlook, then in the **Home | Microsoft 365** tab, in the column of application icons, select **Outlook**.
-
-15. In Holly's Outlook mailbox, monitor her Inbox for an **Informational-severity alert: eDiscovery search started or exported** email that was automatically sent by the Alerts notification system. The purpose of this message is to inform Holly that an eDiscovery search was created or exported. If necessary, select the **Refresh** icon to the left of the URL address. Once the email is received, open it and review the contents, then close the message. <br/>
-
-	**Note:** It may take up to 10 minutes or so before the email arrives in Holly's Inbox.
-
-16. In your **Edge** browser, switch back to the **Microsoft Purview** portal (the **Content search - Microsoft Purview** tab) and under the **Solutions** group in the left-hand navigation pane, select **Audit**. 
-
-17. Select the **Search** button to display all recent activity. This will display the activity that created this alert. If an **Add more filters to your search?** dialog box appears, select **Start search**. <br/>
-
-	**Note:** It may take up to 24 hours for the search results to be displayed. If search results do not appear immediately, check again later in the day. If there are still no results, wait until the following day before checking again.
-
-	**Note:** In the list of search results, note how the **User** for the prior alerts is listed as Holly, while the user for the eDiscovery alert is listed as **Service Account**. This is because the eDiscovery alert is a default system alert rather than a custom alert created by an individual user.
-
-18. In your browser, leave the Outlook tab (**Mail - Holly Dickson - Outlook**) open as you will use it shortly in another lab exercise. Leave all your other browser tabs open as well.
-
-You have now successfully tested the Microsoft 365 eDiscovery system alert that monitors the creation of an eDiscovery search or the export of data from a completed search.
-
-
+13.  Leave your browser open in LON-CL1 and do not close any of the tabs.
+    
 # Proceed to Lab 6 - Exercise 5

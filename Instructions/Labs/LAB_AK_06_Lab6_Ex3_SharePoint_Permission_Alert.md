@@ -1,25 +1,23 @@
-# Learning Path 6 - Lab 6 - Exercise 3 - Implement SharePoint Permission Alert
+# Learning Path 6 - Lab 6 - Exercise 3 - Implement a SharePoint Permission Alert
 
 
 In this exercise you will configure and test an alert that notifies Lynne Robbins when a user is added as a site collection administrator for a SharePoint site collection.
 
-### Task 1 – Create a SharePoint Permissions Alert
+### Task 1 – Create a SharePoint Permission Alert
 
-1. At the end of the prior lab, you were logged into LON-CL2. This lab will use LON-CL1.  <br/>
+1. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-    Switch to **LON-CL1**. 
+2. In your Edge browser, select the **Alert policy - Microsoft Defender** tab, which displays the **Microsoft Defender** portal.
 
-2. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. In your Edge browser, select the **Alert policy - Microsoft 365 security** tab, which displays the **Microsoft 365 Defender** portal.
-
-3. In the **Microsoft 365 Defender** tab, you should still be in the **Alert policy** window from the prior lab exercise (if not, then in the left-hand navigation pane, select **Policies & rules** and then select **Alert policy**).
+3. In the **Microsoft Defender** portal, you should still be in the **Alert policy** window from the prior lab exercise (if not, then in the left-hand navigation pane, select **Policies & rules** and then select **Alert policy**).
 
 4. In the **Alert policy** window, select **+New Alert Policy** on the menu bar. This initiates the **New Alert Policy** wizard.
 
 5. On the **Name your alert, categorize it, and choose a severity** window, enter the following information:
 
-	- Name: **Add user as a site collection administrator**
+	- Name: **Add user as a Site Collection administrator**
 
-	- Description: **This alert notifies Lynne Robbins when a user is added to the site collection administrators on a SharePoint site collection.**
+	- Description: **This alert notifies Lynne Robbins when a user is added to the Site Collection administrators on a SharePoint site collection.**
 
 	- Severity: **Medium**
 
@@ -53,9 +51,9 @@ In this exercise you will configure and test an alert that notifies Lynne Robbin
 
 You have now configured an additional alert policy that monitors when a user is added as a site collection administrator for a SharePoint Online site collection.
 
-### Task 2 – Validate the  SharePoint Permissions Alert
+### Task 2 – Test the SharePoint Permissions Alert
 
-In the prior task, you configured an alert that will notify Lynne Robbins when a user is added as a site collection administrator for a site collection. To test this alert, Holly Dickson will add Alex Wilber as a site collection admin to the global SharePoint Communication site. This activity should trigger the alert policy that you just created, which should send an alert notification email to Lynne Robbins’ mailbox. You will then switch to the LON-CL2 VM to see if Lynne received this email. 
+In the prior task, you configured an alert designed to notify Lynne Robbins when a user is added as a site collection administrator for a site collection. In this task, you will test this alert by adding Alex Wilber as a site collection admin to the global SharePoint Communication site. This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox. You will validate whether Lynne received this alert notification email in Exercise 7, task 2.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
@@ -65,25 +63,11 @@ In the prior task, you configured an alert that will notify Lynne Robbins when a
 
 4. In the ribbon at the top of the page, the **Permissions** tab is displayed by default. Under the **Manage** group, select **Site Collection Administrators**.
 
-5. In the **Site Collection Administrators** dialog box, the Global administrator account that was assigned by default to this role group is displayed in the data entry field. To the right of this account, enter **Alex**, select **Alex Wilber** from the list of users that appears, and then select **OK**. 
+5. In the **Site Collection Administrators** dialog box, the **Global administrator** account that was assigned by default to this role group is displayed in the data entry field. To the right of this account, enter **Alex**, select **Alex Wilber** from the list of users that appears, and then select **OK**.  <br/>
 
-6. Since a new site collection admin has been added, an alert should automatically be sent to Lynne Robbins’ Inbox notifying her of this event. Perform the remaining steps to verify that Lynne received this email. You will verify whether this alert was sent to Lynne's mailbox on LON-CL2.
+	**Note:** This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox. Rather than waiting up to 15 minutes for the email notification to be generated to validate this SharePoint permission alert, you will validate this alert in Exercise 7, task 2 of this lab.
 
-	‎Switch to **LON-CL2**. 
-
-7. On **LON-CL2**, you should still be logged into **Outlook on the web** as **Lynne Robbins** from the prior task. Monitor Lynne's Inbox to view the email generated by the alert that you just created. <br/>
-
-	**Note:** Lab testing has shown that in some cases, it can take up to 15 minutes or so for the email to be received in Lynne's Inbox. Do not proceed until the email has arrived.
-
-8. Once the email arrives in Lynne's Inbox, open the email and review the contents. Scroll to the bottom of the email and select the **View alert details** button. This opens the **Microsoft 365 Defender** portal in a new tab.
-
-9. The **Microsoft 365 Defender** portal displays the **Alerts** window, and it automatically opens the **Site collection admin permissions** pane for this alert activity that triggered the email notification to Lynne. <br/>
-
-	Scroll down through the **Site collection admin permissions** pane and review all the information for this alert activity. When you are done, select **Close** to close the pane.
-
-10. Leave your LON-CL1 and LON-CL2 VMs open for the remaining exercise in this lab.
-
-You have now successfully tested the SharePoint alert to monitor site collection admin permissions on SharePoint sites. 
+6. In your Edge browser, close the **Permissions: Communication site** tab. Leave the other tabs open and proceed to the next exercise.
 
 
 # Proceed to Lab 6 - Exercise 4

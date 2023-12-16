@@ -14,7 +14,7 @@ In this task, you will send an email from Holly Dickson to Lynne Robbins that te
 
 2. You will now send an email from Holly to Lynne Robbins, and you will include an IP address in the body of the email. <br/>
 
-	In **Microsoft Edge**, select the **Microsoft Office Home** tab, and then select the **Outlook** icon in the column of app icons on the left-side of the screen. When Outlook on the web opens, you should be automatically logged in as Holly Dickson.  <br/>
+	In **Microsoft Edge**, select the **Home | Microsoft 365** tab, and then select the **Outlook** icon in the column of app icons on the left-side of the screen. When Outlook on the web opens, you should be automatically logged in as Holly Dickson.  <br/>
 
 	**Note:** If **Outlook on the web** was already open, then verify that you're logged in as **Holly** by checking the user icon in the upper right corner (the **HD** circle). If Outlook was open for any other user, then close the tab and repeat the instructions in this step to open Outlook on the Web for Holly.
 
