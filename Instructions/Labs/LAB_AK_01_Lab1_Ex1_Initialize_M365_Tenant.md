@@ -250,7 +250,7 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
   	
     If all three sub-modules appear in the list of installed sub-modules, then proceed to the next step. However, if any of these three sub-modules do not appear in the list, then run the following PowerShell command to manually install the missing sub-module:
 
-		Install-Module -Name <module name>
+		Install-Module -Name <module name> -Scope CurrentUser
 
     For example, if the Microsoft.Graph.Identity.DirectoryManagement module did not install, then you would run the following command:
 
