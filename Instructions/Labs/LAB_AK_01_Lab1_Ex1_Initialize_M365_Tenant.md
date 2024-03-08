@@ -49,7 +49,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 5. In the **Sign in** dialog box, enter the **Microsoft 365 Tenant Username** provided by your lab hosting provider (this is the MOD Administrator account). The username should be in the form of **admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider. Select **Next**. <br/>
 
-	**Note:** Your lab hosting provide may provide the ability to select a **Type text** (or equivalent) button next to resource data such as usernames, passwords, and other data that must be entered throughout the course of these labs. Other lab hosting providers may provide an alternative method, such as the ability to copy and paste in this informatio. Take advantage of this functionality to save yourself from having to manually enter this information. 
+	**Note:** Your lab hosting provide may provide the ability to select a **Type text** (or equivalent) button next to resource data such as usernames, passwords, PowerShell commands, and other data that must be entered throughout the course of these labs. Other lab hosting providers may provide an alternative method, such as the ability to copy and paste in this information. Take advantage of this functionality to save yourself from having to manually enter this information. 
 
 6. In the **Enter password** dialog box, enter the unique **Microsoft 365 Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
@@ -236,7 +236,9 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 3. You will be prompted to confirm whether you want to install the module from an untrusted repository (PSGallery). Enter **A** to select **[A] Yes to All** and then press Enter.  <br/>
 
-    **Note:** Your response will initiate the installation of all the Microsoft Graph sub-modules. Once all the installation messages (for each sub-module) have finished displaying, it will still take approximately 5 to 10 additional minutes to complete the Microsoft Graph PowerShell installation. During this time, the cursor will continue to blink below the untrusted repository message. This may be a good time to take a short break.
+    **Note:** Your response will initiate the installation of all the Microsoft Graph sub-modules. Once all the installation messages for each sub-module have finished displaying, it will still take approximately 5 to 10 additional minutes to complete the Microsoft Graph PowerShell installation. During this time, the cursor will continue to blink below the untrusted repository message. <br/>
+
+	**This may be a good time to take a short break.**
 
 4. A command prompt will appear once Microsoft Graph PowerShell has been installed. You will now display the list of sub-modules that were installed. To do so, run the following command:
 
@@ -282,13 +284,13 @@ In Lab 6, you will create Alert Policies using the Microsoft Defender portal. Ho
 
 5. A **Sign in** window will appear requesting your credentials. Enter the MOD Administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
 
-6. Run the following command to turn on audit logging:
+6. At the command prompt, run the following command to turn on audit logging:
 
 		Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
 
     **Note:** A warning message will be displayed indicating the admin audit log condiguration change that you requested could take up to 60 minutes to take effect throughout the system. This is why you're enabling this feature now rather than waiting for the Alert Policy labs later in this course. 
 
-7. Run the following command to confirm that audit logging is enabled:
+7. At the command prompt, run the following command to confirm that audit logging is enabled:
 
 		AdminAuditLogConfig 
 
