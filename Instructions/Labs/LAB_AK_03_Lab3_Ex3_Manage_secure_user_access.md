@@ -49,7 +49,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 21. Leave the **Microsoft Entra admin center** open as you will use it in the next task.
    
 
-### Task 2: Deploy Micrsoft Entra Smart Lockout
+### Task 2: Deploy Microsoft Entra Smart Lockout
 
 Adatum’s CTO has asked you to deploy Microsoft Entra Smart Lockout, which assists in locking out bad actors who are trying to guess your users’ passwords or use brute-force methods to get admitted into your network. Smart Lockout can recognize sign-ins coming from valid users and treat them differently than sign-ins from attackers and other unknown sources. 
 
