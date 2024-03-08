@@ -1,6 +1,10 @@
 # Learning Path 3 - Lab 3 - Exercise 3 - Manage secure user access 
 
-As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by Adatum’s CTO to deploy Microsoft Entra Pass-through Authentication (PTA) and Microsoft Entra Smart Lockout as a means of strengthening password management throughout the organization. 
+As Holly Dickson, Adatum’s Microsoft 365 Administrator, you have been asked by Adatum’s CTO to deploy Microsoft Entra Pass-through Authentication (PTA) and Microsoft Entra Smart Lockout. These three features will help strengthen password management throughout the organization in preparation for deploying Microsoft 365. For PTA, you will deploy it using Microsoft Entra Cloud Sync. And for Smart Lockout, you will deploy it using Group Policy Management. 
+
+For MFA, you will create a Conditional Access policy to deploy MFA for all of Adatum's users. You will then modify it to exclude Holly and the selected members of her Microsoft 365 pilot project team. That will save you from having to use MFA when signing in with them, as well as provide you with experience on how to exclude users in a Conditional Access policy. 
+
+**Note:** Excluding specific users from using MFA is not something you would normally do in a real-world scenario. However, for the purpose of saving time in this classroom training lab, we will disable MFA for the test users. 
 
 ### Task 1: Deploy Microsoft Entra Pass-Through Authentication 
 
