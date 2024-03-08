@@ -24,9 +24,9 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
 7 In the **Name your DLP policy** page, enter the following information and then select **Next**:
 
-      - Name: Replace the default name with **IP Address DLP policy**
+      - Name: **IP Address DLP policy**
 
-      - Description: Replace the default description with **This policy detects the presence of IP addresses in emails. End users are notified of the detection and admins receive a notification. Emails with 2 or more IP addresses are blocked from being sent.**
+      - Description: **This policy detects the presence of IP addresses in emails. End users are notified of the detection and admins receive a notification. Emails with 2 or more IP addresses are blocked from being sent.**
 
 8. On the **Assign admin units (preview)** page, select **Next**. 
 
