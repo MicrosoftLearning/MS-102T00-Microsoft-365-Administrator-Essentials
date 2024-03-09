@@ -9,23 +9,23 @@ For MFA, you will create a Conditional Access policy to deploy MFA for all of Ad
 
 ### Task 1: Deploy MFA using a Conditional Access policy
 
-As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended). In this exercise, you'll enable MFA for all of Adatum's users through a Conditional Access policy, which is the method that Microsoft recommends.
+As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended). In this exercise, you'll enable MFA through a Conditional Access policy, which is the method that Microsoft recommends. The policy must enable MFA for all Microsoft users - both Adatum users and any external users. 
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as **Holly Dickson**.
    
-2. In the **Microsoft 365 admin center**, under the **Admin centers** section in the navigation pane, select **Identity**. Doing so opens the Microsoft Entra admin center in a new browsser tab. 
+2. In the **Microsoft 365 admin center**, under the **Admin centers** section in the navigation pane, select **Identity**. Doing so opens the Microsoft Entra admin center in a new browser tab. 
 
 3. In the **Microsoft Entra admin center**, select **Protection** in the navigation pane, and then select **Conditional Access**.
 
 4. On the **Conditional Access | Overview** page, select **+Create new policy**.
 
-5. On the **New** Conditional Access policy window, enter **MFA for all Adatum users + external access**.
+5. On the **New** Conditional Access policy window, enter **MFA for all Microsoft 365 users** in the **Name** field.
 
 6. Unders the **Users** group, select **0 users and groups selected**. Doing so displays two tabs - **Include** and **Exclude**.
 
 7. Under the **Include** tab, select **All users**. Note the warning message that appears. You will address this in the next two steps.
 
-8. Select the **Exlude** tab. To avoid system lockout, as the prior warning message indicated, you want to exclude your Global administrators - in this case, Holly. Holly also wants to exclude the other pilot project team members for the sake of expediency when testing. Once Microsoft 365 goes live, Holly will remove the pilot project team from the Exclude list in this Conditional Access policy and simply exclude herself and several other administrators. But for now, Holly wants to simply exclude the entire project team. Select **Users and groups**. 
+8. Select the **Exlude** tab. To avoid system lockout, as the prior warning message indicated, you want to exclude your Global administrators - in this case, Holly. Holly also wants to exclude the other pilot project team members for the sake of expediency when testing. Once Microsoft 365 goes live, Holly will remove the pilot project team from the Exclude list in this Conditional Access policy and simply exclude herself and several other administrators. But for now, Holly wants to exclude the entire project team. To do so, select **Users and groups**. 
 
 9. On the **Select excluded users and groups** window that appears, you want to select the Microsoft 365 pilot project team. The **All** tab is displayed by default. To quickly find the pilot project team, select the **Groups** tab. In the list of active groups, select the **M365 pilot project** group, and then select the **Select** button at the bottom of the window. Note the message that appears under the **Users** group. 
 
@@ -37,7 +37,7 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 13. Set the **Configure** toggle switch to **Yes**, which enables the **Include** and **Exclude** tabs. 
 
-14. Under the **Include** tab, select **Any location**. Select the **Exclude** tab, select **All trusted locations**. You may be asking - what's the purpose of excluding trusted locations? The answer is that when you exclude trusted locations, it means that even if a user signs in from a location considered safe, or "trusted" (such as their corporate network), they will still be required to complete MFA. The purpose of excluding trusted locations is to ensure that MFA is enforced consistently for all users, regardless of where they sign in from. It prevents any exceptions based on location.
+14. Under the **Include** tab, verify **Any location** is selected (select it if necessary). Select the **Exclude** tab and then select **All trusted locations**. You may be asking - what's the purpose of excluding trusted locations? The answer is that when you exclude trusted locations, it means that even if a user signs in from a location considered safe, or "trusted" (such as their corporate network), they will still be required to complete MFA. The purpose of excluding trusted locations is to ensure that MFA is enforced consistently for all users, regardless of where they sign in from. It prevents any exceptions based on location.
 
 15. Under **Access controls**, select **0 controls selected**. Doing so displays a **Grant** pane.
 
