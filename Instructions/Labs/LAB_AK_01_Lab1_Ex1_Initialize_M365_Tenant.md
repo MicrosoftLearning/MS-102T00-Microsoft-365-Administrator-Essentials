@@ -288,7 +288,7 @@ In Lab 6, you will create Alert Policies using the Microsoft Defender portal. Ho
 
 		Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
 
-    **Note:** A warning message will be displayed indicating the admin audit log condiguration change that you requested could take up to 60 minutes to take effect throughout the system. This is why you're enabling this feature now rather than waiting for the Alert Policy labs later in this course. 
+    **Note:** A warning message will be displayed indicating the admin audit log configuration change that you requested could take up to 60 minutes to take effect throughout the system. This is why you're enabling this feature now rather than waiting for the Alert Policy labs later in this course. 
 
 7. At the command prompt, run the following command to confirm that audit logging is enabled:
 
