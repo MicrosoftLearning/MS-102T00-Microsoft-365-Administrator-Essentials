@@ -1,4 +1,4 @@
-# Learning Path 3 - Lab 3 - Exercise 3 - Manage secure user access 
+# Learning Path 4 - Lab 4 - Exercise 1 - Manage secure user access 
 
 Holly has then been asked by Adatum’s CTO to deploy Microsoft Entra Multifactor Authentication (MFA), Pass-through Authentication (PTA), and Microsoft Entra Smart Lockout. These three features will help strengthen password management throughout the organization in preparation for Copilot for Microsoft 365. For PTA, you will deploy it using Microsoft Entra Cloud Sync. And for Smart Lockout, you will deploy it using Group Policy Management. 
 
@@ -7,7 +7,7 @@ For MFA, you will create a Conditional Access policy to deploy MFA for all of Ad
 **Note:** Excluding specific users from using MFA is not something you would normally do in a real-world scenario. However, for the purpose of saving time in this classroom training lab, we will disable MFA for the test users. 
 
 
-### Task 3: Deploy MFA using a Conditional Access policy
+### Task 1: Deploy MFA using a Conditional Access policy
 
 As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended for larger organizations). In this exercise, you'll enable MFA through a Conditional Access policy, which is the method that Microsoft recommends. Adatum has directed Holly to enable MFA for all of its Microsoft 365 users - both internal and external. However, for the purpose of testing Adatum's Microsoft 365 pilot project implementation, Holly wants to exclude the members of the M365 pilot project group from having to use MFA to sign in. Once the pilot project is complete, Holly will update the policy by removing the exclusion of this group from the MFA requirement. The policy will also include two other requirements. It will require MFA for all cloud apps, and it will require MFA even if a user signs in from a trusted location. 
 
@@ -247,6 +247,6 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 23. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
  
 
-# End of Lab 3
+# Proceed to Lab 4 - Exercise 2
 
 
