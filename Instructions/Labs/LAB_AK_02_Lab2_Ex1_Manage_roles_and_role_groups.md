@@ -196,7 +196,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 19. Leave your Windows PowerShell session open for future lab exercises, but minimize it before going on to the next task.
 
 
-### Task 3 - Validate role assignments 
+### Task 4 - Validate role assignments 
 
 In this task, you will begin by examining the administrative properties of two users, Joni Sherman and Lynne Robbins. You will then log into the Microsoft 365 home page on the Client 2 VM (LON-CL2) as each user to confirm several of the changes that you made when managing their administrative delegation in the prior tasks. Finally, as Lynne Robbins, you will perform two important user account maintenance tasks - resetting passwords and blocking user accounts.
 
