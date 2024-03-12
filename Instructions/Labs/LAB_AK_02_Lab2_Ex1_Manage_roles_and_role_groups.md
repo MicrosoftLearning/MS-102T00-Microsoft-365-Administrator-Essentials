@@ -2,7 +2,7 @@
 
 In this exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. You will assign these roles using both the Microsoft 365 admin center and Windows PowerShell; this will give you the added experience of using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. 
 
-### ‎Task 1 - Assign Delegated Administrators in the Microsoft 365 Admin Center
+### ‎Task 1 - Assign an administrator role in the Microsoft 365 Admin Center
 
 Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As you continue in your role as Holly, you will use the Microsoft 365 admin center to assign administrator rights to several Adatum users. 
 
@@ -41,7 +41,57 @@ Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As 
 14. Remain logged into LON-CL1 and the Microsoft 365 admin center as Holly Dickson.
 
 
-### Task 2 - Assign Delegated Administrators with Windows PowerShell  
+### ‎Task 2 - Assign an administrator role using a role group in the Microsoft 365 admin center
+
+In the prior task, you assigned an administrator role directly to Diego Siciliani's user account in the Microsoft 365 admin center. In this task, you will assign roles using a role group instead. You will create a Security role group, assign user management roles to it, and then assign the role group to Lynne Robbin's user account in the Microsoft 365 admin center.
+
+1. On LON-CL1, you should still be logged into the Microsoft 365 admin center as Holly Dickson. If not, then do so now.
+
+2. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**. 
+
+3. On the **Active teams & groups** page, the **Teams & Microsoft 365 groups** tab is displayed by default. Select the **Security groups** tab.
+
+4. On the **Security groups** tab, select **+Add a security group** on the menu bar. Doing so initiates the **Add a security group** wizard.
+
+5. In the **Add a security group** wizard, on the **Set up the basics** page, enter **User management role group** in the **Name** field. Enter **This role group contains user management roles** in the **Description** field. Select **Next**.
+
+6. On the **Edit settings** page, select the **Azure AD roles can be assigned to the group** check box, and then select **Next**.
+
+7. On the **Review and finish adding group** page, review the settings. If any settings need to be changed, select the appropriate **Edit** option and make the change. When all the settings are correct, select **Create group**.
+
+8. Once the **User management role group** is created, select **Close**.
+
+9. Now that you created the role group, you must assign the corresponding roles to it. On the **Active teams and groups** page, the **Security groups** tab is displayed. Select the **User management role group** to open its details pane.
+
+10. On the **User management role group** pane, the **General** tab is displayed by default. Under the **Roles** section, select **Manage roles**.
+
+11. On the **Manage admin roles** pane that appears, select the **Admin center access** option. In the list of common administrator roles that appears directly below this option, select the **User Administrator** and **User Experience Success Manager** role check box. Then select the **Show all by category** option. Scroll down to the **Identity** category. Note how the **User Administrator** role is already selected, since you selected this earlier in the list of commonly used roles. Select the **Helpdesk Administrator** role and then select **Save changes**. 
+
+12. In the **Manage admin roles** pane, the three selected roles should appear under the **Admin center access** option. Select the **X** in the upper-right corner of the pane to close it.
+
+13. Under the **Security groups** tab, select **User management role group**. In the **User management role group** pane that appears, verify the three roles appear in the **Roles** section. Close this pane.
+
+14. Now that you've assigned the roles to the role group, you must assign the role group to Lynne Robbin's user account. In the **Microsoft 365 admin center**, select **Active users**.
+
+15. On the **Active users** page, select **Lynne Robbins**. 
+
+16. In the **Lynne Robbins** pane that appears, the **Account** tab is displayed by default. In the prior task, when you assigned the Billing Administrator role to Diego Siciliani's account, you selected the **Manage roles** option under the **Roles** section. However, since you will be assigning Lynne's roles through a role group, you must assign Lynne as a member of the Security role group that you just created. It's through the group assignment that Lynne will inherit the roles assigned to the role group. Therefore, under the **Groups** section, select **Manage groups**. 
+
+17. On the **Manage groups** pane, select **+Assign memberships**.
+
+18. On the **Assign memberships** pane, select the **User management role group** check box, and then select **Add(1)**.
+
+19. Once a **Saved** notification appears at the top of the page, close this pane. 
+
+20. To verify that Lynne inherited the roles that were assigned to the User management role group, select **Lynne Robbins** from the list of active users. 
+
+21. In the **Lynne Robbins** pane that appears, in the **Account** tab that is displayed by default, you should see the three User management roles that were assigned to the Lynne. Under the **Roles** section**, select **Manage roles**.
+
+22. In the **Manage admin roles** pane that appears, under the **Admin center access** option, note the three roles that are selected and the name of the group from which they were assigned to Lynne. Also note how the three roles are grayed out. This indicates that you can't unselect the roles from this window. Because the roles were assigned to Lynne from a role group that contained these roles, you can only unassign the roles by removing Lynne as a member of the role group. You have just verified that Lynne is assigned these roles. Close this **Manage admin roles** pane.
+
+23. Remain logged into LON-CL1 and the Microsoft 365 admin center as Holly Dickson.
+
+### Task 3 - Assign an administrator role using Windows PowerShell  
 
 This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Microsoft 365 admin center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.  
 
@@ -146,7 +196,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 19. Leave your Windows PowerShell session open for future lab exercises, but minimize it before going on to the next task.
 
 
-### Task 3 - Verify Delegated Administration  
+### Task 3 - Validate role assignments 
 
 In this task, you will begin by examining the administrative properties of two users, Joni Sherman and Lynne Robbins. You will then log into the Microsoft 365 home page on the Client 2 VM (LON-CL2) as each user to confirm several of the changes that you made when managing their administrative delegation in the prior tasks. Finally, as Lynne Robbins, you will perform two important user account maintenance tasks - resetting passwords and blocking user accounts.
 
