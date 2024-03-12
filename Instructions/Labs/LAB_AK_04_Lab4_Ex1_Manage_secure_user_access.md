@@ -172,6 +172,8 @@ Adatum’s CTO has asked you to deploy Microsoft Entra Smart Lockout, which assi
 
 The CTO is anxious to implement Smart Lockout because it will lock out the attackers while letting Adatum’s users continue to access their accounts and be productive. The CTO has asked Holly to configure Smart Lockout so that users can’t use the same password more than once, and they can’t use passwords that are considered too simplistic or common. 
 
+**Note:** You can maintain Account Lockout Policy settings in both the Group Policy Management Editor and in Microsoft Entra through its Smart Lockout feature. This lab task shows you how to access each method, although you will only update the Smart Lockout settings in Microsoft Entra. You must use the company's domain controller (LON-DC1) to access the Group Policy Management Editor. 
+
 1. On LON-DC1, select the **Server Manager** icon on the taskbar if it’s already open; otherwise, open it now.
 
 2. In **Server Manager**, select **Tools** in the upper-right menu bar, and in the drop-down menu, select **Group Policy Management.**
@@ -188,15 +190,17 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 7. In the **Account Policies** folder, select **Account Lockout Policy**.
 
-8. As you can see in the right-hand pane, none of the smart lockout parameters have been defined. You are going to use the **Microsoft Entra admin center** to assign corresponding values in the Entra ID context.  
+8. As you can see in the right-hand pane, none of the smart lockout parameters have been defined. Instead of maintaining these lockout parameters in the Group Policy Management Editor, you're instead going to use the Microsoft Entra admin center. While you can use the Group Policy Management Editor, this method is typically used in on-premises Active Directory environments. We showed you this editor so that you could see this alternative. However, for organizations that strictly use cloud-based services like Microsoft 365, or who find using the Microsoft Entra admin center much more user-friendly than accessing the Group Policy Management Editor, using the **Microsoft Entra admin center** to assign corresponding values in the Entra ID context is preferrable. <br/>  
 
-9. ‎Select the Edge browser icon on the taskbar, which should be displaying the **Microsoft Entra admin center**. 
+	Also keep in mind that the lockout behavior and customization options differ between the two methods. With the Group Policy Management Editor, you have more granular control over policy settings, including Account Lockout Threshold, Lockout Duration, and Reset Account Lockout Counter After. However, using this method requires familiarity with Group Policy and Active Directory administration. Conversely, the Account Lockout Policy in Microsoft Entra can't be customized as extensively. However, it’s easier to use, even though it lacks some of the fine-tuning options available in Group Policy. <br/>
+
+	For Adatum, Holly has chosen to use the Microsoft Entra admin center to configure the company's Account Lockout policy. ‎On the taskbar at the bottom of your screen, select the **Microsoft Edge** icon, which should be displaying the **Microsoft Entra admin center**. 
 
 9. In the **Microsoft Entra admin center**, in the left-hand navigation pane, select **Authentication methods** under the **Protection** submenu.
 
-12. In the **Authentication methods | Policies** page, in the middle pane under the **Manage** section, select **Password protection.**
+10. In the **Authentication methods | Policies** page, in the middle pane under the **Manage** section, select **Password protection.**
 
-13. In the **Authentication methods | Password protection** window, in the detail pane on the right, enter the following information:
+11. In the **Authentication methods | Password protection** window, in the detail pane on the right, enter the following information:
 
 	- In the **Custom smart lockout** section:
 
@@ -220,37 +224,39 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 	- In the **Mode** section, select **Enforced**
 
-14. Select **Save** on the menu bar at the top of the page.
+12. Select **Save** on the menu bar at the top of the page.
 
-15. You should now test the banned password functionality. Select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Change password**.
+13. You should now test the banned password functionality. Select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **View account**. 
 
-16. A new tab will open displaying the **Change password** window. In the **Old password** field, enter Holly's existing password, which is the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). <br/>
+14. In the **My account** window that appears, in the **Password** tile, select **CHANGE PASSWORD**.
+
+15. A new tab will open displaying the **Change password** window. In the **Old password** field, enter Holly's existing password, which is the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). <br/>
 
 	Enter **Never4get!!** in the **Create new password** and **Confirm new password** fields, and then select **Submit**. Note the error message that you receive.
 
-17. In your browser, close the **Change password** tab. 
+16. In your browser, close the **Change password** tab. 
 
-18. You should now test the lockout threshold functionality. Select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Sign out**.  
+17. You should now test the lockout threshold functionality. Select Holly Dickson's user icon in the upper right corner of the screen, and in the menu that appears select **Sign out**.  
 
-19. Once you are signed out as Holly, the **Pick an account** window will appear in the **Sign in to Microsoft Azure** tab. As a best practice when signing out from a Microsoft online service as one user and signing back in as another, close all your browser tabs except for the **Sign out** or **Sign in** tab. In this case, close the other tabs now and leave the **Sign in** tab open.  <br/>
+18. Once you are signed out as Holly, the **Pick an account** window will appear in the **Sign in to Microsoft Entra** tab. As a best practice when signing out from a Microsoft online service as one user and signing back in as another, close all your browser tabs except for the **Sign out** or **Sign in** tab. In this case, close the other tabs now and leave the **Sign in** tab open.  <br/>
 
 	In the **Pick an account** window, select **Use another account**. 
 
-20. In the **Sign in** window, enter **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
+19. In the **Sign in** window, enter **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
 
-21. On the **Enter password** window, enter any random mix of letters and then select **Sign in**. Note the invalid password error message that appears. 
+20. On the **Enter password** window, enter any random mix of letters and then select **Sign in**. Note the invalid password error message that appears. 
 
 	Repeat this step 2 more times. 
 	
-	Since you set the **Lockout threshold** to **3**, you should receive an error message indicating that your account is locked after your third failed sign-in attempt. <br/>
+	Since you set the **Lockout threshold** to **3**, you should receive an error message indicating that this account is locked after the third failed sign-in attempt. <br/>
 
-	**User:** If you do not receive this lockout message after the third attempt, then the system has not yet finished propagating this lockout threshold change throughout the service. It may take several minutes for the change to take effect. Wait a few minutes and then sign-in again with a bogus password. Testing of this lab has seen varying results. The change sometimes propagates almost immediately so that you get locked out after the third sign-in attempt. Other times it has taken anywhere from 5 to 10 minutes before the lockout message is displayed. Continue this process until you receive the lockout message, at which point Laura's account will be temporarily locked to prevent unauthorized access.
+	**Note:** If you do not receive this lockout message after the third attempt, then the system has not yet finished propagating this lockout threshold change throughout the service. It may take several minutes for the change to take effect. Wait a few minutes and then sign-in again with a bogus password. Testing of this lab has seen varying results. The change sometimes propagates almost immediately so that you get locked out after the third sign-in attempt. Other times it has taken anywhere from 5 to 10 minutes before the lockout message is displayed. Continue this process until you receive the lockout message, at which point Laura's account will be temporarily locked to prevent unauthorized access.
 
-22. You will be prohibited from logging in again as Laura until after the **90 second lockout duration** that you set earlier. <br/>
+21. You will be prohibited from logging in again as Laura until after the **90 second lockout duration** that you set earlier. <br/>
 
-	Once you've been locked out, wait 90 seconds and then sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Laura's password, which is the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). Verify that you are able to successfully sign-in as Laura.
+	Once you've been locked out, wait 90 seconds and then sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Laura's password, which is the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). Verify that you are able to successfully sign-in as Laura.
 
-23. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
+22. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
  
 
 # Proceed to Lab 4 - Exercise 2
