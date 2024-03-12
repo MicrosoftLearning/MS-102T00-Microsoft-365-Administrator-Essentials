@@ -7,7 +7,7 @@ For MFA, you will create a Conditional Access policy to deploy MFA for all of Ad
 **Note:** Excluding specific users from using MFA is not something you would normally do in a real-world scenario. However, for the purpose of saving time in this classroom training lab, we will disable MFA for the test users. 
 
 
-### Task 1: Deploy MFA using a Conditional Access policy
+### Task 3: Deploy MFA using a Conditional Access policy
 
 As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended for larger organizations). In this exercise, you'll enable MFA through a Conditional Access policy, which is the method that Microsoft recommends. Adatum has directed Holly to enable MFA for all of its Microsoft 365 users - both internal and external. However, for the purpose of testing Adatum's Microsoft 365 pilot project implementation, Holly wants to exclude the members of the M365 pilot project group from having to use MFA to sign in. Once the pilot project is complete, Holly will update the policy by removing the exclusion of this group from the MFA requirement. The policy will also include two other requirements. It will require MFA for all cloud apps, and it will require MFA even if a user signs in from a trusted location. 
 
@@ -35,7 +35,11 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 11. You will now define the MFA requirement for all cloud apps. Under the **Target resources** section, select **No target resources selected**. Doing so displays two tabs - **Include** and **Exclude**.
 
-12. Under the **Include** tab, select **All cloud apps**. For this lab exercise, select **All cloud apps**. No cloud apps will be excluded from MFA authentication.
+12. Under the **Include** tab, note that the default setting is **None**. If you did not update this setting, then no cloud apps would require MFA - and that includes Microsoft 365. So even if you created this policy and selected the option to require MFA in step 17 but you left this **Target resources** setting to **None**, then any user signing into Microsoft 365 would not have to use MFA. <br/>
+
+	Select the **Select apps** option. Under the **Select** group, select **None**. In the **Select Cloud apps** pane that appears, scroll down through the list of apps to see all the different apps that you could require MFA for. **Do NOT select any of the apps.** We're having you scroll through this list just to get a feel for how granular you can get when requiring MFA should you decide to limit MFA to certain apps.  <br/>
+
+	For Adatum, Holly wants to require MFA for all cloud apps, which is typically a more common business scenario than selecting specific apps. Under the **Include** tab, select the **All cloud apps** option. Adatum will not exclude any cloud apps from MFA authentication. You can select the **Exclude** tab if you want to see the options it provides, but do NOT select any cloud apps for exclusion. 
 
 13. Finally, you will define the MFA requirement for all user sign-in locations. In some scenarios, organizations may only require MFA if a user signs-in from an untrusted location. However, Adatum will require MFA for all included users, regardless from where they sign in. <br/>
 
@@ -51,12 +55,15 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 18. At the bottom of the **New** window, in the **Enable policy** field, select **On**.
 
-19. Select the **Create** button to create the policy.
+19. Note the option that appears at the bottom of the page that warns you not to lock yourself out. Select the **I understand that my account will be impacted by this policy. Proceed anyway.** option. In fact, Holly won't be impacted since she's a member of the M365 pilot project group that is excluded from this policy.
 
-20. On the **Conditional Access | Policies** window that appears, verify the **MFA for all Microsoft 365 users** policy appears and that its **State** is set to **On**.
+20. Select the **Create** button to create the policy.
 
-21. Remain logged into LON-CL1 with all your Microsoft Edge browser tabs open for the next task.
-    
+21. On the **Conditional Access | Policies** window that appears, verify the **MFA for all Microsoft 365 users** policy appears and that its **State** is set to **On**.
+
+22. Remain logged into LON-CL1 with all your Microsoft Edge browser tabs open for the next task.
+
+
 ### Task 2: Test MFA for both an included and excluded user
 
 To test the Conditional Access policy that you just created, you will sign-out of Microsoft 365 as Holly, and then you'll sign back in as Adele Vance. Adele is not a member of the M365 pilot project group, so Microsoft Entra should require that she use MFA when signing in. Once you sign-in as Adele and verify that MFA works, you will sign-out as Adele and then sign back in as Holly. Since Holly is a member of the M365 pilot project group that was excluded from using MFA in the Conditional Access policy, you should not have to use MFA when signing in as Holly. 
