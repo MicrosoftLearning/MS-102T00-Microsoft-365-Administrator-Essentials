@@ -1,4 +1,4 @@
-# Learning Path 4 - Lab 4 - Exercise 3 - PIM Teammate Approval Request
+# Learning Path 4 - Lab 4 - Exercise 4 - PIM Teammate Approval Request
 
 Up to this point, you have conducted two forms of PIM approval:
 
