@@ -55,7 +55,7 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 18. At the bottom of the **New** window, in the **Enable policy** field, select **On**.
 
-19. Note the option that appears at the bottom of the page that warns you not to lock yourself out. Select the **I understand that my account will be impacted by this policy. Proceed anyway.** option. In fact, Holly won't be impacted since she's a member of the M365 pilot project group that is excluded from this policy.
+19. Note the option that appears at the bottom of the page that warns you not to lock yourself out. Select the option **I understand that my account will be impacted by this policy. Proceed anyway.** In fact, Holly won't be impacted since she's a member of the M365 pilot project group that is excluded from this policy.
 
 20. Select the **Create** button to create the policy.
 
