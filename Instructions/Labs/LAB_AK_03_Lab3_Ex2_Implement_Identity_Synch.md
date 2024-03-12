@@ -334,5 +334,5 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 19. You have now validated that your test groups and user accounts were synchronized properly. Once you have completed the validation steps, close your PowerShell window. 
  
-# Proceed to Lab 3 - Exercise 3
+# End of Lab 3
  
