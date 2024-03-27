@@ -42,7 +42,7 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 4. If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick and account** window, select Holly's account, and in the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
 
-5. In the **Microsoft Entra admin center**, the **Home** page is displayed by default. Scroll down towards the bottom of the Home page and in the **Feature highlights** section, select **Privileged Identity Management**.
+5. In the **Microsoft Entra admin center**, the **Home** page is displayed by default. Under the **Identity** section in the navigation pane, select **Identity Governance** and then select **Privileged Identity Management**.
 
 6. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
