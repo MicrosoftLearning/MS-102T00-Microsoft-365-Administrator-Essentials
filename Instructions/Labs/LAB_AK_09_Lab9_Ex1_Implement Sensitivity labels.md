@@ -74,9 +74,9 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 9. On the **Define the scope for this label** page, verify the **Items** check box is selected (select it now if necessary) and then select **Next**.
 
-10. On the **Choose protection settings for labeled items** page, select both check boxes for **Apply or remove encryption** and **Apply content marking**, and then select **Next**.
+10. On the **Choose protection settings for labeled items** page, select both check boxes for **Control Access** and **Apply content marking**, and then select **Next**.
 
-11. On the **Encryption** page, you will define who can access items that have this label applied. Select the **Remove encryption if the file or email or calendar event is encrypted** option and then select **Next**.
+11. On the **Access Control** page, you will define who can access items that have this label applied. Select the **Remove encryption if the file or email or calendar event is encrypted** option and then select **Next**.
 
 12. On the **Content marking** page, set the **Content marking** toggle switch to **On**. This displays three options that enable you to customize how you want to mark files and emails. <br/>
 
@@ -299,7 +299,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 12. In the **Pick an account** window, select **Use another account**.
 
-13. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
+13. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
 14. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
 
@@ -313,7 +313,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 	Once you have finished reviewing the document, close the document window. 
 
-19. This will return you to **Outlook on the web** with the email still displayed in the right-hand pane. In the body of the email, the document appears in a tile. You want to download the document. Select the down arrow that appears on the right-side of the tile, and in the menu that appears, select **Download**.
+19. This will return you to **Outlook on the web** with the email still displayed in the right-hand pane. In the body of the email, a link to the document should appear. You want to download the document, so select the link to open the document in Word and then download the document.
 
 20. Once the file has finished downloading, in the notification bar, select **Open file** that appears below the file name.
 
