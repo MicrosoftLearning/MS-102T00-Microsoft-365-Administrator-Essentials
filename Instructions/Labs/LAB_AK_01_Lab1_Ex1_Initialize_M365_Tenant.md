@@ -126,6 +126,8 @@ In the prior task, you learned that when someone is signed into Microsoft 365, t
 
 Custom themes must be associated with one or more Microsoft 365 groups. Therefore, to implement this change, Holly must first create a Microsoft 365 group for the members of the pilot project team. She can then create a custom theme associated with this group that enables the setting to display the signed-in user's name. In this task, you will create a Microsoft 365 group for the members of Adatum's Microsoft 365 pilot project team. You will then create a custom theme that displays the signed-in user's name, and you will assign the pilot project team to this theme. You will also review other options that can be configured with custom themes, and you can make any color changes that you wish.
 
+**Note:** At the end of this task, you will attempt to save the custom theme that you created. There is a known platform issue in the Microsoft 365 admin center where sometimes it saves the custom theme just fine, and other times it returns a message that says "Sorry, we couldn't save your theme. Please try again later." If you receive this message, there's nothing you can do but move on. This won't affect any future labs, other than it won't display the user's name next to their user icon or initials on the heading line. You are still asked to do this task to gain the experience of creating a theme such as this, even though it may not get saved.
+
 1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
 
 2. In the **Microsoft 365 admin center**, select **Teams & groups** in the left-hand navigation pane, and then under it, select **Active teams & groups**. 
@@ -184,7 +186,9 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 	**Tip:** Some color patterns aesthetically distract users. If you do change any of the colors, it's recommended that you avoid using high contrasting colors together, such as neon colors and high-resolution colors like bright pink and white.
 
-22. Select **Save**. Close the **M365 pilot project theme** pane once your changes are saved. 
+22. Select **Save**. Close the **M365 pilot project theme** pane once your changes are saved.
+
+	**Note:** As previously mentioned at the start of this task, there is a known platform issue in the Microsoft 365 admin center where sometimes it saves the custom theme just fine, and other times it returns a message that says "Sorry, we couldn't save your theme. Please try again later." If you receive this message, there's nothing you can do. This won't affect any future labs, other than it won't display the user's name next to their user icon or initials on the heading line. You are still asked to do this task to gain the experience of creating a theme such as this, even though it may not get saved. So if you get this error, skip the next step, which tests the custom theme. If your theme doesn't get saved, you won't be able to test it. However, you can perform the remaining steps following the next step in order to learn about the Default theme. 
 
 23. Select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **MOD Administrator** name appears to the left of the circle with the megaphone icon. When members of the Microsoft 365 pilot project team sign in to Microsoft 365, their username now appears to the left of their profile picture (or in this case, an icon of a megaphone) or initials due to the custom theme that you just created.
 
