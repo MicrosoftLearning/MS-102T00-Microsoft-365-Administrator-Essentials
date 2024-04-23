@@ -304,7 +304,7 @@ However, to expand your administrator skills, you will instead restore the delet
 
 8. You should see the **Inside Sales** group in this list of deleted groups. You will now run the following **Restore-MgDirectoryDeletedItem** command to restore the group. When doing so, you must declare the group's object ID as the parameter next to "-DirectoryObjectId". To finish entering this command, you must highlight the object ID of the Inside Sales group from the list of deleted groups, copy the ID (Ctrl+C), and then paste that ID (Ctrl+V) into the command (for example: -DirectoryObjectId 'e76bbcdb-24c5-41a6-805d-b352976fd2a8').  <br/>
 
-		Restore-MgDirectoryDeletedItem -DirectoryObjectId $DeletedGroup.id 'paste in the object ID for the Inside Sales group here'
+		Restore-MgDirectoryDeletedItem -DirectoryObjectId 'paste in the object ID for the Inside Sales group here'
 
 9. You should now verify the **Inside Sales** group has been recovered. While you can obviously do this in the **Microsoft 365 admin center**, since this task is working with PowerShell, let's verify the recovery using Microsoft Graph PowerShell. To do so, type the following command to get a list of the active groups, which should now include the Inside Sales Group:  <br/>
 
