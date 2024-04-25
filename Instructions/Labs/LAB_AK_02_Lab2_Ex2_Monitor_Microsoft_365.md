@@ -8,13 +8,13 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 1. You should still be logged into LON-CL1 after having completed the prior exercise, and you should still be logged into Microsoft 365 as Holly Dickson.
 
-2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open (if not, navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with the **Microsoft 365 Tenant Password**).
+2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open (if not, navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with the **Administrative Password**), and then complete the MFA process.
 
 3. In the **Welcome to Microsoft 365** page, select the **Outlook** icon in the column of app icons on the left. 
 
 4. If you're automatically signed into Outlook using Holly's account, then proceed to the next step. However, if a **Pick an account** window appears, select Holly's account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZis the tenant prefix provided by your lab hosting provider). <br/>
 
-	If an **Enter password** window appears, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e., the MOD Administrator account) as Holly's password and select **Sign in**. <br/>
+	If an **Enter password** window appears, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e., the MOD Administrator account) as Holly's password and select **Sign in**. <br/>
 
 	If a **Stay signed in?** window appears, select the **Don't show this again** check box and select **Yes**.
 
@@ -156,7 +156,7 @@ If an organization runs into a situation in Microsoft 365 where it needs assista
 
 1. On LON-CL1, in the **Microsoft 365 admin center** tab of your Edge browser, select **Support** in the navigation pane, and then select **View service requests**. 
 
-	**Note:** If the left-hand navigation pane has been minimized and only displays icons without any text, select the Navigation menu icon (the three horizontal lines) at the top of the navigation pane to expand it and display the accompanying text. <br/>
+	**Note:** If the navigation pane has been minimized and only displays icons without any text, select the Navigation menu icon (the three horizontal lines) at the top of the navigation pane to expand it and display the accompanying text. <br/>
 
 	The **Service request history** window displays any outstanding service request tickets. You should verify that no service request tickets appear on this page. <br/>
 
