@@ -222,23 +222,39 @@ In this task, you will begin by examining the administrative properties of two u
 
 11. In your **Edge** browser navigate to **https://portal.office.com**. 
 
-12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).
+12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).
 
-13. On the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. If a **Save password** window appears, select **Never**.
+13. Because MFA is required for all user sign-ins using this trial tenant, a **More information required** window appears. Select **Next**.
 
-14. If a **Welcome to Microsoft 365** dialog box appears in the middle of the page, select the forward-arrow (>) twice and then the check mark to close it.
+14. On the **Microsoft Authenticator** page that appears, you can download this mobile app or use a different method for MFA verification. For the purposes of this lab, we recommend you use your mobile phone so that you do not have to take time installing the Microsoft Authenticator app that you may not use again after this training class. Select the **I want to set up a different method** option at the bottom of the page (**Important:** Do NOT confuse this link with the **I want to use a different authenticator app** that appears above it). 
 
-15. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it.
+15. On the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
 
-16. On the **Welcome to Microsoft 365** window, which is Joni's Microsoft 365 home page, a navigation pane appears on the left side of the screen that indicates the applications the user has permission to access. In this **Apps** pane, note how the **Admin** option is not displayed. This is because Joni was never assigned a Microsoft 365 administrator role. 
+16. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
 
-17. You will now sign out of Microsoft 365 as Joni. In **Microsoft Edge**, at the top right of the **Welcome to Microsoft 365** page, select the user icon for **Joni Sherman** (the circle in the upper right-hand corner with Joni's picture in it), and in the **Joni Sherman** window that appears, select **Sign out.** 
+17. Retrieve the verification code from the text message that is sent to your phone.
 
-18. You will now sign back into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Joni, you're signed out now**. In this window, it gives you the option of signing back in as Joni, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).
+18. In the **Phone** window, enter the 6-digit verification code in the code field and then select **Next**. When the **Phone** window displays a message indicating your phone was registered successfully, select **Next**.
+
+19. On the **Success!** page, select **Done**.
+
+20. On the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. If a **Save password** window appears, select **Never**.
+
+21. If a **Welcome to Microsoft 365** dialog box appears in the middle of the page, select the forward-arrow (>) twice and then the check mark to close it.
+
+22. If a **Find more apps** window or a **Create with Microsoft 365** window or any other introductory-type window appears, select the **X** in the upper right-hand corner of the window to close it.
+
+23. On the **Welcome to Microsoft 365** window, which is Joni's Microsoft 365 home page, a navigation pane appears on the left side of the screen that indicates the applications the user has permission to access. In this **Apps** pane, note how the **Admin** option is not displayed. This is because Joni was never assigned a Microsoft 365 administrator role. 
+
+24. You will now sign out of Microsoft 365 as Joni. In **Microsoft Edge**, at the top right of the **Welcome to Microsoft 365** page, select the user icon for **Joni Sherman** (the circle in the upper right-hand corner with Joni's picture in it), and in the **Joni Sherman** window that appears, select **Sign out.** 
+
+25. You will now sign back into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Joni, you're signed out now**. In this window, it gives you the option of signing back in as Joni, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and select **Sign in**.
+
+26. Because MFA is required for all user sign-ins using this trial tenant, a **More information required** window appears. Repeat steps 13-22 to complete the MFA process.  
 
 19. If a **Welcome to Microsoft 365** dialog box appears, select the forward arrow (>) two times and then select the check mark to close the window.
 
-20. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it.
+20. If a **Find more apps** window or a **Create with Microsoft 365** window or any other introductory-type window appears, select the **X** in the upper right-hand corner of the window to close it.
 
 21. On the **Welcome to Microsoft 365** window, which is Lynne's Microsoft 365 home page, note how the **Admin** icon is displayed in the navigation pane on the left side of the screen. This icon appears because Lynne was assigned to a Microsoft 365 administrator role. Select the **Admin** icon to open the Microsoft 365 admin center.
 
@@ -298,7 +314,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 43. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
 
-44. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).  <br/>
+44. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).  <br/>
 
 	The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex (or someone who has obtained Alex's username and password) cannot log in. <br/>
 
