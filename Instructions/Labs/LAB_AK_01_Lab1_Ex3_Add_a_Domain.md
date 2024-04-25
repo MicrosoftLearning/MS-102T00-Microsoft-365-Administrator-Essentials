@@ -40,7 +40,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 10. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. 
 
-11. Because MFA is required for all user sign-ins using this trial tenant, and since Holly is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field. This is the same phone number that you used to previously sign-in as Holly on LON-CL1. Microsoft will send a verification code to your phone.
+11. Because MFA is required for all user sign-ins using this trial tenant, and since Holly is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field (where **nn** are the final two digits of your phone number). This is the same phone number that you used to previously sign-in as Holly on LON-CL1. Microsoft will send a verification code to your phone.
 
 12. Retrieve the verification code from the text message that is sent to your phone.
 
