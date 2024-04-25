@@ -306,21 +306,29 @@ In Lab 6, you will create Alert Policies using the Microsoft Defender portal. Ho
 
 		Connect-ExchangeOnline
 
-5. A **Sign in** window will appear requesting your credentials. Enter the MOD Administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+5. A **Sign in** window will appear requesting your credentials. Enter the MOD Administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. At the command prompt, run the following command to turn on audit logging:
+6. Because MFA is required for all user sign-ins using this trial tenant, and since the MOD Administrator is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field (where **nn** are the final two digits of your phone number). This is the same phone number that you used to previously sign-in as the MOD Administrator on LON-CL1. Microsoft will send a verification code to your phone.
+
+7. Retrieve the verification code from the text message that is sent to your phone.
+
+8. In the **Enter code** window, enter the 6-digit verification code in the code field and then select **Verify**.
+   
+9. In the **Protect your account** window that appears, select **Skip for now (3 times left)**.
+
+10. At the command prompt, run the following command to turn on audit logging:
 
 		Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
 
     **Note:** A warning message will be displayed indicating the admin audit log configuration change that you requested could take up to 60 minutes to take effect throughout the system. This is why you're enabling this feature now rather than waiting for the Alert Policy labs later in this course. 
 
-7. At the command prompt, run the following command to confirm that audit logging is enabled:
+11. At the command prompt, run the following command to confirm that audit logging is enabled:
 
 		AdminAuditLogConfig 
 
-    In the list of properties that's displayed, verify the **UnifiedAuditLogIngestionEnabled** property is set to  **True**.
+12. In the list of properties that's displayed, verify the **UnifiedAuditLogIngestionEnabled** property is set to  **True**.
 
-8. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
+13. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
 
 ### Task 7 - Run a PowerShell script to create and publish a sensitivity label
@@ -333,21 +341,27 @@ To address this timing issue, you will run a PowerShell script in this task that
 
 1. On **LON-CL1**, select the **File Explorer** icon from the Windows taskbar. Maximize the File Explorer window.
 
-2. In **File Explorer**, navigate to the following folder location: **C:\Users\Administrator.ADATUM\Documents\Lab Setup**.
+2. In **File Explorer**, under **This PC**, expand **Local Disk (C:)** and then navigate to the following folder location: **C:\Users\Administrator.ADATUM\Documents\Lab Setup**.
 
-3. In the **Lab Setup** subfolder a .bat file named **LabSetup.bat** should exist.
+3. In the **Lab Setup** subfolder, you should find a file named **LabSetup.bat**. <br/>
 
     Right-click on the **LabSetup.bat** file and then select **Run as administrator**. Doing so will start the lab setup process.
 
     **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab setup** window will appear on the screen.
 
-4. It may take up to 1 minute before a **Pick an account** window appears. Select the administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. On the **Enter password** window, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+4. It may take up to 1 minute before a **Pick an account** window appears (if the **Lab setup** window appears on top of the **Pick and account** window, then select inside the **Pick an account** to access it). Select the administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
 
-5. A **Pick an account** window will appear. On this window, select **MOD Administrator** from the list of available accounts. If prompted, enter the tenant admin password provided by your lab hosting provider and then select **Sign in**.
+5. Because MFA is required for all user sign-ins using this trial tenant, and since the MOD Administrator is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field (where **nn** are the final two digits of your phone number). This is the same phone number that you used to previously sign-in as the MOD Administrator on LON-CL1. Microsoft will send a verification code to your phone.
 
-    **Important:** The **Lab Setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat steps 3-5.
+6. Retrieve the verification code from the text message that is sent to your phone.
 
-6. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
+7. In the **Enter code** window, enter the 6-digit verification code in the code field and then select **Verify**.
+   
+8. A **Pick an account** window will appear. On this window, select **MOD Administrator** from the list of available accounts. If prompted, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
+
+    **Important:** The **Lab Setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat steps 3-8.
+
+9. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
 
     **Note:** It may take up to 5 minutes for the lab setup process to complete.
 
