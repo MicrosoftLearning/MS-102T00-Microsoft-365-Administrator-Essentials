@@ -19,6 +19,8 @@ In your lab environment, your lab hosting provider has already obtained a Micros
 
 You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (MOD Administrator). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Azure Active Directory and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell, and sensitivity labels.
 
+**Important:** Microsoft Security has recently employed a new security hack in the trial tenants that are used in its training courses. This feature requires that all trial tenants used by Microsoft World-Wide Learning employ Multifactor Authentication (MFA) each time a user signs into Microsoft 365. Microsoft World-Wide Learning can NOT turn off this security requirement in its training labs. In addition, we can't use Conditional Access to turn MFA on or off for selected groups of users. MFA will be turned on for everyone and can never be turned off. Any time you sign in to Microsoft 365 in this trial tenant as one of the fictitious users, you must sign in with the user's account and password AND with a second form of authentication (you will use phone verification for the labs in this course).
+
 
 ### Task 1 - Obtain Your Microsoft 365 Credentials
 
@@ -47,31 +49,49 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 4. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
 
-5. In the **Sign in** dialog box, enter the **Microsoft 365 Tenant Username** provided by your lab hosting provider (this is the MOD Administrator account). The username should be in the form of **admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider. Select **Next**. <br/>
+5. In the **Sign in** dialog box, enter the **Administrative Username** provided by your lab hosting provider (this is the MOD Administrator account) for your Microsoft 365 trial tenant. The username should be in the form of **admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider. Select **Next**. <br/>
 
 	**Note:** Your lab hosting provider may provide the ability to select a **Type text** (or equivalent) button next to resource data such as usernames, passwords, PowerShell commands, and other data that must be entered throughout the course of these labs. Other lab hosting providers may provide an alternative method, such as the ability to copy and paste in this information. Take advantage of this functionality to save yourself from having to manually enter this information. 
 
-6. In the **Enter password** dialog box, enter the unique **Microsoft 365 Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+6. In the **Enter password** dialog box, enter the unique **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
 
 7. On the **Stay signed in?** dialog box, select the **Don’t show this again** check box and then select **Yes.** On the **Save password** dialog box that appears, select **Never**.
 
-8. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
+8. As previously noted, Microsoft Security has recently employed a new security hack in the trial tenants that are used in its training courses. This feature requires that all trial tenants used by Microsoft World-Wide Learning employ Multifactor Authentication (MFA) each time a user signs into Microsoft 365. Microsoft World-Wide Learning can NOT turn off this security requirement in its training labs. <br/>
 
-9. If a **Find more apps** window or a **Create with Microsoft 365** window appears, select the **X** in the upper right-hand corner of the windows to close them. 
+	Because MFA is required for user all sign-ins using this trial tenant, a **More information required** window appears. Select **Next**.
 
-10. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the MOD Administrator's Microsoft 365 home page. <br/>
+9. On the **Microsoft Authenticator** page that appears, you can download this mobile app or use a different method for MFA verification. For the purposes of this lab, we recommend you use your mobile phone so that you do not have to take time installing the Microsoft Authenticator app that you may not use again after this training class. Select the **I want to set up a different method** option at the bottom of the page (**Important:** Do NOT confuse this link with the **I want to use a different authenticator app** that appears above it). 
 
-	Notice the icon that appears in the top-right corner of the screen. This icon represents the **MOD Administrator** account, which is the tenant admin account created by your lab hosting provider that you just signed in as. The other existing Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with each of their accounts; therefore, when you sign in as any of those users in later labs, the user's picture will be displayed rather than the user's initials. However, when a user such as the MOD Administrator has no picture assigned to it, either the user's initials are displayed in place of the picture, or as in this case, an icon that was assigned to the account. <br/>
+10. On the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
+
+11. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
+
+12. Retrieve the verification code from the text message that is sent to your phone.
+
+13. In the **Phone** window, enter the 6-digit verification code in the code field and then select **Next**. When the **Phone** window displays a message indicating your phone was registered successfully, select **Next**.
+
+14. On the **Success!** page, select **Done**.
+
+15. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
+
+16. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
+
+17. If a **Find more apps** window or a **Create with Microsoft 365** window appears, select the **X** in the upper right-hand corner of the windows to close them. 
+
+18. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the MOD Administrator's Microsoft 365 home page. <br/>
+
+	Notice either the icon or circle with "MA" (the initials for MOD Administrator) that appears in the top-right corner of the screen. Some tenants show an icon; others show the "MA" initials in a circle. The icon or initials represents the **MOD Administrator** account, which is the tenant admin account created by your lab hosting provider that you just signed in as. If any of the existing Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with their account, the user's picture will be displayed rather than the user's initials. However, when a user such as the MOD Administrator has no picture assigned to it, either the user's initials are displayed in place of the picture, or an icon is displayed if one was assigned to the account. <br/>
 
 	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
-11. In the **Microsoft 365 admin center**, select **Show all** in the left-hand navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
+19. In the **Microsoft 365 admin center**, select **Show all** in the left-hand navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
 
-12. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
+20. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
 
-13. In the **Organization profile** tab, select **Organization information** from the list of profile data.
+21. In the **Organization profile** tab, select **Organization information** from the list of profile data.
 
-14. In the **Organization information** pane that appears, enter the following information: <br/>
+22. In the **Organization information** pane that appears, enter the following information: <br/>
 
     - Name: **Adatum Corporation** (Note: Adatum Corporation is a subsidiary of Contoso Inc. The Microsoft trial tenant that your lab hosting provider obtained for this lab may have been originally assigned to Contoso. If **Contoso** (or any other value) appears as the organization name, then change it to **Adatum Corporation**.)
 
@@ -89,21 +109,21 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
     - Preferred language: **English**
 
-15. Select **Save**.
+23. Select **Save**.
 
-16. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the upper right-hand corner to close the pane.
+24. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the upper right-hand corner to close the pane.
 
-17. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.  <br/>
+25. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.  <br/>
 
     **Note:** One of the benefits of Microsoft 365 is its ability to have the latest features and updates automatically applied to your environment. This process can reduce maintenance costs and overhead for an organization and allow early-adopter users to test new features. By setting up your **Release preferences**, you can control how and when your Microsoft 365 tenant receives these updates. <br/>
 
-18. In the **Release preferences** pane that appears, the **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to a select group of users is a more typical preference as it enables an organization to control when it wants to make updates available to everyone once they've been reviewed by the control group. <br/>
+26. In the **Release preferences** pane that appears, the **Targeted release for select users** option enables you to create a control group of users who will preview updates so that you can prepare the updates for your entire organization. The **Targeted release for everyone** option is more commonly used in development environments, where you can get updates early for your entire organization. In non-development environments, such as Adatum, targeted release to a select group of users is a more typical preference as it enables an organization to control when it wants to make updates available to everyone once they've been reviewed by the control group. <br/>
 
 	Select the **Targeted release for select users** option and then select **Save**.
 
-19. In the **Release preferences** pane, below the list of release options, select the **Select users** option.
+27. In the **Release preferences** pane, below the list of release options, select the **Select users** option.
 
-20. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users (these are the Microsoft 365 user accounts created for your trial tenant by your lab hosting provider). In this list, select each of the following users. <br/>
+28. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users (these are the Microsoft 365 user accounts created for your trial tenant by your lab hosting provider). In this list, select each of the following users. <br/>
 
     **Note:** You must select each user, one at a time. After selecting a user, you must select inside the **Who should receive targeted releases?** field again to re-display the list so that you can select the next user. 
 
@@ -114,11 +134,11 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
     **Note:** Alex, Joni, and Lynne are part of Holly's Microsoft 365 pilot team. Their accounts will be used throughout the labs for this course.
     
-21. Select **Save**.
+29. Select **Save**.
 
-22. At the top of the **Release preferences** pane, note the message indicating the 4 users were added to the targeted release. Select the **X** in the upper right-hand corner to close the pane. 
+30. At the top of the **Release preferences** pane, note the message indicating the 4 users were added to the targeted release. Select the **X** in the upper right-hand corner to close the pane. 
 
-23. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
+31. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 ### Task 3- Create a custom theme for Adatum's pilot project team
 
@@ -188,7 +208,7 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 22. Select **Save**. Close the **M365 pilot project theme** pane once your changes are saved.
 
-	**Note:** As previously mentioned at the start of this task, there is a known platform issue in the Microsoft 365 admin center where sometimes it saves the custom theme just fine, and other times it returns a message that says "Sorry, we couldn't save your theme. Please try again later." If you receive this message, there's nothing you can do. This won't affect any future labs, other than it won't display the user's name next to their user icon or initials on the heading line. You are still asked to do this task to gain the experience of creating a theme such as this, even though it may not get saved. So if you get this error, skip the next step, which tests the custom theme. If your theme doesn't get saved, you won't be able to test it. However, you can perform the remaining steps following the next step in order to learn about the Default theme. 
+	**Note:** As previously mentioned at the start of this task, there is a known platform issue in the Microsoft 365 admin center where sometimes it saves the custom theme, and other times it returns a message that says "Sorry, we couldn't save your theme. Please try again later." If you receive this message, it won't affect any future labs, other than it won't display the user's name next to their user icon or initials on the heading line. You are still asked to do this task to gain the experience of creating a theme such as this, even though it may not get saved. So if you get this error, skip the next step, which tests the custom theme. If your theme doesn't get saved, you won't be able to test it. However, you can perform the remaining steps following the next step in order to learn about the Default theme. 
 
 23. Select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **MOD Administrator** name appears to the left of the circle with the megaphone icon. When members of the Microsoft 365 pilot project team sign in to Microsoft 365, their username now appears to the left of their profile picture (or in this case, an icon of a megaphone) or initials due to the custom theme that you just created.
 
