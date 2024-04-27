@@ -306,7 +306,7 @@ In Lab 6, you will create Alert Policies using the Microsoft Defender portal. Ho
 
 5. A **Sign in** window will appear requesting your credentials. Enter the MOD Administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
 
-6. Because MFA is required for all user sign-ins using this trial tenant, and since the MOD Administrator is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field (where **nn** are the final two digits of your phone number). This is the same phone number that you used to previously sign-in as the MOD Administrator on LON-CL1. Microsoft will send a verification code to your phone.
+6. Because MFA is required for all user sign-ins using this trial tenant, and since the MOD Administrator is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field (where **nn** are the final two digits of your phone number). This is the same phone number that you used to previously sign-in as the MOD Administrator on LON-CL1. Microsoft Security will send a verification code to your phone.
 
 7. Retrieve the verification code from the text message that is sent to your phone.
 
