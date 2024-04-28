@@ -145,25 +145,7 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 22. In the **Add group members to M365 pilot project** pane that appears, select inside the **Search by name or email address** field. In the list of users that appears, scroll down and select **Holly Dickson**. Select the **Add (1)** button, and then close the **Add group members to M365 pilot project** pane once Holly is added to the group.
 
-23. On the **Active teams and groups** page, select the **Refresh** icon that appears at the top of the screen, to the left of the address bar. Note how Holly Dickson's name appears next to her initials in the upper-right corner of the screen (Note: you may have to refresh twice to see Holly's name).
-
-24. In the **Microsoft 365 admin center**, select **Users** in the navigation pane, and then under it, select **Active users**.
-
-25. In the **Active Users** window, when you hover your mouse over a user's **Display name**, a **key icon** appears to the right of the user's name. By selecting the key icon, you can reset a user's password. You must reset the passwords for Adele Vance, Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez to the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and that you previously assigned to Holly Dickson.<br/>
-
-    Hover your mouse over **Adele Vance** and select the key icon that appears.
-
-26. In the **Reset password** pane that appears for Adele, clear (uncheck) the **Automatically create password** check box. 
-
-27. In the **Password** field that appears, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). Select the eye (**Show Password**) icon at the end of the **Password** field to display the value that you entered. Verify that you correctly entered the tenant password.
-
-28. Clear (uncheck) the **Require this user to change their password when they first sign in** check box.
-
-29. Select **Reset Password**. If a **Save password** dialog box appears at the top of the screen, select **Never**. Then select **Close** on the **Password has been reset** pane.
-
-30. Repeat steps 25-29 for **Alex Wilber**, **Joni Sherman**, **Lynne Robbins**, and **Patti Fernandez**. Reset each of their passwords to the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). In step 27, don't forget to show the password you entered to verify it's the correct value.
-
-31. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
+23. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
 ### Task 3 – Set up Microsoft 365 Groups 
