@@ -345,9 +345,11 @@ To address this timing issue, you will run a PowerShell script in this task that
 
     Right-click on the **LabSetup.bat** file and then select **Run as administrator**. Doing so will start the lab setup process.
 
-    **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. A **Lab setup** window will appear on the screen.
+    **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. At this point, a **Lab setup** window will appear on the screen.
 
-4. It may take up to 1 minute before a **Pick an account** window appears (if the **Lab setup** window appears on top of the **Pick and account** window, then select inside the **Pick an account** to access it). Select the administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
+4. It may take up to 1 minute before a **Pick an account** window appears (if the **Lab setup** window appears on top of the **Pick and account** window, then select inside the **Pick an account** window to bring it to the front so that you can access it). S<br/>
+
+    Select the administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
 
 5. Because MFA is required for all user sign-ins using this trial tenant, and since the MOD Administrator is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field (where **nn** are the final two digits of your phone number). This is the same phone number that you used to previously sign-in as the MOD Administrator on LON-CL1. Microsoft will send a verification code to your phone.
 
@@ -359,9 +361,9 @@ To address this timing issue, you will run a PowerShell script in this task that
 
     **Important:** The **Lab Setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat steps 3-8.
 
-9. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
-
     **Note:** It may take up to 5 minutes for the lab setup process to complete.
+
+9. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
 
 Congratulations! You have completed all the steps to initialize your lab tenant. You are now ready to perform the remaining lab exercises.
 
