@@ -141,7 +141,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 10. You will now create a variable that captures the attributes for the Service Support Administrator template. When you type in the following command, press **Ctrl+V** to paste in the Service Support Administrator template ID that you copied to the clipboard in the prior step. <br/>
 
-	At the command prompt, type the following command and press Enter: <br/>
+	At the command prompt, type the following command and press Enter (don't forget the closing bracket after pasting in the template ID): <br/>
 
 		$ServiceSupportRoleTemplate = @{ RoleTemplateID = "paste in template ID here" }  <br/>
 
@@ -222,7 +222,11 @@ In this task, you will begin by examining the administrative properties of two u
 
 11. In your **Edge** browser navigate to **https://portal.office.com**. 
 
-12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).
+12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). <br/>
+
+	**Important:** Your lab-hosting provider assigned an **Administrative Password** to the MOD Administrator account, and you assigned this same **Administrative Password** to Holly Dickson's account when you created it. However, your lab-hosting provider assigned and a different **User Password** to all the other pre-defined user accounts. Going forward, when signing in as any user other than the MOD Administrator or Holly Dickson, you must enter this **User Password** and NOT the **Administrative Password**. <br/>
+
+	Since you're signing in as Joni Sherman, enter this **User Password** in the **Enter password** window.
 
 13. Because MFA is required for all user sign-ins using this trial tenant, a **More information required** window appears. Select **Next**.
 
@@ -248,7 +252,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 24. You will now sign out of Microsoft 365 as Joni. In **Microsoft Edge**, at the top right of the **Welcome to Microsoft 365** page, select the user icon for **Joni Sherman** (the circle in the upper right-hand corner with Joni's picture in it), and in the **Joni Sherman** window that appears, select **Sign out.** 
 
-25. You will now sign back into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Joni, you're signed out now**. In this window, it gives you the option of signing back in as Joni, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and select **Sign in**.
+25. You will now sign back into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Joni, you're signed out now**. In this window, it gives you the option of signing back in as Joni, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the same **User Password** provided by your lab hosting provider and select **Sign in**.
 
 26. Because MFA is required for all user sign-ins using this trial tenant, a **More information required** window appears. Repeat steps 13-22 to complete the MFA process.  
 
@@ -284,9 +288,9 @@ In this task, you will begin by examining the administrative properties of two u
 
 32. If a survey request window appears, select **Cancel**.
 
-33. In the **Active users** list, select the **key (Reset a password)** icon for **Pradeep Gupta**. 
+33. You now want to change Prdeep Gupta's password. In the **Active users** list, select the **key (Reset a password)** icon that appears to the right of **Pradeep Gupta**. 
 
-34. In the **Reset password** window for Pradeep, verify the **Automatically create a password** check box displays a check mark; if it doesn't, then select this box now so that the system automatically generates a password for Pradeep.  <br/>
+34. In the **Reset password** window that appears for Pradeep, verify the **Automatically create a password** check box displays a check mark; if it doesn't, then select this box now so that the system automatically generates a password for Pradeep.  <br/>
 
 	This is just a temporary password because Lynne wants to force Pradeep to change it the next time he logs in. Therefore, verify the **Require this user to change their password when they first sign in** check box displays a check mark; if the box is clear, then select it so that it displays a check mark.
 	
@@ -314,7 +318,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 43. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
 
-44. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).  <br/>
+44. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the **User Password** provided by your lab hosting provider.  <br/>
 
 	The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex (or someone who has obtained Alex's username and password) cannot log in. <br/>
 
