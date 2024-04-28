@@ -212,31 +212,37 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 10. In the **Start** menu, select **Word**.
 
-11. On the **Sign in to get started with Office** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the **User Password** provided by your lab hosting provider.
+11. On the **Sign in to get started with Word** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and select **Next**. In the **Password** field, enter the **User Password** provided by your lab hosting provider and select **Sign in**.
 
-12. On the **Stay signed in to all your apps** window, select **OK**.
+12. Because MFA is required for all user sign-ins using this trial tenant, and since Holly is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field (where **nn** are the final two digits of your phone number). This is the same phone number that you used to previously sign-in as Holly on LON-CL1. Microsoft will send a verification code to your phone.
 
-13. On the **You're all set!** window, select **Done**.
+13. Retrieve the verification code from the text message that is sent to your phone.
 
-14. On the **Accept the license agreement** window, select **Accept**, and then select **Close**.
+14. In the **Enter code** window, enter the 6-digit verification code in the code field and then select **Verify**.
 
-15. Verify that Word is functioning properly by opening a blank Word document, entering some text, and saving the document to the **Documents** folder. <br/>
+15. On the **Stay signed in to all your apps** window, select **OK**.
+
+16. On the **You're all set!** window, select **Done**.
+
+17. On the **Accept the license agreement** window, select **Accept**, and then select **Close**.
+
+18. Verify that Word is functioning properly by opening a blank Word document, entering some text, and saving the document to the **Documents** folder. <br/>
 
 	**Note:** If a **Check out our new look** dialog box appears, select **Not now**.
 
-16. Close Word.
+19. Close Word.
 
-17. Now that you have completed this lab exercise by installing Microsoft 365 Apps for enterprise, you should log out of Microsoft 365 as Laura Atkins. Select Laura's user icon in the upper-right corner of the screen (the circle with LA in it), and then in Laura's property window, select **Sign out**.
+20. Now that you have completed this lab exercise by installing Microsoft 365 Apps for enterprise, you should log out of Microsoft 365 as Laura Atkins. Select Laura's user icon in the upper-right corner of the screen (the circle with LA in it), and then in Laura's property window, select **Sign out**.
 
-18. Once Laura is signed out, close your Microsoft Edge browser. 
+21. Once Laura is signed out, close your Microsoft Edge browser. 
 
-19. You now want to log out of LON-CL2 as Laura Atkins and log back in as the Adatum administrator. This will prepare LON-CL2 for the next lab that uses this PC. <br/>
+22. You now want to log out of LON-CL2 as Laura Atkins and log back in as the Adatum administrator. This will prepare LON-CL2 for the next lab that uses this PC. <br/>
 
 	On LON-CL2, select the **Ctrl+Alt+Delete** function in your VM lab environment. 
 	
-18. On the desktop menu, select **Switch user**. 
+23. On the desktop menu, select **Switch user**. 
 
-19. On the desktop, the **Admin** is selected by default. Enter **Pa55w.rd** in the **Password** field and then select the forward arrow.  <br/>
+24. On the desktop, the **Admin** is selected by default. Enter **Pa55w.rd** in the **Password** field and then select the forward arrow.  <br/>
 
 	The desktop should now display the logged-on user as **lon-cl2\admin**. LON-CL2 is now ready for the next lab that uses it.
 
