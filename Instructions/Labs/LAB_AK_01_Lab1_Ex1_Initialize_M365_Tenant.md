@@ -216,9 +216,11 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 26. On the **Default theme** pane, notice how the **Show the user's display name** option is not selected for the default theme. If Holly later decides to make the **Show the user's display name** option a permanent feature, she will select this option in the **Default theme** pane so that it applies to all Adatum users, and she will delete the **M365 Pilot project theme**. <br/>
 
-	Close the **Default theme** pane.
+	**Note:** If you received the "Sorry, we couldn't save your theme. Please try again later." error message when you previously tried to save your custom theme, then select this **Show the user's display name** option on the Default theme, and then select **Save**. We want you to see what happens when this option is selected, even if you couldn't save your custom theme. If you set this option on the Default theme, then select the **Refresh** icon at the top of the screen, to the left of the address bar. Once the screen refreshes, note how the **MOD Administrator** name appears to the left of either the circle with the MA initials or the icon selected for this account by your lab-hosting provider.
+ 
+27. Close the **Default theme** pane.
 
-27. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
+28. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 
 ### ‎Task 4 - Enable Information Rights Management for SharePoint Online 
