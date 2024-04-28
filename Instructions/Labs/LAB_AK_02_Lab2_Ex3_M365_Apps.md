@@ -38,7 +38,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 	After configuring this field, Laura’s **Username** should appear as: **Laura@xxxxxZZZZZZ.onmicrosoft.com**
 
 	- Password settings: Clear (uncheck) the **Automatic create a password** option
-	- Password: Enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) 
+	- Password: Enter the **User Password** provided by your lab hosting provider 
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 	
 5. Select **Next**.
@@ -70,7 +70,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 15. In the **Sign in** window, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-16. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.**
+16. In the **Enter password** window, enter the **User Password** provided by your lab hosting provider and then select **Sign in.**
 
 17. Because MFA is required for all user sign-ins using this trial tenant, a **More information required** window appears. Select **Next**.
 
@@ -135,7 +135,9 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 	To do this, you must first switch back to **LON-CL2**.
 
-12. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins (verify Laura's **LA** initials appear in the upper-right corner of the browser; note that Laura's name doesn't appear because she's not a member of the M365 pilot project group that was assigned to the custom theme). In your browser, verify you're on the **Home | Microsoft 365** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the navigation pane on the left because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
+12. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. If you were able to earlier save your custom theme, then verify that Laura's **LA** initials appear in the upper-right corner of the browser. In this case, Laura's name doesn't appear because she's not a member of the M365 pilot project group that was assigned to the custom theme that you created. However, if you weren't able to save your custom theme, then you were instructed to update the Default theme to display the sign-in user's name. If you were unable to save your custom them, then the Default theme should apply, and you should see Laura's name. <br/>
+
+	In your browser, verify you're on the **Home | Microsoft 365** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the navigation pane on the left because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
 
 	Select the **Refresh** icon that appears to the left of the address bar at the top of your browser. <br/>
 
@@ -210,7 +212,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 10. In the **Start** menu, select **Word**.
 
-11. On the **Sign in to get started with Office** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).
+11. On the **Sign in to get started with Office** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the **User Password** provided by your lab hosting provider.
 
 12. On the **Stay signed in to all your apps** window, select **OK**.
 
@@ -224,7 +226,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 16. Close Word.
 
-17. Now that you have completed this lab exercise by installing Microsoft 365 Apps for enterprise, you should log out of Microsoft 365 as Laura Atkins. Select Laura's icon in the upper-right corner of the screen (the circle with LA in it), and then in Laura's property window, select **Sign out**.
+17. Now that you have completed this lab exercise by installing Microsoft 365 Apps for enterprise, you should log out of Microsoft 365 as Laura Atkins. Select Laura's user icon in the upper-right corner of the screen (the circle with LA in it), and then in Laura's property window, select **Sign out**.
 
 18. Once Laura is signed out, close your Microsoft Edge browser. 
 
