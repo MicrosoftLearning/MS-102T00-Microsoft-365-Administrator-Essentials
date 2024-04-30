@@ -19,7 +19,7 @@ In your lab environment, your lab hosting provider has already obtained a Micros
 
 You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (MOD Administrator). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Azure Active Directory and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell, and sensitivity labels.
 
-**Important:** Microsoft Security has recently employed a new security hack in the trial tenants that are used in its training courses. This feature requires that all trial tenants used by Microsoft World-Wide Learning employ Multifactor Authentication (MFA) each time a user signs into Microsoft 365. Microsoft World-Wide Learning can NOT turn off this security requirement in its training labs. In addition, we can't use Conditional Access to turn MFA on or off for selected groups of users. MFA will be turned on for everyone and can never be turned off. Any time you sign in to Microsoft 365 in this trial tenant as one of the fictitious users, you must sign in with the user's account and password AND with a second form of authentication (you will use phone verification for the labs in this course).
+**Important MFA Announcement:** Microsoft Security has recently employed a new security hack in the trial tenants that are used in its training courses. This feature requires that all trial tenants used by Microsoft World-Wide Learning employ Multifactor Authentication (MFA) each time a user signs into Microsoft 365. Microsoft World-Wide Learning can NOT turn off this security requirement in its training labs. In addition, we can't use Conditional Access to turn MFA on or off for selected groups of users. MFA will be turned on for everyone and can never be turned off. Any time you sign in to Microsoft 365 in this trial tenant as one of the fictitious users, you must sign in with the user's account and password AND with a second form of authentication. Your instructor will guide you through the MFA process that's currently employed in the tenant.
 
 
 ### Task 1 - Obtain Your Microsoft 365 Credentials
@@ -41,6 +41,8 @@ You should write down the following information (provided by your instructor) fo
 
 Throughout the labs in this course, you will role-play by taking on the persona of Holly Dickson, Adatum’s Microsoft 365 Administrator. In your role as Holly, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account for herself (you will do this in the next lab exercise), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account is the MOD Administrator account, whose alias is "admin". The username for this account is admin@xxxxxZZZZZZ.onmicrosoft.com (where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider); the display name for this account will be MOD Administrator.
 
+**Password Note:** Your lab-hosting provider will be providing two passwords that are used with the fictitious user accounts in your Microsoft 365 trial tenant. The MOD Administrator account, which is the default tenant administrator, has been assigned the **Administrative Password**. All other users - even those assigned an admin role - have been assigned the **User Password**.
+
 1. When you open your lab hosting provider's Virtual Machine environment, you need to begin with the Client 1 VM (LON-CL1). If your VM environment opens with one of the other machines (such as LON-DC1), then switch to **LON-CL1** now.
 
 2. Log into **LON-CL1** as the local **Administrator** account that was created by your lab hosting provider with the password **Pa55w.rd**. 
@@ -53,43 +55,27 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 	**Note:** Your lab hosting provider may provide the ability to select a **Type text** (or equivalent) button next to resource data such as usernames, passwords, PowerShell commands, and other data that must be entered throughout the course of these labs. Other lab hosting providers may provide an alternative method, such as the ability to copy and paste in this information. Take advantage of this functionality to save yourself from having to manually enter this information. 
 
-6. In the **Enter password** dialog box, enter the unique **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
+6. In the **Enter password** dialog box, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process. 
 
-7. As previously noted, Microsoft Security has recently employed a new security hack in the trial tenants that are used in its training courses. This feature requires that all trial tenants used by Microsoft World-Wide Learning employ Multifactor Authentication (MFA) each time a user signs into Microsoft 365. Microsoft World-Wide Learning can NOT turn off this security requirement in its training labs. <br/>
+7. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
 
-	Because MFA is required for all user sign-ins using this trial tenant, a **More information required** window appears. Select **Next**.
+8. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
-8. On the **Microsoft Authenticator** page that appears, you can download this mobile app or use a different method for MFA verification. For the purposes of this lab, we recommend you use your mobile phone so that you do not have to take time installing the Microsoft Authenticator app that you may not use again after this training class. Select the **I want to set up a different method** option at the bottom of the page (**Important:** Do NOT confuse this link with the **I want to use a different authenticator app** that appears above it). 
+9. If a **Find more apps** dialog box or a **Create with Microsoft 365** dialog box appears, select the **X** in the upper right-hand corner of the boxes to close them. 
 
-9. On the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
-
-10. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
-
-11. Retrieve the verification code from the text message that Microsoft Security sent to your phone.
-
-12. In the **Phone** window, enter the 6-digit verification code in the code field and then select **Next**. When the **Phone** window displays a message indicating your phone was registered successfully, select **Next**.
-
-13. On the **Success!** page, select **Done**.
-
-14. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
-
-15. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
-
-16. If a **Find more apps** dialog box or a **Create with Microsoft 365** dialog box appears, select the **X** in the upper right-hand corner of the boxes to close them. 
-
-17. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the MOD Administrator's Microsoft 365 home page. <br/>
+10. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the MOD Administrator's Microsoft 365 home page. <br/>
 
 	Notice that either an icon or a circle with "MA" (the initials for MOD Administrator) appears in the top-right corner of the screen. Some trial tenants show an icon; others show the "MA" initials in a circle; it all depends on whether your lab hosting provider added an icon to the MOD Administrator's account. The icon or initials represents the **MOD Administrator** account, which is the tenant administrator account created by your lab hosting provider that you just signed in as. If any of the existing Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with their account, the user's picture is displayed rather than the user's initials when you sign into Microsoft 365 as that user. However, when a user such as the MOD Administrator has no picture assigned to it, either the user's initials are displayed in place of the picture, or an icon is displayed if one was assigned to the account by your lab hosting provider. <br/>
 
 	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
-18. In the **Microsoft 365 admin center**, select **Show all** in the left-hand navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
+11. In the **Microsoft 365 admin center**, select **Show all** in the left-hand navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
 
-19. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
+12. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
 
-20. In the **Organization profile** tab, select **Organization information** from the list of profile data.
+13. In the **Organization profile** tab, select **Organization information** from the list of profile data.
 
-21. In the **Organization information** pane that appears, enter the following information: <br/>
+14. In the **Organization information** pane that appears, enter the following information: <br/>
 
     - Name: **Adatum Corporation** (Note: Adatum Corporation is a subsidiary of Contoso Inc. The Microsoft trial tenant that your lab hosting provider obtained for this lab may have been originally assigned to Contoso. If **Contoso** (or any other value) appears as the organization name, then change it to **Adatum Corporation**.)
 
@@ -107,11 +93,11 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
     - Preferred language: **English**
 
-22. Select **Save**.
+15. Select **Save**.
 
-23. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the upper right-hand corner to close the pane.
+16. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the upper right-hand corner to close the pane.
 
-24. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.  <br/>
+17. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.  <br/>
 
     **Note:** One of the benefits of Microsoft 365 is its ability to have the latest features and updates automatically applied to your environment. This process can reduce maintenance costs and overhead for an organization and allow early-adopter users to test new features. By setting up your **Release preferences**, you can control how and when your Microsoft 365 tenant receives these updates. <br/>
 
@@ -119,9 +105,9 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 	Select the **Targeted release for select users** option and then select **Save**.
 
-26. In the **Release preferences** pane, below the list of release options, select the **Select users** option.
+18. In the **Release preferences** pane, below the list of release options, select the **Select users** option.
 
-27. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users (these are the Microsoft 365 user accounts created for your trial tenant by your lab hosting provider). In this list, select each of the following users. <br/>
+19. In the **Choose users for targeted release** pane that appears, select inside the **Who should receive targeted releases?** field. This displays the list of active users (these are the Microsoft 365 user accounts created for your trial tenant by your lab hosting provider). In this list, select each of the following users. <br/>
 
     **Note:** You must select each user, one at a time. After selecting a user, you must select inside the **Who should receive targeted releases?** field again to re-display the list so that you can select the next user. 
 
@@ -132,11 +118,11 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
     **Note:** Alex, Joni, and Lynne are part of Holly's Microsoft 365 pilot team. Their accounts will be used throughout the labs for this course.
     
-28. Select **Save**.
+20. Select **Save**.
 
-29. At the top of the **Release preferences** pane, note the message indicating the 4 users were added to the targeted release. Select the **X** in the upper right-hand corner to close the pane. 
+21. At the top of the **Release preferences** pane, note the message indicating the 4 users were added to the targeted release. Select the **X** in the upper right-hand corner to close the pane. 
 
-30. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
+22. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 ### Task 3- Create a custom theme for Adatum's pilot project team
 
@@ -306,29 +292,21 @@ In Lab 6, you will create Alert Policies using the Microsoft Defender portal. Ho
 
 		Connect-ExchangeOnline
 
-5. A **Sign in** window will appear requesting your credentials. Enter the MOD Administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
+5. A **Sign in** window will appear requesting your credentials. Enter the MOD Administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process. 
 
-6. Because MFA is required for all user sign-ins using this trial tenant, and since the MOD Administrator is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field (where **nn** are the final two digits of your phone number). This is the same phone number that you used to previously sign-in as the MOD Administrator on LON-CL1. Microsoft Security will send a verification code to your phone.
-
-7. Retrieve the verification code from the text message that is sent to your phone.
-
-8. In the **Enter code** window, enter the 6-digit verification code in the code field and then select **Verify**.
-   
-9. In the **Protect your account** window that appears, select **Skip for now (3 times left)**.
-
-10. At the command prompt, run the following command to turn on audit logging:
+6. At the command prompt, run the following command to turn on audit logging:
 
 		Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
 
     **Note:** A warning message will be displayed indicating the admin audit log configuration change that you requested could take up to 60 minutes to take effect throughout the system. This is why you're enabling this feature now rather than waiting for the Alert Policy labs later in this course. 
 
-11. At the command prompt, run the following command to confirm that audit logging is enabled:
+7. At the command prompt, run the following command to confirm that audit logging is enabled:
 
 		AdminAuditLogConfig 
 
-12. In the list of properties that's displayed, verify the **UnifiedAuditLogIngestionEnabled** property is set to  **True**.
+8. In the list of properties that's displayed, verify the **UnifiedAuditLogIngestionEnabled** property is set to  **True**.
 
-13. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
+9. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
 
 ### Task 7 - Run a PowerShell script to create and publish a sensitivity label
@@ -349,23 +327,15 @@ To address this timing issue, you will run a PowerShell script in this task that
 
     **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. At this point, a **Lab setup** window will appear on the screen.
 
-4. It may take up to 1 minute before a **Pick an account** window appears (if the **Lab setup** window appears on top of the **Pick and account** window, then select inside the **Pick an account** window to bring it to the front so that you can access it). S<br/>
+4. It may take up to 1 minute before a **Pick an account** window appears (if the **Lab setup** window appears on top of the **Pick and account** window, then select inside the **Pick an account** window to bring it to the front so that you can access it). <br/>
 
-    Select the administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
+    Select the tenant administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process. <br/>
 
-5. Because MFA is required for all user sign-ins using this trial tenant, and since the MOD Administrator is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field (where **nn** are the final two digits of your phone number). This is the same phone number that you used to previously sign-in as the MOD Administrator on LON-CL1. Microsoft will send a verification code to your phone.
+    **Important:** The **Lab Setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat steps 3-4.
 
-6. Retrieve the verification code from the text message that is sent to your phone.
+    **Note:** Once you finish signing in, it may take up to 5 minutes for the lab setup process to complete.
 
-7. In the **Enter code** window, enter the 6-digit verification code in the code field and then select **Verify**.
-   
-8. A **Pick an account** window will appear. On this window, select **MOD Administrator** from the list of available accounts. If prompted, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**.
-
-    **Important:** The **Lab Setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat steps 3-8.
-
-    **Note:** It may take up to 5 minutes for the lab setup process to complete.
-
-9. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
+5. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
 
 Congratulations! You have completed all the steps to initialize your lab tenant. You are now ready to perform the remaining lab exercises.
 
