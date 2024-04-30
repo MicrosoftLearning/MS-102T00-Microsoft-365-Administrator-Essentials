@@ -14,7 +14,7 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 4. If you're automatically signed into Outlook using Holly's account, then proceed to the next step. However, if a **Pick an account** window appears, select Holly's account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZis the tenant prefix provided by your lab hosting provider). <br/>
 
-	If an **Enter password** window appears, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e., the MOD Administrator account) as Holly's password and select **Sign in**. <br/>
+	If an **Enter password** window appears, enter the **Administrative Password** provided by your lab hosting provider that you assigned to Holly's account and then select **Sign in**. <br/>
 
 	If a **Stay signed in?** window appears, select the **Don't show this again** check box and select **Yes**.
 
