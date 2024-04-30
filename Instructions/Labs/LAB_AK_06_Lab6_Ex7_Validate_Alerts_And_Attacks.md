@@ -53,7 +53,7 @@ In Lab 6, Exercise 4, you created a default Microsoft 365 alert policy that noti
 
 2. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-3. In your **Microsoft Edge** browser, if you have a tab open that contains Holly's Outlook mailbox, then select it now. Otherwiese, select the **Home | Microsoft 365** tab, and then on the **Welcome to Microsoft 365** page, select **Outlook** in the column of apps on the left-side of the screen. 
+3. In your **Microsoft Edge** browser, if you have a tab open that contains Holly's Outlook mailbox, then select it now. Otherwise, select the **Home | Microsoft 365** tab, and then on the **Welcome to Microsoft 365** page, select **Outlook** in the column of apps on the left-side of the screen. 
 
 4. In Holly's Outlook mailbox, check her Inbox for an **Informational-severity alert: eDiscovery search started or exported** email that was automatically sent by the default eDiscovery alert that you enabled in Exercise 4. The purpose of this message is to inform Holly that an eDiscovery search was created or exported. The email contains a **View alert details** button that you will select to display details on the alert that was generated. When testing this lab, this button did not seem to work if you opened the email. However, when you viewed the contents of the email in preview pane in Outlook, then the button worked. So select the email in the Inbox, and then in the preview pane that displays the body of the email, select the **View alert details** button. Selecting this button opens the **Microsoft Defender** portal in a new tab.
 
