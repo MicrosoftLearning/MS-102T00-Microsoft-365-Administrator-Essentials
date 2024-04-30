@@ -70,35 +70,21 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 15. In the **Sign in** window, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-16. In the **Enter password** window, enter the **User Password** provided by your lab hosting provider and then select **Sign in.**
+16. In the **Enter password** window, enter the **User Password** provided by your lab hosting provider and then select **Sign in.** If required, complete the MFA sign-in process.
 
-17. Because MFA is required for all user sign-ins using this trial tenant, a **More information required** window appears. Select **Next**.
+17. If a **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. In the **Save password** window, select **Never**.
 
-18. On the **Microsoft Authenticator** page that appears, you can download this mobile app or use a different method for MFA verification. For the purposes of this lab, we recommend you use your mobile phone so that you do not have to take time installing the Microsoft Authenticator app that you may not use again after this training class. Select the **I want to set up a different method** option at the bottom of the page (**Important:** Do NOT confuse this link with the **I want to use a different authenticator app** that appears above it). 
+18. In the **Welcome to Microsoft 365** dialog box that appears in the middle of the screen, select the forward arrow twice and then the check mark. 
 
-19. On the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
-
-20. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
-
-21. Retrieve the verification code from the text message that is sent to your phone.
-
-22. In the **Phone** window, enter the 6-digit verification code in the code field and then select **Next**. When the **Phone** window displays a message indicating your phone was registered successfully, select **Next**.
-
-23. On the **Success!** page, select **Done**.
-
-24. If a **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. In the **Save password** window, select **Never**.
-
-25. In the **Welcome to Microsoft 365** dialog box that appears in the middle of the screen, select the forward arrow twice and then the check mark. 
-
-26. In the **Welcome to Microsoft 365** window (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the left-side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
+19. In the **Welcome to Microsoft 365** window (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the left-side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
 
 	Select the **Install apps** button, and then in the drop-down menu that appears, select **Other install options**. This opens the **My account** window for Laura.
 
-27. In Laura's **My account** window, under the **Office apps & devices** tile, select **View apps & devices**. Note the message that appears at the top of page. Laura has not been assigned a license that includes the Office desktop apps, so she’s unable to install Microsoft 365 Apps for enterprise. <br/>
+20. In Laura's **My account** window, under the **Office apps & devices** tile, select **View apps & devices**. Note the message that appears at the top of page. Laura has not been assigned a license that includes the Office desktop apps, so she’s unable to install Microsoft 365 Apps for enterprise. <br/>
 	
 	‎**Important:** You have just verified that a user can't download Microsoft 365 Apps for enterprise if they haven't been assigned an appropriate Microsoft 365 license. 
 	
-28. Leave LON-CL2 open and remain signed into Microsoft 365 as Laura Atkins for the next task. In your Edge browser, close the **My account** tab and the **Welcome to Microsoft Edge** tab, but leave the **Home | Microsoft 365** tab open for the next task.
+21. Leave LON-CL2 open and remain signed into Microsoft 365 as Laura Atkins for the next task. In your Edge browser, close the **My account** tab and the **Welcome to Microsoft Edge** tab, but leave the **Home | Microsoft 365** tab open for the next task.
 
 
 ### Task 2 – Verify how the global Office download setting affects installing Microsoft 365 Apps for enterprise
@@ -135,9 +121,13 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 	To do this, you must first switch back to **LON-CL2**.
 
-12. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. If you were able to earlier save your custom theme, then verify that Laura's **LA** initials appear in the upper-right corner of the browser. In this case, Laura's name doesn't appear because she's not a member of the M365 pilot project group that was assigned to the custom theme that you created. However, if you weren't able to save your custom theme, then you were instructed to update the Default theme to display the sign-in user's name. If you were unable to save your custom them, then the Default theme should apply, and you should see Laura's name. <br/>
+12. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. <br/>
 
-	In your browser, verify you're on the **Home | Microsoft 365** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the navigation pane on the left because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
+	If you were able to earlier save your custom theme, then verify that Laura's name doesn't appear next to her **LA** initials. Because Laura's not a member of the M365 pilot project group that was assigned to the custom theme that you created, the policy setting of displaying the signed-in user's name that you configured for your custom theme doesn't apply to her. <br/>
+
+	However, if you weren't able to save your custom theme, then you were instructed to update the Default theme to display the sign-in user's name. If you were unable to save your custom them, then the Default theme should apply, and you should see Laura's name. 
+
+13. In your browser, verify you're on the **Home | Microsoft 365** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the navigation pane on the left because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
 
 	Select the **Refresh** icon that appears to the left of the address bar at the top of your browser. <br/>
 
@@ -145,39 +135,39 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 	If a **Find more apps** window appears, select the **X** to close it.
 
-13. Select the **Install apps** button, and then in the drop-down menu, select **Other install options**.
+14. Select the **Install apps** button, and then in the drop-down menu, select **Other install options**.
 	
-14. This will open Laura's **My account** window. Under the **Office apps & devices** tile, select **View apps & devices**. 
+15. This will open Laura's **My account** window. Under the **Office apps & devices** tile, select **View apps & devices**. 
 
-15. In the **Apps & devices** window, a message is displayed under the **Office** section that indicates the admin has turned off Office installs. <br/>
+16. In the **Apps & devices** window, a message is displayed under the **Office** section that indicates the admin has turned off Office installs. <br/>
 	
 	‎**Important:** You have just verified that a licensed user is unable to download Microsoft 365 Apps for enterprise if the global Office download setting has been turned Off.
 
-16. At this point Holly wants to turn the global Office download setting back On so that Laura can download Microsoft 365 Apps for enterprise. <br/>
+17. At this point Holly wants to turn the global Office download setting back On so that Laura can download Microsoft 365 Apps for enterprise. <br/>
 
 	To do this, switch back to **LON-CL1**. 
 
-17. On **LON-CL1**, you should still be logged into Microsoft 365 as Holly Dickson. In the **Microsoft 365 admin center**, under the **Settings** section in the navigation pane, select **Org Settings**. 
+18. On **LON-CL1**, you should still be logged into Microsoft 365 as Holly Dickson. In the **Microsoft 365 admin center**, under the **Settings** section in the navigation pane, select **Org Settings**. 
 
-18. In the **Org settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Microsoft 365 installation options**.
+19. In the **Org settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Microsoft 365 installation options**.
 
-19. In the **Microsoft 365 installation options** pane, select the **Installation** tab, then under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently blank. Select this check box so that it displays a check mark, which now turns this feature back On.
+20. In the **Microsoft 365 installation options** pane, select the **Installation** tab, then under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently blank. Select this check box so that it displays a check mark, which now turns this feature back On.
 
-20. Select **Save**, and then once the update has been saved, select the **X** in the upper-right corner of this window to close it. 
+21. Select **Save**, and then once the update has been saved, select the **X** in the upper-right corner of this window to close it. 
 
-21. Now that this global Office download option is turned back On, you should see if it affects Laura’s ability to download Microsoft 365 Apps for enterprise. <br/>
+22. Now that this global Office download option is turned back On, you should see if it affects Laura’s ability to download Microsoft 365 Apps for enterprise. <br/>
 
 	To do this, switch back to **LON-CL2**.
 
-22. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. The **Office apps and devices** page should be displayed along with the message that indicated your admin has turned off Office installs. Since you just turned this global option back On, you need to refresh this page to see how it affects Laura’s ability to download Microsoft 365 Apps for enterprise. <br/>
+23. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. The **Office apps and devices** page should be displayed along with the message that indicated your admin has turned off Office installs. Since you just turned this global option back On, you need to refresh this page to see how it affects Laura’s ability to download Microsoft 365 Apps for enterprise. <br/>
 
 	Select the **Refresh** icon that appears to the left of the address bar at the top of your browser. 
 
-23. In the **My account** window that appears, under the **Office apps & devices** tile, an **Install Office** button appears along with a message indicating you can install Office on up to 5 PCs or Macs, 5 tablets, and 5 smartphones.  <br/>
+24. In the **My account** window that appears, under the **Office apps & devices** tile, an **Install Office** button appears along with a message indicating you can install Office on up to 5 PCs or Macs, 5 tablets, and 5 smartphones.  <br/>
 	
 	‎**Important:** You have just verified that a user with a Microsoft 365 license is able to download Microsoft 365 Apps for enterprise if the global Office download setting is turned On. Do **NOT** select the **Install Office** button at this time. You will do that in the next task.
 
-24. Remain on LON-CL2 and continue to the next task to perform the user-driven installation for Laura Atkins.
+25. Remain on LON-CL2 and continue to the next task to perform the user-driven installation for Laura Atkins.
 
 
 ### Task 3 – Perform a User-Driven Installation of Microsoft 365 Apps for enterprise 
@@ -212,37 +202,31 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 10. In the **Start** menu, select **Word**.
 
-11. On the **Sign in to get started with Word** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and select **Next**. In the **Password** field, enter the **User Password** provided by your lab hosting provider and select **Sign in**.
+11. On the **Sign in to get started with Word** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and select **Next**. In the **Password** field, enter the **User Password** provided by your lab hosting provider and select **Sign in**. If required, complete the MFA sign-in process.
 
-12. Because MFA is required for all user sign-ins using this trial tenant, and since Holly is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field (where **nn** are the final two digits of your phone number). This is the same phone number that you used to previously sign-in as Holly on LON-CL1. Microsoft will send a verification code to your phone.
+12. On the **Stay signed in to all your apps** window, select **OK**.
 
-13. Retrieve the verification code from the text message that is sent to your phone.
+13. On the **You're all set!** window, select **Done**.
 
-14. In the **Enter code** window, enter the 6-digit verification code in the code field and then select **Verify**.
+14. On the **Accept the license agreement** window, select **Accept**, and then select **Close**.
 
-15. On the **Stay signed in to all your apps** window, select **OK**.
-
-16. On the **You're all set!** window, select **Done**.
-
-17. On the **Accept the license agreement** window, select **Accept**, and then select **Close**.
-
-18. Verify that Word is functioning properly by opening a blank Word document, entering some text, and saving the document to the **Documents** folder. <br/>
+15. Verify that Word is functioning properly by opening a blank Word document, entering some text, and saving the document to the **Documents** folder. <br/>
 
 	**Note:** If a **Check out our new look** dialog box appears, select **Not now**.
 
-19. Close Word.
+16. Close Word.
 
-20. Now that you have completed this lab exercise by installing Microsoft 365 Apps for enterprise, you should log out of Microsoft 365 as Laura Atkins. Select Laura's user icon in the upper-right corner of the screen (the circle with LA in it), and then in Laura's property window, select **Sign out**.
+17. Now that you have completed this lab exercise by installing Microsoft 365 Apps for enterprise, you should log out of Microsoft 365 as Laura Atkins. Select Laura's user icon in the upper-right corner of the screen (the circle with LA in it), and then in Laura's property window, select **Sign out**.
 
-21. Once Laura is signed out, close your Microsoft Edge browser. 
+18. Once Laura is signed out, close your Microsoft Edge browser. 
 
-22. You now want to log out of LON-CL2 as Laura Atkins and log back in as the Adatum administrator. This will prepare LON-CL2 for the next lab that uses this PC. <br/>
+19. You now want to log out of LON-CL2 as Laura Atkins and log back in as the Adatum administrator. This will prepare LON-CL2 for the next lab that uses this PC. <br/>
 
 	On LON-CL2, select the **Ctrl+Alt+Delete** function in your VM lab environment. 
 	
-23. On the desktop menu, select **Switch user**. 
+20. On the desktop menu, select **Switch user**. 
 
-24. On the desktop, the **Admin** is selected by default. Enter **Pa55w.rd** in the **Password** field and then select the forward arrow.  <br/>
+21. On the desktop, the **Admin** is selected by default. Enter **Pa55w.rd** in the **Password** field and then select the forward arrow.  <br/>
 
 	The desktop should now display the logged-on user as **lon-cl2\admin**. LON-CL2 is now ready for the next lab that uses it.
 
