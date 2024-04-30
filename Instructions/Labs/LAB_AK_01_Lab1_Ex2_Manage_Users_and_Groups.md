@@ -83,15 +83,11 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 19. Remain logged into the Client 1 VM (LON-CL1) with the Microsoft 365 admin center open in your browser for the next task.
 
-### Task 2 – Set up Microsoft 365 User Accounts
+### Task 2 – Create a Microsoft 365 group for the pilot project users
 
 After completing the previous task, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this task, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s new Microsoft 365 Administrator. Therefore, you will begin this task by logging out of Microsoft 365 as the MOD Administrator and you will log back in as Holly. 
 
-In the prior task, you noticed that your Microsoft 365 trial tenant came equipped with a list of active users. As Holly Dickson, Adatum's Microsoft 365 Administrator, you have selected the following members of the Microsoft 365 pilot project team to assist with the initial phase of the deployment: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez. 
-
-Each user is a key member of your pilot project team. While their user accounts are already present in Microsoft 365, you want to configure their passwords so they can more easily sign into Microsoft 365 when needed in the upcoming lab exercises. You will also change the password for Adele Vance. Adele is not a member of the Microsoft 365 pilot project team, but she is used for testing MFA implementation in a later lab. You will assign the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) as their user password, just as you did when you created Holly's account. You also need to add a Microsoft 365 group that will be used in a later lab exercise. 
-
-**IMPORTANT:** Using the same password for multiple users should obviously never be done in the real-world. However, we're doing it here in your training environment to simply make things easier for students as they progress through the labs. That being said, this task will also provide you with experience in how to change a user password.
+In the prior task, you noticed that your Microsoft 365 trial tenant came equipped with a list of active users. As Holly Dickson, Adatum's Microsoft 365 Administrator, you have selected the following members of the Microsoft 365 pilot project team to assist with the initial phase of the deployment: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez. You will begin by creating an M365 pilot project group consisting of these key user accounts, each of which will be used throughout the remaining lab exercises.
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as the **MOD Administrator**. <br/>
 
@@ -107,48 +103,36 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 4. In the **Sign in** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Select **Next**.
 
-5. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+5. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. If required, complete the MFA sign-in process. <br/>
 
-6. Because MFA is required for all user sign-ins using this trial tenant, a **More information required** window appears. Select **Next**.
+	**Note:** From this point forward, Holly and the MOD Admin will be the only users who are assigned the **Administrative Password** provided by your lab-hosting provider. All other users are assigned the **User Password** provided by your lab-hosting provider.
 
-7. On the **Microsoft Authenticator** page that appears, you can download this mobile app or use a different method for MFA verification. For the purposes of this lab, we recommend you use your mobile phone so that you do not have to take time installing the Microsoft Authenticator app that you may not use again after this training class. Select the **I want to set up a different method** option at the bottom of the page (**Important:** Do NOT confuse this link with the **I want to use a different authenticator app** that appears above it). 
+6. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
 
-8. On the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
+7. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
-9. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
+8. If a **Create with Microsoft 365** window appears, select the **X** in the upper right-hand corner of the window to close it. 
 
-10. Retrieve the verification code from the text message that is sent to your phone.
-
-11. In the **Phone** window, enter the 6-digit verification code in the code field and then select **Next**. When the **Phone** window displays a message indicating your phone was registered successfully, select **Next**.
-
-12. On the **Success!** page, select **Done**.
-
-13. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
-
-14. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
-
-15. If a **Create with Microsoft 365** window appears, select the **X** in the upper right-hand corner of the window to close it. 
-
-16. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is Holly's Microsoft 365 home page. Note that Holly's initials appear in the upper-right corner of the screen; however, Holly's name is not displayed. This is because Holly's account did not exist at the time you added the Microsoft 365 pilot project users to the group that was associated with the custom theme in the prior lab exercise. Since Holly wants to see her name at the top of each Microsoft 365 window when she's logged into the system, she first wants to add her account to the group of Microsoft 365 pilot project users. <br>
+9. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is Holly's Microsoft 365 home page. Note that Holly's initials appear in the upper-right corner of the screen; however, Holly's name is not displayed. This is because Holly's account did not exist at the time you added the Microsoft 365 pilot project users to the group that was associated with the custom theme in the prior lab exercise. Since Holly wants to see her name at the top of each Microsoft 365 window when she's logged into the system, she first wants to add her account to the group of Microsoft 365 pilot project users. <br>
 
 	In the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the **Microsoft 365 admin center** in a new browser tab. 
 
-17. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
+10. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
 
-18. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default. In this tab, select **M365 pilot project**.
+11. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default. In this tab, select **M365 pilot project**.
 
-19. In the **M365 pilot project** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
+12. In the **M365 pilot project** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
 
-20. In the **Membership** tab, the **Owners** sub-tab is displayed by default in the navigation pane that appears on the left-side of the pane. Select the **Members** sub-tab that appears below it.
+13. In the **Membership** tab, the **Owners** sub-tab is displayed by default in the navigation pane that appears on the left-side of the pane. Select the **Members** sub-tab that appears below it.
 
-21. In the **Members** sub-tab, select **+Add members**.
+14. In the **Members** sub-tab, select **+Add members**.
 
-22. In the **Add group members to M365 pilot project** pane that appears, select inside the **Search by name or email address** field. In the list of users that appears, scroll down and select **Holly Dickson**. Select the **Add (1)** button, and then close the **Add group members to M365 pilot project** pane once Holly is added to the group.
+15. In the **Add group members to M365 pilot project** pane that appears, select inside the **Search by name or email address** field. In the list of users that appears, scroll down and select **Holly Dickson**. Select the **Add (1)** button, and then close the **Add group members to M365 pilot project** pane once Holly is added to the group.
 
-23. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
+16. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
-### Task 3 – Set up Microsoft 365 Groups 
+### Task 3 – Create additional groups for testing
 
 In this task, you will create three new groups that will be used in later labs. You will then manage the groups by assigning users to them. Two groups will be Microsoft 365 groups; the third will be a Security group. Creating the two types of groups will enable you to see some of the differences between the group types. After creating the groups, you will then delete one of them. This will set up the next task, which examines how to recover a deleted group using Windows PowerShell.
 
@@ -290,45 +274,39 @@ However, to expand your administrator skills, you will instead restore the delet
 		
 		Connect-MgGraph -Scopes 'Group.ReadWrite.All', 'Directory.ReadWrite.All'
 
-4. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).  
+4. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the **Administrative Password** provided by your lab hosting provider that you assigned to Holly's account. If required, complete the MFA sign-in process.
 
-5. Because MFA is required for all user sign-ins using this trial tenant, and since Holly is already signed in to this Microsoft 365 tenant on LON-CL1, a **Verify your identity** window appears. Select the **Text +X XXX-XXX-XXnn** field (where **nn** are the final two digits of your phone number). This is the same phone number that you used to previously sign-in as Holly on LON-CL1. Microsoft will send a verification code to your phone.
+5. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
-6. Retrieve the verification code from the text message that is sent to your phone.
-
-7. In the **Enter code** window, enter the 6-digit verification code in the code field and then select **Verify**.
-
-8. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
-
-9. You will now use Microsoft Graph PowerShell to display the list of active groups. The Inside Sales group should not appear in this list. Type the following command and press Enter (Note: it may take a minute or so for the list of groups to appear):  <br/>
+6. You will now use Microsoft Graph PowerShell to display the list of active groups. The Inside Sales group should not appear in this list. Type the following command and press Enter (Note: it may take a minute or so for the list of groups to appear):  <br/>
 
 		Get-MgGroup
 
-10. To restore a deleted Microsoft 365 group in the next step, you need to specify the deleted group's object ID. To get the Inside Sales group's object ID, type the following command to display the list of Microsoft 365 groups that have been deleted:  <br/>
+7. To restore a deleted Microsoft 365 group in the next step, you need to specify the deleted group's object ID. To get the Inside Sales group's object ID, type the following command to display the list of Microsoft 365 groups that have been deleted:  <br/>
 	
 		Get-MgDirectoryDeletedItemAsGroup
 
-11. You should see the **Inside Sales** group in this list of deleted groups. You will now run the following **Restore-MgDirectoryDeletedItem** command to restore the group. When doing so, you must declare the group's object ID as the parameter next to "-DirectoryObjectId". To finish entering this command, you must highlight the object ID of the Inside Sales group from the list of deleted groups, copy the ID (Ctrl+C), and then paste that ID (Ctrl+V) into the command (for example: -DirectoryObjectId 'e76bbcdb-24c5-41a6-805d-b352976fd2a8').  <br/>
+8. You should see the **Inside Sales** group in this list of deleted groups. You will now run the following **Restore-MgDirectoryDeletedItem** command to restore the group. When doing so, you must declare the group's object ID as the parameter next to "-DirectoryObjectId". To finish entering this command, you must highlight the object ID of the Inside Sales group from the list of deleted groups, copy the ID (Ctrl+C), and then paste that ID (Ctrl+V) into the command (for example: -DirectoryObjectId 'e76bbcdb-24c5-41a6-805d-b352976fd2a8').  <br/>
 
 		Restore-MgDirectoryDeletedItem -DirectoryObjectId 'paste in the object ID for the Inside Sales group here'
 
-12. You should now verify the **Inside Sales** group has been recovered. While you can obviously do this in the **Microsoft 365 admin center**, since this task is working with PowerShell, let's verify the recovery using Microsoft Graph PowerShell. To do so, type the following command to get a list of the active groups, which should now include the Inside Sales Group:  <br/>
+9. You should now verify the **Inside Sales** group has been recovered. While you can obviously do this in the **Microsoft 365 admin center**, since this task is working with PowerShell, let's verify the recovery using Microsoft Graph PowerShell. To do so, type the following command to get a list of the active groups, which should now include the Inside Sales Group:  <br/>
 
 		Get-MgGroup
 
-13. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
+10. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
 
-14. You now want to verify that the recovery process correctly updated the group's membership. In your Edge browser, in the **Microsoft 365 admin center**, navigate to the **Active teams & groups** windows, select the **Teams & Microsoft 365 groups** tab if necessary, and then in the list of Microsoft 365 groups, select the **Inside Sales** group (select the name and not the check box). <br/>
+11. You now want to verify that the recovery process correctly updated the group's membership. In your Edge browser, in the **Microsoft 365 admin center**, navigate to the **Active teams & groups** windows, select the **Teams & Microsoft 365 groups** tab if necessary, and then in the list of Microsoft 365 groups, select the **Inside Sales** group (select the name and not the check box). <br/>
 
 	**Note:** If the Inside Sales group does not appear, wait a minute or two and then select **Refresh** on the menu bar above the list of groups.
 
-15. In the **Inside Sales** pane that appears, select the **Membership** tab. In the **Membership** tab, three sub-tabs (Owners, Members, and About membership and permissions) are displayed in the left-hand column. The **Owners** sub-tab is displayed by default. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group.
+12. In the **Inside Sales** pane that appears, select the **Membership** tab. In the **Membership** tab, three sub-tabs (Owners, Members, and About membership and permissions) are displayed in the left-hand column. The **Owners** sub-tab is displayed by default. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group.
 
-16. Select the **Members** sub-tab. **Diego Siciliani** and **Lynne Robbins** should appear as members of the group. You have just verified that the deleted group is now fully restored.
+13. Select the **Members** sub-tab. **Diego Siciliani** and **Lynne Robbins** should appear as members of the group. You have just verified that the deleted group is now fully restored.
 
-17. Close the **Inside Sales** window.
+14. Close the **Inside Sales** window.
 
-18. Remain logged into LON-CL1 and leave your browser tabs open so that they’re ready for the next task. 
+15. Remain logged into LON-CL1 and leave your browser tabs open so that they’re ready for the next task. 
 
 
 # Proceed to Lab 1 - Exercise 3
