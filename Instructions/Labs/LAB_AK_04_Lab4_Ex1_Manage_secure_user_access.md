@@ -1,5 +1,7 @@
 # Learning Path 4 - Lab 4 - Exercise 1 - Manage secure user access 
 
+**IMPORTANT:** As previously noted, Microsoft Security has modified the Microsoft 365 tenant that you're using in this lab so that MFA is required during any type of Microsoft 365-related sign-in. It has also modified the tenant so that users can't turn off MFA. Unfortunately, this policy impacts this lab, which originally was designed to enable MFA at Adatum through a Conditional Access policy. This is the recommended method of enabling MFA, as you learned in the lecture portion of this Learning  Path. This lab had you create a Conditional Access policy that enabled MFA for all users, EXCEPT for those who were members of the Microsoft 365 pilot project group that you created in an earlier exercise. It then had you log in as a user who was not in that group so that you could experience the MFA process. You then signed out as that user and signed back in as Holly Dickson. Since Holly is a member of the Microsoft 365 pilot project group, she did not have to finish authenticating using MFA. All that being said, the changes made by Microsoft Security have rendered this exercise moot, since MFA is required of all users and cannot be turned off for anyone. Now, in a real-world deployment, it's critical that you know how to enable MFA using a Conditional Access policy. As such, we have modified this exercise so that you will go through all the steps of creating the policy, but you just won't be able to save it. However, you will at least gain experience in how to create such a policy that you can implement in your real-world deployment.
+
 Holly has then been asked by Adatum’s CTO to deploy Microsoft Entra Multifactor Authentication (MFA), Pass-through Authentication (PTA), and Microsoft Entra Smart Lockout. These three features will help strengthen password management throughout the organization in preparation for Copilot for Microsoft 365. For PTA, you will deploy it using Microsoft Entra Cloud Sync. And for Smart Lockout, you will deploy it using Group Policy Management. 
 
 For MFA, you will create a Conditional Access policy to deploy MFA for all of Adatum's users. You will then modify it to exclude Holly and the selected members of her Microsoft 365 pilot project team. That will save you from having to use MFA when signing in with them, as well as provide you with experience on how to exclude users in a Conditional Access policy. 
@@ -17,11 +19,11 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 2. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from an earlier task. You should be signed into Microsoft 365 as **Holly Dickson**.
    
-3. In the **Microsoft 365 admin center**, under the **Admin centers** section in the navigation pane, select **Identity**. Doing so opens the Microsoft Entra admin center in a new browser tab. 
+3. In the **Microsoft 365 admin center**, under the **Admin centers** section in the navigation pane, select **Identity**. Doing so opens the Microsoft Entra admin center in a new browser tab. If a **Pick an account** window appears, select **Holly Dickson's account**.
 
 4. In the **Microsoft Entra admin center**, select **Protection** in the navigation pane, and then select **Conditional Access**.
 
-5. On the **Conditional Access | Overview** page, select **Policies**.
+5. On the **Conditional Access | Overview** page, select **Policies** in the middle navigation pane.
 
 6. On the **Conditional Access | Policies** page, review the default policies available with your Microsoft 365 subscription. On the menu bar at the top of the page, select **+New policy**.
 
