@@ -12,11 +12,11 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task. 
 
-2. After finishing the previous lab exercise, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson.  
+2. After finishing the earlier lab exercise in which you added Adatum's custom domain, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson.  
 
 3. In your **Edge** browser, select the **Microsoft 365 admin center** tab, and then in the navigation pane, select **Users**, and then select **Active Users**. <br/>
 
-4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu that appears, select **Directory synchronization**. This initiates the **Add or sync users to Microsoft Entra ID** wizard.
+4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu that appears, select **Directory synchronization**. This initiates the **Add or sync users to Microsoft Entra ID** wizard. It may take a minute or so for the wizard to start.
 
 5. In the **Add or sync users to Microsoft Entra ID** wizard, on the **About user synchronization** page, read through the content. In the **User status** section, note the number of existing Adatum cloud users and hybrid users. Select **Next**.
 
@@ -49,13 +49,13 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
  	**Note:** If you're wondering why the wizard changed its recommendation to Microsoft Entra Connect Sync based on this final requirement, it's because of the following reasons:
 
 	- First off, understand that this final requirement means that Adatum has desktops, laptops, or servers located in its on-premises Active Directory environment that must be able to join Microsoft Entra ID (formerly Azure AD) as hybrid Microsoft Entra ID joined devices. Microsoft Entra ID Hybrid Join allows these on-premises devices to register their identity with Microsoft Entra ID. This enables them to access cloud-based services protected by  Microsoft Entra ID, such as Microsoft 365. 
-	- So how does this affect which synchronization tool to use? Well, keep in mind that Microsoft Entra Connect Sync uses an on-premises sync agent while Microsoft Entra Cloud Sync is a pure cloud-based service. With Microsoft Entra Connect Sync, the sync agent is installed on-premises, and therefore can directly access Adatum's on-premises AD environment. This allows it to sync Adatum's device identities to the cloud without dependency on Microsoft Entra ID Hybrid Join. However, Microsoft Entra Cloud Sync has no on-premises component. It relies on the devices self-registering their identity to Microsoft Entra ID via Microsoft Entra ID Hybrid Join. Any issues with hybrid join or network connectivity therefore breaks the Microsoft Entra Cloud Sync process. As a result, Microsoft Entra Connect Sync is the preferred synchronization option for this requirement.
+	- So how does this affect which synchronization tool to use? Well, keep in mind that Microsoft Entra Connect Sync uses an on-premises sync agent while Microsoft Entra Cloud Sync is a pure cloud-based service. With Microsoft Entra Connect Sync, the sync agent is installed on-premises, and therefore can directly access Adatum's on-premises AD environment. This allows it to sync Adatum's device identities to the cloud without dependency on Microsoft Entra ID Hybrid Join. However, Microsoft Entra Cloud Sync has no on-premises component. It relies on the devices self-registering their identity to Microsoft Entra ID through Microsoft Entra ID Hybrid Join. Therefore, any issues with hybrid join or network connectivity breaks the Microsoft Entra Cloud Sync process. As a result, Microsoft Entra Connect Sync is the preferred synchronization option for this requirement.
 
 10. Select **Next**. The wizard will deploy the recommended solution, **Microsoft Entra Connect Sync**. 
 
 11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
 
-12. In the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Azure Active Directory Connect** should appear. <br/>
+12. In the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Entra Connect** should appear. <br/>
 
 	If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it's finished downloading. <br/>
 
@@ -65,11 +65,11 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 14. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
 
-15. On the **Express Settings** page, read the instruction regarding a single Windows Server AD forest and then select **Use express settings**.
+15. On the **Express Settings** page, read the instruction regarding a single Windows Server Active Directory forest and then select **Use express settings**.
 
 16. On the **Connect to Azure AD** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. <br/>
 
-	In the **PASSWORD** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account), and then select **Next**. <br/>
+	In the **PASSWORD** field, enter the **Administrative Password** provided by your lab hosting provider, and then select **Next**. If required, complete the MFA sign-in process. <br/>
 
 	**Note:** If the **Next** button is not enabled, then tab off the **PASSWORD** field to enable it. 
 
@@ -95,7 +95,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 	Minimize **Server Manager** after it opens, and then open the **Edge** browser and navigate to **htps://portal.office.com**. <br/>
 
-	Log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com**.  In the **Password** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). <br/>
+	Log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com**.  In the **Password** field, enter the **Administrative Password** provided by your lab hosting provider. If required, complete the MFA sign-in process. <br/>
 
 	On the **Microsoft Office Home** page, select **Admin** to open the **Microsoft 365 admin center**. <br/>
 
@@ -219,7 +219,7 @@ In this task, you will force a sync between Adatum’s on-premises Active Direct
 
 1. On LON-DC1, if the **Windows PowerShell** application is still open from the prior exercise, then **you MUST close it now**.  <br/>
 
-	‎**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Azure AD Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open.  
+	‎**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Microsoft Azure AD Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open.  
 
 2. At this point, Windows PowerShell should NOT be open. You now want to reopen it. To open it, select the **magnifying glass (Search)** icon in the taskbar, type **power** in the Search box, and then in the menu, right-click on **Windows PowerShell** (not Windows PowerShell ISE) and select **Run as administrator**. Maximize the Windows PowerShell window once it opens.
 
@@ -246,7 +246,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 2. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In your **Edge** browser, if tabs are still open for the **Home | Microsoft 365** page and the **Active users - Microsoft 365 admin center**, then proceed to the next step. <br/>
 
-	Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account), and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
+	Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the **Administrative Password** provided by your lab hosting provider, complete the MFA sign-in process if required, and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
 
 3. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**. 
 
@@ -288,7 +288,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 		
 		Connect-MgGraph -Scopes 'Group.Read.All', 'User.Read.All'
 
-12. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. 
+12. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process.
 
 13. If a **Permissions requested** dialog box appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
