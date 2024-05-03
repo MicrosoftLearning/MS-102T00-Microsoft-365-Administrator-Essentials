@@ -71,6 +71,8 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 24. Remain logged into LON-CL1 with all your Microsoft Edge browser tabs open for the next task.
 
+**Note:** As per the earlier discussion, there's is no way to test your Conditional Access policy in the current Microsoft 365 trial tenant. Microsoft's Conditional Access policy requires MFA for all users - with no exceptions. When you have multiple policies requiring MFA, the most restrictive policy applies. In this case, Microsoft's policy is more restrictive than the one you created that carves out exceptions for the pilot project group members. Even though you can't test your policy using this trial tenant, we encourage you to use this experience of creating a Conditional Access policy to require MFA in your real-world Microsoft 365 deployments.
+
 
 ### Task 2: Deploy Microsoft Entra Pass-Through Authentication 
 
