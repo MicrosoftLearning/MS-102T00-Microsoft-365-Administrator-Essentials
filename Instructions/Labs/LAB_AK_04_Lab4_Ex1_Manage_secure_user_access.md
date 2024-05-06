@@ -138,7 +138,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 20. Select the **X** in the upper-right corner of the **Passthrough Authentication** page to close it. In the navigation pane on the left, select **Home** to return to the **Microsoft Entra admin center** home page.
 
-21. Leave the **Microsoft Entra admin center** open as you will use it in the next task.
+21. Remain on LON-DC1 and leave the **Microsoft Entra admin center** open as you will use it in the next task.
    
 
 ### Task 3: Deploy Microsoft Entra Smart Lockout
