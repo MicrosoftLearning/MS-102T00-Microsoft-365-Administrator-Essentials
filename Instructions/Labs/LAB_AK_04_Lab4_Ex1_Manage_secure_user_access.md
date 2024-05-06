@@ -229,7 +229,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 21. You will be prohibited from logging in again as Laura until after the **90 second lockout duration** that you set earlier. <br/>
 
-	Once you've been locked out, wait 90 seconds and then sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Laura's password, which is the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). Verify that you are able to successfully sign-in as Laura.
+	Once you've been locked out, wait 90 seconds and then sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Laura's password, which is the **User Password** provided by your lab hosting provider. If required, complete the MFA sign-in process. Verify that you are able to successfully sign-in as Laura.
 
 22. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
  
