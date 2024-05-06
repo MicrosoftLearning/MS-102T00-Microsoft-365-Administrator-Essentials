@@ -6,7 +6,7 @@
 
 **Microsoft tenant change:** That being said, Microsoft has since created a Conditional Access policy in the Microsoft 365 trial tenant used in this lab that requires MFA for all user accounts. Unfortunately, Microsoft's Conditional Access policy takes precedence over the Conditional Access policy that you will create in this lab that excludes a specific group. Conditional Access policies in Microsoft Entra are evaluated together, and the highest priority policy that applies to a user is enforced. If there are multiple policies with the same priority, which is the case here, the most restrictive policy applies. In this case, Microsoft's policy is more restrictive that the policy you create, since yours includes user exceptions. <br/>
 
-**Impact on this lab exercise:** You will still create your Conditional Access policy as originally designed in Task 1. We have modified the task slightly so that you can see the policy that Microsoft built into the trial tenant. But other than that, the policy that you create has not changed from its original design - it requires MFA for all users, except for the members of the Microsoft 365 pilot project group. However, since the policy that Microsoft built into the lab's trial tenant is the more restrictive of the two policies, that policy takes precedence during enforcement. There are two implications of this scenario. First, you must use MFA when signing in as each test user through the remainder of these labs. Second, because Microsoft Entra will ignore your policy, there's no point in testing it. As such, we removed the original Task 2 that tested the Conditional Access policy that you created. Now even though you can't test your policy, we still want you to create it in Task 1 so that you gain that experience for your real-world deployments. 
+**Impact on this lab exercise:** You will still create your Conditional Access policy as originally designed in Task 1. We have modified the task slightly so that you can see the policy that Microsoft built into the trial tenant. But other than that, the policy that you create has not changed from its original design - it requires MFA for all users, except for the members of the Microsoft 365 pilot project group. However, since the policy that Microsoft built into the lab's trial tenant is the more restrictive of the two policies, that policy takes precedence during enforcement. There are two implications of this scenario. First, Microsoft's policy requires you to use MFA when signing in as each test user through the remainder of these labs. Second, because Microsoft Entra will ignore your policy, there's no point in testing it. As such, we removed the original Task 2 that tested the Conditional Access policy that you created. Now even though you can't test your policy, we still want you to create it in Task 1 so that you gain that experience for your real-world deployments. 
 
 
 ### Task 1: Deploy MFA using a Conditional Access policy
@@ -25,7 +25,22 @@ As your training indicated, there are three ways to implement MFA - with Conditi
 
 5. On the **Conditional Access | Overview** page, select **Policies** in the middle navigation pane.
 
-6. On the **Conditional Access | Policies** page, review the default policies available with your Microsoft 365 subscription. On the menu bar at the top of the page, select **+New policy**.
+6. On the **Conditional Access | Policies** page, review the default policies available with your Microsoft 365 subscription. Note the policy titled **Multifactor authentication for Microsoft partners and vendors**. This is the policy that Microsoft created that requires MFA for all users on all cloud apps. Select this policy.
+
+7. On the **Multifactor authentication for Microsoft partners and vendors** page, under the **Users** group, select **All users included and specific users exluded**. Doing so displays two tabs - **Include** and **Exclude**.
+
+9. Under the **Include** tab, note that **All users** is selected. Just to satisfy your curiosity, let's try changing this policy by turning off MFA. Select **None** and then select the **Save** button. <br/>
+
+	**Note what happened:** A **Violating policy** message appeared briefly above the **Save** button, and then a message box briefly appeared indicating the system failed to update the multifactor authentication policy for Microsoft partners and vendors. The system then returned you to the **Policies** page. If you didn't see those messages, then repeat this step again. <br/>
+
+	The same thing happens if, under the **Include** tab, you select **Users and groups** and you select specific users or groups rather than all users. In fact, Microsoft has built in a security firewall so that if you try to make any change to this policy, it will fail when you attempt to change the policy. 
+
+10. Select the **Exclude** tab. Microsoft did build one exclusion into this policy. 
+
+
+
+
+On the menu bar at the top of the page, select **+New policy**.
 
 7. On the **New Conditional Access policy** window, enter **MFA for all Microsoft 365 users** in the **Name** field.
 
