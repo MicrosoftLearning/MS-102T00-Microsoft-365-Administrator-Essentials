@@ -208,7 +208,7 @@ As you test the **PII - V1** label and the **PII Policy - V1** label policy in t
 
 6. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-7. On the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+7. On the **Enter password** window, enter the **User Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process.
 
 8. If a **Get your work done with Office 365** window appears, or a **Create with Microsoft 365** window, select the X to close them.
 
@@ -301,7 +301,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 13. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-14. On the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+14. On the **Enter password** window, enter the **User Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process.
 
 15. If a **Welcome** window appears, select the X to close it.
 
@@ -323,7 +323,7 @@ In the prior task, you created a Word document and protected it with a sensitivi
 
 	However, if a **Sign in** window appears, it's because the file is RMS protected and no Azure Information Protection unified labeling client is installed on LON-CL2. In this case, you need to use the native RMS features of Word Microsoft Apps and register this installation to Joni’s account. <br/>
 
-	‎In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.** <br/>
+	‎In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** and then select **Next.** In the **Enter password** window, enter the **User Tenant Password** provided by your lab hosting provider and then select **Sign in.** If required, complete the MFA sign-in process. <br/>
 
 	In the **Use this account everywhere on your device** window that appears, select **This app only** to register this Office 365 ProPlus installation to **Joni Sherman’s** Microsoft 365 account.
 
