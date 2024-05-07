@@ -104,7 +104,7 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 
 35. On the **Review Simulation** page, review the entered information. If anything needs to be changed, select the appropriate **Edit** option to make the change. Once everything is correct, select **Submit**. It may take a few minutes before you receive a confirmation stating **Simulation has been scheduled for launch**. Select **Done**.  <br/>
 
-	**Note:** Once the simulated drive-by URL attack is launched, an email should be sent to Lynne Robbins. It can take up to 15 minutes for the email to be generated. Rather than waiting for the email to be generated, you will validate the email and review the diagnostic results of the attack in Exercise 7, task 5 of this lab.
+	**Note:** Once the simulated drive-by URL attack is launched, an email should be sent to Lynne Robbins. It can take up to 15 minutes for the email to be generated. Rather than waiting for the email to be generated, you will validate the email and review the diagnostic results of the attack in Exercise 7, task 5.
 
 36. Leave your Edge browser and all tabs open and proceed to the next exercise.
 
