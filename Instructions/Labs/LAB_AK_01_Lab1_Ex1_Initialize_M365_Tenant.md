@@ -28,9 +28,17 @@ Once you launch the lab, you'll be able to access the free Microsoft 365 trial t
 
 Because this course can be offered by learning partners using any one of several authorized lab hosting providers, the actual steps involved to retrieve the UPN name and tenant ID associated with your tenant may vary by lab hosting provider. Therefore, your instructor will provide you with the necessary instructions on how to retrieve this information for your course. <br/>
 
-You should write down the following information (provided by your instructor) for later use:
+You should make note of the following information provided by your lab hosting provider for later use:
 
-- **Tenant prefix.** This tenant prefix is for the Microsoft 365 user accounts that you will use to sign into Microsoft 365 throughout the labs in this course. The domain for each Microsoft 365 user account is in the format of {user alias}@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix. It consists of two parts - your lab hoster's prefix (xxxxx; some hosters use a generic prefix such as M365x, while others use their company initials or some other designation) and the tenant ID (ZZZZZZ; usually a 6 digit number). Record this xxxxxZZZZZZ tenant prefix value for later use. When any of the lab steps direct you to sign into Microsoft 365 as one of the user accounts (such as the MOD Administrator), you must enter the xxxxxZZZZZZ value that you obtained here as the tenant prefix portion of your .onmicrosoft.com domain.
+- **Administrative Username.** When a company purchases a Microsoft 365 subscription, Microsoft creates a default administrator account in the company's tenant and assigns it the Global Administrator role. The person who signs up for the Microsoft 365 subscription is typically the one who gets this default Global administrator account. In this trial tenant, your lab hosting provider named this user account the **MOD Administrator**. The Administrative Username assigned to this account is **admin@<tenant prefix>**. 
+
+- **Administrative Password.** This is the password that your lab hosting provider assigned to the **MOD Administrator** account. Later in this lab, you will create another Global Administrator account for **Holly Dickson**, and for the sake of expediency in the lab, you will assign this same **Administrative Password** to Holly's account. 
+
+- **Tenant name.** This is the tenant domain of the trial tenant that has been assigned to your VM lab environment for this course. This is the tenant name that you will use when signing into Microsoft 365 and PowerShell as various user accounts throughout the labs in this course. The tenant name is in the format **xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix and onmicrosoft.com is the domain name. The domain name is the domain associated with your Microsoft 365 services. When any of the lab steps direct you to sign into Microsoft 365 or PowerShell as one of the user accounts, you must enter the user's alias followed by this tenant name. For example, if your tenant prefix was WWLx123456, then when signing in as Holly Dickson, you would enter Holly@WWLx123456.onmicrosoft.com.
+
+- **Tenant prefix.** The domain for each Microsoft 365 user account is in the format of {user alias}@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix. It consists of two parts - your lab hoster's prefix (xxxxx; some hosters use a generic prefix such as M365x, while others use their company initials or some other designation, such as WWLx) and the tenant ID (ZZZZZZ; usually a 6 digit number). 
+
+- **Tenant name.** 
 
 - **Tenant password.** This is the password provided by your lab hosting provider for the tenant admin account. **Note:** You will use this password not only for the tenant admin account, but for each of the predefined user accounts that are used throughout the labs.
 
