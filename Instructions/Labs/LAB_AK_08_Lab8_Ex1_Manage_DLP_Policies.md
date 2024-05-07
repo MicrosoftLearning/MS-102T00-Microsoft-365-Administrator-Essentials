@@ -22,10 +22,9 @@ The policy will contain two rules, or actions, each of which is dependent on the
   
 6. For the purpose of this lab, you will create a custom DLP policy. Select **Custom** in the **Categories** column, select the **Custom policy** template in the **Templates** column, and then select **Next**.
 
-7 In the **Name your DLP policy** page, enter the following information and then select **Next**:
+7. In the **Name your DLP policy** page, enter the following information and then select **Next**:  <br/>
 
       - Name: **IP Address DLP policy**
-
       - Description: **This policy detects the presence of IP addresses in emails. End users are notified of the detection and admins receive a notification. Emails with 2 or more IP addresses are blocked from being sent.**
 
 8. On the **Assign admin units (preview)** page, select **Next**. 
@@ -59,9 +58,9 @@ The policy will contain two rules, or actions, each of which is dependent on the
         
      - Scroll down to the **User notifications** section, set the **Use notifications to inform your users and help educate them on the proper use of sensitive info** toggle switch to **On**.
 
-    - Select the **Notify users in Office 365 service with a policy tip** checkbox. In the **Policy tips** section, select the **Customize the policy tip text** check box. Holly wants you to customize the Policy Tip message. <br/>
+    - Select the **Notify users in Office 365 service with a policy tip** checkbox. In the **Policy tips** section, select the **Customize the policy tip text** check box. 
 
-    Enter the following text in this field: **ATTENTION! You have entered sensitive information (an IP address) in this message. You will not be prevented from sending this message, but please review whether the recipients are authorized to see this sensitive data.** 
+        - Holly wants you to customize the Policy Tip message, so enter the following text in this field: **ATTENTION! You have entered sensitive information (an IP address) in this message. You will not be prevented from sending this message, but please review whether the recipients are authorized to see this sensitive data.** 
 
     - Select the **Show the policy tip as a dialog for the end user before send (available for Exchange workload only)** checkbox. 
     
@@ -73,11 +72,11 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
 14. On the **Create rule** page, enter the following information:
     
-      - Name: **Multiple IP Address rule**
+    - Name: **Multiple IP Address rule**
     
-     - Description: **Email contains two or more IP addresses**
+    - Description: **Email contains two or more IP addresses**
     
-      - In the **Conditions** section, select **+Add condition** and then select **Content contains** from the drop-down menu that appears. Then enter the following condition settings:
+    - In the **Conditions** section, select **+Add condition** and then select **Content contains** from the drop-down menu that appears. Then enter the following condition settings:
     
         - In the **Content contains** field, select the **Add** drop-down menu and then select **Sensitive info types**.
         
@@ -87,24 +86,24 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
         - Under the **Sensitive Info types** section, the **IP Address** info type is displayed. On the right side of the IP Address row, the **Instance count** setting is set from **1** to **Any**. Change the value of the first field from 1 to **2**. By making this change, this rule will only apply if 2 or more IP addresses appear in the email. 
     
-     - In the **Actions** section, select **+Add an action**. In the drop-down menu that appears, select **Restrict access or encrypt the content in Microsoft 365 locations**. Then enter the following action settings:
+    - In the **Actions** section, select **+Add an action**. In the drop-down menu that appears, select **Restrict access or encrypt the content in Microsoft 365 locations**. Then enter the following action settings:
 
-        - If no options appear under the **Restrict access or encrypt the content in Microsoft 365 locations** section, then select it now to expand this section. This section should display the **Block users from receiving email or accessing shared SharePoint, OneDrive, and Teams files** option, which is selected by default. Keep this option selected.
+    - If no options appear under the **Restrict access or encrypt the content in Microsoft 365 locations** section, then select it now to expand this section. This section should display the **Block users from receiving email or accessing shared SharePoint, OneDrive, and Teams files** option, which is selected by default. Keep this option selected.
 
-        - Under the **Block users from receiving email or accessing shared SharePoint, OneDrive, and Teams files** option, select the **Block everyone** option.
+    - Under the **Block users from receiving email or accessing shared SharePoint, OneDrive, and Teams files** option, select the **Block everyone** option.
     
-     - In the **User notifications** section, set the **Use notifications to inform your users and help educate them on the proper use of sensitive info** toggle switch to **On**. 
+    - In the **User notifications** section, set the **Use notifications to inform your users and help educate them on the proper use of sensitive info** toggle switch to **On**. 
 
-    - Select the **Notify users in Office 365 service with a policy tip** checkbox. In the **Policy tips** section, select the **Customize the policy tip text** check box. Holly wants you to customize the Policy Tip message. <br/>
+    - Select the **Notify users in Office 365 service with a policy tip** checkbox. In the **Policy tips** section, select the **Customize the policy tip text** check box. 
 
-    Enter the following text in this field: **ATTENTION! You have entered sensitive information (multiple IP addresses) in this message. You will be blocked if you attempt to send this message. Overriding this block indicates you have authorized sending this sensitive data to the recipients.** 
+        - Holly wants you to customize the Policy Tip message, so enter the following text in this field: **ATTENTION! You have entered sensitive information (multiple IP addresses) in this message. You will be blocked if you attempt to send this message. Overriding this block indicates you have authorized sending this sensitive data to the recipients.** 
 
     - Select the **Show the policy tip as a dialog for the end user before send (available for Exchange workload only)** checkbox. 
     
-    - In the **User overrides** section, select the **Allow overrides from M365 services** check box. This enables additional settings that indicate how overrides will be handled. Select each of the check boxes for the following two options: <br/>
+    - In the **User overrides** section, select the **Allow overrides from M365 services** check box. This enables additional settings that indicate how overrides will be handled. Select each of the check boxes for the following two options:
 
-    - **Require a business justification to override**
-    - **Override the rule automatically if they report it as a false positive**
+        - **Require a business justification to override**
+        - **Override the rule automatically if they report it as a false positive**
     
     - In the **Incident reports** section, verify the **Send an alert to admins when a rule match occurs** toggle switch is set to **On** (if necessary, set it to **On**).
 
