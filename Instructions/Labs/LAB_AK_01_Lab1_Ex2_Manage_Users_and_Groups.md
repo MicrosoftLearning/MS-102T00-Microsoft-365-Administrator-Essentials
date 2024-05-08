@@ -81,11 +81,11 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 
 19. Remain logged into the Client 1 VM (LON-CL1) with the Microsoft 365 admin center open in your browser for the next task.
 
-### Task 2 – Create a Microsoft 365 group for the pilot project users
+### Task 2 – Add Holly to the Microsoft 365 pilot project group
 
 After completing the previous task, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this task, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s new Microsoft 365 Administrator. Therefore, you will begin this task by logging out of Microsoft 365 as the MOD Administrator and you will log back in as Holly. 
 
-In the prior task, you noticed that your Microsoft 365 trial tenant came equipped with a list of active users. As Holly Dickson, Adatum's Microsoft 365 Administrator, you have selected the following members of the Microsoft 365 pilot project team to assist with the initial phase of the deployment: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez. You will begin by creating an M365 pilot project group consisting of these key user accounts, each of which will be used throughout the remaining lab exercises.
+In a previous task, you created a Microsoft 365 group for the members of Adatum's pilot project team. In this task, you will add Holly to this group. 
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as the **MOD Administrator**. <br/>
 
