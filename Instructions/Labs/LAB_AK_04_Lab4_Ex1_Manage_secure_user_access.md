@@ -110,7 +110,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 4. On the **Additional tasks** page, select the **Change user Sign-in** task and then select **Next**. 
 
-5. On the **Connect to Azure AD** page, sign into Azure AD (Microsoft Entra ID). The **USERNAME** field is already filled with **Holly@xxxUPNxxx.onmicrosoft.com**. In the **PASSWORD** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account), and then select **Next**.
+5. On the **Connect to Azure AD** page, sign into Azure AD (Microsoft Entra ID). The **USERNAME** field is already filled with **Holly@xxxUPNxxx.onmicrosoft.com**. In the **PASSWORD** field, enter the **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) that you assigned to Holly's account, and then select **Next**.
 
 6. On the **User sign-in** page, under **Select the Sign On method**, select **Pass-through authentication** and then select **Next**. 
 
@@ -217,7 +217,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 19. In the **Sign in** window, enter **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
 
-20. On the **Enter password** window, enter any random mix of letters and then select **Sign in**. Note the invalid password error message that appears. 
+20. On the **Enter password** window, enter any random mix of letters and numbers and then select **Sign in**. Note the invalid password error message that appears. 
 
 	Repeat this step 2 more times. 
 	
