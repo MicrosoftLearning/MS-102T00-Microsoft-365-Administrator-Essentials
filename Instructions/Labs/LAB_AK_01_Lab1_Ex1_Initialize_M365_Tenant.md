@@ -30,7 +30,7 @@ Because this course can be offered by learning partners using any one of several
 
 You should make note of the following information provided by your lab hosting provider for later use:
 
-- **Administrative Username.** When a company purchases a Microsoft 365 subscription, Microsoft creates a default administrator account in the company's tenant and assigns it the Global Administrator role. The person who signs up for the Microsoft 365 subscription is typically the one who gets assigned this default Global administrator account. In this trial tenant, your lab hosting provider assigned the MOD Administrator name, the **Administrative Username** and **Administrative Password** to this account.  The Administrative Username assigned to this account is **admin@{tenant name}**. 
+- **Administrative Username.** When a company purchases a Microsoft 365 subscription, Microsoft creates a default administrator account in the company's tenant and assigns it the Global Administrator role. The person who signs up for the Microsoft 365 subscription is typically the one who gets assigned this default Global administrator account. In this trial tenant, your lab hosting provider assigned the MOD Administrator name, the **Administrative Username** and **Administrative Password** to this account. The Administrative Username assigned to this account is **admin@{tenant name}**. 
 
 - **Administrative Password.** This is the password that your lab hosting provider assigned to the **MOD Administrator** account. Later in this lab, you will create another Global Administrator account for **Holly Dickson**, and for the sake of expediency in the lab, you will assign this same **Administrative Password** to Holly's account. 
 
