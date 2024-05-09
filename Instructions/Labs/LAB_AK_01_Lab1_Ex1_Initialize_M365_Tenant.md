@@ -19,8 +19,6 @@ In your lab environment, your lab hosting provider has already obtained a Micros
 
 You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (MOD Administrator). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Azure Active Directory and for later labs using Information Rights Management, audit alerts, Microsoft Graph PowerShell, and sensitivity labels.
 
-**Important MFA Announcement:** Microsoft Security has recently employed a new security firewall in the trial tenants that are used in its training courses. This feature requires that all trial tenants used by Microsoft World-Wide Learning employ Multifactor Authentication (MFA) each time a user signs into Microsoft 365. Microsoft World-Wide Learning can NOT turn off this security requirement in its training labs. In addition, we can't use Conditional Access to turn MFA on or off for selected groups of users. MFA will be turned on for everyone and can never be turned off. Any time you sign in to Microsoft 365 in this trial tenant as one of the fictitious users, you must sign in with the user's account and password AND with a second form of authentication. Your instructor will guide you through the MFA process that's currently employed in the tenant.
-
 
 ### Task 1- Set up Adatum's Organization Profile
 
