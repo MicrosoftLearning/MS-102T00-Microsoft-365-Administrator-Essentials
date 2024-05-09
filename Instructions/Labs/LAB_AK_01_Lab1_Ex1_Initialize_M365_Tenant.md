@@ -22,26 +22,7 @@ You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator
 **Important MFA Announcement:** Microsoft Security has recently employed a new security firewall in the trial tenants that are used in its training courses. This feature requires that all trial tenants used by Microsoft World-Wide Learning employ Multifactor Authentication (MFA) each time a user signs into Microsoft 365. Microsoft World-Wide Learning can NOT turn off this security requirement in its training labs. In addition, we can't use Conditional Access to turn MFA on or off for selected groups of users. MFA will be turned on for everyone and can never be turned off. Any time you sign in to Microsoft 365 in this trial tenant as one of the fictitious users, you must sign in with the user's account and password AND with a second form of authentication. Your instructor will guide you through the MFA process that's currently employed in the tenant.
 
 
-### Task 1 - Obtain Your Microsoft 365 Credentials
-
-Once you launch the lab, you'll be able to access the free Microsoft 365 trial tenant provided by your lab hosting provider in the Microsoft Virtual Lab environment. Within this tenant, your lab hosting provider has created a Microsoft 365 user account for a default tenant administrator named MOD Administrator. Your lab hosting provider has assigned this user account a unique username and password, and the account has been assigned the Microsoft 365 Global administrator role. You must retrieve this username and password so that you can sign into Microsoft 365 within the Microsoft Virtual Lab environment. You will also be assigned a tenant name and tenant prefix. You will also use this information in various tasks throughout the labs for this course.
-
-Because this course can be offered by learning partners using any one of several authorized lab hosting providers, the actual steps involved to retrieve the UPN name and tenant ID associated with your tenant may vary by lab hosting provider. Therefore, your instructor will provide you with the necessary instructions on how to retrieve this information for your course. <br/>
-
-You should make note of the following information provided by your lab hosting provider for later use:
-
-- **Administrative Username.** When a company purchases a Microsoft 365 subscription, Microsoft creates a default administrator account in the company's tenant and assigns it the Global Administrator role. The person who signs up for the Microsoft 365 subscription is typically the one who gets assigned this default Global administrator account. In this trial tenant, your lab hosting provider assigned the MOD Administrator name, the **Administrative Username** and **Administrative Password** to this account. The Administrative Username assigned to this account is **admin@{tenant name}**. 
-
-- **Administrative Password.** This is the password that your lab hosting provider assigned to the **MOD Administrator** account, whose **Administrative Username** is **admin@{tenant name}**. Later in this lab, you will create another Global Administrator account for **Holly Dickson**. For the sake of expediency in the lab, you will assign this same **Administrative Password** to Holly's account. Only Holly and the MOD Administrator will use this **Administrative Password**.
-
-- **Tenant name.** This is the tenant domain of the trial tenant that was assigned to your VM lab environment. You will use this tenant name when signing into Microsoft 365 and PowerShell as various user accounts throughout the labs in this course. The tenant name is in the format **xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix and onmicrosoft.com is the domain name. The domain name is the domain associated with your Microsoft 365 services. When any of the lab steps direct you to sign into Microsoft 365 or PowerShell as one of the user accounts, you must enter the user's alias followed by this tenant name. For example, if your tenant prefix was WWLx123456, then when signing in as Holly Dickson, you would enter Holly@WWLx123456.onmicrosoft.com.
-
-- **Tenant prefix.** The domain for each Microsoft 365 user account is in the format of {user alias}@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix. It consists of two parts - your lab hoster's prefix (xxxxx; some hosters use a generic prefix such as M365x, while others use their company initials or some other designation, such as WWLx) and the tenant ID (ZZZZZZ; usually a 6 digit number). 
-
-- **User Password.** Your trial tenant includes a number of predefined user accounts. One of those accounts is the MOD Administrator, who's the Global admin account that was created for your trial tenant. Your lab hosting provider assigned the **Administrative Password** to this account. The **User Password**, on the other hand, is the password that your lab hosting provider assigned to all the other predefined user accounts that it created, many of whom you'll use throughout the labs in this course. You must use the **User Password** when signing in as any of these users, such as Alex Wilber, Joni Sherman, Lynne Robbins, and so on.
-
-
-### Task 2- Set up Adatum's Organization Profile
+### Task 1- Set up Adatum's Organization Profile
 
 Throughout the labs in this course, you will role-play by taking on the persona of Holly Dickson, Adatum’s Microsoft 365 Administrator. In your role as Holly, you have been tasked with setting up the company’s profile for its Microsoft 365 trial tenant. In this task, you will configure the required options for Adatum’s tenant. Since Holly has yet to create a personal Microsoft 365 user account for herself (you will do this in the next lab exercise), Holly will initially sign into Microsoft 365 using the default Microsoft 365 tenant admin account and password that was created by your lab hosting provider. This account is the MOD Administrator account, whose alias is "admin". The username for this account is admin@xxxxxZZZZZZ.onmicrosoft.com (where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider); the display name for this account will be MOD Administrator.
 
@@ -128,7 +109,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 22. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
-### Task 3- Create a custom theme for Adatum's pilot project team
+### Task 2- Create a custom theme for Adatum's pilot project team
 
 In the prior task, you learned that when someone is signed into Microsoft 365, the system will either display their photograph (if one is supplied), or their initials if no photograph is provided. Holly Dickson, Adatum's Microsoft 365 Administrator, is not satisfied with just seeing a picture or initials of the signed-in user. She wants to create a custom theme for the members of her pilot project team so that it also displays the signed-in user's name. At the end of the pilot project, if the pilot project team members prefer this design, she will configure this same option in the default theme so that it applies to all users. 
 
@@ -213,7 +194,7 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 28. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 
-### ‎Task 4 - Enable Information Rights Management for SharePoint Online 
+### ‎Task 3 - Enable Information Rights Management for SharePoint Online 
 
 In this task, you will turn on Information Rights Management (IRM) for SharePoint Online. 
 
@@ -238,7 +219,7 @@ In this task, you will turn on Information Rights Management (IRM) for SharePoin
 9. Close this **SharePoint admin center** tab in your Edge browser. Leave the other tabs open in your browser for the next task.
 
 
-### Task 5 – Install Microsoft Graph PowerShell 
+### Task 4 – Install Microsoft Graph PowerShell 
 
 Microsoft Graph PowerShell is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Microsoft Graph PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
 
@@ -280,7 +261,7 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 7. Leave your PowerShell window open as you will use it in the next task.
 
-### Task 6 – Turn on Audit Logging to enable Alert Policies
+### Task 5 – Turn on Audit Logging to enable Alert Policies
 
 In Lab 6, you will create Alert Policies using the Microsoft Defender portal. However, before you can implement alerts, an administrator must first turn on Audit Logging for the organization. Since it can take an hour or so for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 6.
 
@@ -313,7 +294,7 @@ In Lab 6, you will create Alert Policies using the Microsoft Defender portal. Ho
 9. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
 
-### Task 7 - Run a PowerShell script to create and publish a sensitivity label
+### Task 6 - Run a PowerShell script to create and publish a sensitivity label
 
 In this task, you will run a lab setup script that creates a sensitivity label and sensitivity label policy for future use in this lab series. Running this script is necessary to support the lab that you will perform on the last day of class to create a sensitivity label and label policy. The sensitivity label lab basically consists of two parts: 1) Creating a label and publishing a label policy, and 2) Testing the published label policy. The problem with the sensitivity label lab is that once you publish a label policy, it takes 24 hours for the published label policy to propagate through Microsoft 365. As such, you won't be able to test the label and policy that you create and publish on the last day of class. 
 
