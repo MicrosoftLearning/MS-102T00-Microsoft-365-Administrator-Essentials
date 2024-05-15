@@ -55,7 +55,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
 
-12. In the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Azure Active Directory Connect** should appear. <br/>
+12. In the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Entra Connect** should appear. <br/>
 
 	If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it's finished downloading. <br/>
 
