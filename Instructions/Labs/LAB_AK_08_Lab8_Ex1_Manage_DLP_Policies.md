@@ -123,9 +123,11 @@ You have now created a DLP policy that scans for IP addresses in emails and docu
 
 ### Task 2 – Turn off the Send to Kindle feature that bypasses DLP policies
 
-Holly Dickson, Adatum's Microsoft 365 administrator, recently learned about a **Send to Kindle** feature in Microsoft 365 that lets you send Microsoft Word documents directly to your Kindle library in mere minutes. A transferred file can appear like a Kindle book with adjustable font sizes or like a printed document with fixed layouts so as to preserve your page-design formatting. The issue with this feature is that DLP policies don't take Word file sharing to Kindle into account, which in effect bypasses the DLP controls. Since Adatum won't be using this **Send to Kindle** feature, Holly wants to turn it off to avoid any possibility of users bypassing the company's DLP policies through this Kindle sharing feature. 
+Holly Dickson, Adatum's Microsoft 365 administrator, recently learned about a **Send to Kindle** feature in Microsoft 365 that lets you send Microsoft Word documents directly to your Kindle library in mere minutes. A transferred file can appear like a Kindle book with adjustable font sizes or like a printed document with fixed layouts so as to preserve your page-design formatting. 
 
-To turn off this setting, you must create a policy for Office apps in the Microsoft Intune admin center. In the policy that you create, you'll add the **Turn off Send to Kindle** configuration setting to the policy. Adding this setting to the policy effectively enables the setting once the policy is created. So once the policy is created, the **Send to Kindle** feature will be turned off and users will no longer be able to send Word documents to their Kindle library.
+The issue with this feature is that DLP policies don't take into account Word file sharing to Kindle, which in effect bypasses the DLP controls. Since Adatum won't be using this **Send to Kindle** feature, Holly wants to turn it off to avoid any possibility of users bypassing the company's DLP policies. 
+
+To turn off this setting, you must create a policy for Office apps in the Microsoft Intune admin center. In the policy that you create, you'll add the **Turn off Send to Kindle** setting to the policy, and you'll then enable this setting. Enabling this setting in the policy turns off the **Send to Kindle** feature once you finish creating the policy. At that point, users will no longer be able to send Word documents to their Kindle library.
 
 **Note:** This issue is something that you should consider addressing in your real-world Microsoft 365 deployments. For more information on this **Send to Kindle** feature, see https://support.microsoft.com/en-us/office/send-to-kindle-a53d880d-9952-4bf1-abc5-6bce8db5a273.
 
@@ -133,33 +135,33 @@ To turn off this setting, you must create a policy for Office apps in the Micros
 
 2. In your Edge browser, locate the **Microsoft 365 admin center** tab. In the Microsoft 365 admin center's navigation pane, under the **Admin centers** group, select **Endpoint Manager**.
 
-3. In the **Microsoft Intune admin center**, select **Apps** in the navigation pane.
+3. In the **Microsoft Intune admin center** that opens up in a new tab, select **Apps** in the navigation pane.
 
 4. On the **Apps | Overview** page, in the middle navigation pane, select **Policies for Office apps** under the **Policy** section.
 
-5. On the **Apps | Policies for Office apps** page, select the **Create** button. This initiates the wizard to create a new policy configuration. 
+5. On the **Apps | Policies for Office apps** page, select the **Create** button. This initiates the wizard to create a new policy. In the remaining steps, you'll enable the **Turn off Send to Kindle** setting within this policy.
 
 6. On the **Start with the basics** page, enter **Turn off Send to Kindle setting** in the **Name** field and then select **Next**.
 
 7. On the **Choose the scope** page, select the **This policy configuration applies to all users** option and then selet **Next**.
 
-8. On the **Configure Settings** page, note list of metrics displayed above the list of settings. There are over 2200 settings for your configuration. The quickest way to locate this setting is to enter **Kindle** in the **Search** field and then select **Enter**. This should display any policies with **Kindle** in the policy name.
+8. On the **Configure Settings** page, note the metrics that are displayed above the list of settings. There are over 2200 Office app settings for your tenant configuration. To quickly locate this setting, enter **Kindle** in the **Search** field and then press **Enter**. This should display any policies with **Kindle** in the policy name.
 
-9. In the list of policies with **Kindle** in the policy name, select the **Turn off Send to Kindle** policy. This opens the **Turn off Send to Kindle** pane.
+9. As you can see, there's only one Kindle setting, which is **Turn off Send to Kindle**. Select this setting, which opens the **Turn off Send to Kindle** pane.
 
-10. In the **Turn off Send to Kindle** pane, it displays the plaforms and applications that this setting applies to. Under the the description, select the **Show more** option. Finish reading the complete description of this setting.
+10. In the **Turn off Send to Kindle** pane, the plaforms and applications that this setting applies to are displayed. Under the the description, select the **Show more** option. Finish reading the complete description of this setting.
 
 11. Select the drop-down arrow in the **Configuration setting** field. In the drop-down menu that appears, select **Enabled**.
 
-12. At the bottom of the **Turn off Send to Kindle** pane, select the **Apply** button.
+12. At the bottom of the pane, select the **Apply** button.
 
-13. On the **Configure Settings** page, scroll to the right and note that the **Status** of the **Turn off Send to Kindle** policy is set to **Configured**. Select **Next**.
+13. On the **Configure Settings** page, the **Turn off Send to Kindle** policy should appear, and its **Status** should be set to **Configured**. Select **Next**.
 
 14. On the **Review configuration and create** page, select the **Create** button. 
 
 15. On the **Policy configuration created** page, selet **Done**.
 
-By enabling this **Turn off Send to Kindle** setting in the new policy that you just created, you have turned off this feature so that users will no longer be able to send Word documents to their Kindle library.
+By enabling this **Turn off Send to Kindle** setting in the new policy that you just created, you have turned off the **Send to Kindle** feature. This will prevent Adatum users from sending Word documents to their Kindle library, which bypasses the company's DLP policies.
 
 
 # Proceed to Lab 8 - Exercise 2 
