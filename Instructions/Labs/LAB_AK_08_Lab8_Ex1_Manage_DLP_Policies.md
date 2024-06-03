@@ -121,4 +121,46 @@ I8. it may take a minute or so for the **New policy created** page to appear. Wh
 You have now created a DLP policy that scans for IP addresses in emails and documents that are sent or shared in your organization.
 
 
+### Task 2 – Turn off the Send to Kindle feature that bypasses DLP policies
+
+Holly Dickson, Adatum's Microsoft 365 administrator, recently learned about a **Send to Kindle** feature in Microsoft 365 that lets you send Microsoft Word documents directly to your Kindle library in mere minutes. A transferred file can appear like a Kindle book with adjustable font sizes or like a printed document with fixed layouts so as to preserve your page-design formatting. The issue with this feature is that DLP policies don't take Word file sharing to Kindle into account, which in effect bypasses the DLP controls. Since Adatum won't be using this **Send to Kindle** feature, Holly wants to turn it off to avoid any possibility of users bypassing the company's DLP policies through this Kindle sharing feature. 
+
+To turn off this setting, you must create a policy for Office apps in the Microsoft Intune admin center. In the policy that you create, you'll add the **Turn off Send to Kindle** configuration setting to the policy. Adding this setting to the policy effectively enables the setting once the policy is created. So once the policy is created, the **Send to Kindle** feature will be turned off and users will no longer be able to send Word documents to their Kindle library.
+
+**Note:** This issue is something that you should consider addressing in your real-world Microsoft 365 deployments. For more information on this **Send to Kindle** feature, see https://support.microsoft.com/en-us/office/send-to-kindle-a53d880d-9952-4bf1-abc5-6bce8db5a273.
+
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+
+2. In your Edge browser, locate the **Microsoft 365 admin center** tab. In the Microsoft 365 admin center's navigation pane, under the **Admin centers** group, select **Endpoint Manager**.
+
+3. In the **Microsoft Intune admin center**, select **Apps** in the navigation pane.
+
+4. On the **Apps | Overview** page, in the middle navigation pane, select **Policies for Office apps** under the **Policy** section.
+
+5. On the **Apps | Policies for Office apps** page, select the **Create** button. This initiates the wizard to create a new policy configuration. 
+
+6. On the **Start with the basics** page, enter **Turn off Send to Kindle setting** in the **Name** field and then select **Next**.
+
+7. On the **Choose the scope** page, select the **This policy configuration applies to all users** option and then selet **Next**.
+
+8. On the **Configure Settings** page, the quickest way to locate this setting is to enter **Turn off Send to Kindle** in the **Search** field and then select **Enter**. This should display the **Turn off Send to Kindle** policy. Note the policy applies to Windows, Mac, and Web platforms, and to Microsoft Word. Select **Next**.
+
+9. On the **Review configuration and create** page, select the **Create** button. 
+
+10. On the **Policy configuration created** page, selet **Done**.
+
+11. 
+
+Click on Apps.
+Select Policies for Office apps.
+Click the Create button to create a new policy.
+Fill in the following details:
+Name: Provide a name for your new policy (required).
+Description: Optionally, add a description.
+Scope: Choose This policy configuration applies to all users.
+Groups: If applicable, select the group for this policy configuration.
+Configure settings: Select the Office policy that you want to apply.
+You can sort the provided list based on policy, platform, application, recommendation, and status.
+Review the configuration and click Create.
+The policy will be created and will appear in the table on the Policy configurations pane
 # Proceed to Lab 8 - Exercise 2 
