@@ -143,24 +143,23 @@ To turn off this setting, you must create a policy for Office apps in the Micros
 
 7. On the **Choose the scope** page, select the **This policy configuration applies to all users** option and then selet **Next**.
 
-8. On the **Configure Settings** page, the quickest way to locate this setting is to enter **Turn off Send to Kindle** in the **Search** field and then select **Enter**. This should display the **Turn off Send to Kindle** policy. Note the policy applies to Windows, Mac, and Web platforms, and to Microsoft Word. Select **Next**.
+8. On the **Configure Settings** page, note list of metrics displayed above the list of settings. There are over 2200 settings for your configuration. The quickest way to locate this setting is to enter **Kindle** in the **Search** field and then select **Enter**. This should display any policies with **Kindle** in the policy name.
 
-9. On the **Review configuration and create** page, select the **Create** button. 
+9. In the list of policies with **Kindle** in the policy name, select the **Turn off Send to Kindle** policy. This opens the **Turn off Send to Kindle** pane.
 
-10. On the **Policy configuration created** page, selet **Done**.
+10. In the **Turn off Send to Kindle** pane, it displays the plaforms and applications that this setting applies to. Under the the description, select the **Show more** option. Finish reading the complete description of this setting.
 
-11. 
+11. Select the drop-down arrow in the **Configuration setting** field. In the drop-down menu that appears, select **Enabled**.
 
-Click on Apps.
-Select Policies for Office apps.
-Click the Create button to create a new policy.
-Fill in the following details:
-Name: Provide a name for your new policy (required).
-Description: Optionally, add a description.
-Scope: Choose This policy configuration applies to all users.
-Groups: If applicable, select the group for this policy configuration.
-Configure settings: Select the Office policy that you want to apply.
-You can sort the provided list based on policy, platform, application, recommendation, and status.
-Review the configuration and click Create.
-The policy will be created and will appear in the table on the Policy configurations pane
+12. At the bottom of the **Turn off Send to Kindle** pane, select the **Apply** button.
+
+13. On the **Configure Settings** page, scroll to the right and note that the **Status** of the **Turn off Send to Kindle** policy is set to **Configured**. Select **Next**.
+
+14. On the **Review configuration and create** page, select the **Create** button. 
+
+15. On the **Policy configuration created** page, selet **Done**.
+
+By enabling this **Turn off Send to Kindle** setting in the new policy that you just created, you have turned off this feature so that users will no longer be able to send Word documents to their Kindle library.
+
+
 # Proceed to Lab 8 - Exercise 2 
