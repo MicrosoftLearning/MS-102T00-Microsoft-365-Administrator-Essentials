@@ -36,13 +36,25 @@ You have successfully installed the Azure Information Protection Unified Label c
 
 ### Task 2 – Enable sensitivity labels for files in SharePoint and OneDrive
 
-In this exercise you will create a Sensitivity Label and add it to the default policy so that it’s valid for all users of the Adatum tenant.
+In this exercise you will enable sensitivity labels for supported Office files and PDF files in SharePoint and OneDrive. When this feature is enabled, users see the **Sensitivity** button on the ribbon so they can apply labels. They also see any applied label name on the status bar. For SharePoint, users can also see and apply sensitivity labels from the details pane.
+
+Enabling this feature also results in SharePoint and OneDrive being able to process the contents of Office files and optionally, PDF documents that have been encrypted by using a sensitivity label. The label can be applied in Office for the web, or in Office desktop apps, and uploaded or saved in SharePoint and OneDrive. Until you enable this feature, these services can't process encrypted files, which means that coauthoring, eDiscovery, data loss prevention, search, and other collaborative features won't work for these files.
+
+**Note:** As with all tenant-level configuration changes for SharePoint and OneDrive, it takes about 15 minutes for the change to take effect.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
 2. In your Edge browser, you should still have a tab open for the **Microsoft 365 admin center**. If not, open a new tab and enter the following URL: **https://admin.microsoft.com**.
 
+3. In the **Microsoft 365 admin center**, under the **Admin centers** section in the navigation pane, select **Compliance**. This opens the Microsoft Purview portal in a new tab.
 
+4. In the **Microsoft Purview** portal, in the navigation pane under the **Solutions** section, select **Information protection**, and then select **Labels**.
+
+5. On the **Labels** page, the following message should appear in the middle of the page: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
+
+	Below this message is a **Turn on now** button. Select this button.  <br/>
+
+	**Note:** The command runs immediately and when the page is next refreshed, you no longer see the message or button.
 
 
 ### Task 3 – Create a Sensitivity Label
@@ -233,6 +245,7 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 14. Leave the **ProtectedDocument1** tab open displaying the document. You will return to this document in the next task to share the document with Joni Sherman.
 
 You have just successfully created a Word document containing the Highly Confidential label policy titled Project - Falcon. 
+
 
 ### Task 5 – Protect a document using Microsoft Entra ID Protection
 
