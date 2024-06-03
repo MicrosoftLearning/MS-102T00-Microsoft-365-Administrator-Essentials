@@ -346,8 +346,8 @@ To verify whether the protection that you assigned to the document works, you wi
 
 	**Note:**  In this task, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured. When Joni was assigned View only permission, the document opened in the Reading view and she was unable to change it. When Joni was assigned Edit permission, the document opened in Word and she was able to change it. And since Holly didn't share the document with you, you couldn't open it when she sent the document in an email to your personal mailbox. 
 
-# End of Lab 9
+## End of Lab 9
 
 
-## Congratulations! You have just completed the final lab in this course.
+# Congratulations! You have just completed the final lab in this course.
 
