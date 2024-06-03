@@ -115,7 +115,9 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
 17. On the **Review your policy and create it** page, review the policy that you just created. If anything needs to be corrected, select the appropriate **Edit** option and make your corrections. When everything appears OK, select **Submit**.
 
-I8. it may take a minute or so for the **New policy created** page to appear. When it does, select **Done**.
+I8. It may take a minute or so for the **New policy created** page to appear. When it does, select **Done**.
+
+19. Leave your Edge browser open. Do not close any of the tabs.
 
 
 You have now created a DLP policy that scans for IP addresses in emails and documents that are sent or shared in your organization.
@@ -160,6 +162,9 @@ To turn off this setting, you must create a policy for Office apps in the Micros
 14. On the **Review configuration and create** page, select the **Create** button. 
 
 15. On the **Policy configuration created** page, selet **Done**.
+ 
+16. Leave your Edge browser open. Do not close any of the tabs.
+
 
 By enabling this **Turn off Send to Kindle** setting in the new policy that you just created, you have turned off the **Send to Kindle** feature. This will prevent Adatum users from sending Word documents to their Kindle library, which bypasses the company's DLP policies.
 
