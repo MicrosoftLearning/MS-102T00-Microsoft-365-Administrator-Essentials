@@ -292,34 +292,6 @@ In Lab 6, you will create Alert Policies using the Microsoft Defender portal. Ho
 9. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
 
-### Task 6 - Run a PowerShell script to create and publish a sensitivity label
-
-In this task, you will run a lab setup script that creates a sensitivity label and sensitivity label policy for future use in this lab series. Running this script is necessary to support the lab that you will perform on the last day of class to create a sensitivity label and label policy. The sensitivity label lab basically consists of two parts: 1) Creating a label and publishing a label policy, and 2) Testing the published label policy. The problem with the sensitivity label lab is that once you publish a label policy, it takes 24 hours for the published label policy to propagate through Microsoft 365. As such, you won't be able to test the label and policy that you create and publish on the last day of class. 
-
-To address this timing issue, you will run a PowerShell script in this task that creates a sensitivity label and publishes it to a label policy. By the time you get to the last day of class, this label policy will have propagated through the system, and you'll be able to test it. 
-
-**Note:** In the sensitivity label lab that you perform on the last day of class, you will create another label and label policy - just ones with different names. Their settings will be exactly the same as the ones created by this script. The sensitivity label lab will give you the experience of creating a label and publishing a label policy using the Microsoft 365 UI. However, when you perform the tasks to test the sensitivity label and label policy, you won't test the ones that you created and published in the UI, since they won't be available for testing until the next day. Instead, you will test the label and label policy that were created and published using the script that you run in this task. 
-
-1. On **LON-CL1**, select the **File Explorer** icon from the Windows taskbar. Maximize the File Explorer window.
-
-2. In **File Explorer**, under **This PC**, expand **Local Disk (C:)** and then navigate to the following folder location: **C:\Users\Administrator.ADATUM\Documents\Lab Setup**.
-
-3. In the **Lab Setup** subfolder, you should find a file named **LabSetup.bat**. <br/>
-
-    Right-click on the **LabSetup.bat** file and then select **Run as administrator**. Doing so will start the lab setup process.
-
-    **Note:** If a **Windows protected your PC** pop-up warning is displayed, select **More info** and then select **Run anyway** at the bottom of the pop-up to continue. At this point, a **Lab setup** window will appear on the screen.
-
-4. It may take up to 1 minute before a **Pick an account** window appears (if the **Lab setup** window appears on top of the **Pick and account** window, then select inside the **Pick an account** window to bring it to the front so that you can access it). <br/>
-
-    Select the tenant administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process. <br/>
-
-    **Important:** The **Lab Setup** process has a time-out of 5 minutes. If you fail to type in your credentials within this 5 minute time frame, a pop-up message displaying **Lab Setup Failed. EXITING...** will appear. Select **Ok**, close the Microsoft Sign-on window, and repeat steps 3-4.
-
-    **Note:** Once you finish signing in, it may take up to 5 minutes for the lab setup process to complete.
-
-5. Once the lab setup process has completed, a pop-up message displaying **Lab Setup Completed. EXITING...** will appear. Select **Ok** and proceed.
-
 Congratulations! You have completed all the steps to initialize your lab tenant. You are now ready to perform the remaining lab exercises.
 
 # Proceed to Lab 1 - Exercise 2 
