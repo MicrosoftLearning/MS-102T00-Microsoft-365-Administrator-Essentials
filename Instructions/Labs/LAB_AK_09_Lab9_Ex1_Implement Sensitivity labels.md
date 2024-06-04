@@ -203,6 +203,8 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 42. On the **New policy created** page, select **Done**.
 
+43. Leave your Edge browser open along with all the tabs. 
+
 
 ### Task 4 – Assign a pre-existing sensitivity label to a document
 
@@ -212,47 +214,51 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. You will first verify that existence of the **Project-Falcon** sensitivity label. 
+2. You will first review the **Project-Falcon** sensitivity label that you'll be applying to a document in this task.  In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, under the **Information protection** group in the left-hand navigation pane, select **Labels**. 
 
-2. To validate the **Project-Falcon** sensitivity label, you must first assign it to a document. Select the **Home | Microsoft 365** tab in your browser to return to the Microsoft 365 home page. Select the **Apps** icon on the left-side of the screen. On the **Apps** page that appears, right-click on the **Word** tile and select **Open in new tab**. 
+3. On the **Labels** page, in the list of labels, select the right arrow (**>**) next to **Highly Confidential** to show the sub-labels under this label. Doing so displays the pre-existing **Project - Falcon** label.
 
-3. In the **Word | Microsoft 365** tab, under the **Create new** section at the top of the page, select **Blank document**.
+4. Select the **Project - Falcon** label (not the check box; select the label name). Doing so opens a **Project - Falcon** details pane. Review the information defined for this label, then close the pane when you're done.  
 
-4. If a **Your privacy option** window appears, select **Close**.
+5. You will now assign the **Project-Falcon** sensitivity label to a document. Select the **Home | Microsoft 365** tab in your browser to return to the Microsoft 365 home page. Select the **Apps** icon on the left-side of the screen. On the **Apps** page that appears, right-click on the **Word** tile and select **Open in new tab**. 
 
-5. If the Word ribbon displays icons for each feature but does not break the icons out by group, then select the down-arrow on the far right-side of the ribbon, and then under **Ribbon layout**, select **Classic ribbon**. This will switch the ribbon to the traditional ribbon style that is broken out by feature group (such as Undo, Clipboard, Font, Paragraph, Styles, and so forth).
+6. In the **Word | Microsoft 365** tab, under the **Create new** section at the top of the page, select **Blank document**.
 
-6. In the **Word** document, type the following text: **Testing a sensitivity label on a document with personally identifiable information (PII); in this case, a U.S Social Security Number: 111-11-1111.**
+7. If a **Your privacy option** window appears, select **Close**.
 
-7. Because you enabled Sensitivity labels at the start of this exercise, **Word** should display a **Sensitivity** group on the ribbon at the top of the page. Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the list of sensitivity label types. Select **Highly Confidential**, and then in the sub-menu that appears, select **Project - Falcon**. <br/>
+8. If the Word ribbon displays icons for each feature but does not break the icons out by group, then select the down-arrow on the far right-side of the ribbon, and then under **Ribbon layout**, select **Classic ribbon**. This will switch the ribbon to the traditional ribbon style that is broken out by feature group (such as Undo, Clipboard, Font, Paragraph, Styles, and so forth).
 
-	**Note:** After 24 hours, the label that you created in the prior task will appear in the Highly Confidential sub-manu, next to the Project-Falcon label. But for now, you will use the **Project - Falcon** label in its place.
+9. In the **Word** document, type the following text: **Testing a sensitivity label on a document with personally identifiable information (PII); in this case, a U.S Social Security Number: 111-11-1111.**
 
-8. In the document, note how the label applied a **CONFIDENTIAL - ProjectFalcon** watermark across the top of the document. The Project - Falcon label was configured just like the label that you created, where the watermark was supposed to appear diagonally across the middle of the page. So why does it appear towards the top of the page? The answer is that you are using **Word for the Web**, which by default displays it as you see here. To see how it will appear to someone reading the document, you must view the document in the **Reading View**, which you'll do now. <br/>
+10 Because you enabled Sensitivity labels at the start of this exercise, **Word** should display a **Sensitivity** group on the ribbon at the top of the page. Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the list of sensitivity label types. Select **Highly Confidential**, and then in the sub-menu that appears, select **Project - Falcon**. <br/>
+
+	**Note:** After 24 hours, the label that you created in the prior task will appear in the Highly Confidential sub-menu, next to the Project-Falcon label. But for now, you will use the **Project - Falcon** label in its place.
+
+11. In the document, note how the label applied a **CONFIDENTIAL - ProjectFalcon** watermark across the top of the document. The Project - Falcon label was configured just like the label that you created, where the watermark was supposed to appear diagonally across the middle of the page. So why does it appear towards the top of the page? The answer is that you are using **Word for the Web**, which by default displays it as you see here. To see how it will appear to someone reading the document, you must view the document in the **Reading View**, which you'll do now. <br/>
 
 	Select the **View** tab and then in the Word ribbon, select **Reading View**. Note how the watermark appears diagonally across the middle of the document. This is how the watermark will appear to someone reading the document. Note that if you use the Word desktop app, it displays the watermark as designated by the label, which in this case would be just as you see it here in the Reading View. <br/>
 
 	To exit Reading View, select **Edit Document** on the menu bar at the top of the page. In the drop-down menu that appears, select **Edit**.
 
-9. In this first validation test, you're going to remove this sensitivity label from being applied to this document. One of the label policy options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
+12. In this first validation test, you're going to remove this sensitivity label from being applied to this document. One of the label policy options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
 
 	In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that a check mark appears next to **Highly Confidential**. Hold your mouse over **Highly Confidential** to display the sub-menu. Notice how a check mark appears next to **Project - Falcon**. The check marks identify the current label being applied to the document.  <br/>
  
 	To remove the label from this document, select the **Project - Falcon** label that appears in this drop-down menu.
 	
-10. In the **Justification Required** window that appears, select the **Other (explain)** option. In the **Explain why you're changing this label** field, enter **Testing what happens when a label is removed from a document** and then select **Change**.
+13. In the **Justification Required** window that appears, select the **Other (explain)** option. In the **Explain why you're changing this label** field, enter **Testing what happens when a label is removed from a document** and then select **Change**.
 
-11. Note how the watermark in the document has disappeared. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **Highly Confidential** > **Project - Falcon** is displayed, no check marks appear next to them. This indicates the sensitivity label is no longer being applied to this document.  
+14. Note how the watermark in the document has disappeared. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **Highly Confidential** > **Project - Falcon** is displayed, no check marks appear next to them. This indicates the sensitivity label is no longer being applied to this document.  
 
-12. To re-apply the sensitivity label to the document, select **Highly Confidential** > **Project - Falcon** in the drop-down menu. Note how the watermark reappears in the document.
+15. To re-apply the sensitivity label to the document, select **Highly Confidential** > **Project - Falcon** in the drop-down menu. Note how the watermark reappears in the document.
 
-13. You will now save the document so that you can share it in the next task. A document name field that contains a drop-down arrow appears at the top-left corner of the page, to the right of the Word icon (Word may display **Document** or **Document1** as the temporary file name). Select the drop-down arrow. In the drop-down menu that appears, confirm the file **Location** says **Holly Dickson > Documents**. <br/>
+16. You will now save the document so that you can share it in the next task. A document name field that contains a drop-down arrow appears at the top-left corner of the page, to the right of the Word icon (Word may display **Document** or **Document1** as the temporary file name). Select the drop-down arrow. In the drop-down menu that appears, confirm the file **Location** says **Holly Dickson > Documents**. <br/>
 
 	In the **File Name** field, rename the file to **ProtectedDocument1** and then select outside of this file name menu (select inside the document). Note the new name assigned to the file appears in the title bar. 
 
-14. Leave the **ProtectedDocument1** tab open displaying the document. You will return to this document in the next task to share the document with Joni Sherman.
+17. Leave the **ProtectedDocument1** tab open displaying the document. You will return to this document in the next task to share the document with Joni Sherman.
 
-You have just successfully created a Word document containing the Highly Confidential label policy titled Project - Falcon. 
+You have just successfully created a Word document containing the Highly Confidential label titled **Project - Falcon**. 
 
 
 ### Task 5 – Protect a document using Microsoft Entra ID Protection
