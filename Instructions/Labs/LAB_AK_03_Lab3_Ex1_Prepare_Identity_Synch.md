@@ -66,7 +66,7 @@ In this task you will download and use the IdFix Directory Synchronization Error
 
 	**https://microsoft.github.io/idfix**
 	
-3. On the **Microsoft - IdFix** page, in the navigation pane on the left-side of the screen, select **Step 2: Install IdFix**. 
+3. On the **Microsoft - IdFix** page, in the navigation pane on the side of the screen, select **Step 2: Install IdFix**. 
 
 4. On the **Step 2: Install IdFix** page, the first line in the instruction says: **Select *setup.exe* to download and install the IDFix tool on your Windows machine.**  <br/>
 
