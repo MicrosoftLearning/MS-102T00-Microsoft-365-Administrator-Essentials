@@ -24,7 +24,7 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 6. In this email, you will send the mail to an email address in which the domain (alt.none) is an invalid domain. In the email pane that appears, enter **user@alt.none** in the **To** field. In the drop-down menu that appears, select **Use this address: user@alt.none**. 
 
-7. Enter **Testing invalid domain** in the **Subject** field and then send the email.  
+7. Enter **Testing invalid domain** in the **Subject** field and then select **Send** to send the email.  
 
 8. Wait for the non-delivery report (NDR) message to appear in Holly’s Inbox, then double-click the message to open it in a new window. This will make it easier to copy the text of the message in the next step. 
 
