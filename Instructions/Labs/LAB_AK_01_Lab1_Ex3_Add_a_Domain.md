@@ -52,7 +52,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 14. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is Holly's Microsoft 365 home page. In the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the Microsoft 365 admin center in a new browser tab. 
 
-15. In the **Microsoft 365 admin center**, in the navigation pane, select **...Show all**, select **Settings**, and then under the **Settings** group select **Domains**. 
+15. In the **Microsoft 365 admin center**, select **...Show all** in the navigation pane, select **Settings**, and then under the **Settings** group select **Domains**. 
 
 16. On the **Domains** page, note that in the list of domains, only the **xxxxxZZZZZZ.onmicrosoft.com** domain appears. The existing on-premises **adatum.com** domain does not appear in the list of Microsoft 365 domains. To add Adatum's new Microsoft 365 domain, select **+Add domain** in the menu bar that appears above the list of domains. This will start the **Add domain** setup wizard. 
 
