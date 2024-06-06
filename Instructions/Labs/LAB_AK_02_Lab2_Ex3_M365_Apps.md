@@ -21,7 +21,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 1. On LON-CL1, you should be logged into Microsoft 365 as Holly Dickson in your Edge browser. 
 
-2. In the **Microsoft 365 admin center**, in the navigation pane, select **Users** and then select **Active users**. 
+2. In the **Microsoft 365 admin center**, select **Users** in the navigation pane, and then select **Active users**. 
 
 3. You will begin by testing whether a user **without** an appropriate Microsoft 365 license can install Microsoft 365 Apps for enterprise. For this test, you will use **Laura Atkins**. Your lab hosting provider has already created an on-premises user account for Laura, but she does not have a Microsoft 365 user account. You will create a Microsoft 365 account for Laura, but you will NOT assign her a Microsoft 365 license.  <br/>
 
@@ -76,7 +76,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 18. In the **Welcome to Microsoft 365** dialog box that appears in the middle of the screen, select the forward arrow twice and then the check mark. 
 
-19. In the **Welcome to Microsoft 365** window (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the left-side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
+19. In the **Welcome to Microsoft 365** window (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
 
 	Select the **Install apps** button, and then in the drop-down menu that appears, select **Other install options**. This opens the **My account** window for Laura.
 
@@ -127,7 +127,7 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 	However, if you weren't able to save your custom theme, then you were instructed to update the Default theme to display the sign-in user's name. If you were unable to save your custom them, then the Default theme should apply, and you should see Laura's name. 
 
-13. In your browser, verify you're on the **Home | Microsoft 365** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the navigation pane on the left because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
+13. In your browser, verify you're on the **Home | Microsoft 365** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the side pane because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
 
 	Select the **Refresh** icon that appears to the left of the address bar at the top of your browser. <br/>
 
