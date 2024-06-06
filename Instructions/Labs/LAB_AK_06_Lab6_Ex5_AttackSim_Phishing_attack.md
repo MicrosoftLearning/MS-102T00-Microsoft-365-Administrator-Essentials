@@ -16,7 +16,7 @@ In this lab exercise, you will use one of the existing payload templates. In the
 
 2. You should still have the **Microsoft Defender** portal open in your **Edge** browser from the prior task. If not, enter **https://security.microsoft.com** in the address bar, and then if you receive a dialog box asking for a second form of authentication, proceed through the verification process. If not, sign-in as Holly using the **Administrative username** and **Administrative password** provided by your lab-hosting provider and if required, complete the MFA sign-in process.
 
-3. In the **Microsoft Defender** portal, under the **Email & collaboration** section in the left-hand navigation pane, select **Attack simulation training**. If a **Welcome to Attack simulation training** window appears, select **Close**.
+3. In the **Microsoft Defender** portal, under the **Email & collaboration** section in the navigation pane, select **Attack simulation training**. If a **Welcome to Attack simulation training** window appears, select **Close**.
 
 4. On the **Attack simulation training** page, Holly has decided to conduct a simulated account breach in which she will use a URL to try and obtain usernames and passwords. This is referred to in the Attack Simulator as a **Credentials Harvest** attack. <br/>
 
@@ -28,7 +28,7 @@ In this lab exercise, you will use one of the existing payload templates. In the
 
 6. On the **Select Technique** page, select the **Credentials Harvest** attack type if it's not already selected by default, and then select **Next**.
 
-7. In the **Simulation** wizard, the steps involved in the simulation are displayed in the left-hand pane. While you can manually create a phishing campaign, it is recommended that you take advantage of the available templates that will prefill most of the information for you. The key to a successful phishing attack is to create a very intriguing, real-world looking email, and the templates provide very creative solutions. <br/>
+7. In the **Simulation** wizard, the steps involved in the simulation are displayed in the side pane. While you can manually create a phishing campaign, it is recommended that you take advantage of the available templates that will prefill most of the information for you. The key to a successful phishing attack is to create a very intriguing, real-world looking email, and the templates provide very creative solutions. <br/>
 
 	On the **Name Simulation** page, provide the following information: 
 	- Simulation Name: **PhishingTest1**
