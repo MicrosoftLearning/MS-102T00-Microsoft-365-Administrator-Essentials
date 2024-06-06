@@ -8,7 +8,7 @@ In this exercise you will configure and test an alert that will notify Lynne Rob
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson. 
 
-2. The **Microsoft Defender** portal should still be open in your Edge browser from the prior task. Select the **Microsoft Defender** tab now. In the left-hand navigation pane, under the **Email & collaboration** section, select **Policies & rules**. 
+2. The **Microsoft Defender** portal should still be open in your Edge browser from the prior task. Select the **Microsoft Defender** tab now. In the navigation pane, under the **Email & collaboration** section, select **Policies & rules**. 
 
 3. On the **Policies & rules** window, select **Alert policy**. If a dialog box appears indicating the alert policy portal has been updated, select the **Dismiss** button.
 
@@ -62,9 +62,9 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In your Edge browser, select the **Microsoft 365 admin center** tab, and then in the left-hand navigation pane, under the **Admin centers** group, select **Exchange**. This opens the Exchange admin center for Exchange Online.
+2. In your Edge browser, select the **Microsoft 365 admin center** tab, and then in the navigation pane, under the **Admin centers** group, select **Exchange**. This opens the Exchange admin center for Exchange Online.
 
-3. In the **Exchange admin center**, the **Manage mailboxes** window appears by default (if it doesn't, then in the left-hand navigation pane, under the **Recipients** group, select **Mailboxes**). 
+3. In the **Exchange admin center**, the **Manage mailboxes** window appears by default (if it doesn't, then in the navigation pane under the **Recipients** group, select **Mailboxes**). 
 
 4. In the **Manage mailboxes** window, select **Alex Wilber** from the list of mailboxes (select Alex's name; do not select the check box to the left of his name).
 
@@ -79,7 +79,7 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 	- Once the mailbox permission is added to Alex's mailbox, select the back arrow at the top of the pane. 
 	- This returns you to the **Delegation** tab on the **Alex Wilber** pane, which displays the three permissions. Repeat these steps for each of the two remaining permissions. 
 
-7. Once you have assigned Joni to each of the three permissions on the **Delegation** tab, select the **X** in the upper right-hand corner to close the **Alex Wilber** pane. <br/>
+7. Once you have assigned Joni to each of the three permissions on the **Delegation** tab, select the **X** in the top corner of the **Alex Wilber** pane to close it. <br/>
 
 	**Note:** This activity should trigger the alert policy that you created, which should send an alert notification email to Lynne Robbins’ mailbox. Rather than waiting up to 15 minutes for the email notification to be generated to validate this mailbox permission alert, you will validate this alert in Exercise 7, task 1 of this lab.
    
