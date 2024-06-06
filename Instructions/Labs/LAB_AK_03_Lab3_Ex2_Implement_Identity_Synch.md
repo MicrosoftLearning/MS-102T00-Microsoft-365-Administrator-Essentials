@@ -137,7 +137,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 3. In **Server Manager**, select **Tools** at the top right side of the screen, and then in the drop-down menu select **Active Directory Users and Computers.**
 
-4. You will begin by adding members to one of the built-in, on-premises security groups. Maximize the **Active Directory Users and Computers** window. In the console tree in the left-hand pane, under **Adatum.com**, select the **Builtin** folder. This will display all the built-in security group folders that were automatically created at the time the **Adatum.com** domain was created.
+4. You will begin by adding members to one of the built-in, on-premises security groups. Maximize the **Active Directory Users and Computers** window. In the console tree in the side pane, under **Adatum.com**, select the **Builtin** folder. This will display all the built-in security group folders that were automatically created at the time the **Adatum.com** domain was created.
 
 5. In the detail pane on the right, double-click the **Print Operators** security group.
 
