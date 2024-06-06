@@ -12,7 +12,7 @@ To test archiving and retention in your Adatum pilot project, you will create a 
 
 	At this point, you may have quite a few tabs open in your browser. If you wish, you can take this opportunity to close every tab except for the **Home | Microsoft 365** tab and the **Microsoft 365 admin center** tab.
 
-3. In the **Microsoft 365 admin center**, in the navigation pane, select **Teams & groups** and then select **Active teams & groups** below it.
+3. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**.
 
 4. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default. To the right of this are tabs for Distribution list and Security groups. Select the **Security groups** tab.
 
