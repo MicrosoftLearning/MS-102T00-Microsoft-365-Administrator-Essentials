@@ -19,7 +19,7 @@ For this next test of PIM in Adatum's pilot project, Holly has selected Alex Wil
 
 2. In your Edge browser, select the tab containing the **Microsoft Entra admin center**, which should still be open from the prior lab exercise. 
 
-3. In the **Microsoft Entra admin center**, in the navigation pane, select **Groups** and then select **All groups**.
+3. In the **Microsoft Entra admin center**, select **Groups** in the navigation pane, and then select **All groups**.
 
 4. In the **Groups | All groups** window, select **New group** in the menu bar.
 
