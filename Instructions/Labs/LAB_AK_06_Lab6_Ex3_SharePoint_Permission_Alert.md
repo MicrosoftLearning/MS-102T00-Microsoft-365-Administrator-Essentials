@@ -9,7 +9,7 @@ In this exercise you will configure and test an alert that notifies Lynne Robbin
 
 2. In your Edge browser, select the **Alert policy - Microsoft Defender** tab, which displays the **Microsoft Defender** portal.
 
-3. In the **Microsoft Defender** portal, you should still be in the **Alert policy** window from the prior lab exercise (if not, then in the left-hand navigation pane, select **Policies & rules** and then select **Alert policy**).
+3. In the **Microsoft Defender** portal, you should still be in the **Alert policy** window from the prior lab exercise (if not, then in the navigation pane, select **Policies & rules** and then select **Alert policy**).
 
 4. In the **Alert policy** window, select **+New Alert Policy** on the menu bar. This initiates the **New Alert Policy** wizard.
 
