@@ -14,7 +14,7 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 3. In the **Microsoft Defender** portal, you should still be on the **Safe attachments** page after completing the previous task. In the navigation thread at the top of the page (**Policies & rules > Threat policies > Safe attachments**), select **Threat policies**. <br/>
 
-    **NOTE:** If you had closed the **Safe Attachments** tab after the prior task, then navigate to the **Threat policies** page by selecting **Policies & rules** in the left-hand navigation pane, and then selecting **Threat policies**.
+    **NOTE:** If you had closed the **Safe Attachments** tab after the prior task, then navigate to the **Threat policies** page by selecting **Policies & rules** in the navigation pane, and then selecting **Threat policies**.
 
 4. In the **Threat policies** window, under the **Policies** section, select **Safe Links**. 
 
@@ -63,9 +63,9 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 3. Holly Dickson's **Outlook** mailbox will open in a new tab in your browser, and Holly's **Inbox** will be displayed.
    
-4. Select the **New mail** button in the upper left part of the screen.
+4. Select the **New mail** button at the top of the screen.
 
-5. In the email form that appears in the right-hand pane, enter the following information:
+5. In the email form that appears, enter the following information:
 
     - To: You will be sending an email to the MOD Administrator, so enter **mod** in the **To** field and then select the **MOD Administrator** email address from the user list.
 
@@ -135,7 +135,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 27. You should now prepare LON-CL2 for the next lab that will use it. Switch back to the Client 2 VM (**LON-CL2**). 
 
-28. In LON-CL2, select the circle with the **MA** initials in the upper right-hand corner of your Edge browser. In the **MOD Administrator** profile window that appears, select **Sign out**.
+28. In LON-CL2, select the circle with the **MA** initials in the top corner of your Edge browser. In the **MOD Administrator** profile window that appears, select **Sign out**.
 
 29. Once you are signed out of Outlook, the Edge browser should close if no other tabs were open. If other tabs were still open, close those tabs now so that your Edge browser closes. LON-CL2 is now ready for use in Lab 6.
 
