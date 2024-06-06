@@ -75,14 +75,14 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 24. Select the **Microsoft 365 admin center** tab. If you had closed this tab, then select the **Home | Microsoft 365** tab in your Edge browser, select the **App launcher** icon (the square made up of 3 rows of dots) that appears above the **Home** icon in the top left corner of the screen, and then in the **Apps** pane that appears, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
-25. On the **Microsoft 365 admin center** page, in the navigation pane, select **Show all** (if necessary). 
+25. On the **Microsoft 365 admin center** page, select **Show all** (if necessary) in the navigation pane. 
 
 26. Scroll down through the navigation pane, and under **Admin centers,** select **Exchange**. This will open the Exchange admin center in a new tab. <br/>
 
 	- If a **Toolbar** window appears, select the **Next** button twice and then the **Finish** button to navigate through the three windows. 
 	- If a **Learn about the new menu** window appears, select the X to close it.
 
-27. In the **Exchange admin center**, in the navigation pane, select **Mail flow**, and then select **Message trace**. 
+27. In the **Exchange admin center**, select **Mail flow** in the navigation pane, and then select **Message trace**. 
 
 28. In the **Message trace** window, the **Default queries** tab is displayed by default. In this tab, select **+Start a trace** on the menu bar. 
 
@@ -119,7 +119,7 @@ Adatum's CTO is concerned with the service health issues that have recently come
 
 4. In the **Issue history** tab on the **Service health** window, the default option is to display a list of items from the past 7 days (this filter option appears to the right of the **Search** field). In the list of service health incidents, select the **Title** for any entry in the list to see further details about the incident. Close the incident window when you’re done reviewing it. 
 
-5. In the **Microsoft 365 admin center**, in the navigation pane, select **Reports**, and then select **Usage.** 
+5. In the **Microsoft 365 admin center**, select **Reports** in the navigation pane, and then select **Usage**.
 
 6. On the **Usage** page, scroll down and locate the **Active users - Microsoft 365 Services** chart. 
 
