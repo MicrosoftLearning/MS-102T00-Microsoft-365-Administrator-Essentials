@@ -121,7 +121,7 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 
 12. In the **M365 pilot project** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
 
-13. In the **Membership** tab, the **Owners** sub-tab is displayed by default in the navigation pane that appears on the left-side of the pane. Select the **Members** sub-tab that appears below it.
+13. In the **Membership** tab, the **Owners** sub-tab is displayed by default in the navigation pane that appears on the side of the pane. Select the **Members** sub-tab that appears below it.
 
 14. In the **Members** sub-tab, select **+Add members**.
 
@@ -238,13 +238,13 @@ In this task, you will create three new groups that will be used in later labs. 
 
 35. This will return you to the list of **Active teams and groups**. The **Inside Sales** group should no longer appear under the **Teams & Microsoft 365 groups** tab. If the Inside Sales group still displays, wait a couple of minutes and then select the **Refresh** option on the menu bar. The updated **Active teams and groups** page should no longer include the Inside Sales group in the **Teams & Microsoft 365 groups** tab.
 
-36. In the MIcrosoft 365 admin center navigation pane, under **Teams & groups**, select **Deleted groups**. The **Inside Sales** group should appear in the list. 
+36. In the Microsoft 365 admin center navigation pane, under **Teams & groups**, select **Deleted groups**. The **Inside Sales** group should appear in the list. 
 
-36. To verify whether deleting this group affected any of its owners or members, select **Active Users** in the navigation pane. 
+37. To verify whether deleting this group affected any of its owners or members, select **Active Users** in the navigation pane. 
 
-37. In the **Active users** list verify that the Inside Sales group's two owners (**Allan Deyoung** and **Patti Fernandez**) and the two members (**Diego Siciliani** and **Lynne Robbins**) still appear in the list of users. This verifies that deleting a group does not delete the user accounts that were owners or members of the group.
+38. In the **Active users** list verify that the Inside Sales group's two owners (**Allan Deyoung** and **Patti Fernandez**) and the two members (**Diego Siciliani** and **Lynne Robbins**) still appear in the list of users. This verifies that deleting a group does not delete the user accounts that were owners or members of the group.
 
-38. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
+39. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
 ### Task 4 – Recover Groups using PowerShell 
