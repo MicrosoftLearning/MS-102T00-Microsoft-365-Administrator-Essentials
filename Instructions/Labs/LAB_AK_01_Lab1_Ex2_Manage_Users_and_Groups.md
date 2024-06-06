@@ -109,7 +109,7 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 
 7. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
-8. If a **Create with Microsoft 365** window appears, select the **X** in the upper right-hand corner of the window to close it. 
+8. If a **Create with Microsoft 365** window appears, select the **X** in the top corner of the window to close it. 
 
 9. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is Holly's Microsoft 365 home page. Note that Holly's initials appear in the upper-right corner of the screen; however, Holly's name is not displayed. This is because Holly's account did not exist at the time you added the Microsoft 365 pilot project users to the group that was associated with the custom theme in the prior lab exercise. Since Holly wants to see her name at the top of each Microsoft 365 window when she's logged into the system, she first wants to add her account to the group of Microsoft 365 pilot project users. <br>
 
@@ -190,7 +190,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 17. In the **Accounting** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
 
-18. In the **Membership** tab, four sub-tabs (Owners, Members, Site visitors, and About membership and permissions) are displayed in the left-hand column. The **Owners** sub-tab is displayed by default. In the **Owners** sub-tab, Joni Sherman should appear as the only group owner. 
+18. In the **Membership** tab, four sub-tabs (Owners, Members, Site visitors, and About membership and permissions) are displayed in a side column. The **Owners** sub-tab is displayed by default. In the **Owners** sub-tab, Joni Sherman should appear as the only group owner. 
 
 19. Select the **Members** sub-tab. In the **Members** sub-tab, select the **Add members** button. 
 
@@ -198,7 +198,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	In the list of users, select **Alex Wilber**. Note that you have to select back into the field to display the list of users. Select **Joni Sherman**, select back in the field, and then select **Lynne Robbins**. Once all three users are selected, select the **Add (3)** button at the bottom of the pane.
 
-21. Once the three new members have been added to the group, select the **X** in the upper right-hand corner of the **Accounting** pane to close it. 
+21. Once the three new members have been added to the group, select the **X** in the top corner of the pane to close it. 
 
 22. After adding members to the Accounting group, you will be returned to the **Active teams and groups** window. Select the **Security groups** tab to display the list of security groups. As you can see from the menu bar, there are two types of security groups that you can create - a **security group** and a **mail-enabled security group**. In this task, you will create a security group; therefore, select the **+Add a security group** option on the menu bar. 
 
@@ -228,7 +228,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 30. In the list of users, select the check boxes for **Isaiah Langer**, **Megan Bowen**, and **Nestor Wilke**, and then at the bottom of the pane select the **Add (3)** button. 
 
-31. In the **Members** pane, verify the three users that you selected appear. Select the **X** in the upper right-hand corner to close the **Members** pane. 
+31. In the **Members** pane, verify the three users that you selected appear. Select the **X** in the top corner of the pane to close it. 
 
 32. You now want to test the effect of deleting a group. In the list of **Active teams and groups**, select the **Teams & Microsoft 365 groups** tab. In the list of Microsoft 365 groups, locate the **Inside Sales** group and then select the vertical ellipsis icon (**More actions**) that appears to the right of the **Inside Sales** group. In the drop-down menu that appears, select **Delete team**. 
 
@@ -298,7 +298,7 @@ However, to expand your administrator skills, you will instead restore the delet
 
 	**Note:** If the Inside Sales group does not appear, wait a minute or two and then select **Refresh** on the menu bar above the list of groups.
 
-12. In the **Inside Sales** pane that appears, select the **Membership** tab. In the **Membership** tab, three sub-tabs (Owners, Members, and About membership and permissions) are displayed in the left-hand column. The **Owners** sub-tab is displayed by default. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group.
+12. In the **Inside Sales** pane that appears, select the **Membership** tab. In the **Membership** tab, three sub-tabs (Owners, Members, and About membership and permissions) are displayed in the side column. The **Owners** sub-tab is displayed by default. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group.
 
 13. Select the **Members** sub-tab. **Diego Siciliani** and **Lynne Robbins** should appear as members of the group. You have just verified that the deleted group is now fully restored.
 
