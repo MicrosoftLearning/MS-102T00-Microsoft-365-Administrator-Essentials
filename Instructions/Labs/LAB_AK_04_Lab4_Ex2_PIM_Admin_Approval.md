@@ -36,7 +36,7 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 2. On **LON-CL1**, you should still be logged into the machine as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-3. In your browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane under the **Admin centers** section, select **Identity**.
+3. In your browser, select the **Microsoft 365 admin center** tab. In the navigation pane under the **Admin centers** section, select **Identity**.
 
 4. If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick and account** window, select Holly's account, and in the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider. If required, complete the MFA sign-in process. 
 
@@ -91,7 +91,7 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 2. You will begin by creating a new, role-assignable security group called **PIM-Global-Administrators** in Microsoft Entra ID, and you will assign Patti as a member of the group. <br/>
 
-    In your **Edge** browser, you should still have the **Microsoft Entra admin center** open in a tab that's displaying the **Adatum Corporation | Settings** window from the prior task. In the left-hand navigation pane, select **Groups**, and then select **All groups**.
+    In your **Edge** browser, you should still have the **Microsoft Entra admin center** open in a tab that's displaying the **Adatum Corporation | Settings** window from the prior task. In the navigation pane, select **Groups**, and then select **All groups**.
 
 3. In the **Groups | All groups** window, in the detail pane on the right, select **New group** in the menu bar.
 
@@ -115,7 +115,7 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 6. A dialog box appears at the top of the page that says: **Creating a group to which Microsoft Entra roles can be assigned is a setting that cannot be changed later. Are you sure that you want to add this capability?**. Select **Yes**.
 
-7. You must now make the **PIM-Global-Administrators** group eligible for role assignment. In the left-hand navigation pane, select **Identity Governance** to expand the section, and then select **Privileged Identity Management**.
+7. You must now make the **PIM-Global-Administrators** group eligible for role assignment. In the navigation pane, select **Identity Governance** to expand the section, and then select **Privileged Identity Management**.
 
 8. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
@@ -160,7 +160,7 @@ Now that the **PIM-Global-Administrators** group has been made eligible for the 
 
 7. In the **All services** window, enter **priv** in the **Filter services** search box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
 
-8. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the left-hand navigation pane, select **My Roles**.
+8. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the navigation pane, select **My Roles**.
 
 9. In the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed by default. Remember, in the prior task Holly assigned Patti as a member of the **PIM-Global-Administrators** group, which Holly later assigned as an eligible group for the Global Administrator role. As such, this role appears in the list of **Eligible assignments**. <br/>
 
