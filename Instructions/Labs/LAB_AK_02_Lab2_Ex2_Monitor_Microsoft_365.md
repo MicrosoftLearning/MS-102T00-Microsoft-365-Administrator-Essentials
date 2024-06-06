@@ -172,7 +172,7 @@ If an organization runs into a situation in Microsoft 365 where it needs assista
 
 	‎**IMPORTANT: Do NOT complete this form in your lab environment.** If you enter this request with the **Phone** option selected, you will receive a call from a Microsoft 365 support representative. We do not want to bother Microsoft Support specialists with calls from students in a training class. 
 	
-7. Select the **X** in the upper right-hand corner of the page to close the **Contact support** window.
+7. Select the **X** in the top corner of the page to close the **Contact support** window.
 	
 8. Leave LON-CL1 and your Edge browser open for the next lab exercise.  
 
