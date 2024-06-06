@@ -48,7 +48,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 12. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the right arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
-13. If a **Find more apps** or **Introducing Microsoft Feed** or any other introductory-type window appears, select the **X** in the upper right-hand corner of the window to close it. 
+13. If a **Find more apps** or **Introducing Microsoft Feed** or any other introductory-type window appears, select the **X** in the top corner of the window to close it. 
 
 14. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is Holly's Microsoft 365 home page. In the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the Microsoft 365 admin center in a new browser tab. 
 
@@ -68,9 +68,9 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 21. In **Server Manager Dashboard,** select **Tools** in the top right corner of the window. In the drop-down menu that appears, select **DNS**, which will open **DNS Manager**. Maximize the DNS Manager window.
 
-22. In the **DNS Manager** window, in the **File Explorer** section in the left-hand pane, select **LON-DC1** to expand it (if necessary). Under LON-DC1, expand the **Forward Lookup Zones** folder. In the list of Forward Lookup Zones in the left-hand pane, select the **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell. Make sure you select this zone in the left-hand pane and not in the right-hand detail pane.
+22. In the **DNS Manager** window, in the **File Explorer** section in the left-hand pane, select **LON-DC1** to expand it (if necessary). Under LON-DC1, expand the **Forward Lookup Zones** folder. In the list of Forward Lookup Zones in the side pane, select the **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell. Make sure you select this zone in the file tree in the side pane and not in the middle detail pane.
 
-23. Right-click on this **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously selected in the left-hand pane. In the menu that appears, select **Other New Records...** (Note: If you right-click on the zone in the right-hand detail pane, the **Other New Records...** option will be disabled).
+23. Right-click on this **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously selected in the side pane. In the menu that appears, select **Other New Records...** (Note: If you mistakenly right-click on the zone in the middle detail pane, the **Other New Records...** option will be disabled).
 
 24. In the **Resource Record Type** window that appears, in the **Select a resource record type** field, scroll down and select **Text (TXT),** and then select the **Create Record...** button at the bottom of the window.
 
@@ -78,7 +78,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 26. Select **OK** to create the record. 
 
-27. In the **Resource Record Type** window, select **Done**. Note how this Text (TXT) record appears in the right-hand detail pane for the xxxUPNxxx.xxxCustomDomainxxx.xxx domain that you previously created. <br/>
+27. In the **Resource Record Type** window, select **Done**. Note how this Text (TXT) record appears in the middle detail pane for the xxxUPNxxx.xxxCustomDomainxxx.xxx domain that you previously created. <br/>
 
 	Leave your **DNS Manager** window open but minimize it as you will return to it in a later step in this task.  Minimize the **Server Manager** window as well. 
 
@@ -112,7 +112,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 	
 	b. You must now switch to DNS Manager. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 
-	c. In **DNS Manager**, under **Forward Lookup Zones** in the left-hand pane, the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain should be selected from when you earlier left off. If not, select this zone now. You should see the **TXT** record that you created earlier. You must now create a **Mail Exchanger (MX)** record for this domain. Under **Forward Lookup Zones**, right-click the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain and select **New Mail Exchanger (MX)...**
+	c. In **DNS Manager**, under **Forward Lookup Zones** in the side pane, the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain should be selected from when you earlier left off. If not, select this zone now. You should see the **TXT** record that you created earlier. You must now create a **Mail Exchanger (MX)** record for this domain. Under **Forward Lookup Zones**, right-click the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain and select **New Mail Exchanger (MX)...**
 
 	d. In the **New Resource Record** window, in the **Mail Exchanger (MX)** tab, leave the **Host or child domain** field blank, but right-click in the **Fully qualified domain name (FQDN) of mail server** field and select **Paste** from the menu that appears. This will paste in the expected **Points to address or value** that you copied to the clipboard in **step a** above.
 	
