@@ -10,9 +10,9 @@ In this task, you will turn on Microsoft Defender for Office 365, which provides
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. In your Edge browser, select the **Microsoft 365 admin center** tab. In the left-hand navigation pane, under **Admin centers**, select **Security**. This will open a new tab in your browser for **Microsoft Defender**. 
+2. In your Edge browser, select the **Microsoft 365 admin center** tab. In the navigation pane, under **Admin centers**, select **Security**. This will open a new tab in your browser for **Microsoft Defender**. 
 
-3. In the **Microsoft Defender** portal, scroll down to the bottom of the **Email & collaboration** section in the left-hand navigation pane and select **Policies & rules** .
+3. In the **Microsoft Defender** portal, scroll down to the bottom of the **Email & collaboration** section in the navigation pane and select **Policies & rules** .
 
 4. In the **Policies & rules** window, select **Threat policies**.
 
