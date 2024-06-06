@@ -44,7 +44,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 8. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
-9. If a **Find more apps** dialog box or a **Create with Microsoft 365** dialog box appears, select the **X** in the upper right-hand corner of the boxes to close them. 
+9. If a **Find more apps** dialog box or a **Create with Microsoft 365** dialog box appears, select the **X** in the upper right-hand corner of the boxes to close them. Similarly, if a Sing in to Microsoft Edge dialog box appears, select the **No thanks** button.
 
 10. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the MOD Administrator's Microsoft 365 home page. <br/>
 
@@ -52,7 +52,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
-11. In the **Microsoft 365 admin center**, select **Show all** in the left-hand navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
+11. In the **Microsoft 365 admin center**, select **Show all** in the navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
 
 12. On the **Org settings** page, the **Services** tab is displayed by default. Select the **Organization profile** tab.
 
@@ -78,7 +78,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 15. Select **Save**.
 
-16. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the upper right-hand corner to close the pane.
+16. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the top corner of the pane to close it.
 
 17. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.  <br/>
 
