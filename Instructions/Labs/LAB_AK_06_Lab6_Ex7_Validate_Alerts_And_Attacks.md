@@ -61,7 +61,7 @@ In Lab 6, Exercise 4, you created a default Microsoft 365 alert policy that noti
 
 	- Select the **Home - Microsoft 365 admin center** tab in your Edge browser. In the **Microsoft 365 admin center**, select **Compliance** in the navigation pane to open the Microsoft Purview portal.
 	
-	- In the **Microsoft Purview** portal, select **Content search** in the left-hand navigation pane.
+	- In the **Microsoft Purview** portal, select **Content search** in the navigation pane.
 	
 	- On the **Content search** page, the **Search** tab is displayed by default. In the list of searches, select **Confidential search**.
 	
@@ -94,7 +94,7 @@ In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which
 
 7.  On the **Attack simulation training** page, select the **PhishingTest1** simulation to view the diagnostic results that were captured for this simulation.
 
-8. A **PhishingTest1** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
+8. A **PhishingTest1** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the top corner of the window to close it. 
 
 9. Leave your browser open in LON-CL1 and do not close any of the tabs.
     
@@ -121,7 +121,7 @@ In Lab 6, Exercise 6, you configured and launched a simulated Drive-by URL attac
 
 9. On LON-CL1, in your browser session where you are logged in as Holly Dickson, you should still be on the **Attack simulation training** page. Select the **Custom payload** simulation to view the diagnostic results that were captured for this simulation.
 
-10. A **Custom payload** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the upper right-hand corner of the window to close it. 
+10. A **Custom payload** page should appear. Review all the information collected for this simulated attack. When you're finished, select the **X** in the top corner of the window to close it. 
 
 11. Leave your browser open in LON-CL1. Close all tabs EXCEPT for the **Home | Microsoft 365** and **Home | Microsoft 365 admin center** tabs. 
 
