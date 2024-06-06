@@ -19,7 +19,7 @@ For this next test of PIM in Adatum's pilot project, Holly has selected Alex Wil
 
 2. In your Edge browser, select the tab containing the **Microsoft Entra admin center**, which should still be open from the prior lab exercise. 
 
-3. In the **Microsoft Entra admin center**, in the left-hand navigation pane, select **Groups** and then select **All groups**.
+3. In the **Microsoft Entra admin center**, in the navigation pane, select **Groups** and then select **All groups**.
 
 4. In the **Groups | All groups** window, select **New group** in the menu bar.
 
@@ -45,7 +45,7 @@ For this next test of PIM in Adatum's pilot project, Holly has selected Alex Wil
 
 8. On the **Groups | All groups** window, if the **PIM-Helpdesk-Administrators** group does not appear below the PIM-Global-Administrators group that you created in the prior task, select **Refresh** on the menu bar.
 
-9. You must now make the **PIM-Helpdesk-Administrators** group eligible for role assignment. In the left-hand navigation pane, select **Identity Governance** to expand the section, and then select **Privileged Identity Management**.
+9. You must now make the **PIM-Helpdesk-Administrators** group eligible for role assignment. In the navigation pane, select **Identity Governance** to expand the section, and then select **Privileged Identity Management**.
 
 10. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
@@ -78,7 +78,7 @@ In the prior lab exercise involving the Global administrator role, Holly updated
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson from the prior task.
 
-2. In your browser, you should still have the **Microsoft Entra admin center** open from the prior task. In the left-hand navigation pane, under the **Identity Governance** section, select **Privileged Identity Management**.
+2. In your browser, you should still have the **Microsoft Entra admin center** open from the prior task. In the navigation pane, under the **Identity Governance** section, select **Privileged Identity Management**.
 
 3. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
@@ -145,7 +145,7 @@ At this point in Holly's pilot project, the **PIM-Helpdesk-Administrators** grou
 
 7. In the **All services** window, enter **priv** in the **Filter services** search box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
 
-8. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the left-hand navigation pane, select **My Roles**.
+8. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the navigation pane, select **My Roles**.
 
 9. In the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed by default. Remember, in the prior task Holly assigned Alex as a member of the **PIM-Helpdesk-Administrators** group, which Holly later assigned as an eligible group for the Helpdesk Administrator role. As such, this role appears in the list of **Eligible assignments** for Alex. <br/>
 
