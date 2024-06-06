@@ -12,7 +12,7 @@ To test archiving and retention in your Adatum pilot project, you will create a 
 
 	At this point, you may have quite a few tabs open in your browser. If you wish, you can take this opportunity to close every tab except for the **Home | Microsoft 365** tab and the **Microsoft 365 admin center** tab.
 
-3. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Teams & groups** and then select **Active teams & groups** below it.
+3. In the **Microsoft 365 admin center**, in the navigation pane, select **Teams & groups** and then select **Active teams & groups** below it.
 
 4. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default. To the right of this are tabs for Distribution list and Security groups. Select the **Security groups** tab.
 
@@ -55,9 +55,9 @@ In this task you will activate MDM auto-enrollment for new devices in your Adatu
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Show all** (if necessary), and then in the **Admin centers** section, select **Endpoint Manager**. This returns the **Microsoft Intune admin center**.
+2. In the **Microsoft 365 admin center**, select **Show all** (if necessary) in the navigation pane, and then in the **Admin centers** section, select **Endpoint Manager**. This returns the **Microsoft Intune admin center**.
 
-3. In the **Microsoft Intune admin center**, select **Devices** in the left-hand navigation pane.
+3. In the **Microsoft Intune admin center**, select **Devices** in the navigation pane.
 
 4. This returns the **Devices | Overview** page. Under the **Device enrollment** section in the middle pane, select **Enroll devices**.
 
@@ -75,7 +75,7 @@ In this task you will activate MDM auto-enrollment for new devices in your Adatu
 
 10. Select **Save** on the menu bar at the top of the page. Wait for the settings to be saved before proceeding to the next step.
 
-11. In the **Microsoft Intune admin center**, select **Tenant administration** in the left-hand navigation pane.
+11. In the **Microsoft Intune admin center**, select **Tenant administration** in the navigation pane.
 
 12. In the **Tenant admin | Tenant status** page, verify the **MDM authority** is set to **Microsoft Intune**.
 
