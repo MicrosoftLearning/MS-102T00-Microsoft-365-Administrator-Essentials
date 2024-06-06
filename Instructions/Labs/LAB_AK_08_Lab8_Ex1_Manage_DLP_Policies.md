@@ -12,13 +12,13 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
 2. In **Microsoft Edge**, the Microsoft Purview portal should still be open; if not, then open a new tab and navigate to **https://compliance.microsoft.com**.
 
-3. In the **Microsoft Purview** portal, in the left-hand navigation pane, select **Data loss prevention**, and then select **Policies**.
+3. In the **Microsoft Purview** portal, select **Data loss prevention** in the navigation pane, and then select **Policies**.
 
 4. In the **Policies** page, select the **+Create policy** option on the menu bar to start the **Create policy** wizard.
 
 5. On the **Start with a template or create a custom policy** page, the **Categories** column displays the policy categories. Each policy category provide templates that can be used to create that type of policy, except for the **Custom** category. This category does not provide any specific template; instead, it enables organizations to create custom policies from scratch. When you select a category, **Templates** column appears that displays the available templates to choose from for the selected category. When you select a template, another column appears that displays the type of information that is protected in that template. <br/> 
 
-    For example, select **Financial** in the left-hand pane and then scroll through the various templates that you can choose from in the **Templates** column. Select one or two of the templates to see what type of information it protects. If you want, select each of the remaining categories to see what type of templates are provided. 
+    For example, select **Financial** in the side pane and then scroll through the various templates that you can choose from in the **Templates** column. Select one or two of the templates to see what type of information it protects. If you want, select each of the remaining categories to see what type of templates are provided. 
   
 6. For the purpose of this lab, you will create a custom DLP policy. Select **Custom** in the **Categories** column, select the **Custom policy** template in the **Templates** column, and then select **Next**.
 
