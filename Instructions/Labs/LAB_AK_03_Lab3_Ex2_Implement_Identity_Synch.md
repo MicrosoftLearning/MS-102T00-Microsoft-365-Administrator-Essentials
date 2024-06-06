@@ -14,7 +14,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 2. After finishing the earlier lab exercise in which you added Adatum's custom domain, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson.  
 
-3. In your **Edge** browser, select the **Microsoft 365 admin center** tab, and then in the navigation pane, select **Users**, and then select **Active Users**. <br/>
+3. In your **Edge** browser, select the **Microsoft 365 admin center** tab, select **Users** in the navigation pane, and then select **Active Users**. <br/>
 
 4. In the **Active users** window, select the **ellipsis** icon that appears at the end of the menu bar, and then in the drop-down menu that appears, select **Directory synchronization**. This initiates the **Add or sync users to Microsoft Entra ID** wizard. It may take a minute or so for the wizard to start.
 
