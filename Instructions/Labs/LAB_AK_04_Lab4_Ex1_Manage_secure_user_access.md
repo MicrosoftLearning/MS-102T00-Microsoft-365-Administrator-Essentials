@@ -128,11 +128,11 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 11. On the **Configuration complete** page, note the message indicating the current sign on method for Azure AD is PTA. Select **Exit**. Pass-Through Authentication has now been enabled. 
 
-12. To verify that Pass-Through Authentication is successfully enabled, select the **Microsoft 365 admin center** tab in your Edge browser. In the navigation pane, under **Admin centers**, select **Identity**.
+12. To verify that Pass-Through Authentication is successfully enabled, select the **Microsoft 365 admin center** tab in your Edge browser. Under **Admin centers** in the navigation pane, select **Identity**.
 
-13. This opens the **Microsoft Entra admin center**. In the navigation pane, select **Show more**. This displays additional feature groups. Select **Hybrid management** to expand this group, and then select **Microsoft Entra Connect**. 
+13. This opens the **Microsoft Entra admin center**. Select **Show more** in the navigation pane, select **Hybrid management** to expand this group, and then select **Microsoft Entra Connect**. 
 
-17. On the **Microsoft Entra Connect | Get started** page, in the middle navigation pane, select **Connect Sync**.
+17. On the **Microsoft Entra Connect | Get started** page, select **Connect Sync** in the middle navigation pane.
 
 18. On the **Microsoft Entra Connect | Connect Sync** page, in the detail pane on the right, under the **USER SIGN-IN** section, verify that the status of **Pass-through authentication** is **Enabled**, and then select **Pass-through authentication**. 
 
@@ -173,7 +173,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 	For Adatum, Holly has chosen to use the Microsoft Entra admin center to configure the company's Account Lockout policy. ‎On the taskbar at the bottom of your screen, select the **Microsoft Edge** icon, which should be displaying the **Microsoft Entra admin center**. 
 
-9. In the **Microsoft Entra admin center**, in the navigation pane, select **Authentication methods** under the **Protection** submenu.
+9. In the **Microsoft Entra admin center**, select **Protection** in the navigation pane, and then select **Authentication methods** 
 
 10. In the **Authentication methods | Policies** page, in the middle pane under the **Manage** section, select **Password protection.**
 
