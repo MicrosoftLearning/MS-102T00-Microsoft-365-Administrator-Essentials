@@ -113,7 +113,7 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 
 9. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is Holly's Microsoft 365 home page. Note that Holly's initials appear in the upper-right corner of the screen; however, Holly's name is not displayed. This is because Holly's account did not exist at the time you added the Microsoft 365 pilot project users to the group that was associated with the custom theme in the prior lab exercise. Since Holly wants to see her name at the top of each Microsoft 365 window when she's logged into the system, she first wants to add her account to the group of Microsoft 365 pilot project users. <br>
 
-	In the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the **Microsoft 365 admin center** in a new browser tab. 
+	In the column of application icons that appears in the window pane on the side of the screen, select **Admin**. This opens the **Microsoft 365 admin center** in a new browser tab. 
 
 10. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
 
@@ -218,7 +218,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	**Note:** In this task, you created Microsoft 365 groups and a Security group. There are two additional group types available - **Mail-enabled security groups** (which was an option under the **Security groups** tab) and **Distribution list**. Neither of these group types were used in this lab because it can take up to an hour for these two types of groups to appear in the **Active teams and groups** list; whereas Microsoft 365 groups and Security groups usually take just a minute to two to appear. 
 
-26. You’re now ready to add members to the **IT Admins** security group. In the **Security groups** tab, select the **IT Admins** group (select the name and not the check box that appears to the left of the name). 
+26. You’re now ready to add members to the **IT Admins** security group. In the **Security groups** tab, select the **IT Admins** group (select the name and not the check box that appears next to the name). 
 
 27. In the **IT Admins** pane that appears, the **General** tab is displayed by default. Select the **Members** tab.
 
