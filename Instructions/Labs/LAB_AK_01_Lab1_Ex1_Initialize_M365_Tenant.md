@@ -50,7 +50,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 	Notice that either an icon or a circle with "MA" (the initials for MOD Administrator) appears in the top-right corner of the screen. Some trial tenants show an icon; others show the "MA" initials in a circle; it all depends on whether your lab hosting provider added an icon to the MOD Administrator's account. The icon or initials represents the **MOD Administrator** account, which is the tenant administrator account created by your lab hosting provider that you just signed in as. If any of the existing Microsoft 365 user accounts that were created by your lab hosting provider have a picture associated with their account, the user's picture is displayed rather than the user's initials when you sign into Microsoft 365 as that user. However, when a user such as the MOD Administrator has no picture assigned to it, either the user's initials are displayed in place of the picture, or an icon is displayed if one was assigned to the account by your lab hosting provider. <br/>
 
-	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the left-hand pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
+	On the **Welcome to Microsoft 365** page, in the list of application icons that appear in the side window pane, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
 11. In the **Microsoft 365 admin center**, select **Show all** in the navigation pane and then select **Settings**. In the **Settings** group, select **Org settings**. 
 
