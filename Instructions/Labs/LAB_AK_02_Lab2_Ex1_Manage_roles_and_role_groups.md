@@ -113,7 +113,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 	
 		Get-MgDirectoryRole  
 
-	**Note:** This command displays the roles that have been enabled thus far in Microsoft 365. If the Service Support Administrator role appeared in this list, you could proceed directly to step 13 to assign the role to Patti. However, since the Service Support Administrator is not included in this list of enabled roles, you must perform steps 8-12 to enable the role from its corresponding role template before you can assign Patti to the role in step 13. 
+	**Note:** This command displays the roles that have been enabled thus far in Microsoft 365. If the Service Support Administrator role appears in this list, you can proceed directly to step 13 to assign the role to Patti. However, if the Service Support Administrator is not included in this list of enabled roles, you must perform steps 8-12 to enable the role from its corresponding role template before you can assign Patti to the role in step 13. 
 
 8. To enable a role in Microsoft Graph PowerShell, you must first locate its template to obtain the template's object ID. You need to know the template's object ID to enable the role from the template. There's two ways in which you can view the role templates - you can either display the entire list of role templates, or you can display the template for a specific role. As a learning experience, you will perform both methods so that you can see the difference. <br/>
 
