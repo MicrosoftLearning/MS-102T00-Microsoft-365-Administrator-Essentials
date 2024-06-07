@@ -111,7 +111,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	To view all the enabled roles in Microsoft 365, enter the following command at the command prompt and then press Enter: <br/>
 	
-		Get-MgDirectoryRole    <br/>
+		Get-MgDirectoryRole  
 
 	**Note:** This command displays the roles that have been enabled thus far in Microsoft 365. If the Service Support Administrator role appeared in this list, you could proceed directly to step 13 to assign the role to Patti. However, since the Service Support Administrator is not included in this list of enabled roles, you must perform steps 8-12 to enable the role from its corresponding role template before you can assign Patti to the role in step 13. 
 
@@ -119,11 +119,11 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	Let's start by displaying the complete list of role templates along with their object ID and display name. To do so, type in the following command and then press Enter: <br/>
 
-		Get-MgDirectoryRoleTemplate | Format-List Id, DisplayName   <br/>
+		Get-MgDirectoryRoleTemplate | Format-List Id, DisplayName  
 
 	As you can see after having run this command, you must scroll through the list of role templates looking for the Service Support Administrator role. You can easily see how this can be tedious. As an alternative, run the following command to query for a specific role template - in this case, the "Service Support Administrator" role template: <br/>
 
- 		Get-MgDirectoryRoleTemplate | ? DisplayName -eq "Service Support Administrator"   <br/>
+ 		Get-MgDirectoryRoleTemplate | ? DisplayName -eq "Service Support Administrator"  
 
 	After having run this command, you can see that it displays only the requested role template. Obviously, there may be times when displaying the entire list of role templates is necessary. But when you need to look up a single role template, running the second PowerShell command will be much more efficient than having to scroll through the entire list of templates.
 	
@@ -133,7 +133,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	At the command prompt, type the following command and press Enter (don't forget the closing bracket after pasting in the template ID): <br/>
 
-		$ServiceSupportRoleTemplate = @{ RoleTemplateID = "paste in template ID here" }  <br/>
+		$ServiceSupportRoleTemplate = @{ RoleTemplateID = "paste in template ID here" }  
 
 	For example: $ServiceSupportRoleTemplate = @{ RoleTemplateID = "fe930be7-5e62-47db-91af-98c3a49a38b1" }
 
@@ -143,7 +143,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 12. To verify the Service Support Administrator role has been enabled, type in the following command and press enter. This command will display the list of enabled roles:  <br/>
 			
-		Get-MgDirectoryRole	<br/>
+		Get-MgDirectoryRole	
 
 	**Note:** This command displays the object ID of all the enabled roles, including the Service Support Administrator role that you just enabled from its template. You will later copy and paste in the object ID of the Service Support Administrator role in step 15 when assigning Patti to this role.
 
@@ -157,7 +157,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	b. Run the following command that creates a variable containing the directory object for Patti's user account. When typing in this command, paste in (**Ctrl+V**) the ID that you just copied for Patti's user account. <br/>
 
-		$UserObject = @{ "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/paste in Patti's user account ID here" }	<br/>
+		$UserObject = @{ "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/paste in Patti's user account ID here" }	
 
 	For example: $UserObject = @{ "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/22fddbf7-42d2-4698-be65-ebc972a023e3" }
 
