@@ -59,27 +59,27 @@ In this task you will activate MDM auto-enrollment for new devices in your Adatu
 
 3. In the **Microsoft Intune admin center**, select **Devices** in the navigation pane.
 
-4. This returns the **Devices | Overview** page. Under the **Device enrollment** section in the middle pane, select **Enroll devices**.
+4. This returns the **Devices | Overview** page. Under the **Device onboarding** section in the middle pane, select **Enrollment**.
 
-5. On the **Enroll devices | Windows Enrollment** page, in the **General** section, select **Automatic Enrollment**.
+5. On the **Devices | Enrollment** page, the **Windows** tab is displayed by default. Under the list of **Enrollment options** select **Automatic Enrollment**.
 
-6. This returns the **Configure** window, from which you can configure MDM and MAM settings for Microsoft Intune. For the **MDM user scope** option, select **Some.** This will display a **Groups** option below the **MDM user scope** option. This feature enables you to automatically enroll into Intune the devices that belong to users who are members of groups selected here.
+6. On the **Microsoft Intune** page, you can configure MDM and MAM settings. For the **MDM user scope** option, select **Some.** This will display a **Groups** option below the **MDM user scope** option. This feature enables you to automatically enroll into Intune the devices that belong to users who are members of groups selected here.
 
-7. To the right of the **Groups** option, select **No groups selected**. 
+7. Below the **Groups** option, select **No groups selected**. 
 
-8. In the **Select groups** pane that appears, select **Compliance Test Users**, and then at the bottom of the pane select the **Select** button. <br/>
+8. In the **Select groups** pane that appears, select the check box next to **Compliance Test Users**, and then at the bottom of the pane select the **Select** button. <br/>
 
 	**Note:** You just configured the **MDM user scope** to automatically enroll devices that belong to members of the **Compliance Test Users** group into MDM management with Microsoft Intune. Once Holly tests this feature in Adatum's pilot project, and assuming she is satisfied with the results, she will then set the **MDM user scope** to **All**.
 	
-9. This returns the **Configure** window. In the middle of the pane, select **Restore default MDM URLs** to ensure the correct URLs are set. 
+9. This returns the **Microsoft Intune** window. In the middle of the window, select **Restore default MDM URLs** to ensure the correct URLs are set. 
 
 10. Select **Save** on the menu bar at the top of the page. Wait for the settings to be saved before proceeding to the next step.
 
 11. In the **Microsoft Intune admin center**, select **Tenant administration** in the navigation pane.
 
-12. In the **Tenant admin | Tenant status** page, verify the **MDM authority** is set to **Microsoft Intune**.
+12. In the **Tenant admin | Tenant status** page, the **Tenant details** tab is displayed by default. Verify the **MDM authority** is set to **Microsoft Intune**.
 
-13. In your Microsoft Edge browser, you can close all tabs except for the **Microsoft Office Home** tab and the **Microsoft 365 admin center** tab. Leave these two tabs open for the next exercise.
+13. In your Microsoft Edge browser, you can close all tabs except for the **Home | Microsoft 365** tab and the **Microsoft 365 admin center** tab. Leave these two tabs open for the next exercise.
 
 You have configured automatic enrollment in Intune for devices of users in the Compliance Test Users group, and you have verified the MDM authority for Adatum's tenant is set to Microsoft Intune.
 
