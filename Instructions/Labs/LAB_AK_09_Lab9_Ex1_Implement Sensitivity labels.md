@@ -1,11 +1,11 @@
-# Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with Microsoft Entra ID Protection
+# Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with Microsoft Purview Information Protection
 
-In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Microsoft Entra ID Protection at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. You will test a different label.
+In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Microsoft Purview Information Protection at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. You will test a different label.
 
 **Important:** When you publish a new sensitivity label and label policy, it can take them up to 24 hours to propagate through Microsoft 365. As such, you won't be able to test the label that you create in this lab. Instead, you will test a pre-existing sensitivity label named **Project - Falcon**. This pre-existing label is almost identical to the label that you will create, so you'll be able to see basically the same results had you been able to test the label that you created. 
 
 
-### Task 1 – Install the Microsoft Entra ID Protection Unified Labeling client
+### Task 1 – Install the Microsoft Purview Information Protection client**
 
 To implement Sensitivity labels as part of your pilot project at Adatum, you must first install the **Microsoft Purview Information Protection client** from the Microsoft Download Center.
 
@@ -255,9 +255,9 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 You have just successfully created a Word document containing the Highly Confidential label titled **Project - Falcon**. 
 
 
-### Task 5 – Protect a document using Microsoft Entra ID Protection
+### Task 5 – Protect a document using Microsoft Purview Information Protection
 
-In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document. In this task, you will share the document you created with Joni Sherman, and you will restrict Joni to "View only" permission. This will allow you to see how Microsoft Entra ID Protection protects the document based on the parameters that you configure.
+In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document. In this task, you will share the document you created with Joni Sherman, and you will restrict Joni to "View only" permission. This will allow you to see how Microsoft Purview Information Protection protects the document based on the parameters that you configure.
 
 To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. You will then verify that Joni can only view the document and not edit it, and you will verify that you can't access the document since it was not shared with you. Finally, you will change permission on the document so that Joni can edit it, and you will email this updated document to her for testing. The purpose of the two emails to Joni, one with a document link that provides read-only access and another with a document link that provides the ability to edit the document, is to see how Microsoft Entra ID Protection can provide various levels of document protection. 
 
@@ -365,7 +365,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 36. When Joni had View only permission, the document opened in the Reading View pane. As such, Joni couldn't edit the document. This version of the document provides Joni with Edit permission, so this time the document should open in Word in normal edit mode. Verify that you can enter text in the document. 
 
-	**Note:**  In this task, you just verified that Microsoft Entra ID Protection protected the document based on the PII policy parameters that you configured. When Joni was assigned View only permission, the document opened in the Reading view and she was unable to change it. When Joni was assigned Edit permission, the document opened in Word and she was able to change it. And since Holly didn't share the document with you, you couldn't open it when she sent the document in an email to your personal mailbox. 
+	**Note:**  In this task, you just verified that Microsoft Purview Information Protection protected the document based on the PII policy parameters that you configured. When Joni was assigned View only permission, the document opened in the Reading view and she was unable to change it. When Joni was assigned Edit permission, the document opened in Word and she was able to change it. And since Holly didn't share the document with you, you couldn't open it when she sent the document in an email to your personal mailbox. 
 
 ## End of Lab 9
 
