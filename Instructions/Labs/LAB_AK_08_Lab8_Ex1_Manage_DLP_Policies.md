@@ -27,9 +27,9 @@ The policy will contain two rules, or actions, each of which is dependent on the
       - Name: **IP Address DLP policy**
       - Description: **This policy detects the presence of IP addresses in emails. End users are notified of the detection and admins receive a notification. Emails with 2 or more IP addresses are blocked from being sent.**
 
-8. On the **Assign admin units (preview)** page, select **Next**. 
+8. On the **Assign admin units** page, select **Next**. 
 
-9. On the **Choose locations to apply the policy** page, verify the **Status** toggle is set to **On** for the following locations (if any of these locations is not set to **On** by default, then set it to **On** now): <br/>
+9. On the **Choose where to assign the policy** page, verify the **Status** toggle is set to **On** for the following locations (if any of these locations is not set to **On** by default, then set it to **On** now): <br/>
 
     - **Exchange email**
     - **SharePoint sites**
