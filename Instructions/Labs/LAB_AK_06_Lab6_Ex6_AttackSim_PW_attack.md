@@ -16,15 +16,15 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 
 4. On the **Attack Simulation training** page, the **Overview** tab is displayed by default. Select the **Simulations** tab, and then select the **+Launch a simulation** option that appears on the menu bar. This initiates the **Simulation** wizard.
 
-5. On the **Select Technique** page in the **Simulation** wizard, scroll down and select the **Drive-by URL** option. Under this option, select the **View details of Drive-by URL** link. This opens a **Drive-by URL** pane on the right. Review the **Description** and the **Simulation steps** for this type of attack. When you're done, close the **Drive-by URL** pane and select **Next**.
+5. On the **Select technique** page in the **Simulation** wizard, scroll down and select the **Drive-by URL** option. Under this option, select the **View details of Drive-by URL** link. This opens a **Drive-by URL** pane on the right. Review the **Description** and the **Simulation steps** for this type of attack. When you're done, close the **Drive-by URL** pane and select **Next**.
 
 6. On the **Name Simulation** page, enter **Custom payload** in the **Simulation name** field and then select **Next**.
 
 7. On the **Select payload and login page**, the **Global payloads** tab is displayed by default. Select the **Tenant payloads** tab, and then select **+Create a payload** on the menu bar. This initiates the **Payload** wizard.
 
-8. On the **Select type** page of the **Payload** wizard, the **Email** option should be selected by default (if not, select it now). Select **Next**. 
+8. On the **Select type** page of the **Payload** wizard, the **Email** option should be selected by default (it may also be grayed out so that you can't change this option).  Select **Next**. 
 
-9. On the **Select Technique** page, the **Drive-by URL** attack type should be selected by default (all other options are disabled since you already selected this option back in step 5). Select **Next**.
+9. On the **Select technique** page, the **Drive-by URL** attack type should be selected by default (all other options are disabled since you already selected this option back in step 5). Select **Next**.
 
 10. On the **Payload Name** page, enter the following information: <br/>
 
