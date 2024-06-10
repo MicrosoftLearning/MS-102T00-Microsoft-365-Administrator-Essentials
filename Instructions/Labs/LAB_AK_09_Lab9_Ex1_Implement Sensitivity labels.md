@@ -7,9 +7,7 @@ In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you h
 
 ### Task 1 – Install the Microsoft Entra ID Protection Unified Labeling client
 
-To implement Sensitivity labels as part of your pilot project at Adatum, you must first install the Microsoft Entra ID Protection client from the Microsoft Download Center.
-
-**Note:** While the Azure AD to Microsoft Entra ID rebranding is still ongoing, the Azure Information Protection client has not been rebranded as of this writing. It will eventually be rebranded to Microsoft Entra ID Protection client.
+To implement Sensitivity labels as part of your pilot project at Adatum, you must first install the **Microsoft Purview Information Protection client** from the Microsoft Download Center.
 
 1. At the end of the prior lab, you were on LON-CL2. Switch to **LON-CL1**.  <br/>
 
@@ -17,21 +15,17 @@ To implement Sensitivity labels as part of your pilot project at Adatum, you mus
 
 2. In **Microsoft Edge**, open a new tab and enter (or copy and paste) the following URL in the address bar: **https://www.microsoft.com/en-us/download/confirmation.aspx?id=53018** <br/>
 
-	This will start the download for the Azure Information Protection Unified Label client.
+	This will start the download for the **Microsoft Purview Information Protection client**.
 
-3. In the **Downloads** window that appears at the top right of the page, you will see the **AzInfoProtection_UI.exe** file being downloaded. Once the file has finished downloading, select the **Open file** link that appears below the file name.
+3. In the **Downloads** window that appears at the top right of the page, you will see the **PurviewInfoProtection.exe** file being downloaded. Once the file has finished downloading, select the **Open file** link that appears below the file name.
 
 4. The **Microsoft Azure Information Protection** wizard will open. If the wizard does not display on the desktop, select the icon for the wizard on the taskbar to display the wizard.
 
-5. In the wizard, on the **Install the Azure Information Protection client** window that appears, clear (uncheck) the **Help improve Azure Information Protection by send usage statistics to Microsoft** check box and then select the **I agree** button.
+5. In the wizard, on the **Install the **Microsoft Purview Information Protection client**** window that appears, select the **I acknowledge that the AIP Add-in for Office will be uninstalled (required)** check, and clear (uncheck) the **Help improve Microsoft Purview Information Protection by sending usage statistics to Microsoft** check box. Then select the **I agree** button.
 
-6. If a **User Account Control notification** dialog box appears that asks whether the app is allowed to make changes to this device, select **Yes**.
+6. Once the installation is complete, select **Close**.
 
-7. Once the installation is complete, select **Close**.
-
-8. In your Edge browser, close the **Download** tab that you opened in this task to download the Azure Information Protection client.
-
-You have successfully installed the Azure Information Protection Unified Label client on the LON-CL1 VM.
+You have successfully installed the **Microsoft Purview Information Protection client** on the LON-CL1 VM.
 
 
 ### Task 2 – Enable sensitivity labels for files in SharePoint and OneDrive
