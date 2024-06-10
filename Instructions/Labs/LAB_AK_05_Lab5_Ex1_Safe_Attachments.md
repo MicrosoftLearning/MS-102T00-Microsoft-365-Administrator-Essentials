@@ -34,7 +34,7 @@ In this task, you will turn on Microsoft Defender for Office 365, which provides
 
 10. On the **Users and domains** page, you can define specific users, groups, and domains to which the new policy will apply. Since **AttachmentPolicy1** will apply to all users and groups in Adatum's xxxxxZZZZZZ.onmicrosoft.com domain, you're only going to enter that domain value. <br/>
 
-    Enter **on** in the **Domains** field. In the menu that appears showing the suggested domains that include this value, select Adatum's **xxxxxZZZZZZonmicrosoft.com** domain (where xxxxxZZZZZZ equals the tenant prefix provided by your lab hosting provider). Adatum's domain will now appear below the **Domains** field. Select **Next**.
+    Enter **on** in the **Domains** field. In the menu that appears showing the suggested domains that include this value, select Adatum's **xxxxxZZZZZZ.onmicrosoft.com** domain (where xxxxxZZZZZZ equals the tenant prefix provided by your lab hosting provider). Adatum's domain will now appear below the **Domains** field. Select **Next**.
 
 11. On the **Settings** page, select the **Dynamic Delivery (Preview messages)** option. This option will deliver all email messages; however, for an email with attachments, it will hold the files, test them, and then reattach the files to the messages once the files are scanned and marked acceptable. 
 
