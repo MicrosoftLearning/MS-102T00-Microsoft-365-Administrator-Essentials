@@ -2,11 +2,64 @@
 
 Holly Dickson is concerned that some users at Adatum may require education about phishing attacks. As part of her pilot project, Holly has decided to use the Microsoft 365 Attack simulation training feature to determine her users' susceptibility to phishing attacks.
 
-**Note:** To use Microsoft's Attack Simulation training feature to simulate a phishing attack, you must first enable Multifactor Authentication (MFA) for either your entire organization or for just the Global administrator who will run the simulation. Because Microsoft requires MFA for all user sign-ins in the lab's trial tenant, you don't need to enable it for this exercise. Keep in mind, however, that in your real-world Microsoft 365 deployments, you will need to implement this MFA requirement if you plan to use Microsoft's Attack Simulation training.
+**Important:** To use Microsoft's Attack Simulation training feature to simulate a phishing attack, you must first enable Multifactor Authentication (MFA) for either your entire organization or for just the Global administrator who will run the simulation. Since Holly is a member of the Microsoft 365 pilot project group that is excluded from MFA per the Conditional Access policy that you created in an earlier lab, she isn't required to use MFA. So in order to run the Attack Simulation training, you must turn on MFA for Holly's user account. While most organizations will typically use Conditional Access to implement MFA - just as you did previously - you can optionally turn on MFA for a specific user account. Microsoft recommends that from a security standpoint, it's best to use this option on an exception basis, and usually just at larger organizations. This training session is one of those exception situations, so you will use this method to enable Holly to complete this attack simulation training exercise.
 
-### Task 1: Configure and launch a Spear Phishing attack
+### Task 1: Enable Multifactor Authentication for the Global Admin
 
-Because MFA is already turned on in this trial tenant for all user sign-ins, Holly is ready to run Microsoft 365's Attack simulation training feature and launch a simulated spear phishing attack. This will provide visibility into how well Adatum is prepared to handle this type of security attack. 
+To use Microsoft's Attack simulation training feature to simulate a phishing attack, you must first enable Multifactor Authentication (MFA) for either your entire organization or for just the Global admin who will run the simulation. For her pilot project, Holly does not want to set up MFA for all the Adatum users at this point in time; therefore, she will enable MFA for her user account only, and then after she finishes running the Attack simulation training, she will turn MFA back off. 
+
+**Important:** To implement MFA for Holly's account, you must use your mobile phone to receive a verification code so that you can enter it into your tenant as Holly's second form of authentication. If you don't have a phone, you will have to skip this lab. If this is the case, notify your instructor, who can potentially partner you with another student to follow along through this lab.
+
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.  
+
+2. To enable MFA for Holly Dickson's user account, select the **Microsoft 365 admin center** tab in your browser> In the navigation pane, select **Users** and then select **Active users**.
+
+3. In the **Active users** window, on the menu bar at the top of the user list, select **Multi-factor authentication**. If this option does not appear on the menu bar, select the **ellipsis (More actions)** icon, and in the drop-down menu that appears, select  **Multi-factor authentication**.
+
+4. A **multi-factor authentication** window appears in a new Edge browser tab. The **users** tab is displayed by default. Note the MFA status for all existing user accounts is **Disabled**. The Conditional Access policy that you created earlier does NOT enable the MFA status for each individual user. Rather, that policy is dynamically checked and applied at each user sign-in to determine whether MFA is required. If MFA is not applied to a user based on the policy, then the user's individual MFA status is checked on their account. <br>
+
+	Select the check box for **Holly Dickson**, and in Holly's properties pane that appears on the right, select **Enable** under the **quick steps** section.
+
+5. On the **About enabling multi-factor auth** dialog box that appears, select the **enable multi-factor auth** button. When the **Updates successful** dialog box appears, select **close**.
+
+6. In the **multi-factor authentication** window, verify that Holly's MFA Status has changed to **Enabled**. 
+
+7. Close the **Multi-factor authentication** tab in your Edge browser. This should return you to the **Microsoft 365 admin center** tab.
+
+8. You must now sign out of Microsoft 365 as Holly, close your browser session (to clear cache), open a new session, and then log back into Microsoft 365 as Holly using MFA. The first time you sign back in after having MFA enabled for your user account, you will be asked for the authentication information needed for MFA, such as your phone number and authentication options. You will then be texted a verification code to validate the authentication process works. You will perform these steps in the remaining portion of this task.<br/>
+
+	You must begin by signing out of Microsoft 365 as Holly, so select the **HD** user icon in the upper right corner of the browser and in the **Holly Dickson** window that appears, select **Sign out**. 
+
+9. Once you are signed out, close your Edge browser.
+
+10. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
+
+11. In the **Pick an account** window, select **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the new Administrative Password that you defined for all test users at the start of the lab and later assigned to Holly's account. Select **Sign in**.
+
+12. Because MFA is enabled for Holly, a **More information required** window appears. Select **Next**.
+
+13. On the **Microsoft Authenticator** page that appears, you can download this mobile app or use a different method for MFA verification. For the purposes of this lab, we recommend you use your mobile phone so that you do not have to take time installing the Microsoft Authenticator app that you may not use again after this training class. Select the **I want to set up a different method** option at the bottom of the page (**Important:** Do NOT confuse this link with the **I want to use a different authenticator app** that appears above it). 
+
+14. On the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
+
+15. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
+
+16. Retrieve the verification code from the text message that is sent to your phone.
+
+17. In the **Phone** window, enter the 6-digit verification code in the code field and then select **Next**. When the **Phone** window displays a message indicating your phone was registered successfully, select **Next**.
+
+18. On the **Success!** page, select **Done**.
+
+19. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
+
+20. On the **Home | Microsoft 365** tab, select the **Admin** icon that appears in the column of app icons on the side of the screen. This opens the **Microsoft 365 admin center** in a new browser tab. 
+
+21. In the **Microsoft 365 admin center**, select **Show all** in the navigation pane. Under **Admin centers**, select **Security**. This will open the **Microsoft Defender** portal. You will resume from here in the next task when you launch a spear phishing attack using Attack simulation training.  
+
+22. You have now configured MFA for Holly Dickson, you have signed into the Microsoft 365 admin center as Holly using MFA, and you're ready to run the Attack simulator training in the Microsoft Defender portal. Leave everything as is in your VM and proceed to the next task.
+
+
+### Task 2: Configure and launch a Spear Phishing attack
 
 Microsoft 365 includes an Attack simulation training feature that enables you to create simulations and run them against all your users or a select group of users. Each phishing attack includes what is referred to as the "payload", which is the message in the system-generated email that contains the malicious component hackers use to gather information, deposit malicious code, and so on. The Attack simulation training feature includes a number of payload templates that you can choose from, and you can create your own payload if you so desire. 
 
