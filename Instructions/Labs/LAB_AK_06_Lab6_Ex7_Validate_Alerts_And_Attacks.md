@@ -126,4 +126,36 @@ In Lab 6, Exercise 6, you configured and launched a simulated Drive-by URL attac
 11. Leave your browser open in LON-CL1. Close all tabs EXCEPT for the **Home | Microsoft 365** and **Home | Microsoft 365 admin center** tabs. 
 
 
+### Task 6: Disable Multifactor Authentication for the attack simulation admin
+
+To use Microsoft's Attack simulation training to simulate phishing attacks, Holly enabled Multifactor Authentication (MFA) for her user account. Now that she has completed the Attack simulation training tests, she wants to disable MFA for her account so that she doesn't have to deal with MFA for the remainder of the pilot project.
+
+1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. Select the **Home | Microsoft 365 admin center** tab. 
+
+2. On the **Microsoft 365 admin center**, in the left-hand navigation pane, select **Users** and then select **Active users**.
+
+3. In the **Active users** window, on the menu bar at the top of the user list, select **Multi-factor authentication**.
+
+4. On the **multi-factor authentication** page that appears, the **users** tab at the top of the page is displayed by default. Note the MFA status for all existing user accounts is **Disabled**, except for Holly Dickson, whose status is **Enforced**.  <br/>
+
+	**Note:** When you enabled MFA for Holly back in Exercise 5, her status was changed from **Disabled** to **Enabled**. However, the first time you signed in as Holly after enabling MFA (right after enabling MFA in Exercise 5), the system automatically changed her MFA status from **Enabled** to **Enforced**.  <br/>
+
+	Select the check box for **Holly Dickson**, and in Holly's properties pane that appears on the right, select **Disable**. 
+
+6. On the **Disable multi-factor authentication?** dialog box, select **yes**. When the **Updates successful** dialog box appears, select **close**. 
+
+7. In the **multi-factor authentication** window, verify Holly's MFA Status has changed to **Disabled**. Close the **Multi-factor authentication** tab in your browser.
+
+8. You must now sign out of Microsoft 365 as Holly and then sign back in as Holly (without MFA). To do so, perform the following steps: <br/>
+
+	- Select Holly's account icon (HD in a circle) at the top-right of the screen and in Holly's profile window, select **Sign out**.
+	- Once you're signed out, close your Edge browser. Doing so will clear your cache.
+	- Open a new Edge browser session.
+	- Enter the **https://portal.office.com** URL to open the Microsoft 365 home page.
+	- In the **Pick an account** window, select Holly's account.
+	- In the **Enter password** window, enter the new Administrative Password that you assigned to Holly's account and select **Sign in**.
+	- From the **Microsoft 365 Home** page, select the **Admin** icon to navigate to the **Microsoft 365 admin center**.
+	
+	You are now ready to proceed to the next lab exercise.
+
 # End of Lab 6
