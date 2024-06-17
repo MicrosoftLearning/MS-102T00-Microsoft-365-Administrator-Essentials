@@ -5,7 +5,7 @@ In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you h
 **Important:** When you publish a new sensitivity label and label policy, it can take them up to 24 hours to propagate through Microsoft 365. As such, you won't be able to test the label that you create in this lab. Instead, you will test a pre-existing sensitivity label named **Project - Falcon**. This pre-existing label is almost identical to the label that you will create, so you'll be able to see basically the same results had you been able to test the label that you created. 
 
 
-### Task 1 – Install the Microsoft Purview Information Protection client**
+### Task 1 – Install the Microsoft Purview Information Protection client
 
 To implement Sensitivity labels as part of your pilot project at Adatum, you must first install the **Microsoft Purview Information Protection client** from the Microsoft Download Center.
 
