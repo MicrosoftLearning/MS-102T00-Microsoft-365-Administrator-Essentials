@@ -4,7 +4,7 @@ Holly Dickson is concerned that some users at Adatum may require education about
 
 **Important:** To use Microsoft's Attack Simulation training feature to simulate a phishing attack, you must, at a minimum, enable Multifactor Authentication (MFA) for either the Global administrator who will run the simulation. Since Holly is a member of the Microsoft 365 pilot project group that is excluded from MFA per the Conditional Access policy that you created in an earlier lab, she isn't required to use MFA. So in order to run the Attack Simulation training, you must turn on MFA for Holly's user account. While most organizations will typically use Conditional Access to implement MFA - just as you did previously - you can optionally turn on MFA for a specific user account. Microsoft recommends that from a security standpoint, it's best to use this option on an exception or as needed basis. This training session is one of those situations, so you will use this method to enable Holly to complete this attack simulation training exercise.
 
-### Task 1: Enable Multifactor Authentication for the Global Admin
+### Task 1: Enable Multifactor Authentication for the attack simulation admin
 
 To use Microsoft's Attack simulation training feature to simulate a phishing attack, the admin who will run the simulation must be enabled for MFA. Since Holly is part of the Microsoft 365 pilot project group that she excluded from MFA in the earlier Conditional Access policy, she will enable MFA for her user account only. After she finishes running the Attack simulation training, she will disable MFA for her account. 
 
