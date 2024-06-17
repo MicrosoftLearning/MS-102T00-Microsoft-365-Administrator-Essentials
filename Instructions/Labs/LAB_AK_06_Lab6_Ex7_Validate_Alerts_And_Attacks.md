@@ -144,7 +144,7 @@ To use Microsoft's Attack simulation training to simulate phishing attacks, Holl
 
 6. On the **Disable multi-factor authentication?** dialog box, select **yes**. When the **Updates successful** dialog box appears, select **close**. 
 
-7. In the **multi-factor authentication** window, verify Holly's MFA Status has changed to **Disabled**. Close the **Multi-factor authentication** tab in your browser.
+7. In the **multi-factor authentication** window, verify Holly's MFA Status has changed to **Disabled**. 
 
 8. You must now sign out of Microsoft 365 as Holly and then sign back in as Holly (without MFA). To do so, perform the following steps: <br/>
 
