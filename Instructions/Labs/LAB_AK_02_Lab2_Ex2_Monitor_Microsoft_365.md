@@ -8,13 +8,13 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 1. You should still be logged into LON-CL1 after having completed the prior exercise, and you should still be logged into Microsoft 365 as Holly Dickson.
 
-2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open. If the home page isn't open, then navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and where the password is the New User Password that you assigned to her account.
+2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open. If the home page isn't open, then navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and where the password is the New Administrative Password that you assigned to her account.
 
 3. In the **Welcome to Microsoft 365** page, select the **Outlook** icon in the column of app icons on the left. 
 
 4. If you're automatically signed into Outlook using Holly's account, then proceed to the next step. However, if a **Pick an account** window appears, select Holly's account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZis the tenant prefix provided by your lab hosting provider). <br/>
 
-	If an **Enter password** window appears, enter the New User Password that you assigned to Holly's account and then select **Sign in**. <br/>
+	If an **Enter password** window appears, enter the New Administrative Password that you assigned to Holly's account and then select **Sign in**. <br/>
 
 	If a **Stay signed in?** window appears, select the **Don't show this again** check box and select **Yes**.
 
