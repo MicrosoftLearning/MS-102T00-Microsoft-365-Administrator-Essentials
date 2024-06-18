@@ -42,7 +42,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 9. In the **Sign in** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Select **Next**.
 
-10. In the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider that you assigned to Holly's account and then select **Sign in**. If required, complete the MFA sign-in process.
+10. In the **Enter password** window, enter the New Administrative Password that you assigned to Holly's account and then select **Sign in**. 
 
 11. In the **Stay signed in?** window, select **Don't show this again** and then select **Yes**. In the **Save password** window, select **Never**.
 
