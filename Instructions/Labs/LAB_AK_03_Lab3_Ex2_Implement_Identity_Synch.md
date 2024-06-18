@@ -69,7 +69,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 16. On the **Connect to Azure AD** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. <br/>
 
-	In the **PASSWORD** field, enter the **Administrative Password** provided by your lab hosting provider, and then select **Next**. If required, complete the MFA sign-in process. <br/>
+	In the **PASSWORD** field, enter the New Administrative Password that you assigned to Holly's account, and then select **Next**.  <br/>
 
 	**Note:** If the **Next** button is not enabled, then tab off the **PASSWORD** field to enable it. 
 
@@ -246,7 +246,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 2. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In your **Edge** browser, if tabs are still open for the **Home | Microsoft 365** page and the **Active users - Microsoft 365 admin center**, then proceed to the next step. <br/>
 
-	Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the **Administrative Password** provided by your lab hosting provider, complete the MFA sign-in process if required, and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
+	Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the New Administrative Password that you assigned to her account, and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
 
 3. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**. 
 
@@ -288,7 +288,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 		
 		Connect-MgGraph -Scopes 'Group.Read.All', 'User.Read.All'
 
-12. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process.
+12. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter the New Administrative Password that you assigned to her account and then select **Sign in**. 
 
 13. If a **Permissions requested** dialog box appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
