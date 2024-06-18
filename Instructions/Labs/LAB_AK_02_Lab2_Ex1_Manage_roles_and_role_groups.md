@@ -212,11 +212,9 @@ In this task, you will begin by examining the administrative properties of two u
 
 11. In your **Edge** browser navigate to **https://portal.office.com**. 
 
-12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). <br/>
+12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Since you're signing in as Joni Sherman, enter this **User Password** provided by your lab hosting provider in the **Enter password** window. <br>
 
-	**Important:** Your lab-hosting provider assigned an **Administrative Password** to the MOD Administrator account, and you assigned this same **Administrative Password** to Holly Dickson's account when you created it. However, your lab-hosting provider assigned a different **User Password** to all the other pre-defined user accounts. Going forward, when signing in as any user other than the MOD Administrator or Holly Dickson, you must enter this **User Password** and NOT the **Administrative Password**. <br/>
-
-	Since you're signing in as Joni Sherman, enter this **User Password** in the **Enter password** window. If required, complete the MFA sign-in process.
+	In the **Update your password** dialog box that appears, enter the **User Password** provided by your lab hosting provider in the **Current password** field. Then enter the New User Password in the **New password** and **Confirm password** fields and select **Sign in**.
 
 13. On the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. If a **Save password** window appears, select **Never**.
 
@@ -230,7 +228,9 @@ In this task, you will begin by examining the administrative properties of two u
 
 18. You will now sign back into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Joni, you're signed out now**. In this window, it gives you the option of signing back in as Joni, or signing in as a different user. <br/>
 
-	Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the **User Password** provided by your lab hosting provider and select **Sign in**. If required, complete the MFA sign-in process. 
+	Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the **User Password** provided by your lab hosting provider and select **Sign in**. <br>
+
+	In the **Update your password** dialog box that appears, enter the **User Password** provided by your lab hosting provider in the **Current password** field. Then enter the New User Password in the **New password** and **Confirm password** fields and select **Sign in**. 
 
 19. If a **Welcome to Microsoft 365** dialog box appears, select the forward arrow (>) two times and then select the check mark to close the window.
 
@@ -264,7 +264,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 32. If a survey request window appears, select **Cancel**.
 
-33. You now want to change Prdeep Gupta's password. In the **Active users** list, select the **key (Reset a password)** icon that appears to the right of **Pradeep Gupta**. 
+33. You now want to change Pradeep Gupta's password. In the **Active users** list, select the **key (Reset a password)** icon that appears to the right of **Pradeep Gupta**. 
 
 34. In the **Reset password** window that appears for Pradeep, verify the **Automatically create a password** check box displays a check mark; if it doesn't, then select this box now so that the system automatically generates a password for Pradeep.  <br/>
 
@@ -284,7 +284,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 40. The **Block sign-in** window should display a message indicating that Alex is now blocked from signing in (and no one can sign in with Alex's username in the event that his username was actually compromised). In addition, Alex will automatically be signed out of Microsoft services within 60 minutes. Select the **X** in the top corner of the pane to close it. 
 
-41. Lynne has just been informed that **Nestor Wilke's** username has also been potentially compromised. Repeat steps 33 through 36 to block Nestor from signing in (and to block anyone else from using his username to sign in). <br/>
+41. Lynne has just been informed that **Nestor Wilke's** username has also been potentially compromised. Repeat steps 37 through 40 to block Nestor from signing in (and to block anyone else from using his username to sign in). <br/>
 
 	When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Administrator, and Lynne is not. Only a Global Administrator can block another Global Admin from being able to sign in. Lynne will need to ask Holly Dickson to make this change. <br/>
 
@@ -306,7 +306,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 46. In **LON-CL1**, you should still be logged into **Microsoft 365** as Holly Dickson in your Edge browser. The **Active users** list should be displayed in the **Microsoft 365 admin center** from earlier in this task. 
 
-47. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's user account. Repeat steps 33 through 36 to unblock his account. Note how the **Block sign-in** window from step 35 now displays the **Unblock sign-in** window instead.  <br/>
+47. Upon further investigation, Adatum's CTO has determined that Alex Wilber's account has, in fact, not been compromised; therefore, the CTO has asked Holly to remove the block on Alex's user account. Repeat steps 37 through 40 to unblock his account. Note how the **Block sign-in** window from step 39 now displays the **Unblock sign-in** window instead.  <br/>
 
 	In the **Unblock sign-in** window, the **Block this user from signing in** check box is currently selected. Select this check box to clear it, and then select **Save changes**. <br/>
 	
