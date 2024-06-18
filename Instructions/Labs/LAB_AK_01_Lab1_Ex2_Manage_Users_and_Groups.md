@@ -45,7 +45,7 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 	
 	- Clear (uncheck) the **Automatically create a password** check box, which will display a new field for entering an administrator defined password.
 
-	- In the new **Password** field that appears, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account)
+	- Enter the New Administrative Password in the new **Password** field that appears 
 
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 
@@ -101,9 +101,7 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 
 4. In the **Sign in** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Select **Next**.
 
-5. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. If required, complete the MFA sign-in process. <br/>
-
-	**Note:** From this point forward, Holly and the MOD Admin will be the only users who are assigned the **Administrative Password** provided by your lab-hosting provider. All other users are assigned the **User Password** provided by your lab-hosting provider.
+5. Enter the New Administrative Password in the **Enter password** window and then select **Sign in**. 
 
 6. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
 
@@ -272,7 +270,7 @@ However, to expand your administrator skills, you will instead restore the delet
 		
 		Connect-MgGraph -Scopes 'Group.ReadWrite.All', 'Directory.ReadWrite.All'
 
-4. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the **Administrative Password** provided by your lab hosting provider that you assigned to Holly's account. If required, complete the MFA sign-in process.
+4. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). For the password, enter the New Administrative Password that you assigned to Holly's account. 
 
 5. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
