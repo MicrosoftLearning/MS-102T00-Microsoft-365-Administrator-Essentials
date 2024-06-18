@@ -38,7 +38,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 	After configuring this field, Laura’s **Username** should appear as: **Laura@xxxxxZZZZZZ.onmicrosoft.com**
 
 	- Password settings: Clear (uncheck) the **Automatic create a password** option
-	- Password: Enter the **User Password** provided by your lab hosting provider 
+	- Password: Enter the New User Password
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 	
 5. Select **Next**.
@@ -70,7 +70,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 15. In the **Sign in** window, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-16. In the **Enter password** window, enter the **User Password** provided by your lab hosting provider and then select **Sign in.** If required, complete the MFA sign-in process.
+16. In the **Enter password** window, enter the New User Password that you assigned to Laura's account and then select **Sign in.** 
 
 17. If a **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. In the **Save password** window, select **Never**.
 
@@ -109,13 +109,13 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 	In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. On the **Active users** page, select **Pradeep Gupta**.
 
-8. In the **Pradeep Gupta** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses (2)**, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes to clear them, and then select **Save Changes**. Close the **Pradeep Gupta** pane. The licenses that were previously assigned to Pradeep are now available for Laura.  
+8. In the **Pradeep Gupta** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses (2)**, select the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** check boxes to clear them, and then select **Save Changes**. Close the **Pradeep Gupta** pane. The licenses that were previously assigned to Pradeep are now available for Laura.  
 
 9. In the **Active users** list, scroll down to **Laura Atkins**. The value in the **Licenses** column for Laura currently indicates that she is **Unlicensed**. Select **Laura Atkins**.
 
-10. In **Laura Atkins** account pane, select the **Licenses and apps** tab. In the **Licenses** section, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes and then select **Save changes**. Once the changes are saved, close Laura’s account pane. <br/>
+10. In **Laura Atkins** account pane, select the **Licenses and apps** tab. In the **Licenses** section, select the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** check boxes and then select **Save changes**. Once the changes are saved, close Laura’s account pane. <br/>
 
-	In the **Active users** list, note how the value in the **Licenses** column for Laura now displays **Enterprise Mobility + Security E5, Microsoft 365 E5**. 
+	In the **Active users** list, note how the value in the **Licenses** column for Laura now displays **Microsoft Teams Enterprise, Microsoft 365 E5 (no Teams)**. 
 
 11. You should now check whether Laura can download Microsoft 365 Apps for enterprise to her client PC when the global Office download setting has been turned Off. <br/>
 
@@ -202,7 +202,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 10. In the **Start** menu, select **Word**.
 
-11. On the **Sign in to get started with Word** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and select **Next**. In the **Password** field, enter the **User Password** provided by your lab hosting provider and select **Sign in**. If required, complete the MFA sign-in process.
+11. On the **Sign in to get started with Word** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and select **Next**. In the **Password** field, enter the New User Password that you assigned to Laura's account and select **Sign in**. 
 
 12. On the **Stay signed in to all your apps** window, select **OK**.
 
