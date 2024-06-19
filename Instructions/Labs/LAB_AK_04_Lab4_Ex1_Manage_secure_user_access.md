@@ -89,7 +89,7 @@ To test the Conditional Access policy that you just created, you will sign-out o
 
 5. Because MFA is enabled for all users except for the M365 pilot project group members (of which, Adele is not a member), a **More information required** window appears. Select **Next**. This returns the **Microsoft Authenticator** page, which is the starting point for signing in with MFA. <br/>
 
-	**Important:** If you do not have a phone, then this is as far as you can go when attempting to sign-in as Adele. Even though you can't complete the sign-in, you have verified that the first part of your Conditional Access policy is working, since it requires Adele to sign-in using MFA. At this point, close your Edge browser session, and then skip to step #18, at which point you will sign back in as Holly.
+	**Important:** If you do not have a phone, then this is as far as you can go when attempting to sign-in as Adele. Even though you can't complete the sign-in, you have verified that the first part of your Conditional Access policy is working, since it requires Adele to sign-in using MFA. At this point, skip to step #18 so that you can sign back in as Holly.
 
 6. On the **Microsoft Authenticator** page that appears, you can download this mobile app or use a different method for MFA verification. For the purposes of this lab, we recommend that you use your mobile phone so that you do not have to take time installing the Microsoft Authenticator app that you may not use again after this training class. Select the **I want to set up a different method** option at the bottom of the page (**Important:** Do NOT confuse this link with the **I want to use a different authenticator app** that appears above it). 
 
@@ -152,7 +152,7 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 4. On the **Additional tasks** page, select the **Change user Sign-in** task and then select **Next**. 
 
-5. On the **Connect to Azure AD** page, sign into Azure AD (Microsoft Entra ID). The **USERNAME** field is already filled with **Holly@xxxUPNxxx.onmicrosoft.com**. In the **PASSWORD** field, enter the **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) that you assigned to Holly's account, and then select **Next**.
+5. On the **Connect to Azure AD** page, sign into Azure AD (Microsoft Entra ID). The **USERNAME** field is already filled with **Holly@xxxUPNxxx.onmicrosoft.com**. In the **PASSWORD** field, enter the New Administrative Password that you assigned to Holly's account, and then select **Next**.
 
 6. On the **User sign-in** page, under **Select the Sign On method**, select **Pass-through authentication** and then select **Next**. 
 
@@ -245,7 +245,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 14. In the **My account** window that appears, in the **Password** tile, select **CHANGE PASSWORD**.
 
-15. A new tab will open displaying the **Change password** window. In the **Old password** field, enter Holly's existing password, which is the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). <br/>
+15. A new tab will open displaying the **Change password** window. In the **Old password** field, enter Holly's existing password, which is the New Administrative Password. <br/>
 
 	Enter **Never4get!!** in the **Create new password** and **Confirm new password** fields, and then select **Submit**. Note the error message that you receive.
 
@@ -269,7 +269,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 21. You will be prohibited from logging in again as Laura until after the **90 second lockout duration** that you set earlier. <br/>
 
-	Once you've been locked out, wait 90 seconds and then sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Laura's password, which is the **User Password** provided by your lab hosting provider. If required, complete the MFA sign-in process. Verify that you are able to successfully sign-in as Laura.
+	Once you've been locked out, wait 90 seconds and then sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Laura's password, which is the **User Password** provided by your lab hosting provider. Verify that you are able to successfully sign-in as Laura.
 
 22. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
  
