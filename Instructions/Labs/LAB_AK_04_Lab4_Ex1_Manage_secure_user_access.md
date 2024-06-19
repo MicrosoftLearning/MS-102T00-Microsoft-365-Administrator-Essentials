@@ -271,7 +271,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 	Once you've been locked out, wait 90 seconds and then sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Laura's password, which is the New User Password that you assigned to Laura's account when you created it. 
 
-22. Because MFA is enabled for all users except for the M365 pilot project group members (of which, Laura is not a member), a **More information required** window appears so that you can complete the MFA process for Laura. This is your verification that your sign-in attempt using Laura's actual password was successful.  <br>
+22. Because MFA is enabled for all users except for the M365 pilot project group members (of which, Laura is not a member), a **More information required** window appears so that you can complete the MFA process for Laura. This is verification that your sign-in attempt using Laura's actual password was successful.  <br>
 
 	**Note:** You do NOT need to complete the MFA process for Laura, since this is your last lab exercise using the LON-DC1 domain controller. You can close all applications on LON-DC1.
  
