@@ -293,7 +293,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 11. On the **Share "ProtectedDocument1"** window, hover your mouse over the "eye" icon that appears to the right of Joni's name. Doing so should display **Can view**, which is the current setting that you assigned to her for this document. The "eye" icon is the designation for "Can view". Select the **Copy link** button. 
 
-12. Once the **Link copied** message appears at the bottom of the **Share "ProtectedDocument1"** window, then select the X in the upper-right corner of the window to close it.
+12. Once the **Link copied** message appears at the bottom of the **Share "ProtectedDocument1"** window, then select the X in the upper corner of the window to close it.
 
 13. In your Edge browser, select the **Mail - Holly Dickson -Outlook** tab to return back to your email message. In the body of the message, under the text you added earlier, paste (Ctrl+V) in the link to the shared document that you just copied to your clipboard. A link for the file named **ProtectedDocument1.docx** should appear. 
 
