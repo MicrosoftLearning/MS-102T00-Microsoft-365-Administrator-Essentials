@@ -17,14 +17,14 @@ In this exercise, you will perform these tasks for the Global administrator role
 
 **BEST PRACTICE REMINDER:** As a best practice in your real-world deployment, you should always write down the first Global admin account’s credentials (in this lab, it's the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). You should store away this account for security reasons. This first Global admin account should be a non-personalized identity that owns the highest privileges possible in a tenant. It should **NOT** be MFA activated because it is not personalized. 
 
-Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few non-personalized Global admins as possible. For those personal Global administrators that you do create in your real-world deployment, they should each be mapped to a single identity (such as Holly Dickson, Patti Fernandez, etc.), and they should each have Microsoft Entra ID Multi-Factor Authentication (MFA) enforced. In the Microsoft 365 trial tenant used in this lab, Microsoft requires MFA for all users. However, in your real-world Microsoft 365 deployments, keep in mind that at a minimum, you should enforce MFA for activation requests for your Global admin accounts.
+Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few non-personalized Global admins as possible. For those personal Global administrators that you do create in your real-world deployment, they should each be mapped to a single identity (such as Holly Dickson, Patti Fernandez, etc.), and they should each have Microsoft Entra ID Multi-Factor Authentication (MFA) enforced. 
 
 
 ### Task 1 - Configure the Global Administrator role to require approval
 
 Since the Microsoft 365 Global Administrator role provides a user with basically unlimited access to all Microsoft 365 resources, the number of users assigned to this role should obviously be kept to a minimum for security purposes. 
 
-In the Microsoft 365 tenant used by this training course, the lab hosting provider assigned the Global admin role to seven of the predefined user accounts. After you added Holly as a Global admin, eight of the 20 licensed user accounts in your tenant are now global admins, which is not something you would see in a real-world deployment. The best practice guideline that you should follow is to have from two to four Global admins in your real-world Microsoft 365 deployments. The reason this tenant exceeds that number is that it's used by multiple training courses, each of which have their own VM requirements. Some of these other courses require specific users to be Global admins, which explains why there are so many in the tenant.
+In the Microsoft 365 tenant used by this training course, the lab hosting provider assigned the Global admin role to seven of the predefined user accounts. After you added Holly as a Global admin, eight of the 20 licensed user accounts in your tenant are now global admins, which is not something you would normally see in a real-world deployment. The best practice guideline that you should follow is to have from two to four Global admins in your real-world Microsoft 365 deployments. The reason this tenant exceeds that number is that it's used by multiple training courses, each of which have their own VM requirements. Some of these other courses require specific users to be Global admins, which explains why there are so many in the tenant.
 
 Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to use Privileged Identity Management to limit access to the Global admin role. To do so, she must first configure the role to require approval before it can be assigned as an eligible role for a user, and then she wants to assign herself as the approver whenever an eligible user requests activating the role.
 
@@ -38,7 +38,7 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 3. In your browser, select the **Microsoft 365 admin center** tab. In the navigation pane under the **Admin centers** section, select **Identity**.
 
-4. If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick and account** window, select Holly's account, and in the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider. If required, complete the MFA sign-in process. 
+4. If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick and account** window, select Holly's account, and in the **Enter password** window, enter the New Administrative Password that you assigned to Holly's account. 
 
 5. On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
 
@@ -144,13 +144,15 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 Now that the **PIM-Global-Administrators** group has been made eligible for the Global administrator role, the members of the group (in this case, Patti Fernandez) can be assigned the Global Administrator role using Microsoft Entra Privileged Identity Management. Holly wants to test out the PIM process in her pilot project. In this task, you will take on the role of Patti, who will submit a request to be assigned Global administrator role privileges. In the next task, Holly will review her request and approve it.
 
-**NOTE:** Companies can configure the PIM settings for Microsoft Entra roles, including the requirement for MFA during activation, justification requirements, and whether approval is needed to activate a role. Back in Task 1, you configured the PIM activation request process to require multifactor authentication (MFA) for the Global admin role. Even if you hadn't configured MFA for PIM activation requests, you would still have to complete the MFA process in this lab because Microsoft requires MFA for all user sign-ins using this lab's trial tenant. In your real-world Microsoft 365 deployments, you can turn the MFA requirement on or off for PIM activation requests.
+**NOTE:** Companies can configure the PIM settings for Microsoft Entra roles, including the requirement for MFA during activation, justification requirements, and whether approval is needed to activate a role. Back in Task 1, you configured the PIM activation request process to require multifactor authentication (MFA) for the Global admin role. 
 
 1.  In LON-CL1, right-click on the **Edge** icon on the taskbar and in the menu that appears, select **New InPrivate window**. 
 
 2. In your **InPrivate browsing** session, enter the following URL in the address bar: **https://portal.azure.com**
 
-3. You're now going to log into Azure as Patti Fernandez. In the **Sign in** window, enter **PattiF@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the **User Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process.
+3. You're now going to log into Azure as Patti Fernandez. In the **Sign in** window, enter **PattiF@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the **User Password** provided by your lab hosting provider and then select **Sign in**. <br>
+
+    In the **Update your password** dialog box that appears, enter the **User Password** provided by your lab hosting provider in the **Current password** field. Then enter the New User Password in the **New password** and **Confirm password** fields and select **Sign in**.
 
 4. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
