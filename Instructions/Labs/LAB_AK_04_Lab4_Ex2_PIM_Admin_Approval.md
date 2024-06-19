@@ -42,7 +42,7 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 5. On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
 
-6. In the **Microsoft Entra admin center**, the **Home** page is displayed by default. Scroll down towards the bottom of the Home page and in the **Feature highlights** section, select **Privileged Identity Management**.
+6. In the **Microsoft Entra admin center**, select **Identity governance** in the navigation pane to expand this group, and then select **Privileged Identity Management**.
 
 7. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
@@ -58,7 +58,7 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 12. The window then displays a group of three settings, each of which has a corresponding check box. Select the **Require approval to activate** check box. By doing so, the **Select approver(s)** section becomes enabled. Do not change the default settings of the other two check boxes.
 
-13. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select this section. In the **Select a member** pane that opens on the right, you would normally scroll through the list of users and select **Holly Dickson**. However, since over 200 users were synchronized from the on-premises Active Directory to Microsoft Entra ID in the earlier Identity Synchronization lab exercise, scrolling through the user list will be too time consuming. <br/>
+13. In the **Select approver(s)** section, no specific approver has been selected. Holly wants to assign herself as the approver for this role, so select this section. In the **Select a member** window that opens, you would normally scroll through the list of users and select **Holly Dickson**. However, since over 200 users were synchronized from the on-premises Active Directory to Microsoft Entra ID in the earlier Identity Synchronization lab exercise, scrolling through the user list will be too time consuming. <br/>
 
     Therefore, enter **Holly** in the **Search** box. In the list of users whose first name starts with Holly, select Holly Dickson's user account that pertains to the onmicrosoft.com domain (**Holly@xxxxxZZZZZZ.onmicrosoft.com**). Do NOT select Holly's user account that applies to the custom domain. Then select the **Select** button.
 
@@ -115,11 +115,11 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 6. A dialog box appears at the top of the page that says: **Creating a group to which Microsoft Entra roles can be assigned is a setting that cannot be changed later. Are you sure that you want to add this capability?**. Select **Yes**.
 
-7. You must now make the **PIM-Global-Administrators** group eligible for role assignment. In the navigation pane, select **Identity Governance** to expand the section, and then select **Privileged Identity Management**.
+7. You must now make the **PIM-Global-Administrators** group eligible for role assignment. In the navigation pane, under the **Identity Governance** section, select **Privileged Identity Management**.
 
 8. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
-9. In the **Adatum Corporation | Quick start** window, the detail pane on the right displays the **Privileged Identity Management** window. This window displays the following sections - Assign, Activate, Approve, and Audit. Under the **Assign** section, select the **Assign Eligibility** button.
+9. In the **Adatum Corporation | Quick start** window, the detailed portion of the screen displays the **Privileged Identity Management** window. This window displays the following sections - Assign, Activate, Approve, and Audit. Under the **Assign** section, select the **Assign Eligibility** button.
 
 10. In the **Adatum Corporation | Roles** window, scroll down through the list of roles and select **Global Administrator**.
 
@@ -127,13 +127,13 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 12. In the **Add assignments** window, the **Membership** tab is displayed by default. Under **Select member(s)**, select **No member selected**.
 
-13. In the **Select a member** pane that appears on the right, enter **PIM** in the **Search** field. This will display the list of eligible users and groups whose name starts with **PIM**. Select the **PIM-Global-Administrators** group that appears, and then select the **Select** button.
+13. In the **Select a member** window that appears, enter **PIM** in the **Search** field. This will display the list of eligible users and groups whose name starts with **PIM**. Select the check box for the **PIM-Global-Administrators** group that appears, and then select the **Select** button.
 
 14. In the **Add assignments** window, select **Next** (this does the same thing as selecting the **Setting** tab). 
 
-15. In the **Add assignments** window, under the **Setting** tab, verify the **Assignment type** option is set to **Eligible**. Also verify the **Permanently eligible** check box is selected (if not, then do so now), and then select **Assign**. 
+15. In the **Add assignments** window under the **Setting** tab, verify the **Assignment type** option is set to **Eligible**. Also verify the **Permanently eligible** check box is selected (if not, then do so now), and then select **Assign**. 
 
-16. In the **Global Administrator | Assignments** window, note that the **PIM-Global-Administrators** group is an eligible assignment to the Global Administrator role. Because **PIM-Global-Administrators** is a group, it means that all members of this group (which consists of Patti Fernandez) are now eligible to be assigned the Global Administrator role.
+16. In the **Global Administrator | Assignments** window, note that the **PIM-Global-Administrators** group is an eligible assignment to the Global Administrator role. Because **PIM-Global-Administrators** is a group, it means that all members of this group (which includes Patti Fernandez) are now eligible to be assigned the Global Administrator role.
 
     **Note:** Lab testing has shown that it can sometimes take up to 30 minutes for new assignments to appear under the **Eligible assignments** tab. If **PIM-Global-Administrators** doesn't appear immediately, wait a few minutes and then select the **Refresh** option on the menu bar. Continue to select the **Refresh** option every few minutes until **PIM-Global-Administrators** appears in the list of **Eligible assignments**.
 
@@ -142,7 +142,7 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 ### Task 3 - Submit a request for the Global Admin role
 
-Now that the **PIM-Global-Administrators** group has been made eligible for the Global administrator role, the members of the group (in this case, Patti Fernandez) can be assigned the Global Administrator role using Microsoft Entra Privileged Identity Management. Holly wants to test out the PIM process in her pilot project. In this task, you will take on the role of Patti, who will submit a request to be assigned Global administrator role privileges. In the next task, Holly will review her request and approve it.
+Now that the **PIM-Global-Administrators** group has been made eligible for the Global administrator role, the members of the group (one of which is Patti Fernandez) can be assigned the Global Administrator role using Microsoft Entra Privileged Identity Management. Holly wants to test out the PIM process in her pilot project. In this task, you will take on the role of Patti, who will submit a request to be assigned Global administrator role privileges. In the next task, Holly will review her request and approve it.
 
 **NOTE:** Companies can configure the PIM settings for Microsoft Entra roles, including the requirement for MFA during activation, justification requirements, and whether approval is needed to activate a role. Back in Task 1, you configured the PIM activation request process to require multifactor authentication (MFA) for the Global admin role. 
 
@@ -156,37 +156,43 @@ Now that the **PIM-Global-Administrators** group has been made eligible for the 
 
 4. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
-5. In the **Welcome to Microsoft Azure** dialog box that appears, select **Maybe later** to skip the tour.
+5. In the **Welcome to Microsoft Azure** window that appears, select **Cancel** to skip the tour.
 
-6. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. This section displays a row of Azure services and their associated icons. At the end of the row, select **More services** (with the forward arrow icon). This opens the **All services** window.
+6. In the **Microsoft Azure** portal, the section titled **Azure services** displays a row of Azure services and their associated icons. At the end of the row, select **More services** (with the forward arrow icon). This opens the **All services** window.
 
-7. In the **All services** window, enter **priv** in the **Filter services** search box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
+7. In the **All services** window, you want to select **Microsoft Entra Privileged Identity Management**. Scroll down a little bit to see the columns of services. Given how time consuming it would be to manually search for this service, scroll back to the top of the page and enter **priv** in the **Filter services** search box. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
 
-8. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the navigation pane, select **My Roles**.
+8. In the **Privileged Identity Management | Quick start** window, select **Tasks** in the navigation pane to expand this group, and then select **My Roles**.
 
 9. In the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed by default. Remember, in the prior task Holly assigned Patti as a member of the **PIM-Global-Administrators** group, which Holly later assigned as an eligible group for the Global Administrator role. As such, this role appears in the list of **Eligible assignments**. <br/>
 
-    Under the **Action** column for the Global Administrator role, select **Activate**.
+    Under the **Action** column for the **Global Administrator** role, select **Activate**.
 
-10. In the **Activate - Global Administrator** pane, a warning message is displayed at the top of the pane indicating additional verification is required. Select this message to continue.
+10. In the **Activate - Global Administrator** pane that appears, a warning message is displayed at the top of the pane indicating additional verification is required. Select this message to continue.
 
 11. In the **More information required** window that appears, select **Next**. 
 
-12. On the **Microsoft Authenticator** page, complete the MFA sign-in process.
+12. The **Microsoft Authenticator** page appears because you previously configured this role so that the person requesting activation of it will have to sign in using multi-factor authentication. This page enables you to either download the Microsoft Authenticator mobile app or use a different method for MFA verification. For the purposes of this lab, we recommend that you use your mobile phone so that you do not have to take time installing the Microsoft Authenticator app that you may not use again after this training class. Select the **I want to set up a different method** option at the bottom of the page (**Important:** Do NOT confuse this link with the **I want to use a different authenticator app** that appears above it). 
 
-13. On the **Success!** page, select **Done**.
+13. In the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
 
-14. If you receive a dialog box indicating your sign in has timed out, you will have to enter Patti's password, which is the **User Password** provided by your lab hosting provider. If required, complete the MFA sign-in process.  <br/>
+14. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
 
-    **WARNING:** If you take too long to complete this process, the **Enter password** window will appear with a message indicating you took too long to complete the sign in process, so you will be timed-out. If this occurs, you must sign in again with Patti's password, which is the **User Password** provided by your lab hosting provider. If required, complete the MFA sign-in process.
+15. Retrieve the verification code from the text message that is sent to your phone.
 
-15. In the **Activate - Global Administrator** pane that appears on the right-side of the screen, enter **Testing PIM** in the **Reason** field, and then select the **Activate** button at the bottom of the pane.
+16. In the **Phone** window, enter the 6-digit verification code in the code field and then select **Next**. When the **Phone** window displays a message indicating your phone was registered successfully, select **Next**.
 
-16. On the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  <br/>
+17. On the **Success!** page, select **Done**.  <br/>
+
+    **WARNING:** If you take too long to complete this process, the **Enter password** window will appear with a message indicating you took too long to complete the sign in process, so you will be timed-out. If this occurs, you must sign in again with Patti's password, which is the **User Password** provided by your lab hosting provider. If required, complete the MFA sign-in process.    
+
+18. In the **Activate - Global Administrator** pane that appears on the right-side of the screen, enter **Testing PIM** in the **Reason** field, and then select the **Activate** button at the bottom of the pane.
+
+19. On the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note the Global Administrator role does not yet appear. While the role has been activated, it has not been assigned to Patti's account since Holly has not yet approved Patti's request.  <br/>
 
      **Note:** If you recall, back in Task 1 Holly set up the Global Administrator role so that activation to a user account will require approval. What Patti just did was request that the Global Admin role be activated for her user account. This will send a request to Holly, who can then either approve or deny Patti's request for role activation. Holly will review and then approve this request in the next task.
 
-17. Leave the InPrivate browsing session open. You will return to it in the next task once Holly approves Patti's request.
+20. Leave the InPrivate browsing session open. You will return to it in the next task once Holly approves Patti's request.
 
 
 ### Task 4 -  Approve the request for the Global Admin role
@@ -205,7 +211,7 @@ Back in Task 1, Holly set herself up as the approver for the Global Administrato
 
 4. In the **Approve requests | Microsoft Entra roles** window, in the **Requests for role activations** section, select the check box to the left of the Global Administrator request from Patti Fernandez, and then select the **Approve** button.
 
-5. In the **Approve Request** pane that appears on the right-side of the screen, enter **PIM testing** in the **Justification** field and then select **Confirm**.
+5. In the **Approve Request** pane that appears, enter **PIM testing** in the **Justification** field and then select **Confirm**.
 
 6.  Hover your mouse over the **Edge** icon on the taskbar and select the window on the right to go back to the InPrivate Browser session where Patti is signed in. 
 
