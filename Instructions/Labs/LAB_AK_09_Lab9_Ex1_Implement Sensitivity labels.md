@@ -311,7 +311,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 20. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-21. On the **Enter password** window, enter the **User Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process.
+21. On the **Enter password** window, enter the New User Password that you previously assigned to Joni's account and then select **Sign in**. 
 
 22. If a **Welcome** window appears, select the X to close it.
 
