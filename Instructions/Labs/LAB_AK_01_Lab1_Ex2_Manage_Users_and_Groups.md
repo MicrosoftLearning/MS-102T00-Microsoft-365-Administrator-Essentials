@@ -101,7 +101,7 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 
 4. In the **Sign in** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Select **Next**.
 
-5. Enter the New Administrative Password in the **Enter password** window and then select **Sign in**. 
+5. In the **Enter password** window, enter the New Administrative Password that you assigned to Holly's account and then select **Sign in**. 
 
 6. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
 
