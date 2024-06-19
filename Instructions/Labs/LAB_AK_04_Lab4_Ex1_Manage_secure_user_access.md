@@ -257,7 +257,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 	In the **Pick an account** window, select **Use another account**. 
 
-19. In the **Sign in** window, enter **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
+19. In the **Sign in** window, you're going to sign in as Laura Atkins, whose Microsoft 365 account you created in a previous exercise. Enter **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider), and then select **Next**. 
 
 20. On the **Enter password** window, enter any random mix of letters and numbers and then select **Sign in**. Note the invalid password error message that appears. 
 
@@ -269,9 +269,11 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 21. You will be prohibited from logging in again as Laura until after the **90 second lockout duration** that you set earlier. <br/>
 
-	Once you've been locked out, wait 90 seconds and then sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Laura's password, which is the **User Password** provided by your lab hosting provider. Verify that you are able to successfully sign-in as Laura.
+	Once you've been locked out, wait 90 seconds and then sign back in as **laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix assigned to you by your lab hosting provider). In the **Password** field, enter Laura's password, which is the New User Password that you assigned to Laura's account when you created it. 
 
-22. Once your log-in is successful, you can close all open applications. This will be your last lab exercise using the LON-DC1 domain controller.
+22. Because MFA is enabled for all users except for the M365 pilot project group members (of which, Laura is not a member), a **More information required** window appears so that you can complete the MFA process for Laura. This is your verification that your sign-in attempt using Laura's actual password was successful.  <br>
+
+	**Note:** You do NOT need to complete the MFA process, since this is your last lab exercise using the LON-DC1 domain controller. You can close all applications on LON-DC1.
  
 
 # Proceed to Lab 4 - Exercise 2
