@@ -12,7 +12,7 @@ To use Microsoft's Attack simulation training feature to simulate a phishing att
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.  
 
-2. To enable MFA for Holly Dickson's user account, select the **Microsoft 365 admin center** tab in your browser> In the navigation pane, select **Users** and then select **Active users**.
+2. To enable MFA for Holly Dickson's user account, select the **Microsoft 365 admin center** tab in your browser. In the navigation pane, select **Users** and then select **Active users**.
 
 3. In the **Active users** window, on the menu bar at the top of the user list, select **Multi-factor authentication**. If this option does not appear on the menu bar, select the **ellipsis (More actions)** icon, and in the drop-down menu that appears, select  **Multi-factor authentication**.
 
@@ -34,7 +34,7 @@ To use Microsoft's Attack simulation training feature to simulate a phishing att
 
 10. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
 
-11. In the **Pick an account** window, select **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the new Administrative Password that you defined for all test users at the start of the lab and later assigned to Holly's account. Select **Sign in**.
+11. In the **Pick an account** window, select **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the new Administrative Password that you assigned to Holly's account. Select **Sign in**.
 
 12. Because MFA is enabled for Holly, a **More information required** window appears. Select **Next**.
 
