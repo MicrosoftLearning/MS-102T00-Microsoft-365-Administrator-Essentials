@@ -273,7 +273,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 22. Because MFA is enabled for all users except for the M365 pilot project group members (of which, Laura is not a member), a **More information required** window appears so that you can complete the MFA process for Laura. This is your verification that your sign-in attempt using Laura's actual password was successful.  <br>
 
-	**Note:** You do NOT need to complete the MFA process, since this is your last lab exercise using the LON-DC1 domain controller. You can close all applications on LON-DC1.
+	**Note:** You do NOT need to complete the MFA process for Laura, since this is your last lab exercise using the LON-DC1 domain controller. You can close all applications on LON-DC1.
  
 
 # Proceed to Lab 4 - Exercise 2
