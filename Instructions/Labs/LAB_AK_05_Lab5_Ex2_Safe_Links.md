@@ -115,7 +115,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 21. In the **Pick an account** window, select **Use another account**, and then in the **Sign in** window, enter the username for the MOD Administrator account (**admin@xxxxxZZZZZZ.onmicrosoft.com**).
 
-22. In the **Enter password** window, enter the **Administrative password** provided by your lab hosting provider and select **Sign in**. If required, complete the MFA sign-in process.
+22. In the **Enter password** window, enter the MOD admin's password (either the Administrative password provided by your lab hosting provider if you were not required to change the MOD admnin's password the first time you signed in, or the New Administrative Password if you were) and select **Sign in**. 
 
 23. In the MOD Administrator's **Inbox**, perform the following checks:  <br/>
 
