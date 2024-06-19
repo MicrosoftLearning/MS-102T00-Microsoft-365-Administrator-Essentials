@@ -103,7 +103,7 @@ To test the Conditional Access policy that you just created, you will sign-out o
 
 11. On the **Success!** page, select **Done**.
 
-12. Microsoft has implemented a new security policy in the trial tenants that are used in its training labs. All of the predefined test user accounts are configured so that students must change their initial password at their next sign-in. You experienced this earlier when you signed into Microsoft 365 as the MOD Administrator in the first lab exercise. You must do so now with Adele. <br>
+12. Microsoft has implemented a new security policy in the trial tenants that are used in its training labs. All of the predefined test user accounts are configured so that students must change their initial password at their next sign-in. You must do so now with Adele. <br>
 
 	In the **Update your password** window that appears, enter the **User Password** provided by your lab hosting provider in the **Current password** field. Then in the **New password** and **Confirm password** fields, enter the New User Password that you defined for all test users at the start of the lab. Select **Sign in**.
 
