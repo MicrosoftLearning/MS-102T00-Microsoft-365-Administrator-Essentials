@@ -1,16 +1,16 @@
-# Learning Path 2 - Lab 2 - Exercise 1 - Manage Administration Delegation
+# Learning Path 2 - Lab 2 - Exercise 1 - Manage roles and role groups
 
-In this exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. You will assign these roles using both the Microsoft 365 admin center and Windows PowerShell; this will give you the added experience of using PowerShell to perform these administrative functions. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles. 
+In this exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. This exercise will provide you with experience in using three different methods to assign these roles: 1) by assigning a role directly to a user account in the Microsoft 365 admin center, 2) by creating a role group, assigning roles to the role group, and then assigning the role group to a user in the Microsoft 365 admin center, and 3) by assigning a role to a user using Windows PowerShell. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles.
 
-### ‎Task 1 - Assign Delegated Administrators in the Microsoft 365 Admin Center
+### ‎Task 1 - Assign an administrator role in the Microsoft 365 Admin Center
 
-Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As you continue in your role as Holly, you will use the Microsoft 365 admin center to assign administrator rights to several Adatum users. 
+Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As you continue in your role as Holly, you will use the Microsoft 365 admin center to assign administrator rights to one of the Adatum users. In this task, you will assign the Billing Administrator role to Diego Siciliani's user account.
 
 1. In the prior lab exercise, you created a new domain for Adatum on LON-DC1. You should now switch back to **LON-CL1** to perform the Microsoft 365 administrative tasks in this lab exercise. As a best practice, typical Microsoft 365 administrative tasks should be performed on a client PC rather than the company's domain controller.  <br/>
 
 	Switch to **LON-CL1**. 
 
-2. On **LON-CL1**, in the **Microsoft 365 admin center** in your Edge browser, you should still be logged in as Holly Dickson from a prior lab exercise. In the left-hand navigation pane, select **Users** and then select **Active Users**. 
+2. On **LON-CL1**, in the **Microsoft 365 admin center** in your Edge browser, you should still be logged in as Holly Dickson from a prior lab exercise. In the navigation pane, select **Users** and then select **Active Users**. 
 
 3. In the **Active users** list, select **Diego Siciliani**.  <br/>
 
@@ -28,26 +28,66 @@ Holly Dickson has been assigned the Microsoft 365 Global Administrator role. As 
 
 8. On the **Manage admin roles** window, select the **X** in the upper-right corner of the screen to close it. This returns you to the **Active users** list. 
 
-9. In the **Active users** list, select **Lynne Robbins**. 
-
-10. In the **Lynne Robbins** pane that appears, the **Account** tab is displayed by default. In this tab, scroll down to the **Roles** section and select **Manage roles**. 
-
-11. In the **Manage admin roles** window, select the **Admin center access** option. This enables the list of commonly used admin roles for selection. 
- 
-12. In the list of commonly used admin roles, select the **User Administrator** role and then select **Save changes**.
-
-13. Close the **Manage admin roles** window once the message appears indicating Lynne's admin roles were updated. 
-
-14. Remain logged into LON-CL1 and the Microsoft 365 admin center as Holly Dickson.
+9. Remain logged into LON-CL1 and the Microsoft 365 admin center as Holly Dickson.
 
 
-### Task 2 - Assign Delegated Administrators with Windows PowerShell  
+### ‎Task 2 - Assign an administrator role using a role group in the Microsoft 365 admin center
 
-This task is similar to the prior one in that you will assign administrator rights to users; however, in this case, you will use Windows PowerShell to perform this function rather than the Microsoft 365 admin center. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.  
+In the prior task, you assigned an administrator role directly to Diego Siciliani's user account in the Microsoft 365 admin center. In this task, you will assign roles using a role group instead. You will create a Security role group, assign user management roles to it, and then assign the role group to Lynne Robbin's user account in the Microsoft 365 admin center.
+
+1. On LON-CL1, you should still be logged into the Microsoft 365 admin center as Holly Dickson. If not, then do so now.
+
+2. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**. 
+
+3. On the **Active teams & groups** page, the **Teams & Microsoft 365 groups** tab is displayed by default. Select the **Security groups** tab.
+
+4. On the **Security groups** tab, select **+Add a security group** on the menu bar. Doing so initiates the **Add a security group** wizard.
+
+5. In the **Add a security group** wizard, on the **Set up the basics** page, enter **User management role group** in the **Name** field. Enter **This role group contains user management roles** in the **Description** field. Select **Next**.
+
+6. On the **Edit settings** page, select the **Azure AD roles can be assigned to the group** check box, and then select **Next**.
+
+7. On the **Review and finish adding group** page, review the settings. If any settings need to be changed, select the appropriate **Edit** option and make the change. When all the settings are correct, select **Create group**.
+
+8. Once the **User management role group** is created, select **Close**.
+
+9. Now that you created the role group, you must assign the corresponding roles to it. On the **Active teams and groups** page, the **Security groups** tab is displayed. Select the **User management role group** to open its details pane.
+
+10. On the **User management role group** pane, the **General** tab is displayed by default. Under the **Roles** section, select **Manage roles**.
+
+11. On the **Manage admin roles** pane that appears, select the **Admin center access** option. In the list of common administrator roles that appears directly below this option, select the **User Administrator** and **User Experience Success Manager** check boxes. Then select the **Show all by category** option. Scroll down to the **Identity** category. Note how the **User Administrator** role is already selected, since you selected this earlier in the list of commonly used roles. In this **Identity** category, select the **Helpdesk Administrator** role and then select **Save changes**. 
+
+12. In the **Manage admin roles** pane, the three selected roles should appear under the **Admin center access** option. Select the **X** in the upper-right corner of the pane to close it.
+
+13. Under the **Security groups** tab, select **User management role group**. In the **User management role group** pane that appears, verify the three roles appear in the **Roles** section. Close this pane.
+
+14. Now that you've assigned the roles to the role group, you must assign the role group to Lynne Robbin's user account. In the **Microsoft 365 admin center**, select **Active users**.
+
+15. On the **Active users** page, select **Lynne Robbins**. 
+
+16. In the **Lynne Robbins** pane that appears, the **Account** tab is displayed by default. In the prior task, when you assigned the Billing Administrator role to Diego Siciliani's account, you selected the **Manage roles** option under the **Roles** section. However, since you will be assigning Lynne's roles through a role group, you must assign Lynne as a member of the Security role group that you just created. It's through the group assignment that Lynne will inherit the roles assigned to the role group. Therefore, under the **Groups** section, select **Manage groups**. 
+
+17. On the **Manage groups** pane, select **+Assign memberships**.
+
+18. On the **Assign memberships** pane, select the **User management role group** check box, and then select **Add(1)**.
+
+19. Once a **Saved** notification appears at the top of the page, close this pane. 
+
+20. To verify that Lynne inherited the roles that were assigned to the User management role group, select **Lynne Robbins** from the list of active users. 
+
+21. In the **Lynne Robbins** pane that appears, in the **Account** tab that is displayed by default, you should see the three User management roles that were assigned to the Lynne. Under the **Roles** section**, select **Manage roles**.
+
+22. In the **Manage admin roles** pane that appears, under the **Admin center access** option, note the three roles that are selected and the name of the group from which they were assigned to Lynne. Also note how the three roles are grayed out. This indicates that you can't unselect the roles from this window. Because the roles were assigned to Lynne from a role group that contained these roles, you can only unassign the roles by removing Lynne as a member of the role group. You have just verified that Lynne is assigned these roles. Close this **Manage admin roles** pane.
+
+23. Remain logged into LON-CL1 and the Microsoft 365 admin center as Holly Dickson.
+
+### Task 3 - Assign an administrator role using Windows PowerShell  
+
+In this task, you will use Windows PowerShell to assign a role to a user account. Doing so will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.
 
 In this task, Holly wants to assign Patti Fernandez to the Service Support Administrator role. To add a user to an admin role using the Microsoft Graph PowerShell module, you must first obtain the object ID of the user and the object ID of the role. If the role has not yet been enabled (meaning that it hasn't been assigned to a user or it hasn't been physically enabled), then you must enable the role first before you can assign it to a user using PowerShell. In this task, you will enable the Service Support Administrator role first before assigning it to Patti Fernandez.
 
-PowerShell also enables you to display all the users assigned to a specific role, which can be very important when auditing your Microsoft 365 deployment. In this task, you will also learn how to use PowerShell to display all the users assigned to a specific role. 
+PowerShell also enables you to display all the users assigned to a specific role, which can be very important when auditing your Microsoft 365 deployment. In this task, you will also learn how to use PowerShell to display all the users assigned to a specific role.
 
 1. On LON-CL1, select the Windows PowerShell icon on the taskbar that you left open from a prior lab. If you closed the PowerShell window, then open an elevated instance of it using the same instruction as before. 
 
@@ -71,19 +111,19 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	To view all the enabled roles in Microsoft 365, enter the following command at the command prompt and then press Enter: <br/>
 	
-		Get-MgDirectoryRole    <br/>
+		Get-MgDirectoryRole  
 
-	**Note:** This command displays the roles that have been enabled thus far in Microsoft 365. If the Service Support Administrator role appeared in this list, you could proceed directly to step 13 to assign the role to Patti. However, since the Service Support Administrator is not included in this list of enabled roles, you must perform steps 8-12 to enable the role from its corresponding role template before you can assign Patti to the role in step 13. 
+	**Note:** This command displays the roles that have been enabled thus far in Microsoft 365. If the Service Support Administrator role appears in this list, you can proceed directly to step 13 to assign the role to Patti. However, if the Service Support Administrator is not included in this list of enabled roles, you must perform steps 8-12 to enable the role from its corresponding role template before you can assign Patti to the role in step 13. 
 
-8. To enable a role in Microsoft Graph PowerShell, you must first locate its template to obtain the template's object ID. You need to know the template's object ID to enable the role from the template. There's two ways in which you can view the role templates - you can either display the entire list of role templates, or you can display the template for a specific role. As a learning experience, you will perform both methods so that you can see the difference. <br/>
+8. Since you're performing this step, the Service Support Administrator was not included in the prior list of enabled roles, which means you must enable the role from its template before you can assign it to Patti. To enable a role in Microsoft Graph PowerShell, you must first locate its template to obtain the template's object ID. You need to know the template's object ID to enable the role from the template. There's two ways in which you can view the role templates - you can either display the entire list of role templates, or you can display the template for a specific role. As a learning experience, you will perform both methods so that you can see the difference. <br/>
 
 	Let's start by displaying the complete list of role templates along with their object ID and display name. To do so, type in the following command and then press Enter: <br/>
 
-		Get-MgDirectoryRoleTemplate | Format-List Id, DisplayName   <br/>
+		Get-MgDirectoryRoleTemplate | Format-List Id, DisplayName  
 
 	As you can see after having run this command, you must scroll through the list of role templates looking for the Service Support Administrator role. You can easily see how this can be tedious. As an alternative, run the following command to query for a specific role template - in this case, the "Service Support Administrator" role template: <br/>
 
- 		Get-MgDirectoryRoleTemplate | ? DisplayName -eq "Service Support Administrator"   <br/>
+ 		Get-MgDirectoryRoleTemplate | ? DisplayName -eq "Service Support Administrator"  
 
 	After having run this command, you can see that it displays only the requested role template. Obviously, there may be times when displaying the entire list of role templates is necessary. But when you need to look up a single role template, running the second PowerShell command will be much more efficient than having to scroll through the entire list of templates.
 	
@@ -91,9 +131,9 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 10. You will now create a variable that captures the attributes for the Service Support Administrator template. When you type in the following command, press **Ctrl+V** to paste in the Service Support Administrator template ID that you copied to the clipboard in the prior step. <br/>
 
-	At the command prompt, type the following command and press Enter: <br/>
+	At the command prompt, type the following command and press Enter (don't forget the closing bracket after pasting in the template ID): <br/>
 
-		$ServiceSupportRoleTemplate = @{ RoleTemplateID = "paste in template ID here" }  <br/>
+		$ServiceSupportRoleTemplate = @{ RoleTemplateID = "paste in template ID here" }  
 
 	For example: $ServiceSupportRoleTemplate = @{ RoleTemplateID = "fe930be7-5e62-47db-91af-98c3a49a38b1" }
 
@@ -103,7 +143,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 12. To verify the Service Support Administrator role has been enabled, type in the following command and press enter. This command will display the list of enabled roles:  <br/>
 			
-		Get-MgDirectoryRole	<br/>
+		Get-MgDirectoryRole	
 
 	**Note:** This command displays the object ID of all the enabled roles, including the Service Support Administrator role that you just enabled from its template. You will later copy and paste in the object ID of the Service Support Administrator role in step 15 when assigning Patti to this role.
 
@@ -117,7 +157,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	b. Run the following command that creates a variable containing the directory object for Patti's user account. When typing in this command, paste in (**Ctrl+V**) the ID that you just copied for Patti's user account. <br/>
 
-		$UserObject = @{ "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/paste in Patti's user account ID here" }	<br/>
+		$UserObject = @{ "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/paste in Patti's user account ID here" }	
 
 	For example: $UserObject = @{ "@odata.id" = "https://graph.microsoft.com/v1.0/directoryObjects/22fddbf7-42d2-4698-be65-ebc972a023e3" }
 
@@ -146,7 +186,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 19. Leave your Windows PowerShell session open for future lab exercises, but minimize it before going on to the next task.
 
 
-### Task 3 - Verify Delegated Administration  
+### Task 4 - Validate role assignments 
 
 In this task, you will begin by examining the administrative properties of two users, Joni Sherman and Lynne Robbins. You will then log into the Microsoft 365 home page on the Client 2 VM (LON-CL2) as each user to confirm several of the changes that you made when managing their administrative delegation in the prior tasks. Finally, as Lynne Robbins, you will perform two important user account maintenance tasks - resetting passwords and blocking user accounts.
 
@@ -172,25 +212,31 @@ In this task, you will begin by examining the administrative properties of two u
 
 11. In your **Edge** browser navigate to **https://portal.office.com**. 
 
-12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).
+12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Since you're signing in as Joni Sherman, enter this **User Password** provided by your lab hosting provider in the **Enter password** window. <br>
+
+	In the **Update your password** dialog box that appears, enter the **User Password** provided by your lab hosting provider in the **Current password** field. Then enter the New User Password in the **New password** and **Confirm password** fields and select **Sign in**.
 
 13. On the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. If a **Save password** window appears, select **Never**.
 
 14. If a **Welcome to Microsoft 365** dialog box appears in the middle of the page, select the forward-arrow (>) twice and then the check mark to close it.
 
-15. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it.
+15. If a **Find more apps** window or a **Create with Microsoft 365** window or any other introductory-type window appears, select the **X** in the top corner of the window to close it.
 
-16. On the **Welcome to Microsoft 365** window, which is Joni's Microsoft 365 home page, a navigation pane appears on the left side of the screen that indicates the applications the user has permission to access. In this **Apps** pane, note how the **Admin** option is not displayed. This is because Joni was never assigned a Microsoft 365 administrator role. 
+16. On the **Welcome to Microsoft 365** window, which is Joni's Microsoft 365 home page, a navigation pane appears on the side of the screen that indicates the applications the user has permission to access. In this **Apps** pane, note how the **Admin** option is not displayed. This is because Joni was never assigned a Microsoft 365 administrator role. 
 
-17. You will now sign out of Microsoft 365 as Joni. In **Microsoft Edge**, at the top right of the **Welcome to Microsoft 365** page, select the user icon for **Joni Sherman** (the circle in the upper right-hand corner with Joni's picture in it), and in the **Joni Sherman** window that appears, select **Sign out.** 
+17. You will now sign out of Microsoft 365 as Joni. In **Microsoft Edge**, at the top right of the **Welcome to Microsoft 365** page, select the user icon for **Joni Sherman** (the circle in the top corner with Joni's picture in it), and in the **Joni Sherman** window that appears, select **Sign out.** 
 
-18. You will now sign back into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Joni, you're signed out now**. In this window, it gives you the option of signing back in as Joni, or signing in as a different user. Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).
+18. You will now sign back into Microsoft 365 as **Lynne Robbins**. In your current **Edge** browser tab, it should display a message indicating **Joni, you're signed out now**. In this window, it gives you the option of signing back in as Joni, or signing in as a different user. <br/>
+
+	Select **Switch to a different account**, and in the **Email address** field that appears, enter **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Sign in**. In the **Enter password** window, enter the **User Password** provided by your lab hosting provider and select **Sign in**. <br>
+
+	In the **Update your password** dialog box that appears, enter the **User Password** provided by your lab hosting provider in the **Current password** field. Then enter the New User Password in the **New password** and **Confirm password** fields and select **Sign in**. 
 
 19. If a **Welcome to Microsoft 365** dialog box appears, select the forward arrow (>) two times and then select the check mark to close the window.
 
-20. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it.
+20. If a **Find more apps** window or a **Create with Microsoft 365** window or any other introductory-type window appears, select the **X** in the top corner of the window to close it.
 
-21. On the **Welcome to Microsoft 365** window, which is Lynne's Microsoft 365 home page, note how the **Admin** icon is displayed in the navigation pane on the left side of the screen. This icon appears because Lynne was assigned to a Microsoft 365 administrator role. Select the **Admin** icon to open the Microsoft 365 admin center.
+21. On the **Welcome to Microsoft 365** window, which is Lynne's Microsoft 365 home page, note how the **Admin** icon is displayed in the navigation pane on the side of the screen. This icon appears because Lynne was assigned to a Microsoft 365 administrator role. Select the **Admin** icon to open the Microsoft 365 admin center.
 
 22. In the **Microsoft 365 admin center**, select **Users** on the navigation pane and then select **Active users**. 
 
@@ -206,7 +252,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 	However, now select the **Require this user to change their password when they first sign in** checkbox to clear it. Note the error message that appears indicating the password (Pa55w.rd) contains a word, phrase, or series of numbers that makes it easily guessable. In this case, you entered a variation of the word **password**, which will trigger this error. The system allows you enter this password if you force the user to change it at their first sign-in. But if you don't force the user to enter a different password at their first sign-in, then this password isn't allowed.
 
-27. After these two failed password attempts, Lynne has decided to let Microsoft 365 automatically generate a password. Select the **Automatically create a password** check box so that it displays a check mark. <br/>
+27. After these two failed password attempts, Lynne has decided to let Microsoft 365 automatically generate a password. Select the **Automatically create a password** check box so that it displays a check mark. 
 	
 28. The password that's automatically generated will just be a temporary password because Lynne wants to force Diego to change it the next time he logs in. Therefore, verify the **Require this user to change their password when they first sign in** check box displays a check mark; if the box is clear, then select it so that it displays a check mark.
 
@@ -218,9 +264,9 @@ In this task, you will begin by examining the administrative properties of two u
 
 32. If a survey request window appears, select **Cancel**.
 
-33. In the **Active users** list, select the **key (Reset a password)** icon for **Pradeep Gupta**. 
+33. You now want to change Pradeep Gupta's password. In the **Active users** list, select the **key (Reset a password)** icon that appears to the right of **Pradeep Gupta**. 
 
-34. In the **Reset password** window for Pradeep, verify the **Automatically create a password** check box displays a check mark; if it doesn't, then select this box now so that the system automatically generates a password for Pradeep.  <br/>
+34. In the **Reset password** window that appears for Pradeep, verify the **Automatically create a password** check box displays a check mark; if it doesn't, then select this box now so that the system automatically generates a password for Pradeep.  <br/>
 
 	This is just a temporary password because Lynne wants to force Pradeep to change it the next time he logs in. Therefore, verify the **Require this user to change their password when they first sign in** check box displays a check mark; if the box is clear, then select it so that it displays a check mark.
 	
@@ -236,19 +282,19 @@ In this task, you will begin by examining the administrative properties of two u
 
 39. In the **Block sign-in** pane that appears, verify Alex's email address appears below the **Block sign-in** heading. Select the **Block this user from signing in** check box, and then select **Save changes.** 
 
-40. The **Block sign-in** window should display a message indicating that Alex is now blocked from signing in (and no one can sign in with Alex's username in the event that his username was actually compromised). In addition, Alex will automatically be signed out of Microsoft services within 60 minutes. Select the **X** in the upper right-hand corner of the pane to close it. 
+40. The **Block sign-in** window should display a message indicating that Alex is now blocked from signing in (and no one can sign in with Alex's username in the event that his username was actually compromised). In addition, Alex will automatically be signed out of Microsoft services within 60 minutes. Select the **X** in the top corner of the pane to close it. 
 
-41. Lynne has just been informed that **Nestor Wilke's** username has also been potentially compromised. Repeat steps 33 through 36 to block Nestor from signing in (and to block anyone else from using his username to sign in). <br/>
+41. Lynne has just been informed that **Nestor Wilke's** username has also been potentially compromised. Repeat steps 37 through 40 to block Nestor from signing in (and to block anyone else from using his username to sign in). <br/>
 
 	When you tried to block Nestor's sign in, you should have received an error message indicating **Changes could not be saved**. The reason that you received this error is that Nestor is a Global Administrator, and Lynne is not. Only a Global Administrator can block another Global Admin from being able to sign in. Lynne will need to ask Holly Dickson to make this change. <br/>
 
 	Close the **Block sign-in** pane.
 
-42. You previously blocked Alex Wilber from being able to sign in. To verify whether he is blocked, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the upper right-hand corner), and in the **Lynne Robbins** window that appears, select **Sign out.** 
+42. You previously blocked Alex Wilber from being able to sign in. To verify whether he is blocked, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the top corner), and in the **Lynne Robbins** window that appears, select **Sign out.** 
 
 43. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
 
-44. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).  <br/>
+44. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the **User Password** provided by your lab hosting provider.  <br/>
 
 	The **Pick an account** window should appear, and it should display an error message indicating **Your account has been locked. Contact your support person to unlock it, then try again.** You have just verified that Alex (or someone who has obtained Alex's username and password) cannot log in. <br/>
 
@@ -270,4 +316,3 @@ In this task, you will begin by examining the administrative properties of two u
 
 
 # Proceed to Lab 2 - Exercise 2
-
