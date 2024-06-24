@@ -11,23 +11,21 @@ In the following lab exercise, you will continue in your role as Holly Dickson, 
 
 Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 365 user account has not been set up for her, she initially signed into Microsoft 365 as the MOD Administrator account (the default Global administrator) in the previous lab. In this task, you will continue to be logged in as the MOD Administrator, during which you will create a Microsoft 365 user account for Holly. You will also assign the Microsoft 365 Global Administrator role to Holly's account. This role will provide Holly with the permissions needed to perform all administrative functions within Microsoft 365. Following this task, you will log in using Holly's new account and you will perform all remaining labs using Holly's persona. 
 
-**License Note:** Before creating Holly's account, you will first verify the number of available licenses. In doing so, you will note that while your lab tenant provides 20 Microsoft 365 E5 licenses and 20 Enterprise Mobility + Security E5 licenses, all those licenses have already been assigned to the existing user accounts created by your lab hosting provider. As such, you must first unassign one of each license from an existing user so that you can assign them to Holly.
+**License Note:** Before creating Holly's account, you will first verify the number of available licenses. In doing so, you will note that while your lab tenant provides 20 Microsoft 365 E5 (no Teams) licenses and 20 Microsoft Teams Enterprise licenses, all those licenses have already been assigned to the existing user accounts created by your lab hosting provider. As such, you must first unassign one of each license from an existing user so that you can assign them to Holly.
 
-**Important:** As a best practice in your real-world deployment, you should always write down the credentials of the first Global administrator account (in this lab, it's the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). You should store away this account information for security reasons. **This account should be a NON-personalized identity** that owns the highest privileges possible in a tenant. It should **not** be MFA activated because it is not personalized. Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few personal Global admins as possible. For those personal Global admins that you do create in your real-world deployment, they should each be mapped to a single user (such as Holly Dickson), and they should each have Microsoft Entra Multi-Factor Authentication (MFA) enforced. 
-
-That being said, you will not turn on MFA for Holly's account because time is limited in this training course, and we don't want to take up lab time by forcing you to log in using a second authentication method every time Holly logs in.
+**Important:** As a best practice in your real-world deployment, you should always write down the credentials of the first Global administrator account (in this lab, it's the MOD Administrator account, whose username is admin@xxxxxZZZZZZ.onmicrosoft.com, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider). You should store away this account information for security reasons. **This account should be a NON-personalized identity** that owns the highest privileges possible in a tenant. It should **not** be MFA activated because it is not personalized. Because the username and password for this first Global admin account are typically shared among several users, this account is a perfect target for attacks; therefore, it's always recommended that organizations create personalized service admin accounts (for example, an Exchange admin, SharePoint admin, and so on) and keep as few personal Global admins as possible. For those personal Global admins that you do create in your real-world deployment, they should each be mapped to a single user (such as Holly Dickson), and they should each have Microsoft Entra Multi-Factor Authentication (MFA) enforced.  
 
 1. On the **LON-CL1** VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior lab exercise. You should be signed into Microsoft 365 as the **MOD Administrator**. 
 
 2. Since you are adding a new user, you should begin by checking license availability before adding the user account. In the **Microsoft 365 admin center** navigation pane, select **Billing** to expand the Billing group, and then select **Licenses**. 
 
-3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** subscriptions don't have any available licenses. Your lab tenant provides 20 licenses for each subscription, but all 40 licenses have been assigned. Since you must assign Holly both an **Enterprise Mobility + Security E5** license and a **Microsoft 365 E5** license, you must first unassign the licenses from an existing user account to make them available for Holly. 
+3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** subscriptions don't have any available licenses. Your lab tenant provides 20 licenses for each subscription, but all 40 licenses have been assigned. Since you must assign Holly both a **Microsoft 365 E5 (no Teams)** license and a **Microsoft Teams Enterprise** license, you must first unassign the licenses from an existing user account to make them available for Holly. 
 
-4. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created by your lab hosting provider. Since Christie Cline will be moving to a new role in the company and will no longer be part of the Microsoft 365 pilot project, you will unassign the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** licenses from her account so that you can reassign them to Holly Dickson's new account.
+4. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created by your lab hosting provider. Since Christie Cline will be moving to a new role in the company and will no longer be part of the Microsoft 365 pilot project, you will unassign the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** licenses from her account so that you can reassign them to Holly Dickson's new account.
 
 5. On the **Active users** page, in the list of users, select **Christie Cline** (select Christie's hyperlinked name and not the check box next to her name).
 
-6. In the **Christie Cline** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses (2)**, select the check boxes next to **Enterprise Mobility + Security E5** and **Microsoft 365 E5** to clear them, and then select **Save changes**. Once the changes are saved, close the **Christie Cline** pane. 
+6. In the **Christie Cline** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses (2)**, select the check boxes next to **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** to clear them, and then select **Save changes**. Once the changes are saved, close the **Christie Cline** pane. 
 
 7. You're now ready to create a user account for Holly Dickson, who is Adatum's new Microsoft 365 Administrator. In doing so, you will assign Holly the Microsoft 365 Global Administrator role, which gives Holly global access to most management features and data across Microsoft online services. You will also assign Holly the two licenses that you just unassigned from Christie Cline. <br/>
 
@@ -45,9 +43,9 @@ That being said, you will not turn on MFA for Holly's account because time is li
 	
 		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It will be prefilled with the **xxxxxZZZZZZ.onmicrosoft.com** cloud domain (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).<br/>
 	
-	- Clear (uncheck) the **Automatically create a password** check box, which will display a new field for entering an administrator defined password.
+	- Clear (uncheck) the **Automatically create a password** check box, which will display a new field for entering an administrator-defined password.
 
-	- In the new **Password** field that appears, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account)
+	- Enter the New Administrative Password in the **Password** field that appears 
 
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 
@@ -57,7 +55,7 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 	- Select location: **United States**
 
-	- Licenses: Under the **Assign user a product license** option, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes
+	- Licenses: Under the **Assign user a product license** option, select the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** check boxes
 
 11. Select **Next**.
 
@@ -83,21 +81,17 @@ That being said, you will not turn on MFA for Holly's account because time is li
 
 19. Remain logged into the Client 1 VM (LON-CL1) with the Microsoft 365 admin center open in your browser for the next task.
 
-### Task 2 – Set up Microsoft 365 User Accounts
+### Task 2 – Update the Microsoft 365 pilot project group
 
 After completing the previous task, you should still be signed into the **Microsoft 365 admin center** as the **MOD Administrator** account. In this task, you will begin implementing Adatum’s Microsoft 365 pilot project as Holly Dickson, Adatum’s new Microsoft 365 Administrator. Therefore, you will begin this task by logging out of Microsoft 365 as the MOD Administrator and you will log back in as Holly. 
 
-In the prior task, you noticed that your Microsoft 365 trial tenant came equipped with a list of active users. As Holly Dickson, Adatum's Microsoft 365 Administrator, you have selected the following members of the Microsoft 365 pilot project team to assist with the initial phase of the deployment: Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez. 
-
-Each user is a key member of your pilot project team. While their user accounts are already present in Microsoft 365, you want to configure their passwords so they can more easily sign into Microsoft 365 when needed in the upcoming lab exercises. You will also change the password for Adele Vance. Adele is not a member of the Microsoft 365 pilot project team, but she is used for testing MFA implementation in a later lab. You will assign the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) as their user password, just as you did when you created Holly's account. You also need to add a Microsoft 365 group that will be used in a later lab exercise. 
-
-**IMPORTANT:** Using the same password for multiple users should obviously never be done in the real-world. However, we're doing it here in your training environment to simply make things easier for students as they progress through the labs. That being said, this task will also provide you with experience in how to change a user password.
+In a previous task, you created a Microsoft 365 group for the members of Adatum's pilot project team so that you could create a custom theme for that group. In this task, you will add Holly to this group. 
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as the **MOD Administrator**. <br/>
 
 	On the **Microsoft 365 admin center** tab, in the upper-right corner of the screen, note that it displays the MOD Administrator's name and megaphone icon. The name is displayed because of the custom theme that you created in the prior lab exercise that was associated with a group of Microsoft 365 pilot project users that included the MOD Administrator. Keep this in mind once you log back in as Holly Dickson. <br/>
 
-	Select the user icon for the **MOD Administrator** in the upper right corner of your browser. In the **MOD Administrator** window that appears, select **Sign out.** <br/>
+	Select the user icon or the circle with the "MA" initials for the **MOD Administrator** in the upper right corner of your browser. In the **MOD Administrator** window that appears, select **Sign out.** <br/>
 	
 	**Important:** When signing out of one user account and signing in as another, you should close all your browser tabs except for the **Sign out** tab. This is a best practice that helps to avoid any confusion by closing the windows associated with the prior user. Once you're signed out of the MOD Administrator account, take a moment and close all other browser tabs except for the **Sign out** tab. 
 	
@@ -107,50 +101,34 @@ Each user is a key member of your pilot project team. While their user accounts 
 
 4. In the **Sign in** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Select **Next**.
 
-5. In the **Enter password** window, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**.
+5. In the **Enter password** window, enter the New Administrative Password that you assigned to Holly's account and then select **Sign in**. 
 
-6. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
+6. If a **Stay signed in?** dialog box appears, select the **Don’t show this again** check box and then select **Yes.** 
 
-7. If a **Create with Microsoft 365** window appears, select the **X** in the upper right-hand corner of the window to close it. 
+7. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
-8. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is Holly's Microsoft 365 home page. Note that Holly's initials appear in the upper-right corner of the screen; however, Holly's name is not displayed. This is because Holly's account did not exist at the time you added the Microsoft 365 pilot project users to the group that was associated with the custom theme in the prior lab exercise. Since Holly wants to see her name at the top of each Microsoft 365 window when she's logged into the system, she first wants to add her account to the group of Microsoft 365 pilot project users. <br>
+8. If a **Create with Microsoft 365** window appears, select the **X** in the top corner of the window to close it. 
 
-	In the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the **Microsoft 365 admin center** in a new browser tab. 
+9. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is Holly's Microsoft 365 home page. Note that Holly's initials appear in the upper-right corner of the screen; however, Holly's name is not displayed. This is because Holly's account did not exist at the time you added the Microsoft 365 pilot project users to the group that was associated with the custom theme in the prior lab exercise. Since Holly wants to see her name at the top of each Microsoft 365 window when she's logged into the system, she first wants to add her account to the group of Microsoft 365 pilot project users. <br>
 
-9. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
+	In the column of application icons that appears in the navigation pane on the side of the screen, select **Admin**. This opens the **Microsoft 365 admin center** in a new browser tab. 
 
-10. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default. In this tab, select **M365 pilot project**.
+10. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
 
-11. In the **M365 pilot project** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
+11. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default. In this tab, select **M365 pilot project**.
 
-12. In the **Membership** tab, the **Owners** sub-tab is displayed by default in the navigation pane that appears on the left-side of the pane. Select the **Members** sub-tab that appears below it.
+12. In the **M365 pilot project** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
 
-13. In the **Members** sub-tab, select **+Add members**.
+13. In the **Membership** tab, the **Owners** sub-tab is displayed by default in the navigation pane that appears on the side of the pane. Select the **Members** sub-tab that appears below it.
 
-14. In the **Add group members to M365 pilot project** pane that appears, select inside the **Search by name or email address** field. In the list of users that appears, scroll down and select **Holly Dickson**. Select the **Add (1)** button, and then close the **Add group members to M365 pilot project** pane once Holly is added to the group.
+14. In the **Members** sub-tab, select **+Add members**.
 
-15. On the **Active teams and groups** page, select the **Refresh** icon that appears at the top of the screen, to the left of the address bar. Note how Holly Dickson's name appears next to her initials in the upper-right corner of the screen (Note: you may have to refresh twice to see Holly's name).
+15. In the **Add group members to M365 pilot project** pane that appears, select inside the **Search by name or email address** field. In the list of users that appears, scroll down and select **Holly Dickson**. Select the **Add (1)** button, and then close the **Add group members to M365 pilot project** pane once Holly is added to the group.
 
-16. In the **Microsoft 365 admin center**, select **Users** in the navigation pane, and then under it, select **Active users**.
-
-17. In the **Active Users** window, when you hover your mouse over a user's **Display name**, a **key icon** appears to the right of the user's name. By selecting the key icon, you can reset a user's password. You must reset the passwords for Adele Vance, Alex Wilber, Joni Sherman, Lynne Robbins, and Patti Fernandez to the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and that you previously assigned to Holly Dickson.<br/>
-
-    Hover your mouse over **Adele Vance** and select the key icon that appears.
-
-18. In the **Reset password** pane that appears for Adele, clear (uncheck) the **Automatically create password** check box. 
-
-19. In the **Password** field that appears, enter the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). Select the eye (**Show Password**) icon at the end of the **Password** field to display the value that you entered. Verify that you correctly entered the tenant password.
-
-20. Clear (uncheck) the **Require this user to change their password when they first sign in** check box.
-
-21. Select **Reset Password**. If a **Save password** dialog box appears at the top of the screen, select **Never**. Then select **Close** on the **Password has been reset** pane.
-
-22. Repeat steps 17-21 for **Alex Wilber**, **Joni Sherman**, **Lynne Robbins**, and **Patti Fernandez**. Reset each of their passwords to the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account). In step 19, don't forget to show the password you entered to verify it's the correct value.
-
-23. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
+16. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
-### Task 3 – Set up Microsoft 365 Groups 
+### Task 3 – Create additional groups for testing
 
 In this task, you will create three new groups that will be used in later labs. You will then manage the groups by assigning users to them. Two groups will be Microsoft 365 groups; the third will be a Security group. Creating the two types of groups will enable you to see some of the differences between the group types. After creating the groups, you will then delete one of them. This will set up the next task, which examines how to recover a deleted group using Windows PowerShell.
 
@@ -210,7 +188,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 17. In the **Accounting** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
 
-18. In the **Membership** tab, four sub-tabs (Owners, Members, Site visitors, and About membership and permissions) are displayed in the left-hand column. The **Owners** sub-tab is displayed by default. In the **Owners** sub-tab, Joni Sherman should appear as the only group owner. 
+18. In the **Membership** tab, four sub-tabs (Owners, Members, Site visitors, and About membership and permissions) are displayed in a side column. The **Owners** sub-tab is displayed by default. In the **Owners** sub-tab, Joni Sherman should appear as the only group owner. 
 
 19. Select the **Members** sub-tab. In the **Members** sub-tab, select the **Add members** button. 
 
@@ -218,7 +196,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	In the list of users, select **Alex Wilber**. Note that you have to select back into the field to display the list of users. Select **Joni Sherman**, select back in the field, and then select **Lynne Robbins**. Once all three users are selected, select the **Add (3)** button at the bottom of the pane.
 
-21. Once the three new members have been added to the group, select the **X** in the upper right-hand corner of the **Accounting** pane to close it. 
+21. Once the three new members have been added to the group, select the **X** in the top corner of the pane to close it. 
 
 22. After adding members to the Accounting group, you will be returned to the **Active teams and groups** window. Select the **Security groups** tab to display the list of security groups. As you can see from the menu bar, there are two types of security groups that you can create - a **security group** and a **mail-enabled security group**. In this task, you will create a security group; therefore, select the **+Add a security group** option on the menu bar. 
 
@@ -238,7 +216,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	**Note:** In this task, you created Microsoft 365 groups and a Security group. There are two additional group types available - **Mail-enabled security groups** (which was an option under the **Security groups** tab) and **Distribution list**. Neither of these group types were used in this lab because it can take up to an hour for these two types of groups to appear in the **Active teams and groups** list; whereas Microsoft 365 groups and Security groups usually take just a minute to two to appear. 
 
-26. You’re now ready to add members to the **IT Admins** security group. In the **Security groups** tab, select the **IT Admins** group (select the name and not the check box that appears to the left of the name). 
+26. You’re now ready to add members to the **IT Admins** security group. In the **Security groups** tab, select the **IT Admins** group (select the name and not the check box that appears next to the name). 
 
 27. In the **IT Admins** pane that appears, the **General** tab is displayed by default. Select the **Members** tab.
 
@@ -248,7 +226,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 30. In the list of users, select the check boxes for **Isaiah Langer**, **Megan Bowen**, and **Nestor Wilke**, and then at the bottom of the pane select the **Add (3)** button. 
 
-31. In the **Members** pane, verify the three users that you selected appear. Select the **X** in the upper right-hand corner to close the **Members** pane. 
+31. In the **Members** pane, verify the three users that you selected appear. Select the **X** in the top corner of the pane to close it. 
 
 32. You now want to test the effect of deleting a group. In the list of **Active teams and groups**, select the **Teams & Microsoft 365 groups** tab. In the list of Microsoft 365 groups, locate the **Inside Sales** group and then select the vertical ellipsis icon (**More actions**) that appears to the right of the **Inside Sales** group. In the drop-down menu that appears, select **Delete team**. 
 
@@ -258,11 +236,13 @@ In this task, you will create three new groups that will be used in later labs. 
 
 35. This will return you to the list of **Active teams and groups**. The **Inside Sales** group should no longer appear under the **Teams & Microsoft 365 groups** tab. If the Inside Sales group still displays, wait a couple of minutes and then select the **Refresh** option on the menu bar. The updated **Active teams and groups** page should no longer include the Inside Sales group in the **Teams & Microsoft 365 groups** tab.
 
-36. To verify whether deleting this group affected any of its owners or members, select **Active Users** in the navigation pane. 
+36. In the Microsoft 365 admin center navigation pane, under **Teams & groups**, select **Deleted groups**. The **Inside Sales** group should appear in the list. 
 
-37. In the **Active users** list verify that the Inside Sales group's two owners (**Allan Deyoung** and **Patti Fernandez**) and the two members (**Diego Siciliani** and **Lynne Robbins**) still appear in the list of users. This verifies that deleting a group does not delete the user accounts that were owners or members of the group.
+37. To verify whether deleting this group affected any of its owners or members, select **Active Users** in the navigation pane. 
 
-38. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
+38. In the **Active users** list verify that the Inside Sales group's two owners (**Allan Deyoung** and **Patti Fernandez**) and the two members (**Diego Siciliani** and **Lynne Robbins**) still appear in the list of users. This verifies that deleting a group does not delete the user accounts that were owners or members of the group.
+
+39. Remain logged into LON-CL1 with the **Microsoft 365 admin center** open in your browser for the next task.
 
 
 ### Task 4 – Recover Groups using PowerShell 
@@ -290,7 +270,7 @@ However, to expand your administrator skills, you will instead restore the delet
 		
 		Connect-MgGraph -Scopes 'Group.ReadWrite.All', 'Directory.ReadWrite.All'
 
-4. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). For the password, sign-in with the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).  
+4. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). For the password, enter the New Administrative Password that you assigned to Holly's account. 
 
 5. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
@@ -316,7 +296,7 @@ However, to expand your administrator skills, you will instead restore the delet
 
 	**Note:** If the Inside Sales group does not appear, wait a minute or two and then select **Refresh** on the menu bar above the list of groups.
 
-12. In the **Inside Sales** pane that appears, select the **Membership** tab. In the **Membership** tab, three sub-tabs (Owners, Members, and About membership and permissions) are displayed in the left-hand column. The **Owners** sub-tab is displayed by default. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group.
+12. In the **Inside Sales** pane that appears, select the **Membership** tab. In the **Membership** tab, three sub-tabs (Owners, Members, and About membership and permissions) are displayed in the side column. The **Owners** sub-tab is displayed by default. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group.
 
 13. Select the **Members** sub-tab. **Diego Siciliani** and **Lynne Robbins** should appear as members of the group. You have just verified that the deleted group is now fully restored.
 
@@ -326,4 +306,3 @@ However, to expand your administrator skills, you will instead restore the delet
 
 
 # Proceed to Lab 1 - Exercise 3
-

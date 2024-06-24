@@ -10,7 +10,7 @@ In this task, you will verify whether a default Microsoft 365 alert is triggered
 
 1. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In your Edge browser, select the **Alert policy - Microsoft Defender** tab. This tab should still be displaying the **Alert policy** window from the prior lab exercise (if not, then in the left-hand navigation pane, select **Policies & rules** and then select **Alert policy**).
+2. In your Edge browser, select the **Alert policy - Microsoft Defender** tab. This tab should still be displaying the **Alert policy** window from the prior lab exercise (if not, then in the navigation pane, select **Policies & rules** and then select **Alert policy**).
 
 3. On the **Alert policy** page, you want to search through the default alert policies for a policy named **eDiscovery search started or exported**. Since there are so many pre-existing alert policies, the easiest way to locate the policy is to search for it. In the **Search** field at the top of the screen, enter **eDiscovery** and then hit Enter. 
 
@@ -56,9 +56,9 @@ To test this default alert, Holly Dickson will create an eDiscovery search. This
 
 2. In your **Microsoft Edge** browser, select the **Home - Microsoft 365 admin center** tab. 
 
-3. In the **Microsoft 365 admin center**, in the left-hand navigation pane under the **Admin centers** group, select **Compliance**. This opens the Microsoft Purview portal in a new tab.
+3. In the **Microsoft 365 admin center**, in the navigation pane under the **Admin centers** group, select **Compliance**. This opens the Microsoft Purview portal in a new tab.
 
-4. In the **Microsoft Purview** portal, in the left-hand navigation pane, under the **Solutions** group, select **Content search**.
+4. In the **Microsoft Purview** portal, in the navigation pane, under the **Solutions** group, select **Content search**.
 
 5. The **Content search** window has two tabs - a **Search** tab and an **Export** tab. The **Search** tab is displayed by default. Select the **+New search** option that appears on the menu bar. This initiates the **New search** wizard.
 

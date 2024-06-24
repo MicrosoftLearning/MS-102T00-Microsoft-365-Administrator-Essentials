@@ -13,26 +13,28 @@ In this next phase of your Adatum pilot project, you will access the Microsoft E
 
 2. In Microsoft Edge, in the **Microsoft 365 admin center**, under the **Admin centers** group, select **Exchange** to open the Exchange admin center.
 
-3. In the **Exchange admin center**, the **Manage mailboxes** page appears by default. In the list of users, note the ones who have an **Archive status** that is set to **Active**. These archive mailboxes were enabled when the VM lab environment was built for this training course and these users were preconfigured in the tenant. However, since you added Holly's user account in one of the first labs at the start of this course, her archive mailbox is **Disabled** by default. <br/>
+3. In the **Exchange admin center**, if the **Recipients** group is already expanded in the navigation pane, then select **Mailboxes**, which appears in the group under it. If **Recipients** is not expanded, then select it to expand the group and then select **Mailboxes**. 
+
+4. On the **Manage mailboxes** page, in the list of users, note the ones who have an **Archive status** that is set to **Active**. These archive mailboxes were enabled when the VM lab environment was built for this training course and these users were preconfigured in the tenant. However, since you added Holly's user account in one of the first labs at the start of this course, her archive mailbox is **Disabled** by default. <br/>
 
 	To enable Holly’s archive mailbox, select **Holly Dickson** in the user list. In the **Holly Dickson** pane that appears, the **General** tab is displayed by default. Select the **Others** tab. In the **Mailbox archive** section, note that Holly's archive mailbox is Disabled. In this group, select **Manage mailbox archive**. 
 
-4. In the **Manage mailbox archive** pane that appears, select the toggle switch for **Mailbox archive status** to change it to **Enabled**. Select **Save** and then close the pane.
+5. In the **Manage mailbox archive** pane that appears, select the toggle switch for **Mailbox archive status** to change it to **Enabled**. Select **Save** and then close the pane.
 
-5. It might take a few moments to create Holly's archive mailbox. Once a message appears indicating **Mailbox archiving successfully updated**, selec the X in the upper right corner of th pane to close it. 
+6. It might take a few moments to create Holly's archive mailbox. Once a message appears indicating **Mailbox archiving successfully updated**, selec the X in the upper right corner of th pane to close it. 
 
-6. On the **Manage mailboxes** page, select the **Refresh** icon on the menu bar above the list of users. Holly's archive mailbox should now be **Active** once the archive mailbox is created. You may have to wait a minute or two and refresh again until **Active** appears.
+7. On the **Manage mailboxes** page, select the **Refresh** icon on the menu bar above the list of users. Holly's archive mailbox should now be **Active** once the archive mailbox is created. You may have to wait a minute or two and refresh again until **Active** appears.
 
-7. In your Microsoft Edge browser, leave your Edge browser and all its tabs open for the next task. 
+8. In your Microsoft Edge browser, leave your Edge browser and all its tabs open for the next task. 
  
 
 ### Task 2 – Create an email retention policy for test users
 
 As part of your pilot project for Adatum, you will configure email retention through the Microsoft Purview portal by creating a new retention policy. You will then assign this retention policy to Joni Sherman and Lynne Robbins’ mailboxes. Joni and Lynne are Holly's two test users for compliance testing. Holly wants to use this policy to test email retention for these two test users before creating a second retention policy in the next task that will be applied across the entire organization.
 
-1. On LON-CL1, select the tab for the **Microsoft 365 admin center**. In the left-hand navigation pane, under the **Admin centers** section, select **Compliance**. Doing so will open the **Microsoft Purview** portal.
+1. On LON-CL1, select the tab for the **Microsoft 365 admin center**. Under the **Admin centers** section in the navigation pane, select **Compliance**. Doing so will open the **Microsoft Purview** portal.
 
-2. In the **Microsoft Purview** portal, in the left-hand navigation pane, select **Data lifecycle management**, and then select **Microsoft 365**.
+2. In the **Microsoft Purview** portal, select **Data lifecycle management** in the navigation pane, and then select **Microsoft 365**.
 
 3. In the **Data lifecycle management** window, the **Overview** tab is displayed by default. In the list of tabs that appear across the top of the page, select **Retention policies**.
 

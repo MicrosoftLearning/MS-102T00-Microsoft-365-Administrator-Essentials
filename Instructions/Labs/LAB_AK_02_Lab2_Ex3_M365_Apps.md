@@ -21,7 +21,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 1. On LON-CL1, you should be logged into Microsoft 365 as Holly Dickson in your Edge browser. 
 
-2. In the **Microsoft 365 admin center**, in the navigation pane, select **Users** and then select **Active users**. 
+2. In the **Microsoft 365 admin center**, select **Users** in the navigation pane, and then select **Active users**. 
 
 3. You will begin by testing whether a user **without** an appropriate Microsoft 365 license can install Microsoft 365 Apps for enterprise. For this test, you will use **Laura Atkins**. Your lab hosting provider has already created an on-premises user account for Laura, but she does not have a Microsoft 365 user account. You will create a Microsoft 365 account for Laura, but you will NOT assign her a Microsoft 365 license.  <br/>
 
@@ -38,7 +38,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 	After configuring this field, Laura’s **Username** should appear as: **Laura@xxxxxZZZZZZ.onmicrosoft.com**
 
 	- Password settings: Clear (uncheck) the **Automatic create a password** option
-	- Password: Enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) 
+	- Password: Enter the New User Password
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 	
 5. Select **Next**.
@@ -70,21 +70,21 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 15. In the **Sign in** window, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
-16. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in.**
+16. In the **Enter password** window, enter the New User Password that you assigned to Laura's account and then select **Sign in.** 
 
-17. In the **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. In the **Save password** window, select **Never**.
+17. If a **Stay signed in?** window, select the **Don't show this again** check box and then select **Yes**. In the **Save password** window, select **Never**.
 
 18. In the **Welcome to Microsoft 365** dialog box that appears in the middle of the screen, select the forward arrow twice and then the check mark. 
 
-18. In the **Welcome to Microsoft 365** window (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the left-side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
+19. In the **Welcome to Microsoft 365** window (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
 
 	Select the **Install apps** button, and then in the drop-down menu that appears, select **Other install options**. This opens the **My account** window for Laura.
 
-19. In Laura's **My account** window, under the **Office apps & devices** tile, select **View apps & devices**. Note the message that appears at the top of page. Laura has not been assigned a license that includes the Office desktop apps, so she’s unable to install Microsoft 365 Apps for enterprise. <br/>
+20. In Laura's **My account** window, under the **Office apps & devices** tile, select **View apps & devices**. Note the message that appears at the top of page. Laura has not been assigned a license that includes the Office desktop apps, so she’s unable to install Microsoft 365 Apps for enterprise. <br/>
 	
 	‎**Important:** You have just verified that a user can't download Microsoft 365 Apps for enterprise if they haven't been assigned an appropriate Microsoft 365 license. 
 	
-20. Leave LON-CL2 open and remain signed into Microsoft 365 as Laura Atkins for the next task. In your Edge browser, close the **My account** tab and the **Welcome to Microsoft Edge** tab, but leave the **Home | Microsoft 365** tab open for the next task.
+21. Leave LON-CL2 open and remain signed into Microsoft 365 as Laura Atkins for the next task. In your Edge browser, close the **My account** tab and the **Welcome to Microsoft Edge** tab, but leave the **Home | Microsoft 365** tab open for the next task.
 
 
 ### Task 2 – Verify how the global Office download setting affects installing Microsoft 365 Apps for enterprise
@@ -109,19 +109,25 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 	In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. On the **Active users** page, select **Pradeep Gupta**.
 
-8. In the **Pradeep Gupta** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses (2)**, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes to clear them, and then select **Save Changes**. Close the **Pradeep Gupta** pane. The licenses that were previously assigned to Pradeep are now available for Laura.  
+8. In the **Pradeep Gupta** pane that appears, the **Account** tab is displayed by default. Select the **Licenses and apps** tab. Under **Licenses (2)**, select the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** check boxes to clear them, and then select **Save Changes**. Close the **Pradeep Gupta** pane. The licenses that were previously assigned to Pradeep are now available for Laura.  
 
 9. In the **Active users** list, scroll down to **Laura Atkins**. The value in the **Licenses** column for Laura currently indicates that she is **Unlicensed**. Select **Laura Atkins**.
 
-10. In **Laura Atkins** account pane, select the **Licenses and apps** tab. In the **Licenses** section, select the **Enterprise Mobility + Security E5** and **Microsoft 365 E5** check boxes and then select **Save changes**. Once the changes are saved, close Laura’s account pane. <br/>
+10. In **Laura Atkins** account pane, select the **Licenses and apps** tab. In the **Licenses** section, select the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** check boxes and then select **Save changes**. Once the changes are saved, close Laura’s account pane. <br/>
 
-	In the **Active users** list, note how the value in the **Licenses** column for Laura now displays **Enterprise Mobility + Security E5, Microsoft 365 E5**. 
+	In the **Active users** list, note how the value in the **Licenses** column for Laura now displays **Microsoft Teams Enterprise, Microsoft 365 E5 (no Teams)**. 
 
 11. You should now check whether Laura can download Microsoft 365 Apps for enterprise to her client PC when the global Office download setting has been turned Off. <br/>
 
 	To do this, you must first switch back to **LON-CL2**.
 
-12. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins (verify Laura's **LA** initials appear in the upper-right corner of the browser; note that Laura's name doesn't appear because she's not a member of the M365 pilot project group that was assigned to the custom theme). In your browser, verify you're on the **Home | Microsoft 365** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the navigation pane on the left because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
+12. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. <br/>
+
+	If you were able to earlier save your custom theme, then verify that Laura's name doesn't appear next to her **LA** initials. Because Laura's not a member of the M365 pilot project group that was assigned to the custom theme that you created, the policy setting of displaying the signed-in user's name that you configured for your custom theme doesn't apply to her. <br/>
+
+	However, if you weren't able to save your custom theme, then you were instructed to update the Default theme to display the sign-in user's name. If you were unable to save your custom them, then the Default theme should apply, and you should see Laura's name. 
+
+13. In your browser, verify you're on the **Home | Microsoft 365** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the side pane because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
 
 	Select the **Refresh** icon that appears to the left of the address bar at the top of your browser. <br/>
 
@@ -129,39 +135,39 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 	If a **Find more apps** window appears, select the **X** to close it.
 
-13. Select the **Install apps** button, and then in the drop-down menu, select **Other install options**.
+14. Select the **Install apps** button, and then in the drop-down menu, select **Other install options**.
 	
-14. This will open Laura's **My account** window. Under the **Office apps & devices** tile, select **View apps & devices**. 
+15. This will open Laura's **My account** window. Under the **Office apps & devices** tile, select **View apps & devices**. 
 
-15. In the **Apps & devices** window, a message is displayed under the **Office** section that indicates the admin has turned off Office installs. <br/>
+16. In the **Apps & devices** window, a message is displayed under the **Office** section that indicates the admin has turned off Office installs. <br/>
 	
 	‎**Important:** You have just verified that a licensed user is unable to download Microsoft 365 Apps for enterprise if the global Office download setting has been turned Off.
 
-16. At this point Holly wants to turn the global Office download setting back On so that Laura can download Microsoft 365 Apps for enterprise. <br/>
+17. At this point Holly wants to turn the global Office download setting back On so that Laura can download Microsoft 365 Apps for enterprise. <br/>
 
 	To do this, switch back to **LON-CL1**. 
 
-17. On **LON-CL1**, you should still be logged into Microsoft 365 as Holly Dickson. In the **Microsoft 365 admin center**, under the **Settings** section in the navigation pane, select **Org Settings**. 
+18. On **LON-CL1**, you should still be logged into Microsoft 365 as Holly Dickson. In the **Microsoft 365 admin center**, under the **Settings** section in the navigation pane, select **Org Settings**. 
 
-18. In the **Org settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Microsoft 365 installation options**.
+19. In the **Org settings** window, the **Services** tab is displayed by default. Scroll down through the list of services and select **Microsoft 365 installation options**.
 
-19. In the **Microsoft 365 installation options** pane, select the **Installation** tab, then under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently blank. Select this check box so that it displays a check mark, which now turns this feature back On.
+20. In the **Microsoft 365 installation options** pane, select the **Installation** tab, then under the **Apps for Windows and mobile devices** section, the **Office (includes Skype for Business)** check box is currently blank. Select this check box so that it displays a check mark, which now turns this feature back On.
 
-20. Select **Save**, and then once the update has been saved, select the **X** in the upper-right corner of this window to close it. 
+21. Select **Save**, and then once the update has been saved, select the **X** in the upper-right corner of this window to close it. 
 
-21. Now that this global Office download option is turned back On, you should see if it affects Laura’s ability to download Microsoft 365 Apps for enterprise. <br/>
+22. Now that this global Office download option is turned back On, you should see if it affects Laura’s ability to download Microsoft 365 Apps for enterprise. <br/>
 
 	To do this, switch back to **LON-CL2**.
 
-22. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. The **Office apps and devices** page should be displayed along with the message that indicated your admin has turned off Office installs. Since you just turned this global option back On, you need to refresh this page to see how it affects Laura’s ability to download Microsoft 365 Apps for enterprise. <br/>
+23. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. The **Office apps and devices** page should be displayed along with the message that indicated your admin has turned off Office installs. Since you just turned this global option back On, you need to refresh this page to see how it affects Laura’s ability to download Microsoft 365 Apps for enterprise. <br/>
 
 	Select the **Refresh** icon that appears to the left of the address bar at the top of your browser. 
 
-23. In the **My account** window that appears, under the **Office apps & devices** tile, an **Install Office** button appears along with a message indicating you can install Office on up to 5 PCs or Macs, 5 tablets, and 5 smartphones.  <br/>
+24. In the **My account** window that appears, under the **Office apps & devices** tile, an **Install Office** button appears along with a message indicating you can install Office on up to 5 PCs or Macs, 5 tablets, and 5 smartphones.  <br/>
 	
 	‎**Important:** You have just verified that a user with a Microsoft 365 license is able to download Microsoft 365 Apps for enterprise if the global Office download setting is turned On. Do **NOT** select the **Install Office** button at this time. You will do that in the next task.
 
-24. Remain on LON-CL2 and continue to the next task to perform the user-driven installation for Laura Atkins.
+25. Remain on LON-CL2 and continue to the next task to perform the user-driven installation for Laura Atkins.
 
 
 ### Task 3 – Perform a User-Driven Installation of Microsoft 365 Apps for enterprise 
@@ -196,7 +202,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 10. In the **Start** menu, select **Word**.
 
-11. On the **Sign in to get started with Office** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).
+11. On the **Sign in to get started with Word** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and select **Next**. In the **Password** field, enter the New User Password that you assigned to Laura's account and select **Sign in**. 
 
 12. On the **Stay signed in to all your apps** window, select **OK**.
 
@@ -210,7 +216,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 16. Close Word.
 
-17. Now that you have completed this lab exercise by installing Microsoft 365 Apps for enterprise, you should log out of Microsoft 365 as Laura Atkins. Select Laura's icon in the upper-right corner of the screen (the circle with LA in it), and then in Laura's property window, select **Sign out**.
+17. Now that you have completed this lab exercise by installing Microsoft 365 Apps for enterprise, you should log out of Microsoft 365 as Laura Atkins. Select Laura's user icon in the upper-right corner of the screen (the circle with LA in it), and then in Laura's property window, select **Sign out**.
 
 18. Once Laura is signed out, close your Microsoft Edge browser. 
 
@@ -218,9 +224,9 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 	On LON-CL2, select the **Ctrl+Alt+Delete** function in your VM lab environment. 
 	
-18. On the desktop menu, select **Switch user**. 
+20. On the desktop menu, select **Switch user**. 
 
-19. On the desktop, the **Admin** is selected by default. Enter **Pa55w.rd** in the **Password** field and then select the forward arrow.  <br/>
+21. On the desktop, the **Admin** is selected by default. Enter **Pa55w.rd** in the **Password** field and then select the forward arrow.  <br/>
 
 	The desktop should now display the logged-on user as **lon-cl2\admin**. LON-CL2 is now ready for the next lab that uses it.
 

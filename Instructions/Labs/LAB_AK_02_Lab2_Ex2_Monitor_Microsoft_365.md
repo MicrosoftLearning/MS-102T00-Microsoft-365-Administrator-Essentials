@@ -8,13 +8,13 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 1. You should still be logged into LON-CL1 after having completed the prior exercise, and you should still be logged into Microsoft 365 as Holly Dickson.
 
-2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open (if not, navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) with the **Microsoft 365 Tenant Password**).
+2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open. If the home page isn't open, then navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and where the password is the New Administrative Password that you assigned to her account.
 
 3. In the **Welcome to Microsoft 365** page, select the **Outlook** icon in the column of app icons on the left. 
 
 4. If you're automatically signed into Outlook using Holly's account, then proceed to the next step. However, if a **Pick an account** window appears, select Holly's account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZis the tenant prefix provided by your lab hosting provider). <br/>
 
-	If an **Enter password** window appears, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e., the MOD Administrator account) as Holly's password and select **Sign in**. <br/>
+	If an **Enter password** window appears, enter the New Administrative Password that you assigned to Holly's account and then select **Sign in**. <br/>
 
 	If a **Stay signed in?** window appears, select the **Don't show this again** check box and select **Yes**.
 
@@ -24,7 +24,7 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 6. In this email, you will send the mail to an email address in which the domain (alt.none) is an invalid domain. In the email pane that appears, enter **user@alt.none** in the **To** field. In the drop-down menu that appears, select **Use this address: user@alt.none**. 
 
-7. Enter **Testing invalid domain** in the **Subject** field and then send the email.  
+7. Enter **Testing invalid domain** in the **Subject** field and then select **Send** to send the email.  
 
 8. Wait for the non-delivery report (NDR) message to appear in Holly’s Inbox, then double-click the message to open it in a new window. This will make it easier to copy the text of the message in the next step. 
 
@@ -75,14 +75,14 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 24. Select the **Microsoft 365 admin center** tab. If you had closed this tab, then select the **Home | Microsoft 365** tab in your Edge browser, select the **App launcher** icon (the square made up of 3 rows of dots) that appears above the **Home** icon in the top left corner of the screen, and then in the **Apps** pane that appears, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
-25. On the **Microsoft 365 admin center** page, in the navigation pane, select **Show all** (if necessary). 
+25. On the **Microsoft 365 admin center** page, select **Show all** (if necessary) in the navigation pane. 
 
 26. Scroll down through the navigation pane, and under **Admin centers,** select **Exchange**. This will open the Exchange admin center in a new tab. <br/>
 
 	- If a **Toolbar** window appears, select the **Next** button twice and then the **Finish** button to navigate through the three windows. 
 	- If a **Learn about the new menu** window appears, select the X to close it.
 
-27. In the **Exchange admin center**, in the navigation pane, select **Mail flow**, and then select **Message trace**. 
+27. In the **Exchange admin center**, select **Mail flow** in the navigation pane, and then select **Message trace**. 
 
 28. In the **Message trace** window, the **Default queries** tab is displayed by default. In this tab, select **+Start a trace** on the menu bar. 
 
@@ -119,7 +119,7 @@ Adatum's CTO is concerned with the service health issues that have recently come
 
 4. In the **Issue history** tab on the **Service health** window, the default option is to display a list of items from the past 7 days (this filter option appears to the right of the **Search** field). In the list of service health incidents, select the **Title** for any entry in the list to see further details about the incident. Close the incident window when you’re done reviewing it. 
 
-5. In the **Microsoft 365 admin center**, in the navigation pane, select **Reports**, and then select **Usage.** 
+5. In the **Microsoft 365 admin center**, select **Reports** in the navigation pane, and then select **Usage**.
 
 6. On the **Usage** page, scroll down and locate the **Active users - Microsoft 365 Services** chart. 
 
@@ -156,7 +156,7 @@ If an organization runs into a situation in Microsoft 365 where it needs assista
 
 1. On LON-CL1, in the **Microsoft 365 admin center** tab of your Edge browser, select **Support** in the navigation pane, and then select **View service requests**. 
 
-	**Note:** If the left-hand navigation pane has been minimized and only displays icons without any text, select the Navigation menu icon (the three horizontal lines) at the top of the navigation pane to expand it and display the accompanying text. <br/>
+	**Note:** If the navigation pane has been minimized and only displays icons without any text, select the Navigation menu icon (the three horizontal lines) at the top of the navigation pane to expand it and display the accompanying text. <br/>
 
 	The **Service request history** window displays any outstanding service request tickets. You should verify that no service request tickets appear on this page. <br/>
 
@@ -172,7 +172,7 @@ If an organization runs into a situation in Microsoft 365 where it needs assista
 
 	‎**IMPORTANT: Do NOT complete this form in your lab environment.** If you enter this request with the **Phone** option selected, you will receive a call from a Microsoft 365 support representative. We do not want to bother Microsoft Support specialists with calls from students in a training class. 
 	
-7. Select the **X** in the upper right-hand corner of the page to close the **Contact support** window.
+7. Select the **X** in the top corner of the page to close the **Contact support** window.
 	
 8. Leave LON-CL1 and your Edge browser open for the next lab exercise.  
 

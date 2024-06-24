@@ -1,9 +1,9 @@
-# Learning Path 4 - Lab 4 - Exercise 3 - PIM Teammate Approval Request
+# Learning Path 4 - Lab 4 - Exercise 4 - PIM Teammate Approval Request
 
 Up to this point, you have conducted two forms of PIM approval:
 
-- one by an administrator (Holly), who approved the activation and assignment of the Global Administrator role to Patti Fernandez.
-- another by Alex Wilber, who self-approved the assignment of the Helpdesk administrator role to his user account. 
+- One by an administrator (Holly), who approved the activation and assignment of the Global Administrator role to Patti Fernandez.
+- Another by Alex Wilber, who self-approved the assignment of the Helpdesk administrator role to his user account. 
 
 In this exercise, you will conduct a third form of PIM approval, which is having a non-admin user approve the assignment of a role to another user. 
 
@@ -18,7 +18,7 @@ For this final test of PIM in Adatum's pilot project, Holly has selected Alex Wi
 
 2. In your Edge browser, select the tab containing the **Microsoft Entra admin center**, which should still be open from the prior lab exercise. 
 
-3. In the **Microsoft Entra admin center**, in the left-hand navigation pane, select **Groups**, and then select **All groups**.
+3. In the **Microsoft Entra admin center**, select **Groups** in the navigation pane, and then select **All groups**.
 
 4. In the **Groups | All groups** window, select **New group** in the menu bar.
 
@@ -76,7 +76,7 @@ As in the prior PIM exercise involving the Helpdesk admin role, Holly is trustin
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-2. In your browser, you should still have the **Microsoft Entra admin center** open from the prior task. In the left-hand navigation pane, under the **Identity Governance** section, select **Privileged Identity Management**.
+2. In your browser, you should still have the **Microsoft Entra admin center** open from the prior task. In the navigation pane, under the **Identity Governance** section, select **Privileged Identity Management**.
 
 3. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
@@ -124,25 +124,29 @@ At this point in Holly's pilot project, the **PIM-Intune-Administrators** group 
 
 2. In your InPrivate browsing session, enter the following URL in the address bar: **https://portal.azure.com**
 
-3. You're now going to log into Azure as Joni Sherman. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
+3. You're now going to log into Azure as Joni Sherman. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the **User Password** provided by your lab hosting provider and then select **Sign in**. <br/>
 
-4. If a **Welcome to Microsoft Azure** dialog box appears, select **Maybe later** to skip the tour.
+    In the **Update your password** window that appears, enter the **User Password** provided by your lab hosting provider in the **Current password** field. Then in the **New password** and **Confirm password** fields, enter the New User Password that you defined for all test users at the start of the lab. Select **Sign in**.
 
-5. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. This section displays a row of Azure services and their associated icons. At the end of the row, select **More services** (with the forward arrow icon). This opens the **All services** window.
+4. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
-6. In the **All services** window, enter **priv** in the **Filter services** search box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
+5. If a **Welcome to Microsoft Azure** dialog box appears, select **Maybe later** to skip the tour.
 
-7. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the left-hand navigation pane, select **My Roles**.
+6. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. This section displays a row of Azure services and their associated icons. At the end of the row, select **More services** (with the forward arrow icon). This opens the **All services** window.
 
-8. In the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed by default. Remember, in the prior task Holly assigned Joni and Alex as members of the **PIM-Intune-Administrators** group, which Holly later assigned as an eligible group for the Intune Administrator role. As such, this role appears in the list of **Eligible assignments** for Joni. Under the **Action** column for the Intune Administrator role, select **Activate**.
+7. In the **All services** window, enter **priv** in the **Filter services** search box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
 
-9. In the **Activate - Intune Administrator** pane that appears, enter **Device management support requests from various users that require resolution** in the **Reason** field, and then select the **Activate** button at the bottom of the pane.
+8. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the navigation pane, select **My Roles**.
 
-10. On the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note that no roles appear. <br/>
+9. In the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed by default. Remember, in the prior task Holly assigned Joni and Alex as members of the **PIM-Intune-Administrators** group, which Holly later assigned as an eligible group for the Intune Administrator role. As such, this role appears in the list of **Eligible assignments** for Joni. Under the **Action** column for the Intune Administrator role, select **Activate**.
+
+10. In the **Activate - Intune Administrator** pane that appears, enter **Device management support requests from various users that require resolution** in the **Reason** field, and then select the **Activate** button at the bottom of the pane.
+
+11. On the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed on the menu bar. Select the **Active assignments** tab that appears next to it. Note that no roles appear. <br/>
 
      **Note:** If the prior task, Holly set up the Intune Administrator role so that activation to a user account will require approval by a member of the PIM-Intune-Administrators group. What Joni just did was request that the Intune Admin role be activated for her user account. This will send a notification request to the members of the PIM-Intune-Administrators group to approve Joni's request. Since Alex Wilber is a member of the group, he can then either approve or deny Joni's request for role activation. Alex will review this request in the next task.
 
-11. Leave the InPrivate browser session open for the next task.
+12. Leave the InPrivate browser session open for the next task.
 
 
 ### Task 4 -  Approve the request for the Intune Admin role
@@ -155,7 +159,7 @@ As a member of the PIM-Intune-Administrators group, Joni can approve requests fo
 
 2. You want to begin by verifying that Joni can't self-approve her own request for the Intune Admin role. You're currently in the **My roles | Microsoft Entra roles** window, where you left off from the prior task. In the navigation thread at the top of the window (**All services > Privileged Identity Management | My roles**), select **Privileged Identity Management | My roles**.
 
-3. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the left-hand navigation pane, select **Approve requests**.
+3. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the navigation pane, select **Approve requests**.
 
 4. In the **Approve requests | Microsoft Entra roles** window, there are two sections - **Requests to renew or extend role assignments**, and **Requests for role activations**. Under the **Requests to renew or extend role assignments** section, note that Joni has no requests pending approval. <br/>
 
@@ -167,37 +171,41 @@ As a member of the PIM-Intune-Administrators group, Joni can approve requests fo
 
 7. In your InPrivate browsing session, enter the following URL in the address bar: **https://portal.azure.com**
 
-8. You're now going to log into Azure as Alex Wilber. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
+8. You're now going to log into Azure as Alex Wilber. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the New User Password that you assigned to Alex's account when you signed previously signed in as Alex in the prior lab exercise. Select **Sign in**. 
 
-9. If a **Welcome to Microsoft Azure** dialog box appears, select **Maybe later** to skip the tour.
+9. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
-10. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. Select **More services** (with the forward arrow icon). This opens the **All services** window.
+10. If a **Welcome to Microsoft Azure** dialog box appears, select **Maybe later** to skip the tour.
 
-11. In the **All services** window, enter **priv** in the **Search** box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
+11. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. Select **More services** (with the forward arrow icon). This opens the **All services** window.
 
-12. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the left-hand navigation pane, select **Approve requests**.
+12. In the **All services** window, enter **priv** in the **Search** box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
 
-13. In the **Approve requests | Microsoft Entra roles** window, in the **Requests for role activations** section, select the check box to the left of the **Intune Administrator** request from Joni Sherman, and then select the **Approve** button.
+13. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the navigation pane, select **Approve requests**.
 
-14. In the **Approve Request** pane that appears on the right-side of the screen, enter **PIM testing** in the **Justification** field and then select **Confirm**.
+14. In the **Approve requests | Microsoft Entra roles** window, in the **Requests for role activations** section, select the check box to the left of the **Intune Administrator** request from Joni Sherman, and then select the **Approve** button.
 
-15. Close the InPrivate browser session for Alex.
+15. In the **Approve Request** pane that appears on the right-side of the screen, enter **PIM testing** in the **Justification** field and then select **Confirm**.
 
-16. You will now open a new InPrivate browser session for Joni to verify she was assigned the Intune Administrator role. In your InPrivate browsing session, enter the following URL in the address bar: **https://portal.azure.com**
+16. Close the InPrivate browser session for Alex.
 
-17. You're now going to log into Azure as Joni Sherman. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
+17. You will now open a new InPrivate browser session for Joni to verify she was assigned the Intune Administrator role. In your InPrivate browsing session, enter the following URL in the address bar: **https://portal.azure.com**
 
-18. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. Select **More services** (with the forward arrow icon). This opens the **All services** window.
+18. You're now going to log into Azure as Joni Sherman. In the **Sign in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the New User Password that you changed Joni's password to when you signed in as her in the prior task. Select **Sign in**. 
 
-19. In the **All services** window, enter **priv** in the **Filter services** search box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
+19. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
-20. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the left-hand navigation pane, select **My roles**.
+20. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. Select **More services** (with the forward arrow icon). This opens the **All services** window.
 
-21.  In the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed by default. Select the **Active assignments** tab. Note the Intune Administrator role is now activated for Joni. 
+21. In the **All services** window, enter **priv** in the **Filter services** search box at the top of the page. In the list of search results, select **Microsoft Entra Privileged Identity Management**.
 
-22. Close the InPrivate browser session.
+22. In the **Privileged Identity Management | Quick start** window, in the **Tasks** section in the navigation pane, select **My roles**.
 
-23. Leave your Edge browser and all tabs open. 
+23.  In the **My roles | Microsoft Entra roles** window, the **Eligible assignments** tab is displayed by default. Select the **Active assignments** tab. Note the Intune Administrator role is now activated for Joni. 
+
+24. Close the InPrivate browser session.
+
+25. Leave your Edge browser and all tabs open. 
 
 
 ### Task 5 -  Verify a PIM notification was issued

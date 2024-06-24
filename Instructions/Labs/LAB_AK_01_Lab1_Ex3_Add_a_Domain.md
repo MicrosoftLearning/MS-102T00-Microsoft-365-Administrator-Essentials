@@ -1,6 +1,10 @@
 # Learning Path 1 - Lab 1 - Exercise 3 - Add a Custom Domain
 
-Not every company has just one domain; in fact, many companies have more than one domain. Adatum has just purchased a new domain (xxxUPNxxx.xxxCustomDomainxxx.xxx; the exact name of which is provided by your lab hosting provider) that resides in Microsoft Azure but not in Adatum's on-premises environment. To support Adatum’s new custom domain, your lab hosting provider took on the role of Adatum’s third-party domain registrar. 
+When a company purchases Microsoft 365, they are typically provided with a default domain name in the format of **companyname.onmicrosoft.com**. The "companyname" in companyname.onmicrosoft.com is a placeholder for the actual name of the company that purchases Microsoft 365. This default domain name is assigned by Microsoft during the sign-up process and is unique to the organization. It serves as an initial domain that can be used to access Microsoft 365 services immediately. 
+
+However, most companies expect to attach their business domain after purchasing Microsoft 365. This "business domain" refers to a custom domain name that the company already owns or purchases separately (such as contoso.com). Companies often prefer to use their business domain with Microsoft 365 services because it aligns with their branding and makes it easier for their users to remember their email addresses and other identifiers (for example, JamesR@contoso.com).
+
+Not every company has just one domain; in fact, many companies have more than one domain. In this lab scenario, Adatum has just purchased a new domain (xxxUPNxxx.xxxCustomDomainxxx.xxx; the exact name of which is provided by your lab hosting provider) that resides in Microsoft Azure but not in Adatum's on-premises environment. To support Adatum’s new custom domain, your lab hosting provider took on the role of Adatum’s third-party domain registrar. 
 
 In this exercise, you will gain experience adding this domain to Adatum' Microsoft 365 deployment. When you add a domain to Microsoft 365, it's called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). Adding a new domain is a three-step process:
 
@@ -8,7 +12,7 @@ In this exercise, you will gain experience adding this domain to Adatum' Microso
  - You must add the domain in Microsoft 365. 
  - When adding the new domain in Microsoft 365, you must also add the corresponding DNS records to the domain in DNS. These DNS records are necessary to support the services required by the company for the new domain. 
 
-Most companies do not personally manage their domains' DNS records themselves; instead, they have a third-party resource that manages these records for them. To assist in this effort, Microsoft 365 provides certain third-party domain registrars with an automation tool that automatically adds and replaces a company’s DNS records. The automation tool also federates the sign-in credentials for the third-party registrars and Microsoft 365. Using a tool to automatically maintain DNS records is a much-welcomed improvement from the days when companies had to manually maintain these records, which oftentimes introduced human error into a rather complicated process. Because these tools eliminate the need to manually add the DNS records, they eliminate human error from the process.
+**NOTE:** Most companies do not personally manage their domains' DNS records themselves; instead, they have a third-party resource that manages these records for them. To assist in this effort, Microsoft 365 provides certain third-party domain registrars with an automation tool that automatically adds and replaces a company’s DNS records. The automation tool also federates the sign-in credentials for the third-party registrars and Microsoft 365. Using a tool to automatically maintain DNS records is a much-welcomed improvement from the days when companies had to manually maintain these records, which oftentimes introduced human error into a rather complicated process. Because these tools eliminate the need to manually add the DNS records, they eliminate human error from the process.
 
 **However, for the purpose of this lab, you will be asked to manually create the necessary DNS records required by this new custom domain so that you gain experience and understanding of what the DNS records are about, and why they are required for a new domain.**
 
@@ -38,17 +42,17 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 9. In the **Sign in** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Select **Next**.
 
-10. In the **Enter password** window, enter the same **Microsoft 365 Tenant Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account) and then select **Sign in**. 
+10. In the **Enter password** window, enter the New Administrative Password that you assigned to Holly's account and then select **Sign in**. 
 
 11. In the **Stay signed in?** window, select **Don't show this again** and then select **Yes**. In the **Save password** window, select **Never**.
 
 12. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the right arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
-13. If a **Find more apps** window appears, select the **X** in the upper right-hand corner of the window to close it. 
+13. If a **Find more apps** or **Introducing Microsoft Feed** or any other introductory-type window appears, select the **X** in the top corner of the window to close it. 
 
 14. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is Holly's Microsoft 365 home page. In the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the Microsoft 365 admin center in a new browser tab. 
 
-15. In the **Microsoft 365 admin center**, in the left-hand navigation pane, select **...Show all**, select **Settings**, and then under the **Settings** group select **Domains**. 
+15. In the **Microsoft 365 admin center**, select **...Show all** in the navigation pane, select **Settings**, and then under the **Settings** group select **Domains**. 
 
 16. On the **Domains** page, note that in the list of domains, only the **xxxxxZZZZZZ.onmicrosoft.com** domain appears. The existing on-premises **adatum.com** domain does not appear in the list of Microsoft 365 domains. To add Adatum's new Microsoft 365 domain, select **+Add domain** in the menu bar that appears above the list of domains. This will start the **Add domain** setup wizard. 
 
@@ -64,9 +68,9 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 21. In **Server Manager Dashboard,** select **Tools** in the top right corner of the window. In the drop-down menu that appears, select **DNS**, which will open **DNS Manager**. Maximize the DNS Manager window.
 
-22. In the **DNS Manager** window, in the **File Explorer** section in the left-hand pane, select **LON-DC1** to expand it (if necessary). Under LON-DC1, expand the **Forward Lookup Zones** folder. In the list of Forward Lookup Zones in the left-hand pane, select the **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell. Make sure you select this zone in the left-hand pane and not in the right-hand detail pane.
+22. In the **DNS Manager** window, in the **File Explorer** section in the left-hand pane, select **LON-DC1** to expand it (if necessary). Under LON-DC1, expand the **Forward Lookup Zones** folder. In the list of Forward Lookup Zones in the side pane, select the **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell. Make sure you select this zone in the file tree in the side pane and not in the middle detail pane.
 
-23. Right-click on this **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously selected in the left-hand pane. In the menu that appears, select **Other New Records...** (Note: If you right-click on the zone in the right-hand detail pane, the **Other New Records...** option will be disabled).
+23. Right-click on this **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously selected in the side pane. In the menu that appears, select **Other New Records...** (Note: If you mistakenly right-click on the zone in the middle detail pane, the **Other New Records...** option will be disabled).
 
 24. In the **Resource Record Type** window that appears, in the **Select a resource record type** field, scroll down and select **Text (TXT),** and then select the **Create Record...** button at the bottom of the window.
 
@@ -74,7 +78,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 26. Select **OK** to create the record. 
 
-27. In the **Resource Record Type** window, select **Done**. Note how this Text (TXT) record appears in the right-hand detail pane for the xxxUPNxxx.xxxCustomDomainxxx.xxx domain that you previously created. <br/>
+27. In the **Resource Record Type** window, select **Done**. Note how this Text (TXT) record appears in the middle detail pane for the xxxUPNxxx.xxxCustomDomainxxx.xxx domain that you previously created. <br/>
 
 	Leave your **DNS Manager** window open but minimize it as you will return to it in a later step in this task.  Minimize the **Server Manager** window as well. 
 
@@ -108,7 +112,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 	
 	b. You must now switch to DNS Manager. On the taskbar at the bottom of the page, select the **DNS Manager** icon.
 
-	c. In **DNS Manager**, under **Forward Lookup Zones** in the left-hand pane, the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain should be selected from when you earlier left off. If not, select this zone now. You should see the **TXT** record that you created earlier. You must now create a **Mail Exchanger (MX)** record for this domain. Under **Forward Lookup Zones**, right-click the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain and select **New Mail Exchanger (MX)...**
+	c. In **DNS Manager**, under **Forward Lookup Zones** in the side pane, the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain should be selected from when you earlier left off. If not, select this zone now. You should see the **TXT** record that you created earlier. You must now create a **Mail Exchanger (MX)** record for this domain. Under **Forward Lookup Zones**, right-click the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain and select **New Mail Exchanger (MX)...**
 
 	d. In the **New Resource Record** window, in the **Mail Exchanger (MX)** tab, leave the **Host or child domain** field blank, but right-click in the **Fully qualified domain name (FQDN) of mail server** field and select **Paste** from the menu that appears. This will paste in the expected **Points to address or value** that you copied to the clipboard in **step a** above.
 	

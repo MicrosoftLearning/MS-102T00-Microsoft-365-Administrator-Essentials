@@ -31,9 +31,9 @@ Perform the following steps to assign Lynne Robbins the Compliance Data Administ
 
 2. On **LON-CL1**, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-3. If necessary, select the **Microsoft 365 admin center** tab in your browser. In the left-hand navigation pane, under the **Admin centers** group, select **Security**. This opens the Microsoft Defender portal in a new tab.
+3. If necessary, select the **Microsoft 365 admin center** tab in your browser. In the navigation pane, under the **Admin centers** group, select **Security**. This opens the Microsoft Defender portal in a new tab.
 
-4. In the **Microsoft Defender** portal, scroll down towards the bottom of the left-hand navigation pane and select **Permissions**.
+4. In the **Microsoft Defender** portal, scroll down towards the bottom of the navigation pane and select **System** to expand this section, and then select **Permissions**.
 
 5. On the **Permissions** page, there are four sections - Microsoft Defender XDR, Microsoft Entra ID, Email & collaboration roles, and Cloud Apps. Under the **Email & collaboration roles** section, select **Roles**. 
 
