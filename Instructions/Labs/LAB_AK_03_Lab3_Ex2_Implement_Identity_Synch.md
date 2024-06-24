@@ -250,11 +250,11 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 3. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**. 
 
-4. In the **Active teams and groups** window, the **Microsoft 365** tab is displayed by default. Select the **Security** tab. Verify the **Print Operators** group does NOT appear in the list of security groups. As mentioned previously, built-in security groups such as the **Print Operators** group are not synced from the on-premises AD to Azure AD, even when you add members to the group as you did in the earlier task.
+4. In the **Active teams and groups** window, the **Teams & Microsoft 365 groups** tab is displayed by default. Select the **Security groups** tab. Verify the **Print Operators** group does NOT appear in the list of security groups. As mentioned previously, built-in security groups such as the **Print Operators** group are not synced from the on-premises AD to Azure AD, even when you add members to the group as you did in the earlier task.
 
-5. Select the **Mail-enabled security** tab. Verify the **Manufacturing** group appears. This group appears as a mail-enabled security group rather than a standard security group because you added an email address (**manufacturing@adatum.com**) to the on-premises group in the prior task.  <br/>
+5. In the **Security groups** tab, verify the **Manufacturing** group appears. This group should have an email address displayed, which indicates that it's a mail-enabled security group rather than a standard security group. If you'll recall, you added an email address (**manufacturing@adatum.com**) to the **Manufacturing** group when you created it in a previous task.  <br/>
 
-	**Note:** You may need to wait up to 10 minutes before the **Manufacturing** group appears. Continue to refresh the list until you see the group.  
+	**Note:** You may need to wait up to 10 minutes or so before the **Manufacturing** group appears. Continue to refresh the list until you see the group, which validates that the synchronization process synchronized this on-premises group to Microsoft 365.  
 
 6. For the **Manufacturing** group, check the value displayed in the **Email** column. Verify the group email address was changed during directory synchronization from **manufacturing@adatum.com** to **manufacturing@xxxxxZZZZZZ.onmicrosoft.com**, which is the group's mailbox in Exchange Online. <br/>
 

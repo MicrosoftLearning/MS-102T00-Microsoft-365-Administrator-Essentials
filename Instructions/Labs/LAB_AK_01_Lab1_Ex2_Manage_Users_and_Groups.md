@@ -200,11 +200,11 @@ In this task, you will create three new groups that will be used in later labs. 
 
 22. After adding members to the Accounting group, you will be returned to the **Active teams and groups** window. Select the **Security groups** tab to display the list of security groups. As you can see from the menu bar, there are two types of security groups that you can create - a **security group** and a **mail-enabled security group**. In this task, you will create a security group; therefore, select the **+Add a security group** option on the menu bar. 
 
-23. On the **Set up the basics** page, enter the following information: <br/>
+23. On the **Set up the basics** page, enter the following information and then select **Next**: <br/>
 
 	- Name: **IT Admins**
 
-	- Description: **IT administrative personnel**, and then select **Next**.<br/>
+	- Description: **IT administrative personnel** <br/>
 
 	**Note:** There is no owner, email address, or privacy setting for Security groups. Members must be added to a Security group after creating the group, which you will do in the next few steps. 
 
