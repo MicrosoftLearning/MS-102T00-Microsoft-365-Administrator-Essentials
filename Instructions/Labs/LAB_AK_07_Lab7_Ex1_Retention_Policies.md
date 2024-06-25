@@ -1,4 +1,4 @@
-# Learning Path 7 - Lab 7 - Exercise 2 - Configure In-place Archiving and Retention Policies  
+# Learning Path 7 - Lab 7 - Exercise 1 - Configure In-place Archiving and Retention Policies  
 
 In this exercise, you will use the the Microsoft Exchange admin center to enable In-place archiving for Holly Dickson's mailbox. You will then configure two retention policies through the Microsoft Purview portal. 
 
@@ -119,5 +119,5 @@ Holly has concluded her testing of email retention on Joni and Lynne's mailboxes
 
 You have now created a new retention policy in the Microsoft Purview portal that retains all Exchange emails from all mailboxes for 5 years after the last modification.
 
- # Proceed to Lab 7 - Exercise 3
+ # End of Lab 7 
  
