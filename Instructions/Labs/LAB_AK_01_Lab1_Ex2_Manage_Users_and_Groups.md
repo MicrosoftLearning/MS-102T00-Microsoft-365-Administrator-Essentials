@@ -45,7 +45,7 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 	
 	- Clear (uncheck) the **Automatically create a password** check box, which will display a new field for entering an administrator-defined password.
 
-	- Enter the New Administrative Password in the **Password** field that appears 
+	- Enter the New Administrative Password in the **Password** field that appears (this is the **New Administrative Password** that you were asked to create at the start of Lab 1, Exercise 1)
 
 	- Clear (uncheck) the **Require this user to change their password when they first sign in** check box 
 
@@ -73,7 +73,7 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 
 16. On the **Review and finish** window, review your selections. If anything must be changed, select the appropriate **Edit** link and make the necessary changes. Otherwise, if everything is correct, select **Finish adding**. 
 
-17. On the **Holly Dickson added to active users** page, under the **User details** section, select the **Show** option to verify Holly's password is the same **Administrative Password** provided by your lab hosting provider for the tenant admin account (i.e. the MOD Administrator account).  <br/>
+17. On the **Holly Dickson added to active users** page, under the **User details** section, select the **Show** option to verify Holly's password is the same **New Administrative Password** that you were asked to create at the start of Lab 1, Exercise 1.  <br/>
 
 	**Note:** If you accidentally entered a different password, then once you return to the **Active Users** page, you will need to select the **Reset a password** icon (the key icon that appears when you hover over Holly's account) to change her password to the correct value.
 
