@@ -110,7 +110,9 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 		- User access to content expires
 		- Allow offline access
 
-	It's a common deployment strategy to initially configure sensitivity labels to not apply encryption, and then later edit some of the existing labels to apply encryption. This is the approach that Holly wants to take, so select the **Remove access control settings if already applied to items** option and then select **Next**.
+	**Note:** It's a common deployment strategy to initially configure sensitivity labels to not apply encryption, and then later edit some of the existing labels to apply encryption. This is the approach that Holly wants to take. <br/>
+
+	As such, select the **Remove access control settings if already applied to items** option and then select **Next**.
 
 9. On the **Content marking** page, set the **Content marking** toggle switch to **On**. This displays three options that enable you to customize how you want to mark files and emails. <br/>
 
