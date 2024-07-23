@@ -102,7 +102,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
    Holly wants to configure encryption settings, so on the **Choose protection settings for the types of items you selected** page, select the **Control access** check box. Also select the **Apply content marking** check box so that you can later configure header, footer, and watermark settings. Select **Next**.
 
-8. On the **Access control** page, you can configure how this sensitivity label applies encryption. You can choose to either:  <br/>
+8. Because you selected the **Control access** option on the prior page, the **Access control** page now appears. This page enables you to configure how the label applies encryption. You can choose to either:  <br/>
 
 	- **Remove access control settings if already applied to items:** When you select this option, applying the label removes existing encryption, even if it was applied independently from a sensitivity label. It's important to understand that thi setting can result in a sensitivity label that users might not be able to apply when they don't have sufficient permissions to remove the existing encryption.  
 	- **Configure access control settings:** This option turns on encryption with rights management. It also makes the following settings visible: <br/>
