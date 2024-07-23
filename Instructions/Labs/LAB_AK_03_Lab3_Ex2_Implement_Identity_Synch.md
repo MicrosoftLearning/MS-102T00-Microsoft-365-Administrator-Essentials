@@ -268,11 +268,11 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	a. Type the following command and press Enter (If you receive a message asking whether you want to install this module from an untrusted repository, enter **A** for **Yess to All**; do the same for the next command as well):  <br/>
 
-		Install-Module Microsoft.Graph.Groups -Scope CurrentUser  <br/>
+		Install-Module Microsoft.Graph.Groups -Scope CurrentUser
 
-	b. At the command prompt, type the following command and press Enter:  <br/>
+	b. At the command prompt, type the following command and press Enter: <br/>
 
-		Install-Module Microsoft.Graph.Users -Scope CurrentUser  <br/>
+		Install-Module Microsoft.Graph.Users -Scope CurrentUser
 
 10. Now that you have installed the Groups and Users sub-modules, you must import each of them in order to import their respective cmdlets into your PowerShell session. To do so, you must run the following two commands: <br/>
 
