@@ -114,7 +114,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 	As such, select the **Remove access control settings if already applied to items** option and then select **Next**.
 
-9. On the **Content marking** page, set the **Content marking** toggle switch to **On**. This displays three options that enable you to customize how you want to mark files and emails. <br/>
+9. Because you selected the **Apply content marking*** option on the earlier page, the **Content marking** page now appears. Set the **Content marking** toggle switch to **On**. This displays three options that enable you to customize how you want to mark files and emails. <br/>
 
 	Select all three check boxes. Under each setting, select **Customize text**. This opens a pane to customize that particular setting. Enter the following information in the **Customize** pane for each option (select **Save** after entering the settings for each option): <br/>
 
