@@ -98,7 +98,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 	- Can be decrypted only by users authorized by the label's encryption settings.
 	- Remains encrypted no matter where it resides (inside or outside your organization), even if the file is renamed.
-	- Is encrypted both at rest (for examplem, in a OneDrive account) and in transit (for example, email as it travels across the internet).
+	- Is encrypted both at rest (for example, in a OneDrive account) and in transit (for example, email as it travels across the internet).
 
    Holly wants to configure encryption settings, so on the **Choose protection settings for the types of items you selected** page, select the **Control access** check box. Also select the **Apply content marking** check box so that you can later configure header, footer, and watermark settings. Select **Next**.
 
@@ -144,7 +144,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 14. In the **Sensitive info types** window, hover your mouse to the left of the **Name** column heading. Select the check box that appears, which automatically selects all the sensitive information types. Select **Add**, which will add all these sensitive information types to your label.
 
-15. On the **Auto-labeling for files and emails** page, all of the sensitive information types that you selected will be displayed. Scroll to the bottom on the window and update the following settings:
+15. On the **Auto-labeling for files and emails** page, all the sensitive information types that you selected will be displayed. Scroll to the bottom on the window and update the following settings:
 
 	- When content matches these conditions: select **Automatically apply the Label**
 
