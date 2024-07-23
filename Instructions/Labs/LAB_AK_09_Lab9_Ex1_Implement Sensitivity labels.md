@@ -61,7 +61,7 @@ You will first enable sensitivity labels for Office online files that are stored
 
 7. On the **Auto-labeling** page, you should see a **Protect PDFs with Auto-labeling** banner in the middle of the page. Select the **Protect PDFs with Auto-labeling** heading to turn on PDF protection for files in SharePoint and OneDrive. 
 
-8. In the **Auto-labeling** dialog box that appears, select **Confirm** to confirm that you want to turn on PDF protection for files in SharePoint and OneDrive. 
+8. In the **Auto-labeling policies** dialog box that appears, select **Confirm** to confirm that you want to turn on PDF protection for files in SharePoint and OneDrive. 
 
 	**Note:** The command runs immediately and when the page is next refreshed, you no longer see the **Protect PDFs with Auto-labeling** banner.
 
@@ -94,9 +94,9 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 6. On the **Define the scope for this label** page, verify the **Items** check box is selected (select it now if necessary) and then select **Next**.
 
-7. On the **Choose protection settings for labeled items** page, select both check boxes for **Apply or remove encryption** and **Apply content marking**, and then select **Next**.
+7. On the **Choose protection settings for the types of items you selected** page, select both check boxes for **Control access** and **Apply content marking**, and then select **Next**.
 
-8. On the **Encryption** page, you will define who can access items that have this label applied. Select the **Remove encryption if the file or email or calendar event is encrypted** option and then select **Next**.
+8. On the **Access control** page, you will define who can access items that have this label applied. Select the **Remove access control settings if already applied to items** option and then select **Next**.
 
 9. On the **Content marking** page, set the **Content marking** toggle switch to **On**. This displays three options that enable you to customize how you want to mark files and emails. <br/>
 
