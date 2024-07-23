@@ -92,11 +92,25 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 5. Select **Next**.
 
-6. On the **Define the scope for this label** page, verify the **Items** check box is selected (select it now if necessary) and then select **Next**.
+6. On the **Define the scope for this label** page, verify the **Items** check box is selected, as well as the **Files**, **Emails**, and **Meetings** check boxes below it (select all four of these check boxes now, if necessary). These check boxes allow you to define where this sensitivity label will be used so that you can configure the applicable protection settings. Select **Next**.
 
-7. On the **Choose protection settings for the types of items you selected** page, select both check boxes for **Control access** and **Apply content marking**, and then select **Next**.
+7. On the **Choose protection settings for the types of items you selected** page, you can begin the process of using encryption settings to restrict access to content that the label will be applied to. When a document, email, or meeting invitation is encrypted, access to content is restricted, so that it:  <br/>
 
-8. On the **Access control** page, you will define who can access items that have this label applied. Select the **Remove access control settings if already applied to items** option and then select **Next**.
+	- Can be decrypted only by users authorized by the label's encryption settings.
+	- Remains encrypted no matter where it resides (inside or outside your organization), even if the file is renamed.
+	- Is encrypted both at rest (for examplem, in a OneDrive account) and in transit (for example, email as it travels across the internet).
+
+   Holly wants to configure encryption settings, so on the **Choose protection settings for the types of items you selected** page, select the **Control access** check box. Also select the **Apply content marking** check box so that you can later configure header, footer, and watermark settings. Select **Next**.
+
+8. On the **Access control** page, you can configure how this sensitivity label applies encryption. You can choose to either:  <br/>
+
+	- **Remove access control settings if already applied to items:** When you select this option, applying the label removes existing encryption, even if it was applied independently from a sensitivity label. It's important to understand that thi setting can result in a sensitivity label that users might not be able to apply when they don't have sufficient permissions to remove the existing encryption.  
+	- **Configure access control settings:** This option turns on encryption with rights management. It also makes the following settings visible: <br/>
+ 		- Assign permissions now or let users decide?
+		- User access to content expires
+		- Allow offline access
+
+	It's a common deployment strategy to initially configure sensitivity labels to not apply encryption, and then later edit some of the existing labels to apply encryption. This is the approach that Holly wants to take, so select the **Remove access control settings if already applied to items** option and then select **Next**.
 
 9. On the **Content marking** page, set the **Content marking** toggle switch to **On**. This displays three options that enable you to customize how you want to mark files and emails. <br/>
 
