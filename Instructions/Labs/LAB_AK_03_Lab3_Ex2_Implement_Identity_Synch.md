@@ -274,15 +274,9 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 		Install-Module Microsoft.Graph.Users -Scope CurrentUser
 
-10. Now that you have installed the Groups and Users sub-modules, you must import each of them in order to import their respective cmdlets into your PowerShell session. To do so, you must run the following two commands: <br/>
+10. If you want, you can verify the installation using the following two command: <br/>
 
-	a. Type the following command and press Enter:  <br/>
-
-		Import-Module Microsoft.Graph.Groups
-
-	a. Then type the following command and press Enter:  <br/>
-
-		Import-Module Microsoft.Graph.Users
+		Get-InstalledModule
 
 11. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the Groups and Users cmdlets that were just imported. To complete this task, you only need 'Read only' permissions for these two sub-modules. Type the following command and then press Enter: <br/>
 		
