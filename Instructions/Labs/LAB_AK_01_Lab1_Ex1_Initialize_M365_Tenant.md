@@ -65,7 +65,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 11. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the forward arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
 
-12. If a **Find more apps** dialog box or a **Create with Microsoft 365** dialog box appears, select the **X** in the top corner of the boxes to close them. Similarly, if a Sing in to Microsoft Edge dialog box appears, select the **No thanks** button.
+12. If a **Find more apps** dialog box or a **Create with Microsoft 365** dialog box appears, select the **X** in the top corner of the boxes to close them. Similarly, if a Sign in to Microsoft Edge dialog box appears, select the **No thanks** button.
 
 13. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is the MOD Administrator's Microsoft 365 home page. <br/>
 
