@@ -99,6 +99,8 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 18. Select **Save**.
 
+	**Note:** When you attempt to save your org profile changes, you may receive an error statement that says: "Object reference not set to an instance of an object." This error appears intermittently for no known reason. We are troubleshooting it to try and resolve the issue. In the meantime, if you receive this message, simply continue on with the lab. Not being able to save the org profile changes that you made will not affect any future lab steps.
+
 19. At the top of the **Organization information** pane, note the message indicating the changes have been saved. Select the **X** in the top corner of the pane to close it.
 
 20. Back on the **Organization profile** tab, in the list of organization profile data, select **Release preferences**.  <br/>
