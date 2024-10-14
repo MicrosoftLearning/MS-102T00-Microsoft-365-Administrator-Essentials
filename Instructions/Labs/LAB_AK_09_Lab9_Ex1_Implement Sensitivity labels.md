@@ -12,7 +12,7 @@ To implement Sensitivity labels as part of your pilot project at Adatum, you mus
 
 1. At the end of the prior lab, you were on LON-CL2. Switch to **LON-CL1**.  <br/>
 
-	You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
+	You should still be logged into LON-CL1 as the **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
 2. In **Microsoft Edge**, open a new tab and enter (or copy and paste) the following URL in the address bar: **https://www.microsoft.com/en-us/download/confirmation.aspx?id=53018** <br/>
 
@@ -22,7 +22,7 @@ To implement Sensitivity labels as part of your pilot project at Adatum, you mus
 
 4. The **Microsoft Azure Information Protection** wizard will open. If the wizard does not display on the desktop, select the icon for the wizard on the taskbar to display the wizard.
 
-5. In the wizard, on the **Install the **Microsoft Purview Information Protection client**** window that appears, select the **I acknowledge that the AIP Add-in for Office will be uninstalled (required)** check, and clear (uncheck) the **Help improve Microsoft Purview Information Protection by sending usage statistics to Microsoft** check box. Then select the **I agree** button.
+5. In the wizard, on the **Install the Microsoft Purview Information Protection client** window that appears, select the **I acknowledge that the AIP Add-in for Office will be uninstalled (required)** check, and clear (uncheck) the **Help improve Microsoft Purview Information Protection by sending usage statistics to Microsoft** check box. Then select the **I agree** button.
 
 6. Once the installation is complete, select **Close**.
 

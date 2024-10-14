@@ -38,7 +38,7 @@ In this task, you will send an email from Holly Dickson to Lynne Robbins that te
 
 8. Switch to **LON-CL2**. 
 
-9. If you need to sign into the VM, the local **administrator** account should appear by default, so enter **Pa55w.rd** in the **Password** field to log in. 
+9. If you need to sign into the VM, the local **LON-CL2\admin** account should appear by default, so enter **Pa55w.rd** in the **Password** field to log in. 
 
 10. On the taskbar, select the icon for the **Edge** browser.
 

@@ -14,10 +14,10 @@ As Adatum's Microsoft 365 administrator, you have been tasked with deploying Mic
 
 In your lab environment, your lab hosting provider has already obtained a Microsoft 365 trial tenant for you. Your lab provider has also created two admin accounts that you will use in your VM lab environment: 
 
-- A local administrator account for Adatum's on-premises environment (Adatum\Administrator).
+- An AD DS administrator account for Adatum's on-premises environment (Adatum\Administrator).
 - A default tenant admin account in Microsoft 365 (the display name for this user account is MOD Administrator). 
 
-You will log into the Client 1 PC (LON-CL1) using the local Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (MOD Administrator). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Azure Active Directory and for later labs using Information Rights Management, audit alerts, and Microsoft Graph PowerShell.
+You will log into the Client 1 PC (LON-CL1) using the Adatum\Administrator account. When you access Microsoft 365 for the first time, you will initially log in using the Microsoft 365 tenant admin account (MOD Administrator). You will then update Adatum's Microsoft 365 organizational profile, and you'll prepare your tenant for Microsoft Entra ID, and for later labs using Information Rights Management, audit alerts, and Microsoft Graph PowerShell.
 
 
 ### Task 1- Set up Adatum's Organization Profile
@@ -47,7 +47,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 3. When you open your lab hosting provider's Virtual Machine environment, you need to begin with the Client 1 VM (LON-CL1). If your VM environment opens with one of the other machines (such as LON-DC1), then switch to **LON-CL1** now.
 
-4. Log into **LON-CL1** as the local **Administrator** account that was created by your lab hosting provider with the password **Pa55w.rd**. 
+4. Log into **LON-CL1** as the **Administrator** account that was created by your lab hosting provider with the password **Pa55w.rd**. 
 
 5. On the taskbar at the bottom of your screen, select the **Microsoft Edge** icon. If necessary, maximize your browser window when it opens.
 
@@ -138,7 +138,7 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 
 **Important:** At the end of this task, you will attempt to save the custom theme that you created. There is a known platform issue in the Microsoft 365 admin center where sometimes it saves the custom theme just fine, and other times it returns a message that says "Sorry, we couldn't save your theme. Please try again later." If you receive this message, there's nothing you can do but move on. Trying to save the theme at a later time usually returns the same error. This issue won't affect any future labs, other than it won't display the user's name next to their user icon or initials on the heading line. Despite this known issue, we still want you to perform this task to gain experience in creating a theme, even though it may not get saved in your trial tenant.
 
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
+1. You should still be logged into LON-CL1 as the **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
 
 2. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
 
@@ -221,7 +221,7 @@ In this task, you will turn on Information Rights Management (IRM) for SharePoin
 
 **Important:** While you will validate IRM for Exchange and SharePoint in Lab 7, you must enable IRM for SharePoint Online now because it can take up to 60 minutes or more for IRM to show up in SharePoint Online. By the time you get to the validation exercise in Lab 7, IRM should have finished its internal configuration and you won’t have to wait for it to be present in SharePoint Online. Keep this time issue in mind if you plan to enable IRM in your real-world deployment.
 
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
+1. You should still be logged into LON-CL1 as the **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as the **MOD Administrator**. 
 
 2. In the **Microsoft 365 admin center**, under the **Admin centers** group, select **SharePoint**. This will open the **SharePoint admin center** in a new tab.
 
@@ -244,7 +244,7 @@ In this task, you will turn on Information Rights Management (IRM) for SharePoin
 
 Microsoft Graph PowerShell is required to perform several configuration tasks when installing Microsoft 365. Because future lab exercises will perform several of these tasks using Windows PowerShell, you should begin by installing the Microsoft Graph PowerShell module. This module allows you to perform many of the Microsoft 365 user and organization administration tasks through PowerShell. It’s great for bulk tasks such as password resets, password policies, license management and reporting, and so on.  
 
-1. On LON-CL1, you should still be logged in as the local **adatum\administrator** account. To install Microsoft Graph PowerShell, you must open an elevated instance of **Windows PowerShell**. Type **power** in the Search box that appears in the bottom corner of the taskbar. In the list of search results, right-click on **Windows PowerShell** (do not select Windows PowerShell ISE) and select **Run as administrator** in the drop-down menu that appears. 
+1. On LON-CL1, you should still be logged in as the **adatum\administrator** account. To install Microsoft Graph PowerShell, you must open an elevated instance of **Windows PowerShell**. Right-click the **Windows (Start)** icon in the lower left corner of the taskbar, and then select **Windows PowerShell (Admin)**.
 
 2. Maximize your PowerShell window. In **Windows PowerShell**, type the following command at the command prompt to install the Microsoft Graph PowerShell module from the PowerShell Gallery and then press Enter: <br/>
 
@@ -276,7 +276,7 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 6. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
-		Set-ExecutionPolicy unrestricted
+		Set-ExecutionPolicy RemoteSigned
 
 	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
@@ -286,7 +286,7 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 In Lab 6, you will create Alert Policies using the Microsoft Defender portal. However, before you can implement alerts, an administrator must first turn on Audit Logging for the organization. Since it can take an hour or so for audit logging to become fully enabled once you turn it on, you will turn it on in this lab so that it's fully enabled by the time you get to Lab 6.
 
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and you should still have Windows PowerShell open from the prior task. If you closed PowerShell at the end of the prior task, then open it again using the **Run as administrator** option. 
+1. You should still be logged into LON-CL1 as the **adatum\administrator** account, and you should still have Windows PowerShell open from the prior task. If you closed PowerShell at the end of the prior task, then open it again using the **Run as administrator** option. 
 
 2. In your PowerShell window, run the following command to install the Exchange Online Management module, which contains the cmdlet to turn on audit logging:
 

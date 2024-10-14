@@ -100,7 +100,7 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
     - Select the **Show the policy tip as a dialog for the end user before send (available for Exchange workload only)** checkbox. 
     
-    - In the **User overrides** section, select the **Allow overrides from M365 services** check box. This enables additional settings that indicate how overrides will be handled. Select each of the check boxes for the following two options:
+    - In the **User overrides** section, select the **Allow overrides from Microsoft 365 files and Microsoft Fabric items** check box. This enables additional settings that indicate how overrides will be handled. Select each of the check boxes for the following two options:
 
         - **Require a business justification to override**
         - **Override the rule automatically if they report it as a false positive**
@@ -115,7 +115,7 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
 17. On the **Review and finish** page, review the policy that you just created. If anything needs to be corrected, select the appropriate **Edit** option and make your corrections. When everything appears OK, select **Submit**.
 
-I8. It may take a minute or so for the **New policy created** page to appear. When it does, select **Done**.
+18. It may take a minute or so for the **New policy created** page to appear. When it does, select **Done**.
 
 19. Leave your Edge browser open. Do not close any of the tabs.
 
@@ -161,7 +161,7 @@ To turn off this setting, you must create a policy for Office apps in the Micros
 
 14. On the **Review configuration and create** page, select the **Create** button. 
 
-15. On the **Policy configuration created** page, selet **Done**.
+15. On the **Policy configuration created** page, select **Done**.
  
 16. Leave your Edge browser open. Do not close any of the tabs.
 

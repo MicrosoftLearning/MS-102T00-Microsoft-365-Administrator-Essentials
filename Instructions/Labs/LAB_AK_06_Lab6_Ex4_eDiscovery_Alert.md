@@ -58,30 +58,32 @@ To test this default alert, Holly Dickson will create an eDiscovery search. This
 
 3. In the **Microsoft 365 admin center**, in the navigation pane under the **Admin centers** group, select **Compliance**. This opens the Microsoft Purview portal in a new tab.
 
-4. In the **Microsoft Purview** portal, in the navigation pane, under the **Solutions** group, select **Content search**.
+4. In the **Welcome to the new Microsoft Purview portal** dialog, select the **Go to classic portal** link at the bottom. Then select the **Switch** button that corresponds to **Microsoft 365 compliance portal**.
 
-5. The **Content search** window has two tabs - a **Search** tab and an **Export** tab. The **Search** tab is displayed by default. Select the **+New search** option that appears on the menu bar. This initiates the **New search** wizard.
+5. In the **Microsoft Purview** portal, in the navigation pane, under the **Solutions** group, select **Content search**.
 
-6. In the **New search** wizard, on the **Name and description** page, enter **Confidential search** in the **Name** field and then select **Next**.
+6. The **Content search** window has two tabs - a **Search** tab and an **Export** tab. The **Search** tab is displayed by default. Select the **+New search** option that appears on the menu bar. This initiates the **New search** wizard.
 
-7. In the **Locations** page, the **Specific locations** option is selected by default. There are three groups of locations under this option, each of which can be turned On or Off through its respective toggle switch. Turn the toggle switch **On** for **Exchange mailboxes**, but leave the toggle switches **Off** for the other two locations. 
+7. In the **New search** wizard, on the **Name and description** page, enter **Confidential search** in the **Name** field and then select **Next**.
+
+8. In the **Locations** page, the **Specific locations** option is selected by default. There are three groups of locations under this option, each of which can be turned On or Off through its respective toggle switch. Turn the toggle switch **On** for **Exchange mailboxes**, but leave the toggle switches **Off** for the other two locations. 
 
 	**Note:** The **Included** setting is set to **All** by default. This value indicates that all mailboxes will be included in the search. In a real-world deployment, you can optionally select **Choose users, groups, or teams** to choose specific mailboxes if you wish. For this lab, leave the value set to **All** so that it searches all mailboxes.
 
 	**Warning:** At least one of the three locations must be set to **On**; otherwise, you will receive an error.  
 
-8. Select **Next**. <br/>
+9. Select **Next**. <br/>
 
-9. In the **Define your search conditions** page, enter **Confidential** in the **Enter keywords** field and then select **Next**.
+10. In the **Define your search conditions** page, enter **Confidential** in the **Enter keywords** field and then select **Next**.
 
-10. In the **Review your search and create it** page, review the settings and edit any (if necessary) to make any corrections. Once all the search settings are correct, select **Submit**. 
+11. In the **Review your search and create it** page, review the settings and edit any (if necessary) to make any corrections. Once all the search settings are correct, select **Submit**. 
 
-11. On the **New search created** page, select **Done**.
+12. On the **New search created** page, select **Done**.
 
-12. On the **Content search** page, scroll to the far-right side of the page. Note the **Status** of the **Confidential search** is **Starting**. The search that you created should only take a couple of minutes to complete. After a minute or two, select **Refresh** on the menu bar to verify the status changed to **Completed**.
+13. On the **Content search** page, scroll to the far-right side of the page. Note the **Status** of the **Confidential search** is **Starting**. The search that you created should only take a couple of minutes to complete. After a minute or two, select **Refresh** on the menu bar to verify the status changed to **Completed**.
 
 	**Note:** When you submit a new search, the system saves the search and then immediately runs it. By saving this eDiscovery search, the eDiscovery alert should be triggered, thereby creating an email notification that should be sent to the Inbox of all users with Tenant Admin permissions. It may take an additional 15 minutes for the email notification to be generated to validate this eDiscovery alert. Instead of waiting for this email to be generated, proceed to the next exercise. You will validate this alert email in Exercise 7, task 3 of this lab.
 	
-13.  Leave your browser open in LON-CL1 and do not close any of the tabs.
+14.  Leave your browser open in LON-CL1 and do not close any of the tabs.
     
 # Proceed to Lab 6 - Exercise 5

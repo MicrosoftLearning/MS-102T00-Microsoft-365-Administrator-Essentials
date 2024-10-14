@@ -110,48 +110,5 @@ In this task you will download and use the IdFix Directory Synchronization Error
 
 15. Leave your Edge browser open. However, you can close the **Step 2: Install Id-Fix - Microsoft - IdFix** tab since you are done using IdFix.
 
-
-### Task 4: Prepare for Directory Synchronization    
-
-The Microsoft Entra Connect synchronization service is a main component of Microsoft Entra Connect. It's responsible for processing all operations related to synchronizing identity data between your on-premises environment and Microsoft Entra ID. The sync service consists of an on-premises component (Microsoft Entra Connect sync) and a cloud service component (Microsoft Entra Connect Cloud Sync service). Deployments such as Adatum that implement Microsoft Exchange Online must use the Microsoft Entra Connect sync service.
-
-Before you can run Microsoft Entra Connect, you must first configure several settings that control the synchronization process, which you will do in this task. Once you have completed the preparation process, you will then run the Microsoft Entra Connect tool in the next exercise. 
-
-1. You should still be logged into **LON-DC1**. 
-
-2. You want to begin by adding several trusted sites for Microsoft Edge. If you're familiar doing this with Internet Explorer (IE), the process is basically the same for Edge; however, the location of the **Security** settings is different. With IE, you added trusted sites through IE's Internet Options; for Edge, you will add trusted sites through the Windows Control Panel. <br/>
-
-	Select the magnifying glass icon on the taskbar and then enter **control** in the Search box. 
-
-3. In the list of search results, select **Control Panel**.
-
-4. In the **Control Panel**, select **Network and Internet**.
-
-5. On the **Network and Internet** window, select **Internet Options**.
-
-6. This opens the **Internet Properties** window. Select the **Security** tab. 
-
-7. The **Internet** zone should be selected by default. Towards the bottom of the window, select the **Custom level...** button. 
-
-8. In the **Security Settings – Internet Zone** window, scroll down to the **Downloads** section. The first option in this section is **File download**. Verify the **File download** option is set to **Enable** and then select **OK**. 
-
-9. This takes you back to the **Internet Options** window. Select the **Trusted sites** zone.
-
-10. In the **Trusted Sites** zone, you must add several sites. Select the **Sites** button. 
-
-11. In the **Trusted sites** window, in the **Add this website to the zone** field, enter the following URL and then select **Add**: **https://outlook.office365.com/** 
-
-12. Repeat step 11 to add the following site: **https://outlook.office.com/**  
-
-13. Repeat step 11 to add the following site: **https://portal.office.com/**  
-
-14. Select **Close** once you have added these three sites.
-
-15. In the **Internet Options** window, select **OK** to close the window.
-
-16. Close the **Network and Internet** window.
-
-17. Proceed to the next exercise. You are now ready to install the Microsoft Entra Connect tool and enable directory synchronization. 
-
 # Proceed to Lab 3 - Exercise 2
  

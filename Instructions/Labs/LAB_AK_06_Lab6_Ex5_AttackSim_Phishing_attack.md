@@ -18,7 +18,7 @@ To use Microsoft's Attack simulation training feature to simulate a phishing att
 
 4. A **multi-factor authentication** window appears in a new Edge browser tab. The **users** tab is displayed by default. Note the MFA status for all existing user accounts is **Disabled**. The Conditional Access policy that you created earlier does NOT enable the MFA status for each individual user. Rather, that policy is dynamically applied at each user sign-in to determine whether MFA is required for the user who is signing in. If MFA is not applied to a user based on the policy, then the user's individual MFA status is checked on their account. <br>
 
-	Select the check box for **Holly Dickson**, and in Holly's properties pane that appears on the right, select **Enable** under the **quick steps** section.
+	Select the check box for **Holly Dickson** (the .onmicrosoft version), and in Holly's properties pane that appears on the right, select **Enable** under the **quick steps** section.
 
 5. On the **About enabling multi-factor auth** dialog box that appears, select the **enable multi-factor auth** button. When the **Updates successful** dialog box appears, select **close**.
 
@@ -42,7 +42,7 @@ To use Microsoft's Attack simulation training feature to simulate a phishing att
 
 14. On the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
 
-15. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
+15. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (use your country specific formatting). Verify the **Receive a code** option is selected and then select **Next**.
 
 16. Retrieve the verification code from the text message that is sent to your phone.
 

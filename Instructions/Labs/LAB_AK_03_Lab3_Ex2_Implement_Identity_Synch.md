@@ -10,7 +10,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 **IMPORTANT:** Azure Active Directory (Azure AD) has recently been rebranded to Microsoft Entra ID. As such, all Azure AD product features are in the process of being rebranded to Microsoft Entra. Since this rebranding effort is still on-going, some Azure AD features have not yet been rebranded to Microsoft Entra. For example, the original name of Microsoft Entra Connect Sync is Azure AD Connect. While the Microsoft Entra portal refers to this sync tool as Microsoft Entra Connect Sync, the installation wizard for this tool has not yet been rebranded. As of this writing, the wizard still refers to Azure AD Connect. Keep this in mind if you see Azure AD still referenced on Microsoft 365 pages, product names, or in this case, the Azure AD Connect installation wizard. Eventually, all Azure AD branding will be changed to Microsoft Entra. Microsoft World Wide Learning will strive to keep these lab instructions updated as the Microsoft 365 Engineering team continues its rebranding efforts.
 
-1. You should still be logged into **LON-DC1** as the local **adatum\administrator** from the prior task. 
+1. You should still be logged into **LON-DC1** as **adatum\administrator** from the prior task. 
 
 2. After finishing the earlier lab exercise in which you added Adatum's custom domain, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson.  
 
@@ -242,7 +242,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 **IMPORTANT - PowerShell notice:** This task employs basic PowerShell queries for Groups and Users, which are supported in Microsoft Graph PowerShell. Since Microsoft Graph PowerShell is replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, you will use Microsoft Graph PowerShell in this task.
 
-1. You should still be logged into LON-DC1 as the local **adatum\administrator** with a password of **Pa55w.rd.**
+1. You should still be logged into LON-DC1 as **adatum\administrator** with a password of **Pa55w.rd.**
 
 2. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In your **Edge** browser, if tabs are still open for the **Home | Microsoft 365** page and the **Active users - Microsoft 365 admin center**, then proceed to the next step. <br/>
 

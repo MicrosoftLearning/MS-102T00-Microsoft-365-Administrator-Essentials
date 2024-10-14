@@ -34,11 +34,11 @@ Holly also wants to update the notification settings for the Global admin role. 
 
     Switch back to **LON-CL1**. 
 
-2. On **LON-CL1**, you should still be logged into the machine as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
+2. On **LON-CL1**, you should still be logged into the machine as the domain **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
 3. In your browser, select the **Microsoft 365 admin center** tab. In the navigation pane under the **Admin centers** section, select **Identity**.
 
-4. If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick and account** window, select Holly's account, and in the **Enter password** window, enter the New Administrative Password that you assigned to Holly's account. 
+4. If a **Sign in to Microsoft Entra** tab opens in your browser displaying the **Pick an account** window, select Holly's account, and in the **Enter password** window, enter the New Administrative Password that you assigned to Holly's account. 
 
 5. On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
 
@@ -176,7 +176,7 @@ Now that the **PIM-Global-Administrators** group has been made eligible for the 
 
 13. In the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
 
-14. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
+14. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (use your country specific formatting). Verify the **Receive a code** option is selected and then select **Next**.
 
 15. Retrieve the verification code from the text message that is sent to your phone.
 

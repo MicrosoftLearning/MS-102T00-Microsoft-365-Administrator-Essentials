@@ -251,17 +251,11 @@ In this task, you will recover the Inside Sales group, which was a Microsoft 365
 
 However, to expand your administrator skills, you will instead restore the deleted Inside Sales group using Windows PowerShell; in this case, using Microsoft Graph PowerShell, which you should have installed in the first lab in this course. This will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.  
 
-**NOTE - Microsoft Graph PowerShell:** If you'll recall, in the first lab exercise for this course, you installed Microsoft Graph PowerShell. However, you did not import any of its 30+ sub-modules. You were told at the time that only 3 modules will be used in the labs for this training course, so you would install each sub-module individually as they were needed. For this lab exercise, you will import the **Microsoft.Graph.Identity.DirectoryManagement** sub-module and the **Microsoft.Graph.Groups** sub-module. You will then connect to these sub-modules with the appropriate Read/Write permissions that are needed to view and recover a deleted group. 
+**NOTE - Microsoft Graph PowerShell:** If you'll recall, in the first lab exercise for this course, you installed Microsoft Graph PowerShell. You will then connect to Microsoft Graph with the appropriate Read/Write permissions that are needed to view and recover a deleted group. 
 
 1. On LON-CL1, if Windows PowerShell is still open from the previous lab exercise, select the **Windows PowerShell** icon on the taskbar; otherwise, you must open an elevated instance of Windows PowerShell just as you did before. Maximize your PowerShell window.
 
-2. In the prior lab exercise, you installed Microsoft Graph PowerShell. You must now import both the **Microsoft.Graph.Groups** sub-module (which contains the cmdlets to view and maintain Microsoft groups) and the **Microsoft.Graph.Identity.DirectoryManagement** sub-module (which contains the cmdlets necessary to recover the deleted group). To do so, type the following commands and then press Enter:  <br/>
-
-		Import-Module Microsoft.Graph.Groups
-
-		Import-Module Microsoft.Graph.Identity.DirectoryManagement
-
-3. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the cmdlets that were just imported. Microsoft Graph PowerShell permissions are NOT pre-authorized. As such, you must perform a one-time, per-module request for permissions depending on your needs. <br/>
+2. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the cmdlets that were just imported. Microsoft Graph PowerShell permissions are NOT pre-authorized. As such, you must perform a one-time, per-module request for permissions depending on your needs. <br/>
 
 	- The 'Group.ReadWrite.All' scope is required to display the current list of active groups and restore the deleted group. <br/>
 	- The 'Directory.ReadWrite.All' scope provides permission to read and write data in Adatum's directory, such as users and groups, and restore the deleted group. <br/>
@@ -270,39 +264,39 @@ However, to expand your administrator skills, you will instead restore the delet
 		
 		Connect-MgGraph -Scopes 'Group.ReadWrite.All', 'Directory.ReadWrite.All'
 
-4. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). For the password, enter the New Administrative Password that you assigned to Holly's account. 
+3. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). For the password, enter the New Administrative Password that you assigned to Holly's account. 
 
-5. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
+4. On the **Permissions requested** dialog box that appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
-6. You will now use Microsoft Graph PowerShell to display the list of active groups. The Inside Sales group should not appear in this list. Type the following command and press Enter (Note: it may take a minute or so for the list of groups to appear):  <br/>
+5. You will now use Microsoft Graph PowerShell to display the list of active groups. The Inside Sales group should not appear in this list. Type the following command and press Enter (Note: it may take a minute or so for the list of groups to appear):  <br/>
 
 		Get-MgGroup
 
-7. To restore a deleted Microsoft 365 group in the next step, you need to specify the deleted group's object ID. To get the Inside Sales group's object ID, type the following command to display the list of Microsoft 365 groups that have been deleted:  <br/>
+6. To restore a deleted Microsoft 365 group in the next step, you need to specify the deleted group's object ID. To get the Inside Sales group's object ID, type the following command to display the list of Microsoft 365 groups that have been deleted:  <br/>
 	
 		Get-MgDirectoryDeletedItemAsGroup
 
-8. You should see the **Inside Sales** group in this list of deleted groups. You will now run the following **Restore-MgDirectoryDeletedItem** command to restore the group. When doing so, you must declare the group's object ID as the parameter next to "-DirectoryObjectId". To finish entering this command, you must highlight the object ID of the Inside Sales group from the list of deleted groups, copy the ID (Ctrl+C), and then paste that ID (Ctrl+V) into the command (for example: -DirectoryObjectId 'e76bbcdb-24c5-41a6-805d-b352976fd2a8').  <br/>
+7. You should see the **Inside Sales** group in this list of deleted groups. You will now run the following **Restore-MgDirectoryDeletedItem** command to restore the group. When doing so, you must declare the group's object ID as the parameter next to "-DirectoryObjectId". To finish entering this command, you must highlight the object ID of the Inside Sales group from the list of deleted groups, copy the ID (Ctrl+C), and then paste that ID (Ctrl+V) into the command (for example: -DirectoryObjectId 'e76bbcdb-24c5-41a6-805d-b352976fd2a8').  <br/>
 
 		Restore-MgDirectoryDeletedItem -DirectoryObjectId 'paste in the object ID for the Inside Sales group here'
 
-9. You should now verify the **Inside Sales** group has been recovered. While you can obviously do this in the **Microsoft 365 admin center**, since this task is working with PowerShell, let's verify the recovery using Microsoft Graph PowerShell. To do so, type the following command to get a list of the active groups, which should now include the Inside Sales Group:  <br/>
+8. You should now verify the **Inside Sales** group has been recovered. While you can obviously do this in the **Microsoft 365 admin center**, since this task is working with PowerShell, let's verify the recovery using Microsoft Graph PowerShell. To do so, type the following command to get a list of the active groups, which should now include the Inside Sales Group:  <br/>
 
 		Get-MgGroup
 
-10. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
+9. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
 
-11. You now want to verify that the recovery process correctly updated the group's membership. In your Edge browser, in the **Microsoft 365 admin center**, navigate to the **Active teams & groups** windows, select the **Teams & Microsoft 365 groups** tab if necessary, and then in the list of Microsoft 365 groups, select the **Inside Sales** group (select the name and not the check box). <br/>
+10. You now want to verify that the recovery process correctly updated the group's membership. In your Edge browser, in the **Microsoft 365 admin center**, navigate to the **Active teams & groups** windows, select the **Teams & Microsoft 365 groups** tab if necessary, and then in the list of Microsoft 365 groups, select the **Inside Sales** group (select the name and not the check box). <br/>
 
 	**Note:** If the Inside Sales group does not appear, wait a minute or two and then select **Refresh** on the menu bar above the list of groups.
 
-12. In the **Inside Sales** pane that appears, select the **Membership** tab. In the **Membership** tab, three sub-tabs (Owners, Members, and About membership and permissions) are displayed in the side column. The **Owners** sub-tab is displayed by default. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group.
+11. In the **Inside Sales** pane that appears, select the **Membership** tab. In the **Membership** tab, three sub-tabs (Owners, Members, and About membership and permissions) are displayed in the side column. The **Owners** sub-tab is displayed by default. **Allan Deyoung** and **Patti Fernandez** should appear as owners of the group.
 
-13. Select the **Members** sub-tab. **Diego Siciliani** and **Lynne Robbins** should appear as members of the group. You have just verified that the deleted group is now fully restored.
+12. Select the **Members** sub-tab. **Diego Siciliani** and **Lynne Robbins** should appear as members of the group. You have just verified that the deleted group is now fully restored.
 
-14. Close the **Inside Sales** window.
+13. Close the **Inside Sales** window.
 
-15. Remain logged into LON-CL1 and leave your browser tabs open so that they’re ready for the next task. 
+14. Remain logged into LON-CL1 and leave your browser tabs open so that they’re ready for the next task. 
 
 
 # Proceed to Lab 1 - Exercise 3
