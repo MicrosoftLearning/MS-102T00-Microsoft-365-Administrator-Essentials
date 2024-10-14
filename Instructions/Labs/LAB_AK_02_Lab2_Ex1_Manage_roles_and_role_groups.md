@@ -85,7 +85,7 @@ In the prior task, you assigned an administrator role directly to Diego Sicilian
 
 In this task, you will use Windows PowerShell to assign a role to a user account. Doing so will give you experience performing this management function in PowerShell, since some administrators prefer performing maintenance such as this using PowerShell.
 
-In this task, Holly wants to assign Patti Fernandez to the Service Support Administrator role. To add a user to an admin role using the Microsoft Graph PowerShell module, you must first obtain the object ID of the user and the object ID of the role. If the role has not yet been enabled (meaning that it hasn't been assigned to a user or it hasn't been physically enabled), then you must enable the role first before you can assign it to a user using PowerShell. In this task, you will enable the Service Support Administrator role first before assigning it to Patti Fernandez.
+In this task, Holly wants to assign Patti Fernandez to the Service Support Administrator role. To add a user to an admin role using the Microsoft Graph PowerShell module, you must first obtain the object ID of the user and the object ID of the role. In this task, you will use Microsoft Graph to obtain the respective IDs and then create the role assignment. 
 
 PowerShell also enables you to display all the users assigned to a specific role, which can be very important when auditing your Microsoft 365 deployment. In this task, you will also learn how to use PowerShell to display all the users assigned to a specific role.
 
