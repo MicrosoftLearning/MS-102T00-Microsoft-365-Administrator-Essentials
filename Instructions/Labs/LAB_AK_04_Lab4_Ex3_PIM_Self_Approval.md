@@ -15,7 +15,7 @@ In the prior lab exercise, Holly Dickson limited access to the Global admin role
 
 For this next test of PIM in Adatum's pilot project, Holly has selected Alex Wilber and Joni Sherman to be eligible for the Helpdesk admin role. However, to simplify future role assignments, Holly wants to create a security group, assign Alex and Joni to the group, and then assign the group to the Helpdesk admin role. Holly will then enable the group to be eligible for the Helpdesk admin role.
 
-1. You should still be logged into LON-CL1 as the local **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
+1. You should still be logged into LON-CL1 as the **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
 2. In your Edge browser, select the tab containing the **Microsoft Entra admin center**, which should still be open from the prior lab exercise. 
 

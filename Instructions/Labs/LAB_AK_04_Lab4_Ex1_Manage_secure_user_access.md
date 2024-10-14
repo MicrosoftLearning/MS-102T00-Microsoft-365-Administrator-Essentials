@@ -1,6 +1,6 @@
 # Learning Path 4 - Lab 4 - Exercise 1 - Manage secure user access 
 
-Holly has then been asked by Adatum’s CTO to deploy Microsoft Entra Multifactor Authentication (MFA), Pass-through Authentication (PTA), and Microsoft Entra Smart Lockout. These three features will help strengthen password management throughout the organization in preparation for Copilot for Microsoft 365. For PTA, you will deploy it using Microsoft Entra Cloud Sync. And for Smart Lockout, you will deploy it using Group Policy Management. 
+Holly has then been asked by Adatum’s CTO to deploy Microsoft Entra Multifactor Authentication (MFA), Pass-through Authentication (PTA), and Microsoft Entra Smart Lockout. These three features will help strengthen password management throughout the organization in preparation for Copilot for Microsoft 365. For PTA, you will deploy it using Microsoft Entra Connect Sync. And for Smart Lockout, you will deploy it using Group Policy Management. 
 
 For MFA, you will create a Conditional Access policy to deploy MFA for all of Adatum's users. You will then modify it to exclude Holly and the selected members of her Microsoft 365 pilot project team. That will save you from having to use MFA when signing in with them, as well as provide you with experience on how to exclude users in a Conditional Access policy. 
 
@@ -24,7 +24,7 @@ Adatum has directed Holly to enable MFA for all its Microsoft 365 users - both i
 
 5. On the **Conditional Access | Overview** page, select **Policies** in the middle navigation pane.
 
-6. On the **Conditional Access | Policies** page, on the menu bar at the top of the page, select **+New policy**.
+6. On the **Conditional Access | Policies** page, on the menu bar at the top of the page, select **+Create new policy**.
 
 7. On the **New Conditional Access policy** window, enter **MFA for all Microsoft 365 users** in the **Name** field.
 
@@ -95,7 +95,7 @@ To test the Conditional Access policy that you just created, you will sign-out o
 
 7. In the **Choose a different method** dialog box that appears, select the drop-down arrow in the **Which method would you like to use?** field, select **Phone**, and then select **Confirm**. 
 
-8. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (in the format **nnn-nnn-nnnn**). Verify the **Receive a code** option is selected and then select **Next**.
+8. In the **Phone** window that appears, under **What phone number would you like to use?** field, select your country or region, and then in the field next to it, enter your phone number (use your country specific formatting). Verify the **Receive a code** option is selected and then select **Next**.
 
 9. Retrieve the verification code from the text message that is sent to your phone.
 
@@ -113,7 +113,7 @@ To test the Conditional Access policy that you just created, you will sign-out o
 
 15. If a **Create with Microsoft 365** window appears, select the **X** to close it.
 
-16. On the **Welcome to Microsoft 365** page, select the **Word** icon that appears in the column of app icons on the left-side of the screen. This opens **Microsoft Word Online**. Doing so validates that you can access a Microsoft 365 app after signing in using MFA.  <br/>
+16. On the **Welcome to Microsoft 365** page, select the **App launcher** icon, then select **Word**. This opens **Microsoft Word Online**. Doing so validates that you can access a Microsoft 365 app after signing in using MFA.  <br/>
 
 	**Important:** You have now verified that the first part of the Conditional Access policy that you created works. The policy requires that a user who is not a member of the Microsoft 365 pilot project team must sign-in using MFA. You verified this works when you signed in as Adele. You will now sign out as Adele and sign back in as Holly, during which you will verify that the second part of the Conditional Access policy also works. You should NOT have to use MFA when signing in as Holly, since she's a member of the M365 pilot project group, which is excluded from the MFA requirement in the Conditional Access policy.
 
@@ -148,11 +148,11 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 2. On LON-DC1, select the **Start** button on the taskbar, and then in the **Start** menu, select the **All Apps** icon to display the list of all installed applications. Select the **Azure AD Connect** program group and then select **Azure AD Connect**. This will initiate the **Microsoft Azure Active Directory Connect** wizard.
 
-3. In the **Welcome to Azure AD Connect** window, you will receive a page indicating the synchronization service scheduler is suspended until this setup wizard is closed. This is because if you start the Azure AD Connect installation wizard (which you did in an earlier task), then the scheduler is temporarily suspended. Select **Configure.**
+3. In the **Welcome to Microsoft Entra Connect Sync** window, you will receive a page indicating the synchronization service scheduler is suspended until this setup wizard is closed. This is because if you start the Azure AD Connect installation wizard (which you did in an earlier task), then the scheduler is temporarily suspended. Select **Configure.**
 
-4. On the **Additional tasks** page, select the **Change user Sign-in** task and then select **Next**. 
+4. On the **Additional tasks** page, select the **Change user sign-in** task and then select **Next**. 
 
-5. On the **Connect to Azure AD** page, sign into Azure AD (Microsoft Entra ID). The **USERNAME** field is already filled with **Holly@xxxUPNxxx.onmicrosoft.com**. In the **PASSWORD** field, enter the New Administrative Password that you assigned to Holly's account, and then select **Next**.
+5. On the **Connect to Microsoft Entra ID** page, sign into Microsoft Entra ID. The **USERNAME** field is already filled with **Holly@xxxUPNxxx.onmicrosoft.com**. In the **PASSWORD** field, enter the New Administrative Password that you assigned to Holly's account, and then select **Next**.
 
 6. On the **User sign-in** page, under **Select the Sign On method**, select **Pass-through authentication** and then select **Next**. 
 
@@ -164,9 +164,9 @@ Pass-through Authentication allows users to sign-in to cloud-based services usin
 
 10. On the **Ready to configure** page, leave the check box selected for the **Start the synchronization process when configuration completes** option (if the check box is not selected, then select it now). Select **Configure**. It may take a minute or so for the configuration to complete.
 
-11. On the **Configuration complete** page, note the message indicating the current sign on method for Azure AD is PTA. Select **Exit**. Pass-Through Authentication has now been enabled. 
+11. On the **Configuration complete** page, note the message indicating the current sign on method for Microsoft Entra ID is PTA. Select **Exit**. Pass-through authentication has now been enabled. 
 
-12. To verify that Pass-Through Authentication is successfully enabled, select the **Microsoft 365 admin center** tab in your Edge browser. Under **Admin centers** in the navigation pane, select **Identity**.
+12. To verify that Pass-through authentication is successfully enabled, select the **Microsoft 365 admin center** tab in your Edge browser. Under **Admin centers** in the navigation pane, select **Identity**.
 
 13. This opens the **Microsoft Entra admin center**. Select **Show more** in the navigation pane, select **Hybrid management** to expand this group, and then select **Microsoft Entra Connect**. 
 

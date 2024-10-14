@@ -107,9 +107,9 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
     To do this, you must first switch to the Client 2 VM (**LON-CL2**). 
 
-19. At the end of Lab 2, you should have logged into LON-CL2 as the local **Administrator** account (lon-cl2\admin). <br/>
+19. At the end of Lab 2, you should have logged into LON-CL2 as the local **Admin** account (lon-cl2\admin). <br/>
 
-    If you didn't do this, and you're still logged in as Laura Atkins from the end of Lab 2, then select **Ctrl+Alt+Delete**, select **Switch user**, and then log in as the local **Administrator** with a password of **Pa55w.rd**.
+    If you didn't do this, and you're still logged in as Laura Atkins from the end of Lab 2, then select **Ctrl+Alt+Delete**, select **Switch user**, and then log in as **LON-CL2\Admin** with a password of **Pa55w.rd**.
 
 20. On **LON-CL2**, select the **Microsoft Edge** icon in the taskbar, maximize the window and then enter the following URL in the address bar: **https://outlook.office365.com**
 

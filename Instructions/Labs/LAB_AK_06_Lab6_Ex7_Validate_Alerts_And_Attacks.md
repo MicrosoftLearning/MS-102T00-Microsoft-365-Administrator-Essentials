@@ -11,7 +11,7 @@ For each of these exercises, it could take up to 15 minutes for the system to cr
 
 In Lab 6, Exercise 2, you configured an alert designed to notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum. You tested this alert by changing the FullAccess permission on Alex Wilber’s mailbox by granting Joni Sherman FullAccess to his mailbox. This activity should have triggered the alert policy that you created, which should have sent an alert notification email to Lynne Robbins’ mailbox. In this task, you will log into LON-CL2 as Lynne Robbins and verify whether she received this email. 
 
-1. ‎Switch to **LON-CL2**. On **LON-CL2**, you should be signed into the machine as the local **administrator** (lon-cl2\admin) account. Select the **Microsoft Edge** icon in the taskbar, maximize the window (if necessary), and then enter the following URL in the address bar: **https://outlook.office365.com**
+1. ‎Switch to **LON-CL2**. On **LON-CL2**, you should be signed into the machine as the local **Admin** (lon-cl2\admin) account. Select the **Microsoft Edge** icon in the taskbar, maximize the window (if necessary), and then enter the following URL in the address bar: **https://outlook.office365.com**
 
 2. In the **Pick an account** window, if Lynne Robbins account (**LynneR@xxxxxZZZZZZ.onmicrosoft.com**) appears in the user list, then select it now; otherwise, select **Use another account** and sign in as **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the New User Password** that you previously assigned to Lynne's account and select **Sign in**. 
 
@@ -90,7 +90,7 @@ In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which
 
 5. In your Edge browser, select the tab containing Holly's Outlook mailbox. Note the additional email that arrived in her Inbox from the **Security and Compliance Team**. When you configured the simulated spear phishing attack, one of the options you selected was to send a weekly Microsoft default training reminder notification to users.
 
-6. In your Edge browser, if you have the **Attack simulation training** tab open, then select it now. Otherwise, select the tab containing your Microsoft Defender portal, and in the navigation pane, select **Attck simulation training**.
+6. In your Edge browser, if you have the **Attack simulation training** tab open, then select it now. Otherwise, select the tab containing your Microsoft Defender portal, and in the navigation pane, select **Attack simulation training**.
 
 7.  On the **Attack simulation training** page, select the **PhishingTest1** simulation to view the diagnostic results that were captured for this simulation.
 

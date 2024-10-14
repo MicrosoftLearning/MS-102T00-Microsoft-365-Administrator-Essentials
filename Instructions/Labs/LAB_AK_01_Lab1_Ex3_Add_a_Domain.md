@@ -24,7 +24,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 	Switch to **LON-DC1**.
 
-2. On **LON-DC1**, you must select **Ctrl+Alt+Delete** to log in (your instructor will guide you on how to find this option in your VM environment). Log into LON-DC1 as the local Adatum administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**. 
+2. On **LON-DC1**, you must select **Ctrl+Alt+Delete** to log in (your instructor will guide you on how to find this option in your VM environment). Log into LON-DC1 as the Adatum administrator account that was created by your lab hosting provider (**Administrator**) with the password **Pa55w.rd**. 
 
 3. On LON-DC1, **Server Manager** automatically starts at boot-up. Do not close it, as you will use it later in this task. For now, simply minimize the Server Manager window. 
 
