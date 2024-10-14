@@ -103,7 +103,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	**Important:** Before you perform this step, verify your PowerShell window is in full screen mode. The role name appears in the second column of the output. If you're not in full screen mode, you won't see the role name associated with each Object ID. 
 
-6. To assign a role in Microsoft Graph PowerShell, you must first locate its object ID. You need to know the object ID to enable the role from the template. There's two ways in which you can view the role templates - you can either display the entire list of role templates, or you can display the template for a specific role. As a learning experience, you will perform both methods so that you can see the difference. <br/>
+6. To assign a role in Microsoft Graph PowerShell, you must first locate its object ID. There's two ways in which you can view the role templates - you can either display the entire list of role templates, or you can display the template for a specific role. As a learning experience, you will perform both methods so that you can see the difference. <br/>
 
 	Let's start by displaying the complete list of role templates along with their object ID and display name. To do so, type in the following command and then press Enter: <br/>
 
