@@ -47,9 +47,9 @@ You will first enable sensitivity labels for Office online files that are stored
 
 4. You will begin by enabling sensitivity labels for Office online files that are stored in SharePoint and OneDrive. <br/>
 
-	In the **Microsoft Purview** portal, under the **Solutions** section in the navigation pane, select **Information protection**, and then select **Labels**.
+	In the **Microsoft Purview** portal, under the **Solutions** section in the navigation pane, select **Information protection**, and then select **Sensitivity labels**.
 
-5. On the **Labels** page, the following message should appear in the middle of the page: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
+5. On the **Sensitivity labels** page, the following message should appear in the middle of the page: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
 
 	Below this message is a **Turn on now** button. Select this button.  <br/>
 
@@ -74,9 +74,9 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, under the **Information protection** group in the navigation pane, select **Labels**. 
+2. In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, under the **Information protection** group in the navigation pane, select **Sensitivity labels**. 
 
-3. On the **Labels** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen. This initiates the **New sensitivity label** wizard.
+3. On the **Sensitivty labels** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen. This initiates the **New sensitivity label** wizard.
 
 4. In the **New sensitivity label** wizard, on the **Provide basic details for this label** page, enter the following information:
 

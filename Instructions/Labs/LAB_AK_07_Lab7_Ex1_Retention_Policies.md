@@ -56,7 +56,7 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 10. On the **Choose where to apply the policy** page, the **Exchange email** location should now indicate that **2 mailboxes** are included. <br/>
 
-	Since this policy will only apply to Exchange email for Joni and Lynne, set the **Status** toggle switch to **Off** for all other locations in which it's currently set to On (**SharePoint sites**, **OneDrive accounts**, and **Microsoft 365 Groups**). Select **Next**.
+	Since this policy will only apply to Exchange email for Joni and Lynne, set the **Status** toggle switch to **Off** for all other locations in which it's currently set to On (**SharePoint classic and communcation sites**, **OneDrive accounts**, and **Microsoft 365 Group mailboxes & sites**). Select **Next**.
 
 11. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
 
