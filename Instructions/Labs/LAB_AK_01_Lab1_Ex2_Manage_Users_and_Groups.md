@@ -188,7 +188,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 17. In the **Accounting** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
 
-18. In the **Membership** tab, four sub-tabs (Owners, Members, Site visitors, and About membership and permissions) are displayed in a side column. The **Owners** sub-tab is displayed by default. In the **Owners** sub-tab, Joni Sherman should appear as the only group owner. 
+18. In the **Membership** tab, three sub-tabs (Owners, Members, and About membership and permissions) are displayed in a side column. The **Owners** sub-tab is displayed by default. In the **Owners** sub-tab, Joni Sherman should appear as the only group owner. 
 
 19. Select the **Members** sub-tab. In the **Members** sub-tab, select the **Add members** button. 
 
