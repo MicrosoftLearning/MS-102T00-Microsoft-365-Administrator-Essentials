@@ -135,7 +135,7 @@ To turn off this setting, you must create a policy for Office apps in the Micros
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In your Edge browser, locate the **Microsoft 365 admin center** tab. In the Microsoft 365 admin center's navigation pane, under the **Admin centers** group, select **Endpoint Manager**.
+2. In your Edge browser, locate the **Microsoft 365 admin center** tab. In the Microsoft 365 admin center's navigation pane, under the **Admin centers** group, select **Microsoft Intune**.
 
 3. In the **Microsoft Intune admin center** that opens up in a new tab, select **Apps** in the navigation pane.
 
