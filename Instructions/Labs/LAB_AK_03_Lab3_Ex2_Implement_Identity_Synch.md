@@ -128,7 +128,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 ### Task 2 - Create Group Accounts to Test Synchronization  
 
-To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Azure AD Connect. You will create a new security group, and you will update the group members in an existing, built-in security group, all within Adatum’s on-premises environment. 
+To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Microsoft Entra Connect Sync. You will create a new security group, and you will update the group members in an existing, built-in security group, all within Adatum’s on-premises environment. 
 
 Each group will be assigned several members. After the forced synchronization, you will validate that you can see each security group in Microsoft 365 and that its members were synced up from the on-premises group to the cloud group. You will also validate the built-in security group was not created in Microsoft 365, even though you added members to it in Adatum's on-premises environment. 
 
