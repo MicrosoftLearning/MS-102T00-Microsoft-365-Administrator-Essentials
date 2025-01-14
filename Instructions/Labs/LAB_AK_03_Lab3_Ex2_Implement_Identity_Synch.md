@@ -70,7 +70,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 16. On the **Express Settings** page, read the instruction regarding a single Windows Server Active Directory forest and then select **Use express settings**.
 
-17. On the **Connect to Azure AD** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. <br/>
+17. On the **Connect to Microsoft Entra** page, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. <br/>
 
 	In the **PASSWORD** field, enter the New Administrative Password that you assigned to Holly's account, and then select **Next**.  <br/>
 
@@ -80,7 +80,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 19. In the **Microsoft Entra sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
 
-20. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
+20. On the **Ready to configure** page, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
 
 	**IMPORTANT:** While Holly eventually plans install an Exchange hybrid deployment, she will not do so now. For the purpose of this lab, do **NOT** select the **Exchange hybrid deployment** option. 
 
