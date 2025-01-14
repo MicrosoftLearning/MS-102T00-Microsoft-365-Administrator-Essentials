@@ -113,13 +113,13 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 	- In the **Export Statistics** pane on the left, note the number of on-premises users that were added to Azure Active Directory and the number that were updated. 
 	- In the **Export Errors** pane on the right, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). 
 
-		Select the first link (CN={xxxxxx...) under the **Export Errors** column that applies to the first **DataValidationFailed** error. This will display the first of these two users that were not synchronized by the Azure AD Connect tool. Review the error to see why this account is broken. **Tip:** In the **Connector Space Object Properties** window, select the **Export Error** tab. In the **Error Information** section, select the **Detail** button. Review the detailed error information, and then select **Close**. Select **Close** again. <br/>
+		Select the first link (CN={xxxxxx...) under the **Export Errors** column that applies to the first **DataValidationFailed** error. This will display the first of these two users that were not synchronized by the Microsoft Entra Connect Sync tool. Review the error to see why this account is broken. **Tip:** In the **Connector Space Object Properties** window, select the **Export Error** tab. In the **Error Information** section, select the **Detail** button. Review the detailed error information, and then select **Close**. Select **Close** again. <br/>
 
 		Select the second Data Validation error link and verify this error is for the second user that you purposely did not fix. Follow the same steps as before to review the error for this user.   <br/>
 
 	‎**IMPORTANT:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column in the top pane). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization** rather than a **Full Synchronization**.
 
-26. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
+26. Now that you have seen Microsoft Entra Connect Sync complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
 
 27. In your browser, close all tabs except for the **Home | Microsoft 365** tab and the **Active users - Microsoft 365 admin center** tab. 
 
@@ -189,7 +189,7 @@ Each group will be assigned several members. After the forced synchronization, y
  
 ### Task 3 - Change Group Membership to Test Synchronization  
 
-This task sets up another scenario for testing whether the sync process is working in Azure AD Connect (Microsoft Entra Connect Sync). In this task you will change the members of a group to see if they are reflected in the cloud once the group is synced. 
+This task sets up another scenario for testing whether the sync process is working in Microsoft Entra Connect Sync. In this task you will change the members of a group to see if they are reflected in the cloud once the group is synced. 
 
 1. This task continues from where the previous task left off in LON-DC1. In the **Active Directory Users and Computers** window, in the console tree under **Adatum.com**, the **Research** organizational unit is still selected. <br/>
 
@@ -211,18 +211,18 @@ This task sets up another scenario for testing whether the sync process is worki
   
 5. Leave LON-DC1 open as you will continue using it in the next task. <br/>
 
-	‎**Important:** You should perform the next task immediately after completing this one so that Azure AD Connect (Microsoft Entra Connect Sync) doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
+	‎**Important:** You should perform the next task immediately after completing this one so that Microsoft Entra Connect Sync doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
 
 
 ### Task 4 - Force a manual synchronization   
 
-In this task, you will force a sync between Adatum’s on-premises Active Directory and Microsoft Entra ID (formerly Azure AD) instead of waiting 30 minutes for Azure AD Connect (Microsoft Entra Connect Sync) to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
+In this task, you will force a sync between Adatum’s on-premises Active Directory and Microsoft Entra ID (formerly Azure AD) instead of waiting 30 minutes for Microsoft Entra Connect Sync to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
 
 **IMPORTANT - PowerShell notice:** The prior lab exercise provided a disclaimer indicating why the tasks in that exercise used the MSOnline module rather than Microsoft Graph PowerShell. While Microsoft is in the process of replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, with Microsoft Graph PowerShell, there is some functionality in the older modules that has not yet been incorporated into Microsoft Graph PowerShell. The commands in the prior exercise and the command used in this task fall into that category. The prior exercise connected to the MSOnline module, which is also used in this task per the Start-ADSyncSyncCycle command. 
 
 1. On LON-DC1, if the **Windows PowerShell** application is still open from the prior exercise, then **you MUST close it now**.  <br/>
 
-	‎**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Microsoft Azure AD Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open.  
+	‎**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Microsoft Entra Connect Sync setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open.  
 
 2. At this point, Windows PowerShell should NOT be open. You now want to reopen it. To open it, select the **magnifying glass (Search)** icon in the taskbar, type **power** in the Search box, and then in the menu, right-click on **Windows PowerShell** (not Windows PowerShell ISE) and select **Run as administrator**. Maximize the Windows PowerShell window once it opens.
 
@@ -241,7 +241,7 @@ In this task, you will force a sync between Adatum’s on-premises Active Direct
 
 ### Task 5 - Validate the Results of Directory Synchronization   
 
-In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises Active Directory to Microsoft Entra ID (Azure AD). You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
+In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises Active Directory to Microsoft Entra ID. You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
 
 **IMPORTANT - PowerShell notice:** This task employs basic PowerShell queries for Groups and Users, which are supported in Microsoft Graph PowerShell. Since Microsoft Graph PowerShell is replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, you will use Microsoft Graph PowerShell in this task.
 
