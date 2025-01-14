@@ -53,37 +53,40 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 10. Select **Next**. The wizard will deploy the recommended solution, **Microsoft Entra Connect Sync**. 
 
-11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
+11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center, where the system should automatically initiate the download of the Microsoft Entra Connect Sync installation program. 
 
-12. In the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Entra Connect** should appear. <br/>
+	If the download worked, then in the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Entra Connect** should appear. However, some tenants may experience an issue where this download request doesn't work, in which case the **Microsoft Download Center** window appears displaying the following error message: **"Were sorry, this download is no longer available.** This error has been reported to Microsoft Support and we're waiting on a fix. In the mean time, if you receive this error, then perform the following steps to manually download the Microsoft Entra Connect Sync installation program:
 
-	If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it's finished downloading. <br/>
+	- Enter the following URL in the address bar: **https://www.microsoft.com/en-ie/download/details.aspx?id=47594**
+	- This URL takes you to the Microsoft Download Center page for Microsoft Entra Connect. On the **Microsoft Entra Connect** page, select the **Download** button. 
+
+13. If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it's finished downloading. <br/>
 
 	However, if a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears to the right of the **Profile 1** icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AzureADConnect.msi** file, then select the **Open file** link that appears below it. However, if **AzureADConnect.msi**  does not appear in the **Downloads** window, then on the **Microsoft Download Center** page, select the **click here to download manually** hyperlink and then repeat this step to open the **AzureADConnect.msi** file.
 
-13. Opening the **AzureADConnect.msi** file initiates the installation of the Microsoft Azure Active Directory Connect Tool by starting the **Microsoft Azure Active Directory Connect** wizard. The first page of the wizard may appear and then suddenly disappear, or it may not appear at all. If either situation occurs, then select the wizard icon on the taskbar. 
+14. Opening the **AzureADConnect.msi** file starts the **Microsoft Entra Connect Sync** installation wizard. The first page of the wizard may appear and then suddenly disappear, or it may not appear at all. If either situation occurs, then select the wizard icon on the taskbar to display the setup wizard's UI. 
 
-14. On the **Welcome to Azure AD Connect** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
+15. On the **Welcome to Microsoft Entra Connect Sync** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
 
-15. On the **Express Settings** page, read the instruction regarding a single Windows Server Active Directory forest and then select **Use express settings**.
+16. On the **Express Settings** page, read the instruction regarding a single Windows Server Active Directory forest and then select **Use express settings**.
 
-16. On the **Connect to Azure AD** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. <br/>
+17. On the **Connect to Azure AD** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. <br/>
 
 	In the **PASSWORD** field, enter the New Administrative Password that you assigned to Holly's account, and then select **Next**.  <br/>
 
 	**Note:** If the **Next** button is not enabled, then tab off the **PASSWORD** field to enable it. 
 
-17. On the **Connect to AD DS** page, enter **Adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**  (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
+18. On the **Connect to AD DS** page, enter **Adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**  (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
 
-18. In the **Azure AD sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
+19. In the **Microsoft Entra sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
 
-19. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
+20. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
 
 	**IMPORTANT:** While Holly eventually plans install an Exchange hybrid deployment, she will not do so now. For the purpose of this lab, do **NOT** select the **Exchange hybrid deployment** option. 
 
-20. Wait for the configuration to complete (which may take several minutes). On the **Configuration complete** page, select **Exit**. 
+21. Wait for the configuration to complete (which may take several minutes). On the **Configuration complete** page, select **Exit**. 
 
-21. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Azure AD Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. <br/>
+22. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Azure AD Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. <br/>
 
 	**Note:** If you selected **Azure AD Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step (step 22). However, if **Azure AD Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. <br/>
 
@@ -101,11 +104,11 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 	Then select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select **Azure AD Connect** to expand the group (this time it should expand), and then select **Synchronization Service**.  
 
-22. Maximize the **Synchronization Service Manager on LON-DC1** window. The **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process, which automatically started when you selected this program. 
+23. Maximize the **Synchronization Service Manager on LON-DC1** window. The **Operations** tab at the top of the screen is displayed by default so that you can monitor the synchronization process, which automatically started when you selected this program. 
 
-23. Wait for the **Export** profile to complete for **xxxxxZZZZZZ.onmicrosoft.com - AAD**. When it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select this row.  
+24. Wait for the **Export** profile to complete for **xxxxxZZZZZZ.onmicrosoft.com - AAD**. When it finishes, its **Status** should be **completed-export-errors**. Once it's complete and you see this status, select this row.  
 
-24. In the bottom portion of the screen, a detail pane appears showing the detailed information for this selected operation. 
+25. In the bottom portion of the screen, a detail pane appears showing the detailed information for this selected operation. 
 
 	- In the **Export Statistics** pane on the left, note the number of on-premises users that were added to Azure Active Directory and the number that were updated. 
 	- In the **Export Errors** pane on the right, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). 
@@ -116,11 +119,11 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 	‎**IMPORTANT:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column in the top pane). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization** rather than a **Full Synchronization**.
 
-25. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
+26. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
 
-26. In your browser, close all tabs except for the **Home | Microsoft 365** tab and the **Active users - Microsoft 365 admin center** tab. 
+27. In your browser, close all tabs except for the **Home | Microsoft 365** tab and the **Active users - Microsoft 365 admin center** tab. 
 
-27. Leave LON-DC1 open as it will be used in the next exercise.
+28. Leave LON-DC1 open as it will be used in the next exercise.
 
 
 ### Task 2 - Create Group Accounts to Test Synchronization  
