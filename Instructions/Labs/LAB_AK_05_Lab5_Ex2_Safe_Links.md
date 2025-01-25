@@ -14,7 +14,7 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 3. In the **Microsoft Defender** portal, you should still be on the **Safe attachments** page after completing the previous task. In the navigation thread at the top of the page (**Policies & rules > Threat policies > Safe attachments**), select **Threat policies**. <br/>
 
-    **NOTE:** If you had closed the **Safe Attachments** tab after the prior task, then navigate to the **Threat policies** page by selecting **Policies & rules** in the navigation pane, and then selecting **Threat policies**.
+    **NOTE:** If you had closed the **Safe Attachments** tab after the prior task, then navigate to the **Threat policies** page by selecting **Email & collaboration > Policies & rules** in the navigation pane, and then selecting **Threat policies**.
 
 4. In the **Threat policies** window, under the **Policies** section, select **Safe Links**. 
 
