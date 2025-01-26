@@ -10,7 +10,7 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open. If the home page isn't open, then navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and where the password is the New Administrative Password that you assigned to her account.
 
-3. In the **Welcome to Microsoft 365** page, select the **Outlook** icon in the column of app icons on the left. 
+3. In the **Welcome to Microsoft 365** page, select **Apps**. On the **Apps** page, close the **Welcome to Apps** window by selecting the **X** in the upper-right corner of the window. In the row of app tiles, select **Outlook**. 
 
 4. If you're automatically signed into Outlook using Holly's account, then proceed to the next step. However, if a **Pick an account** window appears, select Holly's account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZis the tenant prefix provided by your lab hosting provider). <br/>
 
