@@ -53,28 +53,23 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 10. Select **Next**. The wizard will deploy the recommended solution, **Microsoft Entra Connect Sync**. 
 
-11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center, where the system should automatically initiate the download of the Microsoft Entra Connect Sync installation program. 
+11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center, where the system should display the **Microsoft Entra Connect** download page.
 
-	If the download worked, then in the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Entra Connect** should appear. However, some tenants may experience an issue where this download request doesn't work, in which case the **Microsoft Download Center** window appears displaying the following error message: **Were sorry, this download is no longer available.** This error has been reported to Microsoft Support and we're waiting on a fix. In the mean time, if you receive this error, then perform the following steps to manually download the Microsoft Entra Connect Sync installation program:
+12. On the **Microsoft Entra Connect** download page, select the **Download** button. 
 
-	- Enter the following URL in the address bar: **https://www.microsoft.com/en-ie/download/details.aspx?id=47594**
-	- This URL takes you to the Microsoft Download Center page for Microsoft Entra Connect. On the **Microsoft Entra Connect** page, select the **Download** button. 
-
-13. If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it's finished downloading. <br/>
+13. If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it finishes downloading. <br/>
 
 	However, if a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears to the right of the **Profile 1** icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AzureADConnect.msi** file, then select the **Open file** link that appears below it. However, if **AzureADConnect.msi**  does not appear in the **Downloads** window, then on the **Microsoft Download Center** page, select the **click here to download manually** hyperlink and then repeat this step to open the **AzureADConnect.msi** file.
 
-14. Opening the **AzureADConnect.msi** file starts the **Microsoft Entra Connect Sync** installation wizard. The first page of the wizard may appear and then suddenly disappear, or it may not appear at all. If either situation occurs, then select the wizard icon on the taskbar to display the setup wizard's UI. 
+14. When you opened the **AzureADConnect.msi** file in the prior step, it should have started the **Microsoft Entra Connect Sync** installation wizard. The first page of the wizard may appear and then suddenly disappear, or it may not appear at all. If either situation occurs, then select the wizard icon on the taskbar to display the setup wizard's UI. 
 
 15. On the **Welcome to Microsoft Entra Connect Sync** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
 
 16. On the **Express Settings** page, read the instruction regarding a single Windows Server Active Directory forest and then select **Use express settings**.
 
-17. On the **Connect to Microsoft Entra** page, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field. <br/>
+17. On the **Connect to Microsoft Entra ID** page, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field, and then select **Next**.
 
-	In the **PASSWORD** field, enter the New Administrative Password that you assigned to Holly's account, and then select **Next**.  <br/>
-
-	**Note:** If the **Next** button is not enabled, then tab off the **PASSWORD** field to enable it. 
+18. In the **Sign in to your account** dialog box that appears, sign in as Holly, using the same username from the previous step and the New Administrative Password that you assigned to Holly's account, and then select **Sign in**.
 
 18. On the **Connect to AD DS** page, enter **Adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**  (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
 
@@ -82,7 +77,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 20. On the **Ready to configure** page, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
 
-	**IMPORTANT:** While Holly eventually plans install an Exchange hybrid deployment, she will not do so now. For the purpose of this lab, do **NOT** select the **Exchange hybrid deployment** option. 
+	**IMPORTANT:** While Holly eventually plans to install an Exchange hybrid deployment, she will not do so now. For the purpose of this lab, do **NOT** select the **Exchange hybrid deployment** option. 
 
 21. Wait for the configuration to complete (which may take several minutes). On the **Configuration complete** page, select **Exit**. 
 
@@ -267,49 +262,41 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 8. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **PowerShell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. Maximize your PowerShell window.
 
-9. You should begin by installing Microsoft Graph PowerShell. Earlier in this training, you installed Microsoft Graph PowerShell on LON-CL1. At that time, you installed all 30+ sub-modules by running the following command: Install-Module Microsoft.Graph (where Graph is the parent module that contains the 30+ sub-modules). While you could install all 30+ sub-modules on LON-DC1, you're only going to use the Groups and Users sub-modules in this task, which is the last task in this training that uses PowerShell on LON-DC1. Therefore, to reduce installation time, you'll run the following two commands that will install just those two sub-modules and none of the other 30+ sub-modules. This also provides you with experience in installing specific sub-modules rather than the entire complement of Graph sub-modules.   <br/>
+9. You should begin by installing the Groups and Users modules in Microsoft Graph PowerShell. Earlier in this training, you installed Microsoft Graph PowerShell on LON-CL1. At that time, you installed all 30+ sub-modules by running the following command: Install-Module Microsoft.Graph (where Graph is the parent module that contains the 30+ sub-modules). While you could install all 30+ sub-modules on LON-DC1, you're only going to use the Groups and Users sub-modules in this task, which is the last task in this training that uses PowerShell on LON-DC1. Therefore, to reduce installation time, you'll run the following two commands that will install just those two sub-modules and none of the other 30+ sub-modules. This also provides you with experience in installing specific sub-modules rather than the entire complement of Graph sub-modules.   <br/>
+
+	**Note:** In earlier versions of PowerShell (prior to PowerShell 7), once you installed a module using the Install-Module command, you then needed to import the module using the Import-Module command. Doing so imported the module into your current session. However, in the newer versions of PowerShell (PowerShell 7 and later), once you install a module, PowerShell automatically imports it into your current session when you use the module for the first time. This is part of PowerShell's default behavior to make things more seamless. Therefore, you no longer need to explicitly run the Import-Module command after installation. You can simply run Install-Module to install it, and once you call any cmdlet from the module, the module will automatically load into your session. However, if you're still using Windows PowerShell 5.1 or an earlier version (e.g., the default version on Windows before PowerShell 7) at your organization, you would still need to explicitly run the Import-Module command because automatic module importing was not a feature in those older versions of PowerShell.
 
 	a. Type the following command and press Enter (If you receive a message asking whether you want to install this module from an untrusted repository, enter **A** for **Yes to All**; do the same for the next command as well):  <br/>
 
-		Install-Module Microsoft.Graph.Groups -Scope CurrentUser
+		Install-Module Microsoft.Graph.Groups
 
-	b. At the command prompt, type the following command and press Enter: <br/>
+	b. At the command prompt, type the following command and press Enter : <br/>
 
-		Install-Module Microsoft.Graph.Users -Scope CurrentUser
+		Install-Module Microsoft.Graph.Users
 
-10. Now that you have installed the Groups and Users sub-modules, you must import each of them in order to import their respective cmdlets into your PowerShell session. To do so, you must run the following two commands: <br/>
-
-	a. Type the following command and press Enter:  <br/>
-
-		Import-Module Microsoft.Graph.Groups
-
-	a. Then type the following command and press Enter:  <br/>
-
-		Import-Module Microsoft.Graph.Users
-
-11. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the Groups and Users cmdlets that were just imported. To complete this task, you only need 'Read only' permissions for these two sub-modules. Type the following command and then press Enter: <br/>
+10. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the Groups and Users cmdlets that were just imported. To complete this task, you only need 'Read only' permissions for these two sub-modules. Type the following command and then press Enter: <br/>
 		
 		Connect-MgGraph -Scopes 'Group.Read.All', 'User.Read.All'
 
-12. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter the New Administrative Password that you assigned to her account and then select **Sign in**. 
+11. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter the New Administrative Password that you assigned to her account and then select **Sign in**. 
 
-13. If a **Permissions requested** dialog box appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
+12. If a **Permissions requested** dialog box appears, select the **Consent on behalf of your organization** check box and then select **Accept**.
 
-14. You will now use PowerShell to display the list of groups in Microsoft 365. This list should include the groups that you manually created in Microsoft 365, as well as the groups that were created in the on-premises Active Directory that were just synchronized with Microsoft 365. Type the following command and then press Enter:
+13. You will now use PowerShell to display the list of groups in Microsoft 365. This list should include the groups that you manually created in Microsoft 365, as well as the groups that were created in the on-premises Active Directory that were just synchronized with Microsoft 365. Type the following command and then press Enter:
 
 		Get-MgGroup | Format-Table Id, DisplayName, Description, GroupTypes
 
-15. You now want to display the members of the **Research** group. In the list of groups, highlight the object ID for the **Research** group and then press **Ctrl+C** to copy the ID to the clipboard. Then type the following command, paste in the Research group's object ID (**Ctrl+V**) in the appropriate spot, and then press Enter:  <br/>
+14. You now want to display the members of the **Research** group. In the list of groups, highlight the object ID for the **Research** group and then press **Ctrl+C** to copy the ID to the clipboard. Then type the following command, paste in the Research group's object ID (**Ctrl+V**) in the appropriate spot, and then press Enter:  <br/>
 
 		Get-MgGroupMember -GroupId 'paste in the group's object ID here'
 
-16. In the list of group members that were displayed in the prior step, note how the results simply show the object ID of each member. Without displaying the user names, this command doesn't help you verify whether the group members were synchronized. To work around this issue, you're going to repeat the prior command, but this time you'll add an additional component that retrieves the User record for each member of the group and displays the User's attributes, which includes the user name. <br/>
+15. In the list of group members that were displayed in the prior step, note how the results simply show the object ID of each member. Without displaying the user names, this command doesn't help you verify whether the group members were synchronized. To work around this issue, you're going to repeat the prior command, but this time you'll add an additional component that retrieves the User record for each member of the group and displays the User's attributes, which includes the user name. <br/>
 
 	At the command prompt hit the UP arrow on your keyboard. This will automatically type the prior command that was run (which includes the Research group's object ID, so you don't have to re-paste it). Then following the object ID, type the remaining portion of the command (starting with **-All**) and press Enter:
 
 		Get-MgGroupMember -GroupId 'the object ID of the Research group' -All | ForEach {Get-MgUser -UserId $_.Id}
 
-17. In the list of members of the Research group, verify the following users are **NOT** included. Remember, in the prior task you removed these three users from the Research group in the on-premises Active Directory, prior to synchronizing the group to Microsoft 365:  
+16. In the list of members of the Research group, verify the following users are **NOT** included. Remember, in the prior task you removed these three users from the Research group in the on-premises Active Directory, prior to synchronizing the group to Microsoft 365:  
 
 	- Cai Chu 
 
@@ -317,7 +304,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Tai Zecirevic  
 
-18. In the prior task, you added the **Manufacturing** group in the on-premises Active Directory, and you assigned three users to the group. You now want to verify the members of the **Manufacturing** group were synchronized when the group was added in Microsoft 365 during the synchronization process, <br/>
+17. In the prior task, you added the **Manufacturing** group in the on-premises Active Directory, and you assigned three users to the group. You now want to verify the members of the **Manufacturing** group were synchronized when the group was added in Microsoft 365 during the synchronization process, <br/>
 
 	To do so, you must first scroll back up to the list of groups, highlight the object ID for the **Manufacturing** group and then press **Ctrl+C** to copy the ID to the clipboard. <br/>
 
@@ -335,7 +322,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Dawn Williamson
 
-19. You have now validated that your test groups and user accounts were synchronized properly. Once you have completed the validation steps, close your PowerShell window. 
+18. You have now validated that your test groups and user accounts were synchronized properly. Once you have completed the validation steps, close your PowerShell window. 
  
 # End of Lab 3
  
