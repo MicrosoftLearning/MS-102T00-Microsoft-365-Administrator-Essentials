@@ -69,9 +69,9 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 22. In the **Message Analyzer Header** window, paste the NDR diagnostic data in the field that appears below the **Insert the message header you would like to analyze** row, and then select **Analyze headers**. 
 
-23. Review the diagnostic information and the time taken for the message to be rejected. In the prior email, the domain of the email address did not exist. In this email, the user mailbox was unavailable. In previous versions of this lab, Hop 1 in the **Other headers** section indicated the user's domain (outlook.com) was valid, but the user mailbox was unavailable. However, either Exchange or the Message Header Analyzer has been changed, and Hop 1 no longer indicates this issue. <br/>
+23. Review the diagnostic information. In the prior email, the domain of the email address did not exist. In this email, the user mailbox was unavailable. In previous versions of this lab, Hop 1 in the **Other headers** section indicated the user's domain (outlook.com) was valid, but the user mailbox was unavailable. However, either Exchange or the Message Header Analyzer has been changed, and Hop 1 no longer indicates this issue. <br/>
 
-	**Note:** Since the **Other headers** section does not indicate the error that occurred, then review the NDR diagnostic data that you pasted into the message header analyzer field. Towards the top of the NDR data that you pasted in, you should see the error: **Remote server returned '550 5.5.0 Requested action not taken: mailbox unavailable**.  
+	Since the **Other headers** section does not indicate the error that occurred, review the NDR diagnostic data that you pasted into the message header analyzer field. Towards the top of the NDR data that you pasted in, you should see the error: **Remote server returned '550 5.5.0 Requested action not taken: mailbox unavailable**.  
 
 24. Close both the **Message Header Analyzer** tab and the **Microsoft Remote Connectivity Analyzer** tab in your Edge browser. 
 
