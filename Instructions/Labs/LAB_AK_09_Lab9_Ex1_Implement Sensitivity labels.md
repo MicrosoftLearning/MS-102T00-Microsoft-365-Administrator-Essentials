@@ -14,7 +14,7 @@ To implement Sensitivity labels as part of your pilot project at Adatum, you mus
 
 	You should still be logged into LON-CL1 as the **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In **Microsoft Edge**, open a new tab and enter (or copy and paste) the following URL in the address bar: **https://www.microsoft.com/en-us/download/details.aspx?id=53018** and select **PurviewInfoProtection.exe** <br/>
+2. In **Microsoft Edge**, open a new tab and enter (or copy and paste) the following URL in the address bar: **https://www.microsoft.com/en-us/download/details.aspx?id=53018**. This will return the Microsoft Download Center page for the **Microsoft Purview Information Protection client**. Select the **Download** button. On the **Choose the download you want** window that appears, select **PurviewInfoProtection.exe** and then select **Download**. <br/>
 
 	This will start the download for the **Microsoft Purview Information Protection client**.
 
