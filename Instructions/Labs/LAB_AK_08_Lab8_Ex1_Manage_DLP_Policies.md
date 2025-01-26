@@ -12,7 +12,7 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
 2. In **Microsoft Edge**, the Microsoft Purview portal should still be open; if not, then open a new tab and navigate to **https://compliance.microsoft.com**.
 
-3. In the **Microsoft Purview** portal, select **Solutions** in the navigation pane, **Data loss prevention**, and then select **Policies**.
+3. In the **Microsoft Purview** portal, select **Solutions** in the navigation pane. In the **Solutions** menu, select **Data Loss Prevention**. In the **Data Loss Prevention** menu, select **Policies**.
 
 4. In the **Policies** page, select the **+Create policy** option on the menu bar to start the **Create policy** wizard.
 
