@@ -10,7 +10,7 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open. If the home page isn't open, then navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and where the password is the New Administrative Password that you assigned to her account.
 
-3. In the **Welcome to Microsoft 365** page, select the **Outlook** icon in the column of app icons on the left. 
+3. In the **Welcome to Microsoft 365** page, select **Apps**. On the **Apps** page, close the **Welcome to Apps** window by selecting the **X** in the upper-right corner of the window. In the row of app tiles, select **Outlook**. 
 
 4. If you're automatically signed into Outlook using Holly's account, then proceed to the next step. However, if a **Pick an account** window appears, select Holly's account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZis the tenant prefix provided by your lab hosting provider). <br/>
 
@@ -67,44 +67,46 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 21. Select the **Message Header Analyzer** tab in your browser. 
 
-22. In the **Message Analyzer Header** window, paste the NDR diagnostic data in the field that appears below the **Insert the message header you would like to analyze** row, and then select **Analyze headers**.  <br/>
+22. In the **Message Analyzer Header** window, paste the NDR diagnostic data in the field that appears below the **Insert the message header you would like to analyze** row, and then select **Analyze headers**. 
 
-	**Note:** Review the diagnostic information and the time taken for the message to be rejected. In the prior email, the domain of the email address did not exist. In this email, Hop 1 in the **Other headers** section indicates the user's domain (outlook.com) was valid, but the user mailbox was unavailable. 
+23. Review the diagnostic information. In the prior email, the domain of the email address did not exist. In this email, the user mailbox was unavailable. In previous versions of this lab, Hop 1 in the **Other headers** section indicated the user's domain (outlook.com) was valid, but the user mailbox was unavailable. However, either Exchange or the Message Header Analyzer has been changed, and Hop 1 no longer indicates this issue. <br/>
 
-23. Close both the **Message Header Analyzer** tab and the **Microsoft Remote Connectivity Analyzer** tab in your Edge browser. 
+	Since the **Other headers** section does not indicate the error that occurred, review the NDR diagnostic data that you pasted into the message header analyzer field. Towards the top of the NDR data, you should see the error: **Remote server returned '550 5.5.0 Requested action not taken: mailbox unavailable**.  
 
-24. Select the **Microsoft 365 admin center** tab. If you had closed this tab, then select the **Home | Microsoft 365** tab in your Edge browser, select the **App launcher** icon (the square made up of 3 rows of dots) that appears above the **Home** icon in the top left corner of the screen, and then in the **Apps** pane that appears, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
+24. Close both the **Message Header Analyzer** tab and the **Microsoft Remote Connectivity Analyzer** tab in your Edge browser. 
 
-25. On the **Microsoft 365 admin center** page, select **Show all** (if necessary) in the navigation pane. 
+25. Select the **Microsoft 365 admin center** tab. If you had closed this tab, then select the **Home | Microsoft 365** tab in your Edge browser, select the **App launcher** icon (the square made up of 3 rows of dots) that appears above the **Home** icon in the top left corner of the screen, and then in the **Apps** pane that appears, select **Admin**; this opens the **Microsoft 365 admin center** in a new browser tab. 
 
-26. Scroll down through the navigation pane, and under **Admin centers,** select **Exchange**. This will open the Exchange admin center in a new tab. <br/>
+26. On the **Microsoft 365 admin center** page, select **Show all** (if necessary) in the navigation pane. 
+
+27. Scroll down through the navigation pane, and under **Admin centers,** select **Exchange**. This will open the Exchange admin center in a new tab. <br/>
 
 	- If a **Toolbar** window appears, select the **Next** button twice and then the **Finish** button to navigate through the three windows. 
 	- If a **Learn about the new menu** window appears, select the X to close it.
 
-27. In the **Exchange admin center**, select **Mail flow** in the navigation pane, and then select **Message trace**. 
+28. In the **Exchange admin center**, select **Mail flow** in the navigation pane, and then select **Message trace**. 
 
-28. In the **Message trace** window, the **Default queries** tab is displayed by default. In this tab, select **+Start a trace** on the menu bar. 
+29. In the **Message trace** window, the **Default queries** tab is displayed by default. In this tab, select **+Start a trace** on the menu bar. 
 
-29. In the **New message trace** pane that appears, both the **Senders** and **Recipients** fields are set to **All** be default. Holly wants to configure the trace to just look for email messages that she sent. In the **Senders** field, enter **Holly**. This displays the list of active users whose name starts with Holly. In the list of users that appears, select **Holly Dickson**.
+30. In the **New message trace** pane that appears, both the **Senders** and **Recipients** fields are set to **All** be default. Holly wants to configure the trace to just look for email messages that she sent. In the **Senders** field, enter **Holly**. This displays the list of active users whose name starts with Holly. In the list of users that appears, select **Holly Dickson**.
 
-30. Under the **Time range** section, select the slider bar below **1 day** (don't select the **1 day** heading; you must select on the slider bar itself). Note how the slider circle moved under **1 day**.
+31. Under the **Time range** section, select the slider bar below **1 day** (don't select the **1 day** heading; you must select on the slider bar itself). Note how the slider circle moved under **1 day**.
 
-31. The drop-down arrow to the right of **Detailed search options** should be selected by default. This displays options such as Delivery status, Message ID, Direction, and others. If this information isn't displayed under **Detailed search options**, then select the drop-down arrow to expand this section.  <br/>
+32. The drop-down arrow to the right of **Detailed search options** should be selected by default. This displays options such as Delivery status, Message ID, Direction, and others. If this information isn't displayed under **Detailed search options**, then select the drop-down arrow to expand this section.  <br/>
 
 	Holly wants to customize the trace to look for failed messages. Select the **Delivery status** field, and in the drop-down menu that appears, select **Failed**.
 
-32. Note the **Report type** option is set to **Summary report**. This is the report type that you want to create, so leave this option selected. At the bottom of the page, select the **Search** button. 
+33. Note the **Report type** option is set to **Summary report**. This is the report type that you want to create, so leave this option selected. At the bottom of the page, select the **Search** button. 
 
-33. In the **Message trace search results** page that appears, if no failed message deliveries appear in the list, you may need to wait several minutes before selecting the **Refresh** button that appears above the item list. You should see the two failed email messages that Holly sent from Outlook - one to **user@alt.none**, and another to **nnnnnnnnYourName@outlook.com**.
+34. In the **Message trace search results** page that appears, if no failed message deliveries appear in the list, you may need to wait several minutes before selecting the **Refresh** button that appears above the item list. You should see the two failed email messages that Holly sent from Outlook - one to **user@alt.none**, and another to **nnnnnnnnYourName@outlook.com**.
 
-34. Select the date and time values (which are hyperlinked) for the first failed message to view the properties pane for that message. This displays the sender, recipient, status, and error information, as well as the **How to fix it** instructions. Select the down arrows for the **Message events** and **More information** sections to view those sections. Once you've finished reviewing the message information, select the **X** in the upper right corner of the pane to close it. <br/>
+35. Select the date and time values (which are hyperlinked) for the first failed message to view the properties pane for that message. This displays the sender, recipient, status, and error information, as well as the **How to fix it** instructions. Select the down arrows for the **Message events** and **More information** sections to view those sections. Once you've finished reviewing the message information, select the **X** in the upper right corner of the pane to close it. <br/>
 
 	Repeat this step for the second failed message. 
 
-35. In the **Message trace search results** window, note the navigation thread at the top of the screen (**Home > Message trace > Message trace search results**). Select the **Message trace** portion of this navigation thread to display the **Message trace** window. Leave this tab open for the next task.
+36. In the **Message trace search results** window, note the navigation thread at the top of the screen (**Home > Message trace > Message trace search results**). Select the **Message trace** portion of this navigation thread to display the **Message trace** window. Leave this tab open for the next task.
 
-36. In your Edge browser, close the **Mail - Holly Dickson - Outlook** tab, but leave the remaining tabs open for the next task.
+37. In your Edge browser, close the **Mail - Holly Dickson - Outlook** tab, but leave the remaining tabs open for the next task.
   
 
 ### Task 2 - Monitor Service Health and Analyze Reports 

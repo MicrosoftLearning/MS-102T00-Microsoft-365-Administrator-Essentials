@@ -14,7 +14,7 @@ To implement Sensitivity labels as part of your pilot project at Adatum, you mus
 
 	You should still be logged into LON-CL1 as the **adatum\administrator** account, and in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In **Microsoft Edge**, open a new tab and enter (or copy and paste) the following URL in the address bar: **https://www.microsoft.com/en-us/download/confirmation.aspx?id=53018** <br/>
+2. In **Microsoft Edge**, open a new tab and enter (or copy and paste) the following URL in the address bar: **https://www.microsoft.com/en-us/download/details.aspx?id=53018**. This will return the Microsoft Download Center page for the **Microsoft Purview Information Protection client**. Select the **Download** button. On the **Choose the download you want** window that appears, select **PurviewInfoProtection.exe** and then select **Download**. <br/>
 
 	This will start the download for the **Microsoft Purview Information Protection client**.
 
@@ -47,9 +47,9 @@ You will first enable sensitivity labels for Office online files that are stored
 
 4. You will begin by enabling sensitivity labels for Office online files that are stored in SharePoint and OneDrive. <br/>
 
-	In the **Microsoft Purview** portal, under the **Solutions** section in the navigation pane, select **Information protection**, and then select **Sensitivity labels**.
+	In the **Microsoft Purview** portal, select **Solutions** in the navigation pane. In the **Solutions** menu that appears, select **Information Protection**. In the **Information Protection** menu, select **Sensitivity labels**.
 
-5. On the **Sensitivity labels** page, the following message should appear in the middle of the page: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
+5. On the **Sensitivity labels** page, the following message should appear towards the top of the page: **Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn on here, but note that additional configuration is required for Multi-Geo environments.** <br/>
 
 	Below this message is a **Turn on now** button. Select this button.  <br/>
 
@@ -74,7 +74,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, under the **Information protection** group in the navigation pane, select **Sensitivity labels**. 
+2. In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, select **Solutions** in the navigation pane. In the **Solutions** menu that appears, select **Information Protection**. In the **Information Protection** menu, select **Sensitivity labels**.
 
 3. On the **Sensitivty labels** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen. This initiates the **New sensitivity label** wizard.
 
@@ -225,9 +225,9 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. You will first review the **Project-Falcon** sensitivity label that you'll be applying to a document in this task.  In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, under the **Information protection** group in the navigation pane, select **Labels**. 
+2. You will first review the **Project-Falcon** sensitivity label that you'll be applying to a document in this task.  In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, select **Solutions** in the navigation pane. In the **Solutions** menu that appears, select **Information Protection**. In the **Information Protection** menus, select **Sensitivity labels**. 
 
-3. On the **Labels** page, in the list of labels, select the right arrow (**>**) next to **Highly Confidential** to show the sub-labels under this label. Doing so displays the pre-existing **Project - Falcon** label.
+3. On the **Sensitivity Labels** page, in the list of labels, select the right arrow (**>**) next to **Highly Confidential** to show the sub-labels under this label. Doing so displays the pre-existing **Project - Falcon** label.
 
 4. Select the **Project - Falcon** label (not the check box; select the label name). Doing so opens a **Project - Falcon** details pane. Review the information defined for this label, then close the pane when you're done.  
 

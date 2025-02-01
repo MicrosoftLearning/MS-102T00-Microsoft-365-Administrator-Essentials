@@ -14,7 +14,7 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 3. In the **Microsoft Defender** portal, you should still be on the **Safe attachments** page after completing the previous task. In the navigation thread at the top of the page (**Policies & rules > Threat policies > Safe attachments**), select **Threat policies**. <br/>
 
-    **NOTE:** If you had closed the **Safe Attachments** tab after the prior task, then navigate to the **Threat policies** page by selecting **Policies & rules** in the navigation pane, and then selecting **Threat policies**.
+    **NOTE:** If you had closed the **Safe Attachments** tab after the prior task, then navigate to the **Threat policies** page by selecting **Email & collaboration > Policies & rules** in the navigation pane, and then selecting **Threat policies**.
 
 4. In the **Threat policies** window, under the **Policies** section, select **Safe Links**. 
 
@@ -42,7 +42,9 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 14. On the **Tenant Allow/Block Lists** page, the **Domains & addresses** tab is displayed by default. Select the **URLs** tab.
 
-15. On the **URLs** tab, select **+Block** on the menu bar. In the **Block URLs** pane that appears, enter **http://tailspintoys.com/\*** in the field and then select **Add**.
+15. On the **URLs** tab, select **+Block** on the menu bar. In the **Block URLs** pane that appears, enter **http://tailspintoys.com/*** in the field and then select **Add**. <br/>
+
+      **Note:** When you enter the URL, make sure you enter the wildcard at the end of it. The * wildcard represents "any characters" and is used to match multiple URLs. When you enter **https://tailspintoys.com/*** , you're telling Microsoft 365 to block all URLs that start with https://tailspintoys.com/, including any subdirectories, paths, or additional characters after the domain. This ensures a broader and more effective block, covering any page or resource under the tailspintoys.com domain. If you enter https://tailspintoys.com without the wildcard (*), Microsoft 365 might interpret it as an exact match to that specific domain. As such, it may fail to block it because URLs on the web typically have paths, query strings, or other parts after the domain name. For example, https://tailspintoys.com/contact or https://tailspintoys.com/shop would not be blocked if you only specify https://tailspintoys.com without a wildcard.
 
 **STOP!!** As mentioned at the start of this lab exercise, now that you have created a Safe Links policy, you must wait at least 30 minutes for the policy to propagate through the system before you can perform the next task in this exercise. 
 

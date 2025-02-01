@@ -34,31 +34,31 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 1. On LON-CL1, select the tab for the **Microsoft 365 admin center**. Under the **Admin centers** section in the navigation pane, select **Compliance**. Doing so will open the **Microsoft Purview** portal.
 
-2. In the **Microsoft Purview** portal, select **Data lifecycle management** in the navigation pane, and then select **Microsoft 365**.
+2. As of November 2024, the classic Microsoft Purview compliance portal was retired. If you receive a page indicating **The compliance portal is retired**, it gives you the option to wait a few seconds before it automatically takes you to the new Microsoft Purview portal, or you can select the **switch to the new portal yourself** link. Either wait for it to take you to the new portal, or select the link. 
 
-3. In the **Data lifecycle management** window, the **Overview** tab is displayed by default. In the list of tabs that appear across the top of the page, select **Retention policies**.
+3. In the **Microsoft Purview** portal, a **Welcome to the new Microsoft Purview portal** window appears. At the bottom of the window, select the **I agree to the terms of data flow disclosure and Privacy Statements** checkbox, and then select the **Get started** button.  
 
-4. On the **Retention policies** tab, select **+New retention policy** on the menu bar. This initiates the **Create retention policy** wizard.
+4. In the **Microsoft Purview** portal, select **Solutions** in the navigation pane. In the **Solutions** menu that appears, select **Data Lifecycle Management**.
 
-5. On the **Name your retention policy** page, enter **Test user email retention** in the **Name** field and then select **Next**.
+5. In the **Data lifecycle management** window, select **Policies** in the navigation pane, and then select **Retention policies**.
 
-6. On the **Policy Scope** page, you can choose the admin units that you want to apply the policy to. Since Holly wants this policy to apply to the entire organization rather than just a select group of admin units, select **Next**.
+6. On the **Retention policies** page, select **+New retention policy** on the menu bar. This initiates the **Create retention policy** wizard.
 
-7. On the **Choose the type of retention policy to create** field, select **Static** and then select **Next**.
+7. On the **Name your retention policy** page, enter **Test user email retention** in the **Name** field and then select **Next**.
 
-8. On the **Choose where to apply the policy** page, note the **Exchange mailboxes** location. It's currently set to include **All mailboxes**. You want to change this to just apply to Joni Sherman and Lynne Robbins' mailboxes. Under **All mailboxes**, select **Edit**.
+8. On the **Policy Scope** page, you can choose the admin units that you want to apply the policy to. Since Holly wants this policy to apply to the entire organization rather than just a select group of admin units, select **Next**.
 
-9. In the **Exchange mailboxes** pane that appears, hover your mouse over **Joni Sherman** and then select her check box. Do the same for **Lynne Robins**. <br/>
+9. On the **Choose the type of retention policy to create** field, select **Static** and then select **Next**.
 
-	**Tip:** If you select a user's name, the other check boxes that have been selected will be unselected. To select multiple users, you must hover your mouse over each user's name and select their check box that appears. Also, the order of users and groups do not appear to be in any type of alphabetical order. In your real-world deployment, if the number of users and groups is quite large, it may be more efficient to enter the user's first name in the Search box to display the users with that first name. This may make it easier to find certain users or groups. <br/>
+10. On the **Choose where to apply this policy** page, note the **Exchange mailboxes** location. It's currently turned **On** and set to include **All mailboxes**. You want to change this to just apply to Joni Sherman and Lynne Robbins' mailboxes. Under **All mailboxes**, select **Edit**.
 
-	Once Joni and Lynne's check boxes are selected, select **Done**.
+11. In the **Exchange mailboxes** pane that appears, select the check boxes for **Joni Sherman** and **Lynne Robins** and then select **Done**.
 
-10. On the **Choose where to apply the policy** page, the **Exchange email** location should now indicate that **2 mailboxes** are included. <br/>
+12. On the **Choose where to apply this policy** page, the **Exchange email** location should now indicate that **2 mailboxes** are included. <br/>
 
 	Since this policy will only apply to Exchange email for Joni and Lynne, set the **Status** toggle switch to **Off** for all other locations in which it's currently set to On (**SharePoint classic and communcation sites**, **OneDrive accounts**, and **Microsoft 365 Group mailboxes & sites**). Select **Next**.
 
-11. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
+13. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
 
 	- Retain items for a specific period - select in this field, and in the drop-down menu that appears, select **Custom**. Three fields will appear - years, months, and days. For testing purposes, Holly wants to test email retention for emails in Joni and Lynne's mailboxes by only retaining emails that are less than one year old. As such, set the time periods to the following values: **Years - 1, Months - 0, Days - 0**.
 
@@ -66,44 +66,44 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 	- At the end of the retention period - **Delete items automatically**
 
-12. Select **Next**.
+14. Select **Next**.
 
-13. On the **Review and finish** page, review your selections. If anything needs to be changed, select the appropriate Edit link and make the necessary changes. Once everything is correct, select **Submit**.
+15. On the **Review and finish** page, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Once everything is correct, select **Submit**.
 
-14. On the **You successfully created a retention policy** window, select **Done**.
+16. On the **You successfully created a retention policy** window, select **Done**.
 
-15. Leave the **Data lifecycle management** tab open in your Edge browser as you will create another retention policy in the next task.
+17. On the **Retention policies** page, you should see your new policy in the list of retention policies.
+
+18. Leave the **Retention policies** page open in your Edge browser as you will create another retention policy in the next task.
 
 
 ### Task 3 – Create an email retention policy for all users
 
 Holly has concluded her testing of email retention on Joni and Lynne's mailboxes using the **Test user email retention** policy that you created in the prior task. Holly now wants to create a retention policy that preserves the content of all Exchange Online mailboxes from deletion for 5 years after the last modification. Since Holly has completed her email retention testing, she wants to first disable the **Test user email retention** policy. By doing so, Joni and Lynne's mailboxes will be governed by the retention policy that you create in this task that applies to all Adatum mailboxes. 
 
-1. On LON-CL1, your Edge browser should still have the **Microsoft Purview** portal open from the prior task, and it should be displaying the **Data lifecycle management** window.
+1. On LON-CL1, your Edge browser should still have the **Microsoft Purview** portal open from the prior task, and it should be displaying the **Retention policies** window.
 
-2. In the **Data lifecycle management** window, in the list of tabs that appear across the top of the page, select **Retention policies** (if another tab is selected).
+2. On the **Retention policies** page, select the check box next to **Test user email retention**, and then select the **Disable policy** icon on the menu bar.  <br/>
 
-3. On the **Retention policies** tab, select the check box next to **Test user email retention**, and then select **Disable policy** on the menu bar.  <br/>
+	**Note:** It may take a couple of minutes for the policy that you created in the prior task to propagate through the system. During that time, you won't be able to disable the policy, and you'll receive a **Failed** message. You may have to wait a couple of minutes for the policy to finish propagating before you can disable it. 
 
-	**Note:** It may take a couple of minutes for the policy that you created in the prior task to propagate through the system. During that time, you won't be able to disable the policy. You may have to wait a couple of minutes for the policy to finish propagating before you can disable it. 
+3. Once the policy is disabled, a message will briefly appear at the top of the page indicating the policy is disabled. To test whether the policy is, in fact, disabled, select the check box next to **Test user email retention**. Note that the menu bar includes an **Enable policy** option. This option indicates the policy is currently disabled. Now that you have verified the policy is disabled, you can complete the remaining steps in this task to create Adatum's official, organization-wide email retention policy.
 
-4. Once the policy is disabled, a message will briefly appear at the top of the page indicating the policy is disabled. To test whether the policy is, in fact, disabled, select the check box next to **Test user email retention**. Note that the menu bar includes an **Enable policy** option. This option indicates the policy is currently disabled. Now that you have verified the policy is disabled, you can complete the remaining steps in this task to create Adatum's official, organization-wide email retention policy.
+4. On the **Retention policies** page, select **+New retention policy** on the menu bar. This initiates the **Create retention policy** wizard.
 
-5. On the **Retention policies** tab, select **+New retention policy** on the menu bar. This initiates the **Create retention policy** wizard.
+5. On the **Name your retention policy** page, enter **Adatum email retention** in the **Name** field and then select **Next**.
 
-6. On the **Name your retention policy** page, enter **Adatum email retention** in the **Name** field and then select **Next**.
+6. On the **Policy Scope** page, you can choose the admin units that you want to apply the policy to. Since Holly wants this policy to apply to the entire organization rather than just a select group of admin units, select **Next**.
 
-7. On the **Policy Scope** page, you can choose the admin units that you want to apply the policy to. Since Holly wants this policy to apply to the entire organization rather than just a select group of admin units, select **Next**.
+7. On the **Choose the type of retention policy to create** field, select **Static** and then select **Next**.
 
-8. On the **Choose the type of retention policy to create** field, select **Static** and then select **Next**.
-
-9. On the **Choose where to apply the policy** page, this policy will only apply to **Exchange mailboxes**. Ensure that it's **Status** is set to **On**. Set the **Status** toggle switch to **Off** for all other locations that are turned **On** by default. **Exchange mailboxes** should be the only location whose **Status** is set to **On**. <br/>
+8. On the **Choose where to apply this policy** page, this policy will only apply to **Exchange mailboxes**. Ensure that it's **Status** is set to **On**. Set the **Status** toggle switch to **Off** for all other locations that are turned **On** by default. **Exchange mailboxes** should be the only location whose **Status** is set to **On**. <br/>
 
 	**Note:** For the **Exchange mailboxes** location, note that it's currently set to include **All mailboxes**. Do not change this value, since Holly wants this policy to apply to all mailboxes at Adatum.  <br/>
 
 	Select **Next**.
 
-10. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
+9. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
 
 	- Retain items for a specific period - **5 years**
 
@@ -111,11 +111,13 @@ Holly has concluded her testing of email retention on Joni and Lynne's mailboxes
 
 	- At the end of the retention period - **Delete items automatically**
 
-11. Select **Next**.
+10. Select **Next**.
 
-12. On the **Review and finish** page, review your selections. If anything needs to be changed, select the appropriate Edit link and make the necessary changes. Otherwise, if everything is correct, select **Submit**.
+11. On the **Review and finish** page, review your selections. If anything needs to be changed, select the appropriate Edit link and make the necessary changes. Otherwise, if everything is correct, select **Submit**.
 
-13. On the **You successfully created a retention policy** window, select **Done**.
+12. On the **You successfully created a retention policy** window, select **Done**.
+
+13. On the **Retention policies** page, you should see your new policy in the list of retention policies.
 
 14. In your Edge browser, leave all the tabs open as you proceed to the next exercise.
 

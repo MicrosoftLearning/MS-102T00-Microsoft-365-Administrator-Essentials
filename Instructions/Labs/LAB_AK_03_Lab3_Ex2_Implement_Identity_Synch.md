@@ -53,31 +53,31 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 10. Select **Next**. The wizard will deploy the recommended solution, **Microsoft Entra Connect Sync**. 
 
-11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center.
+11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center, where the system should display the **Microsoft Entra Connect** download page.
 
-12. In the **Microsoft Download Center**, a message indicating **Thank you for downloading Microsoft Entra Connect** should appear. <br/>
+12. On the **Microsoft Entra Connect** download page, select the **Download** button. 
 
-	If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it's finished downloading. <br/>
+13. If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it finishes downloading. <br/>
 
 	However, if a **Downloads** window doesn't appear at the top of the screen, select the ellipsis icon (three dots) that appears to the right of the **Profile 1** icon (the image of a person inside a circle). In the drop-down menu that appears, select **Downloads**. If a **Downloads** window appears at the top of the screen and it includes the **AzureADConnect.msi** file, then select the **Open file** link that appears below it. However, if **AzureADConnect.msi**  does not appear in the **Downloads** window, then on the **Microsoft Download Center** page, select the **click here to download manually** hyperlink and then repeat this step to open the **AzureADConnect.msi** file.
 
-13. Opening the **AzureADConnect.msi** file initiates the installation of the Microsoft Azure Active Directory Connect Tool by starting the **Microsoft Azure Active Directory Connect** wizard. The first page of the wizard may appear and then suddenly disappear, or it may not appear at all. If either situation occurs, then select the wizard icon on the taskbar. 
+14. When you opened the **AzureADConnect.msi** file in the prior step, it should have started the **Microsoft Entra Connect Sync** installation wizard. The first page of the wizard may appear and then suddenly disappear, or it may not appear at all. If either situation occurs, then select the wizard icon on the taskbar to display the setup wizard's UI. 
 
-14. On the **Welcome to Microsoft Entra Connect Sync** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
+15. On the **Welcome to Microsoft Entra Connect Sync** window in the setup wizard, select the **I agree to the license terms and privacy notice** check box and then select **Continue**.
 
-15. On the **Express Settings** page, read the instruction regarding a single Windows Server Active Directory forest and then select **Use express settings**.
+16. On the **Express Settings** page, read the instruction regarding a single Windows Server Active Directory forest and then select **Use express settings**.
 
-16. On the **Connect to Microsoft Entra ID** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field, and then select **Next**.
+17. On the **Connect to Microsoft Entra ID** page, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) in the **USERNAME** field, and then select **Next**.
 
-17. In the **Sign in to your account** dialog, sign in as Holly, using the same username from the previous step and the New Administrative Password that you assigned to Holly's account, and then select **Sign in**.
+18. In the **Sign in to your account** dialog box that appears, sign in as Holly, using the same username from the previous step and the New Administrative Password that you assigned to Holly's account, and then select **Sign in**.
 
 18. On the **Connect to AD DS** page, enter **Adatum\Administrator** in the **USERNAME** field, enter **Pa55w.rd** in the **PASSWORD** field, and then select **Next**  (if the **Next** button is not enabled, then tab off the PASSWORD field to enable it). 
 
 19. In the **Microsoft Entra sign-in configuration** window, select the **Continue without matching all UPN suffixes to verified domains** check box at the bottom of the page and then select **Next**.
 
-20. On the **Ready to configure** screen, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
+20. On the **Ready to configure** page, select the check box for **Start the synchronization process when configuration completes** if it’s not already selected, and then select **Install**.   <br/>
 
-	**IMPORTANT:** While Holly eventually plans install an Exchange hybrid deployment, she will not do so now. For the purpose of this lab, do **NOT** select the **Exchange hybrid deployment** option. 
+	**IMPORTANT:** While Holly eventually plans to install an Exchange hybrid deployment, she will not do so now. For the purpose of this lab, do **NOT** select the **Exchange hybrid deployment** option. 
 
 21. Wait for the configuration to complete (which may take several minutes). On the **Configuration complete** page, select **Exit**. 
 
@@ -108,13 +108,13 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 	- In the **Export Statistics** pane on the left, note the number of on-premises users that were added to Azure Active Directory and the number that were updated. 
 	- In the **Export Errors** pane on the right, note the errors that appear. If you recall back in the prior lab exercise when you ran the IdFix tool, there were two users with validation errors that you purposely did not fix (**Ngoc Bich Tran** and **An Dung Dao**). 
 
-		Select the first link (CN={xxxxxx...) under the **Export Errors** column that applies to the first **DataValidationFailed** error. This will display the first of these two users that were not synchronized by the Azure AD Connect tool. Review the error to see why this account is broken. **Tip:** In the **Connector Space Object Properties** window, select the **Export Error** tab. In the **Error Information** section, select the **Detail** button. Review the detailed error information, and then select **Close**. Select **Close** again. <br/>
+		Select the first link (CN={xxxxxx...) under the **Export Errors** column that applies to the first **DataValidationFailed** error. This will display the first of these two users that were not synchronized by the Microsoft Entra Connect Sync tool. Review the error to see why this account is broken. **Tip:** In the **Connector Space Object Properties** window, select the **Export Error** tab. In the **Error Information** section, select the **Detail** button. Review the detailed error information, and then select **Close**. Select **Close** again. <br/>
 
 		Select the second Data Validation error link and verify this error is for the second user that you purposely did not fix. Follow the same steps as before to review the error for this user.   <br/>
 
 	‎**IMPORTANT:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column in the top pane). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization** rather than a **Full Synchronization**.
 
-26. Now that you have seen Azure AD Connect complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
+26. Now that you have seen Microsoft Entra Connect Sync complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
 
 27. In your browser, close all tabs except for the **Home | Microsoft 365** tab and the **Active users - Microsoft 365 admin center** tab. 
 
@@ -123,7 +123,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 ### Task 2 - Create Group Accounts to Test Synchronization  
 
-To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Azure AD Connect. You will create a new security group, and you will update the group members in an existing, built-in security group, all within Adatum’s on-premises environment. 
+To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Microsoft Entra Connect Sync. You will create a new security group, and you will update the group members in an existing, built-in security group, all within Adatum’s on-premises environment. 
 
 Each group will be assigned several members. After the forced synchronization, you will validate that you can see each security group in Microsoft 365 and that its members were synced up from the on-premises group to the cloud group. You will also validate the built-in security group was not created in Microsoft 365, even though you added members to it in Adatum's on-premises environment. 
 
@@ -184,7 +184,7 @@ Each group will be assigned several members. After the forced synchronization, y
  
 ### Task 3 - Change Group Membership to Test Synchronization  
 
-This task sets up another scenario for testing whether the sync process is working in Azure AD Connect (Microsoft Entra Connect Sync). In this task you will change the members of a group to see if they are reflected in the cloud once the group is synced. 
+This task sets up another scenario for testing whether the sync process is working in Microsoft Entra Connect Sync. In this task you will change the members of a group to see if they are reflected in the cloud once the group is synced. 
 
 1. This task continues from where the previous task left off in LON-DC1. In the **Active Directory Users and Computers** window, in the console tree under **Adatum.com**, the **Research** organizational unit is still selected. <br/>
 
@@ -206,18 +206,18 @@ This task sets up another scenario for testing whether the sync process is worki
   
 5. Leave LON-DC1 open as you will continue using it in the next task. <br/>
 
-	‎**Important:** You should perform the next task immediately after completing this one so that Azure AD Connect (Microsoft Entra Connect Sync) doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
+	‎**Important:** You should perform the next task immediately after completing this one so that Microsoft Entra Connect Sync doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
 
 
 ### Task 4 - Force a manual synchronization   
 
-In this task, you will force a sync between Adatum’s on-premises Active Directory and Microsoft Entra ID (formerly Azure AD) instead of waiting 30 minutes for Azure AD Connect (Microsoft Entra Connect Sync) to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
+In this task, you will force a sync between Adatum’s on-premises Active Directory and Microsoft Entra ID (formerly Azure AD) instead of waiting 30 minutes for Microsoft Entra Connect Sync to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
 
 **IMPORTANT - PowerShell notice:** The prior lab exercise provided a disclaimer indicating why the tasks in that exercise used the MSOnline module rather than Microsoft Graph PowerShell. While Microsoft is in the process of replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, with Microsoft Graph PowerShell, there is some functionality in the older modules that has not yet been incorporated into Microsoft Graph PowerShell. The commands in the prior exercise and the command used in this task fall into that category. The prior exercise connected to the MSOnline module, which is also used in this task per the Start-ADSyncSyncCycle command. 
 
 1. On LON-DC1, if the **Windows PowerShell** application is still open from the prior exercise, then **you MUST close it now**.  <br/>
 
-	‎**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Microsoft Azure AD Connect setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open.  
+	‎**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Microsoft Entra Connect Sync setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open.  
 
 2. At this point, Windows PowerShell should NOT be open. You now want to reopen it. To open it, select the **magnifying glass (Search)** icon in the taskbar, type **power** in the Search box, and then in the menu, right-click on **Windows PowerShell** (not Windows PowerShell ISE) and select **Run as administrator**. Maximize the Windows PowerShell window once it opens.
 
@@ -236,7 +236,7 @@ In this task, you will force a sync between Adatum’s on-premises Active Direct
 
 ### Task 5 - Validate the Results of Directory Synchronization   
 
-In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises Active Directory to Microsoft Entra ID (Azure AD). You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
+In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises Active Directory to Microsoft Entra ID. You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
 
 **IMPORTANT - PowerShell notice:** This task employs basic PowerShell queries for Groups and Users, which are supported in Microsoft Graph PowerShell. Since Microsoft Graph PowerShell is replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, you will use Microsoft Graph PowerShell in this task.
 
@@ -262,13 +262,15 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 8. Now let’s examine this group using Windows PowerShell. If **Windows PowerShell** is already open on the taskbar, then select the PowerShell icon and proceed to the next step; otherwise, type **PowerShell** in the **Search** field on the taskbar and then right-click on the **Windows PowerShell** application and select **Run as administrator**. Maximize your PowerShell window.
 
-9. You should begin by installing Microsoft Graph PowerShell. Earlier in this training, you installed Microsoft Graph PowerShell on LON-CL1. At that time, you installed all 30+ sub-modules by running the following command: Install-Module Microsoft.Graph (where Graph is the parent module that contains the 30+ sub-modules). While you could install all 30+ sub-modules on LON-DC1, you're only going to use the Groups and Users sub-modules in this task, which is the last task in this training that uses PowerShell on LON-DC1. Therefore, to reduce installation time, you'll run the following two commands that will install just those two sub-modules and none of the other 30+ sub-modules. This also provides you with experience in installing specific sub-modules rather than the entire complement of Graph sub-modules.   <br/>
+9. You should begin by installing the Groups and Users modules in Microsoft Graph PowerShell. Earlier in this training, you installed Microsoft Graph PowerShell on LON-CL1. At that time, you installed all 30+ sub-modules by running the following command: Install-Module Microsoft.Graph (where Graph is the parent module that contains the 30+ sub-modules). While you could install all 30+ sub-modules on LON-DC1, you're only going to use the Groups and Users sub-modules in this task, which is the last task in this training that uses PowerShell on LON-DC1. Therefore, to reduce installation time, you'll run the following two commands that will install just those two sub-modules and none of the other 30+ sub-modules. This also provides you with experience in installing specific sub-modules rather than the entire complement of Graph sub-modules.   <br/>
+
+	**Note:** In earlier versions of PowerShell (prior to PowerShell 7), once you installed a module using the Install-Module command, you then needed to import the module using the Import-Module command. Doing so imported the module into your current session. However, in the newer versions of PowerShell (PowerShell 7 and later), once you install a module, PowerShell automatically imports it into your current session when you use the module for the first time. This is part of PowerShell's default behavior to make things more seamless. Therefore, you no longer need to explicitly run the Import-Module command after installation. You can simply run Install-Module to install it, and once you call any cmdlet from the module, the module will automatically load into your session. However, if you're still using Windows PowerShell 5.1 or an earlier version (e.g., the default version on Windows before PowerShell 7) at your organization, you would still need to explicitly run the Import-Module command because automatic module importing was not a feature in those older versions of PowerShell.
 
 	a. Type the following command and press Enter (If you receive a message asking whether you want to install this module from an untrusted repository, enter **A** for **Yes to All**; do the same for the next command as well):  <br/>
 
 		Install-Module Microsoft.Graph.Groups
 
-	b. At the command prompt, type the following command and press Enter: <br/>
+	b. At the command prompt, type the following command and press Enter : <br/>
 
 		Install-Module Microsoft.Graph.Users
 
