@@ -180,12 +180,8 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 37. Once the domain setup process is complete and the three DNS records validated successfully for the **Exchange and Exchange Online Protection** service, the **Domains** page will be displayed. Verify the **Domain status** is **Healthy** for the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain, which should now appear in the list of domains. This new domain should also be flagged as the Default domain for Adatum. 
 
-38. Holly is not yet ready to implement the new domain in Adatum's Microsoft 365 deployment. Therefore, she wants to reset the **xxxxxZZZZZZ.onmicrosoft.com** domain as the default Microsoft 365 domain. On the **Domains** page, select the vertical ellipsis (**More actions**) icon to the right of the **xxxxxZZZZZZ.onmicrosoft.com** domain. Select **Set as default** that appears in the drop-down menu.
+38. Holly is not yet ready to implement the new domain in Adatum's Microsoft 365 deployment. Therefore, ensure the **xxxxxZZZZZZ.onmicrosoft.com** domain is still listed as the default domain. If it is not, select the vertical ellipsis (**More actions**) icon to the right of the domain, and then select **Set as default**.
 
-39. In the **Set this domain as default?** dialog box that appears, select the **Set as default** button. This domain should now appear as the Default domain in **Domains** page.
-
-40. Remain logged into the LON-DC1 VM with both **Microsoft Edge** and **Windows PowerShell** left open. You will return to LON-DC1 in a later lab that performs identity synchronization. 
-
-
+39. Remain logged into the LON-DC1 VM with both **Microsoft Edge** and **Windows PowerShell** left open. You will return to LON-DC1 in a later lab that performs identity synchronization. 
 
 # End of  Lab 1
