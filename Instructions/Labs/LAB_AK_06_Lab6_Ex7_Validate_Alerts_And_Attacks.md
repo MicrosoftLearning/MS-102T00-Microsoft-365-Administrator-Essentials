@@ -61,7 +61,9 @@ In Lab 6, Exercise 4, you created a default Microsoft 365 alert policy that noti
 
 	- Select the **Home - Microsoft 365 admin center** tab in your Edge browser. In the **Microsoft 365 admin center**, select **Compliance** in the navigation pane to open the Microsoft Purview portal.
 	
-	- In the **Microsoft Purview** portal, select **Content search** in the navigation pane.
+	- In the **Microsoft Purview** portal, select **Solutions**, and then select **eDiscovery** in the navigation pane.
+
+	- Under the **Classic eDiscovery** section, select **Content Search**.
 	
 	- On the **Content search** page, the **Search** tab is displayed by default. In the list of searches, select **Confidential search**.
 	

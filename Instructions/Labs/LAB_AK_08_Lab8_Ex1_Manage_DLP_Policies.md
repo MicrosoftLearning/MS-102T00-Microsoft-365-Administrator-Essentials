@@ -10,7 +10,7 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In **Microsoft Edge**, the Microsoft Purview portal should still be open; if not, then open a new tab and navigate to **https://compliance.microsoft.com**.
+2. In **Microsoft Edge**, the Microsoft Purview portal should still be open; if not, then open a new tab and navigate to **https://purview.microsoft.com**.
 
 3. In the **Microsoft Purview** portal, select **Solutions** in the navigation pane. In the **Solutions** menu, select **Data Loss Prevention**. In the **Data Loss Prevention** menu, select **Policies**.
 
