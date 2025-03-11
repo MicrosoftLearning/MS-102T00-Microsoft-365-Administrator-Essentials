@@ -1,4 +1,4 @@
-# Learning Path 6 - Lab 6 - Exercise 7 - Validate alert nofications and simulated attacks
+# Learning Path 6 - Lab 6 - Exercise 7 - Validate alert notications and simulated attacks
 
 This lab included three exercises in which you configured Microsoft 365 to create alert notifications (Exercises 2 through 4). It also included two exercises that created simulated attacks (Exercises 5 and 6). All five exercises generated an email notification, which have to be validated to ensure the alerts and simulated attacks are working properly. 
 
@@ -23,7 +23,7 @@ In Lab 6, Exercise 2, you configured an alert designed to notify Lynne Robbins w
 
 6. In your Edge browser, close the **View Alerts - Microsoft Defender** tab. Leave Lynne's **Outlook** tab open, as you will use that in the next task.
 
-7. Leave your Edge browswer opon on the LON-CL2 VM. Do not close Lynne's mailbox as you will access it again in the next task.
+7. Leave your Edge browser open on the LON-CL2 VM. Do not close Lynne's mailbox as you will access it again in the next task.
 
 You have just successfully tested a mailbox permission alert that sent an alarm message on granting FullAccess to a user mailbox.
 
@@ -57,7 +57,7 @@ In Lab 6, Exercise 4, you created a default Microsoft 365 alert policy that noti
 
 5. The **Microsoft Defender** portal displays the **Alerts** window, and it automatically opens the **eDiscovery search started or exported** pane for this alert activity that triggered the email. Scroll down through this pane and review all the information for this alert activity. When you are done, select **Close** to close the pane.
 
-6. While this exercise was about validating the alert that was generatred when running an eDiscovery search, you can perform the following steps if you're interested in viewing the statistics that were generated from this search:
+6. While this exercise was about validating the alert that was generated when running an eDiscovery search, you can perform the following steps if you're interested in viewing the statistics that were generated from this search:
 
 	- Select the **Home - Microsoft 365 admin center** tab in your Edge browser. In the **Microsoft 365 admin center**, select **Compliance** in the navigation pane to open the Microsoft Purview portal.
 	

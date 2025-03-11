@@ -145,13 +145,13 @@ To turn off this setting, you must create a policy for Office apps in the Micros
 
 6. On the **Start with the basics** page, enter **Turn off Send to Kindle setting** in the **Name** field and then select **Next**.
 
-7. On the **Choose the scope** page, select the **This policy configuration applies to all users** option and then selet **Next**.
+7. On the **Choose the scope** page, select the **This policy configuration applies to all users** option and then select **Next**.
 
 8. On the **Configure Settings** page, note the metrics that are displayed above the list of settings. There are over 2200 Office app settings for your tenant configuration. To quickly locate this setting, enter **Kindle** in the **Search** field and then press **Enter**. This should display any policies with **Kindle** in the policy name.
 
 9. As you can see, there's only one Kindle setting, which is **Turn off Send to Kindle**. Select this setting, which opens the **Turn off Send to Kindle** pane.
 
-10. In the **Turn off Send to Kindle** pane, the plaforms and applications that this setting applies to are displayed. Under the the description, select the **Show more** option. Finish reading the complete description of this setting.
+10. In the **Turn off Send to Kindle** pane, the platforms and applications that this setting applies to are displayed. Under the description, select the **Show more** option. Finish reading the complete description of this setting.
 
 11. Select the drop-down arrow in the **Configuration setting** field. In the drop-down menu that appears, select **Enabled**.
 

@@ -39,7 +39,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 	When designing your new passwords, keep in mind Microsoft's password guidelines: <br>
 
-	- Minimum length of 8 character, with at least:
+	- Minimum length of 8 characters, with at least:
 	   - 1 uppercase character
 	   - 1 lowercase character
 	   - 1 special character

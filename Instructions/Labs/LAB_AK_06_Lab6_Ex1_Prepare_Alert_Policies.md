@@ -47,7 +47,7 @@ Perform the following steps to assign Lynne Robbins the Compliance Data Administ
 
 10. In the **Edit members of the role group** window, Lynne's name should appear. Select **Next**.
 
-11. In the **Review the role group and finish** window that appears, note that Lynne also appear here as a member of the role group. Select **Save.**
+11. In the **Review the role group and finish** window that appears, note that Lynne also appears here as a member of the role group. Select **Save.**
 
 12. In the **You successfully updated the role group** pane, select **Done**.
 

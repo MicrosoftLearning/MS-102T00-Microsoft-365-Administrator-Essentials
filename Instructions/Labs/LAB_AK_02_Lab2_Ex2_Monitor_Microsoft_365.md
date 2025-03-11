@@ -4,7 +4,7 @@ In this exercise you will be introduced to some troubleshooting tools in Microso
 
 ### Task 1 - Troubleshoot Mail Flow in Microsoft 365  
 
-Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare herself for any potential mail flow problems that may occur within Adatum’s Exchange environment. As part of her pilot project, she has decided to create two test scenarios to analyze some of the troubleshooting options available to her. One email will be sent to an email address with an invalid domain (@alt.none). Another will be sent to an address with an invalid mailbox in a valid domain (@outlook.com). This task guides Holly though a variety of tools that she can use to troubleshoot different mail conflict scenarios. 
+Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare herself for any potential mail flow problems that may occur within Adatum’s Exchange environment. As part of her pilot project, she has decided to create two test scenarios to analyze some of the troubleshooting options available to her. One email will be sent to an email address with an invalid domain (@alt.none). Another will be sent to an address with an invalid mailbox in a valid domain (@outlook.com). This task guides Holly through a variety of tools that she can use to troubleshoot different mail conflict scenarios. 
 
 1. You should still be logged into LON-CL1 after having completed the prior exercise, and you should still be logged into Microsoft 365 as Holly Dickson.
 

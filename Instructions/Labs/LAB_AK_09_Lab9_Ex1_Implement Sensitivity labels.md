@@ -76,7 +76,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 2. In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, select **Solutions** in the navigation pane. In the **Solutions** menu that appears, select **Information Protection**. In the **Information Protection** menu, select **Sensitivity labels**.
 
-3. On the **Sensitivty labels** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen. This initiates the **New sensitivity label** wizard.
+3. On the **Sensitivity labels** page, select the **+Create a label** option that appears on the menu bar in the middle of the screen. This initiates the **New sensitivity label** wizard.
 
 4. In the **New sensitivity label** wizard, on the **Provide basic details for this label** page, enter the following information:
 
@@ -336,7 +336,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 24. In the email, select the attached file to open it.
 
-25. In the **Your privacy option** window that appears, select **Close**. The document opens in **Word on the Web** in a new browser tab titled **ProtectedDocument1.docx** tab. Note how the document appears in the Reading View in **Word on the Web**. This is Joni's indication that she has View only permission and can't edit the document. To verify this, try to select into the the document. Note the message that appears indicating: **Read only. This document is read-only.** Note the watermark specified in the **Project - Falcon** policy. <br/>
+25. In the **Your privacy option** window that appears, select **Close**. The document opens in **Word on the Web** in a new browser tab titled **ProtectedDocument1.docx** tab. Note how the document appears in the Reading View in **Word on the Web**. This is Joni's indication that she has View only permission and can't edit the document. To verify this, try to select into the document. Note the message that appears indicating: **Read only. This document is read-only.** Note the watermark specified in the **Project - Falcon** policy. <br/>
 
 	Once you have finished reviewing the document, close the **ProtectedDocument1.docx** tab. 
 
@@ -365,7 +365,7 @@ To verify whether the protection that you assigned to the document works, you wi
 	- Select the **ProtectedDocument1** tab in your browser and then on the right-side of the menu bar select the **Share** button. In the drop-down menu that appears, select **Share**. 
 	- In the **Share "ProtectedDocument1"** window, enter **Joni** in the **Add a name, group, or email** field and then select **Joni Sherman**.
  	- To the right of Joni's name is a pencil (**Can edit**) icon. This is the default permission when sharing a document. Select the **Copy link** button to see what happens.
- 	- Note the **Link copied** message that appears. The message indicates that anyone can edit the document, even though you specifed Joni's name. This isn't what you want, which is to limit Joni as the only person who can edit it. To put that restriction in place, select the gear (**Link settings**) icon next to the **Copy link** button. 
+ 	- Note the **Link copied** message that appears. The message indicates that anyone can edit the document, even though you specified Joni's name. This isn't what you want, which is to limit Joni as the only person who can edit it. To put that restriction in place, select the gear (**Link settings**) icon next to the **Copy link** button. 
 	- On the **Link settings** window that appears, select the **People you choose** option. This option is the key to limiting the permission to selected users. 
 	- Under **More settings**, if **Can edit** appears, then select **Apply**. However, if **Can view** appears, then select **Can view**, and in the menu that appears, select **Can edit** and then select **Apply**. 
 	- In the **Share "ProtectedDocument1"** window, select the **Copy link** button.

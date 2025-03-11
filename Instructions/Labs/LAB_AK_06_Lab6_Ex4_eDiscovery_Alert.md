@@ -64,7 +64,7 @@ To test this default alert, Holly Dickson will create an eDiscovery search. This
 
 6. Under **Classic eDiscovery**, select **Content Search**.
 
-	>**Note**: Ensure you select **Content Search** and **NOT** the version with \(preview\) after it's name.
+	>**Note**: Ensure you select **Content Search** and **NOT** the version with \(preview\) after its name.
 
 7. The **Content search** window has two tabs - a **Search** tab and an **Export** tab. The **Search** tab is displayed by default. Select the **+New search** option that appears on the menu bar. This initiates the **New search** wizard.
 

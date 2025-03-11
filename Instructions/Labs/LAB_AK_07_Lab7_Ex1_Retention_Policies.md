@@ -1,6 +1,6 @@
 # Learning Path 7 - Lab 7 - Exercise 1 - Configure In-place Archiving and Retention Policies  
 
-In this exercise, you will use the the Microsoft Exchange admin center to enable In-place archiving for Holly Dickson's mailbox. You will then configure two retention policies through the Microsoft Purview portal. 
+In this exercise, you will use the Microsoft Exchange admin center to enable In-place archiving for Holly Dickson's mailbox. You will then configure two retention policies through the Microsoft Purview portal. 
 
 ### Task 1 – Activate In-Place Archiving for a new user's mailbox
 
@@ -21,7 +21,7 @@ In this next phase of your Adatum pilot project, you will access the Microsoft E
 
 5. In the **Manage mailbox archive** pane that appears, select the toggle switch for **Mailbox archive status** to change it to **Enabled**. Select **Save** and then close the pane.
 
-6. It might take a few moments to create Holly's archive mailbox. Once a message appears indicating **Mailbox archiving successfully updated**, selec the X in the upper right corner of th pane to close it. 
+6. It might take a few moments to create Holly's archive mailbox. Once a message appears indicating **Mailbox archiving successfully updated**, select the X in the upper right corner of the pane to close it. 
 
 7. On the **Manage mailboxes** page, select the **Refresh** icon on the menu bar above the list of users. Holly's archive mailbox should now be **Active** once the archive mailbox is created. You may have to wait a minute or two and refresh again until **Active** appears.
 
@@ -52,7 +52,7 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 10. On the **Choose where to apply this policy** page, the **Exchange email** location should now indicate that **2 mailboxes** are included. <br/>
 
-	Since this policy will only apply to Exchange email for Joni and Lynne, set the **Status** toggle switch to **Off** for all other locations in which it's currently set to On (**SharePoint classic and communcation sites**, **OneDrive accounts**, and **Microsoft 365 Group mailboxes & sites**). Select **Next**.
+	Since this policy will only apply to Exchange email for Joni and Lynne, set the **Status** toggle switch to **Off** for all other locations in which it's currently set to On (**SharePoint classic and communication sites**, **OneDrive accounts**, and **Microsoft 365 Group mailboxes & sites**). Select **Next**.
 
 11. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
 
