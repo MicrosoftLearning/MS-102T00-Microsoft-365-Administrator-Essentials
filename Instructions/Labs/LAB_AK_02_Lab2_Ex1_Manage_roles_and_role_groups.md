@@ -111,7 +111,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	As you can see after having run this command, you must scroll through the list of role templates looking for the Service Support Administrator role. You can easily see how this can be tedious, even with the table sorted. As an alternative, run the following command to query for a specific role template - in this case, the "Service Support Administrator" role template: <br/>
 
- 		Get-MgDirectoryRoleTemplate | ? DisplayName -eq "Service Support Administrator" | Format-Table Id, DisplayName
+ 		Get-MgDirectoryRoleTemplate | Where-Object DisplayName -eq "Service Support Administrator" | Format-Table Id, DisplayName
 
 	After having run this command, you can see that it displays only the requested role template. Obviously, there may be times when displaying the entire list of role templates is necessary. But when you need to look up a single role template, running the second PowerShell command will be much more efficient than having to scroll through the entire list of templates.
 
