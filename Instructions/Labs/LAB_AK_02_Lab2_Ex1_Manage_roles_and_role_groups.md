@@ -170,7 +170,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 10. On the taskbar, select the **Microsoft Edge** icon. Maximize your Edge browser window if necessary.
 
-11. In your **Edge** browser navigate to **https://portal.office.com**. 
+11. In your **Edge** browser navigate to **https://www.microsoft365.com**. 
 
 12. You will begin by signing into Microsoft 365 as **Joni Sherman**. In the **Sign-in** window, enter **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Since you're signing in as Joni Sherman, enter this **User Password** provided by your lab hosting provider in the **Enter password** window. <br>
 
@@ -252,7 +252,7 @@ In this task, you will begin by examining the administrative properties of two u
 
 42. You previously blocked Alex Wilber from being able to sign in. To verify whether he is blocked, you will attempt to sign in as Alex. Log out of Microsoft 365 by selecting the user icon for **Lynne Robbins** (the circle with Lynne's picture in the top corner), and in the **Lynne Robbins** window that appears, select **Sign out.** 
 
-43. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://portal.office.com**. 
+43. As a best practice, close all your browser tabs except for the **Sign out** tab once you have been signed out. On the **Sign out** tab, navigate to **https://www.microsoft365.com**. 
 
 44. In the **Pick an account** window, select **Use another account**. In the **Sign in** window, enter **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Enter password** window, enter the **User Password** provided by your lab hosting provider.  <br/>
 

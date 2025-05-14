@@ -51,7 +51,7 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 5. On the taskbar at the bottom of your screen, select the **Microsoft Edge** icon. If necessary, maximize your browser window when it opens.
 
-6. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
+6. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://www.microsoft365.com** 
 
 7. In the **Sign in** dialog box, enter the **Administrative Username** provided by your lab hosting provider (this is the MOD Administrator account) for your Microsoft 365 trial tenant. The username should be in the form of **admin@xxxxxZZZZZZ.onmicrosoft.com**, where xxxxxZZZZZZ is the tenant prefix assigned by your lab hosting provider. Select **Next**. <br/>
 
@@ -215,7 +215,7 @@ Custom themes must be associated with one or more Microsoft 365 groups. Therefor
 28. Remain logged into **LON-CL1** with Microsoft Edge open to the **Microsoft 365 admin center** for the next task.
 
 
-### ‎Task 3 - Enable Information Rights Management for SharePoint Online 
+### Task 3 - Enable Information Rights Management for SharePoint Online 
 
 In this task, you will turn on Information Rights Management (IRM) for SharePoint Online. 
 
@@ -248,7 +248,9 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 2. Maximize your PowerShell window. In **Windows PowerShell**, type the following command at the command prompt to install the Microsoft Graph PowerShell module from the PowerShell Gallery and then press Enter: <br/>
 
-		Install-Module Microsoft.Graph -Scope CurrentUser
+	```powershell
+	Install-Module Microsoft.Graph -Scope CurrentUser
+	```
 
 3. You will be prompted to confirm whether you want to install the module from an untrusted repository (PSGallery). Enter **A** to select **[A] Yes to All** and then press Enter.  <br/>
 
@@ -258,27 +260,36 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 
 4. A command prompt will appear once Microsoft Graph PowerShell has been installed. You will now display the list of sub-modules that were installed. To do so, run the following command:
 
-		Get-InstalledModule Microsoft.Graph.* | select *name*
+	```powershell
+	Get-InstalledModule Microsoft.Graph.* | select *name*
+	```
 
 5. Verify the list of installed sub-modules includes the following three sub-modules that will be used in later lab exercises: 
 
+	```powershell
 	- Microsoft.Graph.Groups
 	- Microsoft.Graph.Identity.DirectoryManagement
  	- Microsoft.Graph.Users
+	```
   	
-    If all three sub-modules appear in the list of installed sub-modules, then proceed to the next step. However, if any of these three sub-modules do not appear in the list, then run the following PowerShell command to manually install the missing sub-module:
+	If all three sub-modules appear in the list of installed sub-modules, then proceed to the next step. However, if any of these three sub-modules do not appear in the list, then run the following PowerShell command to manually install the missing sub-module:
 
-		Install-Module -Name <module name> -Scope CurrentUser
+	```powershell
+	Install-Module -Name <module name> -Scope CurrentUser
+	```
+	For example, if the Microsoft.Graph.Identity.DirectoryManagement module did not install, then you would run the following command:
 
-    For example, if the Microsoft.Graph.Identity.DirectoryManagement module did not install, then you would run the following command:
+	```powershell
+	Install-Module -Name Microsoft.Graph.Identity.DirectoryManagement
+	```
 
-		Install-Module -Name Microsoft.Graph.Identity.DirectoryManagement
+6. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **RemoteSigned** enables Holly to load all signed configuration files and run all signed scripts. At the command prompt, type the following command, and then press Enter:   <br/>
 
-6. PowerShell's execution policy settings dictate what PowerShell scripts can be run on a Windows system. Setting this policy to **Unrestricted** enables Holly to load all configuration files and run all scripts. At the command prompt, type the following command, and then press Enter:   <br/>
+	```powershell
+	Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+	```
 
-		Set-ExecutionPolicy RemoteSigned
-
-	‎If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
+	If you are prompted to verify that you want to change the execution policy, enter **A** to select **[A] Yes to All.** 
 
 7. Leave your PowerShell window open as you will use it in the next task.
 
@@ -290,30 +301,37 @@ In Lab 6, you will create Alert Policies using the Microsoft Defender portal. Ho
 
 2. In your PowerShell window, run the following command to install the Exchange Online Management module, which contains the cmdlet to turn on audit logging:
 
-		Install-Module ExchangeOnlineManagement
+	```powershell
+	Install-Module ExchangeOnlineManagement
+	```
 
 3. You will be prompted to confirm whether you want to install the module from an untrusted repository (PSGallery). Enter **A** to select **[A] Yes to All** and then press Enter.
 
 4. A command prompt will appear once the Exchange Online Management module has been installed. Run the following command to connect to the module:
 
-		Connect-ExchangeOnline
+	```powershell
+	Connect-ExchangeOnline
+	```
 
 5. A **Sign in** window will appear requesting your credentials. Enter the MOD Administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process. 
 
 6. At the command prompt, run the following command to turn on audit logging:
 
-		Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+	```powershell
+	Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+	```
 
-    **Note:** A warning message will be displayed indicating the admin audit log configuration change that you requested could take up to 60 minutes to take effect throughout the system. This is why you're enabling this feature now rather than waiting for the Alert Policy labs later in this course. 
+	>**Note:** A warning message will be displayed indicating the admin audit log configuration change that you requested could take up to 60 minutes to take effect throughout the system. This is why you're enabling this feature now rather than waiting for the Alert Policy labs later in this course. 
 
 7. At the command prompt, run the following command to confirm that audit logging is enabled:
 
-		AdminAuditLogConfig 
+	```powershell
+	AdminAuditLogConfig 
+	```
 
 8. In the list of properties that's displayed, verify the **UnifiedAuditLogIngestionEnabled** property is set to  **True**.
 
 9. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
-
 
 Congratulations! You have completed all the steps to initialize your lab tenant. You are now ready to perform the remaining lab exercises.
 

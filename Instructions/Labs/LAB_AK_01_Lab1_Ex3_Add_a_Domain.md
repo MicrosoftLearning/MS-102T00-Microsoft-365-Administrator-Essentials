@@ -32,13 +32,15 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 5. Maximize your PowerShell window. In **Windows PowerShell**, type the following command at the command prompt to create a new Forward Lookup Zone in your on-premises DNS. When doing so, replace **xxxUPNxxx** with the unique UPN name (tenant prefix) assigned to your tenant by your lab hosting provider, and replace **xxxCustomDomainxxx.xxx** with your lab hosting provider's custom domain name. <br/>
 
-		dnscmd /zoneadd xxxUPNxxx.xxxCustomDomainxxx.xxx /DsPrimary
-    
+	```cmd
+	dnscmd /zoneadd xxxUPNxxx.xxxCustomDomainxxx.xxx /DsPrimary
+	```
+
 6. Minimize your Windows PowerShell window (do NOT close it as you will use it later).
 
 7. On the taskbar at the bottom of your screen, select the **Microsoft Edge** icon. If necessary, maximize your browser window when it opens.
 
-8. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com** 
+8. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://admin.office.com** 
 
 9. In the **Sign in** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Select **Next**.
 
@@ -46,57 +48,51 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 11. In the **Stay signed in?** window, select **Don't show this again** and then select **Yes**. In the **Save password** window, select **Never**.
 
-12. If a **Welcome to Microsoft 365** dialog box appears in the middle of the screen, there's no option to close it. Instead, to the right of the window, select the right arrow icon (**>**) two times and then select the check mark icon to advance through the slides in this messaging window. 
+12. In the **Microsoft 365 admin center**, select **...Show all** in the navigation pane, select **Settings**, and then under the **Settings** group select **Domains**. 
 
-13. If a **Find more apps** or **Introducing Microsoft Feed** or any other introductory-type window appears, select the **X** in the top corner of the window to close it. 
+13. On the **Domains** page, note that in the list of domains, only the **xxxxxZZZZZZ.onmicrosoft.com** domain appears. The existing on-premises **adatum.com** domain does not appear in the list of Microsoft 365 domains. To add Adatum's new Microsoft 365 domain, select **+Add domain** in the menu bar that appears above the list of domains. This will start the **Add domain** setup wizard. 
 
-14. The **Welcome to Microsoft 365** page appears in your Edge browser in the **Home | Microsoft 365** tab. This is Holly's Microsoft 365 home page. In the column of application icons that appears on the far left-side of the screen, select **Admin**. This opens the Microsoft 365 admin center in a new browser tab. 
+14. In the **Add domain** setup wizard, on the **Add a domain** page, enter the new domain name in the **Domain name** field. This should be the same domain name that you entered in the PowerShell command in step 5 when you created the new zone in DNS. Then select the **Use this domain** button that appears at the bottom of the page. 
 
-15. In the **Microsoft 365 admin center**, select **...Show all** in the navigation pane, select **Settings**, and then under the **Settings** group select **Domains**. 
+15. In the **Verify you own your domain** page, you must select a verification method to prove you own the domain. For this lab, verify the **Add a TXT record to the domain's DNS records** option is selected by default (select this option if necessary) and then select **Continue**. 
 
-16. On the **Domains** page, note that in the list of domains, only the **xxxxxZZZZZZ.onmicrosoft.com** domain appears. The existing on-premises **adatum.com** domain does not appear in the list of Microsoft 365 domains. To add Adatum's new Microsoft 365 domain, select **+Add domain** in the menu bar that appears above the list of domains. This will start the **Add domain** setup wizard. 
+16. On the **Add a record to verify ownership** page, you must copy the **TXT value** (NOT the TXT name) so that you can configure the domain later on in DNS Manager. To do so, select the **Copy record** icon that appears to the left of the **TXT value** (to the left of **MS=msXXXXXXXX**). If a dialog box appears, select **Allow access** to copy this value from the webpage to your clipboard.  <br/>
 
-17. In the **Add domain** setup wizard, on the **Add a domain** page, enter the new domain name in the **Domain name** field. This should be the same domain name that you entered in the PowerShell command in step 5 when you created the new zone in DNS. Then select the **Use this domain** button that appears at the bottom of the page. 
+    >**IMPORTANT:** Do NOT select the **Verify** button at this point; instead, proceed to the next step. However, if you did select the **Verify** button, you will receive an error indicating the system could not find the record you added for this domain (you can do this if you want to see the error; there is no harm in it). Therefore, you must complete the next series of steps to add the TXT record to this domain in **DNS Manager**. Once you finish that process, you will be instructed to return back to this page and select the **Verify** button so that you can complete the process of adding this domain in the Microsoft 365 admin center. Therefore, proceed to the next step now.
 
-18. In the **Verify you own your domain** page, you must select a verification method to prove you own the domain. For this lab, verify the **Add a TXT record to the domain's DNS records** option is selected by default (select this option if necessary) and then select **Continue**. 
+17. Before you can verify you own this domain in the **Add domain** wizard, you must first add a DNS record for this domain in Server Manager. Select the **Server Manager** icon that appears in your taskbar at the bottom of the page. Maximize the Server Manager window if necessary.
 
-19. On the **Add a record to verify ownership** page, you must copy the **TXT value** (NOT the TXT name) so that you can configure the domain later on in DNS Manager. To do so, select the **Copy record** icon that appears to the left of the **TXT value** (to the left of **MS=msXXXXXXXX**). If a dialog box appears, select **Allow access** to copy this value from the webpage to your clipboard.  <br/>
+18. In **Server Manager Dashboard,** select **Tools** in the top right corner of the window. In the drop-down menu that appears, select **DNS**, which will open **DNS Manager**. Maximize the DNS Manager window.
 
-    ‎**IMPORTANT:** Do NOT select the **Verify** button at this point; instead, proceed to the next step. However, if you did select the **Verify** button, you will receive an error indicating the system could not find the record you added for this domain (you can do this if you want to see the error; there is no harm in it). Therefore, you must complete the next series of steps to add the TXT record to this domain in **DNS Manager**. Once you finish that process, you will be instructed to return back to this page and select the **Verify** button so that you can complete the process of adding this domain in the Microsoft 365 admin center. Therefore, proceed to the next step now.
+19. In the **DNS Manager** window, in the **File Explorer** section in the left-hand pane, select **LON-DC1** to expand it (if necessary). Under LON-DC1, expand the **Forward Lookup Zones** folder. In the list of Forward Lookup Zones in the side pane, select the **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell. Make sure you select this zone in the file tree in the side pane and not in the middle detail pane.
 
-20. Before you can verify you own this domain in the **Add domain** wizard, you must first add a DNS record for this domain in Server Manager. Select the **Server Manager** icon that appears in your taskbar at the bottom of the page. Maximize the Server Manager window if necessary.
+20. Right-click on this **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously selected in the side pane. In the menu that appears, select **Other New Records...** (Note: If you mistakenly right-click on the zone in the middle detail pane, the **Other New Records...** option will be disabled).
 
-21. In **Server Manager Dashboard,** select **Tools** in the top right corner of the window. In the drop-down menu that appears, select **DNS**, which will open **DNS Manager**. Maximize the DNS Manager window.
+21. In the **Resource Record Type** window that appears, in the **Select a resource record type** field, scroll down and select **Text (TXT),** and then select the **Create Record...** button at the bottom of the window.
 
-22. In the **DNS Manager** window, in the **File Explorer** section in the left-hand pane, select **LON-DC1** to expand it (if necessary). Under LON-DC1, expand the **Forward Lookup Zones** folder. In the list of Forward Lookup Zones in the side pane, select the **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously added in Windows PowerShell. Make sure you select this zone in the file tree in the side pane and not in the middle detail pane.
+22. In the **New Resource Record** window that appears, in the **Text (TXT)** tab, leave the **Record name** field blank. However, right-click in the **Text** field and select **Paste** from the menu that appears. This will paste in the TXT value of **MS=msXXXXXXXX** that you copied to the clipboard when you were in the Microsoft 365 admin center.
 
-23. Right-click on this **xxxUPNxxx.xxxCustomDomainxxx.xxx** zone that you previously selected in the side pane. In the menu that appears, select **Other New Records...** (Note: If you mistakenly right-click on the zone in the middle detail pane, the **Other New Records...** option will be disabled).
+23. Select **OK** to create the record. 
 
-24. In the **Resource Record Type** window that appears, in the **Select a resource record type** field, scroll down and select **Text (TXT),** and then select the **Create Record...** button at the bottom of the window.
-
-25. In the **New Resource Record** window that appears, in the **Text (TXT)** tab, leave the **Record name** field blank. However, right-click in the **Text** field and select **Paste** from the menu that appears. This will paste in the TXT value of **MS=msXXXXXXXX** that you copied to the clipboard when you were in the Microsoft 365 admin center.
-
-26. Select **OK** to create the record. 
-
-27. In the **Resource Record Type** window, select **Done**. Note how this Text (TXT) record appears in the middle detail pane for the xxxUPNxxx.xxxCustomDomainxxx.xxx domain that you previously created. <br/>
+24. In the **Resource Record Type** window, select **Done**. Note how this Text (TXT) record appears in the middle detail pane for the xxxUPNxxx.xxxCustomDomainxxx.xxx domain that you previously created. <br/>
 
 	Leave your **DNS Manager** window open but minimize it as you will return to it in a later step in this task.  Minimize the **Server Manager** window as well. 
 
-28. You are now ready to return to the Microsoft 365 admin center and resume adding the domain record. If you’ll recall, when you were earlier adding the domain in the Microsoft 365 admin center, you indicated that you wanted to verify the domain using a TXT record. At that point you had to switch to DNS Manager and add the TXT record. Now that you’ve added the TXT record, you can go back to the Microsoft 365 admin center and proceed with the domain verification process.<br/>
+25. You are now ready to return to the Microsoft 365 admin center and resume adding the domain record. If you’ll recall, when you were earlier adding the domain in the Microsoft 365 admin center, you indicated that you wanted to verify the domain using a TXT record. At that point you had to switch to DNS Manager and add the TXT record. Now that you’ve added the TXT record, you can go back to the Microsoft 365 admin center and proceed with the domain verification process.<br/>
 
-	‎In your Edge browser, you should be back in the **Microsoft 365 admin center** tab that displays the **Add a record to verify ownership** page. The **TXT name** should display your UPN name (xxxUPNxxx) and the **TXT value** should display your MS=msXXXXXXXX value.
+	In your Edge browser, you should be back in the **Microsoft 365 admin center** tab that displays the **Add a record to verify ownership** page. The **TXT name** should display your UPN name (xxxUPNxxx) and the **TXT value** should display your MS=msXXXXXXXX value.
 
-29. Select the **Verify** button that appears at the bottom of the page.  <br/>
+26. Select the **Verify** button that appears at the bottom of the page.  <br/>
 
 	**Note:** If you selected **Verify** in the prior step when you copied the TXT value just to see the error that you would receive, the **Verify** button changed to **Try again**. In you did this, then select **Try again** rather than **Verify**. <br/>
 	
 	**WARNING:** It can sometimes take up 5 to 10 minutes for the DNS Manager change that you just made to propagate through the system, and sometimes it can take significantly longer depending on your registrar (in this case, your lab hosting provider). If you receive an error indicating the system could not detect the record that you added, wait 5 minutes and select the **Try again** button. Continue to do so every 5 minutes or so until the TXT record is successfully verified, at which point the **How do you want to connect to your domain?** window will appear.  <br/>
 
-    ‎**CAUTION:** If you had a typo or any other configuration mistakes, the domain will not be verified. If this occurs, the **How do you want to connect to your domain?** window in the next step will not appear. In this case, select the **Back** button to repeat this task. Take your time when configuring the domain to make sure you don’t run into similar issues at this step in the process.
+    **CAUTION:** If you had a typo or any other configuration mistakes, the domain will not be verified. If this occurs, the **How do you want to connect to your domain?** window in the next step will not appear. In this case, select the **Back** button to repeat this task. Take your time when configuring the domain to make sure you don’t run into similar issues at this step in the process.
 
-30. If your Text (TXT) record was successfully verified, the **How do you want to connect to your domain?** window will appear. Select **Continue**.
+27. If your Text (TXT) record was successfully verified, the **How do you want to connect to your domain?** window will appear. Select **Continue**.
 
-31. In the **Add DNS records** window, it enables you to add DNS records for three services that DNS supports - Exchange and Exchange Online Protection, Skype for Business, and Intune and Mobile Device Management for Microsoft 365. <br/>
+28. In the **Add DNS records** window, it enables you to add DNS records for three services that DNS supports - Exchange and Exchange Online Protection, Skype for Business, and Intune and Mobile Device Management for Microsoft 365. <br/>
 
 	**Exchange and Exchange Online Protection** is displayed by default and its check box is also selected by default. To see the other two services, scroll down and select **Advanced Options**. Note that under **Advanced Options**, neither the **Skype for Business** nor the **Intune and Mobile Device Management for Microsoft 365** check boxes are selected. This is sufficient for Adatum; you should NOT select either of these two check boxes. Only the **Exchange and Exchange Online Protection** check box should be selected. <br/>
 	
@@ -106,7 +102,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 	
 	Then select the forward arrows (**>**) in the **CNAME Records (1)** section and the **TXT Records (1)** section. All three record types should now be expanded.
 	
-32. You will begin by adding the **MX record** required by the **Exchange and Exchange Online Protection** service.  <br/>
+29. You will begin by adding the **MX record** required by the **Exchange and Exchange Online Protection** service.  <br/>
 
 	a. In the **MX Records (1)** section, under the **Points to address or value** column, select the copy icon that appears to the left of the expected value (for example, xxxUPNxxx-xxxCustomDomainxxx-xxx.mail.protection.outlook.com) to copy this value to the clipboard. If a dialog box appears, select **Allow access** to allow the webpage to copy the value to the clipboard.
 	
@@ -124,7 +120,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 	**Note:** Since you only created an MX Record in DNS Manager, an exclamation point in a red circle should appear next to the **CNAME records (1)** section and the **TXT Records (1)** section. **This is to be expected, since you have yet to create their corresponding DNS records.** Also, note that a message appears in a red message box at the top of the page indicating that it detected missing records. This too is to be expected since you only created the MX record and not the CNAME and TXT records. Ignore this message. 
 
-33. Once a checkmark appears next to **MX Records (1)**, you must perform the following steps to add the **CNAME record** required by Exchange and Exchange Online Protection service.  <br/>
+30. Once a checkmark appears next to **MX Records (1)**, you must perform the following steps to add the **CNAME record** required by Exchange and Exchange Online Protection service.  <br/>
 
 	a. On the **Add DNS records** page, in the **CNAME Records (1)** section, under the **Points to address or value** column, select the copy icon that appears to the left of the expected value (for example, autodiscover.outlook.com). <br/>
 		
@@ -152,7 +148,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 	**Note:** Sometimes during our testing of this lab, we experienced a quirky situation when validating the CNAME record. While the CNAME record validated successfully, the MX Records (1) section, which previously displayed a green check mark, suddenly displayed a red exclamation point and an error message indicating that it couldn't find the MX record. If this occurs, simply ignore this error. Once we validated the final TXT record at then end of the lab, all three records validated successfully. Therefore, this strange situation in which it said that it couldn't validate the MX record after having previously validated it is just an anomaly that you can ignore. 
 	
-34. Once a checkmark appears next to **CNAME Records (1)**, you will finish by adding the **TXT record** required by Exchange and Exchange Online Protection service.  <br/>
+31. Once a checkmark appears next to **CNAME Records (1)**, you will finish by adding the **TXT record** required by Exchange and Exchange Online Protection service.  <br/>
 
 	a. On the **Add DNS records** page, in the **TXT Records (1)** section, under the **TXT value** column, select the copy icon that appears to the left of the expected value (for example, v=spf1 include:spf.protection.outlook.com -all) to copy this value to the clipboard.
 
@@ -168,20 +164,20 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 	
 	g. On the **Resource Record Type** window, select **Done**. 
 
-35. In **DNS Manager**, you should now see the TXT record that you originally created to verify the domain, along with the MX, CNAME, and TXT records that you created for the Exchange service to work within this domain. <br/>
+32. In **DNS Manager**, you should now see the TXT record that you originally created to verify the domain, along with the MX, CNAME, and TXT records that you created for the Exchange service to work within this domain. <br/>
 
 	Minimize the **DNS Manager** window. 
 
-36. This should return you to the **Add DNS records** page in your Edge browser. Select **Continue** to complete the new domain setup. If you selected **Continue** after adding the MX and CNAME records, and if each validated successfully, then only the TXT record will be validated at this point. However, if you did not select **Continue** after adding the MX and CNAME records, then all three records will be validated at this point. <br/>
+33. This should return you to the **Add DNS records** page in your Edge browser. Select **Continue** to complete the new domain setup. If you selected **Continue** after adding the MX and CNAME records, and if each validated successfully, then only the TXT record will be validated at this point. However, if you did not select **Continue** after adding the MX and CNAME records, then all three records will be validated at this point. <br/>
 	
 	If all three records have been successfully validated, then the **Domain setup is complete** page will appear. If this occurs, then select the **Done** button to complete the domain setup process. <br/>
 	
 	However, if any of the three records did not validate successfully, then the **Add DNS records** window will return, and it will display either a checkmark or an exclamation point next to each record type to indicate which ones validated successfully and which ones did not. An exclamation point in a red circle indicates that there was a problem with the corresponding DNS record and it did not validate successfully (note that the Actual value for the record is left blank). If this occurs, you must correct the data on the corresponding record in DNS Manager and then select **Continue** again. You must repeat this process until all three records have successfully validated and the **Domain setup is complete** page appears.
 
-37. Once the domain setup process is complete and the three DNS records validated successfully for the **Exchange and Exchange Online Protection** service, the **Domains** page will be displayed. Verify the **Domain status** is **Healthy** for the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain, which should now appear in the list of domains. This new domain should also be flagged as the Default domain for Adatum. 
+34. Once the domain setup process is complete and the three DNS records validated successfully for the **Exchange and Exchange Online Protection** service, the **Domains** page will be displayed. Verify the **Domain status** is **Healthy** for the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain, which should now appear in the list of domains. This new domain should also be flagged as the Default domain for Adatum. 
 
-38. Holly is not yet ready to implement the new domain in Adatum's Microsoft 365 deployment. Therefore, ensure the **xxxxxZZZZZZ.onmicrosoft.com** domain is still listed as the default domain. If it is not, select the vertical ellipsis (**More actions**) icon to the right of the domain, and then select **Set as default**.
+35. Holly is not yet ready to implement the new domain in Adatum's Microsoft 365 deployment. Therefore, ensure the **xxxxxZZZZZZ.onmicrosoft.com** domain is still listed as the default domain. If it is not, select the vertical ellipsis (**More actions**) icon to the right of the domain, and then select **Set as default**.
 
-39. Remain logged into the LON-DC1 VM with both **Microsoft Edge** and **Windows PowerShell** left open. You will return to LON-DC1 in a later lab that performs identity synchronization. 
+36. Remain logged into the LON-DC1 VM with both **Microsoft Edge** and **Windows PowerShell** left open. You will return to LON-DC1 in a later lab that performs identity synchronization. 
 
 # End of  Lab 1

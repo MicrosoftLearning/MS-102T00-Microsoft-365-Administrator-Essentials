@@ -6,7 +6,7 @@ Having created a Safe Attachments policy, Holly Dickson now wants to create a Sa
 
 ### Task 1 – Create a Safe Links Policy
 
-In this task, you will create a Safe Links policy that applies to all users in your tenant. You will then add the **http://tailspintoys.com** URL to the company-wide list of blocked URLs (i.e. the Tenant Block List) that you will define in the Microsoft Defender portal. The blocked URLs and other options defined in the Safe Links global settings are only applied to users who are included in active Safe Links policies. There is no built-in or default Safe Links policy, so you must create at least one Safe Links policy for these global settings to be active.  
+In this task, you will create a Safe Links policy that applies to all users in your tenant. You will then add the **https://tailspintoys.com** URL to the company-wide list of blocked URLs (i.e. the Tenant Block List) that you will define in the Microsoft Defender portal. The blocked URLs and other options defined in the Safe Links global settings are only applied to users who are included in active Safe Links policies. There is no built-in or default Safe Links policy, so you must create at least one Safe Links policy for these global settings to be active.  
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
@@ -42,7 +42,7 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 14. On the **Tenant Allow/Block Lists** page, the **Domains & addresses** tab is displayed by default. Select the **URLs** tab.
 
-15. On the **URLs** tab, select **+Block** on the menu bar. In the **Block URLs** pane that appears, enter **http://tailspintoys.com/*** in the field and then select **Add**. <br/>
+15. On the **URLs** tab, select **+Block** on the menu bar. In the **Block URLs** pane that appears, enter **https://tailspintoys.com/*** in the field and then select **Add**.
 
       **Note:** When you enter the URL, make sure you enter the wildcard at the end of it. The * wildcard represents "any characters" and is used to match multiple URLs. When you enter **https://tailspintoys.com/*** , you're telling Microsoft 365 to block all URLs that start with https://tailspintoys.com/, including any subdirectories, paths, or additional characters after the domain. This ensures a broader and more effective block, covering any page or resource under the tailspintoys.com domain. If you enter https://tailspintoys.com without the wildcard (*), Microsoft 365 might interpret it as an exact match to that specific domain. As such, it may fail to block it because URLs on the web typically have paths, query strings, or other parts after the domain name. For example, https://tailspintoys.com/contact or https://tailspintoys.com/shop would not be blocked if you only specify https://tailspintoys.com without a wildcard.
 
@@ -99,7 +99,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 14. A row of formatting icons should appear. Select the **Link** icon, which depicts two half-ovals with a line in between. 
 
-15. In the **Insert link** window that appears, the text that you highlighted in the body of the message should be displayed in the **Display as** field. In the **Web address (URL)** field, enter the following URL: **http://tailspintoys.com/aboutus/freetoys**.
+15. In the **Insert link** window that appears, the text that you highlighted in the body of the message should be displayed in the **Display as** field. In the **Web address (URL)** field, enter the following URL: **https://tailspintoys.com/aboutus/freetoys**.
 
 16. Select **OK**. In the body of the email, the message should now be hyperlinked. 
 
@@ -131,7 +131,7 @@ After having waited at least 30 minutes since completing Task 1, you will now te
 
 25. On LON-CL1, you should still be in the **Sent Items** folder in Holly's Outlook mailbox. Select the email with the subject line "**Free stuff for Adatum users**" to open the email message, and then select the hyperlinked message in the body of the email. 
 
-26. A new tab should open in your **Edge** browser that attempts to take you to the **http://tailspintoys.com/aboutus/freetoys** site. The web page that appears should display the following warning message: **This website is classified as malicious.** <br/>
+26. A new tab should open in your **Edge** browser that attempts to take you to the **https://tailspintoys.com/aboutus/freetoys** site. The web page that appears should display the following warning message: **This website is classified as malicious.** <br/>
 
     **Note:** In the Safe Links policy that you created, you selected the option to have Safe Links check a list of known, malicious links whenever a user selects a link in an email. So when you selected this link in the email message to the http://tailspintoys.com URL that was on the blocked list, Safe Links returned the malicious website warning page. You just verified that the Safe Links policy that you created is working.
 

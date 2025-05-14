@@ -66,7 +66,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 	- On the first screen, select the **Start without your data** button.
 	- On the second screen, select the **Continue without this data** button.
 	- On the third screen, unselect (clear) the **Make your Microsoft experience more useful to you** check box and then select the **Confirm and start browsing** button.  
-	- In the Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com/**
+	- In the Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://www.microsoft365.com/**
 
 15. In the **Sign in** window, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**.
 
@@ -76,13 +76,13 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 18. In the **Welcome to Microsoft 365** dialog box that appears in the middle of the screen, select the forward arrow twice and then the check mark. 
 
-19. In the **Welcome to Microsoft 365** window (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
+19. In the **Welcome to Microsoft 365 Copilot** window (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
 
-	Select the **Install and more** button, and then in the drop-down menu that appears, select **Install Microsoft 365 apps**. This opens the **My account** window for Laura.
+	Select the **Install and more** button, and then in the drop-down menu that appears, select **Microsoft 365 apps**. This opens the **My account** window for Laura.
 
-20. In Laura's **My account** window, under the **Office apps & devices** tile, select **View apps & devices**. Note the message that appears at the top of page. Laura has not been assigned a license that includes the Office desktop apps, so she’s unable to install Microsoft 365 Apps for enterprise. <br/>
+20. In Laura's **My account** window, under the **Office Apps & devices** tile, select **View apps & devices**. Note the message that appears at the top of page. Laura has not been assigned a license that includes the Office desktop apps, so she’s unable to install Microsoft 365 Apps for enterprise. <br/>
 	
-	‎**Important:** You have just verified that a user can't download Microsoft 365 Apps for enterprise if they haven't been assigned an appropriate Microsoft 365 license. 
+	>**Important:** You have just verified that a user can't download Microsoft 365 Apps for enterprise if they haven't been assigned an appropriate Microsoft 365 license. 
 	
 21. Leave LON-CL2 open and remain signed into Microsoft 365 as Laura Atkins for the next task. In your Edge browser, close the **My account** tab and the **Welcome to Microsoft Edge** tab, but leave the **Home | Microsoft 365** tab open for the next task.
 
@@ -127,13 +127,9 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 	However, if you weren't able to save your custom theme, then you were instructed to update the Default theme to display the sign-in user's name. If you were unable to save your custom them, then the Default theme should apply, and you should see Laura's name. 
 
-13. In your browser, verify you're on the **Home | Microsoft 365** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the side pane because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
+13. In your browser, verify you're on the **Home | Microsoft 365 Copilot** tab. When you left off after the prior lab task, this page didn't display any Microsoft 365 apps in the side pane because Laura wasn't assigned a Microsoft 365 license. Let's see what happens now that Laura has been assigned a license. <br/>
 
 	Select the **Refresh** icon that appears to the left of the address bar at the top of your browser. <br/>
-
-	After refreshing the page, notice the Microsoft 365 app icons that now appear on the left-side of the screen because Laura has been assigned a Microsoft 365 license. <br/>
-
-	If a **Find more apps** window appears, select the **X** to close it.
 
 14. Select the **Install and more** button, and then in the drop-down menu, select **Install Microsoft 365 apps**.
 	
@@ -141,7 +137,7 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 16. In the **Apps & devices** window, a message is displayed under the **Office** section that indicates the admin has turned off Office installs. <br/>
 	
-	‎**Important:** You have just verified that a licensed user is unable to download Microsoft 365 Apps for enterprise if the global Office download setting has been turned Off.
+	>**Important:** You have just verified that a licensed user is unable to download Microsoft 365 Apps for enterprise if the global Office download setting has been turned Off.
 
 17. At this point Holly wants to turn the global Office download setting back On so that Laura can download Microsoft 365 Apps for enterprise. <br/>
 
@@ -159,13 +155,13 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 	To do this, switch back to **LON-CL2**.
 
-23. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. The **Office apps and devices** page should be displayed along with the message that indicated your admin has turned off Office installs. Since you just turned this global option back On, you need to refresh this page to see how it affects Laura’s ability to download Microsoft 365 Apps for enterprise. <br/>
+23. In **LON-CL2**, your Edge browser should still be open, and you should still be logged into Microsoft 365 as Laura Atkins. The **Office apps and devices** page should be displayed along with the message that indicated your admin has turned off Office installs. Since you just turned this global option back On, you need to refresh this page to see how it affects Laura’s ability to download Microsoft 365 Apps for enterprise.
 
 	Select the **Refresh** icon that appears to the left of the address bar at the top of your browser. 
 
-24. In the **My account** window that appears, under the **Office apps & devices** tile, an **Install Office** button appears along with a message indicating you can install Office on up to 5 PCs or Macs, 5 tablets, and 5 smartphones.  <br/>
+24. In the **My account** window that appears, under the **Office apps & devices** tile, an **Install Office** button appears along with a message indicating you can install Office on up to 5 PCs or Macs, 5 tablets, and 5 smartphones.
 	
-	‎**Important:** You have just verified that a user with a Microsoft 365 license is able to download Microsoft 365 Apps for enterprise if the global Office download setting is turned On. Do **NOT** select the **Install Office** button at this time. You will do that in the next task.
+	>**Important:** You have just verified that a user with a Microsoft 365 license is able to download Microsoft 365 Apps for enterprise if the global Office download setting is turned On. Do **NOT** select the **Install Office** button at this time. You will do that in the next task.
 
 25. Remain on LON-CL2 and continue to the next task to perform the user-driven installation for Laura Atkins.
 
@@ -176,9 +172,9 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 1. On **LON-CL2**, your Edge browser should be open, and you should be logged into Microsoft 365 as Laura Atkins. 
 
-2. You should still be in Laura’s **My account** window since this is where you left off at the end of the prior task. Under the **Office apps & devices** section, the **Install Office** button now appears since Laura is assigned a Microsoft 365 E5 license and the global Office download setting is turned On.<br/>
+2. You should still be in Laura’s **My account** window since this is where you left off at the end of the prior task. Under the **Office apps & devices** section, the **Install Office** button now appears since Laura is assigned a Microsoft 365 E5 license and the global Office download setting is turned On.
 
-	‎**Important:** Selecting this **Install Office** button will install the 64-bit, English version of Microsoft 365 Apps for enterprise. However, if you want to install a different language or version, then select **View apps & devices**, which opens the **Apps & devices** page; this enables you to select a different language and version of Microsoft 365 Apps for enterprise to install.  <br/>
+	>**Important:** Selecting this **Install Office** button will install the 64-bit, English version of Microsoft 365 Apps for enterprise. However, if you want to install a different language or version, then select **View apps & devices**, which opens the **Apps & devices** page; this enables you to select a different language and version of Microsoft 365 Apps for enterprise to install.  <br/>
 
 	Since Laura wants to install the 64-bit English version of Microsoft 365 Apps for enterprise, select the **Install Office** button now.
 		

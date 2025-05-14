@@ -153,7 +153,7 @@ To use Microsoft's Attack simulation training to simulate phishing attacks, Holl
 	- Select Holly's account icon (HD in a circle) at the top-right of the screen and in Holly's profile window, select **Sign out**.
 	- Once you're signed out, close your Edge browser. Doing so will clear your cache.
 	- Open a new Edge browser session.
-	- Enter the **https://portal.office.com** URL to open the Microsoft 365 home page.
+	- Enter the **https://www.microsoft365.com** URL to open the Microsoft 365 home page.
 	- In the **Pick an account** window, select Holly's account.
 	- In the **Enter password** window, enter the new Administrative Password that you assigned to Holly's account and select **Sign in**.
 	- From the **Microsoft 365 Home** page, select the **Admin** icon to navigate to the **Microsoft 365 admin center**.

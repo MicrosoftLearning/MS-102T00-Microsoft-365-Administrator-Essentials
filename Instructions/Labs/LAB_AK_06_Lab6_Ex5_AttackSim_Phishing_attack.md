@@ -32,7 +32,7 @@ To use Microsoft's Attack simulation training feature to simulate a phishing att
 
 9. Once you are signed out, close your Edge browser.
 
-10. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
+10. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://www.microsoft365.com/** 
 
 11. In the **Pick an account** window, select **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the new Administrative Password that you assigned to Holly's account. Select **Sign in**.
 

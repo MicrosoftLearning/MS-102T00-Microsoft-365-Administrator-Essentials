@@ -81,7 +81,7 @@ To test the Conditional Access policy that you just created, you will sign-out o
 
 1. On the LON-CL1 VM, the **Microsoft 365 admin center** should still be open in your Microsoft Edge browser from the prior task. You should be signed into Microsoft 365 as **Holly Dickson**. You will begin by signing out of Microsoft 365. On the **Microsoft 365 admin center** tab, select Holly's name in the upper right corner of your browser. In the **Holly Dickson** window that appears, select **Sign out.** 
 	
-2. Once you are signed out of Microsoft 365 as Holly, close your browser session to clear your cache. Then select the **Edge** icon on your taskbar to open a new browser session. In your browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
+2. Once you are signed out of Microsoft 365 as Holly, close your browser session to clear your cache. Then select the **Edge** icon on your taskbar to open a new browser session. In your browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://www.microsoft365.com/** 
 
 3. In the **Pick an account** window that appears, select **Use another account**. 
 
@@ -119,7 +119,7 @@ To test the Conditional Access policy that you just created, you will sign-out o
 
 17. On the **Microsoft 365 admin center** tab, select the icon for Adele's account in the upper right corner of your browser. In the **Adele Vance** window that appears, select **Sign out.** <br/>
 	
-18. Close your browser session to clear your cache. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://portal.office.com/** 
+18. Close your browser session to clear your cache. Select the **Edge** icon on your taskbar to open a new browser session. In your browser go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://www.microsoft365.com/** 
 
 19. In the **Pick an account** window, select **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. In the **Enter password** window, enter the new Administrative Password that you defined for all test users at the start of the lab and later assigned to Holly's account. Select **Sign in**.
 
@@ -140,7 +140,7 @@ To test the Conditional Access policy that you just created, you will sign-out o
 
 Pass-through Authentication allows users to sign-in to cloud-based services using their on-premises passwords. All user passwords are only stored locally in the on-premises domains and NEVER synchronized to the cloud. When a user signs-in, the PTA agent takes the credentials to the user's on-premises environment to verify whether the password is correct. It then sends the result back to Microsoft Entra ID (formerly Azure AD).   
 
-‎Adatum's CTO wants to provide the company's users with an improved sign-in experience (since PTA requires one less password to remember), as well as reduce Adatum’s IT helpdesk costs because with PTA their users are less likely to forget how to sign in. While this can also be achieved by employing Password Hash Synchronization as well as Active Directory Federation Services, Adatum has chosen to test PTA in its Microsoft 365 pilot project.
+Adatum's CTO wants to provide the company's users with an improved sign-in experience (since PTA requires one less password to remember), as well as reduce Adatum’s IT helpdesk costs because with PTA their users are less likely to forget how to sign in. While this can also be achieved by employing Password Hash Synchronization as well as Active Directory Federation Services, Adatum has chosen to test PTA in its Microsoft 365 pilot project.
 
 1.  In this task, you will be working from Adatum's domain controller, LON-DC1. <br/>
 
@@ -197,7 +197,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 4. You want to edit the group policy that includes your organization's account lockout policy. If necessary, in the root console tree in the side pane, expand **Forest:Adatum.com**, then expand **Domains**, and then expand **Adatum.com**.  <br/>
 
-	‎Under **Adatum.com**, right-click on **Default Domain Policy** and then select **Edit** in the menu.
+	Under **Adatum.com**, right-click on **Default Domain Policy** and then select **Edit** in the menu.
 
 5. Maximize the **Group Policy Management Editor** window that appears.
 

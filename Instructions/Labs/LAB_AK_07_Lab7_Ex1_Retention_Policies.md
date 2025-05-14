@@ -52,9 +52,11 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 10. On the **Choose where to apply this policy** page, the **Exchange email** location should now indicate that **2 mailboxes** are included. <br/>
 
-	Since this policy will only apply to Exchange email for Joni and Lynne, set the **Status** toggle switch to **Off** for all other locations in which it's currently set to On (**SharePoint classic and communcation sites**, **OneDrive accounts**, and **Microsoft 365 Group mailboxes & sites**). Select **Next**.
+	Since this policy will only apply to Exchange email for Joni and Lynne, set the **Status** toggle switch to **Off** for all other locations in which it's currently set to On (**SharePoint classic and communcation sites**, **OneDrive accounts**, and **Microsoft 365 Group mailboxes & sites**). 
+	
+11. Select **Next**.
 
-11. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
+12. On the **Decide if you want to retain content, delete it, or both** page, verify the **Retain items for a specific period** option is selected (if necessary, select it now). Then enter the following information for this option: <br/>
 
 	- Retain items for a specific period - select in this field, and in the drop-down menu that appears, select **Custom**. Three fields will appear - years, months, and days. For testing purposes, Holly wants to test email retention for emails in Joni and Lynne's mailboxes by only retaining emails that are less than one year old. As such, set the time periods to the following values: **Years - 1, Months - 0, Days - 0**.
 
@@ -62,15 +64,15 @@ As part of your pilot project for Adatum, you will configure email retention thr
 
 	- At the end of the retention period - **Delete items automatically**
 
-12. Select **Next**.
+13. Select **Next**.
 
-13. On the **Review and finish** page, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Once everything is correct, select **Submit**.
+14. On the **Review and finish** page, review your selections. If anything needs to be changed, select the appropriate **Edit** link and make the necessary changes. Once everything is correct, select **Submit**.
 
-14. On the **You successfully created a retention policy** window, select **Done**.
+15. On the **You successfully created a retention policy** window, select **Done**.
 
-15. On the **Retention policies** page, you should see your new policy in the list of retention policies.
+16. On the **Retention policies** page, you should see your new policy in the list of retention policies.
 
-16. Leave the **Retention policies** page open in your Edge browser as you will create another retention policy in the next task.
+17. Leave the **Retention policies** page open in your Edge browser as you will create another retention policy in the next task.
 
 
 ### Task 3 – Create an email retention policy for all users
