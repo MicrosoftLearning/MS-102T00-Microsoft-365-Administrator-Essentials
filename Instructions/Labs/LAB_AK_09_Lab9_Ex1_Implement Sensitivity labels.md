@@ -3,7 +3,7 @@
 
 In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator, you have Microsoft 365 deployed in a virtualized lab environment. As you proceed with your Microsoft 365 pilot project, your next steps are to implement Sensitivity Labels with Microsoft Purview Information Protection at Adatum. In this lab, you will create and publish a label, and you will test a published label. However, in doing so, you won't test the label that you create in this lab. You will test a different label.
 
-**Important:** When you publish a new sensitivity label and label policy, it can take them up to 24 hours to propagate through Microsoft 365. As such, you won't be able to test the label that you create in this lab. Instead, you will test a pre-existing sensitivity label named **Project - Falcon**. This pre-existing label is almost identical to the label that you will create, so you'll be able to see basically the same results had you been able to test the label that you created. 
+**Important:** When you publish a new sensitivity label and label policy, it can take them up to 24 hours to propagate through Microsoft 365. As such, you won't be able to test the label that you create in this lab. Instead, you will test a pre-existing sensitivity label named **All Employees**. This pre-existing label is almost identical to the label that you will create, so you'll be able to see basically the same results had you been able to test the label that you created. 
 
 
 ### Task 1 – Install the Microsoft Purview Information Protection client
@@ -221,17 +221,17 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 As outlined in the instructions at the start of this lab, it isn't possible to immediately test the sensitivity label and label policy that you created in the previous task. This is because it takes up to 24 hours for a new label policy to propagate through Microsoft 365 and for its label to become visible in applications like Microsoft Word and Outlook.
 
-Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. For this lab, you will use the **Project - Falcon** sensitivity label, which is a Highly Confidential label. This label is similar to the label that you created in the prior task - the one exception being that it doesn't include a header or footer. Using this pre-existing label will give you a good idea as to how the label that you created would work at Adatum.
+Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. For this lab, you will use the **Use Highly Confidential > All Employees** sensitivity label, which is a Highly Confidential label. This label is similar to the label that you created in the prior task - the one exception being that it doesn't include a header or watermark. Using this pre-existing label will give you a good idea as to how the label that you created would work at Adatum.
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**.
 
-2. You will first review the **Project-Falcon** sensitivity label that you'll be applying to a document in this task.  In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, select **Solutions** in the navigation pane. In the **Solutions** menu that appears, select **Information Protection**. In the **Information Protection** menus, select **Sensitivity labels**. 
+2. You will first review the **All Employees** sensitivity label that you'll be applying to a document in this task.  In your Edge browser, you should still have a tab open for the **Microsoft Purview** portal from the prior task. In the **Microsoft Purview** portal, select **Solutions** in the navigation pane. In the **Solutions** menu that appears, select **Information Protection**. In the **Information Protection** menus, select **Sensitivity labels**. 
 
-3. On the **Sensitivity Labels** page, in the list of labels, select the right arrow (**>**) next to **Highly Confidential** to show the sub-labels under this label. Doing so displays the pre-existing **Project - Falcon** label.
+3. On the **Sensitivity Labels** page, in the list of labels, select the right arrow (**>**) next to **Highly Confidential** to show the sub-labels under this label. Doing so displays the pre-existing **All Employees** label.
 
-4. Select the **Project - Falcon** label (not the check box; select the label name). Doing so opens a **Project - Falcon** details pane. Review the information defined for this label, then close the pane when you're done.  
+4. Select the **All Employees** label (not the check box; select the label name). Doing so opens a **All Employees** details pane. Review the information defined for this label, then close the pane when you're done.  
 
-5. You will now assign the **Project-Falcon** sensitivity label to a document. Select the **Home | Microsoft 365** tab in your browser to return to the Microsoft 365 home page. Select the **Apps** icon on the left-side of the screen. On the **Apps** page that appears, right-click on the **Word** tile and select **Open in new tab**. 
+5. You will now assign the **All Employees** sensitivity label to a document. Select the **Home | Microsoft 365** tab in your browser to return to the Microsoft 365 home page. Select the **Apps** icon on the left-side of the screen. On the **Apps** page that appears, right-click on the **Word** tile and select **Open in new tab**. 
 
 6. In the **Word | Microsoft 365** tab, under the **Create new** section at the top of the page, select **Blank document**.
 
@@ -241,27 +241,22 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 9. In the **Word** document, type the following text: **Testing a sensitivity label on a document with personally identifiable information (PII); in this case, a U.S Social Security Number: 111-11-1111.**
 
-10. Because you enabled Sensitivity labels at the start of this exercise, **Word** should display a **Sensitivity** group on the ribbon at the top of the page. Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the list of sensitivity label types. Select **Highly Confidential**, and then in the sub-menu that appears, select **Project - Falcon**. <br/>
+10. Because you enabled Sensitivity labels at the start of this exercise, **Word** should display a **Sensitivity** group on the ribbon at the top of the page. Select the down arrow in the **Sensitivity** group. In the drop-down menu that appears, it should display the list of sensitivity label types. Select **Highly Confidential**, and then in the sub-menu that appears, select **All Employees**. <br/>
 
-	**Note:** After 24 hours, the label that you created in the prior task will appear in the Highly Confidential sub-menu, next to the Project-Falcon label. But for now, you will use the **Project - Falcon** label in its place.
+	**Note:** After 24 hours, the label that you created in the prior task will appear in the menu. But for now, you will use the **All Employees** label in its place.
 
-11. In the document, note how the label applied a **CONFIDENTIAL - ProjectFalcon** watermark across the top of the document. The Project - Falcon label was configured just like the label that you created, where the watermark was supposed to appear diagonally across the middle of the page. So why does it appear towards the top of the page? The answer is that you are using **Word for the Web**, which by default displays it as you see here. To see how it will appear to someone reading the document, you must view the document in the **Reading View**, which you'll do now. <br/>
-
-	Select the **View** tab and then in the Word ribbon, select **Reading View**. Note how the watermark appears diagonally across the middle of the document. This is how the watermark will appear to someone reading the document. Note that if you use the Word desktop app, it displays the watermark as designated by the label, which in this case would be just as you see it here in the Reading View. <br/>
-
-	To exit Reading View, select **Edit Document** on the menu bar at the top of the page. In the drop-down menu that appears, select **Edit**.
-
+	
 12. In this first validation test, you're going to remove this sensitivity label from being applied to this document. One of the label policy options requires users to provide justification to remove a label or to select a lower classification label. You will now verify whether this setting is functioning properly. <br/>
 
-	In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that a check mark appears next to **Highly Confidential**. Hold your mouse over **Highly Confidential** to display the sub-menu. Notice how a check mark appears next to **Project - Falcon**. The check marks identify the current label being applied to the document.  <br/>
+	In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that a check mark appears next to **Highly Confidential**. Hold your mouse over **Highly Confidential** to display the sub-menu. Notice how a check mark appears next to **All Employees**. The check marks identify the current label being applied to the document.  <br/>
  
-	To remove the label from this document, select the **Project - Falcon** label that appears in this drop-down menu.
+	To remove the label from this document, select the **All Employees** label that appears in this drop-down menu.
 	
 13. In the **Justification Required** window that appears, select the **Other (explain)** option. In the **Explain why you're changing this label** field, enter **Testing what happens when a label is removed from a document** and then select **Change**.
 
-14. Note how the watermark in the document has disappeared. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **Highly Confidential** > **Project - Falcon** is displayed, no check marks appear next to them. This indicates the sensitivity label is no longer being applied to this document.  
+14.  Note how the footer has disappeared. In the **Sensitivity** group in the Word ribbon, select the down arrow. In the drop-down menu that appears, note that while **Highly Confidential** > **All Employees** is displayed, no check marks appear next to them. This indicates the sensitivity label is no longer being applied to this document.  
 
-15. To re-apply the sensitivity label to the document, select **Highly Confidential** > **Project - Falcon** in the drop-down menu. Note how the watermark reappears in the document.
+15. To re-apply the sensitivity label to the document, select **Highly Confidential** > **All Employees** in the drop-down menu. Note how the watermark reappears in the document.
 
 16. You will now save the document so that you can share it in the next task. A document name field that contains a drop-down arrow appears at the top-left corner of the page, to the right of the Word icon (Word may display **Document** or **Document1** as the temporary file name). Select the drop-down arrow. In the drop-down menu that appears, confirm the file **Location** says **Holly Dickson > Documents**. <br/>
 
@@ -269,12 +264,12 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 17. Leave the **ProtectedDocument1** tab open displaying the document. You will return to this document in the next task to share the document with Joni Sherman.
 
-You have just successfully created a Word document containing the Highly Confidential label titled **Project - Falcon**. 
+You have just successfully created a Word document containing the Highly Confidential label titled **All Employees**. 
 
 
 ### Task 5 – Protect a document using Microsoft Purview Information Protection
 
-In the prior task, you created a Word document and protected it with the **Project - Falcon** sensitivity label. This label inserted a watermark in the document. In this task, you will share the document you created with Joni Sherman, and you will restrict Joni to "View only" permission. This will allow you to see how Microsoft Purview Information Protection protects the document based on the parameters that you configure.
+In the prior task, you created a Word document and protected it with the **All Employees** sensitivity label. This label inserted a footer in the document. In this task, you will share the document you created with Joni Sherman, and you will restrict Joni to "View only" permission. This will allow you to see how Microsoft Purview Information Protection protects the document based on the parameters that you configure.
 
 To verify whether the protection that you assigned to the document works, you will first email the document to two persons - to Joni Sherman and to your own personal email address. You will then verify that Joni can only view the document and not edit it, and you will verify that you can't access the document since it was not shared with you. Finally, you will change permission on the document so that Joni can edit it, and you will email this updated document to her for testing. The purpose of the two emails to Joni, one with a document link that provides read-only access and another with a document link that provides the ability to edit the document, is to see how Microsoft Entra ID Protection can provide various levels of document protection. 
 
@@ -336,7 +331,7 @@ To verify whether the protection that you assigned to the document works, you wi
 
 24. In the email, select the attached file to open it.
 
-25. In the **Your privacy option** window that appears, select **Close**. The document opens in **Word on the Web** in a new browser tab titled **ProtectedDocument1.docx** tab. Note how the document appears in the Reading View in **Word on the Web**. This is Joni's indication that she has View only permission and can't edit the document. To verify this, try to select into the the document. Note the message that appears indicating: **Read only. This document is read-only.** Note the watermark specified in the **Project - Falcon** policy. <br/>
+25. In the **Your privacy option** window that appears, select **Close**. The document opens in **Word on the Web** in a new browser tab titled **ProtectedDocument1.docx** tab. Note how the document appears in the Reading View in **Word on the Web**. This is Joni's indication that she has View only permission and can't edit the document. To verify this, try to select into the the document. Note the message that appears indicating: **Read only. This document is read-only.** Note the footer specified in the **All Employees** policy. <br/>
 
 	Once you have finished reviewing the document, close the **ProtectedDocument1.docx** tab. 
 
