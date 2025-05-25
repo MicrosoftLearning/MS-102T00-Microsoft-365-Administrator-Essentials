@@ -32,7 +32,7 @@ In this next phase of your Adatum pilot project, you will access the Microsoft E
 
 As part of your pilot project for Adatum, you will configure email retention through the Microsoft Purview portal by creating a new retention policy. You will then assign this retention policy to Joni Sherman and Lynne Robbins’ mailboxes. Joni and Lynne are Holly's two test users for compliance testing. Holly wants to use this policy to test email retention for these two test users before creating a second retention policy in the next task that will be applied across the entire organization.
 
-1. On LON-CL1, select the tab for the **Microsoft 365 admin center**. Under the **Admin centers** section in the navigation pane, select **Compliance**. Doing so will open the **Microsoft Purview** portal.
+1. On LON-CL1, select the tab for the **Microsoft 365 admin center**. Under the **Admin centers** section in the navigation pane, select **Microsoft Purview**. Doing so will open the **Microsoft Purview** portal.
 
 2. In the **Microsoft Purview** portal, select **Solutions** in the navigation pane. In the **Solutions** menu that appears, select **Data Lifecycle Management**.
 

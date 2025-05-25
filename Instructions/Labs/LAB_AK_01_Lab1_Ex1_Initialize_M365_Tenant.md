@@ -315,6 +315,8 @@ In Lab 6, you will create Alert Policies using the Microsoft Defender portal. Ho
 
 5. A **Sign in** window will appear requesting your credentials. Enter the MOD Administrator account provided by your lab hosting provider (**admin@xxxxxZZZZZZ.onmicrosoft.com**; where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and then select **Next**. On the **Enter password** window, enter the **Administrative Password** provided by your lab hosting provider and then select **Sign in**. If required, complete the MFA sign-in process. 
 
+	> **Note**: If prompted whether to stay signed in, select **No, this app only**.
+
 6. At the command prompt, run the following command to turn on audit logging:
 
 	```powershell

@@ -57,7 +57,7 @@ You will first enable sensitivity labels for Office online files that are stored
 
 6. You will now enable PDF protection for files in SharePoint and OneDrive. <br/>
 
-	In the **Microsoft Purview** portal, under **Information protection** in the navigation pane, select **Auto-labeling**.
+	In the **Microsoft Purview** portal, under **Information protection** in the navigation pane, expand **Policies**, and then select **Auto-labeling**.
 
 7. On the **Auto-labeling** page, you should see a **Protect PDFs with Auto-labeling** banner in the middle of the page. Select the **Protect PDFs with Auto-labeling** heading to turn on PDF protection for files in SharePoint and OneDrive. 
 
@@ -92,9 +92,9 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 5. Select **Next**.
 
-6. On the **Define the scope for this label** page, verify the **Items** check box is selected, as well as the **Files**, **Emails**, and **Meetings** check boxes below it (select all four of these check boxes now, if necessary). These check boxes allow you to define where this sensitivity label will be used so that you can configure the applicable protection settings. Select **Next**.
+6. On the **Define the scope for this label** page, verify the the **Files & other data assets**, **Emails**, and **Meetings** check boxes contain a tick mark. These check boxes allow you to define where this sensitivity label will be used so that you can configure the applicable protection settings. Select **Next**.
 
-7. On the **Choose protection settings for the types of items you selected** page, you can begin the process of using encryption settings to restrict access to content that the label will be applied to. When a document, email, or meeting invitation is encrypted, access to content is restricted, so that it:  <br/>
+7. On the **Choose protection settings for the types of items you selected** page, you can begin the process of using encryption settings to restrict access to content that the label will be applied to. When a document, email, or meeting invitation is encrypted, access to content is restricted, so that it:
 
 	- Can be decrypted only by users authorized by the label's encryption settings.
 	- Remains encrypted no matter where it resides (inside or outside your organization), even if the file is renamed.

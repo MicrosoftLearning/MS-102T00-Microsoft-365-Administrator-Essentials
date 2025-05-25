@@ -200,7 +200,7 @@ In the prior task, you logged into Laura Atkins’ client PC, and you verified t
 
 11. On the **Sign in to get started with Word** page, select **Sign in or create account**. On the **Activate Office** page, enter **Laura@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and select **Next**. In the **Password** field, enter the New User Password that you assigned to Laura's account and select **Sign in**. 
 
-12. On the **Stay signed in to all your apps** window, select **OK**.
+12. On the **Automatically sign in to all desktops apps and websites on this device?** window, select **Yes, all apps**.
 
 13. On the **You're all set!** window, select **Done**.
 
