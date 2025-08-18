@@ -19,7 +19,7 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 
 2. Since you are adding a new user, you should begin by checking license availability before adding the user account. In the **Microsoft 365 admin center** navigation pane, select **Billing** to expand the Billing group, and then select **Licenses**. 
 
-3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** subscriptions don't have any available licenses. Your lab tenant provides 20 licenses for each subscription, but all 40 licenses have been assigned. Since you must assign Holly both a **Microsoft 365 E5 (no Teams)** license and a **Microsoft Teams Enterprise** license, you must first unassign the licenses from an existing user account to make them available for Holly. 
+3. On the **Licenses** page, the **Subscriptions** tab is displayed by default. In the list of subscriptions, note the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** subscriptions don't have any available licenses. Your lab tenant provides 20 licenses for each subscription, but all 20 licenses have been assigned. Since you must assign Holly both a **Microsoft 365 E5 (no Teams)** license and a **Microsoft Teams Enterprise** license, you must first unassign the licenses from an existing user account to make them available for Holly. 
 
 4. In the **Microsoft 365 admin center** navigation pane, select **Users** and then select **Active users**. In the **Active users** list, you will see the list of existing user accounts that were created by your lab hosting provider. Since Christie Cline will be moving to a new role in the company and will no longer be part of the Microsoft 365 pilot project, you will unassign the **Microsoft 365 E5 (no Teams)** and **Microsoft Teams Enterprise** licenses from her account so that you can reassign them to Holly Dickson's new account.
 
@@ -67,7 +67,7 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 
 14. Select the **Global Administrator** check box. <br/>
 
-	**Note:** A warning message will be displayed indicating that Adatum already has 7 Global admins. In a normal environment, this would be excessive and not recommended. For the purposes of this lab, the lab hosting provider assigned the Global admin role to the MOD Administrator and six other user accounts, which is not something you would normally see in a real-world deployment. However, for the purpose of this lab in your fictitious Adatum lab environment, ignore this message. **That being said, the best practice guideline that you should follow is to have from two to four Global Administrators in your real-world Microsoft 365 deployments.** 
+	**Note:** A warning message will be displayed indicating that Adatum already has 6 Global admins. In a normal environment, this would be excessive and not recommended. For the purposes of this lab, the lab hosting provider assigned the Global admin role to the MOD Administrator and six other user accounts, which is not something you would normally see in a real-world deployment. However, for the purpose of this lab in your fictitious Adatum lab environment, ignore this message. **That being said, the best practice guideline that you should follow is to have from two to four Global Administrators in your real-world Microsoft 365 deployments.** 
 
 15. Select **Next**.
 
@@ -95,7 +95,7 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 	
 	**Important:** When signing out of one user account and signing in as another, you should close all your browser tabs except for the **Sign out** tab. This is a best practice that helps to avoid any confusion by closing the windows associated with the prior user. Once you're signed out of the MOD Administrator account, take a moment and close all other browser tabs except for the **Sign out** tab. 
 	
-2. In your Microsoft Edge browser, in the **Sign out** tab, enter the following URL in the address bar to sign back into Microsoft 365: **https://www.microsoft365.com**. 
+2. In your Microsoft Edge browser, in the **Sign out** tab, enter **https://www.microsoft365.com**. Then, select **Sign in**.
 
 3. In the **Pick an account** window, only the MOD Administrator's tenant admin account (the admin@xxxxxZZZZZZ.onmicrosoft.com account) that you just signed out from appears. Select **Use another account**. 
 
