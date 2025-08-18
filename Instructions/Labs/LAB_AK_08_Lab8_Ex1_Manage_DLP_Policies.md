@@ -139,15 +139,15 @@ To turn off this setting, you must create a policy for Office apps in the Micros
 
 3. In the **Microsoft Intune admin center** that opens up in a new tab, select **Apps** in the navigation pane.
 
-4. On the **Apps | Overview** page, in the middle navigation pane, select **Policies for Office apps** under the **Policy** section.
+4. On the **Apps | Overview** page, in the middle navigation pane, select **Policies for Microsoft 365 apps** under the **Manage apps** section.
 
-5. On the **Apps | Policies for Office apps** page, select the **Create** button. This initiates the wizard to create a new policy. In the remaining steps, you'll enable the **Turn off Send to Kindle** setting within this policy.
+5. On the **Apps | Policies for Microsoft 365 apps** page, select the **Create** button. This initiates the wizard to create a new policy. In the remaining steps, you'll enable the **Turn off Send to Kindle** setting within this policy.
 
 6. On the **Start with the basics** page, enter **Turn off Send to Kindle setting** in the **Name** field and then select **Next**.
 
-7. On the **Choose the scope** page, select the **This policy configuration applies to all users** option and then selet **Next**.
+7. On the **Choose the scope** page, select the **This policy configuration applies to all users** option and then select **Next**.
 
-8. On the **Configure Settings** page, note the metrics that are displayed above the list of settings. There are over 2200 Office app settings for your tenant configuration. To quickly locate this setting, enter **Kindle** in the **Search** field and then press **Enter**. This should display any policies with **Kindle** in the policy name.
+8. On the **Configure Settings** page, note the metrics that are displayed above the list of settings. There are over 2300 Office app settings for your tenant configuration. To quickly locate this setting, enter **Kindle** in the **Search** field and then press **Enter**. This should display any policies with **Kindle** in the policy name.
 
 9. As you can see, there's only one Kindle setting, which is **Turn off Send to Kindle**. Select this setting, which opens the **Turn off Send to Kindle** pane.
 

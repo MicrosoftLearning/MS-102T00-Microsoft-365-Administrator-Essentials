@@ -83,7 +83,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 22. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Azure AD Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. <br/>
 
-	**Note:** If you selected **Azure AD Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step (step 22). However, if **Azure AD Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. <br/>
+	>**Note:** If you selected **Azure AD Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step (step 22). However, if **Azure AD Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. <br/>
 
 	**Important:** The remaining instructions in this step are what you should do if you needed to restart LON-DC1. <br/>
 
@@ -112,7 +112,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 		Select the second Data Validation error link and verify this error is for the second user that you purposely did not fix. Follow the same steps as before to review the error for this user.   <br/>
 
-	‎**IMPORTANT:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column in the top pane). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization** rather than a **Full Synchronization**.
+	>**IMPORTANT:** Because a synchronization had not been performed prior to this, the initial synchronization was a **Full Synchronization** (see the **Profile Name** column in the top pane). Because the synchronization process will continue to run automatically every 30 minutes, any subsequent synchronizations will display **Delta Synchronization** as its **Profile Name**. If you leave the **Synchronization Service Manager** window open, after 30 minutes you will see that it attempts to synchronize the two users who were not synchronized during the initial synchronization. These will display as a **Delta Synchronization** rather than a **Full Synchronization**.
 
 26. Now that you have seen Microsoft Entra Connect Sync complete a Full Synchronization, in the next task you will make some updates and manually force an immediate synchronization rather than waiting for it to synchronize updates every 30 minutes. Close the **Synchronization Service Manager on LON-DC1** window. 
 
@@ -206,26 +206,26 @@ This task sets up another scenario for testing whether the sync process is worki
   
 5. Leave LON-DC1 open as you will continue using it in the next task. <br/>
 
-	‎**Important:** You should perform the next task immediately after completing this one so that Microsoft Entra Connect Sync doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
+	>**Important:** You should perform the next task immediately after completing this one so that Microsoft Entra Connect Sync doesn’t automatically synchronize the changes that you just made to the identity objects in the previous tasks.
 
 
 ### Task 4 - Force a manual synchronization   
 
 In this task, you will force a sync between Adatum’s on-premises Active Directory and Microsoft Entra ID (formerly Azure AD) instead of waiting 30 minutes for Microsoft Entra Connect Sync to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
 
-**IMPORTANT - PowerShell notice:** The prior lab exercise provided a disclaimer indicating why the tasks in that exercise used the MSOnline module rather than Microsoft Graph PowerShell. While Microsoft is in the process of replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, with Microsoft Graph PowerShell, there is some functionality in the older modules that has not yet been incorporated into Microsoft Graph PowerShell. The commands in the prior exercise and the command used in this task fall into that category. The prior exercise connected to the MSOnline module, which is also used in this task per the Start-ADSyncSyncCycle command. 
-
 1. On LON-DC1, if the **Windows PowerShell** application is still open from the prior exercise, then **you MUST close it now**.  <br/>
 
-	‎**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Microsoft Entra Connect Sync setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open.  
+	**WARNING:** The reason for this step is that if Windows PowerShell was opened BEFORE the Microsoft Entra Connect Sync setup, the cmdlet **Start-ADSyncSyncCycle** that is used in step 3 will not be available and you will receive an error indicating that the cmdlet is not recognized when you attempt to run it. Therefore, it’s recommended that at this step, you close Windows PowerShell if it’s open.  
 
-2. At this point, Windows PowerShell should NOT be open. You now want to reopen it. To open it, select the **magnifying glass (Search)** icon in the taskbar, type **power** in the Search box, and then in the menu, right-click on **Windows PowerShell** (not Windows PowerShell ISE) and select **Run as administrator**. Maximize the Windows PowerShell window once it opens.
+2. At this point, Windows PowerShell should NOT be open. You now want to reopen it. Right-click the **Windows (Start)** icon in the lower left corner of the taskbar, and then select **Windows PowerShell (Admin)**. Maximize the Windows PowerShell window once it opens.
 
-3. In **Windows PowerShell**, run the following command to manually run a sync cycle between Adatum’s on-premises AD and Azure AD. The **Delta** switch is used here so that only the updates are synchronized.   <br/>
+3. In **Windows PowerShell**, run the following command to manually run a sync cycle between Adatum’s on-premises AD and Entra ID. The **Delta** switch is used here so that only the updates are synchronized.
 
-		Start-ADSyncSyncCycle -PolicyType Delta
-	
-	‎**Note:** If for any reason the Domain Controller VM was restarted after the original full synchronization run, the Microsoft Azure AD Sync service may not have restarted. If this occurred, you’ll receive an error when you try to perform the forced sync above. If this occurs, you’ll need to start the Microsoft Azure AD Sync service first and then perform the forced synchronization.
+	```powershell
+	Start-ADSyncSyncCycle -PolicyType Delta
+	```
+
+	**Note:** If for any reason the Domain Controller VM was restarted after the original full synchronization run, the Microsoft Azure AD Sync service may not have restarted. If this occurred, you’ll receive an error when you try to perform the forced sync above. If this occurs, you’ll need to start the Microsoft Azure AD Sync service first and then perform the forced synchronization.
 
 	**Note:** If the Start-ADSyncSyncCycle command is not found, the domain controller will need to be restarted for the PowerShell module to complete its installation.
 	
@@ -238,13 +238,11 @@ In this task, you will force a sync between Adatum’s on-premises Active Direct
 
 In this task, you will validate whether the changes you made earlier were synchronized from Adatum’s on-premises Active Directory to Microsoft Entra ID. You will validate the changes using the Microsoft 365 admin center, and then you’ll perform the same validations using Windows PowerShell. This gives you experience in validating synchronization using both the Microsoft 365 admin center GUI and PowerShell.
 
-**IMPORTANT - PowerShell notice:** This task employs basic PowerShell queries for Groups and Users, which are supported in Microsoft Graph PowerShell. Since Microsoft Graph PowerShell is replacing the two older PowerShell modules, MSOnline and Azure Active Directory (Azure AD) PowerShell, you will use Microsoft Graph PowerShell in this task.
-
 1. You should still be logged into LON-DC1 as **adatum\administrator** with a password of **Pa55w.rd.**
 
 2. Now let’s examine the synchronization results for the groups that you updated in the previous tasks. In your **Edge** browser, if tabs are still open for the **Home | Microsoft 365** page and the **Active users - Microsoft 365 admin center**, then proceed to the next step. <br/>
 
-	Otherwise, enter **https://portal.office.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the New Administrative Password that you assigned to her account, and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
+	Otherwise, enter **https://www.microsoft365.com/** in the address bar to open the **Microsoft 365 Home** page, and then log in as **holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). In the **Password** field, enter the New Administrative Password that you assigned to her account, and then on the **Microsoft 365 Home** page, navigate to the **Microsoft 365 admin center**. 
 
 3. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**. 
 
@@ -264,17 +262,23 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 9. You should begin by installing the Groups and Users modules in Microsoft Graph PowerShell. Earlier in this training, you installed Microsoft Graph PowerShell on LON-CL1. At that time, you installed all 30+ sub-modules by running the following command: Install-Module Microsoft.Graph (where Graph is the parent module that contains the 30+ sub-modules). While you could install all 30+ sub-modules on LON-DC1, you're only going to use the Groups and Users sub-modules in this task, which is the last task in this training that uses PowerShell on LON-DC1. Therefore, to reduce installation time, you'll run the following two commands that will install just those two sub-modules and none of the other 30+ sub-modules. This also provides you with experience in installing specific sub-modules rather than the entire complement of Graph sub-modules.
 
-	a. Type the following command and press Enter (If you receive a message asking whether you want to install this module from an untrusted repository, enter **A** for **Yes to All**; do the same for the next command as well):  <br/>
+	a. Type the following command and press Enter (If you receive a message asking whether you want to install this module from an untrusted repository, enter **A** for **Yes to All**; do the same for the next command as well):
 
-		Install-Module Microsoft.Graph.Groups
+	```powershell
+	Install-Module Microsoft.Graph.Groups
+	```
 
-	b. At the command prompt, type the following command and press Enter : <br/>
+	b. At the command prompt, type the following command and press Enter:
 
-		Install-Module Microsoft.Graph.Users
+	```powershell
+	Install-Module Microsoft.Graph.Users
+	```
 
-10. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the Groups and Users cmdlets that were just imported. To complete this task, you only need 'Read only' permissions for these two sub-modules. Type the following command and then press Enter: <br/>
-		
-		Connect-MgGraph -Scopes 'Group.Read.All', 'User.Read.All'
+10. At the command prompt, you must now connect to Microsoft Graph and perform a request for permission to use the Groups and Users cmdlets that were just imported. To complete this task, you only need 'Read only' permissions for these two sub-modules. Type the following command and then press Enter:
+
+	```powershell
+	Connect-MgGraph -Scopes 'Group.Read.All', 'User.Read.All'
+	```
 
 11. In the **Pick an account** window that appears, select **Holly Dickson's** account. In the **Enter password** window, enter the New Administrative Password that you assigned to her account and then select **Sign in**. 
 
@@ -282,17 +286,23 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 13. You will now use PowerShell to display the list of groups in Microsoft 365. This list should include the groups that you manually created in Microsoft 365, as well as the groups that were created in the on-premises Active Directory that were just synchronized with Microsoft 365. Type the following command and then press Enter:
 
-		Get-MgGroup | Format-Table Id, DisplayName, Description, GroupTypes
+	```powershell
+	Get-MgGroup | Format-Table Id, DisplayName, Description, GroupTypes | Sort DisplayName
+	```
 
 14. You now want to display the members of the **Research** group. In the list of groups, highlight the object ID for the **Research** group and then press **Ctrl+C** to copy the ID to the clipboard. Then type the following command, paste in the Research group's object ID (**Ctrl+V**) in the appropriate spot, and then press Enter:  <br/>
 
-		Get-MgGroupMember -GroupId 'paste in the group's object ID here'
+	```powershell
+	Get-MgGroupMember -GroupId 'paste in the group's object ID here'
+	```
 
 15. In the list of group members that were displayed in the prior step, note how the results simply show the object ID of each member. Without displaying the user names, this command doesn't help you verify whether the group members were synchronized. To work around this issue, you're going to repeat the prior command, but this time you'll add an additional component that retrieves the User record for each member of the group and displays the User's attributes, which includes the user name. <br/>
 
 	At the command prompt hit the UP arrow on your keyboard. This will automatically type the prior command that was run (which includes the Research group's object ID, so you don't have to re-paste it). Then following the object ID, type the remaining portion of the command (starting with **-All**) and press Enter:
 
-		Get-MgGroupMember -GroupId 'the object ID of the Research group' -All | ForEach {Get-MgUser -UserId $_.Id}
+	```powershell
+	Get-MgGroupMember -GroupId 'the object ID of the Research group' -All | ForEach {Get-MgUser -UserId $_.Id}
+	```
 
 16. In the list of members of the Research group, verify the following users are **NOT** included. Remember, in the prior task you removed these three users from the Research group in the on-premises Active Directory, prior to synchronizing the group to Microsoft 365:  
 
@@ -302,15 +312,17 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 	- Tai Zecirevic  
 
-17. In the prior task, you added the **Manufacturing** group in the on-premises Active Directory, and you assigned three users to the group. You now want to verify the members of the **Manufacturing** group were synchronized when the group was added in Microsoft 365 during the synchronization process, <br/>
+17. In the prior task, you added the **Manufacturing** group in the on-premises Active Directory, and you assigned three users to the group. You now want to verify the members of the **Manufacturing** group were synchronized when the group was added in Microsoft 365 during the synchronization process.
 
 	To do so, you must first scroll back up to the list of groups, highlight the object ID for the **Manufacturing** group and then press **Ctrl+C** to copy the ID to the clipboard. <br/>
 
 	Then hit the UP arrow on your keyboard to automatically type the prior command, which contains the object ID of the Research group that you pasted in during the prior step:  <br/>
 
-		Get-MgGroupMember -GroupId 'the object ID of the Research group' -All | ForEach {Get-MgUser -UserId $_.Id}    <br/>
+	```powershell
+	Get-MgGroupMember -GroupId 'the object ID of the Manufacturing group' -All | ForEach {Get-MgUser -UserId $_.Id}
+	```
 
-	**Important:** You must then replace the object ID of the Research group with the object ID of the Manufacturing group before running this command. To do so, use the left arrow on your keyboard to move your cursor to the start of the object ID, then highlight the object ID of the Research group and hit **Ctrl+V**. This will replace the ID of the Research group by pasting in the object ID of the **Manufacturing** group. Then press Enter to run the command. Doing so will display the members of the **Manufacturing** group. <br/>
+	**Important:** You must then replace the object ID of the Research group with the object ID of the Manufacturing group before running this command. To do so, use the left arrow on your keyboard to move your cursor to the start of the object ID, then highlight the object ID of the Research group and hit **Ctrl+V**. This will replace the ID of the Research group by pasting in the object ID of the **Manufacturing** group. Then press Enter to run the command. Doing so will display the members of the **Manufacturing** group.
 
 	In the **Manufacturing** group, you earlier added the following members to the group in the on-premises Active Directory. You should now see each of these group members in this Microsoft 365 group following synchronization:  
 

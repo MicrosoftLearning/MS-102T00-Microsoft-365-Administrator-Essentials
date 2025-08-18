@@ -41,7 +41,7 @@ Holly Dickson is Adatum’s new Microsoft 365 Administrator. Since a Microsoft 3
 
 	- Username: **Holly** <br/>
 	
-		‎**IMPORTANT:** To the right of the **Username** field is the domain field. It will be prefilled with the **xxxxxZZZZZZ.onmicrosoft.com** cloud domain (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).<br/>
+		**IMPORTANT:** To the right of the **Username** field is the domain field. It will be prefilled with the **xxxxxZZZZZZ.onmicrosoft.com** cloud domain (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider).<br/>
 	
 	- Clear (uncheck) the **Automatically create a password** check box, which will display a new field for entering an administrator-defined password.
 
@@ -95,7 +95,7 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 	
 	**Important:** When signing out of one user account and signing in as another, you should close all your browser tabs except for the **Sign out** tab. This is a best practice that helps to avoid any confusion by closing the windows associated with the prior user. Once you're signed out of the MOD Administrator account, take a moment and close all other browser tabs except for the **Sign out** tab. 
 	
-2. In your Microsoft Edge browser, in the **Sign out** tab, enter the following URL in the address bar to sign back into Microsoft 365: **https://portal.office.com**. 
+2. In your Microsoft Edge browser, in the **Sign out** tab, enter the following URL in the address bar to sign back into Microsoft 365: **https://www.microsoft365.com**. 
 
 3. In the **Pick an account** window, only the MOD Administrator's tenant admin account (the admin@xxxxxZZZZZZ.onmicrosoft.com account) that you just signed out from appears. Select **Use another account**. 
 
@@ -261,8 +261,10 @@ However, to expand your administrator skills, you will instead restore the delet
 	- The 'Directory.ReadWrite.All' scope provides permission to read and write data in Adatum's directory, such as users and groups, and restore the deleted group. <br/>
 
 	Type the following command and then press Enter: <br/>
-		
-		Connect-MgGraph -Scopes 'Group.ReadWrite.All', 'Directory.ReadWrite.All'
+
+	```powershell
+	Connect-MgGraph -Scopes 'Group.ReadWrite.All', 'Directory.ReadWrite.All'
+	```
 
 3. A **Sign in** window will appear requesting your credentials. Sign in using Holly's Microsoft 365 account of **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). For the password, enter the New Administrative Password that you assigned to Holly's account. 
 
@@ -270,19 +272,27 @@ However, to expand your administrator skills, you will instead restore the delet
 
 5. You will now use Microsoft Graph PowerShell to display the list of active groups. The Inside Sales group should not appear in this list. Type the following command and press Enter (Note: it may take a minute or so for the list of groups to appear):  <br/>
 
-		Get-MgGroup
+	```powershell
+	Get-MgGroup
+	```
 
 6. To restore a deleted Microsoft 365 group in the next step, you need to specify the deleted group's object ID. To get the Inside Sales group's object ID, type the following command to display the list of Microsoft 365 groups that have been deleted:  <br/>
-	
-		Get-MgDirectoryDeletedItemAsGroup
+
+	```powershell
+	Get-MgDirectoryDeletedItemAsGroup
+	```
 
 7. You should see the **Inside Sales** group in this list of deleted groups. You will now run the following **Restore-MgDirectoryDeletedItem** command to restore the group. When doing so, you must declare the group's object ID as the parameter next to "-DirectoryObjectId". To finish entering this command, you must highlight the object ID of the Inside Sales group from the list of deleted groups, copy the ID (Ctrl+C), and then paste that ID (Ctrl+V) into the command (for example: -DirectoryObjectId 'e76bbcdb-24c5-41a6-805d-b352976fd2a8').  <br/>
 
-		Restore-MgDirectoryDeletedItem -DirectoryObjectId 'paste in the object ID for the Inside Sales group here'
+	```powershell
+	Restore-MgDirectoryDeletedItem -DirectoryObjectId 'paste in the object ID for the Inside Sales group here'
+	```
 
 8. You should now verify the **Inside Sales** group has been recovered. While you can obviously do this in the **Microsoft 365 admin center**, since this task is working with PowerShell, let's verify the recovery using Microsoft Graph PowerShell. To do so, type the following command to get a list of the active groups, which should now include the Inside Sales Group:  <br/>
 
-		Get-MgGroup
+	```powershell
+	Get-MgGroup
+	```
 
 9. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
 

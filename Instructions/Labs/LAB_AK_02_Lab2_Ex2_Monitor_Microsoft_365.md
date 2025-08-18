@@ -8,7 +8,7 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 1. You should still be logged into LON-CL1 after having completed the prior exercise, and you should still be logged into Microsoft 365 as Holly Dickson.
 
-2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open. If the home page isn't open, then navigate to **https://portal.office.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and where the password is the New Administrative Password that you assigned to her account.
+2. In your **Microsoft Edge** browser, select the **Home | Microsoft 365** tab to display Holly's Microsoft 365 Home page, which should still be open. If the home page isn't open, then navigate to **https://www.microsoft365.com** and log in as **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider) and where the password is the New Administrative Password that you assigned to her account.
 
 3. In the **Welcome to Microsoft 365** page, select **Apps**. On the **Apps** page, close the **Welcome to Apps** window by selecting the **X** in the upper-right corner of the window. In the row of app tiles, select **Outlook**. 
 

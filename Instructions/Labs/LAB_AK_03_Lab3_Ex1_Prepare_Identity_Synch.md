@@ -6,7 +6,7 @@ During this exercise you will set up and manage Microsoft Entra Connect. You wil
 
 ### Task 1: Configure your UPN suffix
 
-In Active Directory, the default User Principal Name (UPN) suffix (i.e. the tenant prefix) is the DNS name of the domain where the user account was created. The Microsoft Entra Connect wizard uses the UserPrincipalName attribute, or it lets you specify the on-premises attribute (in a custom installation) to be used as the user principal name in Microsoft Entra ID. This is the value that is used for signing into Microsoft Entra ID. 
+In Active Directory, the default User Principal Name (UPN) suffix (i.e. the tenant prefix) is the DNS name of the domain where the user account was created. The Microsoft Entra Connect wizard uses the userPrincipalName attribute, or it lets you specify the on-premises attribute (in a custom installation) to be used as the user principal name in Microsoft Entra ID. This is the value that is used for signing into Microsoft Entra ID. 
 
 If you recall, your VM environment was created by your lab hosting provider with an on-premises domain titled **adatum.com**. This domain included several on-premises user accounts, such as Holly Dickson, Laura Atkins, and so on. Then in an earlier lab in this course, you created a custom, accepted domain for Adatum titled **xxxUPNxxx.xxxCustomDomainxxx.xxx** (where xxxUPNxxx was the unique UPN name assigned to your tenant, and xxxCustomDomainxxx.xxx was the name assigned to the domain by your lab hosting provider).
 
@@ -20,15 +20,19 @@ For this lab, Adatum has purchased the new xxxUPNxxx.xxxCustomDomainxxx.xxx doma
 
 2. If **Windows PowerShell** is still open, then select the **PowerShell** icon on your taskbar; otherwise, you must open **Windows PowerShell** by selecting the magnifying glass (**Search**) icon on the taskbar, typing **power** in the Search box that appears,  right-clicking on **Windows PowerShell** (do not select Windows PowerShell ISE), and selecting **Run as administrator** in the drop-down menu. When Windows PowerShell opens, maximize the window.
 
-3. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain (where you will replace xxxUPNxxx with the unique UPN name assigned to your tenant, and you will replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@xxxUPNxxx.xxxCustomDomainxxx.xxx**. <br/> 
+3. Using **Windows PowerShell**, you must replace the on-premises **adatum.com** domain with the **xxxUPNxxx.xxxCustomDomainxxx.xxx** domain (where you will replace xxxUPNxxx with the unique UPN name assigned to your tenant, and you will replace xxxCustomDomainxxx.xxx with your lab hosting provider's custom domain). In doing so, you will update the UPN suffix for the primary domain and the UPN on every user in AD DS with **@xxxUPNxxx.xxxCustomDomainxxx.xxx**.
 
-	‎In the following PowerShell command, the **Set-ADForest** cmdlet modifies the properties of an Active Directory forest, and the **-identity** parameter specifies the Active Directory forest to modify. To perform this task, run the following command to set the **UPNSuffixes** property for the **adatum.com** forest (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name):<br/>
-	
-		Set-ADForest -identity adatum.com -UPNSuffixes @{replace="xxxUPNxxx.xxxCustomDomainxxx.xxx"}
+	>In the following PowerShell command, the **Set-ADForest** cmdlet modifies the properties of an Active Directory forest, and the **-identity** parameter specifies the Active Directory forest to modify. To perform this task, run the following command to set the **UPNSuffixes** property for the **adatum.com** forest (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name):
 
-4. You must then run the following command that changes all existing adatum.com accounts to the new UPN @xxxUPNxxx.xxxCustomDomainxxx.xxx domain (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name): <br/>
+	```powershell
+	Set-ADForest -identity adatum.com -UPNSuffixes @{replace="xxxUPNxxx.xxxCustomDomainxxx.xxx"}
+	```
 
-		Get-ADUser -Filter * | ForEach-Object { Set-ADUser $_  -UserPrincipalName ($_.SamAccountName + "@xxxUPNxxx.xxxCustomDomainxxx.xxx" )}
+4. You must then run the following command that changes all existing adatum.com accounts to the new UPN @xxxUPNxxx.xxxCustomDomainxxx.xxx domain (remember to change xxxUPNxxx to your unique UPN name and xxxCustomDomainxxx.xxx to your lab hosting provider's custom domain name):
+
+	```powershell
+	Get-ADUser -Filter * | ForEach-Object { Set-ADUser $_  -UserPrincipalName ($_.SamAccountName + "@xxxUPNxxx.xxxCustomDomainxxx.xxx" )}
+	```
 
 5. You will continue using PowerShell on LON-DC1 in the next task.
 
@@ -43,15 +47,20 @@ In this task, you will run a script that breaks an on-premises user account. As 
 
 1. On your Domain Controller VM (LON-DC1), in the Windows PowerShell window, run the following command to change the root source to **C:\labfiles** so that you can access any files from that location: <br/>
 
-		CD C:\labfiles\
+	```cmd
+	CD C:\labfiles\
+	```
 
-3. Enter the following command that runs a PowerShell script that creates a problem user account. This script, which is stored in the C:\labfiles folder, will purposely create an issue with the UserPrincipalName for Klemen Sic's on-premises user account; this will enable you to troubleshoot this account in the next task using the IdFix tool.  <br/>
+3. Enter the following command that runs a PowerShell script that creates a problem user account. This script, which is stored in the C:\labfiles folder, will purposely create an issue with the userPrincipalName for Klemen Sic's on-premises user account; this will enable you to troubleshoot this account in the next task using the IdFix tool.  <br/>
 
-		.\CreateProblemUsers.ps1
+	```powershell
+	.\CreateProblemUsers.ps1
+	```
+
 	
-	**Important:** Wait until the script has finished before proceeding to the next task. This Windows PowerShell script will make the following change in AD DS:
+	>**Important:** Wait until the script has finished before proceeding to the next task. This Windows PowerShell script will make the following change in AD DS:
 
-	- **Klemen Sic**. Update the UserPrincipalName for Klemen to include an extra "@" character. 
+	- **Klemen Sic**. Update the userPrincipalName for Klemen to include an extra "@" character. 
 
 4. Minimize your Windows PowerShell window.
 
@@ -84,19 +93,19 @@ In this task you will download and use the IdFix Directory Synchronization Error
 
 9. Select the **ERROR** column heading to sort the records in alphabetical error sequence. <br/>
 
-	‎**Note:** If any **topleveldomain** errors appear, then ignore them as they cannot be fixed by the IdFix tool.  
+	>**Note:** If any **topleveldomain** errors appear, then ignore them as they cannot be fixed by the IdFix tool.  
 
 10. In the **Klemen Sic** row, note the text in the **VALUE** column. It currently includes two **@@** signs, which occurred when you ran the script in the prior task that purposely broke Klemen's UserPrincipalName. Now note the text in the **UPDATE** column, which is the value the IDFix tool will change the UPN name to, should you direct it to do so. <br/>
 
 	You want the IDFix tool to fix Klemen's UPN value, so select the drop-down arrow in Klemen's **ACTION** field and select **EDIT**. <br/>
 
-	**Note:** Do NOT update either of the remaining two user accounts. Ignore those for now.
+	>**Note:** Do NOT update either of the remaining two user accounts. Ignore those for now.
 
 11. On the menu bar at the top of the window, select **Apply**. 
 
 12. In the **Apply Pending** dialog box that appears, select **Yes**. <br/>
 
-	‎**Note:** Notice the value in the **Action** column changed from **EDIT** to **COMPLETE** for Klemen Sic. This indicates the IdFix tool corrected the error by updating Klemen Sic's user object. 
+	>**Note:** Notice the value in the **Action** column changed from **EDIT** to **COMPLETE** for Klemen Sic. This indicates the IdFix tool corrected the error by updating Klemen Sic's user object. 
 
 13. On the menu bar at the top of the page, select **Query**. If a **Schema Warning** dialog box appears, select **Yes** to continue. If a dialog box appears indicating an unhandled exception has occurred, select **Continue**.<br/>
 
@@ -104,7 +113,7 @@ In this task you will download and use the IdFix Directory Synchronization Error
 
 	As you can see, there are still two users whose errors have not been fixed (**An Dung Dao** and **Ngoc Bich Tran**). We are purposely leaving these errors alone so that you can see what happens during the synchronization process using the Microsoft Entra Connect tool in the next exercise when it processes users with these conditions. <br/>
 
-	**Important:** When there are format and duplicate errors for distinguished names, the **UPDATE** column either contains the same string as the **VALUE** column, or the **UPDATE** column entry is blank. In either case, this means that IdFix cannot suggest a remediation for the error. You can either fix these errors outside IdFix, or manually remediate them within IdFix. You can also export the results and use Windows PowerShell to remediate many different errors. 
+	>**Important:** When there are format and duplicate errors for distinguished names, the **UPDATE** column either contains the same string as the **VALUE** column, or the **UPDATE** column entry is blank. In either case, this means that IdFix cannot suggest a remediation for the error. You can either fix these errors outside IdFix, or manually remediate them within IdFix. You can also export the results and use Windows PowerShell to remediate many different errors. 
 
 14. Close the IdFix window. 
 
