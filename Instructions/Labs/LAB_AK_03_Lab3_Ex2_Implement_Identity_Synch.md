@@ -53,9 +53,17 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 10. Select **Next**. The wizard will deploy the recommended solution, **Microsoft Entra Connect Sync**. 
 
-11. On the **Sync your users** page, select the **Download Microsoft Entra Connect Sync** box. This opens a new tab in your browser and takes you to the Microsoft Download Center, where the system should display the **Microsoft Entra Connect** download page.
+11. The new **Entra Connect Sync** can now only be downloaded from the **Entra portal** (not the Microsoft 365 Admin portal). 
 
-12. On the **Microsoft Entra Connect** download page, select the **Download** button. 
+    To access it, open a new browser tab and go to: **https://entra.microsoft.com**
+
+    - Sign in if prompted.  
+    - In the **Microsoft Entra admin center**, use the **Search resources, services, and docs** box to search for **Microsoft Entra Connect**.
+
+12. On the **Microsoft Entra Connect | Get started** page:  
+    - Select the **Manage** tab.  
+    - Scroll down and choose **Download Connect Sync Agent**.  
+    - Select **Accept terms & Download** to begin.  
 
 13. If a **Downloads** window appears at the top of the screen, select the **Open file** link that appears below the **AzureADConnect.msi** file once it finishes downloading. <br/>
 
@@ -83,7 +91,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 22. Select the **Windows (Start)** icon in the lower left corner of the taskbar. In the **Start** menu that appears, select the icon to display all apps. Select **Azure AD Connect** to expand the group, and then select **Synchronization Service** to start this desktop application. <br/>
 
-	>**Note:** If you selected **Azure AD Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step (step 22). However, if **Azure AD Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. <br/>
+	>**Note:** If you selected **Azure AD Connect** in the **Start** menu and it expanded and you were able to select **Synchronization Service**, then proceed to the next step (step 24). However, if **Azure AD Connect** did not expand when you selected it in the **Start** menu, then you will need to close all applications and then restart LON-DC1. <br/>
 
 	**Important:** The remaining instructions in this step are what you should do if you needed to restart LON-DC1. <br/>
 
@@ -153,7 +161,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 9. In the **Print Operators Properties** window, select **OK** to return to the **Active Directory Users and Computers** window.
 
-10. You will now create a new security group. In the console tree under **Adatum.com**, right-click on the **Research** folder, select **New,** and then select **Group**.  
+10. You will now create a new security group. In the console tree under **Adatum.com**, right-click on the **Research** OU, select **New,** and then select **Group**.  
 
 11. In the **New Object - Group** window, enter the following information:
 
@@ -165,7 +173,7 @@ Each group will be assigned several members. After the forced synchronization, y
 
 12. Select **OK**.
 
-13. In the console tree under **Adatum.com**, select the **Research** folder, and then in the detail pane on the right, double-click on the **Manufacturing** security group.  
+13. In the console tree under **Adatum.com**, select the **Research** OU, and then in the detail pane on the right, double-click on the **Manufacturing** security group.  
 
 14. In the **Manufacturing Properties** window, enter **manufacturing@adatum.com** in the **E-mail** field. <br/>
 
@@ -287,7 +295,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 13. You will now use PowerShell to display the list of groups in Microsoft 365. This list should include the groups that you manually created in Microsoft 365, as well as the groups that were created in the on-premises Active Directory that were just synchronized with Microsoft 365. Type the following command and then press Enter:
 
 	```powershell
-	Get-MgGroup | Format-Table Id, DisplayName, Description, GroupTypes | Sort DisplayName
+	Get-MgGroup | Sort-Object DisplayName | Format-Table Id, DisplayName, Description, GroupTypes
 	```
 
 14. You now want to display the members of the **Research** group. In the list of groups, highlight the object ID for the **Research** group and then press **Ctrl+C** to copy the ID to the clipboard. Then type the following command, paste in the Research group's object ID (**Ctrl+V**) in the appropriate spot, and then press Enter:  <br/>
@@ -336,3 +344,4 @@ In this task, you will validate whether the changes you made earlier were synchr
  
 # End of Lab 3
  
+

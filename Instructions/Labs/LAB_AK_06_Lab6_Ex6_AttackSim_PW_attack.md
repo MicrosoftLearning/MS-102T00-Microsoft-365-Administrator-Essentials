@@ -63,7 +63,7 @@ In the prior lab, you created a simulation that was sent to all Adatum users. Yo
 
 17. In the **Select the required text** pane that appears on the right, drag your cursor from the start of the code block to the end, so that the entire code block is highlighted. This will enable the **Select** button. Select this button. This returns you to the **Add indicator** pane. 
 
-18.  In the **Indicator Description** field, replace the default description with the following text: **Free gifts or other one-time only promotional giveaways**.
+18.  In the **Indicator Description** field, replace the default description with the following text, enter **Free gifts or other one-time only promotional giveaways**.
 
 19. Select inside the **Indicator Preview** area to see a preview of the indicator message. Then select outside the **Indicator Preview** field to exit the preview. 
 

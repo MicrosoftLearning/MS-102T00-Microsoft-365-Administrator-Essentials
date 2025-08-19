@@ -57,7 +57,9 @@ In the prior task, you configured an alert designed to notify Lynne Robbins when
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as **Holly Dickson**. 
 
-2. In your **Microsoft Edge** browser, open a new tab and enter the following URL in the address bar: **https://xxxxxZZZZZZ.sharepoint.com/_layouts/15/settings.aspx** (replace xxxxxZZZZZZ with the tenant prefix provided by your lab hosting provider). This opens the **Site Settings** for the global SharePoint Communication site.
+2. In your **Microsoft Edge** browser, open a new tab and enter **https://xxxxxZZZZZZ.sharepoint.com/_layouts/15/settings.aspx**
+
+	(replace xxxxxZZZZZZ with the tenant prefix provided by your lab hosting provider). This opens the **Site Settings** for the global SharePoint Communication site.
 
 3. On the **Site Settings** window, under the **Users and Permissions** section, select **Site permissions**. 
 
