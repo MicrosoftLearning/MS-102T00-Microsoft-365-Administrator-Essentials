@@ -22,7 +22,7 @@ To use Microsoft's Attack simulation training feature to simulate a phishing att
 
 5. On the **About enabling multi-factor auth** dialog box that appears, select the **enable multi-factor auth** button. When the **Updates successful** dialog box appears, select **close**.
 
-6. In the **multi-factor authentication** window, verify that Holly's MFA Status has changed to **Enabled**. 
+6. In the **multi-factor authentication** window, verify that Holly's MFA Status has changed to **Enforced**. 
 
 7. Close the **Multi-factor authentication** tab in your Edge browser. This should return you to the **Microsoft 365 admin center** tab.
 

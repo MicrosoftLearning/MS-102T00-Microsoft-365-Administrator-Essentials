@@ -42,7 +42,7 @@ In this task, you will create a Safe Links policy that applies to all users in y
 
 14. On the **Tenant Allow/Block Lists** page, the **Domains & addresses** tab is displayed by default. Select the **URLs** tab.
 
-15. On the **URLs** tab, select **+Block** on the menu bar. In the **Block URLs** pane that appears, enter **https://tailspintoys.com/*** in the field and then select **Add**.
+15. On the **URLs** tab, select **+Add** > **Block** on the menu bar. In the **Block URLs** pane that appears, enter **https://tailspintoys.com/** in the field and then select **Add**.
 
       **Note:** When you enter the URL, make sure you enter the wildcard at the end of it. The * wildcard represents "any characters" and is used to match multiple URLs. When you enter **https://tailspintoys.com/*** , you're telling Microsoft 365 to block all URLs that start with https://tailspintoys.com/, including any subdirectories, paths, or additional characters after the domain. This ensures a broader and more effective block, covering any page or resource under the tailspintoys.com domain. If you enter https://tailspintoys.com without the wildcard (*), Microsoft 365 might interpret it as an exact match to that specific domain. As such, it may fail to block it because URLs on the web typically have paths, query strings, or other parts after the domain name. For example, https://tailspintoys.com/contact or https://tailspintoys.com/shop would not be blocked if you only specify https://tailspintoys.com without a wildcard.
 
