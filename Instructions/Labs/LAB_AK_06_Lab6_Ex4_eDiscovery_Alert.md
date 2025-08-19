@@ -32,7 +32,10 @@ In this task, you will assign Holly Dickson the necessary eDiscovery permissions
 
 10. In the **Review the role group and finish** window, verify Holly is listed as a member of both role groups, and then select **Save**.  
 
-11. In the confirmation pane, select **Done**.  
+11. In the confirmation pane, select **Done**.
+
+12. Sign out of Microsoft Purview, and then sign back in as **Holly Dickson**.  
+   - This step helps ensure the updated permissions are recognized during the next task.
 
 You have now added Holly Dickson to the **eDiscovery Manager** and **eDiscovery Administrator** role groups.  
 
@@ -106,4 +109,5 @@ To test this default alert, Holly Dickson will create an eDiscovery search. This
 Leave your browser open in **LON-CL1** and do not close any tabs.  
 
 # Proceed to Lab 6 – Exercise 5
+
 
