@@ -246,7 +246,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 
 3. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then select **Active teams & groups**. 
 
-4. In the **Active teams and groups** window, the **Teams & Microsoft 365 groups** tab is displayed by default. Select the **Security groups** tab. Verify the **Print Operators** group does NOT appear in the list of security groups. As mentioned previously, built-in security groups such as the **Print Operators** group are not synced from the on-premises AD to Azure AD, even when you add members to the group as you did in the earlier task.
+4. In the **Active teams & groups** window, the **Teams & Microsoft 365 groups** tab is displayed by default. Select the **Security groups** tab. Verify the **Print Operators** group does NOT appear in the list of security groups. As mentioned previously, built-in security groups such as the **Print Operators** group are not synced from the on-premises AD to Azure AD, even when you add members to the group as you did in the earlier task.
 
 5. In the **Security groups** tab, verify the **Manufacturing** group appears. This group should have an email address displayed, which indicates that it's a mail-enabled security group rather than a standard security group. If you'll recall, you added an email address (**manufacturing@adatum.com**) to the **Manufacturing** group when you created it in a previous task.  <br/>
 
