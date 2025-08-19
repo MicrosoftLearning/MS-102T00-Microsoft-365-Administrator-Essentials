@@ -295,7 +295,7 @@ In this task, you will validate whether the changes you made earlier were synchr
 13. You will now use PowerShell to display the list of groups in Microsoft 365. This list should include the groups that you manually created in Microsoft 365, as well as the groups that were created in the on-premises Active Directory that were just synchronized with Microsoft 365. Type the following command and then press Enter:
 
 	```powershell
-	Get-MgGroup | Format-Table Id, DisplayName
+	Get-MgGroup | Sort-Object DisplayName | Format-Table Id, DisplayName, Description, GroupTypes
 	```
 
 14. You now want to display the members of the **Research** group. In the list of groups, highlight the object ID for the **Research** group and then press **Ctrl+C** to copy the ID to the clipboard. Then type the following command, paste in the Research group's object ID (**Ctrl+V**) in the appropriate spot, and then press Enter:  <br/>
@@ -344,3 +344,4 @@ In this task, you will validate whether the changes you made earlier were synchr
  
 # End of Lab 3
  
+
