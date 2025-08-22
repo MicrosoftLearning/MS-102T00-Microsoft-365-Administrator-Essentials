@@ -51,7 +51,7 @@ In the prior task, you assigned an administrator role directly to Diego Sicilian
 
 8. Once the **User management role group** is created, select **Close**.
 
-9. Now that you created the role group, you must assign the corresponding roles to it. On the **Active teams and groups** page, the **Security groups** tab is displayed. Select the **User management role group** to open its details pane.
+9. Now that you created the role group, you must assign the corresponding roles to it. On the **Active teams & groups** page, the **Security groups** tab is displayed. Select the **User management role group** to open its details pane.
 
 10. On the **User management role group** pane, the **General** tab is displayed by default. Under the **Roles** section, select **Manage roles**.
 

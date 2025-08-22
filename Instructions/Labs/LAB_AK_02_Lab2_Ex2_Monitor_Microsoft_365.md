@@ -100,6 +100,8 @@ Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare hersel
 
 34. In the **Message trace search results** page that appears, if no failed message deliveries appear in the list, you may need to wait several minutes before selecting the **Refresh** button that appears above the item list. You should see the two failed email messages that Holly sent from Outlook - one to **user@alt.none**, and another to **nnnnnnnnYourName@outlook.com**.
 
+	>**Note**: Depending on the recipient mail server, the message you sent to **nnnnnnnnYourName@outlook.com** may show as delivered and may not appear when filtering for **Failed** delivery statuses.
+
 35. Select the date and time values (which are hyperlinked) for the first failed message to view the properties pane for that message. This displays the sender, recipient, status, and error information, as well as the **How to fix it** instructions. Select the down arrows for the **Message events** and **More information** sections to view those sections. Once you've finished reviewing the message information, select the **X** in the upper right corner of the pane to close it. <br/>
 
 	Repeat this step for the second failed message. 
