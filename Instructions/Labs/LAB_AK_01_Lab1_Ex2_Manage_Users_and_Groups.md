@@ -115,7 +115,7 @@ In a previous task, you created a Microsoft 365 group for the members of Adatum'
 
 10. In the **Microsoft 365 admin center**, select **Teams & groups** in the navigation pane, and then under it, select **Active teams & groups**. 
 
-11. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default. In this tab, select **M365 pilot project**.
+11. In the **Active teams & groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default. In this tab, select **M365 pilot project**.
 
 12. In the **M365 pilot project** pane that appears, the **General** tab is displayed by default. Select the **Membership** tab.
 
@@ -136,7 +136,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 2. In the **Microsoft 365 admin center**, under **Teams & groups** in the navigation pane, select **Active teams & groups**. 
 
-3. In the **Active teams and groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default; this tab displays the existing Microsoft 365 groups.  <br/>
+3. In the **Active teams & groups** page, there's a tab for viewing each of the group types. The **Teams & Microsoft 365 groups** tab is displayed by default; this tab displays the existing Microsoft 365 groups.  <br/>
 
     Select the **+Add a Microsoft 365 group** option that appears on the menu bar above the list of groups. This initiates the **Add a Microsoft 365 group** wizard. 
 
@@ -162,9 +162,9 @@ In this task, you will create three new groups that will be used in later labs. 
 
 12. In the **Review and finish adding group** page, review the content that you entered. If anything needs to be fixed, select **Edit** under the specific area that needs adjustment, make any necessary corrections, and then select **Next** to continue back to this page. Once everything is correct, select **Create group**.
 
-13. It may take a minute or so for the **Inside Sales group created** window to appear. Note the comment at the top of the page that it may take 5 minutes for the new group to appear in the list of Active teams and groups. </br>
+13. It may take a minute or so for the **Inside Sales group created** window to appear. Note the comment at the top of the page that it may take 5 minutes for the new group to appear in the list of Active teams & groups. </br>
 
-	Select **Close**. This returns you to the **Active teams and groups** page, which should display the **Teams & Microsoft 365 groups** tab. Since the Inside Sales group was a Microsoft 365 group, it should eventually display on this tab.
+	Select **Close**. This returns you to the **Active teams & groups** page, which should display the **Teams & Microsoft 365 groups** tab. Since the Inside Sales group was a Microsoft 365 group, it should eventually display on this tab.
 
 14. Repeat steps 3-13 to add a new Microsoft 365 group with the following information: <br/>
 
@@ -182,7 +182,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	- Create a team for this group: **Yes**
 
-15. After creating the **Accounting** group, you will be returned to the **Active teams and groups** window. It may take a few minutes for the Accounting group to appear under the **Teams & Microsoft 365 groups** tab, so you may need to select the **Refresh** option on the menu bar once or twice. Note that there are three tabs on this page, one for each group type (Microsoft 365, Distribution list, and Security). The **Teams & Microsoft 365 groups** tab is displayed by default, which is the group type of the Accounting group. So the Accounting group should be displayed in this tab.
+15. After creating the **Accounting** group, you will be returned to the **Active teams & groups** window. It may take a few minutes for the Accounting group to appear under the **Teams & Microsoft 365 groups** tab, so you may need to select the **Refresh** option on the menu bar once or twice. Note that there are three tabs on this page, one for each group type (Microsoft 365, Distribution list, and Security). The **Teams & Microsoft 365 groups** tab is displayed by default, which is the group type of the Accounting group. So the Accounting group should be displayed in this tab.
 
 16. Once the **Accounting** group appears under the **Teams & Microsoft 365 groups** tab, select the **Accounting** name. You will now add members to this group.
 
@@ -198,7 +198,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 21. Once the three new members have been added to the group, select the **X** in the top corner of the pane to close it. 
 
-22. After adding members to the Accounting group, you will be returned to the **Active teams and groups** window. Select the **Security groups** tab to display the list of security groups. As you can see from the menu bar, there are two types of security groups that you can create - a **security group** and a **mail-enabled security group**. In this task, you will create a security group; therefore, select the **+Add a security group** option on the menu bar. 
+22. After adding members to the Accounting group, you will be returned to the **Active teams & groups** window. Select the **Security groups** tab to display the list of security groups. As you can see from the menu bar, there are two types of security groups that you can create - a **security group** and a **mail-enabled security group**. In this task, you will create a security group; therefore, select the **+Add a security group** option on the menu bar. 
 
 23. On the **Set up the basics** page, enter the following information and then select **Next**: <br/>
 
@@ -210,11 +210,11 @@ In this task, you will create three new groups that will be used in later labs. 
 
 24. On the **Edit settings** page, you're NOT going to assign Microsoft Entra (formerly Azure AD) roles to the group, so simply select **Next**.
 
-25. After you finish adding the group, the **Active teams and groups** page should be displayed. Check whether the **IT Admins** group appears under the **Security groups** tab.   <br/>
+25. After you finish adding the group, the **Active teams & groups** page should be displayed. Check whether the **IT Admins** group appears under the **Security groups** tab.   <br/>
 
 	**Tip:** If the group does not immediately appear in the list of Security groups, wait a minute or so and then select the **Refresh** option on the menu bar (to the right of **Add a group**). You may need to wait an additional minute or two for the group to appear. <br/>
 
-	**Note:** In this task, you created Microsoft 365 groups and a Security group. There are two additional group types available - **Mail-enabled security groups** (which was an option under the **Security groups** tab) and **Distribution list**. Neither of these group types were used in this lab because it can take up to an hour for these two types of groups to appear in the **Active teams and groups** list; whereas Microsoft 365 groups and Security groups usually take just a minute to two to appear. 
+	**Note:** In this task, you created Microsoft 365 groups and a Security group. There are two additional group types available - **Mail-enabled security groups** (which was an option under the **Security groups** tab) and **Distribution list**. Neither of these group types were used in this lab because it can take up to an hour for these two types of groups to appear in the **Active teams & groups** list; whereas Microsoft 365 groups and Security groups usually take just a minute to two to appear. 
 
 26. You’re now ready to add members to the **IT Admins** security group. In the **Security groups** tab, select the **IT Admins** group (select the name and not the check box that appears next to the name). 
 
@@ -228,13 +228,13 @@ In this task, you will create three new groups that will be used in later labs. 
 
 31. In the **Members** pane, verify the three users that you selected appear. Select the **X** in the top corner of the pane to close it. 
 
-32. You now want to test the effect of deleting a group. In the list of **Active teams and groups**, select the **Teams & Microsoft 365 groups** tab. In the list of Microsoft 365 groups, locate the **Inside Sales** group and then select the vertical ellipsis icon (**More actions**) that appears to the right of the **Inside Sales** group. In the drop-down menu that appears, select **Delete team**. 
+32. You now want to test the effect of deleting a group. In the list of **Active teams & groups**, select the **Teams & Microsoft 365 groups** tab. In the list of Microsoft 365 groups, locate the **Inside Sales** group and then select the vertical ellipsis icon (**More actions**) that appears to the right of the **Inside Sales** group. In the drop-down menu that appears, select **Delete group**. 
 
 33. In the **Delete Inside Sales?** pane that appears, select the **Delete team** button.
 
 34. On the **Inside Sales was deleted** pane, select the **Close** button. 
 
-35. This will return you to the list of **Active teams and groups**. The **Inside Sales** group should no longer appear under the **Teams & Microsoft 365 groups** tab. If the Inside Sales group still displays, wait a couple of minutes and then select the **Refresh** option on the menu bar. The updated **Active teams and groups** page should no longer include the Inside Sales group in the **Teams & Microsoft 365 groups** tab.
+35. This will return you to the list of **Active teams & groups**. The **Inside Sales** group should no longer appear under the **Teams & Microsoft 365 groups** tab. If the Inside Sales group still displays, wait a couple of minutes and then select the **Refresh** option on the menu bar. The updated **Active teams & groups** page should no longer include the Inside Sales group in the **Teams & Microsoft 365 groups** tab.
 
 36. In the Microsoft 365 admin center navigation pane, under **Teams & groups**, select **Deleted groups**. The **Inside Sales** group should appear in the list. 
 
@@ -273,7 +273,7 @@ However, to expand your administrator skills, you will instead restore the delet
 5. You will now use Microsoft Graph PowerShell to display the list of active groups. The Inside Sales group should not appear in this list. Type the following command and press Enter (Note: it may take a minute or so for the list of groups to appear):  <br/>
 
 	```powershell
-	Get-MgGroup
+	Get-MgGroup -Sort 'DisplayName'
 	```
 
 6. To restore a deleted Microsoft 365 group in the next step, you need to specify the deleted group's object ID. To get the Inside Sales group's object ID, type the following command to display the list of Microsoft 365 groups that have been deleted:  <br/>
@@ -291,7 +291,7 @@ However, to expand your administrator skills, you will instead restore the delet
 8. You should now verify the **Inside Sales** group has been recovered. While you can obviously do this in the **Microsoft 365 admin center**, since this task is working with PowerShell, let's verify the recovery using Microsoft Graph PowerShell. To do so, type the following command to get a list of the active groups, which should now include the Inside Sales Group:  <br/>
 
 	```powershell
-	Get-MgGroup
+	Get-MgGroup -Sort 'DisplayName'
 	```
 
 9. Leave your Windows PowerShell window open for the next exercise; simply minimize the PowerShell window for now.
