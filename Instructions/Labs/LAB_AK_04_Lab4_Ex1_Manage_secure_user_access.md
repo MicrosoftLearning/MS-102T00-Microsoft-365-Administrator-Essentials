@@ -20,11 +20,11 @@ Adatum has directed Holly to enable MFA for all its Microsoft 365 users - both i
    
 3. In the **Microsoft 365 admin center**, under the **Admin centers** section in the navigation pane, select **Identity**. Doing so opens the Microsoft Entra admin center in a new browser tab. If a **Pick an account** window appears, select **Holly Dickson's account**.
 
-4. In the **Microsoft Entra admin center**, select **Protection** in the navigation pane, and then select **Conditional Access**.
+4. In the **Microsoft Entra admin center**, umder **Entra ID** in the navigation pane, select **Conditional Access**.
 
 5. On the **Conditional Access | Overview** page, select **Policies** in the middle navigation pane.
 
-6. On the **Conditional Access | Policies** page, on the menu bar at the top of the page, select **+Create new policy**.
+6. On the **Conditional Access | Policies** page, on the menu bar at the top of the page, select **+ New policy**.
 
 7. On the **New Conditional Access policy** window, enter **MFA for all Microsoft 365 users** in the **Name** field.
 
@@ -168,7 +168,7 @@ Adatum's CTO wants to provide the company's users with an improved sign-in exper
 
 12. To verify that Pass-through authentication is successfully enabled, select the **Microsoft 365 admin center** tab in your Edge browser. Under **Admin centers** in the navigation pane, select **Identity**.
 
-13. This opens the **Microsoft Entra admin center**. Select **Show more** in the navigation pane, select **Hybrid management** to expand this group, and then select **Microsoft Entra Connect**. 
+13. This opens the **Microsoft Entra admin center**. Under **Entra ID**, in the navigation pane, select **Entra Connect**. 
 
 17. On the **Microsoft Entra Connect | Get started** page, select **Connect Sync** in the middle navigation pane.
 
@@ -211,7 +211,7 @@ The CTO is anxious to implement Smart Lockout because it will lock out the attac
 
 	For Adatum, Holly has chosen to use the Microsoft Entra admin center to configure the company's Account Lockout policy. ‎On the taskbar at the bottom of your screen, select the **Microsoft Edge** icon, which should be displaying the **Microsoft Entra admin center**. 
 
-9. In the **Microsoft Entra admin center**, select **Protection** in the navigation pane, and then select **Authentication methods** 
+9. In the **Microsoft Entra admin center**, under **Entra ID** in the navigation pane, select **Authentication methods** 
 
 10. In the **Authentication methods | Policies** page, in the middle pane under the **Manage** section, select **Password protection.**
 

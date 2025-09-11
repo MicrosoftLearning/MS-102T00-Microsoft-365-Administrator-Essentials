@@ -40,7 +40,7 @@ In your hosted lab environment, Adatum already has an existing on-premises domai
 
 7. On the taskbar at the bottom of your screen, select the **Microsoft Edge** icon. If necessary, maximize your browser window when it opens.
 
-8. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://admin.office.com** 
+8. In your Edge browser, go to the **Microsoft 365 Home** page by entering the following URL in the address bar: **https://admin.microsoft.com** 
 
 9. In the **Sign in** window, enter **Holly@xxxxxZZZZZZ.onmicrosoft.com** (where xxxxxZZZZZZ is the tenant prefix provided by your lab hosting provider). Select **Next**.
 

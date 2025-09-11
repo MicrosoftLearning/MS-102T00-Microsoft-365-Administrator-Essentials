@@ -42,7 +42,7 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 5. On the **Stay signed in?** window, select **Don't show this again** and then select **Yes**.
 
-6. In the **Microsoft Entra admin center**, select **Identity governance** in the navigation pane to expand this group, and then select **Privileged Identity Management**.
+6. In the **Microsoft Entra admin center**, select **ID governance** in the navigation pane to expand this group, and then select **Privileged Identity Management**.
 
 7. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
@@ -115,7 +115,7 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 6. A dialog box appears at the top of the page that says: **Creating a group to which Microsoft Entra roles can be assigned is a setting that cannot be changed later. Are you sure that you want to add this capability?**. Select **Yes**.
 
-7. You must now make the **PIM-Global-Administrators** group eligible for role assignment. In the navigation pane, under the **Identity Governance** section, select **Privileged Identity Management**.
+7. You must now make the **PIM-Global-Administrators** group eligible for role assignment. In the navigation pane, under the **ID Governance** section, select **Privileged Identity Management**.
 
 8. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 

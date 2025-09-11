@@ -78,7 +78,7 @@ Therefore, you must use one of Adatum's on-premises user accounts that has been 
 
 19. In the **Welcome to Microsoft 365 Copilot** window (which is Laura's Microsoft 365 home page), notice that no column of Microsoft 365 app icons appears in the navigation pane on the side of the screen. This is because Laura has not been assigned a Microsoft 365 license. <br/>
 
-	Select the **Install and more** button, and then in the drop-down menu that appears, select **Microsoft 365 apps**. This opens the **My account** window for Laura.
+	Select the **Install apps** button, and then in the drop-down menu that appears, select **Microsoft 365 apps**. This opens the **My account** window for Laura.
 
 20. In Laura's **My account** window, under the **Office Apps & devices** tile, select **View apps & devices**. Note the message that appears at the top of page. Laura has not been assigned a license that includes the Office desktop apps, so she’s unable to install Microsoft 365 Apps for enterprise. <br/>
 	
@@ -131,7 +131,7 @@ Microsoft 365 includes a global Office download setting that controls the downlo
 
 	Select the **Refresh** icon that appears to the left of the address bar at the top of your browser. <br/>
 
-14. Select the **Install and more** button, and then in the drop-down menu, select **Install Microsoft 365 apps**.
+14. Select the **Install apps** button, and then in the drop-down menu, select **Install Microsoft 365 apps**.
 	
 15. This will open Laura's **My account** window. Under the **Office apps & devices** tile, select **View apps & devices**. 
 

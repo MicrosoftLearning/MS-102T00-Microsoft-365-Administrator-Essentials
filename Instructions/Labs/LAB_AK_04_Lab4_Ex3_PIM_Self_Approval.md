@@ -45,7 +45,7 @@ For this next test of PIM in Adatum's pilot project, Holly has selected Alex Wil
 
 8. On the **Groups | All groups** window, if the **PIM-Helpdesk-Administrators** group does not appear below the PIM-Global-Administrators group that you created in the prior task, select **Refresh** on the menu bar.
 
-9. You must now make the **PIM-Helpdesk-Administrators** group eligible for role assignment. In the navigation pane, select **Identity Governance** to expand the section, and then select **Privileged Identity Management**.
+9. You must now make the **PIM-Helpdesk-Administrators** group eligible for role assignment. In the navigation pane, select **ID Governance** to expand the section, and then select **Privileged Identity Management**.
 
 10. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
@@ -78,7 +78,7 @@ In the prior lab exercise involving the Global administrator role, Holly updated
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson from the prior task.
 
-2. In your browser, you should still have the **Microsoft Entra admin center** open from the prior task. In the navigation pane, under the **Identity Governance** section, select **Privileged Identity Management**.
+2. In your browser, you should still have the **Microsoft Entra admin center** open from the prior task. In the navigation pane, under the **ID Governance** section, select **Privileged Identity Management**.
 
 3. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
@@ -141,7 +141,7 @@ At this point in Holly's pilot project, the **PIM-Helpdesk-Administrators** grou
 
 4. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
-5. In the **Welcome to Microsoft Azure** dialog box that appears, select **Maybe later** to skip the tour.
+5. In the **Welcome to Microsoft Azure** dialog box that appears, select **Cancel** to skip the tour.
 
 6. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. This section displays a row of Azure services and their associated icons. At the end of the row, select **More services** (with the forward arrow icon). This opens the **All services** window.
 

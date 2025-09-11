@@ -92,7 +92,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 5. Select **Next**.
 
-6. On the **Define the scope for this label** page, verify the the **Files & other data assets**, **Emails**, and **Meetings** check boxes contain a tick mark. These check boxes allow you to define where this sensitivity label will be used so that you can configure the applicable protection settings. Select **Next**.
+6. On the **Define the scope for this label** page, verify that the **Files & other data assets**, **Emails**, and **Meetings** check boxes contain a tick mark. These check boxes allow you to define where this sensitivity label will be used so that you can configure the applicable protection settings. Select **Next**.
 
 7. On the **Choose protection settings for the types of items you selected** page, you can begin the process of using encryption settings to restrict access to content that the label will be applied to. When a document, email, or meeting invitation is encrypted, access to content is restricted, so that it:
 
@@ -104,7 +104,7 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 8. Because you selected the **Control access** option on the prior page, the **Access control** page now appears. This page enables you to configure how the label applies encryption. You can choose to either:  <br/>
 
-	- **Remove access control settings if already applied to items:** When you select this option, applying the label removes existing encryption, even if it was applied independently from a sensitivity label. It's important to understand that thi setting can result in a sensitivity label that users might not be able to apply when they don't have sufficient permissions to remove the existing encryption.  
+	- **Remove access control settings if already applied to items:** When you select this option, applying the label removes existing encryption, even if it was applied independently from a sensitivity label. It's important to understand that this setting can result in a sensitivity label that users might not be able to apply when they don't have sufficient permissions to remove the existing encryption.  
 	- **Configure access control settings:** This option turns on encryption with rights management. It also makes the following settings visible: <br/>
  		- Assign permissions now or let users decide?
 		- User access to content expires
@@ -180,9 +180,9 @@ In this exercise you will create a Sensitivity Label and add it to the default p
 
 26. On the **Review your settings and finish** page, select **Create label**.
 
-27. On the **Your sensitivity label was created** page, select the **Don't create a policy yet** option and then select **Done**. This returns you to the **Labels** page.
+27. On the **Your sensitivity label was created** page, select the **Don't create a policy yet** option and then select **Done**. This returns you to the **Sensitivity Labels** page.
 
-28. Now it's time to publish the **PII** label. On the **Labels** page, if the **PII** label does not appear in the list of labels, select **Refresh** on the menu bar. Once the **PII** label appears, select the check box that appears to the left of it. 
+28. Now it's time to publish the **PII** label. On the **Sensitivity Labels** page, if the **PII** label does not appear in the list of labels, select **Refresh** on the menu bar. Once the **PII** label appears, select the check box that appears to the left of it. 
 
 29. Select the **Publish label** option that appears in the menu bar above the list of labels. This initiates a **Create policy** wizard.
 
@@ -225,9 +225,9 @@ Instead, you will test one of Microsoft 365's pre-existing sensitivity labels. F
 
 3. On the **Sensitivity Labels** page, in the list of labels, select the **Project - Falcon** label (not the check box; select the label name). Doing so opens a **Project - Falcon** details pane. Review the information defined for this label, then close the pane when you're done.  
 
-4. You will now assign the **Project-Falcon** sensitivity label to a document. Select the **Home | Microsoft 365** tab in your browser to return to the Microsoft 365 home page. Select the **Apps** icon on the left-side of the screen. On the **Apps** page that appears, right-click on the **Word** tile and select **Open in new tab**. 
+4. You will now assign the **Project-Falcon** sensitivity label to a document. Select the **Search | M365 Copilot** tab in your browser to return to the Microsoft 365 home page. Select the **Apps** icon on the left-side of the screen. On the **Apps** page that appears, right-click on the **Word** tile and select **Open in new tab**. 
 
-5. In the **Word | Microsoft 365** tab, under the **Create new** section at the top of the page, select **Blank document**.
+5. In the **Word | Microsoft 365** tab, , select the **Create blank document** button.
 
 6. If a **Your privacy option** window appears, select **Close**.
 
