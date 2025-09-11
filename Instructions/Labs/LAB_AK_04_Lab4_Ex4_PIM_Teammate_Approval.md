@@ -44,7 +44,7 @@ For this final test of PIM in Adatum's pilot project, Holly has selected Alex Wi
 
 8. On the **Groups | All groups** window, if the **PIM-Intune-Administrators** group does not appear, select **Refresh** on the menu bar. It may take a few minutes for the group to appear.
 
-9. You must now make the **PIM-Intune-Administrators** group eligible for role assignment. In the **Microsoft Entra admin center** navigation pane, under the **Identity Governance** section, select **Privileged Identity Management**.
+9. You must now make the **PIM-Intune-Administrators** group eligible for role assignment. In the **Microsoft Entra admin center** navigation pane, under the **ID Governance** section, select **Privileged Identity Management**.
 
 10. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
@@ -76,7 +76,7 @@ As in the prior PIM exercise involving the Helpdesk admin role, Holly is trustin
 
 1. On LON-CL1, in your Edge browser, you should still be logged into Microsoft 365 as Holly Dickson.
 
-2. In your browser, you should still have the **Microsoft Entra admin center** open from the prior task. In the navigation pane, under the **Identity Governance** section, select **Privileged Identity Management**.
+2. In your browser, you should still have the **Microsoft Entra admin center** open from the prior task. In the navigation pane, under the **ID Governance** section, select **Privileged Identity Management**.
 
 3. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
@@ -130,7 +130,7 @@ At this point in Holly's pilot project, the **PIM-Intune-Administrators** group 
 
 4. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
-5. If a **Welcome to Microsoft Azure** dialog box appears, select **Maybe later** to skip the tour.
+5. If a **Welcome to Microsoft Azure** dialog box appears, select **Cancel** to skip the tour.
 
 6. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. This section displays a row of Azure services and their associated icons. At the end of the row, select **More services** (with the forward arrow icon). This opens the **All services** window.
 
@@ -175,7 +175,7 @@ As a member of the PIM-Intune-Administrators group, Joni can approve requests fo
 
 9. In the **Stay signed in?** dialog box, select the **Don't show this again** check box and then select **Yes**.
 
-10. If a **Welcome to Microsoft Azure** dialog box appears, select **Maybe later** to skip the tour.
+10. If a **Welcome to Microsoft Azure** dialog box appears, select **Cancel** to skip the tour.
 
 11. In the **Microsoft Azure** portal, in the middle of the screen is the section of **Azure services**. Select **More services** (with the forward arrow icon). This opens the **All services** window.
 

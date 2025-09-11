@@ -34,7 +34,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 9. By selecting the **Help me decide** option, the wizard displays a list of predefined requirements that can impact which synchronization tool an organization should use. In the list of requirements that appears, select the following three Adatum requirements to see which sync tool the system recommends (Note how the recommendation either remains the same or changes after selecting each additional requirement): <br/>
 
-	- Select **I require the ability for users to access both on-premises and cloud-based applications using the same passwords (Password hash sync and Password writeback).**  <br/>
+	- Select **I require the ability for users to access both on-premises and cloud-based applications using the same passwords for synced users (Password hash sync and Password writeback).**  <br/>
 
 		**Note:** After selecting this check box, note the recommendation that appears at the bottom of the page. For this one requirement, the system recommends using **Microsoft Entra Cloud Sync**. <br/>
 	
