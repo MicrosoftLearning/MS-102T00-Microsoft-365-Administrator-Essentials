@@ -1,3 +1,12 @@
+---
+lab:
+  title: Learning Path 5 - Lab 5 - Exercise 2 - Implement a Safe Links Policy
+  description: After having waited at least 30 minutes since completing Task 1, you will now test the blocked URL and the Safe Links policy that you created. There are several tests that you will perform.
+  duration: 30 minutes
+  level: 100
+  islab: true
+---
+
 # Learning Path 5 - Lab 5 - Exercise 2 - Implement a Safe Links Policy
 
 Having created a Safe Attachments policy, Holly Dickson now wants to create a Safe Links policy and then validate the policy to ensure that it works properly.
