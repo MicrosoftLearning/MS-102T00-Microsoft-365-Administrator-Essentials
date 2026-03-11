@@ -1,3 +1,23 @@
+---
+lab:
+  title: Learning Path 4 - Lab 4 - Exercise 3 - PIM Self-Approval
+  description: Since taking on her role as Adatum's Microsoft 365 Administrator, Holly
+    Dickson has been interrupted on several occasions with user support requests that
+    have taken her attention away from the company's Microsoft 365 pilot project.
+    Because Holly does not have the bandwidth to respond to the requests in a timely
+    manner, she wants Alex Wilber and Joni Sherman to begin responding to these requests.
+    This will require that Alex and Joni have Helpdesk Administrator role permissions.  However,
+    Holly does not want to permanently assign this role to Alex and Joni, since this
+    is not their regular role, and she doesn't want this role to impact other services.
+    Holly also doesn't want Alex and Joni to submit approval requests each time they
+    need to be assigned the Helpdesk Admin role.
+  duration: 30 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Microsoft 365
+---
+
 # Learning Path 4 - Lab 4 - Exercise 3 - PIM Self-Approval
 
 Since taking on her role as Adatum's Microsoft 365 Administrator, Holly Dickson has been interrupted on several occasions with user support requests that have taken her attention away from the company's Microsoft 365 pilot project. Because Holly does not have the bandwidth to respond to the requests in a timely manner, she wants Alex Wilber and Joni Sherman to begin responding to these requests. This will require that Alex and Joni have Helpdesk Administrator role permissions.  However, Holly does not want to permanently assign this role to Alex and Joni, since this is not their regular role, and she doesn't want this role to impact other services. Holly also doesn't want Alex and Joni to submit approval requests each time they need to be assigned the Helpdesk Admin role.
