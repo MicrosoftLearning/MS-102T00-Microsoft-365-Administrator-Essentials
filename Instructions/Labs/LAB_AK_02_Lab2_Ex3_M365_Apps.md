@@ -1,3 +1,20 @@
+---
+lab:
+  title: Learning Path 2 - Lab 2 - Exercise 3 - Manage a Microsoft 365 Apps for enterprise
+    installation
+  description: 'You have taken on the persona of Holly Dickson, Adatum''s new Microsoft
+    365 Administrator, and you have Microsoft 365 deployed in a virtualized lab environment.
+    In this exercise, you will perform the tasks necessary to manage a user-driven
+    Microsoft 365 Apps for enterprise installation. Performing a user-driven Microsoft
+    365 Apps for enterprise installation is a two-step process:'
+  duration: 136 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Microsoft 365
+  - Microsoft 365 Apps
+---
+
 # Learning Path 2 - Lab 2 - Exercise 3 - Manage a Microsoft 365 Apps for enterprise installation
 
 You have taken on the persona of Holly Dickson, Adatum's new Microsoft 365 Administrator, and you have Microsoft 365 deployed in a virtualized lab environment. In this exercise, you will perform the tasks necessary to manage a user-driven Microsoft 365 Apps for enterprise installation. Performing a user-driven Microsoft 365 Apps for enterprise installation is a two-step process: 
