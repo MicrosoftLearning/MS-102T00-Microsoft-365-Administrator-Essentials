@@ -1,3 +1,12 @@
+---
+lab:
+  title: Learning Path 4 - Lab 4 - Exercise 4 - PIM Teammate Approval Request
+  description: In this exercise, Holly will enable the PIM-Intune-Administrators group to be eligible for the Intune admin role. However, not only will Holly make the group eligible for the role, but she will also make its members approvers of the role requests. Holly will then configure the role so that PIM notifies her of all approvals for this role.
+  duration: 30 minutes
+  level: 200
+  islab: true
+---
+
 # Learning Path 4 - Lab 4 - Exercise 4 - PIM Teammate Approval Request
 
 Up to this point, you have conducted two forms of PIM approval:
