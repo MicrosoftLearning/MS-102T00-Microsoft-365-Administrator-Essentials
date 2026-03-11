@@ -1,3 +1,23 @@
+---
+lab:
+  title: Learning Path 4 - Lab 4 - Exercise 2 - PIM Administrator approval
+  description: As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's
+    new Microsoft 365 Administrator, wants to implement Privileged Identity Management
+    (PIM) within Microsoft Entra ID (formerly Azure AD). PIM is a Microsoft Entra
+    ID service that enables you to manage, control, and monitor access to important
+    resources in your organization. These resources include not only Azure, but other
+    Microsoft Online Services, such as Microsoft 365 and Microsoft Intune.
+  duration: 30 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Azure
+  - Microsoft 365
+  - Microsoft Entra
+  - Microsoft Entra ID
+  - Microsoft Intune
+---
+
 # Learning Path 4 - Lab 4 - Exercise 2 - PIM Administrator approval
 
 As part of her Microsoft 365 pilot project, Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to implement Privileged Identity Management (PIM) within Microsoft Entra ID (formerly Azure AD). PIM is a Microsoft Entra ID service that enables you to manage, control, and monitor access to important resources in your organization. These resources include not only Azure, but other Microsoft Online Services, such as Microsoft 365 and Microsoft Intune.
