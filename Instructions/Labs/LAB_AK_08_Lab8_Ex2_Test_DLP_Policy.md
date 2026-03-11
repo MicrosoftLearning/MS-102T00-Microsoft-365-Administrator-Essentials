@@ -1,3 +1,14 @@
+---
+lab:
+  title: Learning Path 8 - Lab 8 - Exercise 2 - Test the DLP Policy
+  description: Holly Dickson is now at the point in her pilot project where she wants
+    to test the DLP policy related to emails that contain sensitive information that
+    you created in the previous lab exercise.
+  duration: 76 minutes
+  level: 200
+  islab: true
+---
+
 # Learning Path 8 - Lab 8 - Exercise 2 - Test the DLP Policy
 
 Holly Dickson is now at the point in her pilot project where she wants to test the DLP policy related to emails that contain sensitive information that you created in the previous lab exercise. 
