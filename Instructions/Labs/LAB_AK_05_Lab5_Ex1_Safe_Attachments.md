@@ -1,3 +1,20 @@
+---
+lab:
+  title: Learning Path 5- Lab 5 - Exercise 1 - Implement a Safe Attachments policy
+  description: In this phase of Adatum's Microsoft 365 pilot project, Holly Dickson
+    wants to create a Safe Attachments policy and turn on Microsoft Defender for Office
+    365. Doing so will provide advanced threat protection for SharePoint, OneDrive,
+    and Microsoft Teams.
+  duration: 44 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Microsoft 365
+  - Microsoft Defender
+  - Microsoft Teams
+  - Office 365
+---
+
 # Learning Path 5- Lab 5 - Exercise 1 - Implement a Safe Attachments policy 
 
 In this phase of Adatum's Microsoft 365 pilot project, Holly Dickson wants to create a Safe Attachments policy and turn on Microsoft Defender for Office 365. Doing so will provide advanced threat protection for SharePoint, OneDrive, and Microsoft Teams.
