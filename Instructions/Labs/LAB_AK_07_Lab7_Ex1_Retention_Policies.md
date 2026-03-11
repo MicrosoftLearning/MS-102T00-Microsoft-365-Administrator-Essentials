@@ -1,3 +1,15 @@
+---
+lab:
+  title: Learning Path 7 - Lab 7 - Exercise 1 - Configure In-place Archiving and Retention Policies
+  description: In this exercise, you will use the the Microsoft Exchange admin center to enable In-place archiving for Holly Dickson's mailbox. You will then configure two retention policies through the Microsoft Purview portal.
+  duration: 94 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Exchange
+    - Microsoft Purview
+---
+
 # Learning Path 7 - Lab 7 - Exercise 1 - Configure In-place Archiving and Retention Policies  
 
 In this exercise, you will use the the Microsoft Exchange admin center to enable In-place archiving for Holly Dickson's mailbox. You will then configure two retention policies through the Microsoft Purview portal. 
