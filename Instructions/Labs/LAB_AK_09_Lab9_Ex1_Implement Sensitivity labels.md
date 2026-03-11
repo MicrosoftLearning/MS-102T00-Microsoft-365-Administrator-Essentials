@@ -1,3 +1,22 @@
+---
+lab:
+  title: Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with
+    Microsoft Purview Information Protection
+  description: In your role as Holly Dickson, Adatum’s new Microsoft 365 Administrator,
+    you have Microsoft 365 deployed in a virtualized lab environment. As you proceed
+    with your Microsoft 365 pilot project, your next steps are to implement Sensitivity
+    Labels with Microsoft Purview Information Protection at Adatum. In this lab, you
+    will create and publish a label, and you will test a published label. However,
+    in doing so, you won't test the label that you create in this lab. You will test
+    a different label.
+  duration: 15 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Microsoft 365
+  - Microsoft Purview
+---
+
 
 # Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with Microsoft Purview Information Protection
 
