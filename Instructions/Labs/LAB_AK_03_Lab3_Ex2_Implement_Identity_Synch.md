@@ -1,3 +1,22 @@
+---
+lab:
+  title: Learning Path 3 - Lab 3 - Exercise 2 - Implement Identity Synchronization
+  description: In this exercise, you will use Microsoft Entra Connect Sync to enable
+    synchronization between Adatum’s on-premises Active Directory and Microsoft Entra
+    ID. Microsoft Entra Connect Sync will then continue to synchronize any delta changes
+    every 30 minutes. You will then make some user and group updates and then manually
+    force an immediate synchronization rather than waiting for Microsoft Entra Connect
+    Sync to automatically synchronize the updates. You will then verify whether the
+    updates were synchronized.
+  duration: 30 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Microsoft Entra
+  - Microsoft Entra ID
+  - Active Directory
+---
+
 # Learning Path 3 - Lab 3 - Exercise 2 - Implement Identity Synchronization 
 
 In this exercise, you will use Microsoft Entra Connect Sync to enable synchronization between Adatum’s on-premises Active Directory and Microsoft Entra ID. Microsoft Entra Connect Sync will then continue to synchronize any delta changes every 30 minutes. You will then make some user and group updates and then manually force an immediate synchronization rather than waiting for Microsoft Entra Connect Sync to automatically synchronize the updates. You will then verify whether the updates were synchronized.  
