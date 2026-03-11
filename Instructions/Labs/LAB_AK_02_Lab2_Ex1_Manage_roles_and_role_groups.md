@@ -1,3 +1,14 @@
+---
+lab:
+  title: Learning Path 2 - Lab 2 - Exercise 1 - Manage roles and role groups
+  description: In the prior task, you assigned an administrator role directly to Diego Siciliani's user account in the Microsoft 365 admin center. In this task, you will assign roles using a role group instead. You will create a Security role group, assign user management roles to it, and then assign the role group to Lynne Robbin's user account in the Microsoft 365 admin center.
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft 365
+---
+
 # Learning Path 2 - Lab 2 - Exercise 1 - Manage roles and role groups
 
 In this exercise, you will continue in your role as Holly Dickson, Adatum's new Microsoft 365 Administrator. As part of Adatum's Microsoft 365 pilot project, you will manage administration delegation by assigning Microsoft 365 administrator roles to several of the Microsoft 365 user accounts that were created by your lab hosting provider. This exercise will provide you with experience in using three different methods to assign these roles: 1) by assigning a role directly to a user account in the Microsoft 365 admin center, 2) by creating a role group, assigning roles to the role group, and then assigning the role group to a user in the Microsoft 365 admin center, and 3) by assigning a role to a user using Windows PowerShell. Once you have assigned Microsoft 365 admin roles to several of the existing user accounts, you will then test those assignments by verifying the users have the permissions to act in accordance with their roles.
