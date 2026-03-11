@@ -1,3 +1,14 @@
+---
+lab:
+  title: Learning Path 1 - Lab 1 - Exercise 3 - Add a Custom Domain
+  description: 'In this exercise, you will gain experience adding this domain to Adatum'' Microsoft 365 deployment. When you add a domain to Microsoft 365, it''s called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). Adding a new domain is a three-step process:'
+  duration: 10 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft 365
+---
+
 # Learning Path 1 - Lab 1 - Exercise 3 - Add a Custom Domain
 
 When a company purchases Microsoft 365, they are typically provided with a default domain name in the format of **companyname.onmicrosoft.com**. The "companyname" in companyname.onmicrosoft.com is a placeholder for the actual name of the company that purchases Microsoft 365. This default domain name is assigned by Microsoft during the sign-up process and is unique to the organization. It serves as an initial domain that can be used to access Microsoft 365 services immediately. 
