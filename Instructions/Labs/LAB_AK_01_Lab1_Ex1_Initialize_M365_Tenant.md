@@ -1,3 +1,14 @@
+---
+lab:
+  title: Learning Path 1 - Lab 1 - Exercise 1 - Initialize your Microsoft 365 Tenant
+  description: 'In your lab environment, your lab hosting provider has already obtained a Microsoft 365 trial tenant for you. Your lab provider has also created two admin accounts that you will use in your VM lab environment:'
+  duration: 5 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Microsoft 365
+---
+
 ## WWL Tenants - Terms of Use
 
 If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training. 
