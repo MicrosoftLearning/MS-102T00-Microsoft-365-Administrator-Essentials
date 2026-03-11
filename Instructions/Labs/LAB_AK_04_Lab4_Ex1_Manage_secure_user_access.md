@@ -1,3 +1,20 @@
+---
+lab:
+  title: Learning Path 4 - Lab 4 - Exercise 1 - Manage secure user access
+  description: Holly has then been asked by Adatum’s CTO to deploy Microsoft Entra
+    Multifactor Authentication (MFA), Pass-through Authentication (PTA), and Microsoft
+    Entra Smart Lockout. These three features will help strengthen password management
+    throughout the organization in preparation for Copilot for Microsoft 365. For
+    PTA, you will deploy it using Microsoft Entra Connect Sync. And for Smart Lockout,
+    you will deploy it using Group Policy Management.
+  duration: 10 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Microsoft 365
+  - Microsoft Entra
+---
+
 # Learning Path 4 - Lab 4 - Exercise 1 - Manage secure user access 
 
 Holly has then been asked by Adatum’s CTO to deploy Microsoft Entra Multifactor Authentication (MFA), Pass-through Authentication (PTA), and Microsoft Entra Smart Lockout. These three features will help strengthen password management throughout the organization in preparation for Copilot for Microsoft 365. For PTA, you will deploy it using Microsoft Entra Connect Sync. And for Smart Lockout, you will deploy it using Group Policy Management. 
