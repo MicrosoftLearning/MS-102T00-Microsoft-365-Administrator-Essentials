@@ -1,3 +1,14 @@
+---
+lab:
+  title: Learning Path 5 - Lab 5 - Exercise 2 - Implement a Safe Links Policy
+  description: Having created a Safe Attachments policy, Holly Dickson now wants to
+    create a Safe Links policy and then validate the policy to ensure that it works
+    properly.
+  duration: 30 minutes
+  level: 100
+  islab: true
+---
+
 # Learning Path 5 - Lab 5 - Exercise 2 - Implement a Safe Links Policy
 
 Having created a Safe Attachments policy, Holly Dickson now wants to create a Safe Links policy and then validate the policy to ensure that it works properly.
