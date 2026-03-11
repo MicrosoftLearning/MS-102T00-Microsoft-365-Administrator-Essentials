@@ -1,3 +1,12 @@
+---
+lab:
+  title: Learning Path 6 - Lab 6 - Exercise 1 - Prepare for Alert Policies
+  description: 'The three alerts that you will create in this lab are assigned to two Alert categories: Permissions and Data Loss Prevention. The Compliance Data Administrator role group, which includes the Compliance Administrator role, provides permissions for these two alert categories; therefore, assigning Lynne Robbins to this role group will enable her to view the alerts that are created in this lab.'
+  duration: 38 minutes
+  level: 300
+  islab: true
+---
+
 # Learning Path 6 - Lab 6 - Exercise 1 - Prepare for Alert Policies
 
 Alerts are policies designed to automatically notify administrators when key actions have occurred in their Microsoft 365 tenant. Alerts can be an easy way to ensure that change logs are up-to-date and that business policies are being followed inside your Microsoft 365 tenant.
