@@ -1,3 +1,16 @@
+---
+lab:
+  title: Learning Path 6 – Lab 6 – Exercise 4 – Test the Default eDiscovery Alert
+  description: In this exercise you will test a default Microsoft 365 alert policy
+    that notifies all tenant administrators, such as Holly Dickson, whenever an eDiscovery
+    search has been created or exported.
+  duration: 78 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Microsoft 365
+---
+
 # Learning Path 6 – Lab 6 – Exercise 4 – Test the Default eDiscovery Alert
 
 In this exercise you will test a default Microsoft 365 alert policy that notifies all tenant administrators, such as Holly Dickson, whenever an eDiscovery search has been created or exported.
