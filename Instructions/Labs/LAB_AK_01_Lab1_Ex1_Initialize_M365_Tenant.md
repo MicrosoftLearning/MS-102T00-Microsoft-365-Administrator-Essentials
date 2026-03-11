@@ -1,3 +1,16 @@
+---
+lab:
+  title: Learning Path 1 - Lab 1 - Exercise 1 - Initialize your Microsoft 365 Tenant
+  description: If you are being provided with a tenant as a part of an instructor-led
+    training delivery, please note that the tenant is made available for the purpose
+    of supporting the hands-on labs in the instructor-led training.
+  duration: 5 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Microsoft 365
+---
+
 ## WWL Tenants - Terms of Use
 
 If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training. 
