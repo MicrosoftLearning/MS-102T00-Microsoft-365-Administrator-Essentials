@@ -1,10 +1,12 @@
 ---
 lab:
   title: Learning Path 4 - Lab 4 - Exercise 1 - Manage secure user access
-  description: As your training indicated, there are three ways to implement MFA - with Conditional Access policies, with security defaults, and with legacy per-user MFA (not recommended for larger organizations). In this exercise, you'll enable MFA through a Conditional Access policy, which is the method that Microsoft recommends.
-  duration: 10 minutes
+  description: In this exercise, you will deploy Microsoft Entra Multifactor Authentication (MFA) through a Conditional Access policy, enable Pass-through Authentication (PTA) using Microsoft Entra Connect Sync, and configure Microsoft Entra Smart Lockout using Group Policy Management.
+  duration: 45 minutes
   level: 200
   islab: true
+  primarytopics:
+    - Microsoft Entra ID
 ---
 
 # Learning Path 4 - Lab 4 - Exercise 1 - Manage secure user access 

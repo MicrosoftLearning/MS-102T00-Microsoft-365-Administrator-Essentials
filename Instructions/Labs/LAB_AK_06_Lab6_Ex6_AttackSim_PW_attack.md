@@ -5,6 +5,8 @@ lab:
   duration: 15 minutes
   level: 200
   islab: true
+  primarytopics:
+    - Microsoft Defender for Office 365
 ---
 
 # Learning Path 6 - Lab 6 - Exercise 6 - Conduct a Drive-by URL attack using Attack Simulation training

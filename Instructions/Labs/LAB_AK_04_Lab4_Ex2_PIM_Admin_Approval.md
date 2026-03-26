@@ -1,10 +1,12 @@
 ---
 lab:
   title: Learning Path 4 - Lab 4 - Exercise 2 - PIM Administrator approval
-  description: 'In this lab, you will perform the basic steps involved in implementing PIM for a given admin role:'
+  description: In this exercise, you will implement Privileged Identity Management (PIM) for the Global Administrator role. You will configure the role to require approval, assign Holly Dickson as the approver, make Patti Fernandez an eligible user, submit a role activation request, and approve the request.
   duration: 30 minutes
-  level: 200
+  level: 300
   islab: true
+  primarytopics:
+    - Microsoft Entra ID
 ---
 
 # Learning Path 4 - Lab 4 - Exercise 2 - PIM Administrator approval

@@ -1,8 +1,8 @@
 ---
 lab:
   title: Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with Microsoft Purview Information Protection
-  description: In the prior task, you created a Word document and protected it with the Project - Falcon sensitivity label. This label inserted a watermark in the document. In this task, you will share the document you created with Joni Sherman, and you will restrict Joni to "View only" permission. This will allow you to see how Microsoft Purview Information Protection protects the document based on the parameters that you configure.
-  duration: 15 minutes
+  description: In this exercise, you will install the Microsoft Purview Information Protection client, create a sensitivity label with encryption and content marking, publish a label policy, and test a pre-existing sensitivity label by applying it to a Word document and verifying the protection settings when sharing with restricted permissions.
+  duration: 60 minutes
   level: 300
   islab: true
   primarytopics:

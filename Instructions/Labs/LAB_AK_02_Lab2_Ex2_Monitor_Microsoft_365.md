@@ -1,13 +1,13 @@
 ---
 lab:
   title: Learning Path 2 - Lab 2 - Exercise 2 - Monitor and Troubleshoot Microsoft 365
-  description: Holly Dickson, Adatum's new Microsoft 365 Administrator, wants to prepare herself for any potential mail flow problems that may occur within Adatum’s Exchange environment. As part of her pilot project, she has decided to create two test scenarios to analyze some of the troubleshooting options available to her. One email will be sent to an email address with an invalid domain (@alt.none). Another will be sent to an address with an invalid mailbox in a valid domain (@outlook.com). This task guides Holly though a variety of tools that she can use to troubleshoot different mail conflict scenarios.
-  duration: 136 minutes
-  level: 100
+  description: In this exercise, you will troubleshoot mail flow issues using the Message Header Analyzer, review Microsoft 365 service health queries and reports, and submit a service request with Microsoft Support.
+  duration: 30 minutes
+  level: 200
   islab: true
   primarytopics:
-    - Guides
     - Microsoft 365
+    - Exchange Online
 ---
 
 # Learning Path 2 - Lab 2 - Exercise 2 - Monitor and Troubleshoot Microsoft 365  

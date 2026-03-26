@@ -5,6 +5,9 @@ lab:
   duration: 15 minutes
   level: 200
   islab: true
+  primarytopics:
+    - Microsoft Defender XDR
+    - Exchange Online
 ---
 
 # Learning Path 6 - Lab 6 - Exercise 2 - Implement a Mailbox Permission Alert

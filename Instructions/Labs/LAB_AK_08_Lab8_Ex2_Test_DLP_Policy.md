@@ -1,10 +1,12 @@
 ---
 lab:
   title: Learning Path 8 - Lab 8 - Exercise 2 - Test the DLP Policy
-  description: In this task, you will send an email from Holly Dickson to Lynne Robbins that tests the first rule (single IP address). When this rule is triggered, an email policy tip is displayed in the sender's Outlook mailbox that informs the sender the email contains sensitive data. The sender will also receive an email notification, but the email will still be sent to the recipient.
-  duration: 76 minutes
+  description: In this exercise, you will test the custom DLP policy you created by sending emails containing IP addresses. You will test the first rule with a single IP address to verify the policy tip and notification, and then test the second rule with multiple IP addresses to verify the email is blocked with an override option.
+  duration: 20 minutes
   level: 200
   islab: true
+  primarytopics:
+    - Microsoft Purview
 ---
 
 # Learning Path 8 - Lab 8 - Exercise 2 - Test the DLP Policy

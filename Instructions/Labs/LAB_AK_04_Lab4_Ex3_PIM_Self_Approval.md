@@ -3,7 +3,7 @@ lab:
   title: Learning Path 4 - Lab 4 - Exercise 3 - PIM Self-Approval
   description: At this point in Holly's pilot project, the PIM-Helpdesk-Administrators group has been made eligible for the Helpdesk administrator role. The members of the group (Alex Wilber and Joni Sherman) can now be assigned the Helpdesk Administrator role using Microsoft Entra Privileged Identity Management. Holly wants to test out the PIM process in her pilot project. In this task, you will take on the role of Alex Wilber, who will submit a request to self-approve assigning the Helpdesk Administrator role to his user account.
   duration: 30 minutes
-  level: 200
+  level: 300
   islab: true
   primarytopics:
     - Microsoft Entra

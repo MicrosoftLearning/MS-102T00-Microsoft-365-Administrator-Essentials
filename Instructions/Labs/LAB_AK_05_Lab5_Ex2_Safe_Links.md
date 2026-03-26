@@ -1,10 +1,12 @@
 ---
 lab:
   title: Learning Path 5 - Lab 5 - Exercise 2 - Implement a Safe Links Policy
-  description: After having waited at least 30 minutes since completing Task 1, you will now test the blocked URL and the Safe Links policy that you created. There are several tests that you will perform.
-  duration: 30 minutes
-  level: 100
+  description: In this exercise, you will create a Safe Links policy that applies to all users in your tenant, add a blocked URL to the Tenant Block List, and then validate the policy by testing the blocked URL and verifying Safe Links protection on email links.
+  duration: 35 minutes
+  level: 200
   islab: true
+  primarytopics:
+    - Microsoft Defender for Office 365
 ---
 
 # Learning Path 5 - Lab 5 - Exercise 2 - Implement a Safe Links Policy

@@ -1,13 +1,13 @@
 ---
 lab:
   title: Learning Path 3 - Lab 3 - Exercise 1 - Prepare for Identity Synchronization
-  description: As in the previous lab exercises, you will take on the role of Holly Dickson, Adatum Corporation’s new Microsoft 365 Administrator. Adatum has recently subscribed to Microsoft 365, and you have been tasked with deploying the application in Adatum’s virtualized lab environment. In this lab, you will perform the tasks necessary to manage your Microsoft 365 identity environment using both the Microsoft 365 admin center and Windows PowerShell.
-  duration: 62 minutes
+  description: In this exercise, you will prepare for identity synchronization by configuring the UPN suffix for Adatum's on-premises domain, running the IdFix tool to identify and fix directory errors, and preparing the on-premises environment for Microsoft Entra Connect Sync.
+  duration: 15 minutes
   level: 300
   islab: true
   primarytopics:
     - Microsoft 365
-    - Windows
+    - Microsoft Entra ID
 ---
 
 # Learning Path 3 - Lab 3 - Exercise 1 - Prepare for Identity Synchronization  

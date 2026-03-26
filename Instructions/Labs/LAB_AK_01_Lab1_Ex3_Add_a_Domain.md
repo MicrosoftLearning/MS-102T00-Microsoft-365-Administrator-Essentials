@@ -1,8 +1,8 @@
 ---
 lab:
   title: Learning Path 1 - Lab 1 - Exercise 3 - Add a Custom Domain
-  description: 'In this exercise, you will gain experience adding this domain to Adatum'' Microsoft 365 deployment. When you add a domain to Microsoft 365, it''s called an accepted, or custom domain. Custom domains allow companies to have their own branding on emails and accounts so that customers can verify who is emailing them (for example, @contoso.com). Adding a new domain is a three-step process:'
-  duration: 10 minutes
+  description: In this exercise, you will add a custom domain to Adatum's Microsoft 365 deployment. You will create a new DNS zone, add the domain in the Microsoft 365 admin center, configure the required DNS records, and verify domain ownership.
+  duration: 25 minutes
   level: 300
   islab: true
   primarytopics:

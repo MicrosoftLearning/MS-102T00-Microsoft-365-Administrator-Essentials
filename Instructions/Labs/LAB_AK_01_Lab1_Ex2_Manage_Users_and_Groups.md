@@ -1,13 +1,13 @@
 ---
 lab:
   title: Learning Path 1 - Lab 1 - Exercise 2 - Manage Users and Groups
-  description: In this task, you will create three new groups that will be used in later labs. You will then manage the groups by assigning users to them. Two groups will be Microsoft 365 groups; the third will be a Security group. Creating the two types of groups will enable you to see some of the differences between the group types. After creating the groups, you will then delete one of them. This will set up the next task, which examines how to recover a deleted group using Windows PowerShell.
-  duration: 5 minutes
-  level: 300
+  description: In this exercise, you will create a Microsoft 365 user account for Holly Dickson and assign her the Global Administrator role. You will then create Microsoft 365 groups and a Security group, assign users to those groups, delete a group, and recover the deleted group using Windows PowerShell.
+  duration: 45 minutes
+  level: 200
   islab: true
   primarytopics:
     - Microsoft 365
-    - Windows
+    - Microsoft Entra ID
 ---
 
 # Learning Path 1 - Lab 1 - Exercise 2 - Manage Users and Groups 

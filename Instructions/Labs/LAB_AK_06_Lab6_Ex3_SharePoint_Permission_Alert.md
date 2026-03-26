@@ -5,6 +5,9 @@ lab:
   duration: 15 minutes
   level: 200
   islab: true
+  primarytopics:
+    - Microsoft Defender XDR
+    - SharePoint Online
 ---
 
 # Learning Path 6 - Lab 6 - Exercise 3 - Implement a SharePoint Permission Alert

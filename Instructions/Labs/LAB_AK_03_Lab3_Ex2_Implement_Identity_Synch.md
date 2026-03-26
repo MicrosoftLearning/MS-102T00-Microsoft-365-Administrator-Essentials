@@ -1,12 +1,13 @@
 ---
 lab:
   title: Learning Path 3 - Lab 3 - Exercise 2 - Implement Identity Synchronization
-  description: To test the manual, forced synchronization process, you will also set up several group scenarios to verify whether the forced synchronization function is working in Microsoft Entra Connect Sync. You will create a new security group, and you will update the group members in an existing, built-in security group, all within Adatum’s on-premises environment.
-  duration: 30 minutes
-  level: 400
+  description: In this exercise, you will install and configure Microsoft Entra Connect Sync to enable synchronization between Adatum's on-premises Active Directory and Microsoft Entra ID. You will then create user and group updates on-premises, force an immediate synchronization, and verify that the changes were synchronized to the cloud.
+  duration: 45 minutes
+  level: 300
   islab: true
   primarytopics:
-    - Microsoft Entra
+    - Microsoft Entra ID
+    - Microsoft Entra Connect
 ---
 
 # Learning Path 3 - Lab 3 - Exercise 2 - Implement Identity Synchronization 

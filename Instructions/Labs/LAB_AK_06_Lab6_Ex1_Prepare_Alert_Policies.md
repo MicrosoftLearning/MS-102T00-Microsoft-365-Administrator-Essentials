@@ -1,10 +1,12 @@
 ---
 lab:
   title: Learning Path 6 - Lab 6 - Exercise 1 - Prepare for Alert Policies
-  description: 'The three alerts that you will create in this lab are assigned to two Alert categories: Permissions and Data Loss Prevention. The Compliance Data Administrator role group, which includes the Compliance Administrator role, provides permissions for these two alert categories; therefore, assigning Lynne Robbins to this role group will enable her to view the alerts that are created in this lab.'
-  duration: 38 minutes
-  level: 300
+  description: In this exercise, you will assign the Compliance Data Administrator role group to Lynne Robbins so she can view alerts for the Permissions and Data Loss Prevention categories in Microsoft Defender XDR.
+  duration: 10 minutes
+  level: 200
   islab: true
+  primarytopics:
+    - Microsoft Defender XDR
 ---
 
 # Learning Path 6 - Lab 6 - Exercise 1 - Prepare for Alert Policies

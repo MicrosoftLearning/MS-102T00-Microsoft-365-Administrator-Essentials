@@ -1,14 +1,12 @@
 ---
 lab:
-  title: Learning Path 5- Lab 5 - Exercise 1 - Implement a Safe Attachments policy
-  description: In this task, you will turn on Microsoft Defender for Office 365, which provides advanced threat protection for SharePoint, OneDrive, and Microsoft Teams. You will also create a Safe Attachments policy that will test email attachments for malware that are sent to recipients within the xxxxxZZZZZZ.onmicrosoft.com domain created for this lab by your lab hosting provider. You will configure the policy so that if an attachment is blocked, it will be removed from the email that is sent to the recipient, and a copy of the email will be redirected to Joni Sherman for additional review.
-  duration: 44 minutes
+  title: Learning Path 5 - Lab 5 - Exercise 1 - Implement a Safe Attachments policy
+  description: In this exercise, you will turn on Microsoft Defender for Office 365 to provide advanced threat protection for SharePoint, OneDrive, and Microsoft Teams. You will also create a Safe Attachments policy that tests email attachments for malware, removes blocked attachments, and redirects copies to Joni Sherman for review.
+  duration: 10 minutes
   level: 200
   islab: true
   primarytopics:
-    - Microsoft Defender
-    - Microsoft Teams
-    - Office 365
+    - Microsoft Defender for Office 365
 ---
 
 # Learning Path 5- Lab 5 - Exercise 1 - Implement a Safe Attachments policy 

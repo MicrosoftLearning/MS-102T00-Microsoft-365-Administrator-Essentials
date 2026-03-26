@@ -1,10 +1,12 @@
 ---
 lab:
   title: Learning Path 6 - Lab 6 - Exercise 7 - Validate alert notifications and simulated attacks
-  description: In Lab 6, Exercise 5, you configured and launched a spear phishing attack, which should have sent a very intriguing, real-world looking email to all Adatum users. In this task, you will verify that Holly received this email, you'll have her respond to the email to see what happens when a user falls for a spear phishing attack, and you'll review the results associated with the simulated attack.
-  duration: 15 minutes
+  description: In this exercise, you will validate the alert notifications and simulated attack results from the previous five exercises. You will verify the mailbox permission alert, the SharePoint permission alert, the eDiscovery alert, the spear phishing simulation, and the Drive-by URL simulation.
+  duration: 30 minutes
   level: 200
   islab: true
+  primarytopics:
+    - Microsoft Defender XDR
 ---
 
 # Learning Path 6 - Lab 6 - Exercise 7 - Validate alert notifications and simulated attacks
