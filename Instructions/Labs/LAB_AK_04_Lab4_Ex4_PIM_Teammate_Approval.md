@@ -1,3 +1,15 @@
+---
+lab:
+  title: Learning Path 4 - Lab 4 - Exercise 4 - PIM Teammate Approval Request
+  description: In this exercise, you will create a security group for the Intune Administrator role, enable the group to be eligible for the role through PIM, and configure group members as approvers for role activation requests. Alex Wilber and Joni Sherman will approve each other's requests to activate the Intune Administrator role.
+  duration: 40 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft Entra ID
+    - Microsoft Intune
+---
+
 # Learning Path 4 - Lab 4 - Exercise 4 - PIM Teammate Approval Request
 
 Up to this point, you have conducted two forms of PIM approval:

@@ -1,3 +1,14 @@
+---
+lab:
+  title: Learning Path 6 - Lab 6 - Exercise 5 - Conduct a Spear Phishing attack using Attack Simulation training
+  description: In this exercise, you will enable Multifactor Authentication for Holly Dickson's account, then use the Microsoft 365 Attack Simulation training feature to configure and launch a spear phishing attack simulation targeting all Adatum users using an existing payload template.
+  duration: 20 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Defender for Office 365
+---
+
 # Learning Path 6 - Lab 6 - Exercise 5 - Conduct a Spear Phishing attack using Attack Simulation training
 
 Holly Dickson is concerned that some users at Adatum may require education about phishing attacks. As part of her pilot project, Holly has decided to use the Microsoft 365 Attack simulation training feature to determine her users' susceptibility to phishing attacks.

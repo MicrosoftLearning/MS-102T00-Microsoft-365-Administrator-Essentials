@@ -1,3 +1,15 @@
+---
+lab:
+  title: Learning Path 1 - Lab 1 - Exercise 2 - Manage Users and Groups
+  description: In this exercise, you will create a Microsoft 365 user account for Holly Dickson and assign her the Global Administrator role. You will then create Microsoft 365 groups and a Security group, assign users to those groups, delete a group, and recover the deleted group using Windows PowerShell.
+  duration: 45 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft 365
+    - Microsoft Entra ID
+---
+
 # Learning Path 1 - Lab 1 - Exercise 2 - Manage Users and Groups 
 
 Organizations must ensure that access to their company data on Microsoft 365 is always secure. Microsoft 365 often displays sensitive and confidential data, including emails, documents, customer information, and intellectual property. Unauthorized access to Microsoft 365 can lead to data breaches, identity theft, and other malicious activities. By securing user access, organizations can prevent unauthorized individuals from accessing and potentially misusing or leaking company data when working in Microsoft 365.

@@ -1,3 +1,15 @@
+---
+lab:
+  title: Learning Path 6 - Lab 6 - Exercise 2 - Implement a Mailbox Permission Alert
+  description: In this exercise you will configure and test an alert that will notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum.
+  duration: 15 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Defender XDR
+    - Exchange Online
+---
+
 # Learning Path 6 - Lab 6 - Exercise 2 - Implement a Mailbox Permission Alert
 
 In this exercise you will configure and test an alert that will notify Lynne Robbins when FullAccess permissions are granted to any mailbox within Adatum.

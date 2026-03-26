@@ -1,3 +1,14 @@
+---
+lab:
+  title: Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with Microsoft Purview Information Protection
+  description: In this exercise, you will install the Microsoft Purview Information Protection client, create a sensitivity label with encryption and content marking, publish a label policy, and test a pre-existing sensitivity label by applying it to a Word document and verifying the protection settings when sharing with restricted permissions.
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft Purview
+---
+
 
 # Learning Path 9 - Lab 9 - Exercise 1 - Implement Sensitivity labels with Microsoft Purview Information Protection
 

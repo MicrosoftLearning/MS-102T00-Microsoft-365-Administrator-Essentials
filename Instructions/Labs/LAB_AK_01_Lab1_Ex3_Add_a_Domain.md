@@ -1,3 +1,14 @@
+---
+lab:
+  title: Learning Path 1 - Lab 1 - Exercise 3 - Add a Custom Domain
+  description: In this exercise, you will add a custom domain to Adatum's Microsoft 365 deployment. You will create a new DNS zone, add the domain in the Microsoft 365 admin center, configure the required DNS records, and verify domain ownership.
+  duration: 25 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft 365
+---
+
 # Learning Path 1 - Lab 1 - Exercise 3 - Add a Custom Domain
 
 When a company purchases Microsoft 365, they are typically provided with a default domain name in the format of **companyname.onmicrosoft.com**. The "companyname" in companyname.onmicrosoft.com is a placeholder for the actual name of the company that purchases Microsoft 365. This default domain name is assigned by Microsoft during the sign-up process and is unique to the organization. It serves as an initial domain that can be used to access Microsoft 365 services immediately. 

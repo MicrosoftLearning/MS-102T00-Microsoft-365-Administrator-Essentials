@@ -1,3 +1,15 @@
+---
+lab:
+  title: Learning Path 2 - Lab 2 - Exercise 2 - Monitor and Troubleshoot Microsoft 365
+  description: In this exercise, you will troubleshoot mail flow issues using the Message Header Analyzer, review Microsoft 365 service health queries and reports, and submit a service request with Microsoft Support.
+  duration: 30 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft 365
+    - Exchange Online
+---
+
 # Learning Path 2 - Lab 2 - Exercise 2 - Monitor and Troubleshoot Microsoft 365  
 
 In this exercise you will be introduced to some troubleshooting tools in Microsoft 365 that enable you to troubleshoot mail flow issues. You will then analyze Adatum’s Microsoft 365 service health by reviewing several of the key service health queries and reports that are available. You will conclude this exercise by reviewing how to submit a service request with the Microsoft Support team should you ever need assistance with a problem.

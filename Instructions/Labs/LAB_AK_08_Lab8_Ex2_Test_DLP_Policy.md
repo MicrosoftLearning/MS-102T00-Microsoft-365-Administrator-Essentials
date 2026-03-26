@@ -1,3 +1,14 @@
+---
+lab:
+  title: Learning Path 8 - Lab 8 - Exercise 2 - Test the DLP Policy
+  description: In this exercise, you will test the custom DLP policy you created by sending emails containing IP addresses. You will test the first rule with a single IP address to verify the policy tip and notification, and then test the second rule with multiple IP addresses to verify the email is blocked with an override option.
+  duration: 20 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Purview
+---
+
 # Learning Path 8 - Lab 8 - Exercise 2 - Test the DLP Policy
 
 Holly Dickson is now at the point in her pilot project where she wants to test the DLP policy related to emails that contain sensitive information that you created in the previous lab exercise. 

@@ -1,3 +1,14 @@
+---
+lab:
+  title: Learning Path 5 - Lab 5 - Exercise 2 - Implement a Safe Links Policy
+  description: In this exercise, you will create a Safe Links policy that applies to all users in your tenant, add a blocked URL to the Tenant Block List, and then validate the policy by testing the blocked URL and verifying Safe Links protection on email links.
+  duration: 35 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Defender for Office 365
+---
+
 # Learning Path 5 - Lab 5 - Exercise 2 - Implement a Safe Links Policy
 
 Having created a Safe Attachments policy, Holly Dickson now wants to create a Safe Links policy and then validate the policy to ensure that it works properly.

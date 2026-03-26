@@ -1,3 +1,14 @@
+---
+lab:
+  title: Learning Path 6 - Lab 6 - Exercise 1 - Prepare for Alert Policies
+  description: In this exercise, you will assign the Compliance Data Administrator role group to Lynne Robbins so she can view alerts for the Permissions and Data Loss Prevention categories in Microsoft Defender XDR.
+  duration: 10 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Defender XDR
+---
+
 # Learning Path 6 - Lab 6 - Exercise 1 - Prepare for Alert Policies
 
 Alerts are policies designed to automatically notify administrators when key actions have occurred in their Microsoft 365 tenant. Alerts can be an easy way to ensure that change logs are up-to-date and that business policies are being followed inside your Microsoft 365 tenant.
