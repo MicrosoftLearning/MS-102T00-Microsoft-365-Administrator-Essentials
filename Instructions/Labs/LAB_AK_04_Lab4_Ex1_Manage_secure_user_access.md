@@ -31,7 +31,7 @@ Adatum has directed Holly to enable MFA for all its Microsoft 365 users - both i
    
 3. In the **Microsoft 365 admin center**, under the **Admin centers** section in the navigation pane, select **Identity**. Doing so opens the Microsoft Entra admin center in a new browser tab. If a **Pick an account** window appears, select **Holly Dickson's account**.
 
-4. In the **Microsoft Entra admin center**, umder **Entra ID** in the navigation pane, select **Conditional Access**.
+4. In the **Microsoft Entra admin center**, under **Entra ID** in the navigation pane, select **Conditional Access**.
 
 5. On the **Conditional Access | Overview** page, select **Policies** in the middle navigation pane.
 
