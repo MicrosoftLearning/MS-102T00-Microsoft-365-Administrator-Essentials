@@ -34,7 +34,7 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 6. On the **Select a migration option** page, read the explanation of each option so that you understand the migration options that are available. Select the **Continuous sync** option and then select **Next**.
 
-7. On the **Prepare by running IdFix** page, since you already ran IdFix in the prior lab exercise, there's no need to download and run it again. Select **Next**.
+7. On the **Prepare by running IdFix** page, since you already identified and fixed the directory errors in the prior lab exercise, there's no need to run IdFix here. Select **Next**.
 
 8. On the **Review synchronization tools** page, Holly's not sure which synchronization tool to select based on Adatum's synchronization requirements - **Microsoft Entra Connect Sync** or **Microsoft Entra Cloud Sync**. Holly has identified the following requirements that she thinks may impact this decision:
 
