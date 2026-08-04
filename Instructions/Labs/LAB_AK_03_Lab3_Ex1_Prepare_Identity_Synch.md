@@ -1,7 +1,7 @@
 ---
 lab:
   title: Learning Path 3 - Lab 3 - Exercise 1 - Prepare for Identity Synchronization
-  description: In this exercise, you will prepare for identity synchronization by configuring the UPN suffix for Adatum's on-premises domain, running the IdFix tool to identify and fix directory errors, and preparing the on-premises environment for Microsoft Entra Connect Sync.
+  description: In this exercise, you will prepare for identity synchronization by configuring the UPN suffix for Adatum's on-premises domain, identifying and fixing directory errors using Active Directory tools, and preparing the on-premises environment for Microsoft Entra Connect Sync.
   duration: 15 minutes
   level: 300
   islab: true
@@ -53,9 +53,9 @@ For this lab, Adatum has purchased the new xxxUPNxxx.xxxCustomDomainxxx.xxx doma
 
 Integrating your on-premises Active Directory with Microsoft Entra ID makes your users more productive by providing a common identity for accessing both cloud and on-premises resources. However, errors can occur when identity data is synchronized from Windows Server Active Directory (AD DS) to Microsoft Entra ID. 
 
-For example, two or more objects may have the same value for the **ProxyAddresses** attribute or the **UserPrincipalName** attribute in on-premises Active Directory. There are a multitude of different conditions that may result in synchronization errors. Organizations can correct these errors by running Microsoft's IdFix tool, which performs discovery and remediation of identity objects and their attributes in an on-premises Active Directory environment in preparation for migration to Microsoft Entra ID. 
+For example, two or more objects may have the same value for the **ProxyAddresses** attribute or the **UserPrincipalName** attribute in on-premises Active Directory. There are a multitude of different conditions that may result in synchronization errors. Organizations can discover and correct these errors using Active Directory tools such as Windows PowerShell and Active Directory Users and Computers. (Microsoft's IdFix tool was previously used for this discovery and remediation, but it's being retired.) 
 
-In this task, you will run a script that breaks an on-premises user account. As part of your Adatum pilot project, you are purposely breaking an identity object so that you can run the IdFix tool in the next task to see how you can fix the broken account. 
+In this task, you will run a script that breaks an on-premises user account. As part of your Adatum pilot project, you are purposely breaking an identity object so that you can identify and fix the broken account in the next task. 
 
 1. On your Domain Controller VM (LON-DC1), in the Windows PowerShell window, run the following command to change the root source to **C:\labfiles** so that you can access any files from that location: <br/>
 
@@ -63,73 +63,69 @@ In this task, you will run a script that breaks an on-premises user account. As 
 	CD C:\labfiles\
 	```
 
-3. Enter the following command that runs a PowerShell script that creates a problem user account. This script, which is stored in the C:\labfiles folder, will purposely create an issue with the userPrincipalName for Klemen Sic's on-premises user account; this will enable you to troubleshoot this account in the next task using the IdFix tool.  <br/>
+3. Enter the following command that runs a PowerShell script that creates a problem user account. This script, which is stored in the C:\labfiles folder, will purposely create an issue with the userPrincipalName for Klemen Sic's on-premises user account; this will enable you to troubleshoot this account in the next task.  <br/>
 
 	```powershell
 	.\CreateProblemUsers.ps1
 	```
 
 	
-	>**Important:** Wait until the script has finished before proceeding to the next task. This Windows PowerShell script will make the following change in AD DS:
+	>**Important:** Wait until the script has finished before proceeding to the next task. This Windows PowerShell script will make the following change in AD DS to a single account, which you'll troubleshoot in the next task:
 
 	- **Klemen Sic**. Update the userPrincipalName for Klemen to include an extra "@" character. 
 
 4. Minimize your Windows PowerShell window.
 
 
-### Task 3: Run the IdFix tool and fix identified issues 
+### Task 3: Identify and fix directory errors 
 
-In this task you will download and use the IdFix Directory Synchronization Error Remediation Tool to fix Klemen Sic's on-premises user account that you purposely broke in the previous task. Running the IdFix tool will correct any user account errors prior to synchronizing identity data between your on-premises environment and Microsoft Entra ID.
+In this task you will find and fix the userPrincipalName error that you purposely introduced for Klemen Sic in the previous task, before you synchronize identity data from your on-premises environment to Microsoft Entra ID.
+
+>**Note:** Earlier versions of this lab used the **IdFix** directory synchronization error remediation tool for this task. IdFix is being retired, so this task uses **Active Directory** directly instead - Windows PowerShell to find the error, and either Windows PowerShell or **Active Directory Users and Computers** to fix it. This reflects how you would remediate directory objects in a current environment.
 
 1. You should still be logged into **LON-DC1** as the **Administrator** from the prior task. 
 
-2. On **LON-DC1**, select the **Microsoft Edge** icon on the taskbar. In your **Microsoft Edge** browser, open a new tab and enter the following URL in the address bar to access the Microsoft -IdFix Overview page: <br/>
+2. If **Windows PowerShell** is not already open, select the **PowerShell** icon on the taskbar (or open **Windows PowerShell** as an administrator). Maximize the window.
 
-	**https://microsoft.github.io/idfix**
-	
-3. On the **Microsoft - IdFix** page, in the navigation pane on the side of the screen, select **Step 2: Install IdFix**. 
+3. The script you ran in the previous task broke Klemen Sic's userPrincipalName by adding an extra **@** character, producing a value that contains **@@**. Run the following command to find any user whose userPrincipalName contains a double **@**: <br/>
 
-4. On the **Step 2: Install IdFix** page, the first line in the instruction says: **Select *setup.exe* to download and install the IDFix tool on your Windows machine.**  <br/>
+	```powershell
+	Get-ADUser -Filter * -Properties UserPrincipalName | Where-Object { $_.UserPrincipalName -like "*@@*" } | Format-Table Name, SamAccountName, UserPrincipalName
+	```
 
-	In this instruction, select **setup.exe** to download the IdFix application to your machine. 
+	The results should list a single user - **Klemen Sic** - and display his malformed userPrincipalName, which contains **@@**.
 
-5. Once the **setup.exe** file is downloaded, a **Downloads** window will appear at the top-right of the page. In this window, under **setup.exe**, select **Open file** to install the file on LON-DC1. This will initiate the **Application Install** wizard.
+You can fix Klemen's userPrincipalName using either **Windows PowerShell** (Option A) or **Active Directory Users and Computers** (Option B). Complete only one of the two options.
 
-6. In the **Do you want to install this application?** page in the **Application Install** wizard, select **Install**.
+**Option A - Fix the error using Windows PowerShell**
 
-7. In the **IdFix Privacy Statement** message box, select **OK**. Once the IDFix tool is installed, the **Application Install** wizard will close and the **IDFix** tool will automatically open. 
+4. Run the following command to rebuild Klemen's userPrincipalName from his SamAccountName and the correct UPN suffix, which removes the extra **@** character (replace **xxxUPNxxx.xxxCustomDomainxxx.xxx** with the custom domain you configured in Task 1): <br/>
 
-8. In the **IdFix** tool that appears, maximize the window. On the menu bar at the very top of the screen, select **Query** to query the directory. After a short wait, you should see several errors. <br/>
+	```powershell
+	Get-ADUser -Filter * -Properties UserPrincipalName | Where-Object { $_.UserPrincipalName -like "*@@*" } | ForEach-Object { Set-ADUser $_ -UserPrincipalName ($_.SamAccountName + "@xxxUPNxxx.xxxCustomDomainxxx.xxx") }
+	```
 
-	**Note:** If a **Schema Warning** dialog box appears, select **Yes** to continue.
+5. Run the command from step 3 again. This time no users should be returned, which confirms that Klemen's userPrincipalName error is fixed. Skip Option B (step 6) and continue to step 7.
 
-9. Select the **ERROR** column heading to sort the records in alphabetical error sequence. <br/>
+**Option B - Fix the error using Active Directory Users and Computers**
 
-	>**Note:** If any **topleveldomain** errors appear, then ignore them as they cannot be fixed by the IdFix tool.  
+6. If you'd rather use the graphical tools, fix the error as follows (skip this step if you already completed Option A): <br/>
 
-10. In the **Klemen Sic** row, note the text in the **VALUE** column. It currently includes two **@@** signs, which occurred when you ran the script in the prior task that purposely broke Klemen's UserPrincipalName. Now note the text in the **UPDATE** column, which is the value the IDFix tool will change the UPN name to, should you direct it to do so. <br/>
+	a. Open **Server Manager**, select **Tools**, and then select **Active Directory Users and Computers**. <br/>
 
-	You want the IDFix tool to fix Klemen's UPN value, so select the drop-down arrow in Klemen's **ACTION** field and select **EDIT**. <br/>
+	b. Select the **View** menu and verify that **Advanced Features** is enabled (select it if it isn't). This makes the **Attribute Editor** tab available on user accounts. <br/>
 
-	>**Note:** Do NOT update either of the remaining two user accounts. Ignore those for now.
+	c. Right-click **adatum.com** and select **Find**. In the **Name** field, type **Klemen**, select **Find Now**, and then double-click **Klemen Sic** in the search results. <br/>
 
-11. On the menu bar at the top of the window, select **Apply**. 
+	d. In the **Klemen Sic Properties** window, select the **Attribute Editor** tab. Locate the **userPrincipalName** attribute and confirm that its value contains **@@**. <br/>
 
-12. In the **Apply Pending** dialog box that appears, select **Yes**. <br/>
+	e. Select **userPrincipalName**, select **Edit**, remove the extra **@** so that the value contains only a single **@** separating the logon name from the domain suffix, and then select **OK**. <br/>
 
-	>**Note:** Notice the value in the **Action** column changed from **EDIT** to **COMPLETE** for Klemen Sic. This indicates the IdFix tool corrected the error by updating Klemen Sic's user object. 
+	f. Select **OK** to close the **Klemen Sic Properties** window, and then close **Active Directory Users and Computers**.
 
-13. On the menu bar at the top of the page, select **Query**. If a **Schema Warning** dialog box appears, select **Yes** to continue. If a dialog box appears indicating an unhandled exception has occurred, select **Continue**.<br/>
+7. Two other users - **An Dung Dao** and **Ngoc Bich Tran** - have directory errors that were already present in the environment. **Leave these errors in place.** In the next exercise, you'll see how the Microsoft Entra Connect Sync process reports these unresolved errors when it attempts to synchronize these accounts to the cloud. 
 
-	In the query results, note how the Klemen Sic row no longer appears in the results, since the IdFix tool just fixed this user record. <br/>	
-
-	As you can see, there are still two users whose errors have not been fixed (**An Dung Dao** and **Ngoc Bich Tran**). We are purposely leaving these errors alone so that you can see what happens during the synchronization process using the Microsoft Entra Connect tool in the next exercise when it processes users with these conditions. <br/>
-
-	>**Important:** When there are format and duplicate errors for distinguished names, the **UPDATE** column either contains the same string as the **VALUE** column, or the **UPDATE** column entry is blank. In either case, this means that IdFix cannot suggest a remediation for the error. You can either fix these errors outside IdFix, or manually remediate them within IdFix. You can also export the results and use Windows PowerShell to remediate many different errors. 
-
-14. Close the IdFix window. 
-
-15. Leave your Edge browser open. However, you can close the **Step 2: Install Id-Fix - Microsoft - IdFix** tab since you are done using IdFix.
+8. Leave your PowerShell window (and any open tools) available. You'll continue on LON-DC1 in the next exercise.
 
 # Proceed to Lab 3 - Exercise 2
  
