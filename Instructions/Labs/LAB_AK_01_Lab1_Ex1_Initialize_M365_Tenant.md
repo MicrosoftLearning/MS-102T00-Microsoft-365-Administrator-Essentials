@@ -93,9 +93,9 @@ Throughout the labs in this course, you will role-play by taking on the persona 
 
 15. In the **Organization profile** tab, select **Organization information** from the list of profile data.
 
-16. In the **Organization information** pane that appears, enter the following information: <br/>
+16. In the **Organization information** pane that appears, review the organization details. If the following fields are editable in your tenant, update them as shown. Some trial tenants no longer allow all of these values to be changed in the Microsoft 365 admin center - in particular, the organization **Name** is often read-only here. If a field is unavailable or read-only, leave it as-is and continue; this won't affect any later lab steps. <br/>
 
-    - Name: **Adatum Corporation** (Note: Adatum Corporation is a subsidiary of Contoso Inc. The Microsoft trial tenant that your lab hosting provider obtained for this lab may have been originally assigned to Contoso. If **Contoso** (or any other value) appears as the organization name, then change it to **Adatum Corporation**.)
+    - Name: **Adatum Corporation** (Note: Adatum Corporation is a subsidiary of Contoso Inc. Your trial tenant may already display **Contoso** or another value. If the **Name** field is editable, change it to **Adatum Corporation**; if it's read-only, leave the displayed name as-is - later labs work regardless of the organization name shown.)
 
     - Street Address: **555 Main Street**
 
