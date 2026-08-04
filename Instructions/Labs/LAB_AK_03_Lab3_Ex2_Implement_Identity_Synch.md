@@ -22,7 +22,9 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 
 **IMPORTANT:** Azure Active Directory (Azure AD) was rebranded to Microsoft Entra ID in August, 2023. As such, all Azure AD product features are being rebranded to Microsoft Entra. Since this rebranding effort is still on-going, some Azure AD features have not yet been rebranded to Microsoft Entra. For example, the original name of Microsoft Entra Connect Sync was Azure AD Connect. As of this writing, the filename still refers to AzureADConnect. Keep this in mind if you see Azure AD still referenced on Microsoft 365 pages, product names. Microsoft World Wide Learning will strive to keep these lab instructions updated as the Microsoft 365 Engineering team continues its rebranding efforts.
 
-1. You should still be logged into **LON-DC1** as **adatum\administrator** from the prior task. 
+1. You should still be logged into **LON-DC1** as **adatum\administrator** from the prior task. <br/>
+
+	**Note:** If a **Windows PowerShell** window is open on LON-DC1 from a prior exercise, close it now before proceeding. The Microsoft Entra Connect Sync setup that you perform in this task installs the ADSync PowerShell module. If a PowerShell window was opened *before* that installation, the **Start-ADSyncSyncCycle** cmdlet used later in Task 4 won't be available in that session, and you'll receive a "cmdlet is not recognized" error.
 
 2. After finishing the earlier lab exercise in which you added Adatum's custom domain, you should still be logged into Microsoft 365 in your Edge browser as Holly Dickson.  
 

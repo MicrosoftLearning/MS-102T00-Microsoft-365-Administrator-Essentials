@@ -27,7 +27,7 @@ The policy will contain two rules, or actions, each of which is dependent on the
 
 4. In the **Policies** page, select the **+Create policy** option on the menu bar to start the **Create policy** wizard.
 
-5. On the **Choose what type of data to protect** page, select **Data stored in connected sources** and then select **Next** 
+5. On the **Choose the type of data to protect** page, select **Enterprise applications and devices** and then select **Next** 
 
 6. On the **Start with a template or create a custom policy** page, the **Categories** column displays the policy categories. Each policy category provide Regulations that can be used to create that type of policy, except for the **Custom** category. This category does not provide any specific template; instead, it enables organizations to create custom policies from scratch. When you select a category, **Regulations** column appears that displays the available Regulations to choose from for the selected category. When you select a template, another column appears that displays the type of information that is protected in that template. <br/> 
 
