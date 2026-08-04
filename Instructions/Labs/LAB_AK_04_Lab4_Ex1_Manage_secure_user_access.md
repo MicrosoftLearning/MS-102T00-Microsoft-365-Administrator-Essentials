@@ -33,7 +33,7 @@ Adatum has directed Holly to enable MFA for all its Microsoft 365 users - both i
 
 4. In the **Microsoft Entra admin center**, under **Entra ID** in the navigation pane, select **Authentication methods**.
 
-5. One the **Authentication methods** page, select **SMS** and then toggle the slider to **Enable** and then at the bottom of the page, select **Save**.
+5. On the **Authentication methods** page, select **SMS** and then toggle the slider to **Enable** and then at the bottom of the page, select **Save**.
 
 6. In the **Microsoft Entra admin center**, under **Entra ID** in the navigation pane, select **Conditional Access**.
 

@@ -278,15 +278,18 @@ Microsoft Graph PowerShell is required to perform several configuration tasks wh
 	Get-InstalledModule Microsoft.Graph.* | select *name*
 	```
 
-5. Verify the list of installed sub-modules includes the following three sub-modules that will be used in later lab exercises: 
+5. Verify the list of installed sub-modules includes the following four sub-modules that will be used in later lab exercises: 
 
 	```powershell
 	- Microsoft.Graph.Groups
 	- Microsoft.Graph.Identity.DirectoryManagement
+	- Microsoft.Graph.Identity.Governance
  	- Microsoft.Graph.Users
 	```
   	
-	If all three sub-modules appear in the list of installed sub-modules, then proceed to the next step. However, if any of these three sub-modules do not appear in the list, then run the following PowerShell command to manually install the missing sub-module:
+	**Note:** The **Microsoft.Graph.Identity.Governance** sub-module is required in Lab 2, Exercise 1, Task 3 (Assign an administrator role using Windows PowerShell), so be sure to verify it installed.
+  	
+	If all four sub-modules appear in the list of installed sub-modules, then proceed to the next step. However, if any of these sub-modules do not appear in the list, then run the following PowerShell command to manually install the missing sub-module:
 
 	```powershell
 	Install-Module -Name <module name> -Scope CurrentUser
