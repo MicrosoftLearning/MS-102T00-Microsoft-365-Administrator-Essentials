@@ -60,8 +60,8 @@ In this task, you will run the Microsoft Entra Connect Sync setup wizard to enab
 	
  	**Note:** If you're wondering why the wizard changed its recommendation to Microsoft Entra Connect Sync based on this final requirement, it's because of the following reasons:
 
-	- First off, understand that this final requirement means that Adatum has desktops, laptops, or servers located in its on-premises Active Directory environment that must be able to join Microsoft Entra ID (formerly Azure AD) as hybrid Microsoft Entra ID joined devices. Microsoft Entra ID Hybrid Join allows these on-premises devices to register their identity with Microsoft Entra ID. This enables them to access cloud-based services protected by  Microsoft Entra ID, such as Microsoft 365. 
-	- So how does this affect which synchronization tool to use? Well, keep in mind that Microsoft Entra Connect Sync uses an on-premises sync agent while Microsoft Entra Cloud Sync is a pure cloud-based service. With Microsoft Entra Connect Sync, the sync agent is installed on-premises, and therefore can directly access Adatum's on-premises AD environment. This allows it to sync Adatum's device identities to the cloud without dependency on Microsoft Entra ID Hybrid Join. However, Microsoft Entra Cloud Sync has no on-premises component. It relies on the devices self-registering their identity to Microsoft Entra ID through Microsoft Entra ID Hybrid Join. Therefore, any issues with hybrid join or network connectivity breaks the Microsoft Entra Cloud Sync process. As a result, Microsoft Entra Connect Sync is the preferred synchronization option for this requirement.
+	- First off, understand that this final requirement means that Adatum has desktops, laptops, or servers located in its on-premises Active Directory environment that must be able to join Microsoft Entra ID as hybrid Microsoft Entra ID joined devices. Microsoft Entra ID Hybrid Join allows these on-premises devices to register their identity with Microsoft Entra ID. This enables them to access cloud-based services protected by Microsoft Entra ID, such as Microsoft 365. 
+	- So how does this affect which synchronization tool to use? Entra Cloud Sync does not support synchronizing device objects and therefore, we need to use Entra Connect Sync.
 
 10. Select **Next**. The wizard will deploy the recommended solution, **Microsoft Entra Connect Sync**. 
 
@@ -231,7 +231,7 @@ This task sets up another scenario for testing whether the sync process is worki
 
 ### Task 4 - Force a manual synchronization   
 
-In this task, you will force a sync between Adatum’s on-premises Active Directory and Microsoft Entra ID (formerly Azure AD) instead of waiting 30 minutes for Microsoft Entra Connect Sync to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
+In this task, you will force a sync between Adatum’s on-premises Active Directory and Microsoft Entra ID instead of waiting 30 minutes for Microsoft Entra Connect Sync to synchronize the identity objects. You must use PowerShell to perform a forced synchronization.
 
 1. On LON-DC1, if the **Windows PowerShell** application is still open from the prior exercise, then **you MUST close it now**.  <br/>
 

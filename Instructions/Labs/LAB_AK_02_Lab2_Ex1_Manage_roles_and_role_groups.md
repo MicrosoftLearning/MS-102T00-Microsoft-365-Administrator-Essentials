@@ -106,7 +106,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	```powershell
 	Connect-MgGraph -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
-	```	
+	```
 
 3. In the **Pick an account** window that appears, select Holly Dickson's account.
 
@@ -122,13 +122,13 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	```powershell
 	Get-MgDirectoryRoleTemplate | Sort DisplayName | Format-Table Id, DisplayName
-	```		
+	```
 
 	As you can see after having run this command, you must scroll through the list of role templates looking for the Service Support Administrator role. You can easily see how this can be tedious, even with the table sorted. As an alternative, run the following command to query for a specific role template - in this case, the "Service Support Administrator" role template: <br/>
 
 	```powershell
 	Get-MgDirectoryRoleTemplate | Where-Object DisplayName -eq "Service Support Administrator" | Format-Table Id, DisplayName
-	```	
+	```
 
 	After having run this command, you can see that it displays only the requested role template. Obviously, there may be times when displaying the entire list of role templates is necessary. But when you need to look up a single role template, running the second PowerShell command will be much more efficient than having to scroll through the entire list of templates.
 
@@ -136,13 +136,13 @@ PowerShell also enables you to display all the users assigned to a specific role
 
 	```powershell
 	Get-MgUser -Filter "DisplayName eq 'Patti Fernandez'" | Format-Table ID, DisplayName
-	```			
+	```
 
 8. Now that you know the object ID of the Service Support Administrator role and the object ID of Patti's user account, you can assign the role to Patti. Perform the following steps to complete this process, replacing the two IDs for the values displayed from the previous two steps.
 
 	```powershell
 	New-MgRoleManagementDirectoryRoleAssignment -RoleDefinitionId 'paste in the role ID here' -PrincipalId 'paste in Pattis ID here' -DirectoryScopeId '/'
-	```		
+	```
 
 	**Note:** The DirectoryScopeId parameter indicates the assignment is at the tenant / directory level.
 
@@ -151,7 +151,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 	```powershell
 	$assignedRole = Get-MgDirectoryRole -Filter "DisplayName eq 'Service Support Administrator'"
 	Get-MgDirectoryRoleMember -DirectoryRoleId $assignedRole.Id
-	```			
+	```
 
 10. The prior command only displays the IDs of the users assigned to the selected role. However, you can match the ID that's displayed with Patti's ID to verify that her account has been assigned the **Service Support Administrator** role. As you can see, Patti is the only user assigned to the role. 
 
@@ -160,7 +160,7 @@ PowerShell also enables you to display all the users assigned to a specific role
 	```powershell
 	$assignedRole = Get-MgDirectoryRole -Filter "DisplayName eq 'Global Administrator'"
 	Get-MgDirectoryRoleMember -DirectoryRoleId $assignedRole.Id
-	```	
+	```
 
 12. Verify there are multiple Adatum users who've been assigned the Global Administrator role. In a real-world scenario, the Microsoft 365 Administrator would use this PowerShell command to monitor how many global admins exist in their Microsoft 365 deployment. They would then remove the Global Administrator role from any users who truly shouldn't have it (remember, the best practice guideline is to have between 2 to 4 global admins in a Microsoft 365 deployment, depending on the size of the organization).  <br/>
 

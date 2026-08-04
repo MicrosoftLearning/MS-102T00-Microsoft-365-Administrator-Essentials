@@ -220,7 +220,7 @@ In this task, you will create three new groups that will be used in later labs. 
 
 	**Note:** There is no owner, email address, or privacy setting for Security groups. Members must be added to a Security group after creating the group, which you will do in the next few steps. 
 
-24. On the **Edit settings** page, you're NOT going to assign Microsoft Entra (formerly Azure AD) roles to the group, so simply select **Next**.
+24. On the **Edit settings** page, you're NOT going to assign Microsoft Entra roles to the group, so simply select **Next**.
 
 25. After you finish adding the group, the **Active teams & groups** page should be displayed. Check whether the **IT Admins** group appears under the **Security groups** tab.   <br/>
 
