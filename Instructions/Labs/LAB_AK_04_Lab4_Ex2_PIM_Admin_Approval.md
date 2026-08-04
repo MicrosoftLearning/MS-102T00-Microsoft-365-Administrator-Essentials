@@ -57,13 +57,13 @@ Holly also wants to update the notification settings for the Global admin role. 
 
 7. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
-8. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Settings**. 
+8. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Roles**. 
 
-9. In the **Adatum Corporation | Settings** window, select the **Global Administrator** role. <br/>
+9. In the **Adatum Corporation | Roles** window, select the **Global Administrator** role. <br/>
 
     **Tip:** If the roles are not displayed in alphabetical order, select the **Role** heading to sort them in ascending alphabetical order. This will make it easier to locate the Global administrator role.
 
-10. In the **Role setting details -  Global Administrator** window, scroll through the page and review the information for role activation, assignment, and notification. Then select **Edit** on the menu bar at the top of the page.
+10. On the **Global Administrator** role page, select **Role settings**. Scroll through the page and review the information for role activation, assignment, and notification. Then select **Edit** on the menu bar at the top of the page.
 
 11. In the **Edit role setting - Global Administrator** window, the **Activation** tab is displayed by default. In this tab, below the activation slider, verify the **Azure MFA** option is selected by default for the **On activation, require** setting (if it's not selected, then select it now). This will require that the person requesting activation of the role will have to sign in using multi-factor authentication to provide additional verification that they are who they say they are.
 
@@ -102,7 +102,7 @@ In this task, Holly will create a new, role-assignable security group for users 
 
 2. You will begin by creating a new, role-assignable security group called **PIM-Global-Administrators** in Microsoft Entra ID, and you will assign Patti as a member of the group. <br/>
 
-    In your **Edge** browser, you should still have the **Microsoft Entra admin center** open in a tab that's displaying the **Adatum Corporation | Settings** window from the prior task. In the navigation pane, select **Groups**, and then select **All groups**.
+    In your **Edge** browser, you should still have the **Microsoft Entra admin center** open in a tab from the prior task. In the navigation pane, select **Groups**, and then select **All groups**.
 
 3. In the **Groups | All groups** window, in the detail pane on the right, select **New group** in the menu bar.
 

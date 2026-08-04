@@ -92,13 +92,13 @@ As in the prior PIM exercise involving the Helpdesk admin role, Holly is trustin
 
 3. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
-4. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Settings**. 
+4. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Roles**. 
 
-5. In the **Adatum Corporation | Settings** window, select the **Intune Administrator** role.    <br/>
+5. In the **Adatum Corporation | Roles** window, select the **Intune Administrator** role.    <br/>
 
     **Tip:** If the roles are not displayed in alphabetical order, select the **Role** heading to sort them in ascending alphabetical order. This will make it easier to locate the Intune administrator role.
 
-6. In the **Role setting details -  Intune Administrator** window, scroll through the page and review the information for role activation, assignment, and notification. Then select **Edit** on the menu bar at the top of the page.
+6. On the **Intune Administrator** role page, select **Role settings**. Scroll through the page and review the information for role activation, assignment, and notification. Then select **Edit** on the menu bar at the top of the page.
 
 7. Below the activation slider, set the **On activation, require** setting to **None**. <br/>
 

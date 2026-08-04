@@ -93,13 +93,13 @@ In the prior lab exercise involving the Global administrator role, Holly updated
 
 3. In the **Privileged Identity Management | Quick start** window, in the middle pane under the **Manage** section, select **Microsoft Entra roles**.
 
-4. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Settings**. 
+4. In the **Adatum Corporation | Quick start** window, in the middle pane under the **Manage** section, select **Roles**. 
 
-5. In the **Adatum Corporation | Settings** window, select the **Helpdesk Administrator** role.  <br/>
+5. In the **Adatum Corporation | Roles** window, select the **Helpdesk Administrator** role.  <br/>
 
     **Tip:** If the roles are not displayed in alphabetical order, select the **Role** heading to sort them in ascending alphabetical order. This will make it easier to locate the Helpdesk administrator role.
 
-6. In the **Role setting details -  Helpdesk Administrator** window, scroll through the page and review the information for role activation, assignment, and notification. Then select **Edit** on the menu bar at the top of the page.
+6. On the **Helpdesk Administrator** role page, select **Role settings**. Scroll through the page and review the information for role activation, assignment, and notification. Then select **Edit** on the menu bar at the top of the page.
 
 7. In the **Edit role setting - Helpdesk Administrator** window, the **Activation** tab is displayed by default. In this tab, the slider for the **Activation maximum duration (hours)** setting is set to **8**. Holly wants to increase this to the maximum allowable time, which is **24** hours. You can either move the slider to the end of the line, or you can type **24** in the field next to the slider. <br/>
 
@@ -174,7 +174,7 @@ At this point in Holly's pilot project, the **PIM-Helpdesk-Administrators** grou
 
 13. In the **Active assignments** tab, note the **Helpdesk Administrator** role now appears. Prior to activating this role, remember that you checked this tab earlier and no Microsoft Entra roles appeared. Now that Alex has self-approved the **Helpdesk Administrator** role, it's now been assigned to his user account. 
 
-14. Close the InPrivate browser session. This should return you to the **Microsoft Entra admin center**, which should be displaying the **Adatum Corporation | Settings** page.
+14. Close the InPrivate browser session. This should return you to the **Microsoft Entra admin center**.
 
 15. Leave your browser and all tabs open for the next task.
 
