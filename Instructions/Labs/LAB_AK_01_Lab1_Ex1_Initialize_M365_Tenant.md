@@ -334,7 +334,15 @@ In Lab 6, you will create Alert Policies using the Microsoft Defender portal. Ho
 
 	> **Note**: If prompted whether to stay signed in, select **No, this app only**.
 
-6. At the command prompt, run the following command to turn on audit logging:
+6. New trial tenants start in a "dehydrated" state, which prevents some organization-level settings from being changed until organization customization is enabled. Run the following command once to enable it:
+
+	```powershell
+	Enable-OrganizationCustomization
+	```
+
+	>**Note:** If the tenant is already hydrated, this command returns an error stating the organization is already enabled. If that happens, ignore the error and continue. Without this step, the next command may fail with an **InvalidOperationInDehydratedContextException** error.
+
+7. At the command prompt, run the following command to turn on audit logging:
 
 	```powershell
 	Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
@@ -342,15 +350,15 @@ In Lab 6, you will create Alert Policies using the Microsoft Defender portal. Ho
 
 	>**Note:** A warning message will be displayed indicating the admin audit log configuration change that you requested could take up to 60 minutes to take effect throughout the system. This is why you're enabling this feature now rather than waiting for the Alert Policy labs later in this course. 
 
-7. At the command prompt, run the following command to confirm that audit logging is enabled:
+8. At the command prompt, run the following command to confirm that audit logging is enabled:
 
 	```powershell
 	AdminAuditLogConfig 
 	```
 
-8. In the list of properties that's displayed, verify the **UnifiedAuditLogIngestionEnabled** property is set to  **True**.
+9. In the list of properties that's displayed, verify the **UnifiedAuditLogIngestionEnabled** property is set to  **True**.
 
-9. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
+10. Do **NOT** close your PowerShell window. Leave the Windows PowerShell window open but minimize it for now. Remain logged into LON-CL1 and keep your Edge browser open.
 
 Congratulations! You have completed all the steps to initialize your lab tenant. You are now ready to perform the remaining lab exercises.
 
