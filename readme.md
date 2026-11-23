@@ -1,3 +1,5 @@
+**This course will be retired on 2026-11-30. Once course is retired, all GitHub repos will be removed. Thank you!**
+
 # MS-102T00: Microsoft 365 Administrator Essentials
 
 
